@@ -52,7 +52,6 @@
   </metadata>
   <files>
     <file src="licenses\LICENSE.txt" target="" />
-    <file src="JBToolkit.Global.cs" target="" />
     <file src="images\favicon.png" target="images\"/>
     <file src="bin\Release\JBToolkit.dll" target="ref\net452"/>
     <file src="lib\Microsoft.Office.Interop.Word.dll" target="ref\net452"/>
