@@ -1,4 +1,4 @@
-﻿# JB Toolkit	{#mainpage}
+﻿# JB Toolkit
 &nbsp;
 [![N|Solid](https://portfolio.jb-net.co.uk/shared/Logo-Only-100px.png)](https://github.com/jamesbrindle/JB.Toolkit)
 
