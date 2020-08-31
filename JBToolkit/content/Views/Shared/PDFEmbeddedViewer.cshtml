@@ -1,0 +1,107 @@
+﻿@model CaseProcessing.Site.Models.PDFEmbeddedViewerModel
+
+@functions {
+
+    string uniqueId = null;
+
+    string GetUniqueID()
+    {
+        if (uniqueId == null)
+            uniqueId = Guid.NewGuid().ToString();
+
+        return uniqueId;
+    }
+}
+
+@section tabs
+{
+    <ul id="pageTabs" class="nav navbar-nav" role="tablist">
+        <li role="presentation">
+            <a id="tabReturn" href="#tabPane-Return" aria-controls="tabPane-Return" role="tab" data-toggle="tab" style="color: white;"
+               onclick="GoBack('@Model.ReturnUrl');">
+                Go Back
+            </a>
+        </li>
+    </ul>
+}
+
+<div role="tabpanel" class="tab-pane active" id="tabPane-Return">
+    <div class="tab-pane active pdfobject-container" style="overflow: auto;">
+        <div style="overflow: hidden; position: absolute; top: 50px; right: 0; bottom: 0; left: 0;">
+            <iframe id="@GetUniqueID()" style="border: none; width: 100%; height: 100%;" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var ctrlKeyDown = false;
+    $(document).ready(function () {
+        $(document).on("keydown", keydown);
+        $(document).on("keyup", keyup);
+
+        $(window).keydown(function (event) {
+            if (event.keyCode == 116) {
+                event.preventDefault();
+                return false;
+            }
+            if (event.keyCode == 17) {
+                event.preventDefault();
+                return false;
+            }
+            if (event.keyCode == 16) {
+                event.preventDefault();
+                return false;
+            }
+        });
+
+        $("#pagePrint").hide();
+        $("#pagePopout").hide();
+        $("#pageRefresh").hide(); 
+
+        var base64String = "@Model.Base64string";
+        var viewOnly = "@Model.ViewOnly";
+        var fileName = "@Model.FileName";
+        var recordId = "@Model.LinkID";
+        var recordType = "@Model.LinkType";
+
+        var pdfAsDataUri = base64String;
+        var pdfAsArray = ConvertDataURIToBinary(pdfAsDataUri);
+        var url = "";
+
+        if (viewOnly == "true") {
+            url = '../Scripts/packages/pdfjs/web/viewerEx.html?file=';
+        }
+        else {
+            url = '../Scripts/packages/pdfjs/web/viewer.html?file=';
+        }
+
+        var binaryData = [];
+        binaryData.push(pdfAsArray);
+        var dataPdf = window.URL.createObjectURL(new Blob(binaryData, { type: "application/pdf" }));
+
+        $("#@GetUniqueID()").attr('src', url + encodeURIComponent(dataPdf) + "#zoom=auto&filenameo=" + fileName + "&recordid=" + recordId + "&recordtype=" + recordType);
+    });
+
+    function keydown(e) {
+
+        if ((e.which || e.keyCode) == 116 || ((e.which || e.keyCode) == 82 && ctrlKeyDown)) {
+            // Pressing F5 or Ctrl+R
+            e.preventDefault();
+        } else if ((e.which || e.keyCode) == 17) {
+            // Pressing  only Ctrl
+            ctrlKeyDown = true;
+        }
+    };
+
+    function keyup(e) {
+        // Key up Ctrl
+        if ((e.which || e.keyCode) == 17)
+            ctrlKeyDown = false;
+    };
+
+    function GoBack (url) {
+        window.location.href = url;
+    }
+
+</script>

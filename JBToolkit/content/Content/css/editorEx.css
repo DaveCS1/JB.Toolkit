@@ -1,0 +1,114 @@
+﻿table.dataTable tbody > tr.selected,
+table.dataTable tbody > tr > .selected {
+    background-color: #A2D3F6;
+}
+
+div.DTE div.DTE_Header {
+    background-color: white;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+    -moz-border-radius-bottomleft: 0px !important;
+    -webkit-border-bottom-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    -moz-border-radius-bottomright: 0px !important;
+    -webkit-border-bottom-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+div.DTE_Header_Content {
+    margin-top: -18px !important;
+}
+
+    div.DTE_Header_Content > h3 {
+        font-size: 18px !important;
+    }
+
+div.DTE div.DTE_Form_Content {
+    padding: 0px !important;
+    padding-top: 10px !important;
+}
+
+@media (min-width: 992px) {
+    .DTE_Form_Content .col-lg-4.control-label {
+        width: 100%;
+    }
+
+    .DTE_Form_Content .col-lg-8.controls {
+        width: 100%
+    }
+}
+
+@media (min-width: 1200px) {
+    .DTE_Form_Content .col-lg-4.control-label {
+        width: 30%;
+    }
+
+    .DTE_Form_Content .col-lg-8.controls {
+        width: 60%;
+    }
+}
+
+button.close {
+    visibility: hidden;
+}
+
+div.DTE_Form_Buttons button {
+    margin-top: -3px !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    border-radius: 4px !important;
+}
+
+div.DTE_Field {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+}
+
+    div.DTE_Field > label {
+        text-align: left !important;
+    }
+
+div.DTE div.DTE_Footer {
+    background-color: white !important;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+    -moz-border-radius-topleft: 0px !important;
+    -webkit-border-top-left-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    -moz-border-radius-topright: 0px !important;
+    -webkit-border-top-right-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+
+.modal-content {
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    border-radius: 10px !important;
+}
+
+div.modal-content {
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    border-radius: 10px !important;
+}
+
+div.DTE_Body_Content{
+    margin-top: 5px;
+    margin-bottom: -9px;
+}
+
+div.DTE div.DTE_Body {
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    border-radius: 10px !important;
+}
+
+
+div.DTE_Form_Info {
+    margin-top: -11px !important;
+}
+

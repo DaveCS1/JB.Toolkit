@@ -1,0 +1,16 @@
+.vs
+.user
+
+*.user
+*.*.user
+
+ARCHIVE
+_Archive
+
+/packages/*
+
+bin/
+obj/
+
+**/bin/
+**/obj/

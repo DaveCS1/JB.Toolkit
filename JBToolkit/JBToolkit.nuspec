@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>JB Toolkit</title>
+    <authors>James Brindle, JB-Net Software Solutions</authors>
+    <iconUrl>http://tfs01/images/packages/jbtoolkit.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes></releaseNotes>
+    <copyright>© JB-Net Software Solutions 2020</copyright>
+    <tags></tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="10.0.0.0" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Microsoft.CSharp"  />
+      <frameworkAssembly assemblyName="System"  />
+      <frameworkAssembly assemblyName="System.Core"  />
+      <frameworkAssembly assemblyName="System.ComponentModel.Composition"  />
+      <frameworkAssembly assemblyName="System.ComponentModel.DataAnnotations" />
+      <frameworkAssembly assemblyName="System.DirectoryServices.AccountManagement" />
+      <frameworkAssembly assemblyName="System.configuration"  />
+      <frameworkAssembly assemblyName="System.Data"  />
+      <frameworkAssembly assemblyName="System.Data.DataSetExtensions"  />
+      <frameworkAssembly assemblyName="System.DirectoryServices"  />
+      <frameworkAssembly assemblyName="System.Drawing"  />
+      <frameworkAssembly assemblyName="System.Management"  />
+      <frameworkAssembly assemblyName="System.Net.Http"  />
+      <frameworkAssembly assemblyName="System.Net.Http.Formatting"  />
+      <frameworkAssembly assemblyName="System.Runtime.Serialization"  />
+      <frameworkAssembly assemblyName="System.Security"  />
+      <frameworkAssembly assemblyName="System.ServiceProcess"  />
+      <frameworkAssembly assemblyName="System.Web"  />
+      <frameworkAssembly assemblyName="System.Web.Mvc"  />
+      <frameworkAssembly assemblyName="System.Web.Http"  />
+      <frameworkAssembly assemblyName="System.Windows.Forms"  />
+      <frameworkAssembly assemblyName="System.Xml"  />
+      <frameworkAssembly assemblyName="System.Xml.Linq"  />
+      <frameworkAssembly assemblyName="WindowsBase"  />
+    </frameworkAssemblies>
+    <references>
+      <group targetFramework="net452">
+        <reference file="JBToolkit.dll" />
+        <reference file="Microsoft.Office.Interop.Word.dll" />
+        <reference file="LaMarvin.Windows.Forms.ColorPicker.dll" />
+      </group>
+    </references>
+  </metadata>
+  <files>
+    <file src="lib\Interop.MFilesAPI.dll" target="lib\net452"/>
+    <file src="lib\Microsoft.Office.Interop.Word.dll" target="lib\net452"/>
+    <file src="lib\LaMarvin.Windows.Forms.ColorPicker.dll" target="lib\net452"/>
+  </files>
+</package>

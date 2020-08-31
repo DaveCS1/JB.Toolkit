@@ -1,0 +1,404 @@
+﻿@model JBToolkit.Views._JqueryDataTable
+
+@functions
+{
+    string ID()
+    {
+        return Model.UniqueID;
+    }
+}
+
+<link href="~/Content/css/editorEx.css" rel="stylesheet" />
+
+@if (Model.UseCustomHeader)
+{
+    if (!Model.HideHeader)
+    {
+        if (Model is JBToolkit.Views.JqueryAjaxDataTable)
+        {
+            <style>
+                .dataTables_processing {
+                    width: 300px !important;
+                    text-align: center !important;
+                    position: fixed !important;
+                    margin-top: 0;
+                    margin-right: auto;
+                    margin-bottom: 0;
+                    margin-left: auto;
+                    z-index: 110000 !important;
+                    visibility: visible;
+                }
+            </style>
+        }
+        else
+        {
+            <style>
+                .dataTables_processing {
+                    visibility: hidden;
+                }
+            </style>
+        }
+
+        <style>
+            #tbl-@ID()_JQDT_wrapper .dt-buttons {
+                position: absolute !important;
+                left: -10000px !important;
+            }
+
+            #tbl-@ID()_JQDT_paginate {
+                margin-top: -20px !important;
+            }
+
+            #tbl-@ID()_JQDT_wrapper table  {
+                border-radius: 4px;
+            }
+
+            .darkDataTable {
+                background-color: grey !important;
+                opacity: 0.3;
+                position: fixed;
+                left: 0;
+                top: 40px;
+                z-index: 999;
+                width: 100%;
+                height: 100%;
+                overflow: visible;
+            }
+            tr.child ul.dtr-details {
+                width: 100%;
+                font-size: 10pt;
+            }
+
+            .mergeLeft {
+                border-left: none !important;
+            }
+            .mergeRight {
+                border-right: none !important;
+            }
+            .dtVerySmallFont {
+                font-size: 10pt !important;
+            }
+            .dtSmallFont {
+                font-size: 10pt !important;
+            }
+            .dtMediumFont {
+                font-size: 11pt !important;
+            }
+            .dtLargeFont {
+                font-size: 12pt !important;
+            }
+            .statusLine {
+                border-left: 4px solid black !important;
+            }
+            .statusLine-black {
+                border-left: 4px solid black !important;
+            }
+            .statusLine-grey {
+                border-left: 4px solid grey !important;
+            }
+            .statusLine-light-grey {
+                border-left: 4px solid #dbdbdb !important;
+            }
+            .statusLine-yellow {
+                border-left: 4px solid #FDBD1D !important;
+            }
+            .statusLine-red {
+                border-left: 4px solid #EA423C !important;
+            }
+            .statusLine-blue {
+                border-left: 4px solid blue !important;
+            }
+            .statusLine-light-blue {
+                border-left: 4px solid #02d4f4 !important;
+            }
+            .statusLine-dark-blue {
+                border-left: 4px solid #0e0c89 !important;
+            }
+            .statusLine-purple {
+                border-left: 4px solid #be1dd3 !important;
+            }
+            .statusLine-green {
+                border-left: 4px solid #14b74a !important;
+            }
+            .statusLine-pink {
+                border-left: 4px solid #ff00e1 !important;
+            }
+            .statusLine-orange {
+                border-left: 4px solid #ff8c00 !important;
+            }
+        </style>
+
+        <div class="darkDataTable" id="dtOverlay" style="display: none;"></div>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-@ID()_JQDT" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar" />
+                        <span class="icon-bar" />
+                        <span class="icon-bar" />
+                    </button>
+
+                    @if (Model is JBToolkit.Views.JqueryHtmlDataTable && ((JBToolkit.Views.JqueryHtmlDataTable)Model).SelectableDataSource != null)
+                    {
+                        <div style="padding-right: 10px; margin-top: 8px; margin-left: -4px;">
+                            <select class="form-control @(((JBToolkit.Views.JqueryHtmlDataTable)Model).SelectableDataSource.UniqueID)">
+                                @foreach (var option in ((JBToolkit.Views.JqueryHtmlDataTable)Model).SelectableDataSource.Items)
+                                {
+                                    <option value="@option.Value" data-extra="@option.Extra">@option.Label</option>
+                                }
+                            </select>
+                        </div>
+                    }
+                    else
+                    {
+                        <a class="navbar-brand" @if (Model.HideTitle) { @: style="display: none;"
+                           }>
+                            @Model.TableName
+                        </a>
+                    }
+
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-@ID()_JQDT"
+                     @if (!Model.HideTitle) { @: style="margin-right: -12px;"
+                     }>
+
+                    <ul class="nav navbar-nav"
+                        @if (!Model.HideTitle) { @: style="border-left: 1px solid LightGray;"
+                        } else { @: style="margin-left: -25px;"
+                        }>
+                        @Html.Raw(Model.GenerateFilters())
+                    </ul>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input id="tbl-@ID()_JQDT-search" type="text" class="form-control" placeholder="Search">
+                        </div>
+                    </form>
+                    <form class="navbar-form navbar-right" style="margin-bottom: 0px; padding-bottom: 0px;">
+                        <div class="form-group">
+                            <label>
+                                <span style="padding-right: 2px; color: #555;">Show</span>
+                                <select id="tbl-@ID()_JQDT-length" aria-controls="tbl-@ID()_JQDT" class="form-control">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="-1">all</option>
+                                </select>
+                                <span style="padding-left: 1px; color: #555;">entries</span>
+                            </label>
+                        </div>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right"
+                        @if (Model.PullNavBarUp) { @: style="margin-bottom: -2px;"
+                        }>
+                        @if (Model is JBToolkit.Views.JqueryEditorDataTable)
+                        {
+                            <li id="adddd-@ID()_JQDT" class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="padding-left: 10px; padding-right: 8px; margin-top: -2px;">
+                                    <span id="add-@ID()_JQDT" class="glyphicon glyphicon-plus" style="color: #337ab7; font-size: 20px;" onmouseover="addRollover(this);" onmouseout="addRollout(this);" />
+                                </a>
+                            </li>
+                        }
+
+                        <li id="colvisdd-@ID()_JQDT" class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="padding-left: 10px; padding-right: 10px;">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAUCAYAAACTQC2+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAA7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAPkSURBVEiJtZVfaJVlHMc/v+e0vWcQUVt/yApKVxGNooZ5VVdhZCQzdVkpYo0pRSm68HmPN+8uzvuezVzUxXJRLLqoPDMxjMJAwgwKxCDMC4mBLQhE3Ylgdd7Nvd8uPEcOcyqB/S6f5/d9Pr/n97y/72v8DxHHcZdzbl21Wl0dRVEG4K41JEmSF8ysLOnbOgTAriYcGRlpqlQqSyQtlnQPcIuZSdKkc+5X4NjChQt/6O7uni2VSmsljQKbwzAcbjznsqDBwcF7Z2dntwKrgbar1HPOzA5LWg68Hobh7rkJl4CiKLoxCIKdwAbghJmdl/QocBzYY2a/ZFk2Y2adwEvA/TWpgE2LFi36cGJi4qa+vr6zlwXFcbzEzPYB02b2BrBA0rCk7e3t7W93d3fPzinquiAI9gHPABvDMPwgSZII6DWzbu/995eA4jheZmZjkvY3NTX1zszM3GFmP5uZ996/E0VRPp/Pb5W0FDAzOwRUJA0BG9M0/bilpeXWpqamSpqmo0CXma323h+4CIrj+HEzOwgMe+/fNDPFcbzbObfYe985NDTUkqbpEaATONnQrkxST6FQGE2SpAS0hGG4WZKVSqVdwGuSlhYKhcOuWCzeZmafA3vDMOwzM3Gh5GcljQBUq1UPdJrZFmCkBpmV9HKhUBgFkPQH0FXTynu/DRgzs73FYvF2l8vldgOn0jTtbej99bX3OVkTPg2ckOSAoRpkQ1tb2ydJkmyvgY4Dd0qyOixN0x5Jp5xz77n6xpyoD3K1Ye3BOgRY39bW9tnk5OQeYHmDxvX39wd1QWtrq8xMZiaXZdlG4O4gCN5vuNFfwGmgo7b0Tb1dwLo0TccqlUoZWAEcAsjlch3Ab1EUXSxuampqGLgry7Jet2PHjtOSVgKr4jguNtzwC+fcq+VyOQdMAefNbG1ra+vefD6/R1KXmf2UpulgFEVO0nrgQK2NViqVBoA1kp4rFApn5vu8v5yent4QBMECLgzsEUlPmNla7305juNXgOedc99Vq9WhKIr+TpJkG9APPOScO5Nl2TCwwsxWeu8PwpyBHRgYeCzLsjHgH2ALsAlYJunFQqGwd+5Dlsvl3Pj4eB9QBHrMrCLp3dr2qjAMj9Zz57OgG/L5/FuSeoDzktZMT09/FQTBLjP7nQtW5CR1AOuAB4CjQAtwH/BRmqbboyj6s/HceU21VCp5Sf3AmjRNv25ubt5vZk/Nl1uLc8CnZrbTez8xX8IloCRJQiCqedUXURQ1Nzc3P2JmD0vqMLObJcnMzkoaB461t7f/ONcHrwiK43iLmQ3UIVcS/te4+IeNosiZ2ZOSVl5rCMC/GYnYU/wGqHMAAAAASUVORK5CYII=" onmouseover="showHideRollover(this);" onmouseout="showHideRollout(this);" />
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                @if (!(Model is JBToolkit.Views.JqueryEditorDataTable))
+                                {
+                                    <li><a href="#" id="tbl-@ID()_JQDT-col-vis">Column Visibility</a></li>
+                                    <li><a href="#" id="tbl-@ID()_JQDT-col-vis-restore">Show All</a></li>
+                                    <li role="separator" class="divider"></li>
+                                }
+
+                                <li><a href="#" id="tbl-@ID()_JQDT-reset">Reset</a></li>
+
+                            </ul>
+                        </li>
+                        <li id="exportdd-@ID()_JQDT" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="padding-left: 10px; padding-right: 10px;">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAUCAYAAACTQC2+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAqAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALtSURBVEiJrZVLaFxVGMd/35lYbkbQTBG7qxR8IIpBiwah1IWp4CPFTagIVUQlUEEkJrnnxoVnk7n3JDDBx8YsBF9QC65KQSjFByouBKE1GwvqKgp1XSYZMn83d8JNnJkU8b+63+N//t953O8zSiwtLR2q1Wp/ceP4XdJklmW/3UjySB/fJTP7aRhJ0svAETP7qtlsnlhcXPz1vwidT9P0nWGkGOPTkm4DDjvnvl1ZWXlifn7+8jCO26+SfpCkinloe3v7m2az+ej/LgR099hjzrkvhxFG8jyfLL8bAJLurvh2wXt/ycwk6Xszu1YJ3QkcHipkZherDjM7A5zpl7y2tnYA6GRZ9lrVn+f5NHBzz44x3iPp+TRNg5kJwIqiEHBN0p+l0ANlvoCfgRpwBLil0WgcmJmZ6fQrQpLFGO8v+Q9KehM42263XwohtHt3tOGcO5Zl2bikd0vfovf+qJk9A7QHHUkIwRVF8UKM8QpwWdKnpQjAc0mSXGy1Wgd7QuOSPgshOO/9G8Ap733RarVGJX0B3N5PZHV1dWx0dPQ88BFw34BajnU6nU+qr24qSZK3zUze+3OSbGtr60PgkQE7qW9ubn4t6alBuy3xXa1We3Hv834yhODKahPgoUHsJEk+AMZLc13S+8BbZvaKpIXS/3G9Xp+cm5v7u9oZNszs2RBCN4RQn52dvR5jPCnpR2CsKpLn+cPANPCepFaWZX9U48vLy3d1u92bvPfNnq8ndF3SSe/9RlEUx4HPi6KYTNN0Pc/zU2Z2gd3t6jhw1Hu/DlAUxRTwuvf+BMDCwsJVoFnJ3yFfcc5NxxinJb0KHJR0IcZ4FkDSVeDeHsl73+r9H2V8wsweG3TMVaEJSRPVgJndISntR6qKlHYNsKFCZrYG0O12R83sNPCDmf3SL7nRaOztcT049umbI2mazsDO4DsNnNtvTAwQGop+8+jxPM+TfXi3Oud2Fpc09H4GCU2Z2dR+xN0jCfj36NiFfwCnNCajSlscwAAAAABJRU5ErkJggg==" onmouseover="exportRollover(this);" onmouseout="exportRollout(this);" />
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" id="tbl-@ID()_JQDT-export-clipboard">Copy to Clipboard</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#" id="tbl-@ID()_JQDT-export-csv">Export to CSV</a></li>
+                                <li><a href="#" id="tbl-@ID()_JQDT-export-excel">Export to Excel</a></li>
+                                <li><a href="#" id="tbl-@ID()_JQDT-export-pdf">Export to PDF</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#" id="tbl-@ID()_JQDT-export-print">Print</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    }
+}
+else
+{
+    if (!Model.HideHeader)
+    {
+        <form class="navbar-form navbar-right" role="search">
+            <div class="form-group" style="margin-top: -10px;">
+                <input id="tbl-@ID()_JQDT-search" type="text" class="form-control" placeholder="Search">
+            </div>
+        </form>
+        <form class="navbar-form navbar-right" style="margin-bottom: 0px; padding-bottom: 0px;">
+            <div class="form-group" style="margin-top: -10px;">
+                <label style="font-weight: normal;">
+                    Show
+                    <select id="tbl-@ID()_JQDT-length" aria-controls="tbl-@ID()_JQDT" class="form-control">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="-1">all</option>
+                    </select>
+                    entries
+                </label>
+            </div>
+        </form>
+    }
+
+    @Html.Raw(Model.GenerateFilters())
+}
+
+@Html.Raw(Model.GenerateHtmlTable())
+
+<script>
+
+    $(document).keypress(function (event) {
+        if (event.which == '13') {
+            event.preventDefault();
+        }
+    });
+
+    function showHideRollover(theImage) {
+        theImage.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAUCAYAAACTQC2+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAA7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAPTSURBVEiJtZRfiFR1FMc/5+fMzi5E1NZue8+9i1NQEStFDeZL9WhkaZpaVopYi0oRihramz0I/VOoh02D2OihUlfQlEIhwnwoEIMwHySqqbi/O/5pNoW2dmbvPT3snWVx1xTB83bP73vO9/z5ngvXwVR1YRiG+wDX8rn/wV8rybPAHjP7Gsha/sKVAiuVSjFJkjkiMtvMbge6AAPqZvaTiJzw3n8LpEEQLAcGgXXe+4HJeeRyBFEU3Zmm6QYRWQrccoV6/hSRo2a2QEReieN456WAKUTlcvmmRqPxNrAKOAWMAQ8AJ0Vkt5n96JxrmlnFzJ4H7s5DzczWJknyoare7L0/f9myoiiao6qxqv6qqvODIFijqqmqbgJmTBNSUNXPc0w/gKpuVVWvqg9N21EURfOyLNsL7E/TdHWhUAjN7Acz25Ikybvlcrl9dHR0g3NurpkJ8BUwDOwA1njvP+7t7e02s+EsywaBhcBS7/3BCaIgCB4WkcPAgPf+VcCCINgpIrO995UoijqyLDsGVIDTk8aVAf3e+0FVfQPo8N6vAyQIgu0i8nKWZXNrtdpR193dfZuI7BORIe/9JsYVhYjMN7NdAFmWbQEqZrZeRHblJKmIvOC9H8y/fd4FgCVJshHY65wbmjlzZuAKhcJOEakWi8XVrTF2dXXdAKiZnc5JHwNOOeecme0AUjNb1dPT84mqbs4xJ4Fo0jqsra2tH6g2m833HdMoL01TB1AoFP6d5O6bRLJSVT9LkmQ3sCB/d4Arl8ulCaUUCiYiBpgbGxtbY2blZrP5QQtQr9cvAmeyLJuVj+5IqwZgRWdn594kSfYAi3JRkGN/q1arE8WNjIwMmFlvlmWr3dmzZ8+Y2WIzWxKG4bZWhyJyAHiJcVn/zfg9LQ+CYGh4eHh3vo/vm83mW4ATkZXAwZxDVPVNYJmIPFWr1c5NJ+9DwCrnnGZZdgo4BjwiIsvjON6jqi8Cz4jIN2a2w3s/EobhRjN7PU3Te9M0PVcqlQbMbJGZLU6S5DCX7ieKogdzsn9yha0F5onIc3EcD126S2BGfszbRKTfzIaB9/JRLqnVasdbwClC6OzsvLG9vf0doB8YM7NlpVLpi0ajsR34Q0ROmpkzs1kisgK4R0SOAx1mdpeIfFQsFjdXq9W/Jued8veu1+sXVfUXoJmTfNloNPYDjwKYGfkOJ2LM7A7gU+DxOI5/n6bzqR0FQfCaiGwFnvbeH+jr62u7cOHC/Wma3icis4BbGT/q88DPwAnv/XeMK/LqLAiC9ao6qqpPXnXQNZhT1UNhGD5xPZL/B+OMykI1AEsyAAAAAElFTkSuQmCC";
+    }
+
+    function showHideRollout(theImage) {
+        theImage.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAUCAYAAACTQC2+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAA7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAPkSURBVEiJtZVfaJVlHMc/v+e0vWcQUVt/yApKVxGNooZ5VVdhZCQzdVkpYo0pRSm68HmPN+8uzvuezVzUxXJRLLqoPDMxjMJAwgwKxCDMC4mBLQhE3Ylgdd7Nvd8uPEcOcyqB/S6f5/d9Pr/n97y/72v8DxHHcZdzbl21Wl0dRVEG4K41JEmSF8ysLOnbOgTAriYcGRlpqlQqSyQtlnQPcIuZSdKkc+5X4NjChQt/6O7uni2VSmsljQKbwzAcbjznsqDBwcF7Z2dntwKrgbar1HPOzA5LWg68Hobh7rkJl4CiKLoxCIKdwAbghJmdl/QocBzYY2a/ZFk2Y2adwEvA/TWpgE2LFi36cGJi4qa+vr6zlwXFcbzEzPYB02b2BrBA0rCk7e3t7W93d3fPzinquiAI9gHPABvDMPwgSZII6DWzbu/995eA4jheZmZjkvY3NTX1zszM3GFmP5uZ996/E0VRPp/Pb5W0FDAzOwRUJA0BG9M0/bilpeXWpqamSpqmo0CXma323h+4CIrj+HEzOwgMe+/fNDPFcbzbObfYe985NDTUkqbpEaATONnQrkxST6FQGE2SpAS0hGG4WZKVSqVdwGuSlhYKhcOuWCzeZmafA3vDMOwzM3Gh5GcljQBUq1UPdJrZFmCkBpmV9HKhUBgFkPQH0FXTynu/DRgzs73FYvF2l8vldgOn0jTtbej99bX3OVkTPg2ckOSAoRpkQ1tb2ydJkmyvgY4Dd0qyOixN0x5Jp5xz77n6xpyoD3K1Ye3BOgRY39bW9tnk5OQeYHmDxvX39wd1QWtrq8xMZiaXZdlG4O4gCN5vuNFfwGmgo7b0Tb1dwLo0TccqlUoZWAEcAsjlch3Ab1EUXSxuampqGLgry7Jet2PHjtOSVgKr4jguNtzwC+fcq+VyOQdMAefNbG1ra+vefD6/R1KXmf2UpulgFEVO0nrgQK2NViqVBoA1kp4rFApn5vu8v5yent4QBMECLgzsEUlPmNla7305juNXgOedc99Vq9WhKIr+TpJkG9APPOScO5Nl2TCwwsxWeu8PwpyBHRgYeCzLsjHgH2ALsAlYJunFQqGwd+5Dlsvl3Pj4eB9QBHrMrCLp3dr2qjAMj9Zz57OgG/L5/FuSeoDzktZMT09/FQTBLjP7nQtW5CR1AOuAB4CjQAtwH/BRmqbboyj6s/HceU21VCp5Sf3AmjRNv25ubt5vZk/Nl1uLc8CnZrbTez8xX8IloCRJQiCqedUXURQ1Nzc3P2JmD0vqMLObJcnMzkoaB461t7f/ONcHrwiK43iLmQ3UIVcS/te4+IeNosiZ2ZOSVl5rCMC/GYnYU/wGqHMAAAAASUVORK5CYII=";
+    }
+
+    function exportRollover(theImage) {
+        theImage.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAUCAYAAACTQC2+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAqAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALXSURBVEiJrZVNiBxFFMd/rzMZkizouoTZ6VdFXCFGQjCLDhqEYA7GgB8ruSyIoEHEXCPsQfCSePGgEFBPyUFEDUjEkwhCCH5gxIODkOhFF7PIVPcuOSvZDl3PS4/0jjO9c/APRdf7+Nf/VXV9CBU6nc58q9VaZ3rcLMvy+MbGxh/TJMsYoavAT9vwXgH2An+KyJMhhN+2E2qNOszsizzP320iOeeeMbO9wD4z+857f2IwGFxv4iTbVTIOZmY1cz7G+K1z7rH/XQiII/asmX3VRGip6nEAEbnHzBCRA0PfKLIsuwoYcA24VQvtB/Y1CYmqWlNCHWmatvv9/p1Rv3NuGZgJIXwIoKoPAC9kWXauKuzfzXALyKv+4eprwM/ADuA+4K5JBYQQPgPEe/9gWZaHgYeAFVU90G63X15bW7s9/EdZURRHsyxbBN6rfG9kWdYTkWeB2w0TTZxzL6nqjRjjdRH5BFipYs8XRXHFez83nNFiu92+BJzMsuw159y1EMJl7/3usiw/F5HOOIWFhYXZzc3NS2b2dEMhR8uy/Li+65ZU9SxgIYTLgMQYPxCRR8exVXVPURTfiEiTCMD3InJqy4EVkaeAN4Hovd8VY3x4EltELpjZYmX+CnxtZrmIbABzwNtm9tHMzMzp1dXVzbpQliTJSSCq6p7BYPC3qj4H/AjM1kW63e4jZrYMvB9jPL++vr5Wj3vv7y/Lcmee52/Vl8BU9a80TXsAaZo+rqp5t9s9VMVPqOodVbVer7cTwDm3MoxXOUuqeqVp/YYzuiEiy6q6DLwKzCVJ8qWqflrFfwcODkkhhPNU5wPAzI6IyLFphI5UrY57gdcn8LYcchHZQe0lGCskIher/m4zexH4QUR+GZfc7/dH77ghEqa9NzudzryqWpqmZ6Yi1KCq76hq2ZTzn/dIRJ5Q1V1NJBG528ySmn1s68sxhRCwVLWJGB20sictKwD/APQdACdJ1xsdAAAAAElFTkSuQmCC";
+    }
+
+    function exportRollout(theImage) {
+        theImage.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAUCAYAAACTQC2+AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAqAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALtSURBVEiJrZVLaFxVGMd/35lYbkbQTBG7qxR8IIpBiwah1IWp4CPFTagIVUQlUEEkJrnnxoVnk7n3JDDBx8YsBF9QC65KQSjFByouBKE1GwvqKgp1XSYZMn83d8JNnJkU8b+63+N//t953O8zSiwtLR2q1Wp/ceP4XdJklmW/3UjySB/fJTP7aRhJ0svAETP7qtlsnlhcXPz1vwidT9P0nWGkGOPTkm4DDjvnvl1ZWXlifn7+8jCO26+SfpCkinloe3v7m2az+ej/LgR099hjzrkvhxFG8jyfLL8bAJLurvh2wXt/ycwk6Xszu1YJ3QkcHipkZherDjM7A5zpl7y2tnYA6GRZ9lrVn+f5NHBzz44x3iPp+TRNg5kJwIqiEHBN0p+l0ANlvoCfgRpwBLil0WgcmJmZ6fQrQpLFGO8v+Q9KehM42263XwohtHt3tOGcO5Zl2bikd0vfovf+qJk9A7QHHUkIwRVF8UKM8QpwWdKnpQjAc0mSXGy1Wgd7QuOSPgshOO/9G8Ap733RarVGJX0B3N5PZHV1dWx0dPQ88BFw34BajnU6nU+qr24qSZK3zUze+3OSbGtr60PgkQE7qW9ubn4t6alBuy3xXa1We3Hv834yhODKahPgoUHsJEk+AMZLc13S+8BbZvaKpIXS/3G9Xp+cm5v7u9oZNszs2RBCN4RQn52dvR5jPCnpR2CsKpLn+cPANPCepFaWZX9U48vLy3d1u92bvPfNnq8ndF3SSe/9RlEUx4HPi6KYTNN0Pc/zU2Z2gd3t6jhw1Hu/DlAUxRTwuvf+BMDCwsJVoFnJ3yFfcc5NxxinJb0KHJR0IcZ4FkDSVeDeHsl73+r9H2V8wsweG3TMVaEJSRPVgJndISntR6qKlHYNsKFCZrYG0O12R83sNPCDmf3SL7nRaOztcT049umbI2mazsDO4DsNnNtvTAwQGop+8+jxPM+TfXi3Oud2Fpc09H4GCU2Z2dR+xN0jCfj36NiFfwCnNCajSlscwAAAAABJRU5ErkJggg==";
+    }
+
+    @if (Model is JBToolkit.Views.JqueryEditorDataTable)
+    {
+        <text>
+
+        function addRollover(theImage)
+        {
+            document.getElementById(theImage.id).style.color = "#23527C";
+        }
+
+        function addRollout(theImage)
+        {
+            document.getElementById(theImage.id).style.color = "#337ab7";
+        }
+
+        </text>
+    }
+
+    @Html.Raw(Model.GenerateRegisterDataTableScript())
+    @Html.Raw(Model.GenerateRegisterFiltersScript())
+
+    $('#tbl-@ID()_JQDT-search').on('keyup', function () {
+        var dt = getDataTable('tbl-@ID()_JQDT');
+        if (dt != null) dt.search(this.value).draw();
+    });
+
+    $("#tbl-@ID()_JQDT-search").on("paste", function () {
+        $(this).focus();
+        $(this).trigger("keyup.DT");
+        var dt = getDataTable('tbl-@ID()_JQDT');
+        if (dt != null) {
+            dt.search(this.value).draw();
+        }
+    });
+
+    $('#tbl-@ID()_JQDT-length').change(function () {
+        var dt = getDataTable('tbl-@ID()_JQDT');
+        if (dt != null) dt.page.len(this.value).draw();
+    });
+
+    $('#tbl-@ID()_JQDT-export-clipboard').click(function () {
+        $('#tbl-@ID()_JQDT_wrapper .buttons-copy').click();
+    });
+
+    $('#tbl-@ID()_JQDT-export-csv').click(function () {
+        $('#tbl-@ID()_JQDT_wrapper .buttons-csv').click();
+    });
+
+    $('#tbl-@ID()_JQDT-export-excel').click(function () {
+        $('#tbl-@ID()_JQDT_wrapper .buttons-excel').click();
+    });
+
+    $('#tbl-@ID()_JQDT-export-pdf').click(function () {
+        $('#tbl-@ID()_JQDT_wrapper .buttons-pdf').click();
+    });
+
+    $('#tbl-@ID()_JQDT-export-print').click(function () {
+        $('#tbl-@ID()_JQDT_wrapper .buttons-print').click();
+    });
+
+    $('#tbl-@ID()_JQDT-reset').click(function (e) {
+        $('#tbl-@ID()_JQDT_wrapper .buttons-colvisGroup').click();
+        e.preventDefault();
+        $.fn.dataTable.ColReorder($("#tbl-@ID()_JQDT")).fnReset();
+        setTimeout(function () {
+                e.preventDefault();
+                $.fn.dataTable.ColReorder($("#tbl-@ID()_JQDT")).fnReset();
+        }, 100);
+    });
+
+    $('#tbl-@ID()_JQDT-col-vis').click(function () {
+
+        setTimeout(function () {
+            $('#tbl-@ID()_JQDT_wrapper .buttons-colvis').click();
+
+            $("#tbl-@ID()_JQDT_wrapper .dt-button-collection").position({
+                my: "left top",
+                at: "left bottom",
+                of:  $("#colvisdd-@ID()_JQDT"),
+                collision: "fit"
+            });
+
+        }, 50);
+
+    });
+
+    $('#tbl-@ID()_JQDT-col-vis-restore').click(function () {
+        $('#tbl-@ID()_JQDT_wrapper .buttons-colvisGroup').click();
+    });
+
+    @if (Model is JBToolkit.Views.JqueryEditorDataTable)
+    {
+        <text>
+            $('#add-@ID()_JQDT').click(function() {
+                $('#tbl-@ID()_JQDT_wrapper .buttons-create').click();
+            });
+        </text>
+    }
+
+    @Html.Raw(Model.AdditionalJavaScript);
+
+    initNewDataTables();
+
+</script>
+

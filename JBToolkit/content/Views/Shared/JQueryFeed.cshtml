@@ -1,0 +1,133 @@
+﻿@model JBToolkit.Views.JqueryFeed
+
+@functions
+{
+    string ID()
+    {
+        return Model.UniqueID;
+    }
+}
+
+<div class="row">
+    <div>
+        <div id="leftCol" class="panel panel-default">
+            <div class="panel-heading" style="height: 55px;">
+                @if (!string.IsNullOrEmpty(Model.CustomFilterHeaderMarkup))
+                {
+                    @Html.Raw(Model.CustomFilterHeaderMarkup)
+                }
+                else
+                {
+                    <input id="tbl-@Model.UniqueID-search" type="text" class="form-control" placeholder="Search">
+                }
+            </div>
+
+            <div class="panel-body" style="padding: 0px;">
+                <table id="tbl-@Model.UniqueID" class="table" cellspacing="0" style="width: 100%">
+                    <thead>
+                        <tr><th>@Model.Title</th></tr>
+                    </thead>
+                    <tfoot>
+                        <tr><th>@Model.Title</th></tr>
+                    </tfoot>
+                    <tbody>
+
+                        @foreach (var row in Model.Rows)
+                        {
+                            <tr>
+                                <td>
+
+                                    @if (row.FirstRowHighlightStrips != null)
+                                    {
+                                        foreach (var hs in row.FirstRowHighlightStrips)
+                                        {
+                                            <span class="label ah-feeditem-date label-@hs.HighlightStripType.ToString().ToLower()"
+                                                  @if (hs.HighlightStripType == JBToolkit.Views.JQFRowHighlightStrip.HighlightStripTypeEnum.Grey) { @: style="background-color: grey; margin-right: 7px;"
+                                                  } else if (hs.HighlightStripType == JBToolkit.Views.JQFRowHighlightStrip.HighlightStripTypeEnum.Custom && !string.IsNullOrEmpty(hs.CustomHighlighColour)) { @: style="color: @hs.CustomHighlighColour; margin-right: 7px;"
+                                                  } else { @: style="margin-right: 4px;"
+                                                  }>
+                                                @hs.Text
+                                            </span>
+                                        }
+                                    }
+
+                                    <img style="width: 40px; height: 40px;" class="ah-feeditem-icon" src="@row.ImageURL" />
+
+                                    <div class="ah-feeditem-label">
+                                        @row.RowTitle
+                                        <div style="color: #3f43a8;">
+                                            <span style="font-size: 10pt;">
+                                                @row.Subtitle
+                                            </span>
+
+                                            @if (row.SecondRowHighlightStrips != null)
+                                            {
+                                                foreach (var hs in row.SecondRowHighlightStrips)
+                                                {
+                                                    <span class="label ah-feeditem-date label-@hs.HighlightStripType.ToString().ToLower()"
+                                                          @if (hs.HighlightStripType == JBToolkit.Views.JQFRowHighlightStrip.HighlightStripTypeEnum.Grey) { @: style="background-color: grey; margin-right: 7px;"
+                                                          } else if (hs.HighlightStripType == JBToolkit.Views.JQFRowHighlightStrip.HighlightStripTypeEnum.Custom && !string.IsNullOrEmpty(hs.CustomHighlighColour)) { @: style="color: @hs.CustomHighlighColour; margin-right: 7px;"
+                                                          } else { @: style="margin-right: 4px;"
+                                                          }>
+                                                        @hs.Text
+                                                    </span>
+                                                }
+                                            }
+
+                                        </div>
+                                    </div>
+
+                                    <div style="font-size: 11pt;">
+                                        @Html.Raw(@row.Content)
+                                    </div>
+
+                                    <div class="ah-feeditem-button-group small">
+
+                                        @if (row.Buttons != null)
+                                        {
+
+                                            foreach (var btn in row.Buttons)
+                                            {
+                                                <a href="@btn.Url" target="_@btn.Target.ToString().ToLower()" role="button" class="btn btn-default btn-xs @btn.ButtonClass">
+                                                    <span style="padding-right: 5px;" aria-hidden="true"
+                                                          @if (btn.IconClass == "") { @: class="glyphicon glyphicon-new-window"
+                                                          } else { @: class="@btn.IconClass"
+                                                          }></span>@btn.Text
+                                                    </a>
+
+                                                    if (!string.IsNullOrEmpty(row.ButtonAreaText))
+                                                    {
+                                                        <span style="color: green; float: right; margin-top: 1px; display: block; margin-top: 5px;">@Html.Raw(row.ButtonAreaText)</span>
+                                                    }
+                                                }
+                                            }
+
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        registerFeed("@Model.UniqueID", 0, 0);
+
+        $('#tbl-@Model.UniqueID-search').on('keyup', function () {
+            var dt = getDataTable('tbl-@Model.UniqueID');
+            if (dt != null) dt.search(this.value).draw();
+        });
+
+        initNewDataTables();
+
+        @Model.AdditionalJavaScript
+    });
+
+</script>

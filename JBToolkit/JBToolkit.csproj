@@ -1,0 +1,1680 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
+  <Import Project="..\packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props" Condition="Exists('..\packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props" Condition="Exists('..\packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props" Condition="Exists('..\packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43AA263C-1DB9-490D-99EA-5AF526DF56AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JBToolkit</RootNamespace>
+    <AssemblyName>JBToolkit</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Development|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Development\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Brotli.Core, Version=2.0.4.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Brotli.NET.2.0.4.2\lib\net45\Brotli.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Colorful.Console, Version=1.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Colorful.Console.1.2.10\lib\net452\Colorful.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=12.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.12.1.2\lib\net45\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.10.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.10.0\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.3.3, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3.3\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Api.CommonProtos, Version=1.7.0.0, Culture=neutral, PublicKeyToken=3ec5ea7f18953e47, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Api.CommonProtos.1.7.0\lib\net45\Google.Api.CommonProtos.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Api.Gax, Version=2.10.0.0, Culture=neutral, PublicKeyToken=3ec5ea7f18953e47, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Api.Gax.2.10.0\lib\net45\Google.Api.Gax.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Api.Gax.Grpc, Version=2.10.0.0, Culture=neutral, PublicKeyToken=3ec5ea7f18953e47, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Api.Gax.Grpc.2.10.0\lib\net45\Google.Api.Gax.Grpc.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.49.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.49.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.49.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.49.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.49.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Vision.v1, Version=1.49.0.2039, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Vision.v1.1.49.0.2039\lib\net45\Google.Apis.Vision.v1.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Cloud.Vision.V1, Version=1.7.0.0, Culture=neutral, PublicKeyToken=185c282632e132a0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Cloud.Vision.V1.1.7.0\lib\net45\Google.Cloud.Vision.V1.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.LongRunning, Version=1.1.0.0, Culture=neutral, PublicKeyToken=185c282632e132a0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.LongRunning.1.1.0\lib\net45\Google.LongRunning.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.8.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.8.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Auth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Auth.1.22.0\lib\net45\Grpc.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.1.22.1\lib\net45\Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.Api.1.22.1\lib\net45\Grpc.Core.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ionic.Zip.1.9.1.8\lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="iTextSharp, Version=4.1.6.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <HintPath>..\packages\iTextSharp-LGPL.4.1.6\lib\iTextSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LaMarvin.Windows.Forms.ColorPicker, Version=1.1.81.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\LaMarvin.Windows.Forms.ColorPicker.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Common.1.2.2\lib\net45\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.1.2.2\lib\net45\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>lib\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.2\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenXmlPowerTools, Version=4.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenXmlPowerTools.4.5.3.2\lib\net45\OpenXmlPowerTools.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="SharpCompress, Version=0.24.0.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpCompress.0.24.0\lib\net45\SharpCompress.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.HashFunction.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=80c9288e394c1322, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.HashFunction.Core.2.0.0\lib\net45\System.Data.HashFunction.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.HashFunction.Interfaces, Version=2.0.0.0, Culture=neutral, PublicKeyToken=80c9288e394c1322, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.HashFunction.Interfaces.2.0.0\lib\net45\System.Data.HashFunction.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.HashFunction.xxHash, Version=2.0.0.0, Culture=neutral, PublicKeyToken=80c9288e394c1322, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.HashFunction.xxHash.2.0.0\lib\net45\System.Data.HashFunction.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Interactive.Async, Version=3.2.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Interactive.Async.3.2.0\lib\net45\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Management.Automation.dll.10.0.10586.0\lib\net40\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.1.8.0\lib\portable-net45+win8\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assembly\CultureHelper.cs" />
+    <Compile Include="CSV\CSVHelper.Native.cs" />
+    <Compile Include="Database\DataTableStates.cs" />
+    <Compile Include="Database\DBConnection\DBConnection.Dapper.cs" />
+    <Compile Include="Database\DBConnection\DBConnection.DBResult.cs" />
+    <Compile Include="Database\DBConnection\DBConnection.SQLClient.cs" />
+    <Compile Include="Database\TreeViewCache.cs" />
+    <Compile Include="Assembly\EmbeddedResourceHelper.cs" />
+    <Compile Include="Assembly\VersionHelper.cs" />
+    <Compile Include="CSV\CSVHelper.cs" />
+    <Compile Include="Extensions\EncodingExtensions.cs" />
+    <Compile Include="Extensions\SourceCodeFormatter.cs" />
+    <Compile Include="FuzzyLogic\Algorithms\DoubleMetaphoneAlgorithm.cs" />
+    <Compile Include="FuzzyLogic\ApproximatelyEquals.cs" />
+    <Compile Include="FuzzyLogic\Algorithms\HammingDistance.cs" />
+    <Compile Include="FuzzyLogic\Algorithms\JaccardDistance.cs" />
+    <Compile Include="FuzzyLogic\Algorithms\JaroDistance.cs" />
+    <Compile Include="FuzzyLogic\Algorithms\JaroWinklerDistance.cs" />
+    <Compile Include="FuzzyLogic\Algorithms\LevenshteinDistance.cs" />
+    <Compile Include="FuzzyLogic\Algorithms\LongestCommonSubsequence.cs" />
+    <Compile Include="FuzzyLogic\Algorithms\LongestCommonSubstring.cs" />
+    <Compile Include="FuzzyLogic\Algorithms\OverlapCoefficient.cs" />
+    <Compile Include="FuzzyLogic\Algorithms\RatcliffObershelpSimilarity.cs" />
+    <Compile Include="FuzzyLogic\Algorithms\SorensenDiceDistance.cs" />
+    <Compile Include="FuzzyLogic\Algorithms\TanimotoCoefficient.cs" />
+    <Compile Include="FuzzyLogic\BestMatch.cs" />
+    <Compile Include="FuzzyLogic\FuzzyLogicExample.cs" />
+    <Compile Include="FuzzyLogic\Generic\Operations.cs" />
+    <Compile Include="content\JBToolkit.Global.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Google\Geocoding.cs" />
+    <Compile Include="Google\Vision.cs" />
+    <Compile Include="Images\ColourHelper.cs" />
+    <Compile Include="Images\HtmlImageHelper.cs" />
+    <Compile Include="Images\IconImageHelper.cs" />
+    <Compile Include="Images\ImageHelper.cs" />
+    <Compile Include="InterProcessComms\MemoryMappedFile\MemoryMappedFilesClient.cs" />
+    <Compile Include="InterProcessComms\MemoryMappedFile\MemoryMappedFilesServer.cs" />
+    <Compile Include="InterProcessComms\MessageQueues\MessageQueuesClient.cs" />
+    <Compile Include="InterProcessComms\MessageQueues\MessagesQueuesServer.cs" />
+    <Compile Include="InterProcessComms\NamedPipes\NamedPipeClient.cs" />
+    <Compile Include="InterProcessComms\NamedPipes\NamedPipeServer.cs" />
+    <Compile Include="InterProcessComms\NetRemoting\NetRemotingClient.cs" />
+    <Compile Include="InterProcessComms\NetRemoting\NetRemotingObject.cs" />
+    <Compile Include="InterProcessComms\NetRemoting\NetRemotingServer.cs" />
+    <Compile Include="InterProcessComms\Sockets\SocketClient.cs" />
+    <Compile Include="InterProcessComms\Sockets\SocketsServer.cs" />
+    <Compile Include="InterProcessComms\WmCopyData\CopyDataClient.cs" />
+    <Compile Include="InterProcessComms\WmCopyData\CopyDataServer.cs" />
+    <Compile Include="InterProcessComms\WmCopyData\COPYDATASTRUCT.cs" />
+    <Compile Include="Logger\WindowsEventLogger.cs" />
+    <Compile Include="InterProcessComms\IIpcContracts.cs" />
+    <Compile Include="InterProcessComms\Wcf\WcfClient.cs" />
+    <Compile Include="InterProcessComms\Wcf\WcfServer.cs" />
+    <Compile Include="PdfDoc\PdfConverter.cs" />
+    <Compile Include="PdfDoc\PdfSplitter.cs" />
+    <Compile Include="RegularExpressions\Common.cs" />
+    <Compile Include="RegularExpressions\CountryPostCodes.cs" />
+    <Compile Include="RegularExpressions\DateTimeHelper.cs" />
+    <Compile Include="PdfDoc\Converters\PdfConverter_DocToPdf.cs" />
+    <Compile Include="PdfDoc\Converters\PdfConverter_PdfToHtml.cs" />
+    <Compile Include="PdfDoc\Converters\PdfConverter_PdfToPng.cs" />
+    <Compile Include="Streams\ThrottledStream.cs" />
+    <Compile Include="JQueryDataTableViewModels\AjaxDataTable.cs" />
+    <Compile Include="JQueryDataTableViewModels\JQueryDataTables\JqueryEditorDataTable.cs" />
+    <Compile Include="JQueryDataTableViewModels\JQueryDataTables\JqueryAjaxDataTable.cs" />
+    <Compile Include="JQueryDataTableViewModels\JQueryDataTables\IJqueryDataTable.cs" />
+    <Compile Include="JQueryDataTableViewModels\JqueryFeed.cs" />
+    <Compile Include="JQueryDataTableViewModels\JQueryDataTables\_JqueryDataTable.cs" />
+    <Compile Include="JQueryDataTableViewModels\JQueryDataTables\JqueryJsonDataTable.cs" />
+    <Compile Include="JQueryDataTableViewModels\JQueryDataTables\JqueryHtmlDataTable.cs" />
+    <Compile Include="Web\AccessLog.cs" />
+    <Compile Include="Web\AccessToken.cs" />
+    <Compile Include="Web\MemoryFile.cs" />
+    <Compile Include="Windows\ConsoleHelper\Options.cs" />
+    <Compile Include="Windows\ConsoleHelper\ProgressBar.cs" />
+    <Compile Include="Windows\ConsoleHelper\Spinner.cs" />
+    <Compile Include="Windows\ConsoleHelper\Writer.cs" />
+    <Compile Include="Windows\DirectoryHelper.cs" />
+    <Compile Include="PdfDoc\Converters\PdfConverter_HtmlToPdf.cs" />
+    <Compile Include="PdfDoc\PdfMerger.cs" />
+    <Compile Include="Web\IPHelper.cs" />
+    <Compile Include="Windows\CommonFileTypeExtensions.cs" />
+    <Compile Include="Windows\FastDirectoryEnumerator.cs" />
+    <Compile Include="Windows\ProcessHelper.cs" />
+    <Compile Include="Windows\UACHelper.cs" />
+    <Compile Include="Windows\WindowHelper.cs" />
+    <Compile Include="Database\DBConnection.cs" />
+    <Compile Include="Web\Email.cs" />
+    <Compile Include="Web\Http.cs" />
+    <Compile Include="Logger\DBLogger.cs" />
+    <Compile Include="Domain\DomainHelper.cs" />
+    <Compile Include="Encryption\StringEncrypt.cs" />
+    <Compile Include="Encryption\ConnectionStringEncryptor.cs" />
+    <Compile Include="PdfDoc\PdfParser.cs" />
+    <Compile Include="Windows\ServiceHelper.cs" />
+    <Compile Include="WinForms\CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\CustomToolTip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForms\FastScrollDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForms\FilterTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForms\Graphics\RoundRectangle.cs" />
+    <Compile Include="WinForms\Helpers\ColourComoBoxHelper.cs" />
+    <Compile Include="WinForms\Helpers\ColourHelper.cs" />
+    <Compile Include="WinForms\Helpers\CursorHelper.cs" />
+    <Compile Include="WinForms\Helpers\DirtyTracker.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssAnonymousBlockBox.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssAnonymousBox.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssBlock.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssBox.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssBoxWord.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssBoxWordSplitter.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssConstants.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssDefaults.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssDrawingHelper.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssLayoutEngine.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssLength.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssLineBox.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssPropertyAttribute.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssPropertyInheritedAttribute.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssRectangle.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssTable.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\CssValue.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\HtmlConstants.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\HtmlRenderer.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\HtmlTag.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\InitialContainer.cs" />
+    <Compile Include="WinForms\Helpers\HtmlHelper\Parser.cs" />
+    <Compile Include="WinForms\HtmlLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForms\HtmlPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForms\HtmlToolTip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForms\ImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForms\OptimisedMetroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\Popup.designer.cs">
+      <DependentUpon>Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForms\RoundPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForms\RoundTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForms\ScrollingListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XmlDoc\Converters\BulkDocumentToPdfConverter.cs" />
+    <Compile Include="XmlDoc\Converters\MSOfficeDocToPdf.cs" />
+    <Compile Include="Extensions\Generic.cs" />
+    <Compile Include="Extensions\HtmlExtensions.cs" />
+    <Compile Include="Domain\ADAccessor.cs" />
+    <Compile Include="Domain\Impersonation.cs" />
+    <Compile Include="Logger\FileLogger.cs" />
+    <Compile Include="Streams\SafeFileStream.cs" />
+    <Compile Include="XmlDoc\Converters\OfficeHtmlPdfImageConverter.cs" />
+    <Compile Include="XmlDoc\Converters\WordToHtml.cs" />
+    <Compile Include="XmlDoc\Converters\ExcelDataTable.cs" />
+    <Compile Include="XmlDoc\ImageExtractor.cs" />
+    <Compile Include="XmlDoc\MailMerge\OpenXmlMailMerge.cs" />
+    <Compile Include="XmlDoc\MailMerge\ReAlMailMerge.cs" />
+    <Compile Include="XmlDoc\MailMerge\WordInteropMailMerge.cs" />
+    <Compile Include="XmlDoc\Parser.cs" />
+    <Compile Include="Zip\ExtractOtherArchiveType.cs" />
+    <Compile Include="Zip\ZipArchive.Native.cs" />
+    <Compile Include="Zip\ZipCompression.cs" />
+    <Compile Include="Zip\ZipExtraction.cs" />
+    <EmbeddedResource Include="Dependencies_Embedded\googlevisionapikey.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Acrobatic.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Alligator.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Alligator2.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Alligator3.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Alpha.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Alphabet.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Amc3Line.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Amc3Liv1.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Amcaaa01.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Amcneko.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Amcrazo2.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Amcrazor.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Amcrazor2.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Amcslash.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Amcslder.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Amcslider.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Amcthin.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Amctubes.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Amcun.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Amcuntitled.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Ansiregular.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Ansishadow.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Arrows.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\AsciiNewRoman.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Avatar.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\B1ff.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Banner.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Banner3.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Banner3d.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Banner4.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Barbwire.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Basic.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Bear.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Bell.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Benjamin.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Big.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Bigchief.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Bigfig.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Bigmoneyne.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Bigmoneynw.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Bigmoneyse.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Bigmoneysw.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Binary.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Block.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Blocks.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Bloody.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Bolger.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Braced.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Bright.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Broadway.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Broadwaykb.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Broadway_Kb.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Bubble.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Bulbhead.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Calgphy2.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Caligraphy.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Caligraphy2.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Calvins.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Cards.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Catwalk.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Chiseled.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Chunky.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Coinstak.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Cola.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Colossal.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Computer.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Contessa.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Contrast.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Cosmic.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Cosmike.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Crawford.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Crawford2.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Crazy.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Cricket.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Cursive.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Cyberlarge.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Cybermedium.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Cybersmall.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Cygnet.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Danc4.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Dancingfont.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Decimal.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Defleppard.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Deltacorpspriest1.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Diamond.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Dietcola.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Digital.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Doh.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Doom.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Dosrebel.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Dotmatrix.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Double.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Doubleshorts.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Drpepper.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Dwhistled.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Eftichess.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Eftifont.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Eftiitalic.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Eftipiti.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Eftirobot.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Eftitalic.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Eftiwall.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Eftiwater.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Electronic.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Elite.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Epic.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Fender.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Filter.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Firefontk.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Firefonts.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Fire_Fontk.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Fire_Fonts.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\FiveLineOlique.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Flipped.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Flowerpower.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Fourtops.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Fraktur.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Funface.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Funfaces.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Fuzzy.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Georgi16.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Georgia11.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Ghost.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Ghoulish.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Glenyn.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Goofy.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Gothic.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Graceful.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Gradient.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Graffiti.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Greek.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Heartleft.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Heartright.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Heart_Left.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Heart_Right.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Henry3d.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Hex.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Hieroglyphs.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Hollywood.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Horizontalleft.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Horizontalright.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Icl1900.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Impossible.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Invita.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Isometric1.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Isometric2.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Isometric3.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Isometric4.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Italic.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Ivrit.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Jacky.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Jazmine.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Jerusalem.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Jsblockletters.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Jsbracketletters.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Jscapitalcurves.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Jscursive.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Jsstickletters.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Katakana.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Kban.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Keyboard.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Knob.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Konto.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Kontoslant.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Larry3d.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Larry3d2.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Lcd.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Lean.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Letters.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Lildevil.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Lineblocks.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Linux.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Lockergnome.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Madrid.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Marquee.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Max4.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Maxfour.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Maxiwi.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Merlin1.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Merlin2.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Mike.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Mini.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Miniwi.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Mirror.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Mnemonic.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Modular.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Morse.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Morse2.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Moscow.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Mshebrew210.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Muzzle.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Nancyj.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Nancyjfancy.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Nancyjimproved.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Nancyjunderlined.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Nipples.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Nscript.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Ntgreek.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Nvscript.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\O8.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Octal.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Ogre.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Oldbanner.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\OneRow.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Os2.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\PatorjkCheese.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\PatorjkHex.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Pawp.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Peaks.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Peaksslant.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Pebbles.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Pepper.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Poison.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Puffy.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Puzzle.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Pyramid.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Rammstein.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Rectangles.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\RedPhoenix.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Relief.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Relief2.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Rev.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Reverse.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Roman.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Rot13.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Rotated.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Rounded.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Rowancap.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Rozzo.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Runic.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Runyc.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Santaclara.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Sblood.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Script.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Serifcap.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Shadow.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Shimrod.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Short.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Slant.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Slantrelief.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Slide.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Slscript.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Small.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Smallcaps.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Smallisometric1.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Smallkeyboard.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Smallpoison.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Smallscript.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Smallshadow.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Smallslant.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Smalltengwar.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Smisome1.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Smkeyboard.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Smpoison.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Smscript.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Smshadow.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Smslant.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Smtengwar.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Soft.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Speed.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Spliff.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Srelief.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Stacey.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Stampate.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Stampatello.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Standard.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Starstrips.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Starwars.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Stellar.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Stforek.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Stickletters.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Stop.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Straight.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Strongerthanall.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Subzero.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Swampland.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Swan.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Sweet.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Tanja.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Tengwar.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Term.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Test1.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Theedge.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Thick.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Thin.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\This.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Thorned.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\ThreeD.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\ThreeDAscii.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\ThreeDDiagonal.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Threepoint.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\ThreeX5.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Ticks.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Ticksslant.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Tiles.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Tinkertoy.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Tombstone.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Train.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Trek.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Tsalagi.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Tubular.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Twisted.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Twopoint.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Univers.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Usaflag.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Varsity.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Wavy.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Weird.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Wetletter.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Whimsy.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Wow.zip" />
+    <EmbeddedResource Include="WinForms\CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\Popup.resx">
+      <DependentUpon>Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dependencies_Embedded\ReAlPDFc.zip" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ach\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\af\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ak\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\an\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ar\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ast\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\as\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\az\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\be\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\bg\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\bn-BD\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\bn-IN\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\brx\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\br\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\bs\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\cak\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ca\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\crh\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\csb\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\cs\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\cy\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\da\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\de\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\el\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\en-CA\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\en-GB\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\en-US\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\en-ZA\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\eo\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\es-AR\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\es-CL\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\es-ES\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\es-MX\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\et\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\eu\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\fa\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ff\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\fi\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\fr\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\fy-NL\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ga-IE\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\gd\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\gl\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\gn\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\gu-IN\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\he\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\hi-IN\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\hr\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\hsb\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\hto\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\hu\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\hy-AM\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ia\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\id\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\is\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\it\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ja\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\kab\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ka\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\kk\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\km\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\kn\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\kok\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ko\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ks\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ku\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\lg\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\lij\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\locale.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\lo\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ltg\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\lt\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\lv\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\mai\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\meh\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\mk\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ml\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\mn\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\mr\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ms\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\my\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\nb-NO\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ne-NP\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\nl\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\nn-NO\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\nso\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\oc\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\or\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\pa-IN\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\pl\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\pt-BR\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\pt-PT\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\rm\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ro\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ru\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\rw\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\sah\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\sat\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\si\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\sk\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\sl\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\son\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\sq\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\sr\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\sv-SE\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\sw\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ta-LK\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ta\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\te\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\th\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\tl\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\tn\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\tr\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\tsz\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\uk\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\ur\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\uz\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\vi\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\wo\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\xh\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\zam\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\zh-CN\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\zh-TW\viewer.properties" />
+    <None Include="content\Scripts\packages\pdfjs\web\locale\zu\viewer.properties" />
+    <None Include="Dependencies_Embedded\OfficeToPDF.zip" />
+    <None Include="packages.config" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\cmb-danger.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\cmb-info.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\cmb-success.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\cmb-warning.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\cmb-question.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\pdftohtml.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\pdftopng.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\pdftotext.zip" />
+    <EmbeddedResource Include="Dependencies_Embedded\wkhtmltopdf.zip" />
+    <None Include="JBToolkit.nuspec" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="content\Scripts\packages\pdfjs\build\pdf.js.map" />
+    <None Include="content\Scripts\packages\pdfjs\build\pdf.worker.js.map" />
+    <Content Include="content\Scripts\packages\pdfjs\LICENSE" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\78-EUC-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\78-EUC-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\78-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\78-RKSJ-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\78-RKSJ-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\78-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\78ms-RKSJ-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\78ms-RKSJ-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\83pv-RKSJ-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\90ms-RKSJ-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\90ms-RKSJ-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\90msp-RKSJ-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\90msp-RKSJ-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\90pv-RKSJ-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\90pv-RKSJ-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Add-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Add-RKSJ-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Add-RKSJ-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Add-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-CNS1-0.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-CNS1-1.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-CNS1-2.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-CNS1-3.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-CNS1-4.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-CNS1-5.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-CNS1-6.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-CNS1-UCS2.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-GB1-0.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-GB1-1.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-GB1-2.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-GB1-3.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-GB1-4.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-GB1-5.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-GB1-UCS2.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-Japan1-0.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-Japan1-1.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-Japan1-2.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-Japan1-3.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-Japan1-4.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-Japan1-5.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-Japan1-6.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-Japan1-UCS2.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-Korea1-0.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-Korea1-1.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-Korea1-2.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Adobe-Korea1-UCS2.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\B5-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\B5-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\B5pc-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\B5pc-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\CNS-EUC-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\CNS-EUC-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\CNS1-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\CNS1-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\CNS2-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\CNS2-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\ETen-B5-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\ETen-B5-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\ETenms-B5-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\ETenms-B5-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\ETHK-B5-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\ETHK-B5-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\EUC-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\EUC-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Ext-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Ext-RKSJ-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Ext-RKSJ-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Ext-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GB-EUC-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GB-EUC-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GB-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GB-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GBK-EUC-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GBK-EUC-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GBK2K-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GBK2K-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GBKp-EUC-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GBKp-EUC-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GBpc-EUC-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GBpc-EUC-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GBT-EUC-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GBT-EUC-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GBT-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GBT-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GBTpc-EUC-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\GBTpc-EUC-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Hankaku.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Hiragana.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\HKdla-B5-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\HKdla-B5-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\HKdlb-B5-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\HKdlb-B5-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\HKgccs-B5-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\HKgccs-B5-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\HKm314-B5-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\HKm314-B5-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\HKm471-B5-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\HKm471-B5-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\HKscs-B5-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\HKscs-B5-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Katakana.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\KSC-EUC-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\KSC-EUC-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\KSC-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\KSC-Johab-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\KSC-Johab-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\KSC-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\KSCms-UHC-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\KSCms-UHC-HW-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\KSCms-UHC-HW-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\KSCms-UHC-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\KSCpc-EUC-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\KSCpc-EUC-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\LICENSE" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\NWP-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\NWP-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\RKSJ-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\RKSJ-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\Roman.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniCNS-UCS2-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniCNS-UCS2-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniCNS-UTF16-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniCNS-UTF16-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniCNS-UTF32-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniCNS-UTF32-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniCNS-UTF8-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniCNS-UTF8-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniGB-UCS2-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniGB-UCS2-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniGB-UTF16-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniGB-UTF16-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniGB-UTF32-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniGB-UTF32-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniGB-UTF8-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniGB-UTF8-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS-UCS2-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS-UCS2-HW-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS-UCS2-HW-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS-UCS2-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS-UTF16-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS-UTF16-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS-UTF32-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS-UTF32-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS-UTF8-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS-UTF8-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS2004-UTF16-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS2004-UTF16-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS2004-UTF32-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS2004-UTF32-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS2004-UTF8-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJIS2004-UTF8-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJISPro-UCS2-HW-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJISPro-UCS2-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJISPro-UTF8-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJISX0213-UTF32-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJISX0213-UTF32-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJISX02132004-UTF32-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniJISX02132004-UTF32-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniKS-UCS2-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniKS-UCS2-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniKS-UTF16-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniKS-UTF16-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniKS-UTF32-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniKS-UTF32-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniKS-UTF8-H.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\UniKS-UTF8-V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\V.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\cmaps\WP-Symbol.bcmap" />
+    <Content Include="content\Scripts\packages\pdfjs\web\viewer.js.map" />
+    <Content Include="content\Views\Shared\JQueryDataTable.cshtml" />
+    <Content Include="content\Views\Shared\JQueryFeed.cshtml" />
+    <Content Include="content\Views\Shared\PDFEmbeddedViewer.cshtml" />
+    <None Include="XmlDoc\Converters\OfficeToPDF-CLI-Notes\LICENSE.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\cs\Humanizer.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.CodeQuality.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.CodeQuality.CSharp.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetCore.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetCore.CSharp.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\Newtonsoft.Json.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\aac.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\accdb .png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\accde.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\accdr.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\accdt .png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ai.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\aiff.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\arw.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\aspx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\avi.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\bmp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\c.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\cpp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\cr2.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\cr3.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\crw.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\cs.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\css.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\csv.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dat.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\db.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dcm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dcr.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dib.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dll.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dmg.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dng.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\doc.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\docm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\docx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dot.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dotm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dotx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dwg.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dxf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\emf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\eml.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\eps.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\erf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\exe.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\exr.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\fits.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\flv.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\g3.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\gif.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\h.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\heic.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\hpp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\htm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\html.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\icb.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ico.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\icon.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ics.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\iiq.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\iso.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\j2c.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\j2k.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\java.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\jp2.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\jpe.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\jpeg.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\jpg.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\js.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\k25.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\kdc.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\key.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\less.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\lnk.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mask.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\matte.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mef.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mid.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mp3.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mp4.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mpg.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mpp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mpt.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mrw.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\msg.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\nef.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\nrw.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\odf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\odp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ods.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\odt.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\orf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\otf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\otp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ots.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ott.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pal.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pbm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pcx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pdf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pef.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pgm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\php.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pix.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\png.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pot.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\potm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\potx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ppm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pps.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ppsm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ppsx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ppt.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pptm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pptx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ps.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\psd.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pub.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\py.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\qt.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\rar.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ras.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\raw.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\rb.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\rgb.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\rgba.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\rle.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\rtf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\rw2.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\sass.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\scss.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\sct.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\sgi.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\sldm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\sldx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\sql.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\sr2.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\srf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\svg.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\svgx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\svgz.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\tga.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\tgz.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\thmx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\tif.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\tiff.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ttc.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\txt.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vcf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vda.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vsd .png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vsdx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vst.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\wav.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\wbk.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\webp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\wmf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\x3f.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xbm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xcf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xla.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xlam.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xll.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xlm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xls.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xlsb.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xlsm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xlsx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xlt.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xltm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xltx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xlw.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xml.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xpm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\yml.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\zip.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\_blank.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\_page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\Scripts\CustomFunctions.js" />
+    <Content Include="content\Scripts\DataTablesExtensions.js" />
+    <Content Include="content\Scripts\ModalHelper.js" />
+    <Content Include="content\Scripts\packages\pdfjs\build\pdf.js" />
+    <Content Include="content\Scripts\packages\pdfjs\build\pdf.worker.js" />
+    <Content Include="content\Scripts\packages\pdfjs\build\pdfEx.js" />
+    <Content Include="content\Scripts\packages\pdfjs\web\debugger.js" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\annotation-check.svg" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\annotation-comment.svg" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\annotation-help.svg" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\annotation-insert.svg" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\annotation-key.svg" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\annotation-newparagraph.svg" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\annotation-noicon.svg" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\annotation-note.svg" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\annotation-paragraph.svg" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\email.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\findbarButton-next%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\findbarButton-next-rtl%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\findbarButton-next-rtl.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\findbarButton-next.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\findbarButton-previous%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\findbarButton-previous-rtl%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\findbarButton-previous-rtl.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\findbarButton-previous.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\grab.cur" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\grabbing.cur" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\loading-icon.gif" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\loading-small%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\loading-small.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-documentProperties%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-documentProperties.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-firstPage%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-firstPage.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-handTool%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-handTool.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-lastPage%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-lastPage.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-rotateCcw%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-rotateCcw.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-rotateCw%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-rotateCw.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-scrollHorizontal%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-scrollHorizontal.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-scrollVertical%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-scrollVertical.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-scrollWrapped%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-scrollWrapped.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-selectTool%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-selectTool.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-spreadEven%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-spreadEven.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-spreadNone%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-spreadNone.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-spreadOdd%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\secondaryToolbarButton-spreadOdd.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\shadow.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\texture.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-bookmark%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-bookmark.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-download%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-download.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-menuArrows%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-menuArrows.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-openFile%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-openFile.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-pageDown%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-pageDown-rtl%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-pageDown-rtl.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-pageDown.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-pageUp%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-pageUp-rtl%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-pageUp-rtl.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-pageUp.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-presentationMode%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-presentationMode.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-print%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-print.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-search%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-search.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-secondaryToolbarToggle%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-secondaryToolbarToggle-rtl%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-secondaryToolbarToggle-rtl.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-secondaryToolbarToggle.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-sidebarToggle%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-sidebarToggle-rtl%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-sidebarToggle-rtl.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-sidebarToggle.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-viewAttachments%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-viewAttachments.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-viewOutline%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-viewOutline-rtl%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-viewOutline-rtl.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-viewOutline.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-viewThumbnail%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-viewThumbnail.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-zoomIn%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-zoomIn.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-zoomOut%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\toolbarButton-zoomOut.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\treeitem-collapsed%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\treeitem-collapsed-rtl%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\treeitem-collapsed-rtl.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\treeitem-collapsed.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\treeitem-expanded%402x.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\images\treeitem-expanded.png" />
+    <Content Include="content\Scripts\packages\pdfjs\web\viewer.css" />
+    <Content Include="content\Scripts\packages\pdfjs\web\viewer.html" />
+    <Content Include="content\Scripts\packages\pdfjs\web\viewer.js" />
+    <Content Include="content\Scripts\packages\pdfjs\web\viewerex.css" />
+    <Content Include="content\Scripts\packages\pdfjs\web\viewerEx.html" />
+    <Content Include="content\Scripts\packages\pdfjs\web\viewerEx.js" />
+    <Content Include="content\Scripts\PdfHelper.js" />
+    <Content Include="content\Scripts\polyfills\endsWith.js" />
+    <Content Include="content\Scripts\polyfills\findIndex.js" />
+    <Content Include="content\Scripts\polyfills\includes.js" />
+    <Content Include="content\Scripts\polyfills\objectAssign.js" />
+    <Content Include="content\Scripts\polyfills\promises.js" />
+    <Content Include="content\Scripts\polyfills\startsWith.js" />
+    <Content Include="content\Content\css\editorEx.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\7z.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\accdb.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\accdc.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\accdt.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\accdw.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\accft.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ace.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ade.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\adn.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\adp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\adt.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ahk.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\appx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\appxbundle.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ari.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\arj.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\asm.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\asr.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\aw.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\bashrc.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\bash_profile.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\bat.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\blg.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\bsc.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\bz.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\bz2.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\caf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\cap.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\cat.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\cc.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\cel.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\cmd.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\cod.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\config.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\contact.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\crtx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\csproj.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\csx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ctp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\cxx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dcp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dct.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\def.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dqy.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dsn.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dsp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dtd.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\dtsx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\edmx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\exp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\fdf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\fs.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\fsi.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\fsscript.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\fsx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\gemspec.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\gitattributes.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\gitignore.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\gz.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\hbs.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\hh.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\hxx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\hyp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\i.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\idb.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\idl.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ilk.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\inc.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\inl.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ise.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ism.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ist.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\jse.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\jsx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\lha.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\lib.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\lst.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\lua.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\lzh.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\m.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\maf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mak.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\map.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\maq.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mar.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\markdown.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mas.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mat.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mav.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\maw.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\md.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mdb.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mdbhtml.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mdc.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mdf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mdn.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mdt.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mdx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mk.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ml.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mod.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mpd.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mpp .png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mpx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\msix.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\msp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\mwb.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ncb.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ndf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\obj.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ocx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\odl.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\oft.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\one.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\oqy.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ova.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ovf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\package.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pbk.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pch.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pcp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pdb.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pdx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pkgdef.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pkgundef.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pl.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\ple.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\profile.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\psm1.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pst.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pyd.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\pyw.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\r.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\r00.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\r01.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\r02.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\r03.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\r04.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\r21.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\rc.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\rc2.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\res.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\resw.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\resx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\rgs.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\s.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\sdf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\sdp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\sh.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\snippet.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\sqlproj.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\sta.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\suo.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\t.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\tar.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\targets.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\taz.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\tbz.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\tbz2.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\testrunconfig.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\testsettings.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\tlh.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\tli.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\trc.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\trx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\tt.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\udl.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\url.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vb.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vbproj.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vcp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vcproj.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vcs.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vcxproj.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vdx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vhd.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vmcz.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vsmdi.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vsp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vsps.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vspscc.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vssscc.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vsx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vsz.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\vtx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\wab.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\wcx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\wdp.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\wmdb.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\wsc.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\wsh.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\wxi.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\wxl.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\wxs.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xaml.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xamlx.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xfdf.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xld.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xoml.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xsd.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xsl.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\xslt.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\yaml.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\z.png" />
+    <EmbeddedResource Include="Dependencies_Embedded\Images\FileTypes\zfsendtotarget.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\LaMarvin.Windows.Forms.ColorPicker.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\IPDMCTRL.dll" />
+    <None Include="lib\Microsoft.Office.InfoPath.Permission.dll" />
+    <None Include="lib\Microsoft.Office.interop.access.dao.dll" />
+    <None Include="lib\Microsoft.Office.Interop.Access.dll" />
+    <None Include="lib\Microsoft.Office.Interop.Excel.dll" />
+    <None Include="lib\Microsoft.Office.Interop.Excel.xml" />
+    <None Include="lib\Microsoft.Office.Interop.Graph.dll" />
+    <None Include="lib\Microsoft.Office.Interop.InfoPath.dll" />
+    <None Include="lib\Microsoft.Office.Interop.InfoPath.SemiTrust.dll" />
+    <None Include="lib\Microsoft.Office.Interop.InfoPath.Xml.dll" />
+    <None Include="lib\Microsoft.Office.Interop.MSProject.dll" />
+    <None Include="lib\Microsoft.Office.Interop.OneNote.dll" />
+    <None Include="lib\Microsoft.Office.Interop.Outlook.dll" />
+    <None Include="lib\Microsoft.Office.Interop.Outlook.xml" />
+    <None Include="lib\Microsoft.Office.Interop.OutlookViewCtl.dll" />
+    <None Include="lib\Microsoft.Office.Interop.PowerPoint.dll" />
+    <None Include="lib\Microsoft.Office.Interop.Publisher.dll" />
+    <None Include="lib\Microsoft.Office.Interop.SharePointDesigner.dll" />
+    <None Include="lib\Microsoft.Office.Interop.SharePointDesignerPage.dll" />
+    <None Include="lib\Microsoft.Office.Interop.SmartTag.dll" />
+    <None Include="lib\Microsoft.Office.Interop.Visio.dll" />
+    <None Include="lib\Microsoft.Office.Interop.Visio.SaveAsWeb.dll" />
+    <None Include="lib\Microsoft.Office.Interop.VisOcx.dll" />
+    <None Include="lib\Microsoft.Office.Interop.Word.dll" />
+    <None Include="lib\Microsoft.Office.Interop.Word.xml" />
+    <None Include="lib\Microsoft.Vbe.Interop.dll" />
+    <None Include="lib\Microsoft.Vbe.Interop.Forms.dll" />
+    <None Include="lib\Office.dll" />
+    <None Include="lib\office.xml" />
+    <None Include="XmlDoc\Converters\OfficeToPDF-CLI-Notes\README.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_UseGlobalSettings="True" BuildVersion_BuildAction="Build" BuildVersion_StartDate="2000/1/1" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Brotli.NET.2.0.4.2\build\Brotli.NET.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Brotli.NET.2.0.4.2\build\Brotli.NET.targets'))" />
+    <Error Condition="!Exists('..\packages\Grpc.Core.1.22.1\build\net45\Grpc.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Core.1.22.1\build\net45\Grpc.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\Brotli.NET.2.0.4.2\build\Brotli.NET.targets" Condition="Exists('..\packages\Brotli.NET.2.0.4.2\build\Brotli.NET.targets')" />
+  <Import Project="..\packages\Grpc.Core.1.22.1\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.1.22.1\build\net45\Grpc.Core.targets')" />
+</Project>

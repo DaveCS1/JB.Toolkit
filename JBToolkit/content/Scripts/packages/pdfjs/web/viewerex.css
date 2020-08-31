@@ -1,0 +1,219 @@
+﻿/*Hide open button*/
+#openFile {
+    display: none;
+}
+
+#secondaryOpenFile {
+    display: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+.Input {
+}
+
+.Input-text {
+    display: block;
+    margin: 0;
+    padding: 0.8rem 1.6rem;
+    color: black;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: inherit;
+    line-height: 1.2rem;
+    border: none;
+    border-radius: 0.4rem;
+    transition: box-shadow cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+    .Input-text::placeholder {
+        color: #B0BEC5;
+    }
+
+    .Input-text:focus {
+        outline: none;
+    }
+
+    .Input-text:placeholder-shown + .Input-label {
+        visibility: hidden;
+        z-index: -1;
+    }
+
+    .Input-text:not(:placeholder-shown) + .Input-label,
+    .Input-text:focus:not(:placeholder-shown) + .Input-label {
+        visibility: visible;
+        z-index: 1;
+        opacity: 1;
+        transform: translate3d(0, calc( (50%) - (1.6rem * 0.8) - (1.2rem * 1.8) ), 0) scale(0.8);
+        transition: transform 300ms, visibility 0ms, z-index 0ms;
+    }
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+    .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 27px;
+        height: 27px;
+        margin: 1px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        animation: lds-dual-ring 0.9s linear infinite;
+    }
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    border-radius: 5px;
+}
+
+.modal-content {
+    background-color: #4a4a4a;
+    color: #d9d9d9;
+    border-radius: 5px;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #262626;
+    width: 60%; /* Could be more or less, depending on screen size */
+}
+
+.modal-body {
+    font-size: 10pt;
+    padding-top: 10px;
+}
+
+.modal-input {
+    padding-right: 32px;
+}
+
+.model-dropdown {
+    width: 100%;
+    text-align: center
+}
+
+/*Styling Selectbox*/
+.dropdown {
+    width: 100%;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all .5s ease;
+    position: relative;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: inherit;
+    line-height: 1.2rem;
+    color: #474747;
+    text-align: left;
+    margin-left: 1px;
+}
+
+#emailULList {
+    border-bottom: solid 1px #848484;
+    border-left: solid 1px #848484;
+    border-right: solid 1px #848484;
+}
+
+.dropdown .select {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+}
+
+    .dropdown .select > i {
+        font-family: inherit;
+        font-size: 1.2rem;
+        font-weight: inherit;
+        line-height: 1.2rem;
+        color: #888;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        float: right;
+    }
+
+.dropdown:active {
+    background-color: #f8f8f8
+}
+
+.dropdown.active:hover,
+.dropdown.active {
+    background-color: #f8f8f8
+}
+
+    .dropdown.active .select > i {
+        transform: rotate(-90deg)
+    }
+
+.dropdown .dropdown-menu {
+    position: absolute;
+    border-color: blue;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    margin-top: 1px;
+    border-radius: 0 1px 5px 5px;
+    overflow: hidden;
+    display: none;
+    max-height: 144px;
+    overflow-y: auto;
+    z-index: 9
+}
+
+    .dropdown .dropdown-menu li {
+        padding: 10px;
+        transition: all .2s ease-in-out;
+        cursor: pointer
+    }
+
+.dropdown .dropdown-menu {
+    padding: 0;
+    list-style: none;
+}
+
+    .dropdown .dropdown-menu li:hover {
+        background-color: #f2f2f2
+    }
+
+    .dropdown .dropdown-menu li:active {
+        background-color: #e2e2e2
+    }
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 22px;
+    margin-top: -7px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }

@@ -1,0 +1,653 @@
+﻿using System;
+using System.Collections.Generic;
+using System.DirectoryServices;
+using System.DirectoryServices.AccountManagement;
+using System.Net;
+using System.Web;
+
+namespace JBToolkit.Domain
+{
+    /// <summary>
+    /// Accesses a given Active Directory server as specified in the web.config for retrieving additional user information
+    /// </summary>
+    public class ADAccessor
+    {
+        /// <summary>
+        /// Gets Active Directory attributes of a given user specified by username
+        /// </summary>
+        /// <param name="username">The username to retrieve AD attribute for</param>
+        /// <returns>A custom AD object with limited attributes</returns>
+        public static ADUser GetADUser(
+            string username,
+            bool callingFromWithinDomain,
+            string adAddress = null,
+            string adServerName = null,
+            string adUser = null,
+            string adPassword = null)
+        {
+            if (username.Contains("\\"))
+            {
+                username = username.Substring(username.IndexOf("\\") + 1);
+            }
+
+            try
+            {
+                if (string.IsNullOrEmpty(adAddress))
+                {
+                    adAddress = Global.ADConfiguration.AdServerIP;
+                }
+
+                if (string.IsNullOrEmpty(adServerName))
+                {
+                    adServerName = Global.ADConfiguration.AdServerName;
+                }
+
+                if (string.IsNullOrEmpty(adUser))
+                {
+                    adUser = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminUser).Password);
+                }
+
+                if (string.IsNullOrEmpty(adPassword))
+                {
+                    adPassword = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminPassword).Password);
+                }
+
+                // DEBUG
+                string ldapAddress = "LDAP://" + (callingFromWithinDomain || string.IsNullOrEmpty(HttpContext.Current.User.Identity.Name) ? adServerName : adAddress);
+
+                DirectoryEntry de = new DirectoryEntry(ldapAddress, adUser, adPassword);
+
+                DirectorySearcher dSearch = new DirectorySearcher(de)
+                {
+                    Filter = "(&((&(objectCategory=Person)(objectClass=User)))(samaccountname=" + username + "))"
+                };
+
+                SearchResult sResultSet = dSearch.FindOne();
+
+                string managerDN = GetProperty(sResultSet, "manager");
+                DirectoryEntry manager = new DirectoryEntry("LDAP://" + managerDN, null, null, AuthenticationTypes.Secure);
+
+                string managerAccount = null;
+
+                using (manager)
+                {
+                    if (manager.Properties.Contains("samaccountname"))
+                    {
+                        managerAccount = manager.Properties["samaccountname"][0].ToString();
+                    }
+                }
+
+                ADUser usr = new ADUser
+                {
+                    DisplayName = GetProperty(sResultSet, "displayname"),
+                    Username = username,
+                    Domain = Global.ADConfiguration.AdDomain,
+                    UserAccount = Global.ADConfiguration.AdDomain + "\\" + username,
+                    JobTitle = GetProperty(sResultSet, "description"),
+                    Office = GetProperty(sResultSet, "physicalDeliveryOfficeName"),
+                    Department = GetProperty(sResultSet, "department"),
+                    Telephone = GetProperty(sResultSet, "telephoneNumber"),
+                    Email = GetProperty(sResultSet, "mail"),
+                    Fax = GetProperty(sResultSet, "facsimileTelephoneNumber"),
+                    IPPhone = GetProperty(sResultSet, "	ipPhone"),
+                    Mobile = GetProperty(sResultSet, "	mobile"),
+                    Manager = GetADUserManager(managerAccount, callingFromWithinDomain, adAddress, adServerName, adUser, adPassword),
+                    Memberships = new List<string>()
+                };
+
+                // AD groups / memberships associated to user
+
+                int membershipCount = sResultSet.Properties["memberOf"].Count;
+                string dn = string.Empty;
+                int equalsIndex, commaIndex;
+
+                for (int i = 0; i < membershipCount; i++)
+                {
+                    dn = (string)sResultSet.Properties["memberOf"][i];
+
+                    equalsIndex = dn.IndexOf("=", 1);
+                    commaIndex = dn.IndexOf(",", 1);
+
+                    if (-1 == equalsIndex)
+                    {
+                        break;
+                    }
+
+                    usr.Memberships.Add(dn.Substring((equalsIndex + 1),
+                                                     (commaIndex - equalsIndex) - 1));
+                }
+
+                return usr;
+            }
+#pragma warning disable CS0168 // Variable is declared but never used
+            catch (Exception e)
+#pragma warning restore CS0168 // Variable is declared but never used
+            {
+                // It doesn't really matter. We're not relying on this class for anything other than a little more
+                // information of the current user, we can live without it - just return empty properties
+#if DEBUG
+                Console.Out.WriteLine("AD read error: " + e.Message);
+#endif
+                ADUser usr = new ADUser
+                {
+                    JobTitle = string.Empty,
+                    Office = string.Empty,
+                    Department = string.Empty,
+                    Telephone = string.Empty,
+                    Email = string.Empty,
+                    Fax = string.Empty,
+                    IPPhone = string.Empty,
+                    Mobile = string.Empty,
+                    Memberships = new List<string>()
+                };
+
+                return usr;
+            }
+        }
+
+        /// <summary>
+        /// Returns the manager ADUser object of the user
+        /// </summary>
+        public static ADUser GetADUserManager(
+            string username,
+            bool callingFromWithinDomain,
+            string adAddress = null,
+            string adServerName = null,
+            string adUser = null,
+            string adPassword = null,
+            bool recursivelyGetHierarchyAbove = false)
+        {
+            if (username.Contains("\\"))
+            {
+                username = username.Substring(username.IndexOf("\\") + 1);
+            }
+
+            try
+            {
+                if (string.IsNullOrEmpty(adAddress))
+                {
+                    adAddress = Global.ADConfiguration.AdServerIP;
+                }
+
+                if (string.IsNullOrEmpty(adServerName))
+                {
+                    adServerName = Global.ADConfiguration.AdServerName;
+                }
+
+                if (string.IsNullOrEmpty(adUser))
+                {
+                    adUser = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminUser).Password);
+                }
+
+                if (string.IsNullOrEmpty(adPassword))
+                {
+                    adPassword = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminPassword).Password);
+                }
+
+                // DEBUG
+                string ldapAddress = "LDAP://" + (callingFromWithinDomain ||
+                    string.IsNullOrEmpty(HttpContext.Current.User.Identity.Name) ? adServerName : adAddress);
+
+                DirectoryEntry de = new DirectoryEntry(ldapAddress, adUser, adPassword);
+
+                DirectorySearcher dSearch = new DirectorySearcher(de)
+                {
+                    Filter = "(&((&(objectCategory=Person)(objectClass=User)))(samaccountname=" + username + "))"
+                };
+
+                SearchResult sResultSet = dSearch.FindOne();
+
+                string managerAccount = null;
+
+                if (recursivelyGetHierarchyAbove)
+                {
+                    string managerDN = GetProperty(sResultSet, "manager");
+                    DirectoryEntry manager = new DirectoryEntry("LDAP://" + managerDN, null, null, AuthenticationTypes.Secure);
+
+                    using (manager)
+                    {
+                        if (manager.Properties.Contains("samaccountname"))
+                        {
+                            managerAccount = manager.Properties["samaccountname"][0].ToString();
+                        }
+                    }
+                }
+
+                ADUser usr = new ADUser
+                {
+                    DisplayName = GetProperty(sResultSet, "displayname"),
+                    Username = username,
+                    Domain = Global.ADConfiguration.AdDomain,
+                    UserAccount = Global.ADConfiguration.AdDomain + "\\" + username,
+                    JobTitle = GetProperty(sResultSet, "description"),
+                    Office = GetProperty(sResultSet, "physicalDeliveryOfficeName"),
+                    Department = GetProperty(sResultSet, "department"),
+                    Telephone = GetProperty(sResultSet, "telephoneNumber"),
+                    Email = GetProperty(sResultSet, "mail"),
+                    Fax = GetProperty(sResultSet, "facsimileTelephoneNumber"),
+                    IPPhone = GetProperty(sResultSet, "	ipPhone"),
+                    Mobile = GetProperty(sResultSet, "	mobile"),
+                    Manager = recursivelyGetHierarchyAbove ? GetADUserManager(
+                                                                managerAccount,
+                                                                callingFromWithinDomain,
+                                                                adAddress,
+                                                                adServerName,
+                                                                adUser,
+                                                                adPassword) : null
+                };
+
+                return usr;
+            }
+
+#pragma warning disable CS0168 // Variable is declared but never used
+            catch (Exception e)
+#pragma warning restore CS0168 // Variable is declared but never used
+            {
+                // It doesn't really matter. We're not relying on this class for anything other than a little more
+                // information of the current user, we can live without it - just return empty properties
+#if DEBUG
+                Console.Out.WriteLine("AD read error: " + e.Message);
+#endif
+                ADUser usr = new ADUser
+                {
+                    JobTitle = string.Empty,
+                    Office = string.Empty,
+                    Department = string.Empty,
+                    Telephone = string.Empty,
+                    Email = string.Empty,
+                    Fax = string.Empty,
+                    IPPhone = string.Empty,
+                    Mobile = string.Empty,
+                    Memberships = new List<string>()
+                };
+
+                return usr;
+            }
+        }
+
+        public enum IdentityType
+        {
+            LogonIdenity,
+            Environment,
+            PrincipleIdentity
+        }
+
+        /// <summary>
+        /// Returns the username from an AD search by email address
+        /// </summary>
+        public static string GetUsernameFromEmailAddress(
+            string emailAddress,
+            bool callingFromWithinDomain,
+            string adAddress = null,
+            string adServerName = null,
+            string adUser = null,
+            string adPassword = null)
+        {
+            try
+            {
+                string username = GetADSearchResult(
+                    emailAddress,
+                    "mail",
+                    callingFromWithinDomain,
+                    adAddress,
+                    adServerName,
+                    adUser,
+                    adPassword).Properties["samaccountname"][0].ToString();
+                return username;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Returns the full name from an AD search by email address
+        /// </summary>
+        public static string GetNameFromEmailAddress(
+            string emailAddress,
+            bool callingFromWithinDomain,
+            string adAddress = null,
+            string adServerName = null,
+            string adUser = null,
+            string adPassword = null)
+        {
+            try
+            {
+                string fullName = GetADSearchResult(
+                    emailAddress,
+                    "mail",
+                    callingFromWithinDomain,
+                    adAddress,
+                    adServerName,
+                    adUser,
+                    adPassword).Properties["DisplayName"][0].ToString();
+
+                return fullName;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Returns the full name from an AD search by username
+        /// </summary>
+        public static string GetNameFromUsername(
+            string username,
+            bool callingFromWithinDomain,
+            string adAddress = null,
+            string adServerName = null,
+            string adUser = null,
+            string adPassword = null)
+        {
+            try
+            {
+                string fullName = GetADSearchResult(
+                    username,
+                    "samaccountname",
+                    callingFromWithinDomain,
+                    adAddress,
+                    adServerName,
+                    adUser,
+                    adPassword).Properties["DisplayName"][0].ToString();
+
+                return fullName;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Returns the email from an AD search by username
+        /// </summary>
+        public static string GetEmailFromUsername(
+            string username,
+            bool callingFromWithinDomain,
+            string adAddress = null,
+            string adServerName = null,
+            string adUser = null,
+            string adPassword = null)
+        {
+            try
+            {
+                string email = GetADSearchResult(
+                    username,
+                    "samaccountname",
+                    callingFromWithinDomain,
+                    adAddress,
+                    adServerName,
+                    adUser,
+                    adPassword).Properties["mail"][0].ToString();
+
+                return email;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Returns the logged in user email (don't use this if deploying to IIS without Windows authentication)
+        /// </summary>
+        public static string GetLoggedInUserEmail()
+        {
+            return UserPrincipal.Current.EmailAddress;
+        }
+
+        /// <summary>
+        /// Gets the photo stored in AD user
+        /// </summary>
+        public static byte[] GetADPhotoFromEmail(
+            string email,
+            bool callingFromWithinDomain,
+            string adAddress = null,
+            string adServerName = null,
+            string adUser = null,
+            string adPassword = null)
+        {
+            try
+            {
+                byte[] bb = (byte[])GetADSearchResult(
+                    email,
+                    "mail",
+                    callingFromWithinDomain,
+                    adAddress,
+                    adServerName,
+                    adUser,
+                    adPassword).Properties["thumbnailPhoto"][0];
+
+                return bb;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets the photo stored in AD user
+        /// </summary>
+        public static byte[] GetADPhotoFromUsername(
+            string username,
+            bool callingFromWithinDomain,
+            string adAddress = null,
+            string adServerName = null,
+            string adUser = null,
+            string adPassword = null)
+        {
+            try
+            {
+                byte[] bb = (byte[])GetADSearchResult(
+                    username,
+                    "samaccountname",
+                    callingFromWithinDomain,
+                    adAddress,
+                    adServerName,
+                    adUser,
+                    adPassword).Properties["thumbnailPhoto"][0];
+
+                return bb;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Returns all users of the domain
+        /// </summary>
+        public static SearchResultCollection GetAllUsers(
+            bool callingFromWithinDomain,
+            string adAddress = null,
+            string adServerName = null,
+            string adUser = null,
+            string adPassword = null)
+        {
+            try
+            {
+                SearchResultCollection au = GetADSearchResults(
+                                                null,
+                                                null,
+                                                callingFromWithinDomain,
+                                                adAddress,
+                                                adServerName,
+                                                adUser,
+                                                adPassword);
+                return au;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Returns a DirectoryServices SearchResult object
+        /// </summary>
+        public static SearchResult GetADSearchResult(
+            string searchString,
+            string searchFilter,
+            bool callingFromWithinDomain,
+            string adAddress = null,
+            string adServerName = null,
+            string adUser = null, string
+            adPassword = null)
+        {
+            if (string.IsNullOrEmpty(adAddress))
+            {
+                adAddress = Global.ADConfiguration.AdServerIP;
+            }
+
+            if (string.IsNullOrEmpty(adServerName))
+            {
+                adServerName = Global.ADConfiguration.AdServerName;
+            }
+
+            if (string.IsNullOrEmpty(adUser))
+            {
+                adUser = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminUser).Password);
+            }
+
+            if (string.IsNullOrEmpty(adPassword))
+            {
+                adPassword = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminPassword).Password);
+            }
+
+            string ldapAddress = "LDAP://" + (callingFromWithinDomain ||
+                string.IsNullOrEmpty(HttpContext.Current.User.Identity.Name) ? adServerName : adAddress);
+
+            DirectoryEntry adEntry = new DirectoryEntry(ldapAddress)
+            {
+                Username = adUser,
+                Password = adPassword
+            };
+
+            DirectorySearcher adSearcher = new DirectorySearcher(adEntry)
+            {
+                Filter = "(&((&(objectCategory=Person)(objectClass=User)))" +
+                    (string.IsNullOrEmpty(searchFilter) && string.IsNullOrEmpty(searchString) ? "" : "(" + searchFilter + "=" + searchString + ")") + ")"
+            };
+            SearchResult result = adSearcher.FindOne();
+
+            return result;
+        }
+
+        /// <summary>
+        /// Returns a DirectoryServices SearchResult object
+        /// </summary>
+        public static SearchResultCollection GetADSearchResults(
+            string searchString,
+            string searchFilter,
+            bool callingFromWithinDomain,
+            string adAddress = null,
+            string adServerName = null,
+            string adUser = null,
+            string adPassword = null)
+        {
+            if (string.IsNullOrEmpty(adAddress))
+            {
+                adAddress = Global.ADConfiguration.AdServerIP;
+            }
+
+            if (string.IsNullOrEmpty(adServerName))
+            {
+                adServerName = Global.ADConfiguration.AdServerName;
+            }
+
+            if (string.IsNullOrEmpty(adUser))
+            {
+                adUser = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminUser).Password);
+            }
+
+            if (string.IsNullOrEmpty(adPassword))
+            {
+                adPassword = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminPassword).Password);
+            }
+
+            string ldapAddress = "LDAP://" + (callingFromWithinDomain ||
+                string.IsNullOrEmpty(HttpContext.Current.User.Identity.Name) ? adServerName : adAddress);
+
+            DirectoryEntry adEntry = new DirectoryEntry(ldapAddress)
+            {
+                Username = adUser,
+                Password = adPassword
+            };
+
+            DirectorySearcher adSearcher = new DirectorySearcher(adEntry)
+            {
+                Filter = "(&((&(objectCategory=Person)(objectClass=User)))" +
+                    (string.IsNullOrEmpty(searchFilter)
+                        && string.IsNullOrEmpty(searchString)
+                                ? ""
+                                : "(" + searchFilter + "=" + searchString + ")") + ")"
+            };
+            SearchResultCollection results = adSearcher.FindAll();
+
+            return results;
+        }
+
+        /// <summary>
+        /// Get username based on different types of 'IdentityType'
+        /// </summary>
+        public static string GetUsername(IdentityType identityType)
+        {
+            switch (identityType)
+            {
+                case IdentityType.LogonIdenity:
+                    return HttpContext.Current.Request.LogonUserIdentity.Name;
+                case IdentityType.Environment:
+                    return Environment.UserName;
+                case IdentityType.PrincipleIdentity:
+                    return System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Searches the AD entry for a given attribtues
+        /// </summary>
+        /// <param name="searchResult">AD object to search within</param>
+        /// <param name="PropertyName">The attribute or property we wish to retrieve</param>
+        /// <returns></returns>
+        private static string GetProperty(SearchResult searchResult, string PropertyName)
+        {
+            if (searchResult.Properties.Contains(PropertyName))
+            {
+                return searchResult.Properties[PropertyName][0].ToString();
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Object to store user details, such as username, full name, email, job title etc and what roles and permissions they have. Also can get user profile image
+    /// </summary>
+    [Serializable]
+    public class ADUser
+    {
+        public string DisplayName { get; set; }
+        public string Username { get; set; }
+        public string Domain { get; set; }
+        public string UserAccount { get; set; }
+        public string JobTitle { get; set; }
+        public string Office { get; set; }
+        public string Department { get; set; }
+        public string Telephone { get; set; }
+        public string Mobile { get; set; }
+        public string Fax { get; set; }
+        public string IPPhone { get; set; }
+        public string Email { get; set; }
+        public ADUser Manager { get; set; }
+        public List<string> Memberships { get; set; }
+    }
+}
