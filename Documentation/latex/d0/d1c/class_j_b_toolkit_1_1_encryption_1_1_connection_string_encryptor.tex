@@ -1,0 +1,106 @@
+\hypertarget{class_j_b_toolkit_1_1_encryption_1_1_connection_string_encryptor}{}\doxysection{J\+B\+Toolkit.\+Encryption.\+Connection\+String\+Encryptor Class Reference}
+\label{class_j_b_toolkit_1_1_encryption_1_1_connection_string_encryptor}\index{JBToolkit.Encryption.ConnectionStringEncryptor@{JBToolkit.Encryption.ConnectionStringEncryptor}}
+
+
+Very simple connection string encryptor. Useful to hide the connection string from ordinary service and not have any invalid X\+ML characters, while also being sharable or to be easily decrypted if needs be  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Encryption.\+Connection\+String\+Encryptor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{d3/d0e/class_j_b_toolkit_1_1_encryption_1_1_connection_string_encryptor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_encryption_1_1_connection_string_encryptor_a8892343e14043e0ddb05def2d7f48504}{Encrypt\+String}} (string input)
+\begin{DoxyCompactList}\small\item\em Encrypt a string \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_encryption_1_1_connection_string_encryptor_ad5e2d5d80bd521b5072d67d92c962dbf}{Decrypt\+String}} (string encrypted\+Input)
+\begin{DoxyCompactList}\small\item\em Decrypt a string \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_encryption_1_1_connection_string_encryptor_a3cff1ba3909c6bc9cb8c25c918fb9d60}{Is\+Encrypted}} (string input)
+\begin{DoxyCompactList}\small\item\em Tests whether a string is already encrypted or not. Quite simply, it runs it through the encrytion process. If it works it wasn\textquotesingle{}t encrypted \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Very simple connection string encryptor. Useful to hide the connection string from ordinary service and not have any invalid X\+ML characters, while also being sharable or to be easily decrypted if needs be 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_encryption_1_1_connection_string_encryptor_ad5e2d5d80bd521b5072d67d92c962dbf}\label{class_j_b_toolkit_1_1_encryption_1_1_connection_string_encryptor_ad5e2d5d80bd521b5072d67d92c962dbf}} 
+\index{JBToolkit.Encryption.ConnectionStringEncryptor@{JBToolkit.Encryption.ConnectionStringEncryptor}!DecryptString@{DecryptString}}
+\index{DecryptString@{DecryptString}!JBToolkit.Encryption.ConnectionStringEncryptor@{JBToolkit.Encryption.ConnectionStringEncryptor}}
+\doxysubsubsection{\texorpdfstring{DecryptString()}{DecryptString()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Encryption.\+Connection\+String\+Encryptor.\+Decrypt\+String (\begin{DoxyParamCaption}\item[{string}]{encrypted\+Input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Decrypt a string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em encrypted\+Input} & An encrypted string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Encrypted string
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d1c/class_j_b_toolkit_1_1_encryption_1_1_connection_string_encryptor_ad5e2d5d80bd521b5072d67d92c962dbf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_encryption_1_1_connection_string_encryptor_a8892343e14043e0ddb05def2d7f48504}\label{class_j_b_toolkit_1_1_encryption_1_1_connection_string_encryptor_a8892343e14043e0ddb05def2d7f48504}} 
+\index{JBToolkit.Encryption.ConnectionStringEncryptor@{JBToolkit.Encryption.ConnectionStringEncryptor}!EncryptString@{EncryptString}}
+\index{EncryptString@{EncryptString}!JBToolkit.Encryption.ConnectionStringEncryptor@{JBToolkit.Encryption.ConnectionStringEncryptor}}
+\doxysubsubsection{\texorpdfstring{EncryptString()}{EncryptString()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Encryption.\+Connection\+String\+Encryptor.\+Encrypt\+String (\begin{DoxyParamCaption}\item[{string}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Encrypt a string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & String to be encrypted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Encrypted string
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_encryption_1_1_connection_string_encryptor_a3cff1ba3909c6bc9cb8c25c918fb9d60}\label{class_j_b_toolkit_1_1_encryption_1_1_connection_string_encryptor_a3cff1ba3909c6bc9cb8c25c918fb9d60}} 
+\index{JBToolkit.Encryption.ConnectionStringEncryptor@{JBToolkit.Encryption.ConnectionStringEncryptor}!IsEncrypted@{IsEncrypted}}
+\index{IsEncrypted@{IsEncrypted}!JBToolkit.Encryption.ConnectionStringEncryptor@{JBToolkit.Encryption.ConnectionStringEncryptor}}
+\doxysubsubsection{\texorpdfstring{IsEncrypted()}{IsEncrypted()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Encryption.\+Connection\+String\+Encryptor.\+Is\+Encrypted (\begin{DoxyParamCaption}\item[{string}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Tests whether a string is already encrypted or not. Quite simply, it runs it through the encrytion process. If it works it wasn\textquotesingle{}t encrypted 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & String to test if it\textquotesingle{}s encrypted or not\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True is encrypted, false otherwise
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d1c/class_j_b_toolkit_1_1_encryption_1_1_connection_string_encryptor_a3cff1ba3909c6bc9cb8c25c918fb9d60_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Encryption/\mbox{\hyperlink{_connection_string_encryptor_8cs}{Connection\+String\+Encryptor.\+cs}}\end{DoxyCompactItemize}

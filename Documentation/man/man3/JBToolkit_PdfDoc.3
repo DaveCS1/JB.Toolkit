@@ -1,0 +1,132 @@
+.TH "JBToolkit.PdfDoc" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.PdfDoc
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBPdfConvertDocument\fP"
+.br
+.ti -1c
+.RI "class \fBPdfConvertEnvironment\fP"
+.br
+.ti -1c
+.RI "class \fBPdfConverter\fP"
+.br
+.RI "Methods to convert Docx to PDF through M-Files\&. I've done it this way as it's costs a tonne for a docx to pdf converter license with the likes of Aspose, Spire, ABCpdf etc and M-Files is already using Aspose so just utilise that\&. The process involves uploading a file to M-Files, converting it to a PDF there, then downloading it as PDF and finally deleting (destroying) the file in the M-Files vault "
+.ti -1c
+.RI "class \fBPdfConvertException\fP"
+.br
+.ti -1c
+.RI "class \fBPdfConvertTimeoutException\fP"
+.br
+.ti -1c
+.RI "class \fBPdfMerger\fP"
+.br
+.RI "Methods to merge PDF documents together, input either memory stream or path (or both) and output as memory stream or save to file "
+.ti -1c
+.RI "class \fBPdfOutput\fP"
+.br
+.ti -1c
+.RI "class \fBPdfParser\fP"
+.br
+.RI "PDF Parsing methods "
+.ti -1c
+.RI "class \fBPdfSplitter\fP"
+.br
+.RI "Methods to split up a PDF document with various criteria such as page quantity multiples, an array of page numbers to split after or actual string content (included regular expression matching) within the document itself\&. You can input and output a memory stream or save to file\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBPaperTypes\fP { \fBPaperTypes\&.A0\fP, \fBPaperTypes\&.A1\fP, \fBPaperTypes\&.A2\fP, \fBPaperTypes\&.A3\fP, \fBPaperTypes\&.A4\fP, \fBPaperTypes\&.A5\fP, \fBPaperTypes\&.A\fP, \fBPaperTypes\&.A7\fP, \fBPaperTypes\&.A8\fP, \fBPaperTypes\&.A9\fP, \fBPaperTypes\&.B0\fP, \fBPaperTypes\&.B1\fP, \fBPaperTypes\&.B10\fP, \fBPaperTypes\&.B2\fP, \fBPaperTypes\&.B3\fP, \fBPaperTypes\&.B4\fP, \fBPaperTypes\&.B5\fP, \fBPaperTypes\&.B6\fP, \fBPaperTypes\&.B7\fP, \fBPaperTypes\&.B8\fP, \fBPaperTypes\&.B9\fP, \fBPaperTypes\&.C5E\fP, \fBPaperTypes\&.Comm10E\fP, \fBPaperTypes\&.DLE\fP, \fBPaperTypes\&.Executive\fP, \fBPaperTypes\&.Folio\fP, \fBPaperTypes\&.Ledger\fP, \fBPaperTypes\&.Legal\fP, \fBPaperTypes\&.Letter\fP, \fBPaperTypes\&.Tabloid\fP }"
+.br
+.ti -1c
+.RI "enum \fBOrientation\fP { \fBOrientation\&.Landscape\fP, \fBOrientation\&.Portrait\fP }"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBJBToolkit\&.PdfDoc\&.Orientation\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILandscape \fP\fP
+.TP
+\fB\fIPortrait \fP\fP
+.SS "enum \fBJBToolkit\&.PdfDoc\&.PaperTypes\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIA0 \fP\fP
+.TP
+\fB\fIA1 \fP\fP
+.TP
+\fB\fIA2 \fP\fP
+.TP
+\fB\fIA3 \fP\fP
+.TP
+\fB\fIA4 \fP\fP
+.TP
+\fB\fIA5 \fP\fP
+.TP
+\fB\fIA \fP\fP
+.TP
+\fB\fIA7 \fP\fP
+.TP
+\fB\fIA8 \fP\fP
+.TP
+\fB\fIA9 \fP\fP
+.TP
+\fB\fIB0 \fP\fP
+.TP
+\fB\fIB1 \fP\fP
+.TP
+\fB\fIB10 \fP\fP
+.TP
+\fB\fIB2 \fP\fP
+.TP
+\fB\fIB3 \fP\fP
+.TP
+\fB\fIB4 \fP\fP
+.TP
+\fB\fIB5 \fP\fP
+.TP
+\fB\fIB6 \fP\fP
+.TP
+\fB\fIB7 \fP\fP
+.TP
+\fB\fIB8 \fP\fP
+.TP
+\fB\fIB9 \fP\fP
+.TP
+\fB\fIC5E \fP\fP
+.TP
+\fB\fIComm10E \fP\fP
+.TP
+\fB\fIDLE \fP\fP
+.TP
+\fB\fIExecutive \fP\fP
+.TP
+\fB\fIFolio \fP\fP
+.TP
+\fB\fILedger \fP\fP
+.TP
+\fB\fILegal \fP\fP
+.TP
+\fB\fILetter \fP\fP
+.TP
+\fB\fITabloid \fP\fP
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

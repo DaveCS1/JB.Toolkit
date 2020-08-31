@@ -1,0 +1,162 @@
+.TH "JBToolkit.GoogeApi.Vision" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.GoogeApi.Vision \- Perform OCR operation using Google's \fBVision\fP API  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBGoogleApiImageToTextType\fP { \fBGoogleApiImageToTextType\&.Document\fP, \fBGoogleApiImageToTextType\&.Generic\fP }"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static string \fBGetTextFromPDF\fP (string path, \fBGoogleApiImageToTextType\fP imageToTextType=\fBGoogleApiImageToTextType\&.Document\fP, int timoutSeconds=30, bool throwOnError=true)"
+.br
+.RI "Extract text from an a PDF (converts to PNG first) "
+.ti -1c
+.RI "static string \fBGetTextFromPDF\fP (MemoryStream ms, \fBGoogleApiImageToTextType\fP imageToTextType=\fBGoogleApiImageToTextType\&.Document\fP, int timoutSeconds=30, bool throwOnError=true)"
+.br
+.RI "Extract text from an a PDF (converts to PNG first) "
+.ti -1c
+.RI "static string \fBGetTextFromImage\fP (string imagePath, \fBGoogleApiImageToTextType\fP imageToTextType=\fBGoogleApiImageToTextType\&.Document\fP, bool throwOnError=true)"
+.br
+.RI "Extracts text from an Image "
+.ti -1c
+.RI "static string \fBGetTextFromImage\fP (MemoryStream imageStream, \fBGoogleApiImageToTextType\fP imageToTextType=\fBGoogleApiImageToTextType\&.Document\fP, bool throwOnError=true)"
+.br
+.RI "Extracts text from an Image "
+.ti -1c
+.RI "static string \fBGetTextFromImage\fP (byte[] imageBytes, \fBGoogleApiImageToTextType\fP imageToTextType=\fBGoogleApiImageToTextType\&.Document\fP, bool throwOnError=true)"
+.br
+.RI "Extracts text from an Image "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Perform OCR operation using Google's \fBVision\fP API 
+
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBJBToolkit\&.GoogeApi\&.Vision\&.GoogleApiImageToTextType\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIDocument \fP\fP
+.TP
+\fB\fIGeneric \fP\fP
+.SH "Member Function Documentation"
+.PP 
+.SS "static string JBToolkit\&.GoogeApi\&.Vision\&.GetTextFromImage (byte[] imageBytes, \fBGoogleApiImageToTextType\fP imageToTextType = \fC\fBGoogleApiImageToTextType\&.Document\fP\fP, bool throwOnError = \fCtrue\fP)\fC [static]\fP"
+
+.PP
+Extracts text from an Image 
+.PP
+\fBParameters\fP
+.RS 4
+\fIimageStream\fP Byte array of image
+.br
+\fItimoutSeconds\fP Timeout in seconds before reporting failure
+.br
+\fIthrowOnError\fP Fail (break) or error or just return empty string (useful when using this method in batch operations)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Text from image
+.RE
+.PP
+
+.SS "static string JBToolkit\&.GoogeApi\&.Vision\&.GetTextFromImage (MemoryStream imageStream, \fBGoogleApiImageToTextType\fP imageToTextType = \fC\fBGoogleApiImageToTextType\&.Document\fP\fP, bool throwOnError = \fCtrue\fP)\fC [static]\fP"
+
+.PP
+Extracts text from an Image 
+.PP
+\fBParameters\fP
+.RS 4
+\fIimageStream\fP Memory stream of image
+.br
+\fItimoutSeconds\fP Timeout in seconds before reporting failure
+.br
+\fIthrowOnError\fP Fail (break) or error or just return empty string (useful when using this method in batch operations)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Text from image
+.RE
+.PP
+
+.SS "static string JBToolkit\&.GoogeApi\&.Vision\&.GetTextFromImage (string imagePath, \fBGoogleApiImageToTextType\fP imageToTextType = \fC\fBGoogleApiImageToTextType\&.Document\fP\fP, bool throwOnError = \fCtrue\fP)\fC [static]\fP"
+
+.PP
+Extracts text from an Image 
+.PP
+\fBParameters\fP
+.RS 4
+\fIimagePath\fP Path of image to extact text from
+.br
+\fItimoutSeconds\fP Timeout in seconds before reporting failure
+.br
+\fIthrowOnError\fP Fail (break) or error or just return empty string (useful when using this method in batch operations)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Text from image
+.RE
+.PP
+
+.SS "static string JBToolkit\&.GoogeApi\&.Vision\&.GetTextFromPDF (MemoryStream ms, \fBGoogleApiImageToTextType\fP imageToTextType = \fC\fBGoogleApiImageToTextType\&.Document\fP\fP, int timoutSeconds = \fC30\fP, bool throwOnError = \fCtrue\fP)\fC [static]\fP"
+
+.PP
+Extract text from an a PDF (converts to PNG first) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP Path of PDF file to extract text from
+.br
+\fItimoutSeconds\fP Timeout in seconds before reporting failure
+.br
+\fIthrowOnError\fP Fail (break) or error or just return empty string (useful when using this method in batch operations)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Text from PDF
+.RE
+.PP
+
+.SS "static string JBToolkit\&.GoogeApi\&.Vision\&.GetTextFromPDF (string path, \fBGoogleApiImageToTextType\fP imageToTextType = \fC\fBGoogleApiImageToTextType\&.Document\fP\fP, int timoutSeconds = \fC30\fP, bool throwOnError = \fCtrue\fP)\fC [static]\fP"
+
+.PP
+Extract text from an a PDF (converts to PNG first) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP Path of PDF file to extract text from
+.br
+\fItimoutSeconds\fP Timeout in seconds before reporting failure
+.br
+\fIthrowOnError\fP Fail (break) or error or just return empty string (useful when using this method in batch operations)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Text from PDF
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

@@ -1,0 +1,5 @@
+<map id="JBToolkit.Windows.ProcessHelper.GetRemoteProcess" name="JBToolkit.Windows.ProcessHelper.GetRemoteProcess">
+<area shape="rect" id="node1" title="Get remote process(s) by name (can also be used to get local process if you use &#39;localhost&#39;)...." alt="" coords="483,5,667,47"/>
+<area shape="rect" id="node2" href="$dc/d35/class_j_b_toolkit_1_1_windows_1_1_service_helper.html#a2b3c910da47f6f1d64ec163c21c81990" title="Performs an aggressive restart of a service (i.e. kill the actual process if failing)...." alt="" coords="232,5,435,47"/>
+<area shape="rect" id="node3" href="$dc/d35/class_j_b_toolkit_1_1_windows_1_1_service_helper.html#a789bc1855cab13d044ce925ff6d3e9f0" title="Restarts a service using multiple attemps if failing. You will likely need to use impersonatation whe..." alt="" coords="5,5,184,47"/>
+</map>

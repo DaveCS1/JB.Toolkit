@@ -1,0 +1,82 @@
+.TH "JBToolkit.Images.ImageHelper.HtmlImageHelper" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Images.ImageHelper.HtmlImageHelper
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBDataImage\fP"
+.br
+.RI "Parse base 64 to \fBDataImage\fP object consisting of raw byte[] data and the image and mime type\&. "
+.ti -1c
+.RI "class \fBHtmlPath\fP"
+.br
+.RI "Paths to image in Html file along with a path type (i\&.e\&. local, relative, remote, data) "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBList\fP< \fBHtmlPath\fP > \fBGetHtmlImagePathsFromHtml\fP (string \fBhtml\fP)"
+.br
+.RI "Returns a list of paths to images in a Html file along with a path type (i\&.e\&. local, relative, remote, data) "
+.ti -1c
+.RI "static bool \fBDoesImageExistRemotely\fP (string uriToImage)"
+.br
+.RI "Peforms a HTTP web request to see if an image exists remotely "
+.ti -1c
+.RI "static string \fBGetImageBase64StringFromUrl\fP (String url, bool includeMimeTypeDescriptor=false)"
+.br
+.RI "Peforms a HTTP web request and downloads an image "
+.ti -1c
+.RI "static byte[] \fBGetImageBytesFromUrl\fP (string url)"
+.br
+.RI "Peforms a HTTP web request and downloads an image "
+.ti -1c
+.RI "static string \fBGetBase64StringFromBytesWithMime\fP (byte[] imageBytes)"
+.br
+.RI "Returns a base64 string, with detected mime type (using magic numbers) from a image byte array IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "static bool JBToolkit\&.Images\&.ImageHelper\&.HtmlImageHelper\&.DoesImageExistRemotely (string uriToImage)\fC [static]\fP"
+
+.PP
+Peforms a HTTP web request to see if an image exists remotely 
+.SS "static string JBToolkit\&.Images\&.ImageHelper\&.HtmlImageHelper\&.GetBase64StringFromBytesWithMime (byte[] imageBytes)\fC [static]\fP"
+
+.PP
+Returns a base64 string, with detected mime type (using magic numbers) from a image byte array IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool 
+.SS "static \fBList\fP<\fBHtmlPath\fP> JBToolkit\&.Images\&.ImageHelper\&.HtmlImageHelper\&.GetHtmlImagePathsFromHtml (string html)\fC [static]\fP"
+
+.PP
+Returns a list of paths to images in a Html file along with a path type (i\&.e\&. local, relative, remote, data) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhtml\fP Html text as string
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+HtmlPaths object consisting of path and path type
+.RE
+.PP
+
+.SS "static string JBToolkit\&.Images\&.ImageHelper\&.HtmlImageHelper\&.GetImageBase64StringFromUrl (String url, bool includeMimeTypeDescriptor = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Peforms a HTTP web request and downloads an image 
+.SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.HtmlImageHelper\&.GetImageBytesFromUrl (string url)\fC [static]\fP"
+
+.PP
+Peforms a HTTP web request and downloads an image 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

@@ -1,0 +1,276 @@
+\hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream}{}\doxysection{J\+B\+Toolkit.\+Streams.\+Throttled\+Stream Class Reference}
+\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream}\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+
+
+Throttle a stream -\/$>$ Very useful for throttle Http\+Web\+Request uploads / downloads.  
+
+
+
+
+Inheritance diagram for J\+B\+Toolkit.\+Streams.\+Throttled\+Stream\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{de/dbf/class_j_b_toolkit_1_1_streams_1_1_throttled_stream__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Streams.\+Throttled\+Stream\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{da/d17/class_j_b_toolkit_1_1_streams_1_1_throttled_stream__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_1_1_throttle_stream_output}{Throttle\+Stream\+Output}}
+\begin{DoxyCompactList}\small\item\em Object which can be passed into the constructor which stores the current \textquotesingle{}bytes per second\textquotesingle{} and \textquotesingle{}percentage complete\textquotesingle{}. Can also utilise the \textquotesingle{}Throttle\+Stream\+Output\+Event\textquotesingle{} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_1_1_throttle_stream_output_event_args}{Throttle\+Stream\+Output\+Event\+Args}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a7b079a1065367408668b06cf1a9b2a09}{Throttle\+Stream\+Output\+Handler}} (object source, \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_1_1_throttle_stream_output_event_args}{Throttle\+Stream\+Output\+Event\+Args}} e)
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a85200d57897001ee9259b65a9938cd87}{Throttled\+Stream}} (Stream parent\+Stream, ref \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_1_1_throttle_stream_output}{Throttle\+Stream\+Output}} throttle\+Stream\+Output, int total\+File\+Bytes, int max\+Bytes\+Per\+Second=int.\+Max\+Value)
+\begin{DoxyCompactList}\small\item\em Creates a new Stream with Databandwith cap \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a38fb095750f19fa0be771479dbf6ead4}{Throttled\+Stream}} (Stream parent\+Stream, int total\+File\+Bytes, int max\+Bytes\+Per\+Second=int.\+Max\+Value)
+\begin{DoxyCompactList}\small\item\em Creates a new Stream with Databandwith cap \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a1c9d335faafd74992c4c71e860a47bc3}{Close}} ()
+\item 
+override void \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a6c32162647932ee53ad31754a10e04ab}{Flush}} ()
+\item 
+override int \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_adf73ce38de1d5ee3ebd8cf06cfbdf311}{Read}} (byte\mbox{[}$\,$\mbox{]} buffer, int offset, int count)
+\item 
+override long \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a2658f960f34d42905f80b37ed6dc4061}{Seek}} (long offset, Seek\+Origin origin)
+\item 
+override void \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_ac81948e72f899b67e7726dc6dba85864}{Set\+Length}} (long value)
+\item 
+override void \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a63e1ec18d2ac2384185d5a4c8ca2db65}{Write}} (byte\mbox{[}$\,$\mbox{]} buffer, int offset, int count)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_abacefc4c475d78f661937a12a6eadc15}{Throttle}} (int bytes)
+\item 
+override void \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_adfd0283ade529dc39c1270faa5dcc0fb}{Dispose}} (bool disposing)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a6dbfa8e6a08b97012812e0819f0e0a12}{Max\+Bytes\+Per\+Second}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of Bytes that are allowed per second \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_1_1_throttle_stream_output}{Throttle\+Stream\+Output}} \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a30a703ed1c961f926ee63c033294e0a7}{Output}} = null\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+override bool \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_adc0ea4a85032140c8284e650bc099e5f}{Can\+Read}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override bool \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_aafd5354a7bf55cd44a40eeb22d10b259}{Can\+Seek}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override bool \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_af583d1350d5f11c24ff53ae412ddef57}{Can\+Write}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override long \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_ae33ebd0b7390380bab0447561d493619}{Length}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override long \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a298d97bf8f59d0ac514809aa6fd23bf8}{Position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a7b079a1065367408668b06cf1a9b2a09}{Throttle\+Stream\+Output\+Handler}} \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a53ee6c3c17a083ccfdfbec691dc16f6d}{On\+Throttle\+Stream\+Output}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Throttle a stream -\/$>$ Very useful for throttle Http\+Web\+Request uploads / downloads. 
+
+Usage 1 -\/ Without percentage complete and bytes per second output\+:
+
+var stream = request.\+Get\+Request\+Stream(); var throttled\+Stream = new Throttled\+Stream(new Memory\+Stream(file\+Bytes), upload\+Speed\+In\+Bytes\+Per\+Second); throttled\+Stream.\+Copy\+To(stream); stream.\+Close();
+
+Usage 2 -\/ With percentage complete and bytes per second output\+:
+
+var stream = request.\+Get\+Request\+Stream(); var output = new Throttled\+Stream.\+Throttle\+Stream\+Output(); var throttled\+Stream = new Throttled\+Stream(new Memory\+Stream(file\+Bytes), total\+Bytes, ref output, 1000000); throttled\+Stream.\+Copy\+To(stream); stream.\+Close();
+
+For use with an event\+:
+
+var throttled\+Stream = new Throttled\+Stream(new Memory\+Stream(file\+Bytes), total\+Bytes, 1000000); throttled\+Stream.\+On\+Throttle\+Stream\+Output += Your\+Handler\+Method; ~\newline
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a85200d57897001ee9259b65a9938cd87}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a85200d57897001ee9259b65a9938cd87}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!ThrottledStream@{ThrottledStream}}
+\index{ThrottledStream@{ThrottledStream}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{ThrottledStream()}{ThrottledStream()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Throttled\+Stream (\begin{DoxyParamCaption}\item[{Stream}]{parent\+Stream,  }\item[{ref \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_1_1_throttle_stream_output}{Throttle\+Stream\+Output}}}]{throttle\+Stream\+Output,  }\item[{int}]{total\+File\+Bytes,  }\item[{int}]{max\+Bytes\+Per\+Second = {\ttfamily int.MaxValue} }\end{DoxyParamCaption})}
+
+
+
+Creates a new Stream with Databandwith cap 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent\+Stream} & \\
+\hline
+{\em max\+Bytes\+Per\+Second} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a38fb095750f19fa0be771479dbf6ead4}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a38fb095750f19fa0be771479dbf6ead4}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!ThrottledStream@{ThrottledStream}}
+\index{ThrottledStream@{ThrottledStream}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{ThrottledStream()}{ThrottledStream()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Throttled\+Stream (\begin{DoxyParamCaption}\item[{Stream}]{parent\+Stream,  }\item[{int}]{total\+File\+Bytes,  }\item[{int}]{max\+Bytes\+Per\+Second = {\ttfamily int.MaxValue} }\end{DoxyParamCaption})}
+
+
+
+Creates a new Stream with Databandwith cap 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent\+Stream} & \\
+\hline
+{\em max\+Bytes\+Per\+Second} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a1c9d335faafd74992c4c71e860a47bc3}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a1c9d335faafd74992c4c71e860a47bc3}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!Close@{Close}}
+\index{Close@{Close}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily override void J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_adfd0283ade529dc39c1270faa5dcc0fb}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_adfd0283ade529dc39c1270faa5dcc0fb}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily override void J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a6c32162647932ee53ad31754a10e04ab}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a6c32162647932ee53ad31754a10e04ab}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!Flush@{Flush}}
+\index{Flush@{Flush}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{Flush()}{Flush()}}
+{\footnotesize\ttfamily override void J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_adf73ce38de1d5ee3ebd8cf06cfbdf311}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_adf73ce38de1d5ee3ebd8cf06cfbdf311}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!Read@{Read}}
+\index{Read@{Read}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily override int J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Read (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{buffer,  }\item[{int}]{offset,  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/df5/class_j_b_toolkit_1_1_streams_1_1_throttled_stream_adf73ce38de1d5ee3ebd8cf06cfbdf311_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a2658f960f34d42905f80b37ed6dc4061}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a2658f960f34d42905f80b37ed6dc4061}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!Seek@{Seek}}
+\index{Seek@{Seek}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{Seek()}{Seek()}}
+{\footnotesize\ttfamily override long J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Seek (\begin{DoxyParamCaption}\item[{long}]{offset,  }\item[{Seek\+Origin}]{origin }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_ac81948e72f899b67e7726dc6dba85864}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_ac81948e72f899b67e7726dc6dba85864}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!SetLength@{SetLength}}
+\index{SetLength@{SetLength}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{SetLength()}{SetLength()}}
+{\footnotesize\ttfamily override void J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Set\+Length (\begin{DoxyParamCaption}\item[{long}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_abacefc4c475d78f661937a12a6eadc15}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_abacefc4c475d78f661937a12a6eadc15}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!Throttle@{Throttle}}
+\index{Throttle@{Throttle}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{Throttle()}{Throttle()}}
+{\footnotesize\ttfamily void J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Throttle (\begin{DoxyParamCaption}\item[{int}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/df5/class_j_b_toolkit_1_1_streams_1_1_throttled_stream_abacefc4c475d78f661937a12a6eadc15_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a7b079a1065367408668b06cf1a9b2a09}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a7b079a1065367408668b06cf1a9b2a09}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!ThrottleStreamOutputHandler@{ThrottleStreamOutputHandler}}
+\index{ThrottleStreamOutputHandler@{ThrottleStreamOutputHandler}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{ThrottleStreamOutputHandler()}{ThrottleStreamOutputHandler()}}
+{\footnotesize\ttfamily delegate void J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Throttle\+Stream\+Output\+Handler (\begin{DoxyParamCaption}\item[{object}]{source,  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_1_1_throttle_stream_output_event_args}{Throttle\+Stream\+Output\+Event\+Args}}}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a63e1ec18d2ac2384185d5a4c8ca2db65}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a63e1ec18d2ac2384185d5a4c8ca2db65}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!Write@{Write}}
+\index{Write@{Write}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily override void J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Write (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{buffer,  }\item[{int}]{offset,  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/df5/class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a63e1ec18d2ac2384185d5a4c8ca2db65_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_adc0ea4a85032140c8284e650bc099e5f}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_adc0ea4a85032140c8284e650bc099e5f}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!CanRead@{CanRead}}
+\index{CanRead@{CanRead}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{CanRead}{CanRead}}
+{\footnotesize\ttfamily override bool J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Can\+Read\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_aafd5354a7bf55cd44a40eeb22d10b259}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_aafd5354a7bf55cd44a40eeb22d10b259}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!CanSeek@{CanSeek}}
+\index{CanSeek@{CanSeek}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{CanSeek}{CanSeek}}
+{\footnotesize\ttfamily override bool J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Can\+Seek\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_af583d1350d5f11c24ff53ae412ddef57}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_af583d1350d5f11c24ff53ae412ddef57}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!CanWrite@{CanWrite}}
+\index{CanWrite@{CanWrite}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{CanWrite}{CanWrite}}
+{\footnotesize\ttfamily override bool J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Can\+Write\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_ae33ebd0b7390380bab0447561d493619}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_ae33ebd0b7390380bab0447561d493619}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!Length@{Length}}
+\index{Length@{Length}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{Length}{Length}}
+{\footnotesize\ttfamily override long J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Length\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a6dbfa8e6a08b97012812e0819f0e0a12}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a6dbfa8e6a08b97012812e0819f0e0a12}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!MaxBytesPerSecond@{MaxBytesPerSecond}}
+\index{MaxBytesPerSecond@{MaxBytesPerSecond}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{MaxBytesPerSecond}{MaxBytesPerSecond}}
+{\footnotesize\ttfamily int J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Max\+Bytes\+Per\+Second\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Number of Bytes that are allowed per second 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a30a703ed1c961f926ee63c033294e0a7}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a30a703ed1c961f926ee63c033294e0a7}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!Output@{Output}}
+\index{Output@{Output}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{Output}{Output}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_1_1_throttle_stream_output}{Throttle\+Stream\+Output}} J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Output = null\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a298d97bf8f59d0ac514809aa6fd23bf8}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a298d97bf8f59d0ac514809aa6fd23bf8}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!Position@{Position}}
+\index{Position@{Position}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily override long J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+Position\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\doxysubsection{Event Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a53ee6c3c17a083ccfdfbec691dc16f6d}\label{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a53ee6c3c17a083ccfdfbec691dc16f6d}} 
+\index{JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}!OnThrottleStreamOutput@{OnThrottleStreamOutput}}
+\index{OnThrottleStreamOutput@{OnThrottleStreamOutput}!JBToolkit.Streams.ThrottledStream@{JBToolkit.Streams.ThrottledStream}}
+\doxysubsubsection{\texorpdfstring{OnThrottleStreamOutput}{OnThrottleStreamOutput}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_streams_1_1_throttled_stream_a7b079a1065367408668b06cf1a9b2a09}{Throttle\+Stream\+Output\+Handler}} J\+B\+Toolkit.\+Streams.\+Throttled\+Stream.\+On\+Throttle\+Stream\+Output}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Streams/\mbox{\hyperlink{_throttled_stream_8cs}{Throttled\+Stream.\+cs}}\end{DoxyCompactItemize}

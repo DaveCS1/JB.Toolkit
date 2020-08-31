@@ -1,0 +1,4 @@
+<map id="System.ConsoleEx.CentreConsole" name="System.ConsoleEx.CentreConsole">
+<area shape="rect" id="node1" title="Centres the console in the the middle of the screen. You&#39;ll have to add a reference to System...." alt="" coords="260,13,483,39"/>
+<area shape="rect" id="node2" href="$d3/df8/class_system_1_1_console_ex.html#a9a44a2ddce9975fe0193b179b0a1bd59" title="Set the background colour to a nice dark grey, centre the console and disable the cursor" alt="" coords="5,5,212,47"/>
+</map>

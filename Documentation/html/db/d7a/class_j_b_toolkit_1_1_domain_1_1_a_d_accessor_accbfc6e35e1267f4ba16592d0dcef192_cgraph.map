@@ -1,0 +1,4 @@
+<map id="JBToolkit.Domain.ADAccessor.GetNameFromUsername" name="JBToolkit.Domain.ADAccessor.GetNameFromUsername">
+<area shape="rect" id="node1" title="Returns the full name from an AD search by username" alt="" coords="5,5,209,47"/>
+<area shape="rect" id="node2" href="$db/d7a/class_j_b_toolkit_1_1_domain_1_1_a_d_accessor.html#ae4714f65f911ffc0097c3447877dffc3" title="Returns a DirectoryServices SearchResult object" alt="" coords="257,5,461,47"/>
+</map>

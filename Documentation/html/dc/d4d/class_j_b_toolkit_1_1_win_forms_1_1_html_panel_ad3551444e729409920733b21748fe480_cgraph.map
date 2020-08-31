@@ -1,0 +1,5 @@
+<map id="JBToolkit.WinForms.HtmlPanel.MeasureBounds" name="JBToolkit.WinForms.HtmlPanel.MeasureBounds">
+<area shape="rect" id="node1" title="Measures the bounds of the container" alt="" coords="5,39,212,80"/>
+<area shape="rect" id="node2" href="$d0/d18/class_system_1_1_drawing_1_1_html_1_1_initial_html_container.html#a24ebde781a0f6e402679bcaba57dca5e" title="Measures the bounds of box and children, recursively." alt="" coords="260,5,463,47"/>
+<area shape="rect" id="node3" href="$d5/db0/class_system_1_1_drawing_1_1_html_1_1_css_box.html#a7526fe8e08a3ee048ea302e880665ce2" title="Sets the bounds of the box" alt="" coords="260,71,463,112"/>
+</map>

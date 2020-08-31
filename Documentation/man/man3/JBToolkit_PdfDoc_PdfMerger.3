@@ -1,0 +1,94 @@
+.TH "JBToolkit.PdfDoc.PdfMerger" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.PdfDoc.PdfMerger \- Methods to merge PDF documents together, input either memory stream or path (or both) and output as memory stream or save to file  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static MemoryStream \fBMerge\fP (MemoryStream doc1, MemoryStream doc2)"
+.br
+.ti -1c
+.RI "static MemoryStream \fBMerge\fP (params MemoryStream[] docs)"
+.br
+.ti -1c
+.RI "static byte[] \fBMerge\fP (byte[] doc1, byte[] doc2)"
+.br
+.ti -1c
+.RI "static byte[] \fBMerge\fP (params byte[][] docs)"
+.br
+.ti -1c
+.RI "static MemoryStream \fBMerge\fP (MemoryStream doc1, string doc2)"
+.br
+.ti -1c
+.RI "static MemoryStream \fBMerge\fP (string doc1, MemoryStream doc2)"
+.br
+.ti -1c
+.RI "static MemoryStream \fBMerge\fP (string doc1, string doc2)"
+.br
+.ti -1c
+.RI "static MemoryStream \fBMerge\fP (params string[] docPaths)"
+.br
+.ti -1c
+.RI "static void \fBMerge\fP (MemoryStream doc1, MemoryStream doc2, string outputPath)"
+.br
+.ti -1c
+.RI "static void \fBMerge\fP (string outputPath, params MemoryStream[] docs)"
+.br
+.ti -1c
+.RI "static void \fBMerge\fP (string doc1, string doc2, string outputPath)"
+.br
+.ti -1c
+.RI "static void \fBMerge\fP (string outputPath, params string[] docPaths)"
+.br
+.ti -1c
+.RI "static void \fBMerge\fP (MemoryStream doc1, string doc2, string outputPath)"
+.br
+.ti -1c
+.RI "static void \fBMerge\fP (string doc1, MemoryStream doc2, string outputPath)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Methods to merge PDF documents together, input either memory stream or path (or both) and output as memory stream or save to file 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static byte [] JBToolkit\&.PdfDoc\&.PdfMerger\&.Merge (byte[] doc1, byte[] doc2)\fC [static]\fP"
+
+.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfMerger\&.Merge (MemoryStream doc1, MemoryStream doc2)\fC [static]\fP"
+
+.SS "static void JBToolkit\&.PdfDoc\&.PdfMerger\&.Merge (MemoryStream doc1, MemoryStream doc2, string outputPath)\fC [static]\fP"
+
+.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfMerger\&.Merge (MemoryStream doc1, string doc2)\fC [static]\fP"
+
+.SS "static void JBToolkit\&.PdfDoc\&.PdfMerger\&.Merge (MemoryStream doc1, string doc2, string outputPath)\fC [static]\fP"
+
+.SS "static byte [] JBToolkit\&.PdfDoc\&.PdfMerger\&.Merge (params byte docs[][])\fC [static]\fP"
+
+.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfMerger\&.Merge (params MemoryStream[] docs)\fC [static]\fP"
+
+.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfMerger\&.Merge (params string[] docPaths)\fC [static]\fP"
+
+.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfMerger\&.Merge (string doc1, MemoryStream doc2)\fC [static]\fP"
+
+.SS "static void JBToolkit\&.PdfDoc\&.PdfMerger\&.Merge (string doc1, MemoryStream doc2, string outputPath)\fC [static]\fP"
+
+.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfMerger\&.Merge (string doc1, string doc2)\fC [static]\fP"
+
+.SS "static void JBToolkit\&.PdfDoc\&.PdfMerger\&.Merge (string doc1, string doc2, string outputPath)\fC [static]\fP"
+
+.SS "static void JBToolkit\&.PdfDoc\&.PdfMerger\&.Merge (string outputPath, params MemoryStream[] docs)\fC [static]\fP"
+
+.SS "static void JBToolkit\&.PdfDoc\&.PdfMerger\&.Merge (string outputPath, params string[] docPaths)\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

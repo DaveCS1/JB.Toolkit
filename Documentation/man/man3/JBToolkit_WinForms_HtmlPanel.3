@@ -1,0 +1,120 @@
+.TH "JBToolkit.WinForms.HtmlPanel" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.WinForms.HtmlPanel \- Provides HTML rendering on a panel  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBScrollableControl\fP\&.
+.PP
+Inherited by \fBJBToolkit\&.WinForms\&.HtmlLabel\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBMeasureBounds\fP ()"
+.br
+.RI "Measures the bounds of the container "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBInitialHtmlContainer\fP \fB_htmlContainer\fP"
+.br
+.ti -1c
+.RI "\fBInitialHtmlContainer\fP \fBHtmlContainer\fP => \fB_htmlContainer\fP"
+.br
+.RI "Gets the Initial HtmlContainer of this \fBHtmlPanel\fP "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHtmlPanel\fP ()"
+.br
+.RI "Creates a new \fBHtmlPanel\fP "
+.ti -1c
+.RI "override void \fBOnClick\fP (\fBEventArgs\fP e)"
+.br
+.ti -1c
+.RI "override void \fBOnResize\fP (\fBEventArgs\fP e)"
+.br
+.ti -1c
+.RI "override void \fBOnPaint\fP (PaintEventArgs e)"
+.br
+.ti -1c
+.RI "override void \fBOnMouseMove\fP (MouseEventArgs e)"
+.br
+.ti -1c
+.RI "override void \fBOnMouseClick\fP (MouseEventArgs e)"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "override bool \fBAutoSize\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "override bool \fBAutoScroll\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "override string \fBText\fP\fC [get, set]\fP"
+.br
+.RI "Gets or sets the text of this panel "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Provides HTML rendering on a panel 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.WinForms\&.HtmlPanel\&.HtmlPanel ()\fC [protected]\fP"
+
+.PP
+Creates a new \fBHtmlPanel\fP 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void JBToolkit\&.WinForms\&.HtmlPanel\&.MeasureBounds ()\fC [virtual]\fP"
+
+.PP
+Measures the bounds of the container 
+.PP
+Reimplemented in \fBJBToolkit\&.WinForms\&.HtmlLabel\fP\&.
+.SS "override void JBToolkit\&.WinForms\&.HtmlPanel\&.OnClick (\fBEventArgs\fP e)\fC [protected]\fP"
+
+.SS "override void JBToolkit\&.WinForms\&.HtmlPanel\&.OnMouseClick (MouseEventArgs e)\fC [protected]\fP"
+
+.SS "override void JBToolkit\&.WinForms\&.HtmlPanel\&.OnMouseMove (MouseEventArgs e)\fC [protected]\fP"
+
+.SS "override void JBToolkit\&.WinForms\&.HtmlPanel\&.OnPaint (PaintEventArgs e)\fC [protected]\fP"
+
+.SS "override void JBToolkit\&.WinForms\&.HtmlPanel\&.OnResize (\fBEventArgs\fP e)\fC [protected]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBInitialHtmlContainer\fP JBToolkit\&.WinForms\&.HtmlPanel\&._htmlContainer"
+
+.SS "\fBInitialHtmlContainer\fP JBToolkit\&.WinForms\&.HtmlPanel\&.HtmlContainer => \fB_htmlContainer\fP"
+
+.PP
+Gets the Initial HtmlContainer of this \fBHtmlPanel\fP 
+.SH "Property Documentation"
+.PP 
+.SS "override bool JBToolkit\&.WinForms\&.HtmlPanel\&.AutoScroll\fC [get]\fP, \fC [set]\fP"
+
+.SS "override bool JBToolkit\&.WinForms\&.HtmlPanel\&.AutoSize\fC [get]\fP, \fC [set]\fP"
+
+.SS "override string JBToolkit\&.WinForms\&.HtmlPanel\&.Text\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Gets or sets the text of this panel 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

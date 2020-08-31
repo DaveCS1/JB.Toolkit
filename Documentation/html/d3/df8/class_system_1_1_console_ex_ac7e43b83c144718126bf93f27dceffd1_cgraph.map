@@ -1,0 +1,7 @@
+<map id="System.ConsoleEx.SetBackgroundColour" name="System.ConsoleEx.SetBackgroundColour">
+<area shape="rect" id="node1" title="Set the console background colour. Typically you have to clear the console to replace the whole windo..." alt="" coords="5,39,232,80"/>
+<area shape="rect" id="node2" href="$dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper.html#aa75700fa41a407f9f4def9e0a807c9b3" title="Color hex to System.Drawing.Color" alt="" coords="292,5,495,47"/>
+<area shape="rect" id="node4" href="$d3/df8/class_system_1_1_console_ex.html#a95bd25b78a8c78aaf49b022a3c5aa70d" title="Set the console background colour. Typically you have to clear the console to replace the whole windo..." alt="" coords="280,71,507,112"/>
+<area shape="rect" id="node3" href="$dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper.html#a3b28f43eee0f751e02278bcb4ad25bb6" title="Extract the hex color digits from a string" alt="" coords="555,5,757,47"/>
+<area shape="rect" id="node5" href="$dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper.html#a14b3e3466a9bc0debbdaeb49e0180d2e" title="Console color to System.Drawing.Color" alt="" coords="555,71,757,112"/>
+</map>

@@ -1,0 +1,127 @@
+\hypertarget{class_j_b_toolkit_1_1_googe_api_1_1_geocoding}{}\doxysection{J\+B\+Toolkit.\+Googe\+Api.\+Geocoding Class Reference}
+\label{class_j_b_toolkit_1_1_googe_api_1_1_geocoding}\index{JBToolkit.GoogeApi.Geocoding@{JBToolkit.GoogeApi.Geocoding}}
+
+
+Perform geocoding operations on longitue and latitude or reverse-\/geocoding (i.\+e. long lat from address). Can Get the full Google geocoding object or just the desired formatted address or lat long coordinates  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Googe\+Api.\+Geocoding\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{db/da4/class_j_b_toolkit_1_1_googe_api_1_1_geocoding__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_address___components}{Address\+\_\+\+Components}}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_geometry}{Geometry}}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_google_geolocation_object}{Google\+Geolocation\+Object}}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_location}{Location}}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_northeast}{Northeast}}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_result}{Result}}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_southwest}{Southwest}}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_viewport}{Viewport}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_a5752b849d86f217276d7f4ce48e814e0}{Get\+Formatted\+Address\+From\+Lat\+Long}} (string lat, string lng, string google\+Api\+Key)
+\begin{DoxyCompactList}\small\item\em Get a formatted address from longitude and latitude coordinates \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_location}{Location}} \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_a9d0c587ac13b7663dca6e8671536074e}{Get\+Lat\+Long\+From\+Address}} (string address, string google\+Api\+Key, bool attempt\+Force\+Resolve)
+\begin{DoxyCompactList}\small\item\em Get the longitude and latitude coordinates from an address. You can optionally set to \textquotesingle{}attempt force resolve\textquotesingle{} which will iterate through the address string taking off the first character for each iteration on \textquotesingle{}zero result\textquotesingle{}... Which would hopefully resolve to the nearest say \textquotesingle{}street, area, town, city etc\textquotesingle{} -\/ However this won\textquotesingle{}t give as accurate result when having to resolve. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_google_geolocation_object}{Google\+Geolocation\+Object}} \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_adef967f4a9edd537df58b2f9c2707031}{Get\+Geolocation\+Object\+From\+Address}} (string address, string google\+Api\+Key, bool attempt\+Force\+Resolve=false)
+\begin{DoxyCompactList}\small\item\em Get the entire Google geocoordinates object (full json repsonse serialised as object) from a given address. You can optionally set to \textquotesingle{}attempt force resolve\textquotesingle{} which will iterate through the address string taking off the first character for each iteration on \textquotesingle{}zero result\textquotesingle{}... Which would hopefully resolve to the nearest say \textquotesingle{}street, area, town, city etc\textquotesingle{} -\/ However this won\textquotesingle{}t give as accurate result when having to resolve. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_google_geolocation_object}{Google\+Geolocation\+Object}} \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_a96142ff6b0edf4bd4458b84316dfc785}{Get\+Geolocation\+Object\+From\+Lat\+Long}} (string lat, string lng, string google\+Api\+Key)
+\begin{DoxyCompactList}\small\item\em Get the entire Google geocoordinates object from a latitute and longitude coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Perform geocoding operations on longitue and latitude or reverse-\/geocoding (i.\+e. long lat from address). Can Get the full Google geocoding object or just the desired formatted address or lat long coordinates 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_a5752b849d86f217276d7f4ce48e814e0}\label{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_a5752b849d86f217276d7f4ce48e814e0}} 
+\index{JBToolkit.GoogeApi.Geocoding@{JBToolkit.GoogeApi.Geocoding}!GetFormattedAddressFromLatLong@{GetFormattedAddressFromLatLong}}
+\index{GetFormattedAddressFromLatLong@{GetFormattedAddressFromLatLong}!JBToolkit.GoogeApi.Geocoding@{JBToolkit.GoogeApi.Geocoding}}
+\doxysubsubsection{\texorpdfstring{GetFormattedAddressFromLatLong()}{GetFormattedAddressFromLatLong()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Googe\+Api.\+Geocoding.\+Get\+Formatted\+Address\+From\+Lat\+Long (\begin{DoxyParamCaption}\item[{string}]{lat,  }\item[{string}]{lng,  }\item[{string}]{google\+Api\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get a formatted address from longitude and latitude coordinates 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d64/class_j_b_toolkit_1_1_googe_api_1_1_geocoding_a5752b849d86f217276d7f4ce48e814e0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_adef967f4a9edd537df58b2f9c2707031}\label{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_adef967f4a9edd537df58b2f9c2707031}} 
+\index{JBToolkit.GoogeApi.Geocoding@{JBToolkit.GoogeApi.Geocoding}!GetGeolocationObjectFromAddress@{GetGeolocationObjectFromAddress}}
+\index{GetGeolocationObjectFromAddress@{GetGeolocationObjectFromAddress}!JBToolkit.GoogeApi.Geocoding@{JBToolkit.GoogeApi.Geocoding}}
+\doxysubsubsection{\texorpdfstring{GetGeolocationObjectFromAddress()}{GetGeolocationObjectFromAddress()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_google_geolocation_object}{Google\+Geolocation\+Object}} J\+B\+Toolkit.\+Googe\+Api.\+Geocoding.\+Get\+Geolocation\+Object\+From\+Address (\begin{DoxyParamCaption}\item[{string}]{address,  }\item[{string}]{google\+Api\+Key,  }\item[{bool}]{attempt\+Force\+Resolve = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the entire Google geocoordinates object (full json repsonse serialised as object) from a given address. You can optionally set to \textquotesingle{}attempt force resolve\textquotesingle{} which will iterate through the address string taking off the first character for each iteration on \textquotesingle{}zero result\textquotesingle{}... Which would hopefully resolve to the nearest say \textquotesingle{}street, area, town, city etc\textquotesingle{} -\/ However this won\textquotesingle{}t give as accurate result when having to resolve. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d64/class_j_b_toolkit_1_1_googe_api_1_1_geocoding_adef967f4a9edd537df58b2f9c2707031_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_a96142ff6b0edf4bd4458b84316dfc785}\label{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_a96142ff6b0edf4bd4458b84316dfc785}} 
+\index{JBToolkit.GoogeApi.Geocoding@{JBToolkit.GoogeApi.Geocoding}!GetGeolocationObjectFromLatLong@{GetGeolocationObjectFromLatLong}}
+\index{GetGeolocationObjectFromLatLong@{GetGeolocationObjectFromLatLong}!JBToolkit.GoogeApi.Geocoding@{JBToolkit.GoogeApi.Geocoding}}
+\doxysubsubsection{\texorpdfstring{GetGeolocationObjectFromLatLong()}{GetGeolocationObjectFromLatLong()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_google_geolocation_object}{Google\+Geolocation\+Object}} J\+B\+Toolkit.\+Googe\+Api.\+Geocoding.\+Get\+Geolocation\+Object\+From\+Lat\+Long (\begin{DoxyParamCaption}\item[{string}]{lat,  }\item[{string}]{lng,  }\item[{string}]{google\+Api\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the entire Google geocoordinates object from a latitute and longitude coordinates. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d64/class_j_b_toolkit_1_1_googe_api_1_1_geocoding_a96142ff6b0edf4bd4458b84316dfc785_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_a9d0c587ac13b7663dca6e8671536074e}\label{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_a9d0c587ac13b7663dca6e8671536074e}} 
+\index{JBToolkit.GoogeApi.Geocoding@{JBToolkit.GoogeApi.Geocoding}!GetLatLongFromAddress@{GetLatLongFromAddress}}
+\index{GetLatLongFromAddress@{GetLatLongFromAddress}!JBToolkit.GoogeApi.Geocoding@{JBToolkit.GoogeApi.Geocoding}}
+\doxysubsubsection{\texorpdfstring{GetLatLongFromAddress()}{GetLatLongFromAddress()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_location}{Location}} J\+B\+Toolkit.\+Googe\+Api.\+Geocoding.\+Get\+Lat\+Long\+From\+Address (\begin{DoxyParamCaption}\item[{string}]{address,  }\item[{string}]{google\+Api\+Key,  }\item[{bool}]{attempt\+Force\+Resolve }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the longitude and latitude coordinates from an address. You can optionally set to \textquotesingle{}attempt force resolve\textquotesingle{} which will iterate through the address string taking off the first character for each iteration on \textquotesingle{}zero result\textquotesingle{}... Which would hopefully resolve to the nearest say \textquotesingle{}street, area, town, city etc\textquotesingle{} -\/ However this won\textquotesingle{}t give as accurate result when having to resolve. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d64/class_j_b_toolkit_1_1_googe_api_1_1_geocoding_a9d0c587ac13b7663dca6e8671536074e_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Google/\mbox{\hyperlink{_geocoding_8cs}{Geocoding.\+cs}}\end{DoxyCompactItemize}

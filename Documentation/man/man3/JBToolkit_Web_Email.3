@@ -1,0 +1,143 @@
+.TH "JBToolkit.Web.Email" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Web.Email \- Contains methods for validating and sending emails (validating being thing such as validating the attached file size or extention)  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBEmailResult\fP \fBSendMail\fP (MailMessage email, string smptHost, int smptPort, string smtpUsername, string smtpPassword)"
+.br
+.RI "Basic send email method "
+.ti -1c
+.RI "static \fBEmailResult\fP \fBSendMail\fP (string smptHost, int smtpPort, string smtpUsername, string smtpPassword, string senderName, string senderEmail, string emailTo, string ccTo, string subject, string body, \fBList\fP< \fBHttpPostedFileBase\fP > attachments, bool useWebConfig=true)"
+.br
+.RI "Easy call method to send an email returning a \fBEmail\fP Send Result object "
+.ti -1c
+.RI "static bool \fBSendMail\fP (string smptHost, int smtpPort, string smtpUsername, string smtpPassword, string senderName, string senderEmail, string emailTo, string ccTo, string subject, string body, \fBList\fP< \fBHttpPostedFileBase\fP > attachments, out string warningMessage, bool useWebConfig=false)"
+.br
+.RI "Easy call method to send an email "
+.ti -1c
+.RI "static \fBEmailResult\fP \fBSendResultsEmail\fP (string smptHost, int smtpPort, string smtpUsername, string smtpPassword, \fBDataTable\fP dataTable, string senderName, string senderEmail, string emailTo, string ccTo, string subject, string body, string footer, \fBList\fP< \fBHttpPostedFileBase\fP > attachments, bool useWebConfig=true)"
+.br
+.RI "Send a DatTable to be formatted and displayed in a HTML email\&. Column names are wordified\&. "
+.ti -1c
+.RI "static bool \fBSendResultsEmail\fP (string smptHost, int smtpPort, string smtpUsername, string smtpPassword, \fBDataTable\fP dataTable, string senderName, string senderEmail, string emailTo, string ccTo, string subject, string body, string footer, \fBList\fP< \fBHttpPostedFileBase\fP > attachments, out string warningMessage, bool useWebConfig=false)"
+.br
+.RI "Send a DatTable to be formatted and displayed in a HTML email\&. Column names are wordified\&. "
+.ti -1c
+.RI "static void \fBEmailError\fP (string smptHost, int smtpPort, string smtpUsername, string smtpPassword, string siteOrApplicationName, string senderName, string senderEmail, string recipient, string subject, \fBException\fP e, string additionalMessage='', bool useWebConfig=false)"
+.br
+.RI "Standardise easy sent email of an error or issue "
+.ti -1c
+.RI "static void \fBEmailError\fP (string smptHost, int smtpPort, string smtpUsername, string smtpPassword, string siteOrApplicationName, string senderName, string senderEmail, string recipient, string subject, string message, bool useWebConfig=false)"
+.br
+.RI "Standardise easy sent email of an error or issue "
+.ti -1c
+.RI "static bool \fBEmailAddressIsValid\fP (string email)"
+.br
+.RI "Determines is a given string is valid email address using regular expression: ^(?!.)(''([^''\\r\\]|\\[''\\r\\])*''|([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!.).)*)(?<!.)[a-z0-9][\\w.-]*[a-z0-9].[a-z][a-z.]*[a-z]$ "
+.ti -1c
+.RI "static string \fBGetLoggedInUserEmail\fP ()"
+.br
+.RI "Returns the logged in user email (don't use this if deploying to IIS without \fBWindows\fP authentication) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains methods for validating and sending emails (validating being thing such as validating the attached file size or extention) 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static bool JBToolkit\&.Web\&.Email\&.EmailAddressIsValid (string email)\fC [static]\fP"
+
+.PP
+Determines is a given string is valid email address using regular expression: ^(?!.)(''([^''\\r\\]|\\[''\\r\\])*''|([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!.).)*)(?<!.)[a-z0-9][\\w.-]*[a-z0-9].[a-z][a-z.]*[a-z]$ 
+.PP
+\fBParameters\fP
+.RS 4
+\fIemail\fP \fBEmail\fP string
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if valid, false otherwise
+.RE
+.PP
+
+.SS "static void JBToolkit\&.Web\&.Email\&.EmailError (string smptHost, int smtpPort, string smtpUsername, string smtpPassword, string siteOrApplicationName, string senderName, string senderEmail, string recipient, string subject, \fBException\fP e, string additionalMessage = \fC''\fP, bool useWebConfig = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Standardise easy sent email of an error or issue 
+.PP
+\fBReturns\fP
+.RS 4
+EmailSendResult Object
+.RE
+.PP
+
+.SS "static void JBToolkit\&.Web\&.Email\&.EmailError (string smptHost, int smtpPort, string smtpUsername, string smtpPassword, string siteOrApplicationName, string senderName, string senderEmail, string recipient, string subject, string message, bool useWebConfig = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Standardise easy sent email of an error or issue 
+.SS "static string JBToolkit\&.Web\&.Email\&.GetLoggedInUserEmail ()\fC [static]\fP"
+
+.PP
+Returns the logged in user email (don't use this if deploying to IIS without \fBWindows\fP authentication) 
+.SS "static \fBEmailResult\fP JBToolkit\&.Web\&.Email\&.SendMail (MailMessage email, string smptHost, int smptPort, string smtpUsername, string smtpPassword)\fC [static]\fP"
+
+.PP
+Basic send email method 
+.PP
+\fBReturns\fP
+.RS 4
+EmailSendResult Object
+.RE
+.PP
+
+.SS "static \fBEmailResult\fP JBToolkit\&.Web\&.Email\&.SendMail (string smptHost, int smtpPort, string smtpUsername, string smtpPassword, string senderName, string senderEmail, string emailTo, string ccTo, string subject, string body, \fBList\fP< \fBHttpPostedFileBase\fP > attachments, bool useWebConfig = \fCtrue\fP)\fC [static]\fP"
+
+.PP
+Easy call method to send an email returning a \fBEmail\fP Send Result object 
+.PP
+\fBReturns\fP
+.RS 4
+EmailSendResult Object
+.RE
+.PP
+
+.SS "static bool JBToolkit\&.Web\&.Email\&.SendMail (string smptHost, int smtpPort, string smtpUsername, string smtpPassword, string senderName, string senderEmail, string emailTo, string ccTo, string subject, string body, \fBList\fP< \fBHttpPostedFileBase\fP > attachments, out string warningMessage, bool useWebConfig = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Easy call method to send an email 
+.PP
+\fBReturns\fP
+.RS 4
+True if sending successful
+.RE
+.PP
+
+.SS "static \fBEmailResult\fP JBToolkit\&.Web\&.Email\&.SendResultsEmail (string smptHost, int smtpPort, string smtpUsername, string smtpPassword, \fBDataTable\fP dataTable, string senderName, string senderEmail, string emailTo, string ccTo, string subject, string body, string footer, \fBList\fP< \fBHttpPostedFileBase\fP > attachments, bool useWebConfig = \fCtrue\fP)\fC [static]\fP"
+
+.PP
+Send a DatTable to be formatted and displayed in a HTML email\&. Column names are wordified\&. 
+.SS "static bool JBToolkit\&.Web\&.Email\&.SendResultsEmail (string smptHost, int smtpPort, string smtpUsername, string smtpPassword, \fBDataTable\fP dataTable, string senderName, string senderEmail, string emailTo, string ccTo, string subject, string body, string footer, \fBList\fP< \fBHttpPostedFileBase\fP > attachments, out string warningMessage, bool useWebConfig = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Send a DatTable to be formatted and displayed in a HTML email\&. Column names are wordified\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if sending successful
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

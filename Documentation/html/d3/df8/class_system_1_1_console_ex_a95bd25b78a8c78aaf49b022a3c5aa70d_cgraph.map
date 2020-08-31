@@ -1,0 +1,4 @@
+<map id="System.ConsoleEx.SetBackgroundColour" name="System.ConsoleEx.SetBackgroundColour">
+<area shape="rect" id="node1" title="Set the console background colour. Typically you have to clear the console to replace the whole windo..." alt="" coords="5,5,232,47"/>
+<area shape="rect" id="node2" href="$dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper.html#a14b3e3466a9bc0debbdaeb49e0180d2e" title="Console color to System.Drawing.Color" alt="" coords="280,5,483,47"/>
+</map>

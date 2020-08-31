@@ -1,0 +1,12 @@
+<map id="files" name="files">
+<area shape="rect" id="node1" title=" " alt="" coords="556,209,601,235"/>
+<area shape="rect" id="node2" href="$d9/d0e/class_j_b_toolkit_1_1_zip_1_1_zip_extraction.html#a77fef132d916b03ed7a30fbcc248dc9c" title="Extracts a zip stream to a dictionary of file and byte arrays" alt="" coords="291,5,485,47"/>
+<area shape="rect" id="node3" href="$d9/d0e/class_j_b_toolkit_1_1_zip_1_1_zip_extraction.html#a5d6a3d55ca249f163aec55c5961f2e6f" title="Extracts a zip stream to a FilePathAndBytes collection object" alt="" coords="268,71,508,112"/>
+<area shape="rect" id="node4" href="$d9/d0e/class_j_b_toolkit_1_1_zip_1_1_zip_extraction.html#a6338c0f3598c67d551dd9b420117c4a1" title="Extracts a zip stream to a dictionary of file and Memory Streams" alt="" coords="275,136,501,177"/>
+<area shape="rect" id="node5" href="$d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression.html#a775a4b97c501583e27da14665cc4d6d7" title="Zips and entire directory as a Memory Stream (including sub&#45;directories). The input being the target ..." alt="" coords="289,201,487,243"/>
+<area shape="rect" id="node8" href="$d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression.html#a5a08dc7d331cc242fca646c846a9f755" title="Returns a zip file containing a flat list of files as a byte array. The input being multiple paramter..." alt="" coords="289,267,487,308"/>
+<area shape="rect" id="node9" href="$d0/de0/class_system_1_1_web_1_1_mvc_1_1_attachment_attribute.html#a019c3fae9d49a0aee733a0810f50b3ed" title=" " alt="" coords="290,332,486,373"/>
+<area shape="rect" id="node10" href="$d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression.html#aa86bb3da037c698b636b9243807f581f" title="Zips and entire directory (including sub&#45;directories) and saves to the disk. The input being the targ..." alt="" coords="289,397,487,439"/>
+<area shape="rect" id="node6" href="$d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression.html#aa9c2253a0170935b6471ee5b86a9d352" title="Zips and entire directory as a byte array (including sub&#45;directories). The input being the target dir..." alt="" coords="14,169,211,211"/>
+<area shape="rect" id="node7" href="$d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression.html#a269610b97d99df9e6b7b94392429a73b" title="Zips and entire directory as FileContentResult (including sub&#45;directories &#45; Good for MVC file action ..." alt="" coords="5,235,220,276"/>
+</map>

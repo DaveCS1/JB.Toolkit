@@ -1,0 +1,79 @@
+\hypertarget{class_j_b_toolkit_1_1_web_1_1_i_p_helper}{}\doxysection{J\+B\+Toolkit.\+Web.\+I\+P\+Helper Class Reference}
+\label{class_j_b_toolkit_1_1_web_1_1_i_p_helper}\index{JBToolkit.Web.IPHelper@{JBToolkit.Web.IPHelper}}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Web.\+I\+P\+Helper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{d6/d33/class_j_b_toolkit_1_1_web_1_1_i_p_helper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_i_p_helper_af5bfce749d0d02381d8ed890d50818b7}{Get\+External\+IP}} ()
+\begin{DoxyCompactList}\small\item\em Gets the public / external IP of process \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_i_p_helper_a2bcfcdce1c0529ea5c117c85b3a1c7cc}{Is\+There\+An\+Internet\+Connetion}} (bool use\+Non\+Ping\+Method=false)
+\begin{DoxyCompactList}\small\item\em Determines if there\textquotesingle{}s a valid internet connection by querying google. Either by ping or by http request. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_i_p_helper_af3c85084cbfbc2a9238c1dbf6bca421f}{Get\+Visitor\+I\+P\+Address}} (bool Get\+Lan=false)
+\begin{DoxyCompactList}\small\item\em Get the IP address of the requestor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_i_p_helper_af5bfce749d0d02381d8ed890d50818b7}\label{class_j_b_toolkit_1_1_web_1_1_i_p_helper_af5bfce749d0d02381d8ed890d50818b7}} 
+\index{JBToolkit.Web.IPHelper@{JBToolkit.Web.IPHelper}!GetExternalIP@{GetExternalIP}}
+\index{GetExternalIP@{GetExternalIP}!JBToolkit.Web.IPHelper@{JBToolkit.Web.IPHelper}}
+\doxysubsubsection{\texorpdfstring{GetExternalIP()}{GetExternalIP()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Web.\+I\+P\+Helper.\+Get\+External\+IP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the public / external IP of process 
+
+\begin{DoxyReturn}{Returns}
+Public / external IP address
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_i_p_helper_af3c85084cbfbc2a9238c1dbf6bca421f}\label{class_j_b_toolkit_1_1_web_1_1_i_p_helper_af3c85084cbfbc2a9238c1dbf6bca421f}} 
+\index{JBToolkit.Web.IPHelper@{JBToolkit.Web.IPHelper}!GetVisitorIPAddress@{GetVisitorIPAddress}}
+\index{GetVisitorIPAddress@{GetVisitorIPAddress}!JBToolkit.Web.IPHelper@{JBToolkit.Web.IPHelper}}
+\doxysubsubsection{\texorpdfstring{GetVisitorIPAddress()}{GetVisitorIPAddress()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Web.\+I\+P\+Helper.\+Get\+Visitor\+I\+P\+Address (\begin{DoxyParamCaption}\item[{bool}]{Get\+Lan = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the IP address of the requestor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Get\+Lan} & Get the visitor IP address that\textquotesingle{}s on the L\+AN. Default to false\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Either I\+Pv4 or I\+Pv6 address (if on lan)
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3e/class_j_b_toolkit_1_1_web_1_1_i_p_helper_af3c85084cbfbc2a9238c1dbf6bca421f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_i_p_helper_a2bcfcdce1c0529ea5c117c85b3a1c7cc}\label{class_j_b_toolkit_1_1_web_1_1_i_p_helper_a2bcfcdce1c0529ea5c117c85b3a1c7cc}} 
+\index{JBToolkit.Web.IPHelper@{JBToolkit.Web.IPHelper}!IsThereAnInternetConnetion@{IsThereAnInternetConnetion}}
+\index{IsThereAnInternetConnetion@{IsThereAnInternetConnetion}!JBToolkit.Web.IPHelper@{JBToolkit.Web.IPHelper}}
+\doxysubsubsection{\texorpdfstring{IsThereAnInternetConnetion()}{IsThereAnInternetConnetion()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Web.\+I\+P\+Helper.\+Is\+There\+An\+Internet\+Connetion (\begin{DoxyParamCaption}\item[{bool}]{use\+Non\+Ping\+Method = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Determines if there\textquotesingle{}s a valid internet connection by querying google. Either by ping or by http request. 
+
+\begin{DoxyReturn}{Returns}
+True if there is, false otherwise
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Web/\mbox{\hyperlink{_i_p_helper_8cs}{I\+P\+Helper.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,75 @@
+\hypertarget{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods}{}\doxysection{J\+B\+Toolkit.\+Domain.\+Impersonation.\+Win32\+Native\+Methods Class Reference}
+\label{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods}\index{JBToolkit.Domain.Impersonation.Win32NativeMethods@{JBToolkit.Domain.Impersonation.Win32NativeMethods}}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Domain.\+Impersonation.\+Win32\+Native\+Methods\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{d5/dd9/class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods_a8215a72154c5c373e831db27168b5aff}{Logon\+User}} (string lpsz\+User\+Name, string lpsz\+Domain, string lpsz\+Password, int dw\+Logon\+Type, int dw\+Logon\+Provider, ref Int\+Ptr ph\+Token)
+\item 
+static int \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods_aadbffee4774a199eed007ffa18150374}{Duplicate\+Token}} (Int\+Ptr h\+Token, int impersonation\+Level, ref Int\+Ptr h\+New\+Token)
+\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods_ac1be8a98acfb68ad513a05e0bdf09f1f}{Revert\+To\+Self}} ()
+\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods_a9827748eefc2581d16f9145ef55fb0a5}{Close\+Handle}} (Int\+Ptr handle)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods_a9827748eefc2581d16f9145ef55fb0a5}\label{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods_a9827748eefc2581d16f9145ef55fb0a5}} 
+\index{JBToolkit.Domain.Impersonation.Win32NativeMethods@{JBToolkit.Domain.Impersonation.Win32NativeMethods}!CloseHandle@{CloseHandle}}
+\index{CloseHandle@{CloseHandle}!JBToolkit.Domain.Impersonation.Win32NativeMethods@{JBToolkit.Domain.Impersonation.Win32NativeMethods}}
+\doxysubsubsection{\texorpdfstring{CloseHandle()}{CloseHandle()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Domain.\+Impersonation.\+Win32\+Native\+Methods.\+Close\+Handle (\begin{DoxyParamCaption}\item[{Int\+Ptr}]{handle }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/de6/class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods_a9827748eefc2581d16f9145ef55fb0a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods_aadbffee4774a199eed007ffa18150374}\label{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods_aadbffee4774a199eed007ffa18150374}} 
+\index{JBToolkit.Domain.Impersonation.Win32NativeMethods@{JBToolkit.Domain.Impersonation.Win32NativeMethods}!DuplicateToken@{DuplicateToken}}
+\index{DuplicateToken@{DuplicateToken}!JBToolkit.Domain.Impersonation.Win32NativeMethods@{JBToolkit.Domain.Impersonation.Win32NativeMethods}}
+\doxysubsubsection{\texorpdfstring{DuplicateToken()}{DuplicateToken()}}
+{\footnotesize\ttfamily static int J\+B\+Toolkit.\+Domain.\+Impersonation.\+Win32\+Native\+Methods.\+Duplicate\+Token (\begin{DoxyParamCaption}\item[{Int\+Ptr}]{h\+Token,  }\item[{int}]{impersonation\+Level,  }\item[{ref Int\+Ptr}]{h\+New\+Token }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/de6/class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods_aadbffee4774a199eed007ffa18150374_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods_a8215a72154c5c373e831db27168b5aff}\label{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods_a8215a72154c5c373e831db27168b5aff}} 
+\index{JBToolkit.Domain.Impersonation.Win32NativeMethods@{JBToolkit.Domain.Impersonation.Win32NativeMethods}!LogonUser@{LogonUser}}
+\index{LogonUser@{LogonUser}!JBToolkit.Domain.Impersonation.Win32NativeMethods@{JBToolkit.Domain.Impersonation.Win32NativeMethods}}
+\doxysubsubsection{\texorpdfstring{LogonUser()}{LogonUser()}}
+{\footnotesize\ttfamily static int J\+B\+Toolkit.\+Domain.\+Impersonation.\+Win32\+Native\+Methods.\+Logon\+User (\begin{DoxyParamCaption}\item[{string}]{lpsz\+User\+Name,  }\item[{string}]{lpsz\+Domain,  }\item[{string}]{lpsz\+Password,  }\item[{int}]{dw\+Logon\+Type,  }\item[{int}]{dw\+Logon\+Provider,  }\item[{ref Int\+Ptr}]{ph\+Token }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/de6/class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods_a8215a72154c5c373e831db27168b5aff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods_ac1be8a98acfb68ad513a05e0bdf09f1f}\label{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods_ac1be8a98acfb68ad513a05e0bdf09f1f}} 
+\index{JBToolkit.Domain.Impersonation.Win32NativeMethods@{JBToolkit.Domain.Impersonation.Win32NativeMethods}!RevertToSelf@{RevertToSelf}}
+\index{RevertToSelf@{RevertToSelf}!JBToolkit.Domain.Impersonation.Win32NativeMethods@{JBToolkit.Domain.Impersonation.Win32NativeMethods}}
+\doxysubsubsection{\texorpdfstring{RevertToSelf()}{RevertToSelf()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Domain.\+Impersonation.\+Win32\+Native\+Methods.\+Revert\+To\+Self (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Domain/\mbox{\hyperlink{_impersonation_8cs}{Impersonation.\+cs}}\end{DoxyCompactItemize}

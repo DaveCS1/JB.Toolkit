@@ -1,0 +1,200 @@
+.TH "JBToolkit.Images.ImageHelper.IconHelper" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Images.ImageHelper.IconHelper \- A Helper class for multi-resolution icon files  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBIcon\fP"
+.br
+.RI "Extension of the System\&.Drawing\&.Icon for getting header information and individsual icons from a multi-resolution icon "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBConvertToIcon\fP (Bitmap inputBitmap, Stream outputStream)"
+.br
+.RI "Converts a Image to a icon (ico) with all the sizes windows likes "
+.ti -1c
+.RI "static MemoryStream \fBConvertToIcon\fP (Stream input)"
+.br
+.RI "Converts an image to a icon (ico) "
+.ti -1c
+.RI "static void \fBConvertToIcon\fP (string inputPath, string outputPath)"
+.br
+.RI "Converts a an image to a icon (ico) "
+.ti -1c
+.RI "static byte[] \fBConvertToIcon\fP (byte[] inputBytes)"
+.br
+.RI "Converts a an image to a icon (ico) "
+.ti -1c
+.RI "static bool \fBConvertToIcon\fP (System\&.Drawing\&.Image inputImage, string outputPath)"
+.br
+.RI "Converts an image to a icon (ico) "
+.ti -1c
+.RI "static Image \fBGetLargestImageFromIcon\fP (System\&.Drawing\&.Icon icon)"
+.br
+.ti -1c
+.RI "static Image \fBGetLargestImageFromIcon\fP (byte[] bytes)"
+.br
+.ti -1c
+.RI "static Image \fBGetLargestImageFromIcon\fP (MemoryStream ms)"
+.br
+.ti -1c
+.RI "static Image \fBGetSmallestImageFromIcon\fP (System\&.Drawing\&.Icon icon)"
+.br
+.ti -1c
+.RI "static Image \fBGetSmallestImageFromIcon\fP (byte[] bytes)"
+.br
+.ti -1c
+.RI "static Image \fBGetSmallestImageFromIcon\fP (MemoryStream ms)"
+.br
+.ti -1c
+.RI "static System\&.Drawing\&.Icon \fBGetWindowsFileAssociationIcon\fP (string fileExtension)"
+.br
+.RI "Returns an icon based on Window's current file association "
+.ti -1c
+.RI "static System\&.Drawing\&.Image \fBGetFileTypeImageFromAsembly\fP (string fileExtension)"
+.br
+.RI "Returns an icon based on Window's current file association "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A Helper class for multi-resolution icon files 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static bool JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.ConvertToIcon (Bitmap inputBitmap, Stream outputStream)\fC [static]\fP"
+
+.PP
+Converts a Image to a icon (ico) with all the sizes windows likes 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinputBitmap\fP The input bitmap
+.br
+\fIoutputStream\fP The output stream
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Wether or not the icon was succesfully generated
+.RE
+.PP
+
+.SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.ConvertToIcon (byte[] inputBytes)\fC [static]\fP"
+
+.PP
+Converts a an image to a icon (ico) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinputBytes\fP The input byte array 
+.br
+\fIoutputBytes\fP The output bye array
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Wether or not the icon was succesfully generated
+.RE
+.PP
+
+.SS "static MemoryStream JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.ConvertToIcon (Stream input)\fC [static]\fP"
+
+.PP
+Converts an image to a icon (ico) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinput\fP The input stream
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Wether or not the icon was succesfully generated
+.RE
+.PP
+
+.SS "static void JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.ConvertToIcon (string inputPath, string outputPath)\fC [static]\fP"
+
+.PP
+Converts a an image to a icon (ico) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinputPath\fP The input path
+.br
+\fIoutputPath\fP The output path
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Wether or not the icon was succesfully generated
+.RE
+.PP
+
+.SS "static bool JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.ConvertToIcon (System\&.Drawing\&.Image inputImage, string outputPath)\fC [static]\fP"
+
+.PP
+Converts an image to a icon (ico) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinputImage\fP The input image
+.br
+\fIoutputPath\fP The output path
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Wether or not the icon was succesfully generated
+.RE
+.PP
+
+.SS "static System\&.Drawing\&.Image JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.GetFileTypeImageFromAsembly (string fileExtension)\fC [static]\fP"
+
+.PP
+Returns an icon based on Window's current file association 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfileExtension\fP I\&.e\&. \&.pdf
+.RE
+.PP
+
+.SS "static Image JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.GetLargestImageFromIcon (byte[] bytes)\fC [static]\fP"
+
+.SS "static Image JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.GetLargestImageFromIcon (MemoryStream ms)\fC [static]\fP"
+
+.SS "static Image JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.GetLargestImageFromIcon (System\&.Drawing\&.Icon icon)\fC [static]\fP"
+
+.SS "static Image JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.GetSmallestImageFromIcon (byte[] bytes)\fC [static]\fP"
+
+.SS "static Image JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.GetSmallestImageFromIcon (MemoryStream ms)\fC [static]\fP"
+
+.SS "static Image JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.GetSmallestImageFromIcon (System\&.Drawing\&.Icon icon)\fC [static]\fP"
+
+.SS "static System\&.Drawing\&.Icon JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.GetWindowsFileAssociationIcon (string fileExtension)\fC [static]\fP"
+
+.PP
+Returns an icon based on Window's current file association 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfileExtension\fP I\&.e\&. \&.pdf
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

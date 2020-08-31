@@ -1,0 +1,165 @@
+\hypertarget{class_j_b_toolkit_1_1_windows_1_1_process_helper}{}\doxysection{J\+B\+Toolkit.\+Windows.\+Process\+Helper Class Reference}
+\label{class_j_b_toolkit_1_1_windows_1_1_process_helper}\index{JBToolkit.Windows.ProcessHelper@{JBToolkit.Windows.ProcessHelper}}
+
+
+ 
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Windows.\+Process\+Helper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{dc/d53/class_j_b_toolkit_1_1_windows_1_1_process_helper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_windows_1_1_process_helper_a9a2b87ff9712355ed5604cd5b93863ad}{Move\+File\+Ex}} (string lp\+Existing\+File\+Name, string lp\+New\+File\+Name, int dw\+Flags)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Process\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_windows_1_1_process_helper_a1e9abd54a8394b6a07af2ab104595539}{Get\+Remote\+Process}} (string process\+Name, string remote\+Host)
+\begin{DoxyCompactList}\small\item\em Get remote process(s) by name (can also be used to get local process if you use \textquotesingle{}localhost\textquotesingle{}). You will likely need to use impersonatation when calling \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_j_b_toolkit_1_1_windows_1_1_process_helper_a3f2efc3ad17962b13af10d38c5baada9}{Get\+Process\+Memory\+Usage}} (string process\+Name, string remote\+Host)
+\begin{DoxyCompactList}\small\item\em Get the memory usage in KB of a particular processs. You will likely need to use impersonatation when calling. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_windows_1_1_process_helper_afb518659a5ed37e209117d9fcf66de41}{Execute\+Process\+And\+Read\+Std\+Out}} (string path, out string error\+Output, string arguments=\char`\"{}\char`\"{}, string working\+Directory=\char`\"{}\char`\"{}, int timeout\+Seconds=60, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Executes a process and reads the output (std out and error out) -\/ Useful for working with command line utilties in managed code \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_list}{List}}$<$ Process $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_windows_1_1_process_helper_a95c5549d08113736e70323b9bda62428}{Who\+Is\+Locking}} (string path)
+\begin{DoxyCompactList}\small\item\em Find out what process(es) have a lock on the specified file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{class_j_b_toolkit_1_1_windows_1_1_process_helper_ab3a48636338040477889ee69dcc4328e}{M\+O\+V\+E\+F\+I\+L\+E\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+U\+N\+T\+I\+L\+\_\+\+R\+E\+B\+O\+OT}} = 0x4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Helper class for manipulating mainly remote processes. Most likely you will need to wrap the call with Impersonatation. I.\+e\+:
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_windows_1_1_process_helper_afb518659a5ed37e209117d9fcf66de41}\label{class_j_b_toolkit_1_1_windows_1_1_process_helper_afb518659a5ed37e209117d9fcf66de41}} 
+\index{JBToolkit.Windows.ProcessHelper@{JBToolkit.Windows.ProcessHelper}!ExecuteProcessAndReadStdOut@{ExecuteProcessAndReadStdOut}}
+\index{ExecuteProcessAndReadStdOut@{ExecuteProcessAndReadStdOut}!JBToolkit.Windows.ProcessHelper@{JBToolkit.Windows.ProcessHelper}}
+\doxysubsubsection{\texorpdfstring{ExecuteProcessAndReadStdOut()}{ExecuteProcessAndReadStdOut()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Windows.\+Process\+Helper.\+Execute\+Process\+And\+Read\+Std\+Out (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{out string}]{error\+Output,  }\item[{string}]{arguments = {\ttfamily \char`\"{}\char`\"{}},  }\item[{string}]{working\+Directory = {\ttfamily \char`\"{}\char`\"{}},  }\item[{int}]{timeout\+Seconds = {\ttfamily 60},  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Executes a process and reads the output (std out and error out) -\/ Useful for working with command line utilties in managed code 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path of program to execute\\
+\hline
+{\em arguments} & Optionally include and command line arguments\\
+\hline
+{\em working\+Directory} & Working folder path\\
+\hline
+{\em timeout\+Seconds} & End process timeout. Defaults to 30 seconds\\
+\hline
+{\em throw\+On\+Error} & Should the method throw an error when exception caught or just ignore\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return S\+TD + Err output
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbe/class_j_b_toolkit_1_1_windows_1_1_process_helper_afb518659a5ed37e209117d9fcf66de41_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_windows_1_1_process_helper_a3f2efc3ad17962b13af10d38c5baada9}\label{class_j_b_toolkit_1_1_windows_1_1_process_helper_a3f2efc3ad17962b13af10d38c5baada9}} 
+\index{JBToolkit.Windows.ProcessHelper@{JBToolkit.Windows.ProcessHelper}!GetProcessMemoryUsage@{GetProcessMemoryUsage}}
+\index{GetProcessMemoryUsage@{GetProcessMemoryUsage}!JBToolkit.Windows.ProcessHelper@{JBToolkit.Windows.ProcessHelper}}
+\doxysubsubsection{\texorpdfstring{GetProcessMemoryUsage()}{GetProcessMemoryUsage()}}
+{\footnotesize\ttfamily static int J\+B\+Toolkit.\+Windows.\+Process\+Helper.\+Get\+Process\+Memory\+Usage (\begin{DoxyParamCaption}\item[{string}]{process\+Name,  }\item[{string}]{remote\+Host }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the memory usage in KB of a particular processs. You will likely need to use impersonatation when calling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em process} & The process object to get the memory usage of\\
+\hline
+{\em remote\+Host} & The remote host where the process resides\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Memory usage in KB
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_windows_1_1_process_helper_a1e9abd54a8394b6a07af2ab104595539}\label{class_j_b_toolkit_1_1_windows_1_1_process_helper_a1e9abd54a8394b6a07af2ab104595539}} 
+\index{JBToolkit.Windows.ProcessHelper@{JBToolkit.Windows.ProcessHelper}!GetRemoteProcess@{GetRemoteProcess}}
+\index{GetRemoteProcess@{GetRemoteProcess}!JBToolkit.Windows.ProcessHelper@{JBToolkit.Windows.ProcessHelper}}
+\doxysubsubsection{\texorpdfstring{GetRemoteProcess()}{GetRemoteProcess()}}
+{\footnotesize\ttfamily static Process \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Windows.\+Process\+Helper.\+Get\+Remote\+Process (\begin{DoxyParamCaption}\item[{string}]{process\+Name,  }\item[{string}]{remote\+Host }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get remote process(s) by name (can also be used to get local process if you use \textquotesingle{}localhost\textquotesingle{}). You will likely need to use impersonatation when calling 
+
+
+\begin{DoxyParams}{Parameters}
+{\em process\+Name} & Name of process to get info for\\
+\hline
+{\em remote\+Host} & Remote host where process resides\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Process array object
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbe/class_j_b_toolkit_1_1_windows_1_1_process_helper_a1e9abd54a8394b6a07af2ab104595539_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_windows_1_1_process_helper_a9a2b87ff9712355ed5604cd5b93863ad}\label{class_j_b_toolkit_1_1_windows_1_1_process_helper_a9a2b87ff9712355ed5604cd5b93863ad}} 
+\index{JBToolkit.Windows.ProcessHelper@{JBToolkit.Windows.ProcessHelper}!MoveFileEx@{MoveFileEx}}
+\index{MoveFileEx@{MoveFileEx}!JBToolkit.Windows.ProcessHelper@{JBToolkit.Windows.ProcessHelper}}
+\doxysubsubsection{\texorpdfstring{MoveFileEx()}{MoveFileEx()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Windows.\+Process\+Helper.\+Move\+File\+Ex (\begin{DoxyParamCaption}\item[{string}]{lp\+Existing\+File\+Name,  }\item[{string}]{lp\+New\+File\+Name,  }\item[{int}]{dw\+Flags }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_windows_1_1_process_helper_a95c5549d08113736e70323b9bda62428}\label{class_j_b_toolkit_1_1_windows_1_1_process_helper_a95c5549d08113736e70323b9bda62428}} 
+\index{JBToolkit.Windows.ProcessHelper@{JBToolkit.Windows.ProcessHelper}!WhoIsLocking@{WhoIsLocking}}
+\index{WhoIsLocking@{WhoIsLocking}!JBToolkit.Windows.ProcessHelper@{JBToolkit.Windows.ProcessHelper}}
+\doxysubsubsection{\texorpdfstring{WhoIsLocking()}{WhoIsLocking()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_list}{List}}$<$Process$>$ J\+B\+Toolkit.\+Windows.\+Process\+Helper.\+Who\+Is\+Locking (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Find out what process(es) have a lock on the specified file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path of the file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Processes locking the file
+\end{DoxyReturn}
+
+
+See also\+: \href{http://msdn.microsoft.com/en-us/library/windows/desktop/aa373661(v=vs.85).aspx}{\texttt{ http\+://msdn.\+microsoft.\+com/en-\/us/library/windows/desktop/aa373661(v=vs.\+85).\+aspx}} \href{http://wyupdate.googlecode.com/svn-history/r401/trunk/frmFilesInUse.cs}{\texttt{ http\+://wyupdate.\+googlecode.\+com/svn-\/history/r401/trunk/frm\+Files\+In\+Use.\+cs}} (no copyright in code at time of viewing)
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_windows_1_1_process_helper_ab3a48636338040477889ee69dcc4328e}\label{class_j_b_toolkit_1_1_windows_1_1_process_helper_ab3a48636338040477889ee69dcc4328e}} 
+\index{JBToolkit.Windows.ProcessHelper@{JBToolkit.Windows.ProcessHelper}!MOVEFILE\_DELAY\_UNTIL\_REBOOT@{MOVEFILE\_DELAY\_UNTIL\_REBOOT}}
+\index{MOVEFILE\_DELAY\_UNTIL\_REBOOT@{MOVEFILE\_DELAY\_UNTIL\_REBOOT}!JBToolkit.Windows.ProcessHelper@{JBToolkit.Windows.ProcessHelper}}
+\doxysubsubsection{\texorpdfstring{MOVEFILE\_DELAY\_UNTIL\_REBOOT}{MOVEFILE\_DELAY\_UNTIL\_REBOOT}}
+{\footnotesize\ttfamily const int J\+B\+Toolkit.\+Windows.\+Process\+Helper.\+M\+O\+V\+E\+F\+I\+L\+E\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+U\+N\+T\+I\+L\+\_\+\+R\+E\+B\+O\+OT = 0x4\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Windows/\mbox{\hyperlink{_process_helper_8cs}{Process\+Helper.\+cs}}\end{DoxyCompactItemize}

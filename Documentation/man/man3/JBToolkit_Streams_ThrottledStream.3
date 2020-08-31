@@ -1,0 +1,189 @@
+.TH "JBToolkit.Streams.ThrottledStream" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Streams.ThrottledStream \- Throttle a stream -> Very useful for throttle HttpWebRequest uploads / downloads\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Stream\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBThrottleStreamOutput\fP"
+.br
+.RI "Object which can be passed into the constructor which stores the current 'bytes per second' and 'percentage complete'\&. Can also utilise the 'ThrottleStreamOutputEvent' "
+.ti -1c
+.RI "class \fBThrottleStreamOutputEventArgs\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "delegate void \fBThrottleStreamOutputHandler\fP (object source, \fBThrottleStreamOutputEventArgs\fP e)"
+.br
+.ti -1c
+.RI "\fBThrottledStream\fP (Stream parentStream, ref \fBThrottleStreamOutput\fP throttleStreamOutput, int totalFileBytes, int maxBytesPerSecond=int\&.MaxValue)"
+.br
+.RI "Creates a new Stream with Databandwith cap "
+.ti -1c
+.RI "\fBThrottledStream\fP (Stream parentStream, int totalFileBytes, int maxBytesPerSecond=int\&.MaxValue)"
+.br
+.RI "Creates a new Stream with Databandwith cap "
+.ti -1c
+.RI "override void \fBClose\fP ()"
+.br
+.ti -1c
+.RI "override void \fBFlush\fP ()"
+.br
+.ti -1c
+.RI "override int \fBRead\fP (byte[] buffer, int offset, int count)"
+.br
+.ti -1c
+.RI "override long \fBSeek\fP (long offset, SeekOrigin origin)"
+.br
+.ti -1c
+.RI "override void \fBSetLength\fP (long value)"
+.br
+.ti -1c
+.RI "override void \fBWrite\fP (byte[] buffer, int offset, int count)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBThrottle\fP (int bytes)"
+.br
+.ti -1c
+.RI "override void \fBDispose\fP (bool disposing)"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "int \fBMaxBytesPerSecond\fP\fC [get, set]\fP"
+.br
+.RI "Number of Bytes that are allowed per second "
+.ti -1c
+.RI "\fBThrottleStreamOutput\fP \fBOutput\fP = null\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "override bool \fBCanRead\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "override bool \fBCanSeek\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "override bool \fBCanWrite\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "override long \fBLength\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "override long \fBPosition\fP\fC [get, set]\fP"
+.br
+.in -1c
+.SS "Events"
+
+.in +1c
+.ti -1c
+.RI "\fBThrottleStreamOutputHandler\fP \fBOnThrottleStreamOutput\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Throttle a stream -> Very useful for throttle HttpWebRequest uploads / downloads\&. 
+
+Usage 1 - Without percentage complete and bytes per second output:
+.PP
+var stream = request\&.GetRequestStream(); var throttledStream = new ThrottledStream(new MemoryStream(fileBytes), uploadSpeedInBytesPerSecond); throttledStream\&.CopyTo(stream); stream\&.Close();
+.PP
+Usage 2 - With percentage complete and bytes per second output:
+.PP
+var stream = request\&.GetRequestStream(); var output = new ThrottledStream\&.ThrottleStreamOutput(); var throttledStream = new ThrottledStream(new MemoryStream(fileBytes), totalBytes, ref output, 1000000); throttledStream\&.CopyTo(stream); stream\&.Close();
+.PP
+For use with an event:
+.PP
+var throttledStream = new ThrottledStream(new MemoryStream(fileBytes), totalBytes, 1000000); throttledStream\&.OnThrottleStreamOutput += YourHandlerMethod; 
+.br
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.Streams\&.ThrottledStream\&.ThrottledStream (Stream parentStream, ref \fBThrottleStreamOutput\fP throttleStreamOutput, int totalFileBytes, int maxBytesPerSecond = \fCint\&.MaxValue\fP)"
+
+.PP
+Creates a new Stream with Databandwith cap 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparentStream\fP 
+.br
+\fImaxBytesPerSecond\fP 
+.RE
+.PP
+
+.SS "JBToolkit\&.Streams\&.ThrottledStream\&.ThrottledStream (Stream parentStream, int totalFileBytes, int maxBytesPerSecond = \fCint\&.MaxValue\fP)"
+
+.PP
+Creates a new Stream with Databandwith cap 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparentStream\fP 
+.br
+\fImaxBytesPerSecond\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "override void JBToolkit\&.Streams\&.ThrottledStream\&.Close ()"
+
+.SS "override void JBToolkit\&.Streams\&.ThrottledStream\&.Dispose (bool disposing)\fC [protected]\fP"
+
+.SS "override void JBToolkit\&.Streams\&.ThrottledStream\&.Flush ()"
+
+.SS "override int JBToolkit\&.Streams\&.ThrottledStream\&.Read (byte[] buffer, int offset, int count)"
+
+.SS "override long JBToolkit\&.Streams\&.ThrottledStream\&.Seek (long offset, SeekOrigin origin)"
+
+.SS "override void JBToolkit\&.Streams\&.ThrottledStream\&.SetLength (long value)"
+
+.SS "void JBToolkit\&.Streams\&.ThrottledStream\&.Throttle (int bytes)\fC [protected]\fP"
+
+.SS "delegate void JBToolkit\&.Streams\&.ThrottledStream\&.ThrottleStreamOutputHandler (object source, \fBThrottleStreamOutputEventArgs\fP e)"
+
+.SS "override void JBToolkit\&.Streams\&.ThrottledStream\&.Write (byte[] buffer, int offset, int count)"
+
+.SH "Property Documentation"
+.PP 
+.SS "override bool JBToolkit\&.Streams\&.ThrottledStream\&.CanRead\fC [get]\fP"
+
+.SS "override bool JBToolkit\&.Streams\&.ThrottledStream\&.CanSeek\fC [get]\fP"
+
+.SS "override bool JBToolkit\&.Streams\&.ThrottledStream\&.CanWrite\fC [get]\fP"
+
+.SS "override long JBToolkit\&.Streams\&.ThrottledStream\&.Length\fC [get]\fP"
+
+.SS "int JBToolkit\&.Streams\&.ThrottledStream\&.MaxBytesPerSecond\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Number of Bytes that are allowed per second 
+.SS "\fBThrottleStreamOutput\fP JBToolkit\&.Streams\&.ThrottledStream\&.Output = null\fC [get]\fP, \fC [set]\fP"
+
+.SS "override long JBToolkit\&.Streams\&.ThrottledStream\&.Position\fC [get]\fP, \fC [set]\fP"
+
+.SH "Event Documentation"
+.PP 
+.SS "\fBThrottleStreamOutputHandler\fP JBToolkit\&.Streams\&.ThrottledStream\&.OnThrottleStreamOutput"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

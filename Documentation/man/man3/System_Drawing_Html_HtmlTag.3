@@ -1,0 +1,105 @@
+.TH "System.Drawing.Html.HtmlTag" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+System.Drawing.Html.HtmlTag
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHtmlTag\fP (string tag)"
+.br
+.ti -1c
+.RI "bool \fBHasAttribute\fP (string attribute)"
+.br
+.RI "Gets a boolean indicating if the attribute list has the specified attribute "
+.ti -1c
+.RI "override string \fBToString\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBIsSingle\fP"
+.br
+.RI "Gets if the tag is single placed; in other words it doesn't need a closing tag; e\&.g\&. <br> "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "Dictionary< string, string > \fBAttributes\fP\fC [get]\fP"
+.br
+.RI "Gets the dictionary of attributes in the tag "
+.ti -1c
+.RI "string \fBTagName\fP\fC [get]\fP"
+.br
+.RI "Gets the name of this tag "
+.ti -1c
+.RI "bool \fBIsClosing\fP\fC [get]\fP"
+.br
+.RI "Gets if the tag is actually a closing tag "
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "System\&.Drawing\&.Html\&.HtmlTag\&.HtmlTag (string tag)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool System\&.Drawing\&.Html\&.HtmlTag\&.HasAttribute (string attribute)"
+
+.PP
+Gets a boolean indicating if the attribute list has the specified attribute 
+.PP
+\fBParameters\fP
+.RS 4
+\fIattribute\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "override string System\&.Drawing\&.Html\&.HtmlTag\&.ToString ()"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool System\&.Drawing\&.Html\&.HtmlTag\&.IsSingle"
+\fBInitial value:\fP
+.PP
+.nf
+=> TagName\&.StartsWith("!")
+                                || new List<string>(
+                                    new[]
+                                    {
+                                        "area", "base", "basefont", "br", "br/", "br /", "hr/", "hr /", "col",
+                                        "frame", "hr", "img", "input", "isindex",
+                                        "link", "meta", "param"
+                                    }
+                                )\&.Contains(TagName)
+.fi
+.PP
+Gets if the tag is single placed; in other words it doesn't need a closing tag; e\&.g\&. <br> 
+.SH "Property Documentation"
+.PP 
+.SS "Dictionary<string, string> System\&.Drawing\&.Html\&.HtmlTag\&.Attributes\fC [get]\fP"
+
+.PP
+Gets the dictionary of attributes in the tag 
+.SS "bool System\&.Drawing\&.Html\&.HtmlTag\&.IsClosing\fC [get]\fP"
+
+.PP
+Gets if the tag is actually a closing tag 
+.SS "string System\&.Drawing\&.Html\&.HtmlTag\&.TagName\fC [get]\fP"
+
+.PP
+Gets the name of this tag 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

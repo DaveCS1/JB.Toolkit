@@ -1,0 +1,285 @@
+\hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length}{}\doxysection{System.\+Drawing.\+Html.\+Css\+Length Class Reference}
+\label{class_system_1_1_drawing_1_1_html_1_1_css_length}\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}
+
+
+Represents and gets info about a C\+SS Length  
+
+
+
+
+Collaboration diagram for System.\+Drawing.\+Html.\+Css\+Length\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{de/d97/class_system_1_1_drawing_1_1_html_1_1_css_length__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3c}{Css\+Unit}} \{ \newline
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca6adf97f83acf6453d4a6a4b1070f3754}{Css\+Unit.\+None}}, 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3cac40a7d5b8abd3b5ed54acace3383c2f7}{Css\+Unit.\+Ems}}, 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3cac3d2f5d37334dc978fd8b17fc77408a1}{Css\+Unit.\+Pixels}}, 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca6f6c8086c9cdafb6b20fe137c44a49f2}{Css\+Unit.\+Ex}}, 
+\newline
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3cad73325cdb1cb4f9a1ed11bdab879321d}{Css\+Unit.\+Inches}}, 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca3040cc6624f5c309963dee141936b299}{Css\+Unit.\+Centimeters}}, 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca2106632549b87b14b6983d657c41e95e}{Css\+Unit.\+Milimeters}}, 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca75dd5f1160a3f02b6fae89c54361a1b3}{Css\+Unit.\+Points}}, 
+\newline
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca87f77e575f5cc4a838eb75067569a0a6}{Css\+Unit.\+Picas}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the possible units of the C\+SS lengths \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a0fb26fdc68a93f54d95f29f2ca8d1857}{Css\+Length}} (string length)
+\begin{DoxyCompactList}\small\item\em Creates a new \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length}{Css\+Length}} from a length specified on a C\+SS style sheet or fragment \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length}{Css\+Length}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a58501d1df7f6eaa20193cfe726770840}{Convert\+Em\+To\+Points}} (float em\+Size)
+\begin{DoxyCompactList}\small\item\em If length is in Ems, returns its value in points \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length}{Css\+Length}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_ae2f36cf2d6311c0e87b118c774bf5415}{Convert\+Em\+To\+Pixels}} (float pixel\+Factor)
+\begin{DoxyCompactList}\small\item\em If length is in Ems, returns its value in pixels \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a4dd6f877dd72b67909e604efd78160d9}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Returns the length formatted ready for C\+SS interpreting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a28de103a1b10ed8d3c07753fe2995d1e}{Number}} =$>$ \+\_\+number
+\begin{DoxyCompactList}\small\item\em Gets the number in the length \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_acfa11ee620b8b7ecf72e6dd585d87152}{Has\+Error}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets if the length has some parsing error \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_aead2521ea252e5c13f9cc020ef351c35}{Is\+Percentage}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets if the length represents a precentage (not actually a length) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_aed9d5ef2f933fa5a7bbe574d3fb7ca65}{Is\+Relative}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets if the length is specified in relative units \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3c}{Css\+Unit}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_aaf5f251735330a3305d8572d4d5b7e02}{Unit}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the unit of the length \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_acc53acce8107260abac2d5360dd4f38c}{Length}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the length as specified in the string \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents and gets info about a C\+SS Length 
+
+\href{http://www.w3.org/TR/CSS21/syndata.html\#length-units}{\texttt{ http\+://www.\+w3.\+org/\+T\+R/\+C\+S\+S21/syndata.\+html\#length-\/units}} 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3c}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3c}} 
+\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!CssUnit@{CssUnit}}
+\index{CssUnit@{CssUnit}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}
+\doxysubsubsection{\texorpdfstring{CssUnit}{CssUnit}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3c}{System.\+Drawing.\+Html.\+Css\+Length.\+Css\+Unit}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Represents the possible units of the C\+SS lengths 
+
+\href{http://www.w3.org/TR/CSS21/syndata.html\#length-units}{\texttt{ http\+://www.\+w3.\+org/\+T\+R/\+C\+S\+S21/syndata.\+html\#length-\/units}} \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!None@{None}}}\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca6adf97f83acf6453d4a6a4b1070f3754}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca6adf97f83acf6453d4a6a4b1070f3754}} 
+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ems@{Ems}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!Ems@{Ems}}}\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3cac40a7d5b8abd3b5ed54acace3383c2f7}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3cac40a7d5b8abd3b5ed54acace3383c2f7}} 
+Ems&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Pixels@{Pixels}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!Pixels@{Pixels}}}\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3cac3d2f5d37334dc978fd8b17fc77408a1}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3cac3d2f5d37334dc978fd8b17fc77408a1}} 
+Pixels&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ex@{Ex}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!Ex@{Ex}}}\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca6f6c8086c9cdafb6b20fe137c44a49f2}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca6f6c8086c9cdafb6b20fe137c44a49f2}} 
+Ex&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Inches@{Inches}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!Inches@{Inches}}}\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3cad73325cdb1cb4f9a1ed11bdab879321d}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3cad73325cdb1cb4f9a1ed11bdab879321d}} 
+Inches&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Centimeters@{Centimeters}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!Centimeters@{Centimeters}}}\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca3040cc6624f5c309963dee141936b299}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca3040cc6624f5c309963dee141936b299}} 
+Centimeters&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Milimeters@{Milimeters}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!Milimeters@{Milimeters}}}\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca2106632549b87b14b6983d657c41e95e}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca2106632549b87b14b6983d657c41e95e}} 
+Milimeters&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Points@{Points}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!Points@{Points}}}\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca75dd5f1160a3f02b6fae89c54361a1b3}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca75dd5f1160a3f02b6fae89c54361a1b3}} 
+Points&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Picas@{Picas}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!Picas@{Picas}}}\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca87f77e575f5cc4a838eb75067569a0a6}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3ca87f77e575f5cc4a838eb75067569a0a6}} 
+Picas&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_a0fb26fdc68a93f54d95f29f2ca8d1857}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_a0fb26fdc68a93f54d95f29f2ca8d1857}} 
+\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!CssLength@{CssLength}}
+\index{CssLength@{CssLength}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}
+\doxysubsubsection{\texorpdfstring{CssLength()}{CssLength()}}
+{\footnotesize\ttfamily System.\+Drawing.\+Html.\+Css\+Length.\+Css\+Length (\begin{DoxyParamCaption}\item[{string}]{length }\end{DoxyParamCaption})}
+
+
+
+Creates a new \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length}{Css\+Length}} from a length specified on a C\+SS style sheet or fragment 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & Length as specified in the Style Sheet or style fragment\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dfd/class_system_1_1_drawing_1_1_html_1_1_css_length_a0fb26fdc68a93f54d95f29f2ca8d1857_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_ae2f36cf2d6311c0e87b118c774bf5415}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_ae2f36cf2d6311c0e87b118c774bf5415}} 
+\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!ConvertEmToPixels@{ConvertEmToPixels}}
+\index{ConvertEmToPixels@{ConvertEmToPixels}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}
+\doxysubsubsection{\texorpdfstring{ConvertEmToPixels()}{ConvertEmToPixels()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length}{Css\+Length}} System.\+Drawing.\+Html.\+Css\+Length.\+Convert\+Em\+To\+Pixels (\begin{DoxyParamCaption}\item[{float}]{pixel\+Factor }\end{DoxyParamCaption})}
+
+
+
+If length is in Ems, returns its value in pixels 
+
+\begin{DoxyReturn}{Returns}
+Pixels size of this em
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & If length has an error or isn\textquotesingle{}t in ems\\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dfd/class_system_1_1_drawing_1_1_html_1_1_css_length_ae2f36cf2d6311c0e87b118c774bf5415_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_a58501d1df7f6eaa20193cfe726770840}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_a58501d1df7f6eaa20193cfe726770840}} 
+\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!ConvertEmToPoints@{ConvertEmToPoints}}
+\index{ConvertEmToPoints@{ConvertEmToPoints}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}
+\doxysubsubsection{\texorpdfstring{ConvertEmToPoints()}{ConvertEmToPoints()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length}{Css\+Length}} System.\+Drawing.\+Html.\+Css\+Length.\+Convert\+Em\+To\+Points (\begin{DoxyParamCaption}\item[{float}]{em\+Size }\end{DoxyParamCaption})}
+
+
+
+If length is in Ems, returns its value in points 
+
+
+\begin{DoxyParams}{Parameters}
+{\em em\+Size} & Em size factor to multiply\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Points size of this em
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & If length has an error or isn\textquotesingle{}t in ems\\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dfd/class_system_1_1_drawing_1_1_html_1_1_css_length_a58501d1df7f6eaa20193cfe726770840_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_a4dd6f877dd72b67909e604efd78160d9}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_a4dd6f877dd72b67909e604efd78160d9}} 
+\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!ToString@{ToString}}
+\index{ToString@{ToString}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string System.\+Drawing.\+Html.\+Css\+Length.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the length formatted ready for C\+SS interpreting. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_a28de103a1b10ed8d3c07753fe2995d1e}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_a28de103a1b10ed8d3c07753fe2995d1e}} 
+\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!Number@{Number}}
+\index{Number@{Number}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}
+\doxysubsubsection{\texorpdfstring{Number}{Number}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Length.\+Number =$>$ \+\_\+number}
+
+
+
+Gets the number in the length 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_acfa11ee620b8b7ecf72e6dd585d87152}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_acfa11ee620b8b7ecf72e6dd585d87152}} 
+\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!HasError@{HasError}}
+\index{HasError@{HasError}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}
+\doxysubsubsection{\texorpdfstring{HasError}{HasError}}
+{\footnotesize\ttfamily bool System.\+Drawing.\+Html.\+Css\+Length.\+Has\+Error\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets if the length has some parsing error 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_aead2521ea252e5c13f9cc020ef351c35}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_aead2521ea252e5c13f9cc020ef351c35}} 
+\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!IsPercentage@{IsPercentage}}
+\index{IsPercentage@{IsPercentage}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}
+\doxysubsubsection{\texorpdfstring{IsPercentage}{IsPercentage}}
+{\footnotesize\ttfamily bool System.\+Drawing.\+Html.\+Css\+Length.\+Is\+Percentage\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets if the length represents a precentage (not actually a length) 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_aed9d5ef2f933fa5a7bbe574d3fb7ca65}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_aed9d5ef2f933fa5a7bbe574d3fb7ca65}} 
+\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!IsRelative@{IsRelative}}
+\index{IsRelative@{IsRelative}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}
+\doxysubsubsection{\texorpdfstring{IsRelative}{IsRelative}}
+{\footnotesize\ttfamily bool System.\+Drawing.\+Html.\+Css\+Length.\+Is\+Relative\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets if the length is specified in relative units 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_acc53acce8107260abac2d5360dd4f38c}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_acc53acce8107260abac2d5360dd4f38c}} 
+\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!Length@{Length}}
+\index{Length@{Length}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}
+\doxysubsubsection{\texorpdfstring{Length}{Length}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Length.\+Length\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the length as specified in the string 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_length_aaf5f251735330a3305d8572d4d5b7e02}\label{class_system_1_1_drawing_1_1_html_1_1_css_length_aaf5f251735330a3305d8572d4d5b7e02}} 
+\index{System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}!Unit@{Unit}}
+\index{Unit@{Unit}!System.Drawing.Html.CssLength@{System.Drawing.Html.CssLength}}
+\doxysubsubsection{\texorpdfstring{Unit}{Unit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_length_a7a2aa2c01d7fdf9864decc8911faef3c}{Css\+Unit}} System.\+Drawing.\+Html.\+Css\+Length.\+Unit\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the unit of the length 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Win\+Forms/\+Helpers/\+Html\+Helper/\mbox{\hyperlink{_css_length_8cs}{Css\+Length.\+cs}}\end{DoxyCompactItemize}

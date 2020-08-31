@@ -1,0 +1,4 @@
+<map id="System.ConsoleEx.ShowSpinner" name="System.ConsoleEx.ShowSpinner">
+<area shape="rect" id="node1" title="Shows an animated spinner" alt="" coords="5,13,220,39"/>
+<area shape="rect" id="node2" href="$d5/d7c/class_j_b_toolkit_1_1_windows_1_1_console_helper_1_1_console_spinner.html#a6a01021f590ed2a1be8d7cddbb6c4b30" title="Show / start the spinner" alt="" coords="268,5,503,47"/>
+</map>

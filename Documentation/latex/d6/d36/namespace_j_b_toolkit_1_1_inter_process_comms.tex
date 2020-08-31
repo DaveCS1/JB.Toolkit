@@ -1,0 +1,38 @@
+\hypertarget{namespace_j_b_toolkit_1_1_inter_process_comms}{}\doxysection{J\+B\+Toolkit.\+Inter\+Process\+Comms Namespace Reference}
+\label{namespace_j_b_toolkit_1_1_inter_process_comms}\index{JBToolkit.InterProcessComms@{JBToolkit.InterProcessComms}}
+
+
+Gist from\+: \href{https://weblogs.asp.net/ricardoperes/local-machine-interprocess-communication-with-netD}{\texttt{ https\+://weblogs.\+asp.\+net/ricardoperes/local-\/machine-\/interprocess-\/communication-\/with-\/netD}}  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_j_b_toolkit_1_1_inter_process_comms_1_1_memory_mapped_files}{Memory\+Mapped\+Files}}
+\begin{DoxyCompactList}\small\item\em Memory-\/mapped files in \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} allow us to either map a “window” of a large file on the filesystem, or to create a named memory area that can be shared among processes. A shared area on the fly is created and uses named Auto\+Reset\+Events to control access to it. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_j_b_toolkit_1_1_inter_process_comms_1_1_message_queues}{Message\+Queues}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} has included a message queues implementation for a long time, something that is often forgotten by developers. If you don’t have it installed – you can check if the Message Queuing service exists – you can install it through Programs and Features – Turn \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} features on and off on the \mbox{\hyperlink{class_control}{Control}} Panel. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_j_b_toolkit_1_1_inter_process_comms_1_1_named_pipes}{Named\+Pipes}}
+\begin{DoxyCompactList}\small\item\em Named pipes in \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} is a duplex means of sending data between \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} hosts. We used it in the W\+CF implementation, but .N\+ET has its own built-\/in support for named pipes communication. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_j_b_toolkit_1_1_inter_process_comms_1_1_net_remoting}{Net\+Remoting}}
+\begin{DoxyCompactList}\small\item\em .N\+ET Remoting, in the old days, was .N\+E\+T’s response to Java R\+MI, and basically was a remote references implementation, similar to C\+O\+R\+BA. With Remoting, one can call methods on an object that resides in a different machine. .N\+ET Remoting has long since been superseded by W\+CF, but it is still a viable alternative, particularly because W\+CF does not allow remote references. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_j_b_toolkit_1_1_inter_process_comms_1_1_sockets}{Sockets}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} does not support the A\+F\+\_\+\+U\+N\+IX family of sockets, only T\+C\+P/\+IP, so, for demonstrating IP network communication I could have chosen either T\+CP or U\+DP, but I went for U\+DP because of the better performance and because of the relative simplicity that this example required. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_j_b_toolkit_1_1_inter_process_comms_1_1_wcf}{Wcf}}
+\begin{DoxyCompactList}\small\item\em It is binary; \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_j_b_toolkit_1_1_inter_process_comms_1_1_w_m___c_o_p_y_d_a_t_a}{W\+M\+\_\+\+C\+O\+P\+Y\+D\+A\+TA}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_j_b_toolkit_1_1_inter_process_comms_1_1_w_m___c_o_p_y_d_a_t_a}{W\+M\+\_\+\+C\+O\+P\+Y\+D\+A\+TA}} probably doesn’t say much to .N\+ET developers, but for old-\/school Win32 C/\+C++ developers it certainly does! Basically, it was a way by which one could send arbitrary data, including structured data, between processes (actually, strictly speaking, windows). One would send a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_inter_process_comms_1_1_w_m___c_o_p_y_d_a_t_a}{W\+M\+\_\+\+C\+O\+P\+Y\+D\+A\+TA}} message to a window handle, running on any process, and \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} would take care of marshalling the data so that it is available outside the address space of the sending process. It is even possible to send it to all processes, using H\+W\+N\+D\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST, but that probably wouldn’t be wise, because different applications might have different interpretations of it. Also, it needs to be passed with Send\+Message, Post\+Message won’t work. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_inter_process_comms_1_1_data_received_event_args}{Data\+Received\+Event\+Args}}
+\item 
+interface \mbox{\hyperlink{interface_j_b_toolkit_1_1_inter_process_comms_1_1_i_ipc_client}{I\+Ipc\+Client}}
+\item 
+interface \mbox{\hyperlink{interface_j_b_toolkit_1_1_inter_process_comms_1_1_i_ipc_server}{I\+Ipc\+Server}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gist from\+: \href{https://weblogs.asp.net/ricardoperes/local-machine-interprocess-communication-with-netD}{\texttt{ https\+://weblogs.\+asp.\+net/ricardoperes/local-\/machine-\/interprocess-\/communication-\/with-\/netD}} 
+

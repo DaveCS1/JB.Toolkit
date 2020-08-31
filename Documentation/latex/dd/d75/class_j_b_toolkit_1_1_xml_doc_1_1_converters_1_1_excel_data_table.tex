@@ -1,0 +1,205 @@
+\hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table}{}\doxysection{J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+Excel\+Data\+Table Class Reference}
+\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table}\index{JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+Excel\+Data\+Table\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{db/dfb/class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a35ff011db60d995abd3abf9035e6c8ed}{Data\+Table\+To\+Excel}} (\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} data\+Table, string heading=\char`\"{}\char`\"{}, bool show\+Sr\+No=false)
+\begin{DoxyCompactList}\small\item\em Convert Data\+Table to Excel and output byte aray \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a0801d7df9c7952605a843e8e782c1ac2}{List\+To\+Excel$<$ T $>$}} (\mbox{\hyperlink{class_list}{List}}$<$ T $>$ data, string Heading=\char`\"{}\char`\"{}, bool show\+Slno=false)
+\begin{DoxyCompactList}\small\item\em Convert list to Excel and output byte array \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a528a692c34b6d98a2da0984952ca3d0d}{Save\+As\+Excel$<$ T $>$}} (\mbox{\hyperlink{class_list}{List}}$<$ T $>$ data, string path, string Heading=\char`\"{}\char`\"{}, bool show\+Slno=false)
+\begin{DoxyCompactList}\small\item\em Save \mbox{\hyperlink{class_list}{List}} as Excel file \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a854d2a3056cd1c4c6df211b5be310394}{Save\+As\+Excel}} (\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} data, string path, string Heading=\char`\"{}\char`\"{}, bool show\+Slno=false)
+\begin{DoxyCompactList}\small\item\em Save Data\+Table as Excel file \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a7224eeca59d79591e442407dcbb5fdc7}{Excel\+To\+Data\+Table}} (string input\+Path, bool has\+Header\+Row, string worksheet\+Name, out string error\+Messages)
+\begin{DoxyCompactList}\small\item\em Converts Xlsx document to Data\+Table input as filepath \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a801b5ff47d2bb46d10b939de7ad5f47f}{Excel\+Worksheet\+To\+Data\+Table}} (byte\mbox{[}$\,$\mbox{]} input\+Bytes, bool has\+Header\+Row, string worksheet\+Name, out string error\+Messages)
+\begin{DoxyCompactList}\small\item\em Converts Xlsx document to Data\+Table input as byte array \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_aa4f570949cd254b8a0968f2eadb811a8}{Excel\+To\+Data\+Table}} (string input\+Path, bool has\+Header\+Row, int worksheet\+Number, out string error\+Messages)
+\begin{DoxyCompactList}\small\item\em Converts Xlsx document to Data\+Table input as filepath \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a09a403eb72bd45f586beb4e51ed99e48}{Excel\+Worksheet\+To\+Data\+Table}} (byte\mbox{[}$\,$\mbox{]} input\+Bytes, bool has\+Header\+Row, int worksheet\+Number, out string error\+Messages)
+\begin{DoxyCompactList}\small\item\em Converts Xlsx document to Data\+Table input as byte array \end{DoxyCompactList}\item 
+static Data\+Set \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_ab29d9000a7675fef132d1fdea92929f7}{Excel\+To\+Data\+Set}} (string input\+Path, bool has\+Header\+Row, out string error\+Messages)
+\begin{DoxyCompactList}\small\item\em Converts Xlsx document to Data\+Set (mulitple Data\+Tables, 1 per sheet) input as file path \end{DoxyCompactList}\item 
+static Data\+Set \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a35f994b52c243574b1b4710688382f05}{Excel\+To\+Data\+Set}} (byte\mbox{[}$\,$\mbox{]} input\+Bytes, bool has\+Header\+Row, out string error\+Messages)
+\begin{DoxyCompactList}\small\item\em Converts Xlsx document to Data\+Set (mulitple Data\+Tables, 1 per sheet) input as byte array \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a1c9c3b6848e2c0cfb6fe51f07fe19c50}{Excel\+Content\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a35ff011db60d995abd3abf9035e6c8ed}\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a35ff011db60d995abd3abf9035e6c8ed}} 
+\index{JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}!DataTableToExcel@{DataTableToExcel}}
+\index{DataTableToExcel@{DataTableToExcel}!JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}}
+\doxysubsubsection{\texorpdfstring{DataTableToExcel()}{DataTableToExcel()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+Excel\+Data\+Table.\+Data\+Table\+To\+Excel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}}}]{data\+Table,  }\item[{string}]{heading = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{show\+Sr\+No = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert Data\+Table to Excel and output byte aray 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d75/class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a35ff011db60d995abd3abf9035e6c8ed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a35f994b52c243574b1b4710688382f05}\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a35f994b52c243574b1b4710688382f05}} 
+\index{JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}!ExcelToDataSet@{ExcelToDataSet}}
+\index{ExcelToDataSet@{ExcelToDataSet}!JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}}
+\doxysubsubsection{\texorpdfstring{ExcelToDataSet()}{ExcelToDataSet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static Data\+Set J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+Excel\+Data\+Table.\+Excel\+To\+Data\+Set (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{input\+Bytes,  }\item[{bool}]{has\+Header\+Row,  }\item[{out string}]{error\+Messages }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts Xlsx document to Data\+Set (mulitple Data\+Tables, 1 per sheet) input as byte array 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_ab29d9000a7675fef132d1fdea92929f7}\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_ab29d9000a7675fef132d1fdea92929f7}} 
+\index{JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}!ExcelToDataSet@{ExcelToDataSet}}
+\index{ExcelToDataSet@{ExcelToDataSet}!JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}}
+\doxysubsubsection{\texorpdfstring{ExcelToDataSet()}{ExcelToDataSet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static Data\+Set J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+Excel\+Data\+Table.\+Excel\+To\+Data\+Set (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{bool}]{has\+Header\+Row,  }\item[{out string}]{error\+Messages }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts Xlsx document to Data\+Set (mulitple Data\+Tables, 1 per sheet) input as file path 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_aa4f570949cd254b8a0968f2eadb811a8}\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_aa4f570949cd254b8a0968f2eadb811a8}} 
+\index{JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}!ExcelToDataTable@{ExcelToDataTable}}
+\index{ExcelToDataTable@{ExcelToDataTable}!JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}}
+\doxysubsubsection{\texorpdfstring{ExcelToDataTable()}{ExcelToDataTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+Excel\+Data\+Table.\+Excel\+To\+Data\+Table (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{bool}]{has\+Header\+Row,  }\item[{int}]{worksheet\+Number,  }\item[{out string}]{error\+Messages }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts Xlsx document to Data\+Table input as filepath 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d75/class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_aa4f570949cd254b8a0968f2eadb811a8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a7224eeca59d79591e442407dcbb5fdc7}\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a7224eeca59d79591e442407dcbb5fdc7}} 
+\index{JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}!ExcelToDataTable@{ExcelToDataTable}}
+\index{ExcelToDataTable@{ExcelToDataTable}!JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}}
+\doxysubsubsection{\texorpdfstring{ExcelToDataTable()}{ExcelToDataTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+Excel\+Data\+Table.\+Excel\+To\+Data\+Table (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{bool}]{has\+Header\+Row,  }\item[{string}]{worksheet\+Name,  }\item[{out string}]{error\+Messages }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts Xlsx document to Data\+Table input as filepath 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d75/class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a7224eeca59d79591e442407dcbb5fdc7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a09a403eb72bd45f586beb4e51ed99e48}\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a09a403eb72bd45f586beb4e51ed99e48}} 
+\index{JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}!ExcelWorksheetToDataTable@{ExcelWorksheetToDataTable}}
+\index{ExcelWorksheetToDataTable@{ExcelWorksheetToDataTable}!JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}}
+\doxysubsubsection{\texorpdfstring{ExcelWorksheetToDataTable()}{ExcelWorksheetToDataTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+Excel\+Data\+Table.\+Excel\+Worksheet\+To\+Data\+Table (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{input\+Bytes,  }\item[{bool}]{has\+Header\+Row,  }\item[{int}]{worksheet\+Number,  }\item[{out string}]{error\+Messages }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts Xlsx document to Data\+Table input as byte array 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a801b5ff47d2bb46d10b939de7ad5f47f}\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a801b5ff47d2bb46d10b939de7ad5f47f}} 
+\index{JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}!ExcelWorksheetToDataTable@{ExcelWorksheetToDataTable}}
+\index{ExcelWorksheetToDataTable@{ExcelWorksheetToDataTable}!JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}}
+\doxysubsubsection{\texorpdfstring{ExcelWorksheetToDataTable()}{ExcelWorksheetToDataTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+Excel\+Data\+Table.\+Excel\+Worksheet\+To\+Data\+Table (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{input\+Bytes,  }\item[{bool}]{has\+Header\+Row,  }\item[{string}]{worksheet\+Name,  }\item[{out string}]{error\+Messages }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts Xlsx document to Data\+Table input as byte array 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d75/class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a801b5ff47d2bb46d10b939de7ad5f47f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a0801d7df9c7952605a843e8e782c1ac2}\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a0801d7df9c7952605a843e8e782c1ac2}} 
+\index{JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}!ListToExcel$<$ T $>$@{ListToExcel$<$ T $>$}}
+\index{ListToExcel$<$ T $>$@{ListToExcel$<$ T $>$}!JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}}
+\doxysubsubsection{\texorpdfstring{ListToExcel$<$ T $>$()}{ListToExcel< T >()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+Excel\+Data\+Table.\+List\+To\+Excel$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_list}{List}}$<$ T $>$}]{data,  }\item[{string}]{Heading = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{show\+Slno = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert list to Excel and output byte array 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d75/class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a0801d7df9c7952605a843e8e782c1ac2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a854d2a3056cd1c4c6df211b5be310394}\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a854d2a3056cd1c4c6df211b5be310394}} 
+\index{JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}!SaveAsExcel@{SaveAsExcel}}
+\index{SaveAsExcel@{SaveAsExcel}!JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}}
+\doxysubsubsection{\texorpdfstring{SaveAsExcel()}{SaveAsExcel()}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+Excel\+Data\+Table.\+Save\+As\+Excel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}}}]{data,  }\item[{string}]{path,  }\item[{string}]{Heading = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{show\+Slno = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Save Data\+Table as Excel file 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d75/class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a854d2a3056cd1c4c6df211b5be310394_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a528a692c34b6d98a2da0984952ca3d0d}\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a528a692c34b6d98a2da0984952ca3d0d}} 
+\index{JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}!SaveAsExcel$<$ T $>$@{SaveAsExcel$<$ T $>$}}
+\index{SaveAsExcel$<$ T $>$@{SaveAsExcel$<$ T $>$}!JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}}
+\doxysubsubsection{\texorpdfstring{SaveAsExcel$<$ T $>$()}{SaveAsExcel< T >()}}
+{\footnotesize\ttfamily static void \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a854d2a3056cd1c4c6df211b5be310394}{J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+Excel\+Data\+Table.\+Save\+As\+Excel}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_list}{List}}$<$ T $>$}]{data,  }\item[{string}]{path,  }\item[{string}]{Heading = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{show\+Slno = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Save \mbox{\hyperlink{class_list}{List}} as Excel file 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d75/class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a528a692c34b6d98a2da0984952ca3d0d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a1c9c3b6848e2c0cfb6fe51f07fe19c50}\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table_a1c9c3b6848e2c0cfb6fe51f07fe19c50}} 
+\index{JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}!ExcelContentType@{ExcelContentType}}
+\index{ExcelContentType@{ExcelContentType}!JBToolkit.XmlDoc.Converters.ExcelDataTable@{JBToolkit.XmlDoc.Converters.ExcelDataTable}}
+\doxysubsubsection{\texorpdfstring{ExcelContentType}{ExcelContentType}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+Excel\+Data\+Table.\+Excel\+Content\+Type\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Xml\+Doc/\+Converters/\mbox{\hyperlink{_excel_data_table_8cs}{Excel\+Data\+Table.\+cs}}\end{DoxyCompactItemize}

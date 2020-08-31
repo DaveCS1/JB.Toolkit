@@ -1,0 +1,144 @@
+\hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger}{}\doxysection{J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger Class Reference}
+\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger}\index{JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}}
+
+
+Methods to merge P\+DF documents together, input either memory stream or path (or both) and output as memory stream or save to file  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{d1/d53/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_ac3433d3283b1a5dc5b8dc325660e3717}{Merge}} (Memory\+Stream doc1, Memory\+Stream doc2)
+\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a15ce43fe4793202532013b52f1f8f79e}{Merge}} (params Memory\+Stream\mbox{[}$\,$\mbox{]} docs)
+\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a0a54cde00e0b4078e1f1167a16929366}{Merge}} (byte\mbox{[}$\,$\mbox{]} doc1, byte\mbox{[}$\,$\mbox{]} doc2)
+\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a79db7364da91d585e6167c01f18c5056}{Merge}} (params byte\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} docs)
+\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a0989a1181822cd8f3801d22bcb8efa6c}{Merge}} (Memory\+Stream doc1, string doc2)
+\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_ad46fdc913ff2e2c0ed20ddba1b1a40f3}{Merge}} (string doc1, Memory\+Stream doc2)
+\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a7692891841c26624d2a7552ca9ac39d9}{Merge}} (string doc1, string doc2)
+\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_aaee5481a18cc5ba1adf91e040df5f237}{Merge}} (params string\mbox{[}$\,$\mbox{]} doc\+Paths)
+\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_aa699587ac98823b6d9329b12bf6a89f0}{Merge}} (Memory\+Stream doc1, Memory\+Stream doc2, string output\+Path)
+\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a1b10929047c2bca5ef326c3b1ddc3cb6}{Merge}} (string output\+Path, params Memory\+Stream\mbox{[}$\,$\mbox{]} docs)
+\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a08be36cdad8cababb45116e8595d9d77}{Merge}} (string doc1, string doc2, string output\+Path)
+\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a01f3b3d6a55800777d5b006aae0ce9f2}{Merge}} (string output\+Path, params string\mbox{[}$\,$\mbox{]} doc\+Paths)
+\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a7c36a1cd66deb5e0e74d10cbf46c80ba}{Merge}} (Memory\+Stream doc1, string doc2, string output\+Path)
+\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_ae8513e6fdbefaf7727ab9073acea6c64}{Merge}} (string doc1, Memory\+Stream doc2, string output\+Path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Methods to merge P\+DF documents together, input either memory stream or path (or both) and output as memory stream or save to file 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a0a54cde00e0b4078e1f1167a16929366}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a0a54cde00e0b4078e1f1167a16929366}} 
+\index{JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}!Merge@{Merge}}
+\index{Merge@{Merge}!JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}\hspace{0.1cm}{\footnotesize\ttfamily [1/14]}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger.\+Merge (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{doc1,  }\item[{byte\mbox{[}$\,$\mbox{]}}]{doc2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_ac3433d3283b1a5dc5b8dc325660e3717}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_ac3433d3283b1a5dc5b8dc325660e3717}} 
+\index{JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}!Merge@{Merge}}
+\index{Merge@{Merge}!JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/14]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger.\+Merge (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{doc1,  }\item[{Memory\+Stream}]{doc2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_aa699587ac98823b6d9329b12bf6a89f0}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_aa699587ac98823b6d9329b12bf6a89f0}} 
+\index{JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}!Merge@{Merge}}
+\index{Merge@{Merge}!JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}\hspace{0.1cm}{\footnotesize\ttfamily [3/14]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger.\+Merge (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{doc1,  }\item[{Memory\+Stream}]{doc2,  }\item[{string}]{output\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a0989a1181822cd8f3801d22bcb8efa6c}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a0989a1181822cd8f3801d22bcb8efa6c}} 
+\index{JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}!Merge@{Merge}}
+\index{Merge@{Merge}!JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}\hspace{0.1cm}{\footnotesize\ttfamily [4/14]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger.\+Merge (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{doc1,  }\item[{string}]{doc2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a7c36a1cd66deb5e0e74d10cbf46c80ba}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a7c36a1cd66deb5e0e74d10cbf46c80ba}} 
+\index{JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}!Merge@{Merge}}
+\index{Merge@{Merge}!JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}\hspace{0.1cm}{\footnotesize\ttfamily [5/14]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger.\+Merge (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{doc1,  }\item[{string}]{doc2,  }\item[{string}]{output\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a79db7364da91d585e6167c01f18c5056}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a79db7364da91d585e6167c01f18c5056}} 
+\index{JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}!Merge@{Merge}}
+\index{Merge@{Merge}!JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}\hspace{0.1cm}{\footnotesize\ttfamily [6/14]}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger.\+Merge (\begin{DoxyParamCaption}\item[{params byte}]{docs\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a15ce43fe4793202532013b52f1f8f79e}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a15ce43fe4793202532013b52f1f8f79e}} 
+\index{JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}!Merge@{Merge}}
+\index{Merge@{Merge}!JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}\hspace{0.1cm}{\footnotesize\ttfamily [7/14]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger.\+Merge (\begin{DoxyParamCaption}\item[{params Memory\+Stream\mbox{[}$\,$\mbox{]}}]{docs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_aaee5481a18cc5ba1adf91e040df5f237}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_aaee5481a18cc5ba1adf91e040df5f237}} 
+\index{JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}!Merge@{Merge}}
+\index{Merge@{Merge}!JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}\hspace{0.1cm}{\footnotesize\ttfamily [8/14]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger.\+Merge (\begin{DoxyParamCaption}\item[{params string\mbox{[}$\,$\mbox{]}}]{doc\+Paths }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_ad46fdc913ff2e2c0ed20ddba1b1a40f3}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_ad46fdc913ff2e2c0ed20ddba1b1a40f3}} 
+\index{JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}!Merge@{Merge}}
+\index{Merge@{Merge}!JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}\hspace{0.1cm}{\footnotesize\ttfamily [9/14]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger.\+Merge (\begin{DoxyParamCaption}\item[{string}]{doc1,  }\item[{Memory\+Stream}]{doc2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_ae8513e6fdbefaf7727ab9073acea6c64}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_ae8513e6fdbefaf7727ab9073acea6c64}} 
+\index{JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}!Merge@{Merge}}
+\index{Merge@{Merge}!JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}\hspace{0.1cm}{\footnotesize\ttfamily [10/14]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger.\+Merge (\begin{DoxyParamCaption}\item[{string}]{doc1,  }\item[{Memory\+Stream}]{doc2,  }\item[{string}]{output\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a7692891841c26624d2a7552ca9ac39d9}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a7692891841c26624d2a7552ca9ac39d9}} 
+\index{JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}!Merge@{Merge}}
+\index{Merge@{Merge}!JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}\hspace{0.1cm}{\footnotesize\ttfamily [11/14]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger.\+Merge (\begin{DoxyParamCaption}\item[{string}]{doc1,  }\item[{string}]{doc2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a08be36cdad8cababb45116e8595d9d77}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a08be36cdad8cababb45116e8595d9d77}} 
+\index{JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}!Merge@{Merge}}
+\index{Merge@{Merge}!JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}\hspace{0.1cm}{\footnotesize\ttfamily [12/14]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger.\+Merge (\begin{DoxyParamCaption}\item[{string}]{doc1,  }\item[{string}]{doc2,  }\item[{string}]{output\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a1b10929047c2bca5ef326c3b1ddc3cb6}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a1b10929047c2bca5ef326c3b1ddc3cb6}} 
+\index{JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}!Merge@{Merge}}
+\index{Merge@{Merge}!JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}\hspace{0.1cm}{\footnotesize\ttfamily [13/14]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger.\+Merge (\begin{DoxyParamCaption}\item[{string}]{output\+Path,  }\item[{params Memory\+Stream\mbox{[}$\,$\mbox{]}}]{docs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a01f3b3d6a55800777d5b006aae0ce9f2}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger_a01f3b3d6a55800777d5b006aae0ce9f2}} 
+\index{JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}!Merge@{Merge}}
+\index{Merge@{Merge}!JBToolkit.PdfDoc.PdfMerger@{JBToolkit.PdfDoc.PdfMerger}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}\hspace{0.1cm}{\footnotesize\ttfamily [14/14]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Merger.\+Merge (\begin{DoxyParamCaption}\item[{string}]{output\+Path,  }\item[{params string\mbox{[}$\,$\mbox{]}}]{doc\+Paths }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Pdf\+Doc/\mbox{\hyperlink{_pdf_merger_8cs}{Pdf\+Merger.\+cs}}\end{DoxyCompactItemize}

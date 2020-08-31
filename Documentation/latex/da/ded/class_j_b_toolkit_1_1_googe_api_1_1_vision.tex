@@ -1,0 +1,192 @@
+\hypertarget{class_j_b_toolkit_1_1_googe_api_1_1_vision}{}\doxysection{J\+B\+Toolkit.\+Googe\+Api.\+Vision Class Reference}
+\label{class_j_b_toolkit_1_1_googe_api_1_1_vision}\index{JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}}
+
+
+Perform O\+CR operation using Google\textquotesingle{}s \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision}{Vision}} A\+PI  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Googe\+Api.\+Vision\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{d6/d3b/class_j_b_toolkit_1_1_googe_api_1_1_vision__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200}{Google\+Api\+Image\+To\+Text\+Type}} \{ \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a0945359809dad1fbf3dea1c95a0da951}{Google\+Api\+Image\+To\+Text\+Type.\+Document}}, 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a8045a0a6c688b0635e3caccc408a1446}{Google\+Api\+Image\+To\+Text\+Type.\+Generic}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a7e97cf7011f55ccf4b4dc13db252f663}{Get\+Text\+From\+P\+DF}} (string path, \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200}{Google\+Api\+Image\+To\+Text\+Type}} image\+To\+Text\+Type=\mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a0945359809dad1fbf3dea1c95a0da951}{Google\+Api\+Image\+To\+Text\+Type.\+Document}}, int timout\+Seconds=30, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Extract text from an a P\+DF (converts to P\+NG first) \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a986fa4633b18744d764ad0f10ad1250f}{Get\+Text\+From\+P\+DF}} (Memory\+Stream ms, \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200}{Google\+Api\+Image\+To\+Text\+Type}} image\+To\+Text\+Type=\mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a0945359809dad1fbf3dea1c95a0da951}{Google\+Api\+Image\+To\+Text\+Type.\+Document}}, int timout\+Seconds=30, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Extract text from an a P\+DF (converts to P\+NG first) \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a9082ac9c7f14b3a59bb442705f576b10}{Get\+Text\+From\+Image}} (string image\+Path, \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200}{Google\+Api\+Image\+To\+Text\+Type}} image\+To\+Text\+Type=\mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a0945359809dad1fbf3dea1c95a0da951}{Google\+Api\+Image\+To\+Text\+Type.\+Document}}, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Extracts text from an Image \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a45daf74a0417c1d93f1c1600b4382b04}{Get\+Text\+From\+Image}} (Memory\+Stream image\+Stream, \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200}{Google\+Api\+Image\+To\+Text\+Type}} image\+To\+Text\+Type=\mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a0945359809dad1fbf3dea1c95a0da951}{Google\+Api\+Image\+To\+Text\+Type.\+Document}}, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Extracts text from an Image \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_abc47a144cf4d85a79382d2b3f68f1b6a}{Get\+Text\+From\+Image}} (byte\mbox{[}$\,$\mbox{]} image\+Bytes, \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200}{Google\+Api\+Image\+To\+Text\+Type}} image\+To\+Text\+Type=\mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a0945359809dad1fbf3dea1c95a0da951}{Google\+Api\+Image\+To\+Text\+Type.\+Document}}, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Extracts text from an Image \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Perform O\+CR operation using Google\textquotesingle{}s \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision}{Vision}} A\+PI 
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200}\label{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200}} 
+\index{JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}!GoogleApiImageToTextType@{GoogleApiImageToTextType}}
+\index{GoogleApiImageToTextType@{GoogleApiImageToTextType}!JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}}
+\doxysubsubsection{\texorpdfstring{GoogleApiImageToTextType}{GoogleApiImageToTextType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200}{J\+B\+Toolkit.\+Googe\+Api.\+Vision.\+Google\+Api\+Image\+To\+Text\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Document@{Document}!JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}}\index{JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}!Document@{Document}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a0945359809dad1fbf3dea1c95a0da951}\label{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a0945359809dad1fbf3dea1c95a0da951}} 
+Document&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Generic@{Generic}!JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}}\index{JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}!Generic@{Generic}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a8045a0a6c688b0635e3caccc408a1446}\label{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a8045a0a6c688b0635e3caccc408a1446}} 
+Generic&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_googe_api_1_1_vision_abc47a144cf4d85a79382d2b3f68f1b6a}\label{class_j_b_toolkit_1_1_googe_api_1_1_vision_abc47a144cf4d85a79382d2b3f68f1b6a}} 
+\index{JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}!GetTextFromImage@{GetTextFromImage}}
+\index{GetTextFromImage@{GetTextFromImage}!JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}}
+\doxysubsubsection{\texorpdfstring{GetTextFromImage()}{GetTextFromImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Googe\+Api.\+Vision.\+Get\+Text\+From\+Image (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{image\+Bytes,  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200}{Google\+Api\+Image\+To\+Text\+Type}}}]{image\+To\+Text\+Type = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a0945359809dad1fbf3dea1c95a0da951}{Google\+Api\+Image\+To\+Text\+Type.\+Document}}},  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Extracts text from an Image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+Stream} & Byte array of image\\
+\hline
+{\em timout\+Seconds} & Timeout in seconds before reporting failure\\
+\hline
+{\em throw\+On\+Error} & Fail (break) or error or just return empty string (useful when using this method in batch operations)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Text from image
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_googe_api_1_1_vision_a45daf74a0417c1d93f1c1600b4382b04}\label{class_j_b_toolkit_1_1_googe_api_1_1_vision_a45daf74a0417c1d93f1c1600b4382b04}} 
+\index{JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}!GetTextFromImage@{GetTextFromImage}}
+\index{GetTextFromImage@{GetTextFromImage}!JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}}
+\doxysubsubsection{\texorpdfstring{GetTextFromImage()}{GetTextFromImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Googe\+Api.\+Vision.\+Get\+Text\+From\+Image (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{image\+Stream,  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200}{Google\+Api\+Image\+To\+Text\+Type}}}]{image\+To\+Text\+Type = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a0945359809dad1fbf3dea1c95a0da951}{Google\+Api\+Image\+To\+Text\+Type.\+Document}}},  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Extracts text from an Image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+Stream} & Memory stream of image\\
+\hline
+{\em timout\+Seconds} & Timeout in seconds before reporting failure\\
+\hline
+{\em throw\+On\+Error} & Fail (break) or error or just return empty string (useful when using this method in batch operations)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Text from image
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_googe_api_1_1_vision_a9082ac9c7f14b3a59bb442705f576b10}\label{class_j_b_toolkit_1_1_googe_api_1_1_vision_a9082ac9c7f14b3a59bb442705f576b10}} 
+\index{JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}!GetTextFromImage@{GetTextFromImage}}
+\index{GetTextFromImage@{GetTextFromImage}!JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}}
+\doxysubsubsection{\texorpdfstring{GetTextFromImage()}{GetTextFromImage()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Googe\+Api.\+Vision.\+Get\+Text\+From\+Image (\begin{DoxyParamCaption}\item[{string}]{image\+Path,  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200}{Google\+Api\+Image\+To\+Text\+Type}}}]{image\+To\+Text\+Type = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a0945359809dad1fbf3dea1c95a0da951}{Google\+Api\+Image\+To\+Text\+Type.\+Document}}},  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Extracts text from an Image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+Path} & Path of image to extact text from\\
+\hline
+{\em timout\+Seconds} & Timeout in seconds before reporting failure\\
+\hline
+{\em throw\+On\+Error} & Fail (break) or error or just return empty string (useful when using this method in batch operations)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Text from image
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_googe_api_1_1_vision_a986fa4633b18744d764ad0f10ad1250f}\label{class_j_b_toolkit_1_1_googe_api_1_1_vision_a986fa4633b18744d764ad0f10ad1250f}} 
+\index{JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}!GetTextFromPDF@{GetTextFromPDF}}
+\index{GetTextFromPDF@{GetTextFromPDF}!JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}}
+\doxysubsubsection{\texorpdfstring{GetTextFromPDF()}{GetTextFromPDF()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Googe\+Api.\+Vision.\+Get\+Text\+From\+P\+DF (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200}{Google\+Api\+Image\+To\+Text\+Type}}}]{image\+To\+Text\+Type = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a0945359809dad1fbf3dea1c95a0da951}{Google\+Api\+Image\+To\+Text\+Type.\+Document}}},  }\item[{int}]{timout\+Seconds = {\ttfamily 30},  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Extract text from an a P\+DF (converts to P\+NG first) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path of P\+DF file to extract text from\\
+\hline
+{\em timout\+Seconds} & Timeout in seconds before reporting failure\\
+\hline
+{\em throw\+On\+Error} & Fail (break) or error or just return empty string (useful when using this method in batch operations)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Text from P\+DF
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/ded/class_j_b_toolkit_1_1_googe_api_1_1_vision_a986fa4633b18744d764ad0f10ad1250f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_googe_api_1_1_vision_a7e97cf7011f55ccf4b4dc13db252f663}\label{class_j_b_toolkit_1_1_googe_api_1_1_vision_a7e97cf7011f55ccf4b4dc13db252f663}} 
+\index{JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}!GetTextFromPDF@{GetTextFromPDF}}
+\index{GetTextFromPDF@{GetTextFromPDF}!JBToolkit.GoogeApi.Vision@{JBToolkit.GoogeApi.Vision}}
+\doxysubsubsection{\texorpdfstring{GetTextFromPDF()}{GetTextFromPDF()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Googe\+Api.\+Vision.\+Get\+Text\+From\+P\+DF (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200}{Google\+Api\+Image\+To\+Text\+Type}}}]{image\+To\+Text\+Type = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_googe_api_1_1_vision_a40f0d1918e070974888fb70b0aaca200a0945359809dad1fbf3dea1c95a0da951}{Google\+Api\+Image\+To\+Text\+Type.\+Document}}},  }\item[{int}]{timout\+Seconds = {\ttfamily 30},  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Extract text from an a P\+DF (converts to P\+NG first) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path of P\+DF file to extract text from\\
+\hline
+{\em timout\+Seconds} & Timeout in seconds before reporting failure\\
+\hline
+{\em throw\+On\+Error} & Fail (break) or error or just return empty string (useful when using this method in batch operations)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Text from P\+DF
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/ded/class_j_b_toolkit_1_1_googe_api_1_1_vision_a7e97cf7011f55ccf4b4dc13db252f663_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Google/\mbox{\hyperlink{_vision_8cs}{Vision.\+cs}}\end{DoxyCompactItemize}

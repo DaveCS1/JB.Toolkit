@@ -1,0 +1,4 @@
+<map id="JBToolkit.Images.ImageHelper.IsSameImage" name="JBToolkit.Images.ImageHelper.IsSameImage">
+<area shape="rect" id="node1" title="Checks if 1 image is the same as another by comparing its SHA hash. Also performs a quick check on im..." alt="" coords="5,5,207,47"/>
+<area shape="rect" id="node2" href="$de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper.html#a30dcc088fe44ed41fc9f0b70be129a2b" title="Get a 32bit xxHash of an image (useful for comparing)" alt="" coords="255,5,456,47"/>
+</map>

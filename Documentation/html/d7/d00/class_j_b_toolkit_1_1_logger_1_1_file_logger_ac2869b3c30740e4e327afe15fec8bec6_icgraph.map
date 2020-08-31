@@ -1,0 +1,5 @@
+<map id="JBToolkit.Logger.FileLogger.LogError" name="JBToolkit.Logger.FileLogger.LogError">
+<area shape="rect" id="node1" title="Log error with the exception itself." alt="" coords="255,35,441,76"/>
+<area shape="rect" id="node2" href="$d0/d43/class_j_b_toolkit_1_1_logger_1_1_d_b_logger.html#a79395b822210df5258ebff1bad7eaa32" title="Logs an error to the database" alt="" coords="15,5,197,47"/>
+<area shape="rect" id="node3" href="$df/d5f/class_j_b_toolkit_1_1_web_1_1_email.html#a6046761548583d68a8c0cb3f743d8c33" title="Easy call method to send an email" alt="" coords="5,71,207,98"/>
+</map>

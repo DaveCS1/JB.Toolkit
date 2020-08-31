@@ -1,0 +1,182 @@
+.TH "JBToolkit.Views.JqueryAjaxDataTable" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Views.JqueryAjaxDataTable \- Optional Sever-side processing: Generates JQuery DataTable HTML from a Model, using data from ajax calls for server-side processing\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBJBToolkit\&.Views\&._JqueryDataTable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJqueryAjaxDataTable\fP ()"
+.br
+.ti -1c
+.RI "\fBJqueryAjaxDataTable\fP (string tableName, string columns, string url, string sorting, string additionalJavaScript='', string uniqueId='Default', string columnDefinitions=null, bool useCustomHeader=true, bool responsive=false, bool serverSide=false, int pipelinePages=1)"
+.br
+.ti -1c
+.RI "override string \fBGenerateFilters\fP ()"
+.br
+.RI "Generates the html for custom filters "
+.ti -1c
+.RI "override string \fBGenerateRegisterDataTableScript\fP ()"
+.br
+.RI "Generates the Jquery DataTable registration call for the DataTable itself "
+.ti -1c
+.RI "override string \fBGenerateHtmlTable\fP ()"
+.br
+.RI "Generates the table data in the form of a HTML table "
+.ti -1c
+.RI "override string \fBGenerateRegisterFiltersScript\fP ()"
+.br
+.RI "Generates the Jquery DataTable registration call for the filters "
+.ti -1c
+.RI "override string \fBGenerateAdditionalJavaScript\fP ()"
+.br
+.RI "Generates any additional JavaScript specified to the buttom of the scripts section\&. "
+.ti -1c
+.RI "async Task< ActionResult > \fBBuildJQueryAjaxDataTableExample\fP ()"
+.br
+.RI "This is just an example chunk of code for building a \fBJqueryJsonDataTable\fP\&. Rather than hard code json, you'd serialise from a model or dynamic object as below "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "string \fBColumns\fP\fC [get, set]\fP"
+.br
+.RI "Columns - As json string https://datatables.net/reference/option/columns "
+.ti -1c
+.RI "string \fBColumnDefinitions\fP = string\&.Empty\fC [get, set]\fP"
+.br
+.RI "Optional DataTable column Definitions https://datatables.net/reference/option/columnDefs "
+.ti -1c
+.RI "string \fBUrl\fP\fC [get, set]\fP"
+.br
+.RI "Http GET and Http POST Url https://datatables.net/reference/option/ajax "
+.ti -1c
+.RI "string \fBSorting\fP\fC [get, set]\fP"
+.br
+.RI "How to sort the column - ASC or DESC (ascending by default - optional) and which column to sort by - As json string https://datatables.net/reference/option/order "
+.ti -1c
+.RI "string \fBPostScriptFunctionName\fP\fC [get, set]\fP"
+.br
+.RI "This allows you to run a specific JavaScript function after the 'drawn' event for any extra styling (or anthing else)\&. Make sure the function name is unique to the scope\&. "
+.ti -1c
+.RI "bool \fBServerSide\fP = false\fC [get, set]\fP"
+.br
+.RI "Set DataTable to use server side processing (ideal for large data-sets with processing per paging page, or optionally, use the 'PipelinePages' option as well to process say every '5' pages or so (i\&.e\&. DataTables will display 10 items per page, but rather than make an ajax request for every page, you can pretech and cache say 5 pages and therefore only make an ajax call every 5 pages)\&. "
+.ti -1c
+.RI "int \fBPipelinePages\fP = 1\fC [get, set]\fP"
+.br
+.RI "Caches a number of pages in memory to reduce the number of Ajax calls\&.\&.\&. i\&.e\&. DataTables will display 10 items per page, but rather than make an ajax request for every page, you can prefetch and cache say 5 pages and therefore only make an ajax call every 5 pages)\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Optional Sever-side processing: Generates JQuery DataTable HTML from a Model, using data from ajax calls for server-side processing\&. 
+
+https://datatables.net/examples/data_sources/ajax.html
+.PP
+Used in conjunction with the 'JQueryDataTable\&.cshtml' view (You can just inherit this from your own model if you wish)
+.PP
+YOUR PROJECT MUST INCLUDE JAVASCRIPT PACKAGES & CSS for Bootstrap, DataTables, DataTables \fBExtensions\fP and Editor
+.PP
+<link href = '~/Scripts/packages/bootstrap-3\&.3\&.6/css/bootstrap\&.min\&.css' rel='stylesheet' > <link href = '~/Scripts/packages/bootstrap-tree-view/bootstrap-treeview\&.min\&.css' rel='stylesheet' >
+.PP
+<link href = '~/Scripts/packages/DataTables-1\&.10\&.20/media/css/dataTables\&.bootstrap\&.min\&.css' rel='stylesheet' > <link href = '~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Buttons/css/buttons\&.dataTables\&.min\&.css' rel='stylesheet' > <link href = '~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Responsive/css/responsive\&.dataTabl;es\&.min\&.css' rel='stylesheet' > <link href = '~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Responsive/css/responsive\&.boostrap\&.min\&.css' rel='stylesheet' > <link href = '~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Scroller/css/scroller\&.dataTables\&.min\&.css' rel='stylesheet' > <link href = '~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Select/css/select\&.dataTables\&.min\&.css' rel='stylesheet' > <link href = '~/Scripts/packages/DataTables-1\&.10\&.20/extensions/ColReorder/css/colReorder\&.dataTables\&.min\&.css' rel='stylesheet' > <link href = '~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Editor/css/editor\&.bootstrap\&.min\&.css' rel='stylesheet' > <link href = '~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Editor/css/editor\&.dataTables\&.min\&.css' rel='stylesheet' > <script src = '~/Scripts/packages/jquery-1\&.12\&.4/jquery-1\&.12\&.4\&.min\&.js' ></ script > <script src='~/Scripts/packages/jquery-1\&.12\&.4/jquery\&.validate\&.min\&.js'></script> <script src = '~/Scripts/packages/jquery-1\&.12\&.4/jquery\&.validate\&.unobtrusive\&.min\&.js' ></ script > <script src='~/Scripts/packages/jquery-1\&.12\&.4/jquery\&.unobtrusive-ajax\&.min\&.js'></script>
+.PP
+<script src = '~/Scripts/packages/bootstrap-3\&.3\&.6/js/bootstrap\&.min\&.js' ></ script > <script src='~/Scripts/packages/bootstrap-tree-view/bootstrap-treeview\&.min\&.js'></script>
+.PP
+<script src = '~/Scripts/packages/DataTables-1\&.10\&.20/media/js/jquery\&.dataTables\&.min\&.js' ></ script > <script src='~/Scripts/packages/DataTables-1\&.10\&.20/media/js/dataTables\&.bootstrap\&.min\&.js'></script> <script src = '~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Buttons/js/dataTables\&.buttons\&.min\&.js' ></ script > <script src = '~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Responsive/js/dataTables\&.responsive\&.min\&.js' ></ script > <script src = '~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Responsive/js/responsive\&.bootstrap\&.min\&.js' ></ script > <script src='~/Scripts/packages/jszip-2\&.5\&.0/jszip\&.min\&.js'></script> <script src = '~/Scripts/packages/pdfmake-0\&.1\&.18/pdfmake\&.min\&.js' ></ script > <script src='~/Scripts/packages/pdfmake-0\&.1\&.18/vfs_fonts\&.js'></script> <script src = '~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Scroller/js/dataTables\&.scroller\&.min\&.js' ></ script > <script src='~/Scripts/packages/DataTables-1\&.10\&.20/extensions/ColReorder/js/dataTables\&.colReorder\&.min\&.js'></script> <script src = '~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Select/js/dataTables\&.select\&.min\&.js' ></ script > <script src='~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Buttons/js/buttons\&.html5\&.min\&.js'></script> <script src = '~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Buttons/js/buttons\&.print\&.min\&.js' ></ script > <script src='~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Buttons/js/buttons\&.colVis\&.min\&.js'></script> <script src = '~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Editor/js/dataTables\&.editor\&.min\&.js' ></ script > <script src='~/Scripts/packages/DataTables-1\&.10\&.20/extensions/Editor/js/editor\&.bootstrap\&.min\&.js'></script>
+.PP
+Alternatively, you can use a concatonated and minified CDN from here: https://datatables.net/download/
+.PP
+However you will need this regardless: <script src = '~/Scripts/dataTablesExtensions\&.js' ></ script > 
+.br
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.Views\&.JqueryAjaxDataTable\&.JqueryAjaxDataTable ()"
+
+.SS "JBToolkit\&.Views\&.JqueryAjaxDataTable\&.JqueryAjaxDataTable (string tableName, string columns, string url, string sorting, string additionalJavaScript = \fC''\fP, string uniqueId = \fC'Default'\fP, string columnDefinitions = \fCnull\fP, bool useCustomHeader = \fCtrue\fP, bool responsive = \fCfalse\fP, bool serverSide = \fCfalse\fP, int pipelinePages = \fC1\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "async Task<ActionResult> JBToolkit\&.Views\&.JqueryAjaxDataTable\&.BuildJQueryAjaxDataTableExample ()"
+
+.PP
+This is just an example chunk of code for building a \fBJqueryJsonDataTable\fP\&. Rather than hard code json, you'd serialise from a model or dynamic object as below 
+.SS "override string JBToolkit\&.Views\&.JqueryAjaxDataTable\&.GenerateAdditionalJavaScript ()\fC [virtual]\fP"
+
+.PP
+Generates any additional JavaScript specified to the buttom of the scripts section\&. 
+.IP "\(bu" 2
+Be aware of JavaScript special characters\&. Use the '<string>\&.GetJavaScriptAcceptableString()' extension in most circumstances
+.PP
+
+.PP
+Implements \fBJBToolkit\&.Views\&._JqueryDataTable\fP\&.
+.SS "override string JBToolkit\&.Views\&.JqueryAjaxDataTable\&.GenerateFilters ()\fC [virtual]\fP"
+
+.PP
+Generates the html for custom filters 
+.PP
+Implements \fBJBToolkit\&.Views\&._JqueryDataTable\fP\&.
+.SS "override string JBToolkit\&.Views\&.JqueryAjaxDataTable\&.GenerateHtmlTable ()\fC [virtual]\fP"
+
+.PP
+Generates the table data in the form of a HTML table 
+.PP
+Implements \fBJBToolkit\&.Views\&._JqueryDataTable\fP\&.
+.SS "override string JBToolkit\&.Views\&.JqueryAjaxDataTable\&.GenerateRegisterDataTableScript ()\fC [virtual]\fP"
+
+.PP
+Generates the Jquery DataTable registration call for the DataTable itself 
+.PP
+Implements \fBJBToolkit\&.Views\&._JqueryDataTable\fP\&.
+.SS "override string JBToolkit\&.Views\&.JqueryAjaxDataTable\&.GenerateRegisterFiltersScript ()\fC [virtual]\fP"
+
+.PP
+Generates the Jquery DataTable registration call for the filters 
+.PP
+Implements \fBJBToolkit\&.Views\&._JqueryDataTable\fP\&.
+.SH "Property Documentation"
+.PP 
+.SS "string JBToolkit\&.Views\&.JqueryAjaxDataTable\&.ColumnDefinitions = string\&.Empty\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Optional DataTable column Definitions https://datatables.net/reference/option/columnDefs 
+.SS "string JBToolkit\&.Views\&.JqueryAjaxDataTable\&.Columns\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Columns - As json string https://datatables.net/reference/option/columns 
+.SS "int JBToolkit\&.Views\&.JqueryAjaxDataTable\&.PipelinePages = 1\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Caches a number of pages in memory to reduce the number of Ajax calls\&.\&.\&. i\&.e\&. DataTables will display 10 items per page, but rather than make an ajax request for every page, you can prefetch and cache say 5 pages and therefore only make an ajax call every 5 pages)\&. 
+.SS "string JBToolkit\&.Views\&.JqueryAjaxDataTable\&.PostScriptFunctionName\fC [get]\fP, \fC [set]\fP"
+
+.PP
+This allows you to run a specific JavaScript function after the 'drawn' event for any extra styling (or anthing else)\&. Make sure the function name is unique to the scope\&. The function give the ID of the table\&. I\&.e:
+.PP
+function(tableId) { // Whatever you want to do here }
+.SS "bool JBToolkit\&.Views\&.JqueryAjaxDataTable\&.ServerSide = false\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Set DataTable to use server side processing (ideal for large data-sets with processing per paging page, or optionally, use the 'PipelinePages' option as well to process say every '5' pages or so (i\&.e\&. DataTables will display 10 items per page, but rather than make an ajax request for every page, you can pretech and cache say 5 pages and therefore only make an ajax call every 5 pages)\&. 
+.SS "string JBToolkit\&.Views\&.JqueryAjaxDataTable\&.Sorting\fC [get]\fP, \fC [set]\fP"
+
+.PP
+How to sort the column - ASC or DESC (ascending by default - optional) and which column to sort by - As json string https://datatables.net/reference/option/order 
+.SS "string JBToolkit\&.Views\&.JqueryAjaxDataTable\&.Url\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Http GET and Http POST Url https://datatables.net/reference/option/ajax 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

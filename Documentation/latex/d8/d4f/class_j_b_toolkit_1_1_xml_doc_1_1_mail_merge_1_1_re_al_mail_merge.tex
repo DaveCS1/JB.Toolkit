@@ -1,0 +1,80 @@
+\hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_re_al_mail_merge}{}\doxysection{J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Re\+Al\+Mail\+Merge Class Reference}
+\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_re_al_mail_merge}\index{JBToolkit.XmlDoc.MailMerge.ReAlMailMerge@{JBToolkit.XmlDoc.MailMerge.ReAlMailMerge}}
+
+
+Mail merging using a 3rd party command line tool.  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Re\+Al\+Mail\+Merge\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{d5/d93/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_re_al_mail_merge__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_re_al_mail_merge_a39539531b9fc7f20ee3ec84ebb441cf9}{Perform\+Mail\+Merge}} (string input\+Path, string output\+Path, \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} data, int timeout\+Seconds=60, bool overwrite\+Existing=true)
+\begin{DoxyCompactList}\small\item\em Perform a Mail Merge and export to file \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_re_al_mail_merge_a32e85324d42e5f4f88e0dc2cdea2e6cf}{Perform\+Mail\+Merge\+And\+Return\+Byte\+Array}} (string input\+Path, string extension, \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} data, int timeout\+Seconds=60)
+\begin{DoxyCompactList}\small\item\em Perform a Mail Merge and export as byte array \end{DoxyCompactList}\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_re_al_mail_merge_a9278e3c489f2d4db8277d9f1a30601e8}{Perform\+Mail\+Merge\+And\+Return\+Memory\+Stream}} (string input\+Path, string extension, \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} data, int timeout\+Seconds=60)
+\begin{DoxyCompactList}\small\item\em Perform a Mail Merge and export as memory stream \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_re_al_mail_merge_a550252c4489c80dee2e40414db2e6920}{Perform\+Mail\+Merge\+And\+Return\+Base64\+String}} (string input\+Path, string extension, \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} data, int timeout\+Seconds=60)
+\begin{DoxyCompactList}\small\item\em Perform a Mail Merge and export as base64 string \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mail merging using a 3rd party command line tool. 
+
+It\textquotesingle{}s generally quick and reliable, however it must load the proces which then loads its assemblies. An implementation using .Net managed code libraries would be more effecient. Especially when performing mail merges in bulk.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_re_al_mail_merge_a39539531b9fc7f20ee3ec84ebb441cf9}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_re_al_mail_merge_a39539531b9fc7f20ee3ec84ebb441cf9}} 
+\index{JBToolkit.XmlDoc.MailMerge.ReAlMailMerge@{JBToolkit.XmlDoc.MailMerge.ReAlMailMerge}!PerformMailMerge@{PerformMailMerge}}
+\index{PerformMailMerge@{PerformMailMerge}!JBToolkit.XmlDoc.MailMerge.ReAlMailMerge@{JBToolkit.XmlDoc.MailMerge.ReAlMailMerge}}
+\doxysubsubsection{\texorpdfstring{PerformMailMerge()}{PerformMailMerge()}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Re\+Al\+Mail\+Merge.\+Perform\+Mail\+Merge (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{string}]{output\+Path,  }\item[{\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}}}]{data,  }\item[{int}]{timeout\+Seconds = {\ttfamily 60},  }\item[{bool}]{overwrite\+Existing = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform a Mail Merge and export to file 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_re_al_mail_merge_a550252c4489c80dee2e40414db2e6920}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_re_al_mail_merge_a550252c4489c80dee2e40414db2e6920}} 
+\index{JBToolkit.XmlDoc.MailMerge.ReAlMailMerge@{JBToolkit.XmlDoc.MailMerge.ReAlMailMerge}!PerformMailMergeAndReturnBase64String@{PerformMailMergeAndReturnBase64String}}
+\index{PerformMailMergeAndReturnBase64String@{PerformMailMergeAndReturnBase64String}!JBToolkit.XmlDoc.MailMerge.ReAlMailMerge@{JBToolkit.XmlDoc.MailMerge.ReAlMailMerge}}
+\doxysubsubsection{\texorpdfstring{PerformMailMergeAndReturnBase64String()}{PerformMailMergeAndReturnBase64String()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Re\+Al\+Mail\+Merge.\+Perform\+Mail\+Merge\+And\+Return\+Base64\+String (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{string}]{extension,  }\item[{\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}}}]{data,  }\item[{int}]{timeout\+Seconds = {\ttfamily 60} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform a Mail Merge and export as base64 string 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_re_al_mail_merge_a32e85324d42e5f4f88e0dc2cdea2e6cf}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_re_al_mail_merge_a32e85324d42e5f4f88e0dc2cdea2e6cf}} 
+\index{JBToolkit.XmlDoc.MailMerge.ReAlMailMerge@{JBToolkit.XmlDoc.MailMerge.ReAlMailMerge}!PerformMailMergeAndReturnByteArray@{PerformMailMergeAndReturnByteArray}}
+\index{PerformMailMergeAndReturnByteArray@{PerformMailMergeAndReturnByteArray}!JBToolkit.XmlDoc.MailMerge.ReAlMailMerge@{JBToolkit.XmlDoc.MailMerge.ReAlMailMerge}}
+\doxysubsubsection{\texorpdfstring{PerformMailMergeAndReturnByteArray()}{PerformMailMergeAndReturnByteArray()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Re\+Al\+Mail\+Merge.\+Perform\+Mail\+Merge\+And\+Return\+Byte\+Array (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{string}]{extension,  }\item[{\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}}}]{data,  }\item[{int}]{timeout\+Seconds = {\ttfamily 60} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform a Mail Merge and export as byte array 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_re_al_mail_merge_a9278e3c489f2d4db8277d9f1a30601e8}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_re_al_mail_merge_a9278e3c489f2d4db8277d9f1a30601e8}} 
+\index{JBToolkit.XmlDoc.MailMerge.ReAlMailMerge@{JBToolkit.XmlDoc.MailMerge.ReAlMailMerge}!PerformMailMergeAndReturnMemoryStream@{PerformMailMergeAndReturnMemoryStream}}
+\index{PerformMailMergeAndReturnMemoryStream@{PerformMailMergeAndReturnMemoryStream}!JBToolkit.XmlDoc.MailMerge.ReAlMailMerge@{JBToolkit.XmlDoc.MailMerge.ReAlMailMerge}}
+\doxysubsubsection{\texorpdfstring{PerformMailMergeAndReturnMemoryStream()}{PerformMailMergeAndReturnMemoryStream()}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Re\+Al\+Mail\+Merge.\+Perform\+Mail\+Merge\+And\+Return\+Memory\+Stream (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{string}]{extension,  }\item[{\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}}}]{data,  }\item[{int}]{timeout\+Seconds = {\ttfamily 60} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Perform a Mail Merge and export as memory stream 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Xml\+Doc/\+Mail\+Merge/\mbox{\hyperlink{_re_al_mail_merge_8cs}{Re\+Al\+Mail\+Merge.\+cs}}\end{DoxyCompactItemize}

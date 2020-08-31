@@ -1,0 +1,4 @@
+<map id="JBToolkit.Web.Email.SendResultsEmail" name="JBToolkit.Web.Email.SendResultsEmail">
+<area shape="rect" id="node1" title="Send a DatTable to be formatted and displayed in a HTML email. Column names are wordified." alt="" coords="5,5,183,47"/>
+<area shape="rect" id="node2" href="$df/d5f/class_j_b_toolkit_1_1_web_1_1_email.html#a35df4033b28135648fc179f71c8cbced" title="Basic send email method" alt="" coords="231,13,432,39"/>
+</map>

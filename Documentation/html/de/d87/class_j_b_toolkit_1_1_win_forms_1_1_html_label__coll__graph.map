@@ -1,0 +1,13 @@
+<map id="JBToolkit.WinForms.HtmlLabel" name="JBToolkit.WinForms.HtmlLabel">
+<area shape="rect" id="node1" title="Provides HTML rendering on the text of the label" alt="" coords="5,1145,207,1237"/>
+<area shape="rect" id="node2" href="$dc/d4d/class_j_b_toolkit_1_1_win_forms_1_1_html_panel.html" title="Provides HTML rendering on a panel" alt="" coords="38,755,174,949"/>
+<area shape="rect" id="node3" href="$dc/da7/class_scrollable_control.html" title=" " alt="" coords="23,380,143,457"/>
+<area shape="rect" id="node4" href="$d0/d18/class_system_1_1_drawing_1_1_html_1_1_initial_html_container.html" title=" " alt="" coords="168,307,351,531"/>
+<area shape="rect" id="node5" href="$d5/db0/class_system_1_1_drawing_1_1_html_1_1_css_box.html" title="Represents a CSS Box of text or replaced elements." alt="" coords="460,608,629,1096"/>
+<area shape="rect" id="node6" title=" " alt="" coords="445,64,492,141"/>
+<area shape="rect" id="node9" title="Represents a word inside an inline box" alt="" coords="769,329,998,509"/>
+<area shape="rect" id="node7" title=" " alt="" coords="533,380,621,457"/>
+<area shape="rect" id="node8" title=" " alt="" coords="685,64,732,141"/>
+<area shape="rect" id="node10" href="$da/db7/class_system_1_1_drawing_1_1_html_1_1_css_rectangle.html" title=" " alt="" coords="832,5,935,200"/>
+<area shape="rect" id="node11" title=" " alt="" coords="1023,380,1077,457"/>
+</map>

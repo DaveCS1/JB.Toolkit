@@ -1,0 +1,511 @@
+.TH "JBToolkit.Database.DBConnection" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Database.DBConnection \- Abstract database provider class  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBJBToolkit\&.Database\&.DBGeneric\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBCommandType\fP { \fBCommandType\&.DEFAULT\fP, \fBCommandType\&.STORED_PROCEDURE\fP }"
+.br
+.RI "What kind of SQL script - a normal query or a stored procedure? "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBDataTable\fP \fBGetDataTable\fP (string command, out string errMsg, \fBCommandType\fP commandType=\fBCommandType\&.DEFAULT\fP, bool throwOnError=true)"
+.br
+.RI "Returns a datatable result from an SQL query string "
+.ti -1c
+.RI "virtual \fBDBResult\fP \fBGetDataTableEx\fP (string command)"
+.br
+.RI "Returns a datatable result from an SQL query string "
+.ti -1c
+.RI "virtual \fBDataTable\fP \fBGetDataTable\fP (string command, \fBCommandType\fP commandType=\fBCommandType\&.DEFAULT\fP, bool throwOnError=true)"
+.br
+.RI "Returns a datatable result from an SQL query string "
+.ti -1c
+.RI "virtual \fBDBResult\fP \fBGetDataSetEx\fP (string command)"
+.br
+.RI "Returns a datatable result from an SQL query string (data set can hold multiple DataTables, for example when executing store procedures that return multiple result sets)\&. "
+.ti -1c
+.RI "virtual DataSet \fBGetDataSet\fP (string command, out string errMsg, \fBCommandType\fP commandType=\fBCommandType\&.DEFAULT\fP, bool throwOnError=true)"
+.br
+.RI "Returns a datatable result from an SQL query string (data set can hold multiple DataTables, for example when executing store procedures that return multiple result sets)\&. "
+.ti -1c
+.RI "virtual DataSet \fBGetDataSet\fP (string command, \fBCommandType\fP commandType=\fBCommandType\&.DEFAULT\fP, bool throwOnError=true)"
+.br
+.RI "Returns a dataset result from an SQL query string (data set can hold multiple DataTables, for example when executing store procedures that return multiple result sets)\&. "
+.ti -1c
+.RI "virtual string \fBGetScalerResult\fP (string command, out string errMsg, bool throwOnError=true)"
+.br
+.RI "Gets a single string from the database given an SQL query (first column, first row) - Typically used to retrieve HTML processed at the database level "
+.ti -1c
+.RI "virtual \fBDBResult\fP \fBGetScalerResultEx\fP (string command)"
+.br
+.RI "Gets a single string from the database given an SQL query (first column, first row) - Typically used to retrieve HTML processed at the database level "
+.ti -1c
+.RI "virtual string \fBGetScalerResult\fP (string command, bool throwOnError=true)"
+.br
+.RI "Gets a single string from the database given an SQL query (first column, first row) - Typically used to retrieve HTML processed at the database level "
+.ti -1c
+.RI "virtual \fBDBResult\fP \fBExecuteNonQueryEx\fP (string command)"
+.br
+.RI "Executes SQL and doesn't expect a result set "
+.ti -1c
+.RI "virtual bool \fBExecuteNonQuery\fP (string command, out string errMsg, bool throwOnError=true)"
+.br
+.RI "Executes SQL and doesn't expect a result set "
+.ti -1c
+.RI "virtual \fBDBResult\fP \fBExecuteNonQueryScopeIdentityEx\fP (string command)"
+.br
+.RI "Executes SQL and will provide a scoped identity "
+.ti -1c
+.RI "virtual bool \fBExecuteNonQueryScopeIdentity\fP (string command, out string errMsg, out string scopedIdentity, bool throwOnError=true)"
+.br
+.RI "Executes SQL and will provide a scoped identity "
+.ti -1c
+.RI "\fBDBConnection\fP (string dbName, string connectionString, int userId=0, bool enableLogging=true, string applicationName=null)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static string \fBApplyInitialCatalogToConnectionString\fP (string databaseName, string connectionString)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "async Task< \fBIEnumerable\fP< T > > \fBQueryAsync< T >\fP (string sql, object sqlParameters=null)"
+.br
+.RI "Uses Dapper to query the database, returning an \fBIEnumerable\fP of the object "
+.ti -1c
+.RI "async Task< T > \fBFirstOrDefaultAsync< T >\fP (string sql, object sqlParameters)"
+.br
+.RI "Uses Dapper to query the database, returning an object of a given type - returning object of a single row "
+.ti -1c
+.RI "async Task< T > \fBSingleOrDefaultAsync< T >\fP (string sql, object sqlParameters=null)"
+.br
+.RI "Uses Dapper to query the database, returning an object of a given type - returning object of a single row "
+.ti -1c
+.RI "async Task< int > \fBExecuteAsync\fP (string sql, object sqlParameters)"
+.br
+.RI "Uses Dapper to execute a command (i\&.e\&. insert or udpate statement) - Returning an integer if a row update has been performed with a primary key or increment in the table "
+.ti -1c
+.RI "async Task< T > \fBExecuteScalarAsync< T >\fP (string sql, object sqlParameters)"
+.br
+.RI "Uses Dapper to query the database, returning an object of a given type - returning object of a single row "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "string \fBDBName\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBConnectionString\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "bool \fBEnableLogging\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "bool \fBUseSessionForSharedObjects\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "\fBDBLogger\fP \fBLogger\fP\fC [get, set]\fP"
+.br
+.RI "Include logger class for logging of errors "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Abstract database provider class 
+
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBJBToolkit\&.Database\&.DBConnection\&.CommandType\fP\fC [strong]\fP"
+
+.PP
+What kind of SQL script - a normal query or a stored procedure? 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIDEFAULT \fP\fP
+.TP
+\fB\fISTORED_PROCEDURE \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.Database\&.DBConnection\&.DBConnection (string dbName, string connectionString, int userId = \fC0\fP, bool enableLogging = \fCtrue\fP, string applicationName = \fCnull\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static string JBToolkit\&.Database\&.DBConnection\&.ApplyInitialCatalogToConnectionString (string databaseName, string connectionString)\fC [static]\fP"
+
+.SS "async Task<int> JBToolkit\&.Database\&.DBConnection\&.ExecuteAsync (string sql, object sqlParameters)\fC [protected]\fP"
+
+.PP
+Uses Dapper to execute a command (i\&.e\&. insert or udpate statement) - Returning an integer if a row update has been performed with a primary key or increment in the table 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsql\fP SQL command
+.br
+\fIsqlParameters\fP Parameters in the form @parameterName = valueOrObject - @paremeterName is Annoymous type (i\&.e\&. the @) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Integer of row update primary key or increment
+.RE
+.PP
+
+.SS "virtual bool JBToolkit\&.Database\&.DBConnection\&.ExecuteNonQuery (string command, out string errMsg, bool throwOnError = \fCtrue\fP)\fC [virtual]\fP"
+
+.PP
+Executes SQL and doesn't expect a result set 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP SQL command to execute
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True is the query executed successful, false otherwise
+.RE
+.PP
+
+.SS "virtual \fBDBResult\fP JBToolkit\&.Database\&.DBConnection\&.ExecuteNonQueryEx (string command)\fC [virtual]\fP"
+
+.PP
+Executes SQL and doesn't expect a result set 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBDBResult\fP Success or failure bool and any messages and results
+.RE
+.PP
+
+.SS "virtual bool JBToolkit\&.Database\&.DBConnection\&.ExecuteNonQueryScopeIdentity (string command, out string errMsg, out string scopedIdentity, bool throwOnError = \fCtrue\fP)\fC [virtual]\fP"
+
+.PP
+Executes SQL and will provide a scoped identity 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP SQL command string to execute
+.br
+\fIerrMsg\fP Any error messages
+.br
+\fIscopedIdentity\fP The scoped identity after executing the command
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if successful, false otherwise
+.RE
+.PP
+
+.SS "virtual \fBDBResult\fP JBToolkit\&.Database\&.DBConnection\&.ExecuteNonQueryScopeIdentityEx (string command)\fC [virtual]\fP"
+
+.PP
+Executes SQL and will provide a scoped identity 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBDBResult\fP Success or failure bool and any messages and results
+.RE
+.PP
+
+.SS "async Task<T> JBToolkit\&.Database\&.DBConnection\&.ExecuteScalarAsync< T > (string sql, object sqlParameters)\fC [protected]\fP"
+
+.PP
+Uses Dapper to query the database, returning an object of a given type - returning object of a single row 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP Type of object
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIsql\fP SQL command
+.br
+\fIsqlParameters\fP Parameters in the form @parameterName = valueOrObject - @paremeterName is Annoymous type (i\&.e\&. the @) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+object of a given type
+.RE
+.PP
+
+.SS "async Task<T> JBToolkit\&.Database\&.DBConnection\&.FirstOrDefaultAsync< T > (string sql, object sqlParameters)\fC [protected]\fP"
+
+.PP
+Uses Dapper to query the database, returning an object of a given type - returning object of a single row 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP Type of object
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIsql\fP SQL command
+.br
+\fIsqlParameters\fP Parameters in the form @parameterName = valueOrObject - @paremeterName is Annoymous type (i\&.e\&. the @) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+object of a given type
+.RE
+.PP
+
+.SS "virtual DataSet JBToolkit\&.Database\&.DBConnection\&.GetDataSet (string command, \fBCommandType\fP commandType = \fC\fBCommandType\&.DEFAULT\fP\fP, bool throwOnError = \fCtrue\fP)\fC [virtual]\fP"
+
+.PP
+Returns a dataset result from an SQL query string (data set can hold multiple DataTables, for example when executing store procedures that return multiple result sets)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbName\fP Instance DB name to use
+.br
+\fIcommand\fP The SQL query string
+.br
+\fIcommandType\fP Normal query or stored procedure
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A datatable of values
+.RE
+.PP
+
+.SS "virtual DataSet JBToolkit\&.Database\&.DBConnection\&.GetDataSet (string command, out string errMsg, \fBCommandType\fP commandType = \fC\fBCommandType\&.DEFAULT\fP\fP, bool throwOnError = \fCtrue\fP)\fC [virtual]\fP"
+
+.PP
+Returns a datatable result from an SQL query string (data set can hold multiple DataTables, for example when executing store procedures that return multiple result sets)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbName\fP Instance DB name to use
+.br
+\fIcommand\fP The SQL query string
+.br
+\fIcommandType\fP Normal query or stored procedure
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A datatable of values
+.RE
+.PP
+
+.SS "virtual \fBDBResult\fP JBToolkit\&.Database\&.DBConnection\&.GetDataSetEx (string command)\fC [virtual]\fP"
+
+.PP
+Returns a datatable result from an SQL query string (data set can hold multiple DataTables, for example when executing store procedures that return multiple result sets)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIjqt\fP The pre-created Jquery Data Table object
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBDBResult\fP Success or failure bool and any messages and results
+.RE
+.PP
+
+.SS "virtual \fBDataTable\fP JBToolkit\&.Database\&.DBConnection\&.GetDataTable (string command, \fBCommandType\fP commandType = \fC\fBCommandType\&.DEFAULT\fP\fP, bool throwOnError = \fCtrue\fP)\fC [virtual]\fP"
+
+.PP
+Returns a datatable result from an SQL query string 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbName\fP Instance DB name to use
+.br
+\fIcommand\fP The SQL query string
+.br
+\fIcommandType\fP Normal query or stored procedure
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A datatable of values
+.RE
+.PP
+
+.SS "virtual \fBDataTable\fP JBToolkit\&.Database\&.DBConnection\&.GetDataTable (string command, out string errMsg, \fBCommandType\fP commandType = \fC\fBCommandType\&.DEFAULT\fP\fP, bool throwOnError = \fCtrue\fP)\fC [virtual]\fP"
+
+.PP
+Returns a datatable result from an SQL query string 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdbName\fP Instance DB name to use
+.br
+\fIcommand\fP The SQL query string
+.br
+\fIcommandType\fP Normal query or stored procedure
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A datatable of values
+.RE
+.PP
+
+.SS "virtual \fBDBResult\fP JBToolkit\&.Database\&.DBConnection\&.GetDataTableEx (string command)\fC [virtual]\fP"
+
+.PP
+Returns a datatable result from an SQL query string 
+.PP
+\fBParameters\fP
+.RS 4
+\fIjqt\fP The pre-created Jquery Data Table object
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBDBResult\fP Success or failure bool and any messages and results
+.RE
+.PP
+
+.SS "virtual string JBToolkit\&.Database\&.DBConnection\&.GetScalerResult (string command, bool throwOnError = \fCtrue\fP)\fC [virtual]\fP"
+
+.PP
+Gets a single string from the database given an SQL query (first column, first row) - Typically used to retrieve HTML processed at the database level 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP The SQL query string
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A sting string - i\&.e\&. of HTML
+.RE
+.PP
+
+.SS "virtual string JBToolkit\&.Database\&.DBConnection\&.GetScalerResult (string command, out string errMsg, bool throwOnError = \fCtrue\fP)\fC [virtual]\fP"
+
+.PP
+Gets a single string from the database given an SQL query (first column, first row) - Typically used to retrieve HTML processed at the database level 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP The SQL query string
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A sting string - i\&.e\&. of HTML
+.RE
+.PP
+
+.SS "virtual \fBDBResult\fP JBToolkit\&.Database\&.DBConnection\&.GetScalerResultEx (string command)\fC [virtual]\fP"
+
+.PP
+Gets a single string from the database given an SQL query (first column, first row) - Typically used to retrieve HTML processed at the database level 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP SQL Command string
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBDBResult\fP Success or failure bool and any messages and results
+.RE
+.PP
+
+.SS "async Task<\fBIEnumerable\fP<T> > JBToolkit\&.Database\&.DBConnection\&.QueryAsync< T > (string sql, object sqlParameters = \fCnull\fP)\fC [protected]\fP"
+
+.PP
+Uses Dapper to query the database, returning an \fBIEnumerable\fP of the object 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP Type of object
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIsql\fP SQL command
+.br
+\fIsqlParameters\fP Parameters in the form @parameterName = valueOrObject - @paremeterName is Annoymous type (i\&.e\&. the @) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBIEnumerable\fP of type of oject
+.RE
+.PP
+
+.SS "async Task<T> JBToolkit\&.Database\&.DBConnection\&.SingleOrDefaultAsync< T > (string sql, object sqlParameters = \fCnull\fP)\fC [protected]\fP"
+
+.PP
+Uses Dapper to query the database, returning an object of a given type - returning object of a single row 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP Type of object
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIsql\fP SQL command
+.br
+\fIsqlParameters\fP Parameters in the form @parameterName = valueOrObject - @paremeterName is Annoymous type (i\&.e\&. the @) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+object of a given type
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "string JBToolkit\&.Database\&.DBConnection\&.ConnectionString\fC [get]\fP, \fC [set]\fP"
+
+.SS "string JBToolkit\&.Database\&.DBConnection\&.DBName\fC [get]\fP, \fC [set]\fP"
+
+.SS "bool JBToolkit\&.Database\&.DBConnection\&.EnableLogging\fC [get]\fP, \fC [set]\fP"
+
+.SS "\fBDBLogger\fP JBToolkit\&.Database\&.DBConnection\&.Logger\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Include logger class for logging of errors 
+.SS "bool JBToolkit\&.Database\&.DBConnection\&.UseSessionForSharedObjects\fC [get]\fP, \fC [set]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

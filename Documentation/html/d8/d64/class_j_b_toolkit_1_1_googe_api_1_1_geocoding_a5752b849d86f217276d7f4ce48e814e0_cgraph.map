@@ -1,0 +1,4 @@
+<map id="JBToolkit.GoogeApi.Geocoding.GetFormattedAddressFromLatLong" name="JBToolkit.GoogeApi.Geocoding.GetFormattedAddressFromLatLong">
+<area shape="rect" id="node1" title="Get a formatted address from longitude and latitude coordinates" alt="" coords="5,5,232,47"/>
+<area shape="rect" id="node2" href="$d8/d64/class_j_b_toolkit_1_1_googe_api_1_1_geocoding.html#a96142ff6b0edf4bd4458b84316dfc785" title="Get the entire Google geocoordinates object from a latitute and longitude coordinates." alt="" coords="280,5,507,47"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="JBToolkit.PdfDoc.PdfConverter.ConvertToPDF" name="JBToolkit.PdfDoc.PdfConverter.ConvertToPDF">
+<area shape="rect" id="node1" title="Save document file or image to PDF" alt="" coords="507,71,709,112"/>
+<area shape="rect" id="node2" href="$d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter.html#aee56ff829abd0c3db272728f8d7b167c" title="Converts Docx document to PDF memory stream (i.e. for use in Web Requests)" alt="" coords="256,5,459,47"/>
+<area shape="rect" id="node3" href="$d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter.html#a88730c3578f275269da09371b6c790f2" title="Converts document file or image to PDF memory stream (i.e. for use in Web Requests)" alt="" coords="256,71,459,112"/>
+<area shape="rect" id="node4" href="$d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter.html#aa0ba34122dcf6d47eb0ce6d5f6b4c850" title="Save document file or image to PDF" alt="" coords="256,136,459,177"/>
+<area shape="rect" id="node5" href="$d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter.html#a030c947d4086699ba236bb6ec06a028a" title="Save Docx document to PDF to file Input .docx pathOutput .pdf path" alt="" coords="5,136,208,177"/>
+</map>

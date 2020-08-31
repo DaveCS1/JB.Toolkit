@@ -1,0 +1,146 @@
+\hypertarget{namespace_j_b_toolkit_1_1_windows}{}\doxysection{J\+B\+Toolkit.\+Windows Namespace Reference}
+\label{namespace_j_b_toolkit_1_1_windows}\index{JBToolkit.Windows@{JBToolkit.Windows}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_1_1_console_helper}{Console\+Helper}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Common\+File\+Type\+Extensions}
+\begin{DoxyCompactList}\small\item\em An every growing list of common file type / format extensions \end{DoxyCompactList}\item 
+class {\bfseries Directory\+Helper}
+\begin{DoxyCompactList}\small\item\em Class containing methods to retrieve specific file system paths. \end{DoxyCompactList}\item 
+class {\bfseries Fast\+Directory\+Enumerator}
+\begin{DoxyCompactList}\small\item\em A fast enumerator of files in a directory. Use this if you need to get attributes for all files in a directory. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_windows_1_1_file_data}{File\+Data}}
+\begin{DoxyCompactList}\small\item\em Contains information about a file returned by the Fast\+Directory\+Enumerator class. /// Got code from here\+: \href{https://www.codeproject.com/Articles/38959/A-Faster-Directory-Enumerator}{\texttt{ https\+://www.\+codeproject.\+com/\+Articles/38959/\+A-\/\+Faster-\/\+Directory-\/\+Enumerator}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_windows_1_1_process_helper}{Process\+Helper}}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_windows_1_1_service_helper}{Service\+Helper}}
+\begin{DoxyCompactList}\small\item\em Contain method for remote reliably manipulating \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} Services. You will likely need to use impersonatation when calling i.\+e\+: \end{DoxyCompactList}\item 
+class {\bfseries Uac\+Helper}
+\begin{DoxyCompactList}\small\item\em Mainly used to determine if a process is running with elevated (i.\+e. admin) permissions. Useful if we want to prevent the user from going any futher in the program execution unless they are an adminstrator \end{DoxyCompactList}\item 
+class {\bfseries W\+I\+N32\+\_\+\+F\+I\+N\+D\+\_\+\+D\+A\+TA}
+\begin{DoxyCompactList}\small\item\em Contains information about the file that is found by the Find\+First\+File or Find\+Next\+File functions. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_windows_1_1_window_helper}{Window\+Helper}}
+\begin{DoxyCompactList}\small\item\em As in the actual program Window rather then the \textquotesingle{}\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}}\textquotesingle{} operating system... Used to focus windows (bring to front etc) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8}{Known\+Folder}} \{ \newline
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a9aa698f602b1e5694855cee73a683488}{Known\+Folder.\+Contacts}}, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a2310408a63388fe57e3a4177168a8798}{Known\+Folder.\+Desktop}}, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8af28128b38efbc6134dc40751ee21fd29}{Known\+Folder.\+Documents}}, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8ad78986947356ddd37b43d57df289dee9}{Known\+Folder.\+Favorites}}, 
+\newline
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8abd908db5ccb07777ced8023dffc802f4}{Known\+Folder.\+Links}}, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a47dcbd834e669233d7eb8a51456ed217}{Known\+Folder.\+Music}}, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8ab11ddc7e1671c0bd22dc89dd757508d4}{Known\+Folder.\+Pictures}}, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a8491da517bfc81f5c466916cd4d225a9}{Known\+Folder.\+Saved\+Games}}, 
+\newline
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8ad64731da30c9ad71aa318ae1c85d1e19}{Known\+Folder.\+Saved\+Searches}}, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a554cfab3938e21d9270bd6b75931f96f}{Known\+Folder.\+Videos}}, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a59c4ad3f3cb3d812d68fab7a354d4a63}{Known\+Folder.\+Fonts}}, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a22722a95048f6afdee8d713eb98c22a3}{Known\+Folder.\+Public\+Folder}}, 
+\newline
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a99f44d0545a2f52c90ee48d43e7ff2ad}{Known\+Folder.\+Three\+D\+Objects}}, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8ac20c35ef53bf1b70789ce94e66800147}{Known\+Folder.\+Downloads}}
+ \}
+\begin{DoxyCompactList}\small\item\em Standard folders registered with the system. These folders are installed with Windows Vista and later operating systems, and a computer will have only folders appropriate to it installed. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_a914b360e1bdccaa83a5b427bbc924d8d}{Context\+Type}} \{ \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_a914b360e1bdccaa83a5b427bbc924d8dae498749f3c42246d50b15c81c101d988}{Context\+Type.\+Application}}, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_a914b360e1bdccaa83a5b427bbc924d8da1560df81d3cbdef82b1be5cd7a040783}{Context\+Type.\+Http\+Context}}
+ \}
+\begin{DoxyCompactList}\small\item\em Specify application or website / web service context \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_a914b360e1bdccaa83a5b427bbc924d8d}\label{namespace_j_b_toolkit_1_1_windows_a914b360e1bdccaa83a5b427bbc924d8d}} 
+\index{JBToolkit.Windows@{JBToolkit.Windows}!ContextType@{ContextType}}
+\index{ContextType@{ContextType}!JBToolkit.Windows@{JBToolkit.Windows}}
+\doxysubsubsection{\texorpdfstring{ContextType}{ContextType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_a914b360e1bdccaa83a5b427bbc924d8d}{J\+B\+Toolkit.\+Windows.\+Context\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Specify application or website / web service context 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Application@{Application}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!Application@{Application}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_a914b360e1bdccaa83a5b427bbc924d8dae498749f3c42246d50b15c81c101d988}\label{namespace_j_b_toolkit_1_1_windows_a914b360e1bdccaa83a5b427bbc924d8dae498749f3c42246d50b15c81c101d988}} 
+Application&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HttpContext@{HttpContext}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!HttpContext@{HttpContext}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_a914b360e1bdccaa83a5b427bbc924d8da1560df81d3cbdef82b1be5cd7a040783}\label{namespace_j_b_toolkit_1_1_windows_a914b360e1bdccaa83a5b427bbc924d8da1560df81d3cbdef82b1be5cd7a040783}} 
+Http\+Context&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8}\label{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8}} 
+\index{JBToolkit.Windows@{JBToolkit.Windows}!KnownFolder@{KnownFolder}}
+\index{KnownFolder@{KnownFolder}!JBToolkit.Windows@{JBToolkit.Windows}}
+\doxysubsubsection{\texorpdfstring{KnownFolder}{KnownFolder}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8}{J\+B\+Toolkit.\+Windows.\+Known\+Folder}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Standard folders registered with the system. These folders are installed with \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} Vista and later operating systems, and a computer will have only folders appropriate to it installed. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Contacts@{Contacts}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!Contacts@{Contacts}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a9aa698f602b1e5694855cee73a683488}\label{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a9aa698f602b1e5694855cee73a683488}} 
+Contacts&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Desktop@{Desktop}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!Desktop@{Desktop}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a2310408a63388fe57e3a4177168a8798}\label{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a2310408a63388fe57e3a4177168a8798}} 
+Desktop&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Documents@{Documents}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!Documents@{Documents}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8af28128b38efbc6134dc40751ee21fd29}\label{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8af28128b38efbc6134dc40751ee21fd29}} 
+Documents&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Favorites@{Favorites}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!Favorites@{Favorites}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8ad78986947356ddd37b43d57df289dee9}\label{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8ad78986947356ddd37b43d57df289dee9}} 
+Favorites&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Links@{Links}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!Links@{Links}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8abd908db5ccb07777ced8023dffc802f4}\label{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8abd908db5ccb07777ced8023dffc802f4}} 
+Links&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Music@{Music}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!Music@{Music}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a47dcbd834e669233d7eb8a51456ed217}\label{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a47dcbd834e669233d7eb8a51456ed217}} 
+Music&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Pictures@{Pictures}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!Pictures@{Pictures}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8ab11ddc7e1671c0bd22dc89dd757508d4}\label{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8ab11ddc7e1671c0bd22dc89dd757508d4}} 
+Pictures&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SavedGames@{SavedGames}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!SavedGames@{SavedGames}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a8491da517bfc81f5c466916cd4d225a9}\label{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a8491da517bfc81f5c466916cd4d225a9}} 
+Saved\+Games&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SavedSearches@{SavedSearches}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!SavedSearches@{SavedSearches}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8ad64731da30c9ad71aa318ae1c85d1e19}\label{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8ad64731da30c9ad71aa318ae1c85d1e19}} 
+Saved\+Searches&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Videos@{Videos}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!Videos@{Videos}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a554cfab3938e21d9270bd6b75931f96f}\label{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a554cfab3938e21d9270bd6b75931f96f}} 
+Videos&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fonts@{Fonts}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!Fonts@{Fonts}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a59c4ad3f3cb3d812d68fab7a354d4a63}\label{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a59c4ad3f3cb3d812d68fab7a354d4a63}} 
+Fonts&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PublicFolder@{PublicFolder}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!PublicFolder@{PublicFolder}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a22722a95048f6afdee8d713eb98c22a3}\label{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a22722a95048f6afdee8d713eb98c22a3}} 
+Public\+Folder&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ThreeDObjects@{ThreeDObjects}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!ThreeDObjects@{ThreeDObjects}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a99f44d0545a2f52c90ee48d43e7ff2ad}\label{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8a99f44d0545a2f52c90ee48d43e7ff2ad}} 
+Three\+D\+Objects&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Downloads@{Downloads}!JBToolkit.Windows@{JBToolkit.Windows}}\index{JBToolkit.Windows@{JBToolkit.Windows}!Downloads@{Downloads}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8ac20c35ef53bf1b70789ce94e66800147}\label{namespace_j_b_toolkit_1_1_windows_ac86f51beabdfad7a3227bae5ea6367e8ac20c35ef53bf1b70789ce94e66800147}} 
+Downloads&\\
+\hline
+
+\end{DoxyEnumFields}

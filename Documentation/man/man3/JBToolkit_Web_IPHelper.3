@@ -1,0 +1,68 @@
+.TH "JBToolkit.Web.IPHelper" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Web.IPHelper
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static string \fBGetExternalIP\fP ()"
+.br
+.RI "Gets the public / external IP of process "
+.ti -1c
+.RI "static bool \fBIsThereAnInternetConnetion\fP (bool useNonPingMethod=false)"
+.br
+.RI "Determines if there's a valid internet connection by querying google\&. Either by ping or by http request\&. "
+.ti -1c
+.RI "static string \fBGetVisitorIPAddress\fP (bool GetLan=false)"
+.br
+.RI "Get the IP address of the requestor "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "static string JBToolkit\&.Web\&.IPHelper\&.GetExternalIP ()\fC [static]\fP"
+
+.PP
+Gets the public / external IP of process 
+.PP
+\fBReturns\fP
+.RS 4
+Public / external IP address
+.RE
+.PP
+
+.SS "static string JBToolkit\&.Web\&.IPHelper\&.GetVisitorIPAddress (bool GetLan = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Get the IP address of the requestor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIGetLan\fP Get the visitor IP address that's on the LAN\&. Default to false
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Either IPv4 or IPv6 address (if on lan)
+.RE
+.PP
+
+.SS "static bool JBToolkit\&.Web\&.IPHelper\&.IsThereAnInternetConnetion (bool useNonPingMethod = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Determines if there's a valid internet connection by querying google\&. Either by ping or by http request\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if there is, false otherwise
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

@@ -1,0 +1,74 @@
+.TH "JBToolkit.Views.DataTableResultSet" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Views.DataTableResultSet \- Data returned to DataTable  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBJBToolkit\&.Views\&.DataTableResultError\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "string \fBToJSON\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBList\fP< object > \fBdata\fP = new \fBList\fP<object>()"
+.br
+.RI "Array of records\&. Each element of the array is itself an array of columns "
+.ti -1c
+.RI "object \fBcustomData\fP"
+.br
+.ti -1c
+.RI "int \fBdraw\fP"
+.br
+.RI "value of draw parameter sent by client "
+.ti -1c
+.RI "int \fBrecordsFiltered\fP"
+.br
+.RI "filtered record count "
+.ti -1c
+.RI "int \fBrecordsTotal\fP"
+.br
+.RI "total record count in resultset "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Data returned to DataTable 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "string JBToolkit\&.Views\&.DataTableResultSet\&.ToJSON ()"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "object JBToolkit\&.Views\&.DataTableResultSet\&.customData"
+
+.SS "\fBList\fP<object> JBToolkit\&.Views\&.DataTableResultSet\&.data = new \fBList\fP<object>()"
+
+.PP
+Array of records\&. Each element of the array is itself an array of columns 
+.SS "int JBToolkit\&.Views\&.DataTableResultSet\&.draw"
+
+.PP
+value of draw parameter sent by client 
+.SS "int JBToolkit\&.Views\&.DataTableResultSet\&.recordsFiltered"
+
+.PP
+filtered record count 
+.SS "int JBToolkit\&.Views\&.DataTableResultSet\&.recordsTotal"
+
+.PP
+total record count in resultset 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

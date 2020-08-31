@@ -1,0 +1,92 @@
+.TH "JBToolkit.Zip.ZipExtraction" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Zip.ZipExtraction \- Contains multiple method for extracting a zip file to either disk or various streams  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Dictionary< string, MemoryStream > \fBExtractToMemoryStreamDictionary\fP (Stream targFileStream)"
+.br
+.RI "Extracts a zip stream to a dictionary of file and Memory \fBStreams\fP "
+.ti -1c
+.RI "Dictionary< string, MemoryStream > \fBExtractToMemoryStreamDictionary\fP (string zipFilePath)"
+.br
+.RI "Extracts a zip file to a dictionary of file and Memory \fBStreams\fP "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static Dictionary< string, byte[]> \fBExtractToByteArrayDictionary\fP (Stream targetStream)"
+.br
+.RI "Extracts a zip stream to a dictionary of file and byte arrays "
+.ti -1c
+.RI "static \fBFilePathAndBytesCollection\fP \fBExtractToFilePathAndBytesCollection\fP (Stream targetStream)"
+.br
+.RI "Extracts a zip stream to a \fBFilePathAndBytes\fP collection object "
+.ti -1c
+.RI "static \fBFilePathAndBytesCollection\fP \fBExtractToFilePathAndBytesCollection\fP (string zipFilePath)"
+.br
+.RI "Extracts a zip file to a \fBFilePathAndBytes\fP collection object "
+.ti -1c
+.RI "static Dictionary< string, byte[]> \fBExtractToByteArrayDictionary\fP (string zipFilePath)"
+.br
+.RI "Extract a zip file to a dictionary of file paths and byte arrays "
+.ti -1c
+.RI "static void \fBExtractToDisk\fP (Stream zipStream, string targetPath)"
+.br
+.RI "Extract a zip stream to disk "
+.ti -1c
+.RI "static void \fBExtractToDisk\fP (string zipPath, string targetPath)"
+.br
+.RI "Extract a zip file to disk "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains multiple method for extracting a zip file to either disk or various streams 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static Dictionary<string, byte[]> JBToolkit\&.Zip\&.ZipExtraction\&.ExtractToByteArrayDictionary (Stream targetStream)\fC [static]\fP"
+
+.PP
+Extracts a zip stream to a dictionary of file and byte arrays 
+.SS "static Dictionary<string, byte[]> JBToolkit\&.Zip\&.ZipExtraction\&.ExtractToByteArrayDictionary (string zipFilePath)\fC [static]\fP"
+
+.PP
+Extract a zip file to a dictionary of file paths and byte arrays 
+.SS "static void JBToolkit\&.Zip\&.ZipExtraction\&.ExtractToDisk (Stream zipStream, string targetPath)\fC [static]\fP"
+
+.PP
+Extract a zip stream to disk 
+.SS "static void JBToolkit\&.Zip\&.ZipExtraction\&.ExtractToDisk (string zipPath, string targetPath)\fC [static]\fP"
+
+.PP
+Extract a zip file to disk 
+.SS "static \fBFilePathAndBytesCollection\fP JBToolkit\&.Zip\&.ZipExtraction\&.ExtractToFilePathAndBytesCollection (Stream targetStream)\fC [static]\fP"
+
+.PP
+Extracts a zip stream to a \fBFilePathAndBytes\fP collection object 
+.SS "static \fBFilePathAndBytesCollection\fP JBToolkit\&.Zip\&.ZipExtraction\&.ExtractToFilePathAndBytesCollection (string zipFilePath)\fC [static]\fP"
+
+.PP
+Extracts a zip file to a \fBFilePathAndBytes\fP collection object 
+.SS "Dictionary<string, MemoryStream> JBToolkit\&.Zip\&.ZipExtraction\&.ExtractToMemoryStreamDictionary (Stream targFileStream)"
+
+.PP
+Extracts a zip stream to a dictionary of file and Memory \fBStreams\fP 
+.SS "Dictionary<string, MemoryStream> JBToolkit\&.Zip\&.ZipExtraction\&.ExtractToMemoryStreamDictionary (string zipFilePath)"
+
+.PP
+Extracts a zip file to a dictionary of file and Memory \fBStreams\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

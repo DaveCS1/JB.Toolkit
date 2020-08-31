@@ -1,0 +1,4 @@
+<map id="JBToolkit.PdfDoc.PdfConverter.ConvertPDFToImageByteArrayArray" name="JBToolkit.PdfDoc.PdfConverter.ConvertPDFToImageByteArrayArray">
+<area shape="rect" id="node1" title="Converts PDF to 3D byte array (array of byte arrays &#45; 1 byte array for each image for each page)" alt="" coords="233,5,463,47"/>
+<area shape="rect" id="node2" href="$da/ded/class_j_b_toolkit_1_1_googe_api_1_1_vision.html#a7e97cf7011f55ccf4b4dc13db252f663" title="Extract text from an a PDF (converts to PNG first)" alt="" coords="5,5,185,47"/>
+</map>

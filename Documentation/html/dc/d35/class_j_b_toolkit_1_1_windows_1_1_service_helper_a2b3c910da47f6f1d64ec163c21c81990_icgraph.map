@@ -1,0 +1,4 @@
+<map id="JBToolkit.Windows.ServiceHelper.AgressiveRestartService" name="JBToolkit.Windows.ServiceHelper.AgressiveRestartService">
+<area shape="rect" id="node1" title="Performs an aggressive restart of a service (i.e. kill the actual process if failing)...." alt="" coords="232,5,435,47"/>
+<area shape="rect" id="node2" href="$dc/d35/class_j_b_toolkit_1_1_windows_1_1_service_helper.html#a789bc1855cab13d044ce925ff6d3e9f0" title="Restarts a service using multiple attemps if failing. You will likely need to use impersonatation whe..." alt="" coords="5,5,184,47"/>
+</map>

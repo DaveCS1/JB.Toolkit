@@ -1,0 +1,99 @@
+.TH "JBToolkit.WinForms.FilterTextBox" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.WinForms.FilterTextBox \- Text Box control input mask wrapper  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits TextBox\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBAcceptableCharacters\fP { \fBAcceptableCharacters\&.LetterOnly\fP = 0, \fBAcceptableCharacters\&.DigitOnly\fP, \fBAcceptableCharacters\&.LetterOrDigit\fP, \fBAcceptableCharacters\&.All\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFilterTextBox\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override void \fBOnTextChanged\fP (\fBEventArgs\fP e)"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "string \fBForbidenChars\fP\fC [get, set]\fP"
+.br
+.RI "Indicate wich characters can't be in string "
+.ti -1c
+.RI "bool \fBCaptleLettersOnly\fP\fC [get, set]\fP"
+.br
+.RI "Indicate only Captle characters can write "
+.ti -1c
+.RI "\fBAcceptableCharacters\fP \fBAcceptableChars\fP\fC [get, set]\fP"
+.br
+.RI "Indicate wich type of characters are acceptable "
+.ti -1c
+.RI "override string \fBText\fP\fC [get, set]\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Text Box control input mask wrapper 
+
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBJBToolkit\&.WinForms\&.FilterTextBox\&.AcceptableCharacters\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILetterOnly \fP\fP
+.TP
+\fB\fIDigitOnly \fP\fP
+.TP
+\fB\fILetterOrDigit \fP\fP
+.TP
+\fB\fIAll \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.WinForms\&.FilterTextBox\&.FilterTextBox ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "override void JBToolkit\&.WinForms\&.FilterTextBox\&.OnTextChanged (\fBEventArgs\fP e)\fC [protected]\fP"
+
+.SH "Property Documentation"
+.PP 
+.SS "\fBAcceptableCharacters\fP JBToolkit\&.WinForms\&.FilterTextBox\&.AcceptableChars\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Indicate wich type of characters are acceptable 
+.SS "bool JBToolkit\&.WinForms\&.FilterTextBox\&.CaptleLettersOnly\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Indicate only Captle characters can write 
+.SS "string JBToolkit\&.WinForms\&.FilterTextBox\&.ForbidenChars\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Indicate wich characters can't be in string 
+.SS "override string JBToolkit\&.WinForms\&.FilterTextBox\&.Text\fC [get]\fP, \fC [set]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

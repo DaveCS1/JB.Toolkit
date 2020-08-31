@@ -1,0 +1,84 @@
+.TH "JBToolkit.GoogeApi.Geocoding" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.GoogeApi.Geocoding \- Perform geocoding operations on longitue and latitude or reverse-geocoding (i\&.e\&. long lat from address)\&. Can Get the full Google geocoding object or just the desired formatted address or lat long coordinates  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAddress_Components\fP"
+.br
+.ti -1c
+.RI "class \fBGeometry\fP"
+.br
+.ti -1c
+.RI "class \fBGoogleGeolocationObject\fP"
+.br
+.ti -1c
+.RI "class \fBLocation\fP"
+.br
+.ti -1c
+.RI "class \fBNortheast\fP"
+.br
+.ti -1c
+.RI "class \fBResult\fP"
+.br
+.ti -1c
+.RI "class \fBSouthwest\fP"
+.br
+.ti -1c
+.RI "class \fBViewport\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static string \fBGetFormattedAddressFromLatLong\fP (string lat, string lng, string googleApiKey)"
+.br
+.RI "Get a formatted address from longitude and latitude coordinates "
+.ti -1c
+.RI "static \fBLocation\fP \fBGetLatLongFromAddress\fP (string address, string googleApiKey, bool attemptForceResolve)"
+.br
+.RI "Get the longitude and latitude coordinates from an address\&. You can optionally set to 'attempt force resolve' which will iterate through the address string taking off the first character for each iteration on 'zero result'\&.\&.\&. Which would hopefully resolve to the nearest say 'street, area, town, city etc' - However this won't give as accurate result when having to resolve\&. "
+.ti -1c
+.RI "static \fBGoogleGeolocationObject\fP \fBGetGeolocationObjectFromAddress\fP (string address, string googleApiKey, bool attemptForceResolve=false)"
+.br
+.RI "Get the entire Google geocoordinates object (full json repsonse serialised as object) from a given address\&. You can optionally set to 'attempt force resolve' which will iterate through the address string taking off the first character for each iteration on 'zero result'\&.\&.\&. Which would hopefully resolve to the nearest say 'street, area, town, city etc' - However this won't give as accurate result when having to resolve\&. "
+.ti -1c
+.RI "static \fBGoogleGeolocationObject\fP \fBGetGeolocationObjectFromLatLong\fP (string lat, string lng, string googleApiKey)"
+.br
+.RI "Get the entire Google geocoordinates object from a latitute and longitude coordinates\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Perform geocoding operations on longitue and latitude or reverse-geocoding (i\&.e\&. long lat from address)\&. Can Get the full Google geocoding object or just the desired formatted address or lat long coordinates 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static string JBToolkit\&.GoogeApi\&.Geocoding\&.GetFormattedAddressFromLatLong (string lat, string lng, string googleApiKey)\fC [static]\fP"
+
+.PP
+Get a formatted address from longitude and latitude coordinates 
+.SS "static \fBGoogleGeolocationObject\fP JBToolkit\&.GoogeApi\&.Geocoding\&.GetGeolocationObjectFromAddress (string address, string googleApiKey, bool attemptForceResolve = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Get the entire Google geocoordinates object (full json repsonse serialised as object) from a given address\&. You can optionally set to 'attempt force resolve' which will iterate through the address string taking off the first character for each iteration on 'zero result'\&.\&.\&. Which would hopefully resolve to the nearest say 'street, area, town, city etc' - However this won't give as accurate result when having to resolve\&. 
+.SS "static \fBGoogleGeolocationObject\fP JBToolkit\&.GoogeApi\&.Geocoding\&.GetGeolocationObjectFromLatLong (string lat, string lng, string googleApiKey)\fC [static]\fP"
+
+.PP
+Get the entire Google geocoordinates object from a latitute and longitude coordinates\&. 
+.SS "static \fBLocation\fP JBToolkit\&.GoogeApi\&.Geocoding\&.GetLatLongFromAddress (string address, string googleApiKey, bool attemptForceResolve)\fC [static]\fP"
+
+.PP
+Get the longitude and latitude coordinates from an address\&. You can optionally set to 'attempt force resolve' which will iterate through the address string taking off the first character for each iteration on 'zero result'\&.\&.\&. Which would hopefully resolve to the nearest say 'street, area, town, city etc' - However this won't give as accurate result when having to resolve\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

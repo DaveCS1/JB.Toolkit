@@ -1,0 +1,130 @@
+.TH "JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge \- Uses OpenXML to perform a Word Mail Merge\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static byte[] \fBMergeDocumentToByteArray\fP (string templatePath, \fBDataTable\fP mailMergeData, bool saveAsPDF)"
+.br
+.RI "Performs a mail merges given a dictionary of merge fields and their merge values and returns a byte array "
+.ti -1c
+.RI "static string \fBMergeDocumentAsBase64String\fP (string templatePath, \fBDataTable\fP mailMergeData, bool saveAsPDF)"
+.br
+.RI "Performs a mail merges given a dictionary of merge fields and their merge values and returns a base64 string (for blobs) "
+.ti -1c
+.RI "static MemoryStream \fBMergeDocumentToMemoryStream\fP (string templatePath, \fBDataTable\fP mailMergeData, bool saveAsPDF)"
+.br
+.RI "Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory Stream "
+.ti -1c
+.RI "static void \fBMergeDocumentAndSave\fP (string templatePath, string outputPath, \fBDataTable\fP mailMergeData, bool saveAsPDF, bool openAndRender=false)"
+.br
+.RI "Performs a mail merges given a dictionary of merge fields and their merge values and saves or opens word for user interaction "
+.ti -1c
+.RI "static bool \fBIsAMergeField\fP (Field field)"
+.br
+.RI "Is a particular field Word mail merge field "
+.ti -1c
+.RI "static void \fBRemovedUnmappedMergeFields\fP (Document document, \fBDataTable\fP mergeData)"
+.br
+.RI "Remove any unmerged fields remaining in the document "
+.ti -1c
+.RI "static string \fBStripMergeFieldFormatting\fP (string mergeFieldText)"
+.br
+.RI "If a merge field is in the Word document format 'MERGEFIELD SomeMergeField' then just return the field as it's shown between the '«' and '»"\&. Useful if you're trying to automate mapping DataTable column names to merge fields "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Uses OpenXML to perform a Word Mail Merge\&. 
+
+Microsoft Word needs to be installed on the executing machine in order to use this\&. It uses an Interop API, which means to perform the mail merge, Word needs to be opened in the background, then the mail merge is run and finally office is closed down\&.
+.PP
+This is the most reliable in terms of output format, and you can extend to run macros, however this isn't the best means in terms of efficiency and it isn't cross user thread safe\&. So if you're wanting to use as part of a web service / web site running on IIS, you'll need to make sure Office is installed, you employ lock / wait timers and additional configurations are setup, refer to this guides:
+.PP
+https://www.ryadel.com/en/office-interop-dcom-config-windows-server-iis-word-excel-access-asp-net-c-sharp/ http://www.bloing.net/2011/01/how-to-make-iis7-play-nice-with-office-interop/
+.PP
+Don't use if the class will get hammered\&. Either try the OpenXML implementation in this toolkit or speak to someone to invest in Aspose software\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static bool JBToolkit\&.XmlDoc\&.MailMerge\&.WordInteropMailMerge\&.IsAMergeField (Field field)\fC [static]\fP"
+
+.PP
+Is a particular field Word mail merge field 
+.SS "static void JBToolkit\&.XmlDoc\&.MailMerge\&.WordInteropMailMerge\&.MergeDocumentAndSave (string templatePath, string outputPath, \fBDataTable\fP mailMergeData, bool saveAsPDF, bool openAndRender = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Performs a mail merges given a dictionary of merge fields and their merge values and saves or opens word for user interaction 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplatePath\fP Path to mail merge template
+.br
+\fImailMergeData\fP A Dictionary of Merge Fields and values
+.br
+\fIsaveAsPDF\fP Whether to save as PDF or docx
+.RE
+.PP
+
+.SS "static string JBToolkit\&.XmlDoc\&.MailMerge\&.WordInteropMailMerge\&.MergeDocumentAsBase64String (string templatePath, \fBDataTable\fP mailMergeData, bool saveAsPDF)\fC [static]\fP"
+
+.PP
+Performs a mail merges given a dictionary of merge fields and their merge values and returns a base64 string (for blobs) 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplatePath\fP Path to mail merge template
+.br
+\fImailMergeData\fP A Dictionary of Merge Fields and values
+.br
+\fIsaveAsPDF\fP Whether to save as PDF or docx
+.RE
+.PP
+
+.SS "static byte [] JBToolkit\&.XmlDoc\&.MailMerge\&.WordInteropMailMerge\&.MergeDocumentToByteArray (string templatePath, \fBDataTable\fP mailMergeData, bool saveAsPDF)\fC [static]\fP"
+
+.PP
+Performs a mail merges given a dictionary of merge fields and their merge values and returns a byte array 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplatePath\fP Path to mail merge template
+.br
+\fImailMergeData\fP A Dictionary of Merge Fields and values
+.br
+\fIsaveAsPDF\fP Whether to save as PDF or docx
+.RE
+.PP
+
+.SS "static MemoryStream JBToolkit\&.XmlDoc\&.MailMerge\&.WordInteropMailMerge\&.MergeDocumentToMemoryStream (string templatePath, \fBDataTable\fP mailMergeData, bool saveAsPDF)\fC [static]\fP"
+
+.PP
+Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory Stream 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplatePath\fP Path to mail merge template
+.br
+\fImailMergeData\fP A Dictionary of Merge Fields and values
+.br
+\fIsaveAsPDF\fP Whether to save as PDF or docx
+.RE
+.PP
+
+.SS "static void JBToolkit\&.XmlDoc\&.MailMerge\&.WordInteropMailMerge\&.RemovedUnmappedMergeFields (Document document, \fBDataTable\fP mergeData)\fC [static]\fP"
+
+.PP
+Remove any unmerged fields remaining in the document 
+.SS "static string JBToolkit\&.XmlDoc\&.MailMerge\&.WordInteropMailMerge\&.StripMergeFieldFormatting (string mergeFieldText)\fC [static]\fP"
+
+.PP
+If a merge field is in the Word document format 'MERGEFIELD SomeMergeField' then just return the field as it's shown between the '«' and '»"\&. Useful if you're trying to automate mapping DataTable column names to merge fields 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

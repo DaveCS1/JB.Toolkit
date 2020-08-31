@@ -1,0 +1,33 @@
+.TH "JBToolkit.InterProcessComms.Wcf.WcfClient" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.InterProcessComms.Wcf.WcfClient \- Client to host communication (1 direction) Named Pipe implementation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBClientBase< IIpcClient >\fP, and \fBJBToolkit\&.InterProcessComms\&.IIpcClient\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBSend\fP (string data)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Client to host communication (1 direction) Named Pipe implementation\&. 
+
+Obivously the pipe name needs to be what you defined in your host / server\&. When implementing the 'Faulted' method, you need to actually recreate the \fBWcfClient\fP object to undo it's faulted state\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void JBToolkit\&.InterProcessComms\&.Wcf\&.WcfClient\&.Send (string data)"
+
+.PP
+Implements \fBJBToolkit\&.InterProcessComms\&.IIpcClient\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

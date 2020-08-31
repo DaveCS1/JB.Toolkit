@@ -1,0 +1,176 @@
+\hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser}{}\doxysection{J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Parser Class Reference}
+\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser}\index{JBToolkit.PdfDoc.PdfParser@{JBToolkit.PdfDoc.PdfParser}}
+
+
+P\+DF Parsing methods  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Parser\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{d9/d99/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_aef58a25afbcefb7ced01c74e855bb543}{Get\+P\+D\+F\+Content\+As\+String}} (string path, int timeout\+Seconds=30, bool throw\+On\+Error=true, bool utilise\+P\+D\+Fto\+Text\+Command\+Line\+Utility=true)
+\begin{DoxyCompactList}\small\item\em Converts P\+DF to pure text using i\+Text\+Sharp (very quick) and optionally falls back to using x\+P\+DF P\+D\+Fto\+Text command line utility (embedded) if i\+Text\+Sharp text extract fails \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_abd3cd3860e3270b17231981909a7bf1e}{Get\+P\+D\+F\+Content\+As\+String}} (Memory\+Stream ms, int timeout\+Seconds=30, bool throw\+On\+Error=true, bool utilise\+P\+D\+Fto\+Text\+Command\+Line\+Utility=true)
+\begin{DoxyCompactList}\small\item\em Converts P\+DF to pure text using i\+Text\+Sharp (very quick) and optionally falls back to using x\+P\+DF P\+D\+Fto\+Text command line utility (embedded) if i\+Text\+Sharp text extract fails. ~\newline
+ \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_ad9ad9ce5b7554a8fd8f6595a0c555436}{Get\+P\+D\+F\+Content\+As\+String\+\_\+\+Cmd\+Line\+Tool}} (string path, int timeout\+Seconds=30, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Converts P\+DF to pure text using x\+P\+DF P\+D\+Fto\+Text command line utility (embedded) if i\+Text\+Sharp text extract fails \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_a4be9e043e026aab5bcaf3e14ce540c37}{Get\+P\+D\+F\+Content\+As\+String\+\_\+\+Cmd\+Line\+Tool}} (Memory\+Stream ms, int timeout\+Seconds=30, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Converts P\+DF to pure text using x\+P\+DF P\+D\+Fto\+Text command line utility (embedded) if i\+Text\+Sharp text extract fails \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+P\+DF Parsing methods 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_abd3cd3860e3270b17231981909a7bf1e}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_abd3cd3860e3270b17231981909a7bf1e}} 
+\index{JBToolkit.PdfDoc.PdfParser@{JBToolkit.PdfDoc.PdfParser}!GetPDFContentAsString@{GetPDFContentAsString}}
+\index{GetPDFContentAsString@{GetPDFContentAsString}!JBToolkit.PdfDoc.PdfParser@{JBToolkit.PdfDoc.PdfParser}}
+\doxysubsubsection{\texorpdfstring{GetPDFContentAsString()}{GetPDFContentAsString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Parser.\+Get\+P\+D\+F\+Content\+As\+String (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{int}]{timeout\+Seconds = {\ttfamily 30},  }\item[{bool}]{throw\+On\+Error = {\ttfamily true},  }\item[{bool}]{utilise\+P\+D\+Fto\+Text\+Command\+Line\+Utility = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts P\+DF to pure text using i\+Text\+Sharp (very quick) and optionally falls back to using x\+P\+DF P\+D\+Fto\+Text command line utility (embedded) if i\+Text\+Sharp text extract fails. ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to P\+DF file\\
+\hline
+{\em timeout\+Seconds} & Timeout in seconds before reporting failure\\
+\hline
+{\em throw\+On\+Error} & Whether not to throw (break) on error just return an empty string\\
+\hline
+{\em utilise\+P\+D\+Fto\+Text\+Command\+Line\+Utility} & Default to true -\/ Flag to optionally use the embedded x\+P\+DF Pdfto\+Text command line utility (slow) as a fallback when i\+Text\+Sharp doesn\textquotesingle{}t work\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Content as string
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da7/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_abd3cd3860e3270b17231981909a7bf1e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_aef58a25afbcefb7ced01c74e855bb543}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_aef58a25afbcefb7ced01c74e855bb543}} 
+\index{JBToolkit.PdfDoc.PdfParser@{JBToolkit.PdfDoc.PdfParser}!GetPDFContentAsString@{GetPDFContentAsString}}
+\index{GetPDFContentAsString@{GetPDFContentAsString}!JBToolkit.PdfDoc.PdfParser@{JBToolkit.PdfDoc.PdfParser}}
+\doxysubsubsection{\texorpdfstring{GetPDFContentAsString()}{GetPDFContentAsString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Parser.\+Get\+P\+D\+F\+Content\+As\+String (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{int}]{timeout\+Seconds = {\ttfamily 30},  }\item[{bool}]{throw\+On\+Error = {\ttfamily true},  }\item[{bool}]{utilise\+P\+D\+Fto\+Text\+Command\+Line\+Utility = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts P\+DF to pure text using i\+Text\+Sharp (very quick) and optionally falls back to using x\+P\+DF P\+D\+Fto\+Text command line utility (embedded) if i\+Text\+Sharp text extract fails 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to P\+DF file\\
+\hline
+{\em timeout\+Seconds} & Timeout in seconds before reporting failure\\
+\hline
+{\em throw\+On\+Error} & Whether not to throw (break) on error just return an empty string\\
+\hline
+{\em utilise\+P\+D\+Fto\+Text\+Command\+Line\+Utility} & Default to true -\/ Flag to optionally use the embedded x\+P\+DF Pdfto\+Text command line utility (slow) as a fallback when i\+Text\+Sharp doesn\textquotesingle{}t work\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Content as string
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da7/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_aef58a25afbcefb7ced01c74e855bb543_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da7/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_aef58a25afbcefb7ced01c74e855bb543_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_a4be9e043e026aab5bcaf3e14ce540c37}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_a4be9e043e026aab5bcaf3e14ce540c37}} 
+\index{JBToolkit.PdfDoc.PdfParser@{JBToolkit.PdfDoc.PdfParser}!GetPDFContentAsString\_CmdLineTool@{GetPDFContentAsString\_CmdLineTool}}
+\index{GetPDFContentAsString\_CmdLineTool@{GetPDFContentAsString\_CmdLineTool}!JBToolkit.PdfDoc.PdfParser@{JBToolkit.PdfDoc.PdfParser}}
+\doxysubsubsection{\texorpdfstring{GetPDFContentAsString\_CmdLineTool()}{GetPDFContentAsString\_CmdLineTool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Parser.\+Get\+P\+D\+F\+Content\+As\+String\+\_\+\+Cmd\+Line\+Tool (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{int}]{timeout\+Seconds = {\ttfamily 30},  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts P\+DF to pure text using x\+P\+DF P\+D\+Fto\+Text command line utility (embedded) if i\+Text\+Sharp text extract fails 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to P\+DF file\\
+\hline
+{\em timeout\+Seconds} & Timeout in seconds before reporting failure\\
+\hline
+{\em throw\+On\+Error} & Whether not to throw (break) on error just return an empty string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Content as string
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da7/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_a4be9e043e026aab5bcaf3e14ce540c37_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_ad9ad9ce5b7554a8fd8f6595a0c555436}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_ad9ad9ce5b7554a8fd8f6595a0c555436}} 
+\index{JBToolkit.PdfDoc.PdfParser@{JBToolkit.PdfDoc.PdfParser}!GetPDFContentAsString\_CmdLineTool@{GetPDFContentAsString\_CmdLineTool}}
+\index{GetPDFContentAsString\_CmdLineTool@{GetPDFContentAsString\_CmdLineTool}!JBToolkit.PdfDoc.PdfParser@{JBToolkit.PdfDoc.PdfParser}}
+\doxysubsubsection{\texorpdfstring{GetPDFContentAsString\_CmdLineTool()}{GetPDFContentAsString\_CmdLineTool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Parser.\+Get\+P\+D\+F\+Content\+As\+String\+\_\+\+Cmd\+Line\+Tool (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{int}]{timeout\+Seconds = {\ttfamily 30},  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts P\+DF to pure text using x\+P\+DF P\+D\+Fto\+Text command line utility (embedded) if i\+Text\+Sharp text extract fails 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to P\+DF file\\
+\hline
+{\em timeout\+Seconds} & Timeout in seconds before reporting failure\\
+\hline
+{\em throw\+On\+Error} & Whether not to throw (break) on error just return an empty string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Content as string
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da7/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_ad9ad9ce5b7554a8fd8f6595a0c555436_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da7/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser_ad9ad9ce5b7554a8fd8f6595a0c555436_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Pdf\+Doc/\mbox{\hyperlink{_pdf_parser_8cs}{Pdf\+Parser.\+cs}}\end{DoxyCompactItemize}

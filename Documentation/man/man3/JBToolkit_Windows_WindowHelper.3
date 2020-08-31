@@ -1,0 +1,96 @@
+.TH "JBToolkit.Windows.WindowHelper" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Windows.WindowHelper \- As in the actual program Window rather then the '\fBWindows\fP' operating system\&.\&.\&. Used to focus windows (bring to front etc)  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBRECT\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBSetForegroundWindow\fP (int hwnd)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBRECT\fP \fBGetWindowRect\fP (IntPtr hWnd)"
+.br
+.ti -1c
+.RI "static void \fBGetDesktopWindowHandlesAndTitles\fP (out \fBList\fP< IntPtr > handles, out \fBList\fP< string > titles)"
+.br
+.ti -1c
+.RI "static void \fBMoveWindow\fP (Process process, int x, int y, int width, int hight)"
+.br
+.RI "Move and / or resize window "
+.ti -1c
+.RI "static void \fBMoveWindow\fP (IntPtr handle, int x, int y, int width, int hight)"
+.br
+.RI "Move and / or resize window "
+.ti -1c
+.RI "static void \fBBringMainWindowToFront\fP (IntPtr hWnd)"
+.br
+.RI "Focus's the main window of the process to the very front "
+.ti -1c
+.RI "static void \fBBringMainWindowToFront\fP (string processName)"
+.br
+.RI "Focus's the main window of the process to the very front "
+.in -1c
+.SH "Detailed Description"
+.PP 
+As in the actual program Window rather then the '\fBWindows\fP' operating system\&.\&.\&. Used to focus windows (bring to front etc) 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static void JBToolkit\&.Windows\&.WindowHelper\&.BringMainWindowToFront (IntPtr hWnd)\fC [static]\fP"
+
+.PP
+Focus's the main window of the process to the very front 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprocessName\fP 
+.RE
+.PP
+
+.SS "static void JBToolkit\&.Windows\&.WindowHelper\&.BringMainWindowToFront (string processName)\fC [static]\fP"
+
+.PP
+Focus's the main window of the process to the very front 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprocessName\fP 
+.RE
+.PP
+
+.SS "static void JBToolkit\&.Windows\&.WindowHelper\&.GetDesktopWindowHandlesAndTitles (out \fBList\fP< IntPtr > handles, out \fBList\fP< string > titles)\fC [static]\fP"
+
+.SS "static \fBRECT\fP JBToolkit\&.Windows\&.WindowHelper\&.GetWindowRect (IntPtr hWnd)\fC [static]\fP"
+
+.SS "static void JBToolkit\&.Windows\&.WindowHelper\&.MoveWindow (IntPtr handle, int x, int y, int width, int hight)\fC [static]\fP"
+
+.PP
+Move and / or resize window 
+.SS "static void JBToolkit\&.Windows\&.WindowHelper\&.MoveWindow (Process process, int x, int y, int width, int hight)\fC [static]\fP"
+
+.PP
+Move and / or resize window 
+.SS "static int JBToolkit\&.Windows\&.WindowHelper\&.SetForegroundWindow (int hwnd)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

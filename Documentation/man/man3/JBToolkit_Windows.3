@@ -1,0 +1,117 @@
+.TH "JBToolkit.Windows" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Windows
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBConsoleHelper\fP"
+.br
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBCommonFileTypeExtensions\fP"
+.br
+.RI "An every growing list of common file type / format extensions "
+.ti -1c
+.RI "class \fBDirectoryHelper\fP"
+.br
+.RI "Class containing methods to retrieve specific file system paths\&. "
+.ti -1c
+.RI "class \fBFastDirectoryEnumerator\fP"
+.br
+.RI "A fast enumerator of files in a directory\&. Use this if you need to get attributes for all files in a directory\&. "
+.ti -1c
+.RI "class \fBFileData\fP"
+.br
+.RI "Contains information about a file returned by the FastDirectoryEnumerator class\&. /// Got code from here: https://www.codeproject.com/Articles/38959/A-Faster-Directory-Enumerator "
+.ti -1c
+.RI "class \fBProcessHelper\fP"
+.br
+.ti -1c
+.RI "class \fBServiceHelper\fP"
+.br
+.RI "Contain method for remote reliably manipulating \fBWindows\fP Services\&. You will likely need to use impersonatation when calling i\&.e: "
+.ti -1c
+.RI "class \fBUacHelper\fP"
+.br
+.RI "Mainly used to determine if a process is running with elevated (i\&.e\&. admin) permissions\&. Useful if we want to prevent the user from going any futher in the program execution unless they are an adminstrator "
+.ti -1c
+.RI "class \fBWIN32_FIND_DATA\fP"
+.br
+.RI "Contains information about the file that is found by the FindFirstFile or FindNextFile functions\&. "
+.ti -1c
+.RI "class \fBWindowHelper\fP"
+.br
+.RI "As in the actual program Window rather then the '\fBWindows\fP' operating system\&.\&.\&. Used to focus windows (bring to front etc) "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBKnownFolder\fP { \fBKnownFolder\&.Contacts\fP, \fBKnownFolder\&.Desktop\fP, \fBKnownFolder\&.Documents\fP, \fBKnownFolder\&.Favorites\fP, \fBKnownFolder\&.Links\fP, \fBKnownFolder\&.Music\fP, \fBKnownFolder\&.Pictures\fP, \fBKnownFolder\&.SavedGames\fP, \fBKnownFolder\&.SavedSearches\fP, \fBKnownFolder\&.Videos\fP, \fBKnownFolder\&.Fonts\fP, \fBKnownFolder\&.PublicFolder\fP, \fBKnownFolder\&.ThreeDObjects\fP, \fBKnownFolder\&.Downloads\fP }"
+.br
+.RI "Standard folders registered with the system\&. These folders are installed with Windows Vista and later operating systems, and a computer will have only folders appropriate to it installed\&. "
+.ti -1c
+.RI "enum \fBContextType\fP { \fBContextType\&.Application\fP, \fBContextType\&.HttpContext\fP }"
+.br
+.RI "Specify application or website / web service context "
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBJBToolkit\&.Windows\&.ContextType\fP\fC [strong]\fP"
+
+.PP
+Specify application or website / web service context 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIApplication \fP\fP
+.TP
+\fB\fIHttpContext \fP\fP
+.SS "enum \fBJBToolkit\&.Windows\&.KnownFolder\fP\fC [strong]\fP"
+
+.PP
+Standard folders registered with the system\&. These folders are installed with \fBWindows\fP Vista and later operating systems, and a computer will have only folders appropriate to it installed\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIContacts \fP\fP
+.TP
+\fB\fIDesktop \fP\fP
+.TP
+\fB\fIDocuments \fP\fP
+.TP
+\fB\fIFavorites \fP\fP
+.TP
+\fB\fILinks \fP\fP
+.TP
+\fB\fIMusic \fP\fP
+.TP
+\fB\fIPictures \fP\fP
+.TP
+\fB\fISavedGames \fP\fP
+.TP
+\fB\fISavedSearches \fP\fP
+.TP
+\fB\fIVideos \fP\fP
+.TP
+\fB\fIFonts \fP\fP
+.TP
+\fB\fIPublicFolder \fP\fP
+.TP
+\fB\fIThreeDObjects \fP\fP
+.TP
+\fB\fIDownloads \fP\fP
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

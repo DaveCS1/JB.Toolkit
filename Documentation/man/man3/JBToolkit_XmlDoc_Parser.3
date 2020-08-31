@@ -1,0 +1,48 @@
+.TH "JBToolkit.XmlDoc.Parser" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.XmlDoc.Parser \- Parses and returns the text an MS Office document (docx, xlsx, msg, eml, pptx, vsdx, pub), PDF, or Image (using OCR)  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static string \fBGetTextFromDocument\fP (string inputPath, bool tryKeepTextPosition=false, int timeoutSeconds=60)"
+.br
+.RI "Parses and returns the text an MS Office document (docx, xlsx, msg, eml, pptx, vsdx, pub), PDF, or Image (using OCR) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Parses and returns the text an MS Office document (docx, xlsx, msg, eml, pptx, vsdx, pub), PDF, or Image (using OCR) 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static string JBToolkit\&.XmlDoc\&.Parser\&.GetTextFromDocument (string inputPath, bool tryKeepTextPosition = \fCfalse\fP, int timeoutSeconds = \fC60\fP)\fC [static]\fP"
+
+.PP
+Parses and returns the text an MS Office document (docx, xlsx, msg, eml, pptx, vsdx, pub), PDF, or Image (using OCR) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinputPath\fP Document input path
+.br
+\fItryKeepTextPosition\fP Converts to a PDF memory stream first then extracts text\&. The PDF text extractor is better at maintaining text, paragraph and formatting locations (slow)
+.br
+\fItimeoutSeconds\fP Time in seconds before throwing timeout exception
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Text string
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

@@ -1,0 +1,200 @@
+.TH "JBToolkit.Zip.ZipCompression" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Zip.ZipCompression \- Contains multiple method for saving zip files or returning a zip file as a stream  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static MemoryStream \fBGetZipFlatFilesStream\fP (\fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP, params \fBFilePathAndBytes\fP[] fileBytes)"
+.br
+.RI "Returns a zip file containing a flat list of files as a Memory Stream\&. The input being multiple paramters of a FileByte object "
+.ti -1c
+.RI "static MemoryStream \fBGetZipFlatFilesStream\fP (\fBFilePathAndBytesCollection\fP fileBytes, \fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP)"
+.br
+.RI "Returns a zip file containing a flat list of files as a Memory Stream\&. The input being a FileBytes collection object "
+.ti -1c
+.RI "static MemoryStream \fBGetZipFlatFilesStream\fP (\fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP, params string[] filePaths)"
+.br
+.RI "Returns a zip file containing a flat list of files as a Memory Stream\&. The input being multiple paramters of file path strings "
+.ti -1c
+.RI "static MemoryStream \fBGetZipFlatFilesStream\fP (\fBList\fP< string > filePaths, \fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP)"
+.br
+.RI "Returns a zip file containing a flat list of files as a Memory Stream\&. The input being a list of file path strings "
+.ti -1c
+.RI "static byte[] \fBGetZipFlatFilesByteArray\fP (\fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP, params \fBFilePathAndBytes\fP[] fileBytes)"
+.br
+.RI "Returns a zip file containing a flat list of files as a byte array\&. The input being multiple paramters of a FileByte object "
+.ti -1c
+.RI "static byte[] \fBGetZipFlatFilesByteArray\fP (\fBFilePathAndBytesCollection\fP fileBytes, \fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP)"
+.br
+.RI "Returns a zip file containing a flat list of files as a byte array\&. The input being a FileBytes collection object "
+.ti -1c
+.RI "static byte[] \fBGetZipFlatFilesByteArray\fP (\fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP, params string[] \fBfiles\fP)"
+.br
+.RI "Returns a zip file containing a flat list of files as a byte array\&. The input being multiple paramters of file path strings "
+.ti -1c
+.RI "static byte[] \fBGetZipFlatFilesByteArray\fP (\fBList\fP< string > filePaths, \fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP)"
+.br
+.RI "Returns a zip file containing a flat list of files as a byte array\&. The input being a list of file path strings "
+.ti -1c
+.RI "static FileContentResult \fBGetZipFlatFilesFileContentResult\fP (\fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP, params \fBFilePathAndBytes\fP[] fileBytes)"
+.br
+.RI "Returns a zip file containing a flat list of files as a FileContentResult (good for MVC file action controller)\&. The input being multiple paramters of a FileByte object "
+.ti -1c
+.RI "static FileContentResult \fBGetZipFlatFilesFileContentResult\fP (\fBFilePathAndBytesCollection\fP fileBytes, \fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP)"
+.br
+.RI "Returns a zip file containing a flat list of files as a FileContentResult (good for MVC file action controller)\&. The input being a FileBytes collection object "
+.ti -1c
+.RI "static FileContentResult \fBGetZipFlatFilesFileContentResult\fP (\fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP, params string[] filePaths)"
+.br
+.RI "Returns a zip file containing a flat list of files as a FileContentResult (good for MVC file action controller)\&. The input being multiple file path strings "
+.ti -1c
+.RI "static FileContentResult \fBGetZipFlatFilesFileContentResult\fP (\fBList\fP< string > filePaths, \fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP)"
+.br
+.RI "Returns a zip file containing a flat list of files as a FileContentResult (good for MVC file action controller)\&. The input being a list of file paths "
+.ti -1c
+.RI "static void \fBSaveZipFlatFiles\fP (string outputPath, \fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP, params \fBFilePathAndBytes\fP[] fileBytes)"
+.br
+.RI "Saves a zip file containing a flat list of files to disk\&. The input being multiple paramters of a FileByte object "
+.ti -1c
+.RI "static void \fBSaveZipFlatFiles\fP (string outputPath, \fBFilePathAndBytesCollection\fP fileBytes, \fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP)"
+.br
+.RI "Saves a zip file containing a flat list of files to disk\&. The input being a FileBytes collection object "
+.ti -1c
+.RI "static void \fBSaveZipFlatFiles\fP (string outputPath, \fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP, params string[] filePaths)"
+.br
+.RI "Saves a zip file containing a flat list of files to disk\&. The input being multiple file path strings "
+.ti -1c
+.RI "static void \fBSaveZipFlatFiles\fP (string outputPath, \fBList\fP< string > filePaths, \fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP)"
+.br
+.RI "Saves a zip file containing a flat list of files to disk\&. The input being a list of file paths "
+.ti -1c
+.RI "static MemoryStream \fBGetZipDirectoryStream\fP (string targetRootDirectory, \fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP)"
+.br
+.RI "Zips and entire directory as a Memory Stream (including sub-directories)\&. The input being the target directory "
+.ti -1c
+.RI "static byte[] \fBGetZipDirectoryByteArray\fP (string targetRootDirectory, \fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP)"
+.br
+.RI "Zips and entire directory as a byte array (including sub-directories)\&. The input being the target directory "
+.ti -1c
+.RI "static FileContentResult \fBGetZipDirectoryFileContentResult\fP (string targetRootDirectory, \fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP)"
+.br
+.RI "Zips and entire directory as FileContentResult (including sub-directories - Good for MVC file action controller)\&. The input being the target directory "
+.ti -1c
+.RI "static void \fBSaveZipDirectory\fP (string outputFilename, string targetRootDirectory, \fBZipCompressionLevel\fP compressionLevel=\fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionMethod\fP compressionMethod=\fBZipCompressionMethod\&.Deflate\fP)"
+.br
+.RI "Zips and entire directory (including sub-directories) and saves to the disk\&. The input being the target directory "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "static \fBZipCompressionLevel\fP \fBZipCompressionLevel\fP = \fBZipCompressionLevel\&.Fast\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "static \fBZipCompressionMethod\fP \fBZipCompressionMethod\fP = \fBZipCompressionMethod\&.Deflate\fP\fC [get, set]\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains multiple method for saving zip files or returning a zip file as a stream 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static byte [] JBToolkit\&.Zip\&.ZipCompression\&.GetZipDirectoryByteArray (string targetRootDirectory, \fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP)\fC [static]\fP"
+
+.PP
+Zips and entire directory as a byte array (including sub-directories)\&. The input being the target directory 
+.SS "static FileContentResult JBToolkit\&.Zip\&.ZipCompression\&.GetZipDirectoryFileContentResult (string targetRootDirectory, \fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP)\fC [static]\fP"
+
+.PP
+Zips and entire directory as FileContentResult (including sub-directories - Good for MVC file action controller)\&. The input being the target directory 
+.SS "static MemoryStream JBToolkit\&.Zip\&.ZipCompression\&.GetZipDirectoryStream (string targetRootDirectory, \fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP)\fC [static]\fP"
+
+.PP
+Zips and entire directory as a Memory Stream (including sub-directories)\&. The input being the target directory 
+.SS "static byte [] JBToolkit\&.Zip\&.ZipCompression\&.GetZipFlatFilesByteArray (\fBFilePathAndBytesCollection\fP fileBytes, \fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP)\fC [static]\fP"
+
+.PP
+Returns a zip file containing a flat list of files as a byte array\&. The input being a FileBytes collection object 
+.SS "static byte [] JBToolkit\&.Zip\&.ZipCompression\&.GetZipFlatFilesByteArray (\fBList\fP< string > filePaths, \fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP)\fC [static]\fP"
+
+.PP
+Returns a zip file containing a flat list of files as a byte array\&. The input being a list of file path strings 
+.SS "static byte [] JBToolkit\&.Zip\&.ZipCompression\&.GetZipFlatFilesByteArray (\fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP, params \fBFilePathAndBytes\fP[] fileBytes)\fC [static]\fP"
+
+.PP
+Returns a zip file containing a flat list of files as a byte array\&. The input being multiple paramters of a FileByte object 
+.SS "static byte [] JBToolkit\&.Zip\&.ZipCompression\&.GetZipFlatFilesByteArray (\fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP, params string[] files)\fC [static]\fP"
+
+.PP
+Returns a zip file containing a flat list of files as a byte array\&. The input being multiple paramters of file path strings 
+.SS "static FileContentResult JBToolkit\&.Zip\&.ZipCompression\&.GetZipFlatFilesFileContentResult (\fBFilePathAndBytesCollection\fP fileBytes, \fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP)\fC [static]\fP"
+
+.PP
+Returns a zip file containing a flat list of files as a FileContentResult (good for MVC file action controller)\&. The input being a FileBytes collection object 
+.SS "static FileContentResult JBToolkit\&.Zip\&.ZipCompression\&.GetZipFlatFilesFileContentResult (\fBList\fP< string > filePaths, \fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP)\fC [static]\fP"
+
+.PP
+Returns a zip file containing a flat list of files as a FileContentResult (good for MVC file action controller)\&. The input being a list of file paths 
+.SS "static FileContentResult JBToolkit\&.Zip\&.ZipCompression\&.GetZipFlatFilesFileContentResult (\fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP, params \fBFilePathAndBytes\fP[] fileBytes)\fC [static]\fP"
+
+.PP
+Returns a zip file containing a flat list of files as a FileContentResult (good for MVC file action controller)\&. The input being multiple paramters of a FileByte object 
+.SS "static FileContentResult JBToolkit\&.Zip\&.ZipCompression\&.GetZipFlatFilesFileContentResult (\fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP, params string[] filePaths)\fC [static]\fP"
+
+.PP
+Returns a zip file containing a flat list of files as a FileContentResult (good for MVC file action controller)\&. The input being multiple file path strings 
+.SS "static MemoryStream JBToolkit\&.Zip\&.ZipCompression\&.GetZipFlatFilesStream (\fBFilePathAndBytesCollection\fP fileBytes, \fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP)\fC [static]\fP"
+
+.PP
+Returns a zip file containing a flat list of files as a Memory Stream\&. The input being a FileBytes collection object 
+.SS "static MemoryStream JBToolkit\&.Zip\&.ZipCompression\&.GetZipFlatFilesStream (\fBList\fP< string > filePaths, \fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP)\fC [static]\fP"
+
+.PP
+Returns a zip file containing a flat list of files as a Memory Stream\&. The input being a list of file path strings 
+.SS "static MemoryStream JBToolkit\&.Zip\&.ZipCompression\&.GetZipFlatFilesStream (\fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP, params \fBFilePathAndBytes\fP[] fileBytes)\fC [static]\fP"
+
+.PP
+Returns a zip file containing a flat list of files as a Memory Stream\&. The input being multiple paramters of a FileByte object 
+.SS "static MemoryStream JBToolkit\&.Zip\&.ZipCompression\&.GetZipFlatFilesStream (\fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP, params string[] filePaths)\fC [static]\fP"
+
+.PP
+Returns a zip file containing a flat list of files as a Memory Stream\&. The input being multiple paramters of file path strings 
+.SS "static void JBToolkit\&.Zip\&.ZipCompression\&.SaveZipDirectory (string outputFilename, string targetRootDirectory, \fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP)\fC [static]\fP"
+
+.PP
+Zips and entire directory (including sub-directories) and saves to the disk\&. The input being the target directory 
+.SS "static void JBToolkit\&.Zip\&.ZipCompression\&.SaveZipFlatFiles (string outputPath, \fBFilePathAndBytesCollection\fP fileBytes, \fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP)\fC [static]\fP"
+
+.PP
+Saves a zip file containing a flat list of files to disk\&. The input being a FileBytes collection object 
+.SS "static void JBToolkit\&.Zip\&.ZipCompression\&.SaveZipFlatFiles (string outputPath, \fBList\fP< string > filePaths, \fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP)\fC [static]\fP"
+
+.PP
+Saves a zip file containing a flat list of files to disk\&. The input being a list of file paths 
+.SS "static void JBToolkit\&.Zip\&.ZipCompression\&.SaveZipFlatFiles (string outputPath, \fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP, params \fBFilePathAndBytes\fP[] fileBytes)\fC [static]\fP"
+
+.PP
+Saves a zip file containing a flat list of files to disk\&. The input being multiple paramters of a FileByte object 
+.SS "static void JBToolkit\&.Zip\&.ZipCompression\&.SaveZipFlatFiles (string outputPath, \fBZipCompressionLevel\fP compressionLevel = \fC\fBZipCompressionLevel\&.Fast\fP\fP, \fBZipCompressionMethod\fP compressionMethod = \fC\fBZipCompressionMethod\&.Deflate\fP\fP, params string[] filePaths)\fC [static]\fP"
+
+.PP
+Saves a zip file containing a flat list of files to disk\&. The input being multiple file path strings 
+.SH "Property Documentation"
+.PP 
+.SS "\fBZipCompressionLevel\fP JBToolkit\&.Zip\&.ZipCompression\&.ZipCompressionLevel = \fBZipCompressionLevel\&.Fast\fP\fC [static]\fP, \fC [get]\fP, \fC [set]\fP"
+
+.SS "\fBZipCompressionMethod\fP JBToolkit\&.Zip\&.ZipCompression\&.ZipCompressionMethod = \fBZipCompressionMethod\&.Deflate\fP\fC [static]\fP, \fC [get]\fP, \fC [set]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

@@ -1,0 +1,107 @@
+.TH "JBToolkit.Web.MemoryFile" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Web.MemoryFile \- Inherits from '\fBHttpPostedFileBase\fP' - Used to create email attachments, and takes a Stream or MemoryStream)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBHttpPostedFileBase\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMemoryFile\fP (Stream stream, string contentTypeMimeString, string fileName)"
+.br
+.RI "Stream or MemoryStream "
+.ti -1c
+.RI "override void \fBSaveAs\fP (string filename)"
+.br
+.RI "Save a memory stream to file "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static Stream \fBGetStreamFromUrl\fP (string url)"
+.br
+.RI "Gets a stream from a remote URL file location "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "override int \fBContentLength\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "override string \fBContentType\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "override string \fBFileName\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "override Stream \fBInputStream\fP\fC [get]\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Inherits from '\fBHttpPostedFileBase\fP' - Used to create email attachments, and takes a Stream or MemoryStream) 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.Web\&.MemoryFile\&.MemoryFile (Stream stream, string contentTypeMimeString, string fileName)"
+
+.PP
+Stream or MemoryStream 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstream\fP 
+.br
+\fIcontentTypeMimeString\fP MIME Type i\&.e\&. 'application/pdf' or 'image/png'
+.br
+\fIfileName\fP Given filename for the email attachment
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static Stream JBToolkit\&.Web\&.MemoryFile\&.GetStreamFromUrl (string url)\fC [static]\fP"
+
+.PP
+Gets a stream from a remote URL file location 
+.PP
+\fBParameters\fP
+.RS 4
+\fIurl\fP 
+.RE
+.PP
+
+.SS "override void JBToolkit\&.Web\&.MemoryFile\&.SaveAs (string filename)"
+
+.PP
+Save a memory stream to file 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilename\fP 
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "override int JBToolkit\&.Web\&.MemoryFile\&.ContentLength\fC [get]\fP"
+
+.SS "override string JBToolkit\&.Web\&.MemoryFile\&.ContentType\fC [get]\fP"
+
+.SS "override string JBToolkit\&.Web\&.MemoryFile\&.FileName\fC [get]\fP"
+
+.SS "override Stream JBToolkit\&.Web\&.MemoryFile\&.InputStream\fC [get]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

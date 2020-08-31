@@ -1,0 +1,89 @@
+.TH "JBToolkit.WinForms.ColorPickerCell" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.WinForms.ColorPickerCell \- Cell colour - to be used with the ColourPicker control  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBDataGridViewTextBoxCell\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBColorPickerCell\fP ()"
+.br
+.ti -1c
+.RI "override void \fBInitializeEditingControl\fP (int rowIndex, object initialFormattedValue, DataGridViewCellStyle dataGridViewCellStyle)"
+.br
+.ti -1c
+.RI "override object \fBParseFormattedValue\fP (object formattedValue, DataGridViewCellStyle cellStyle, TypeConverter formattedValueTypeConverter, TypeConverter valueTypeConverter)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "override Type \fBEditType\fP => typeof(ColorPickerControl)"
+.br
+.ti -1c
+.RI "override Type \fBValueType\fP => typeof(Color)"
+.br
+.ti -1c
+.RI "override object \fBDefaultNewRowValue\fP => Color\&.White"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override void \fBPaint\fP (Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, DataGridViewElementStates elementState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)"
+.br
+.ti -1c
+.RI "virtual void \fBGetDisplayLayout\fP (Rectangle CellRect, ref Rectangle colorBoxRect, ref RectangleF textBoxRect)"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "Color \fBRandomlySelectedColour\fP\fC [get, set]\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Cell colour - to be used with the ColourPicker control 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.WinForms\&.ColorPickerCell\&.ColorPickerCell ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void JBToolkit\&.WinForms\&.ColorPickerCell\&.GetDisplayLayout (Rectangle CellRect, ref Rectangle colorBoxRect, ref RectangleF textBoxRect)\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "override void JBToolkit\&.WinForms\&.ColorPickerCell\&.InitializeEditingControl (int rowIndex, object initialFormattedValue, DataGridViewCellStyle dataGridViewCellStyle)"
+
+.SS "override void JBToolkit\&.WinForms\&.ColorPickerCell\&.Paint (Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, DataGridViewElementStates elementState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)\fC [protected]\fP"
+
+.SS "override object JBToolkit\&.WinForms\&.ColorPickerCell\&.ParseFormattedValue (object formattedValue, DataGridViewCellStyle cellStyle, TypeConverter formattedValueTypeConverter, TypeConverter valueTypeConverter)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "override object JBToolkit\&.WinForms\&.ColorPickerCell\&.DefaultNewRowValue => Color\&.White"
+
+.SS "override Type JBToolkit\&.WinForms\&.ColorPickerCell\&.EditType => typeof(ColorPickerControl)"
+
+.SS "override Type JBToolkit\&.WinForms\&.ColorPickerCell\&.ValueType => typeof(Color)"
+
+.SH "Property Documentation"
+.PP 
+.SS "Color JBToolkit\&.WinForms\&.ColorPickerCell\&.RandomlySelectedColour\fC [get]\fP, \fC [set]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

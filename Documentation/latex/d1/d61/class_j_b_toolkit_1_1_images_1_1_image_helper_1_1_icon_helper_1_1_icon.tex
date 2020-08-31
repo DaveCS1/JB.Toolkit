@@ -1,0 +1,188 @@
+\hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon}{}\doxysection{J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Icon\+Helper.\+Icon Class Reference}
+\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon}\index{JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}}
+
+
+Extension of the System.\+Drawing.\+Icon for getting header information and individsual icons from a multi-\/resolution icon  
+
+
+
+
+Inheritance diagram for J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Icon\+Helper.\+Icon\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{d9/da6/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Icon\+Helper.\+Icon\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{dd/d1d/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_1_1_icon_entry}{Icon\+Entry}}
+\begin{DoxyCompactList}\small\item\em Each icon if the file has its own header with information, stored in this object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad1666a87f0be0eb78251c8e5013b43c2}{Display\+Type}} \{ \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad1666a87f0be0eb78251c8e5013b43c2af8c8f89b060081652f423880eb54482e}{Display\+Type.\+Largest}} = 0, 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad1666a87f0be0eb78251c8e5013b43c2aa3ab97936bb31d1376538983ed7a162f}{Display\+Type.\+Smallest}} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+System.\+Drawing.\+Icon \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a42532acdea11f6f94a22400c34fc2936}{Build\+Icon}} (int index)
+\begin{DoxyCompactList}\small\item\em Returns a System.\+Drawing.\+Icon from the array list of a multi-\/resolution icon \end{DoxyCompactList}\item 
+System.\+Drawing.\+Icon \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a7d2bc4c7d0b1872a81ba8bc09dadd69b}{Find\+Icon}} (\mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad1666a87f0be0eb78251c8e5013b43c2}{Display\+Type}} display\+Type)
+\begin{DoxyCompactList}\small\item\em Get the largest of small icon based on icon size \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a8bc383ee548c6ac8174317c598598aae}{Icon}} (string filename)
+\begin{DoxyCompactList}\small\item\em Loads the icon file into the memory stream \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad9d073e76b1f62dfe485b1d5e7a57d7b}{Icon}} (Memory\+Stream ms)
+\begin{DoxyCompactList}\small\item\em Loads the icon from memory stream \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad59ee8a0180e732a269651f862ef4796}{Icon}} (byte\mbox{[}$\,$\mbox{]} bytes)
+\begin{DoxyCompactList}\small\item\em Loads the icon from bytes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a914a8b4f42d8fbb6dbd1aed6b1369dc1}{Icon}} (System.\+Drawing.\+Icon icon)
+\begin{DoxyCompactList}\small\item\em Loads the icon from bytes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a19128cbc55f80afbff46774233a28346}{Dispose}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_list}{List}}$<$ \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_1_1_icon_entry}{Icon\+Entry}} $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a898053e6cd0e55908bc6be180df3644d}{Icons\+Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Information on each imame in the icon object \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ae8a451fb3b075f12b62f443cbff47776}{Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Extension of the System.\+Drawing.\+Icon for getting header information and individsual icons from a multi-\/resolution icon 
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad1666a87f0be0eb78251c8e5013b43c2}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad1666a87f0be0eb78251c8e5013b43c2}} 
+\index{JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}!DisplayType@{DisplayType}}
+\index{DisplayType@{DisplayType}!JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}}
+\doxysubsubsection{\texorpdfstring{DisplayType}{DisplayType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad1666a87f0be0eb78251c8e5013b43c2}{J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Icon\+Helper.\+Icon.\+Display\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Largest@{Largest}!JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}}\index{JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}!Largest@{Largest}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad1666a87f0be0eb78251c8e5013b43c2af8c8f89b060081652f423880eb54482e}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad1666a87f0be0eb78251c8e5013b43c2af8c8f89b060081652f423880eb54482e}} 
+Largest&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Smallest@{Smallest}!JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}}\index{JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}!Smallest@{Smallest}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad1666a87f0be0eb78251c8e5013b43c2aa3ab97936bb31d1376538983ed7a162f}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad1666a87f0be0eb78251c8e5013b43c2aa3ab97936bb31d1376538983ed7a162f}} 
+Smallest&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a8bc383ee548c6ac8174317c598598aae}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a8bc383ee548c6ac8174317c598598aae}} 
+\index{JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}!Icon@{Icon}}
+\index{Icon@{Icon}!JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}}
+\doxysubsubsection{\texorpdfstring{Icon()}{Icon()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Icon\+Helper.\+Icon.\+Icon (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Loads the icon file into the memory stream 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad9d073e76b1f62dfe485b1d5e7a57d7b}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad9d073e76b1f62dfe485b1d5e7a57d7b}} 
+\index{JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}!Icon@{Icon}}
+\index{Icon@{Icon}!JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}}
+\doxysubsubsection{\texorpdfstring{Icon()}{Icon()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Icon\+Helper.\+Icon.\+Icon (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms }\end{DoxyParamCaption})}
+
+
+
+Loads the icon from memory stream 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad59ee8a0180e732a269651f862ef4796}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad59ee8a0180e732a269651f862ef4796}} 
+\index{JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}!Icon@{Icon}}
+\index{Icon@{Icon}!JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}}
+\doxysubsubsection{\texorpdfstring{Icon()}{Icon()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Icon\+Helper.\+Icon.\+Icon (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Loads the icon from bytes 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a914a8b4f42d8fbb6dbd1aed6b1369dc1}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a914a8b4f42d8fbb6dbd1aed6b1369dc1}} 
+\index{JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}!Icon@{Icon}}
+\index{Icon@{Icon}!JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}}
+\doxysubsubsection{\texorpdfstring{Icon()}{Icon()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Icon\+Helper.\+Icon.\+Icon (\begin{DoxyParamCaption}\item[{System.\+Drawing.\+Icon}]{icon }\end{DoxyParamCaption})}
+
+
+
+Loads the icon from bytes 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a42532acdea11f6f94a22400c34fc2936}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a42532acdea11f6f94a22400c34fc2936}} 
+\index{JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}!BuildIcon@{BuildIcon}}
+\index{BuildIcon@{BuildIcon}!JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}}
+\doxysubsubsection{\texorpdfstring{BuildIcon()}{BuildIcon()}}
+{\footnotesize\ttfamily System.\+Drawing.\+Icon J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Icon\+Helper.\+Icon.\+Build\+Icon (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Returns a System.\+Drawing.\+Icon from the array list of a multi-\/resolution icon 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a19128cbc55f80afbff46774233a28346}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a19128cbc55f80afbff46774233a28346}} 
+\index{JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Icon\+Helper.\+Icon.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a7d2bc4c7d0b1872a81ba8bc09dadd69b}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a7d2bc4c7d0b1872a81ba8bc09dadd69b}} 
+\index{JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}!FindIcon@{FindIcon}}
+\index{FindIcon@{FindIcon}!JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}}
+\doxysubsubsection{\texorpdfstring{FindIcon()}{FindIcon()}}
+{\footnotesize\ttfamily System.\+Drawing.\+Icon J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Icon\+Helper.\+Icon.\+Find\+Icon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ad1666a87f0be0eb78251c8e5013b43c2}{Display\+Type}}}]{display\+Type }\end{DoxyParamCaption})}
+
+
+
+Get the largest of small icon based on icon size 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d61/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a7d2bc4c7d0b1872a81ba8bc09dadd69b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ae8a451fb3b075f12b62f443cbff47776}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_ae8a451fb3b075f12b62f443cbff47776}} 
+\index{JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}!Count@{Count}}
+\index{Count@{Count}!JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}}
+\doxysubsubsection{\texorpdfstring{Count}{Count}}
+{\footnotesize\ttfamily int J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Icon\+Helper.\+Icon.\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a898053e6cd0e55908bc6be180df3644d}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_a898053e6cd0e55908bc6be180df3644d}} 
+\index{JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}!IconsInfo@{IconsInfo}}
+\index{IconsInfo@{IconsInfo}!JBToolkit.Images.ImageHelper.IconHelper.Icon@{JBToolkit.Images.ImageHelper.IconHelper.Icon}}
+\doxysubsubsection{\texorpdfstring{IconsInfo}{IconsInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_list}{List}}$<$\mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_1_1_icon_entry}{Icon\+Entry}}$>$ J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Icon\+Helper.\+Icon.\+Icons\+Info\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Information on each imame in the icon object 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Imaging/\mbox{\hyperlink{_icon_image_helper_8cs}{Icon\+Image\+Helper.\+cs}}\end{DoxyCompactItemize}

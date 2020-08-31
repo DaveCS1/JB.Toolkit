@@ -1,0 +1,4 @@
+<map id="JBToolkit.GoogeApi.Geocoding.GetGeolocationObjectFromAddress" name="JBToolkit.GoogeApi.Geocoding.GetGeolocationObjectFromAddress">
+<area shape="rect" id="node1" title="Get the entire Google geocoordinates object (full json repsonse serialised as object) from a given ad..." alt="" coords="260,5,488,47"/>
+<area shape="rect" id="node2" href="$d8/d64/class_j_b_toolkit_1_1_googe_api_1_1_geocoding.html#a9d0c587ac13b7663dca6e8671536074e" title="Get the longitude and latitude coordinates from an address. You can optionally set to &#39;attempt force ..." alt="" coords="5,5,212,47"/>
+</map>

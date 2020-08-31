@@ -1,0 +1,142 @@
+\hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation}{}\doxysection{J\+B\+Toolkit.\+Domain.\+Impersonation Namespace Reference}
+\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_impersonator}{Impersonator}}
+\begin{DoxyCompactList}\small\item\em Used to perform execution of code under an elivated permission context \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods}{Win32\+Native\+Methods}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aea081ae56a384f1826e02dbf29898162}{Server\+Type}} \{ \mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aea081ae56a384f1826e02dbf29898162abd84128730cdcc6df0d9f48bd40bf834}{Server\+Type.\+D\+MZ}}, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aea081ae56a384f1826e02dbf29898162abf7c99592e3b8c93ce1086a0036a94fd}{Server\+Type.\+D\+O\+M\+A\+IN}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baa}{Logon\+Type}} \{ \newline
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaab5af5a68eb431b27db4e59d7cc12a8c0}{Logon\+Type.\+L\+O\+G\+O\+N32\+\_\+\+L\+O\+G\+O\+N\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+VE}} = 2, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaad7ccc7ff624ee486552d4db3798f570c}{Logon\+Type.\+L\+O\+G\+O\+N32\+\_\+\+L\+O\+G\+O\+N\+\_\+\+N\+E\+T\+W\+O\+RK}} = 3, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaad65f4fd3dae9232f24b7c3e94001cded}{Logon\+Type.\+L\+O\+G\+O\+N32\+\_\+\+L\+O\+G\+O\+N\+\_\+\+B\+A\+T\+CH}} = 4, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaac3d356b4e68a6ee29f0a7ff9f934630d}{Logon\+Type.\+L\+O\+G\+O\+N32\+\_\+\+L\+O\+G\+O\+N\+\_\+\+S\+E\+R\+V\+I\+CE}} = 5, 
+\newline
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaaba7e52134de201381554e4609efc0bc5}{Logon\+Type.\+L\+O\+G\+O\+N32\+\_\+\+L\+O\+G\+O\+N\+\_\+\+U\+N\+L\+O\+CK}} = 7, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaa6b5ca3cdc0e44416d95db62bde38cc99}{Logon\+Type.\+L\+O\+G\+O\+N32\+\_\+\+L\+O\+G\+O\+N\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+L\+E\+A\+R\+T\+E\+XT}} = 8, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaaaa65833acf3970e9edde573d941556a8}{Logon\+Type.\+L\+O\+G\+O\+N32\+\_\+\+L\+O\+G\+O\+N\+\_\+\+N\+E\+W\+\_\+\+C\+R\+E\+D\+E\+N\+T\+I\+A\+LS}} = 9
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4}{Logon\+Provider}} \{ \mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4acc46fab06a36747fc73a3d182ccffd67}{Logon\+Provider.\+L\+O\+G\+O\+N32\+\_\+\+P\+R\+O\+V\+I\+D\+E\+R\+\_\+\+D\+E\+F\+A\+U\+LT}} = 0, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4a0491d821f16d23e30ae8d5c79771f6e3}{Logon\+Provider.\+L\+O\+G\+O\+N32\+\_\+\+P\+R\+O\+V\+I\+D\+E\+R\+\_\+\+W\+I\+N\+N\+T35}} = 1, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4a5d5108eba209540290598d73b7236adb}{Logon\+Provider.\+L\+O\+G\+O\+N32\+\_\+\+P\+R\+O\+V\+I\+D\+E\+R\+\_\+\+W\+I\+N\+N\+T40}} = 2, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4a5c8fd93e815b95d47a8c838e5ee2a658}{Logon\+Provider.\+L\+O\+G\+O\+N32\+\_\+\+P\+R\+O\+V\+I\+D\+E\+R\+\_\+\+W\+I\+N\+N\+T50}} = 3
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849}{Impersonation\+Level}} \{ \mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849ad379aff444d9bf57d8492783ac6a9bbf}{Impersonation\+Level.\+Security\+Anonymous}} = 0, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849a4d1984a80dfe1332f92ea7ebabb90683}{Impersonation\+Level.\+Security\+Identification}} = 1, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849ac6a87bf86ab2b10286e0b97457b9b5e6}{Impersonation\+Level.\+Security\+Impersonation}} = 2, 
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849ae56e309014295e0bcc1b883ce679d322}{Impersonation\+Level.\+Security\+Delegation}} = 3
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849}} 
+\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!ImpersonationLevel@{ImpersonationLevel}}
+\index{ImpersonationLevel@{ImpersonationLevel}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}
+\doxysubsubsection{\texorpdfstring{ImpersonationLevel}{ImpersonationLevel}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849}{J\+B\+Toolkit.\+Domain.\+Impersonation.\+Impersonation\+Level}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SecurityAnonymous@{SecurityAnonymous}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!SecurityAnonymous@{SecurityAnonymous}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849ad379aff444d9bf57d8492783ac6a9bbf}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849ad379aff444d9bf57d8492783ac6a9bbf}} 
+Security\+Anonymous&The server cannot impersonate or identify the client. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SecurityIdentification@{SecurityIdentification}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!SecurityIdentification@{SecurityIdentification}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849a4d1984a80dfe1332f92ea7ebabb90683}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849a4d1984a80dfe1332f92ea7ebabb90683}} 
+Security\+Identification&The server can get the identity and privileges of the client, but cannot impersonate the client. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SecurityImpersonation@{SecurityImpersonation}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!SecurityImpersonation@{SecurityImpersonation}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849ac6a87bf86ab2b10286e0b97457b9b5e6}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849ac6a87bf86ab2b10286e0b97457b9b5e6}} 
+Security\+Impersonation&The server can impersonate the client\textquotesingle{}s security context on the local system. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SecurityDelegation@{SecurityDelegation}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!SecurityDelegation@{SecurityDelegation}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849ae56e309014295e0bcc1b883ce679d322}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a39a0ab8b4935d8a86e93087ff252d849ae56e309014295e0bcc1b883ce679d322}} 
+Security\+Delegation&The server can impersonate the client\textquotesingle{}s security context on remote systems. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4}} 
+\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!LogonProvider@{LogonProvider}}
+\index{LogonProvider@{LogonProvider}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}
+\doxysubsubsection{\texorpdfstring{LogonProvider}{LogonProvider}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4}{J\+B\+Toolkit.\+Domain.\+Impersonation.\+Logon\+Provider}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOGON32\_PROVIDER\_DEFAULT@{LOGON32\_PROVIDER\_DEFAULT}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!LOGON32\_PROVIDER\_DEFAULT@{LOGON32\_PROVIDER\_DEFAULT}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4acc46fab06a36747fc73a3d182ccffd67}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4acc46fab06a36747fc73a3d182ccffd67}} 
+L\+O\+G\+O\+N32\+\_\+\+P\+R\+O\+V\+I\+D\+E\+R\+\_\+\+D\+E\+F\+A\+U\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOGON32\_PROVIDER\_WINNT35@{LOGON32\_PROVIDER\_WINNT35}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!LOGON32\_PROVIDER\_WINNT35@{LOGON32\_PROVIDER\_WINNT35}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4a0491d821f16d23e30ae8d5c79771f6e3}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4a0491d821f16d23e30ae8d5c79771f6e3}} 
+L\+O\+G\+O\+N32\+\_\+\+P\+R\+O\+V\+I\+D\+E\+R\+\_\+\+W\+I\+N\+N\+T35&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOGON32\_PROVIDER\_WINNT40@{LOGON32\_PROVIDER\_WINNT40}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!LOGON32\_PROVIDER\_WINNT40@{LOGON32\_PROVIDER\_WINNT40}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4a5d5108eba209540290598d73b7236adb}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4a5d5108eba209540290598d73b7236adb}} 
+L\+O\+G\+O\+N32\+\_\+\+P\+R\+O\+V\+I\+D\+E\+R\+\_\+\+W\+I\+N\+N\+T40&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOGON32\_PROVIDER\_WINNT50@{LOGON32\_PROVIDER\_WINNT50}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!LOGON32\_PROVIDER\_WINNT50@{LOGON32\_PROVIDER\_WINNT50}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4a5c8fd93e815b95d47a8c838e5ee2a658}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aef938367379d92392d04002b11c57ac4a5c8fd93e815b95d47a8c838e5ee2a658}} 
+L\+O\+G\+O\+N32\+\_\+\+P\+R\+O\+V\+I\+D\+E\+R\+\_\+\+W\+I\+N\+N\+T50&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baa}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baa}} 
+\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!LogonType@{LogonType}}
+\index{LogonType@{LogonType}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}
+\doxysubsubsection{\texorpdfstring{LogonType}{LogonType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baa}{J\+B\+Toolkit.\+Domain.\+Impersonation.\+Logon\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOGON32\_LOGON\_INTERACTIVE@{LOGON32\_LOGON\_INTERACTIVE}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!LOGON32\_LOGON\_INTERACTIVE@{LOGON32\_LOGON\_INTERACTIVE}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaab5af5a68eb431b27db4e59d7cc12a8c0}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaab5af5a68eb431b27db4e59d7cc12a8c0}} 
+L\+O\+G\+O\+N32\+\_\+\+L\+O\+G\+O\+N\+\_\+\+I\+N\+T\+E\+R\+A\+C\+T\+I\+VE&This logon type is intended for users who will be interactively using the computer, such as a user being logged on by a terminal server, remote shell, or similar process. This logon type has the additional expense of caching logon information for disconnected operations; therefore, it is inappropriate for some client/server applications, such as a mail server. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOGON32\_LOGON\_NETWORK@{LOGON32\_LOGON\_NETWORK}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!LOGON32\_LOGON\_NETWORK@{LOGON32\_LOGON\_NETWORK}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaad7ccc7ff624ee486552d4db3798f570c}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaad7ccc7ff624ee486552d4db3798f570c}} 
+L\+O\+G\+O\+N32\+\_\+\+L\+O\+G\+O\+N\+\_\+\+N\+E\+T\+W\+O\+RK&This logon type is intended for high performance servers to authenticate plaintext passwords. The Logon\+User function does not cache credentials for this logon type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOGON32\_LOGON\_BATCH@{LOGON32\_LOGON\_BATCH}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!LOGON32\_LOGON\_BATCH@{LOGON32\_LOGON\_BATCH}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaad65f4fd3dae9232f24b7c3e94001cded}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaad65f4fd3dae9232f24b7c3e94001cded}} 
+L\+O\+G\+O\+N32\+\_\+\+L\+O\+G\+O\+N\+\_\+\+B\+A\+T\+CH&This logon type is intended for batch servers, where processes may be executing on behalf of a user without their direct intervention. This type is also for higher performance servers that process many plaintext authentication attempts at a time, such as mail or web servers. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOGON32\_LOGON\_SERVICE@{LOGON32\_LOGON\_SERVICE}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!LOGON32\_LOGON\_SERVICE@{LOGON32\_LOGON\_SERVICE}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaac3d356b4e68a6ee29f0a7ff9f934630d}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaac3d356b4e68a6ee29f0a7ff9f934630d}} 
+L\+O\+G\+O\+N32\+\_\+\+L\+O\+G\+O\+N\+\_\+\+S\+E\+R\+V\+I\+CE&Indicates a service-\/type logon. The account provided must have the service privilege enabled. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOGON32\_LOGON\_UNLOCK@{LOGON32\_LOGON\_UNLOCK}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!LOGON32\_LOGON\_UNLOCK@{LOGON32\_LOGON\_UNLOCK}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaaba7e52134de201381554e4609efc0bc5}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaaba7e52134de201381554e4609efc0bc5}} 
+L\+O\+G\+O\+N32\+\_\+\+L\+O\+G\+O\+N\+\_\+\+U\+N\+L\+O\+CK&G\+I\+N\+As are no longer supported. \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} Server 2003 and \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} XP\+: This logon type is for G\+I\+NA D\+L\+Ls that log on users who will be interactively using the computer. This logon type can generate a unique audit record that shows when the workstation was unlocked. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOGON32\_LOGON\_NETWORK\_CLEARTEXT@{LOGON32\_LOGON\_NETWORK\_CLEARTEXT}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!LOGON32\_LOGON\_NETWORK\_CLEARTEXT@{LOGON32\_LOGON\_NETWORK\_CLEARTEXT}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaa6b5ca3cdc0e44416d95db62bde38cc99}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaa6b5ca3cdc0e44416d95db62bde38cc99}} 
+L\+O\+G\+O\+N32\+\_\+\+L\+O\+G\+O\+N\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+L\+E\+A\+R\+T\+E\+XT&This logon type preserves the name and password in the authentication package, which allows the server to make connections to other network servers while impersonating the client. A server can accept plaintext credentials from a client, call Logon\+User, verify that the user can access the system across the network, and still communicate with other servers. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOGON32\_LOGON\_NEW\_CREDENTIALS@{LOGON32\_LOGON\_NEW\_CREDENTIALS}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!LOGON32\_LOGON\_NEW\_CREDENTIALS@{LOGON32\_LOGON\_NEW\_CREDENTIALS}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaaaa65833acf3970e9edde573d941556a8}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_a2416a7df943ddef7a36dbc49e03f7baaaaa65833acf3970e9edde573d941556a8}} 
+L\+O\+G\+O\+N32\+\_\+\+L\+O\+G\+O\+N\+\_\+\+N\+E\+W\+\_\+\+C\+R\+E\+D\+E\+N\+T\+I\+A\+LS&This logon type allows the caller to clone its current token and specify new credentials for outbound connections. The new logon session has the same local identifier but uses different credentials for other network connections. This logon type is supported only by the L\+O\+G\+O\+N32\+\_\+\+P\+R\+O\+V\+I\+D\+E\+R\+\_\+\+W\+I\+N\+N\+T50 logon provider. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aea081ae56a384f1826e02dbf29898162}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aea081ae56a384f1826e02dbf29898162}} 
+\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!ServerType@{ServerType}}
+\index{ServerType@{ServerType}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}
+\doxysubsubsection{\texorpdfstring{ServerType}{ServerType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aea081ae56a384f1826e02dbf29898162}{J\+B\+Toolkit.\+Domain.\+Impersonation.\+Server\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DMZ@{DMZ}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!DMZ@{DMZ}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aea081ae56a384f1826e02dbf29898162abd84128730cdcc6df0d9f48bd40bf834}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aea081ae56a384f1826e02dbf29898162abd84128730cdcc6df0d9f48bd40bf834}} 
+D\+MZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOMAIN@{DOMAIN}!JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}}\index{JBToolkit.Domain.Impersonation@{JBToolkit.Domain.Impersonation}!DOMAIN@{DOMAIN}}}\mbox{\Hypertarget{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aea081ae56a384f1826e02dbf29898162abf7c99592e3b8c93ce1086a0036a94fd}\label{namespace_j_b_toolkit_1_1_domain_1_1_impersonation_aea081ae56a384f1826e02dbf29898162abf7c99592e3b8c93ce1086a0036a94fd}} 
+D\+O\+M\+A\+IN&\\
+\hline
+
+\end{DoxyEnumFields}

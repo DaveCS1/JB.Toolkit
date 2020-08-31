@@ -1,0 +1,7 @@
+<map id="JBToolkit.CSV.CSVHelper.TryDetectDelimiter" name="JBToolkit.CSV.CSVHelper.TryDetectDelimiter">
+<area shape="rect" id="node1" title="Tries to auto detect CSV delimiter (tends to do a very good job of it)." alt="" coords="276,104,455,145"/>
+<area shape="rect" id="node2" href="$da/dd6/class_j_b_toolkit_1_1_c_s_v_1_1_c_s_v_helper.html#a58e15f5b382c3ab74d0fecc6927ad6a7" title="Read CSV File and convert to DataTable object Note, if the CSV file has no header,..." alt="" coords="27,5,206,47"/>
+<area shape="rect" id="node3" href="$da/dd6/class_j_b_toolkit_1_1_c_s_v_1_1_c_s_v_helper.html#a91f0a03a34a23bac7ca2ebce3af8a5d0" title="Reads CSV file and returns dynamic object Note, if the CSV file has no header, then be sure to includ..." alt="" coords="27,71,206,112"/>
+<area shape="rect" id="node4" href="$da/dd6/class_j_b_toolkit_1_1_c_s_v_1_1_c_s_v_helper.html#ac9b78c3e5e923cae3c2d98bfbc64ebd1" title="Reads CSV file and returns deserialised object T. Note, if the CSV file has no header,..." alt="" coords="5,136,228,177"/>
+<area shape="rect" id="node5" href="$da/dd6/class_j_b_toolkit_1_1_c_s_v_1_1_c_s_v_helper.html#a73fbfbe3f0810954cd941cc347ef35c2" title="Returns a list of CSV headers" alt="" coords="27,201,206,243"/>
+</map>

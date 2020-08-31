@@ -1,0 +1,3 @@
+<map id="JBToolkit.Extensions.SourceCode.SourceCodeFormatter.LenientJsonFormatter" name="JBToolkit.Extensions.SourceCode.SourceCodeFormatter.LenientJsonFormatter">
+<area shape="rect" id="node1" title="Use to format json without the use of serialisation, in order to try and ignore any syntax errors" alt="" coords="5,5,235,200"/>
+</map>

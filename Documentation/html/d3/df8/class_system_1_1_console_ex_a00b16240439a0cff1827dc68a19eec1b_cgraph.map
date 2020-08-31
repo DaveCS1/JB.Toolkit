@@ -1,0 +1,4 @@
+<map id="System.ConsoleEx.WriteColouredLine" name="System.ConsoleEx.WriteColouredLine">
+<area shape="rect" id="node1" title="Write line in a colour as of a ConsoleColor (limited range of colours)" alt="" coords="5,13,249,39"/>
+<area shape="rect" id="node2" href="$dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper.html#a14b3e3466a9bc0debbdaeb49e0180d2e" title="Console color to System.Drawing.Color" alt="" coords="297,5,500,47"/>
+</map>

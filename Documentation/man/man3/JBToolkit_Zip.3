@@ -1,0 +1,96 @@
+.TH "JBToolkit.Zip" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Zip
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBNative\fP"
+.br
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBExtractOtherArchiveType\fP"
+.br
+.RI "Extract other types of compressed archive file other than \&.zip\&. Support the follow file types: \&.zip, \&.7z, \&.tar, \&.gzip, \&.tar, \&.tar\&.gz, \&.gzip, \&.rar "
+.ti -1c
+.RI "class \fBFilePathAndBytes\fP"
+.br
+.RI "Filename to store within zip file and it's file as a byte array "
+.ti -1c
+.RI "class \fBFilePathAndBytesCollection\fP"
+.br
+.RI "A basic dictionary of the filename to save within the zip file and the bytes of that file "
+.ti -1c
+.RI "class \fBZipCompression\fP"
+.br
+.RI "Contains multiple method for saving zip files or returning a zip file as a stream "
+.ti -1c
+.RI "class \fBZipExtraction\fP"
+.br
+.RI "Contains multiple method for extracting a zip file to either disk or various streams "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBZipCompressionLevel\fP { \fBZipCompressionLevel\&.None\fP, \fBZipCompressionLevel\&.Fast\fP, \fBZipCompressionLevel\&.Best\fP, \fBZipCompressionLevel\&.Level0\fP, \fBZipCompressionLevel\&.Level1\fP, \fBZipCompressionLevel\&.Level2\fP, \fBZipCompressionLevel\&.Level3\fP, \fBZipCompressionLevel\&.Level4\fP, \fBZipCompressionLevel\&.Level5\fP, \fBZipCompressionLevel\&.Level6\fP, \fBZipCompressionLevel\&.Level7\fP, \fBZipCompressionLevel\&.Level8\fP, \fBZipCompressionLevel\&.Level9\fP }"
+.br
+.ti -1c
+.RI "enum \fBZipCompressionMethod\fP { \fBZipCompressionMethod\&.None\fP, \fBZipCompressionMethod\&.Deflate\fP, \fBZipCompressionMethod\&.BZip2\fP }"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBJBToolkit\&.Zip\&.ZipCompressionLevel\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINone \fP\fP
+.TP
+\fB\fIFast \fP\fP
+.TP
+\fB\fIBest \fP\fP
+.TP
+\fB\fILevel0 \fP\fP
+.TP
+\fB\fILevel1 \fP\fP
+.TP
+\fB\fILevel2 \fP\fP
+.TP
+\fB\fILevel3 \fP\fP
+.TP
+\fB\fILevel4 \fP\fP
+.TP
+\fB\fILevel5 \fP\fP
+.TP
+\fB\fILevel6 \fP\fP
+.TP
+\fB\fILevel7 \fP\fP
+.TP
+\fB\fILevel8 \fP\fP
+.TP
+\fB\fILevel9 \fP\fP
+.SS "enum \fBJBToolkit\&.Zip\&.ZipCompressionMethod\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINone \fP\fP
+.TP
+\fB\fIDeflate \fP\fP
+.TP
+\fB\fIBZip2 \fP\fP
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

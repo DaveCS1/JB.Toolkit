@@ -1,0 +1,141 @@
+\hypertarget{class_j_b_toolkit_1_1_web_1_1_access_token}{}\doxysection{J\+B\+Toolkit.\+Web.\+Access\+Token Class Reference}
+\label{class_j_b_toolkit_1_1_web_1_1_access_token}\index{JBToolkit.Web.AccessToken@{JBToolkit.Web.AccessToken}}
+
+
+Generates and validates short lives access tokens -\/ Stores in a database  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Web.\+Access\+Token\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{da/db1/class_j_b_toolkit_1_1_web_1_1_access_token__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Http\+Response\+Message \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_access_token_a334fa7ddf6c2c72f48d291bb219ebaa8}{Get\+Short\+Lived\+Access\+Token}} (Http\+Request\+Message request, string application\+Name, string application\+Api\+Key\+To\+Check\+Against, string db\+Name\+Where\+The\+Token\+Is\+Stored, int expiry\+In\+Seconds=30, string\mbox{[}$\,$\mbox{]} white\+List\+Ips=null)
+\begin{DoxyCompactList}\small\item\em Generates a short live (default 30 seconds) access token (G\+U\+ID) to be used when authenticating external / public requests. ~\newline
+~\newline
+ Note\+: Please see the method in \mbox{\hyperlink{namespace_j_b_toolkit}{J\+B\+Toolkit}}\+: Get\+Short\+Lived\+Access\+Token\+\_\+\+Request\+\_\+\+Example for an example of how the 3rd party would generate the request. \end{DoxyCompactList}\item 
+static Http\+Response\+Message \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_access_token_a7aa09c736dd06d8e036c93a14cbe3541}{Get\+Short\+Lived\+Access\+Token}} (Http\+Request\+Message request, string application\+Name, string application\+Api\+Key\+To\+Check\+Against, string db\+Name\+Where\+The\+Token\+Is\+Stored, string db\+Connection\+String, int expiry\+In\+Seconds=30, string\mbox{[}$\,$\mbox{]} white\+List\+Ips=null)
+\begin{DoxyCompactList}\small\item\em Generates a short live (default 30 seconds) access token (G\+U\+ID) to be used when authenticating external / public requests. ~\newline
+~\newline
+ Note\+: Please see the method in \mbox{\hyperlink{namespace_j_b_toolkit}{J\+B\+Toolkit}}\+: Get\+Short\+Lived\+Access\+Token\+\_\+\+Request\+\_\+\+Example for an example of how the 3rd party would generate the request. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_access_token_a831959ae569256c45726c571d82a98e5}{Is\+Access\+Token\+Valid}} (string ip\+Address, string db\+Name, string connection\+String, string token)
+\begin{DoxyCompactList}\small\item\em Checks if token exists in the database and isn\textquotesingle{}t expired \end{DoxyCompactList}\item 
+static ? Date\+Time \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_access_token_ac40366a0d109a039eb5769c32b7caf45}{Get\+Token\+Expiry}} (string ip\+Address, string db\+Name, string connection\+String)
+\begin{DoxyCompactList}\small\item\em Get\textquotesingle{}s a token expiry date and time for a given IP address if one exists \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates and validates short lives access tokens -\/ Stores in a database 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_access_token_a334fa7ddf6c2c72f48d291bb219ebaa8}\label{class_j_b_toolkit_1_1_web_1_1_access_token_a334fa7ddf6c2c72f48d291bb219ebaa8}} 
+\index{JBToolkit.Web.AccessToken@{JBToolkit.Web.AccessToken}!GetShortLivedAccessToken@{GetShortLivedAccessToken}}
+\index{GetShortLivedAccessToken@{GetShortLivedAccessToken}!JBToolkit.Web.AccessToken@{JBToolkit.Web.AccessToken}}
+\doxysubsubsection{\texorpdfstring{GetShortLivedAccessToken()}{GetShortLivedAccessToken()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static Http\+Response\+Message J\+B\+Toolkit.\+Web.\+Access\+Token.\+Get\+Short\+Lived\+Access\+Token (\begin{DoxyParamCaption}\item[{Http\+Request\+Message}]{request,  }\item[{string}]{application\+Name,  }\item[{string}]{application\+Api\+Key\+To\+Check\+Against,  }\item[{string}]{db\+Name\+Where\+The\+Token\+Is\+Stored,  }\item[{int}]{expiry\+In\+Seconds = {\ttfamily 30},  }\item[{string\mbox{[}$\,$\mbox{]}}]{white\+List\+Ips = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generates a short live (default 30 seconds) access token (G\+U\+ID) to be used when authenticating external / public requests. ~\newline
+~\newline
+ Note\+: Please see the method in \mbox{\hyperlink{namespace_j_b_toolkit}{J\+B\+Toolkit}}\+: Get\+Short\+Lived\+Access\+Token\+\_\+\+Request\+\_\+\+Example for an example of how the 3rd party would generate the request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The http request from the visitor which must contain the IP address in the json object data root and a predefined A\+PI as the value of a the request header with the key matching the application name\\
+\hline
+{\em application\+Name} & A given application name\\
+\hline
+{\em application\+Api\+Key\+To\+Check\+Against} & A predefined application key\\
+\hline
+{\em expiry\+In\+Seconds} & How long in seconds the token lives (default 30 seconds)\\
+\hline
+{\em white\+List\+Ips} & R\+E\+C\+O\+M\+M\+E\+N\+D\+ED. An array of allowed IP address -\/ typically you\textquotesingle{}d store in config file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A G\+U\+ID string as the expiring token
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_access_token_a7aa09c736dd06d8e036c93a14cbe3541}\label{class_j_b_toolkit_1_1_web_1_1_access_token_a7aa09c736dd06d8e036c93a14cbe3541}} 
+\index{JBToolkit.Web.AccessToken@{JBToolkit.Web.AccessToken}!GetShortLivedAccessToken@{GetShortLivedAccessToken}}
+\index{GetShortLivedAccessToken@{GetShortLivedAccessToken}!JBToolkit.Web.AccessToken@{JBToolkit.Web.AccessToken}}
+\doxysubsubsection{\texorpdfstring{GetShortLivedAccessToken()}{GetShortLivedAccessToken()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static Http\+Response\+Message J\+B\+Toolkit.\+Web.\+Access\+Token.\+Get\+Short\+Lived\+Access\+Token (\begin{DoxyParamCaption}\item[{Http\+Request\+Message}]{request,  }\item[{string}]{application\+Name,  }\item[{string}]{application\+Api\+Key\+To\+Check\+Against,  }\item[{string}]{db\+Name\+Where\+The\+Token\+Is\+Stored,  }\item[{string}]{db\+Connection\+String,  }\item[{int}]{expiry\+In\+Seconds = {\ttfamily 30},  }\item[{string\mbox{[}$\,$\mbox{]}}]{white\+List\+Ips = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generates a short live (default 30 seconds) access token (G\+U\+ID) to be used when authenticating external / public requests. ~\newline
+~\newline
+ Note\+: Please see the method in \mbox{\hyperlink{namespace_j_b_toolkit}{J\+B\+Toolkit}}\+: Get\+Short\+Lived\+Access\+Token\+\_\+\+Request\+\_\+\+Example for an example of how the 3rd party would generate the request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The http request from the visitor which must contain the IP address in the json object data root and a predefined A\+PI as the value of a the request header with the key matching the application name\\
+\hline
+{\em application\+Name} & A given application name\\
+\hline
+{\em application\+Api\+Key\+To\+Check\+Against} & A predefined application key\\
+\hline
+{\em expiry\+In\+Seconds} & How long in seconds the token lives (default 30 seconds)\\
+\hline
+{\em white\+List\+Ips} & R\+E\+C\+O\+M\+M\+E\+N\+D\+ED. An array of allowed IP address -\/ typically you\textquotesingle{}d store in config file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A G\+U\+ID string as the expiring token
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d10/class_j_b_toolkit_1_1_web_1_1_access_token_a7aa09c736dd06d8e036c93a14cbe3541_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_access_token_ac40366a0d109a039eb5769c32b7caf45}\label{class_j_b_toolkit_1_1_web_1_1_access_token_ac40366a0d109a039eb5769c32b7caf45}} 
+\index{JBToolkit.Web.AccessToken@{JBToolkit.Web.AccessToken}!GetTokenExpiry@{GetTokenExpiry}}
+\index{GetTokenExpiry@{GetTokenExpiry}!JBToolkit.Web.AccessToken@{JBToolkit.Web.AccessToken}}
+\doxysubsubsection{\texorpdfstring{GetTokenExpiry()}{GetTokenExpiry()}}
+{\footnotesize\ttfamily static ? Date\+Time J\+B\+Toolkit.\+Web.\+Access\+Token.\+Get\+Token\+Expiry (\begin{DoxyParamCaption}\item[{string}]{ip\+Address,  }\item[{string}]{db\+Name,  }\item[{string}]{connection\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get\textquotesingle{}s a token expiry date and time for a given IP address if one exists 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d10/class_j_b_toolkit_1_1_web_1_1_access_token_ac40366a0d109a039eb5769c32b7caf45_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_access_token_a831959ae569256c45726c571d82a98e5}\label{class_j_b_toolkit_1_1_web_1_1_access_token_a831959ae569256c45726c571d82a98e5}} 
+\index{JBToolkit.Web.AccessToken@{JBToolkit.Web.AccessToken}!IsAccessTokenValid@{IsAccessTokenValid}}
+\index{IsAccessTokenValid@{IsAccessTokenValid}!JBToolkit.Web.AccessToken@{JBToolkit.Web.AccessToken}}
+\doxysubsubsection{\texorpdfstring{IsAccessTokenValid()}{IsAccessTokenValid()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Web.\+Access\+Token.\+Is\+Access\+Token\+Valid (\begin{DoxyParamCaption}\item[{string}]{ip\+Address,  }\item[{string}]{db\+Name,  }\item[{string}]{connection\+String,  }\item[{string}]{token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if token exists in the database and isn\textquotesingle{}t expired 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d10/class_j_b_toolkit_1_1_web_1_1_access_token_a831959ae569256c45726c571d82a98e5_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Web/\mbox{\hyperlink{_access_token_8cs}{Access\+Token.\+cs}}\end{DoxyCompactItemize}

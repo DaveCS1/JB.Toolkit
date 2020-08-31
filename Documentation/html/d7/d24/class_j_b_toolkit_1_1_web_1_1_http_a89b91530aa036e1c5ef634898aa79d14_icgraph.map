@@ -1,0 +1,4 @@
+<map id="JBToolkit.Web.Http.PathIsLocalFile" name="JBToolkit.Web.Http.PathIsLocalFile">
+<area shape="rect" id="node1" title="Is the path a local file? I.e. not a web URL or base 64 string" alt="" coords="223,5,397,47"/>
+<area shape="rect" id="node2" href="$d7/d24/class_j_b_toolkit_1_1_web_1_1_http.html#a0a17985de64b263fcc5846c18af2be81" title="Based on given input string &#45; it decides if it&#39;s a web URL, a local file path or a base64 string." alt="" coords="5,5,175,47"/>
+</map>

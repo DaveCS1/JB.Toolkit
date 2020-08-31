@@ -1,0 +1,4 @@
+<map id="JBToolkit.Web.IPHelper.GetVisitorIPAddress" name="JBToolkit.Web.IPHelper.GetVisitorIPAddress">
+<area shape="rect" id="node1" title="Get the IP address of the requestor" alt="" coords="247,5,431,47"/>
+<area shape="rect" id="node2" href="$dc/d10/class_j_b_toolkit_1_1_web_1_1_access_token.html#a7aa09c736dd06d8e036c93a14cbe3541" title="Generates a short live (default 30 seconds) access token (GUID) to be used when authenticating extern..." alt="" coords="5,5,199,47"/>
+</map>

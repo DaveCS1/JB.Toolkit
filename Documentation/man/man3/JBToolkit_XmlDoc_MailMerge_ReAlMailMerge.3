@@ -1,0 +1,56 @@
+.TH "JBToolkit.XmlDoc.MailMerge.ReAlMailMerge" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.XmlDoc.MailMerge.ReAlMailMerge \- Mail merging using a 3rd party command line tool\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBPerformMailMerge\fP (string inputPath, string outputPath, \fBDataTable\fP data, int timeoutSeconds=60, bool overwriteExisting=true)"
+.br
+.RI "Perform a Mail Merge and export to file "
+.ti -1c
+.RI "static byte[] \fBPerformMailMergeAndReturnByteArray\fP (string inputPath, string extension, \fBDataTable\fP data, int timeoutSeconds=60)"
+.br
+.RI "Perform a Mail Merge and export as byte array "
+.ti -1c
+.RI "static MemoryStream \fBPerformMailMergeAndReturnMemoryStream\fP (string inputPath, string extension, \fBDataTable\fP data, int timeoutSeconds=60)"
+.br
+.RI "Perform a Mail Merge and export as memory stream "
+.ti -1c
+.RI "static string \fBPerformMailMergeAndReturnBase64String\fP (string inputPath, string extension, \fBDataTable\fP data, int timeoutSeconds=60)"
+.br
+.RI "Perform a Mail Merge and export as base64 string "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Mail merging using a 3rd party command line tool\&. 
+
+It's generally quick and reliable, however it must load the proces which then loads its assemblies\&. An implementation using \&.Net managed code libraries would be more effecient\&. Especially when performing mail merges in bulk\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static void JBToolkit\&.XmlDoc\&.MailMerge\&.ReAlMailMerge\&.PerformMailMerge (string inputPath, string outputPath, \fBDataTable\fP data, int timeoutSeconds = \fC60\fP, bool overwriteExisting = \fCtrue\fP)\fC [static]\fP"
+
+.PP
+Perform a Mail Merge and export to file 
+.SS "static string JBToolkit\&.XmlDoc\&.MailMerge\&.ReAlMailMerge\&.PerformMailMergeAndReturnBase64String (string inputPath, string extension, \fBDataTable\fP data, int timeoutSeconds = \fC60\fP)\fC [static]\fP"
+
+.PP
+Perform a Mail Merge and export as base64 string 
+.SS "static byte [] JBToolkit\&.XmlDoc\&.MailMerge\&.ReAlMailMerge\&.PerformMailMergeAndReturnByteArray (string inputPath, string extension, \fBDataTable\fP data, int timeoutSeconds = \fC60\fP)\fC [static]\fP"
+
+.PP
+Perform a Mail Merge and export as byte array 
+.SS "static MemoryStream JBToolkit\&.XmlDoc\&.MailMerge\&.ReAlMailMerge\&.PerformMailMergeAndReturnMemoryStream (string inputPath, string extension, \fBDataTable\fP data, int timeoutSeconds = \fC60\fP)\fC [static]\fP"
+
+.PP
+Perform a Mail Merge and export as memory stream 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

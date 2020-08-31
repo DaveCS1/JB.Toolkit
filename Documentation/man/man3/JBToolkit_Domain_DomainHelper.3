@@ -1,0 +1,66 @@
+.TH "JBToolkit.Domain.DomainHelper" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Domain.DomainHelper \- \fBDomain\fP tools  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBIsDomainAdmin\fP (WindowsIdentity identity)"
+.br
+.RI "Is user a doimain admin? "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "static string \fBServerName\fP\fC [get]\fP"
+.br
+.RI "Current context machine name (where site is hosted) "
+.ti -1c
+.RI "static string \fBUserNT\fP\fC [get]\fP"
+.br
+.RI "Can only be used while developing - for debugging purposes\&. Return the current NT logged in user "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBDomain\fP tools 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static bool JBToolkit\&.Domain\&.DomainHelper\&.IsDomainAdmin (WindowsIdentity identity)\fC [static]\fP"
+
+.PP
+Is user a doimain admin? 
+.PP
+\fBParameters\fP
+.RS 4
+\fIidentity\fP Identity object of user
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if domain admin, false otherwise
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "string JBToolkit\&.Domain\&.DomainHelper\&.ServerName\fC [static]\fP, \fC [get]\fP"
+
+.PP
+Current context machine name (where site is hosted) 
+.SS "string JBToolkit\&.Domain\&.DomainHelper\&.UserNT\fC [static]\fP, \fC [get]\fP"
+
+.PP
+Can only be used while developing - for debugging purposes\&. Return the current NT logged in user 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

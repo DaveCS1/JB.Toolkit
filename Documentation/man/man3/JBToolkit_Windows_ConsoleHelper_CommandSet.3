@@ -1,0 +1,152 @@
+.TH "JBToolkit.Windows.ConsoleHelper.CommandSet" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Windows.ConsoleHelper.CommandSet
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBKeyedCollection< string, Command >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCommandSet\fP (string suite, \fBMessageLocalizerConverter\fP localizer=null)"
+.br
+.ti -1c
+.RI "\fBCommandSet\fP (string suite, TextWriter output, TextWriter error, \fBMessageLocalizerConverter\fP localizer=null)"
+.br
+.ti -1c
+.RI "new \fBCommandSet\fP \fBAdd\fP (\fBCommand\fP value)"
+.br
+.ti -1c
+.RI "\fBCommandSet\fP \fBAdd\fP (string header)"
+.br
+.ti -1c
+.RI "\fBCommandSet\fP \fBAdd\fP (\fBOption\fP option)"
+.br
+.ti -1c
+.RI "\fBCommandSet\fP \fBAdd\fP (string prototype, Action< string > action)"
+.br
+.ti -1c
+.RI "\fBCommandSet\fP \fBAdd\fP (string prototype, string description, Action< string > action)"
+.br
+.ti -1c
+.RI "\fBCommandSet\fP \fBAdd\fP (string prototype, string description, Action< string > action, bool hidden)"
+.br
+.ti -1c
+.RI "\fBCommandSet\fP \fBAdd\fP (string prototype, OptionAction< string, string > action)"
+.br
+.ti -1c
+.RI "\fBCommandSet\fP \fBAdd\fP (string prototype, string description, OptionAction< string, string > action)"
+.br
+.ti -1c
+.RI "\fBCommandSet\fP \fBAdd\fP (string prototype, string description, OptionAction< string, string > action, bool hidden)"
+.br
+.ti -1c
+.RI "\fBCommandSet\fP \fBAdd< T >\fP (string prototype, Action< T > action)"
+.br
+.ti -1c
+.RI "\fBCommandSet\fP \fBAdd< T >\fP (string prototype, string description, Action< T > action)"
+.br
+.ti -1c
+.RI "\fBCommandSet\fP \fBAdd< TKey, TValue >\fP (string prototype, OptionAction< TKey, TValue > action)"
+.br
+.ti -1c
+.RI "\fBCommandSet\fP \fBAdd< TKey, TValue >\fP (string prototype, string description, OptionAction< TKey, TValue > action)"
+.br
+.ti -1c
+.RI "\fBCommandSet\fP \fBAdd\fP (\fBArgumentSource\fP source)"
+.br
+.ti -1c
+.RI "\fBCommandSet\fP \fBAdd\fP (\fBCommandSet\fP nestedCommands)"
+.br
+.ti -1c
+.RI "\fBIEnumerable\fP< string > \fBGetCompletions\fP (string prefix=null)"
+.br
+.ti -1c
+.RI "int \fBRun\fP (\fBIEnumerable\fP< string > arguments)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "string \fBSuite\fP => suite"
+.br
+.ti -1c
+.RI "TextWriter \fBOut\fP => outWriter"
+.br
+.ti -1c
+.RI "TextWriter \fBError\fP => errorWriter"
+.br
+.ti -1c
+.RI "\fBMessageLocalizerConverter\fP \fBMessageLocalizer\fP => options\&.MessageLocalizer"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override string \fBGetKeyForItem\fP (\fBCommand\fP item)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.CommandSet (string suite, \fBMessageLocalizerConverter\fP localizer = \fCnull\fP)"
+
+.SS "JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.CommandSet (string suite, TextWriter output, TextWriter error, \fBMessageLocalizerConverter\fP localizer = \fCnull\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBCommandSet\fP JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Add (\fBArgumentSource\fP source)"
+
+.SS "new \fBCommandSet\fP JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Add (\fBCommand\fP value)"
+
+.SS "\fBCommandSet\fP JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Add (\fBCommandSet\fP nestedCommands)"
+
+.SS "\fBCommandSet\fP JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Add (\fBOption\fP option)"
+
+.SS "\fBCommandSet\fP JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Add (string header)"
+
+.SS "\fBCommandSet\fP JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Add (string prototype, Action< string > action)"
+
+.SS "\fBCommandSet\fP JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Add (string prototype, OptionAction< string, string > action)"
+
+.SS "\fBCommandSet\fP JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Add (string prototype, string description, Action< string > action)"
+
+.SS "\fBCommandSet\fP JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Add (string prototype, string description, Action< string > action, bool hidden)"
+
+.SS "\fBCommandSet\fP JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Add (string prototype, string description, OptionAction< string, string > action)"
+
+.SS "\fBCommandSet\fP JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Add (string prototype, string description, OptionAction< string, string > action, bool hidden)"
+
+.SS "\fBCommandSet\fP \fBJBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Add\fP< T > (string prototype, Action< T > action)"
+
+.SS "\fBCommandSet\fP \fBJBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Add\fP< T > (string prototype, string description, Action< T > action)"
+
+.SS "\fBCommandSet\fP \fBJBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Add\fP< TKey, TValue > (string prototype, OptionAction< TKey, TValue > action)"
+
+.SS "\fBCommandSet\fP \fBJBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Add\fP< TKey, TValue > (string prototype, string description, OptionAction< TKey, TValue > action)"
+
+.SS "\fBIEnumerable\fP<string> JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.GetCompletions (string prefix = \fCnull\fP)"
+
+.SS "override string JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.GetKeyForItem (\fBCommand\fP item)\fC [protected]\fP"
+
+.SS "int JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Run (\fBIEnumerable\fP< string > arguments)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "TextWriter JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Error => errorWriter"
+
+.SS "\fBMessageLocalizerConverter\fP JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.MessageLocalizer => options\&.MessageLocalizer"
+
+.SS "TextWriter JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Out => outWriter"
+
+.SS "string JBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\&.Suite => suite"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

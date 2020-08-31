@@ -1,0 +1,99 @@
+.TH "JBToolkit.Domain.Impersonation.Impersonator" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Domain.Impersonation.Impersonator \- Used to perform execution of code under an elivated permission context  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBIDisposable\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBImpersonatorCredentials\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBImpersonator\fP (string userName, string domainName, string password, \fBLogonType\fP logonType, \fBLogonProvider\fP logonProvider)"
+.br
+.RI "Begins impersonation with the given credentials, Logon type and Logon provider\&. "
+.ti -1c
+.RI "\fBImpersonator\fP (string userName, string domainName, string password)"
+.br
+.RI "Begins impersonation with the given credentials\&. "
+.ti -1c
+.RI "\fBImpersonator\fP (string userName, string password)"
+.br
+.RI "Begins impersonation with the given credentials\&. "
+.ti -1c
+.RI "\fBImpersonator\fP ()"
+.br
+.RI "Initializes a new instance of the \fBImpersonator\fP class\&. "
+.ti -1c
+.RI "void \fBDispose\fP ()"
+.br
+.RI "Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources\&. "
+.ti -1c
+.RI "void \fBImpersonate\fP (string userName, string domainName, string password)"
+.br
+.RI "Impersonates the specified user account\&. "
+.ti -1c
+.RI "void \fBImpersonate\fP (string userName, string password)"
+.br
+.RI "Impersonates the specified user account\&. "
+.ti -1c
+.RI "void \fBImpersonate\fP (string userName, string domainName, string password, \fBLogonType\fP logonType, \fBLogonProvider\fP logonProvider)"
+.br
+.RI "Impersonates the specified user account\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Used to perform execution of code under an elivated permission context 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.Domain\&.Impersonation\&.Impersonator\&.Impersonator (string userName, string domainName, string password, \fBLogonType\fP logonType, \fBLogonProvider\fP logonProvider)"
+
+.PP
+Begins impersonation with the given credentials, Logon type and Logon provider\&. 
+.SS "JBToolkit\&.Domain\&.Impersonation\&.Impersonator\&.Impersonator (string userName, string domainName, string password)"
+
+.PP
+Begins impersonation with the given credentials\&. 
+.SS "JBToolkit\&.Domain\&.Impersonation\&.Impersonator\&.Impersonator (string userName, string password)"
+
+.PP
+Begins impersonation with the given credentials\&. 
+.SS "JBToolkit\&.Domain\&.Impersonation\&.Impersonator\&.Impersonator ()"
+
+.PP
+Initializes a new instance of the \fBImpersonator\fP class\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void JBToolkit\&.Domain\&.Impersonation\&.Impersonator\&.Dispose ()"
+
+.PP
+Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources\&. 
+.SS "void JBToolkit\&.Domain\&.Impersonation\&.Impersonator\&.Impersonate (string userName, string domainName, string password)"
+
+.PP
+Impersonates the specified user account\&. 
+.SS "void JBToolkit\&.Domain\&.Impersonation\&.Impersonator\&.Impersonate (string userName, string domainName, string password, \fBLogonType\fP logonType, \fBLogonProvider\fP logonProvider)"
+
+.PP
+Impersonates the specified user account\&. 
+.SS "void JBToolkit\&.Domain\&.Impersonation\&.Impersonator\&.Impersonate (string userName, string password)"
+
+.PP
+Impersonates the specified user account\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

@@ -1,0 +1,4 @@
+<map id="System.ConsoleEx.WriteColouredLine" name="System.ConsoleEx.WriteColouredLine">
+<area shape="rect" id="node1" title="Write line in a colour as of a ConsoleColor (limited range of colours)" alt="" coords="297,5,541,32"/>
+<area shape="rect" id="node2" href="$d3/df8/class_system_1_1_console_ex.html#a4f4c5a7c1bf9c91c92aa61f6a16bcbf5" title="Write line in a colour as of a hex colour (with or without the #). Full range of colours." alt="" coords="5,5,249,32"/>
+</map>

@@ -1,0 +1,87 @@
+\hypertarget{class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server}{}\doxysection{J\+B\+Toolkit.\+Inter\+Process\+Comms.\+Wcf.\+Wcf\+Server Class Reference}
+\label{class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server}\index{JBToolkit.InterProcessComms.Wcf.WcfServer@{JBToolkit.InterProcessComms.Wcf.WcfServer}}
+
+
+Client to host communication (1 direction) Named Pipe implementation.  
+
+
+
+
+Inheritance diagram for J\+B\+Toolkit.\+Inter\+Process\+Comms.\+Wcf.\+Wcf\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{dc/df4/class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Inter\+Process\+Comms.\+Wcf.\+Wcf\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{d6/dbc/class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server_aa508a222fbadddde30d62ac6c29c2bdd}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server_aeaa7187c617201044d0d9eacdcb4302a}{Stop}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler$<$ \mbox{\hyperlink{class_j_b_toolkit_1_1_inter_process_comms_1_1_data_received_event_args}{Data\+Received\+Event\+Args}} $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server_af7984e085b6eb5e16ff2b7d69b53b3b8}{Received}}
+\item 
+Event\+Handler$<$ \mbox{\hyperlink{class_event_args}{Event\+Args}} $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server_a975034aceabeca16b3201123c4820a40}{Faulted}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Client to host communication (1 direction) Named Pipe implementation. 
+
+Give the server an application specific unique name. When implementing the \textquotesingle{}Faulted\textquotesingle{} method, you need to actually recreate the \mbox{\hyperlink{class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server}{Wcf\+Server}} object to undo it\textquotesingle{}s faulted state.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server_aa508a222fbadddde30d62ac6c29c2bdd}\label{class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server_aa508a222fbadddde30d62ac6c29c2bdd}} 
+\index{JBToolkit.InterProcessComms.Wcf.WcfServer@{JBToolkit.InterProcessComms.Wcf.WcfServer}!Start@{Start}}
+\index{Start@{Start}!JBToolkit.InterProcessComms.Wcf.WcfServer@{JBToolkit.InterProcessComms.Wcf.WcfServer}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void J\+B\+Toolkit.\+Inter\+Process\+Comms.\+Wcf.\+Wcf\+Server.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_j_b_toolkit_1_1_inter_process_comms_1_1_i_ipc_server_af93c0ed3c690027582cc3f030cf7d75e}{J\+B\+Toolkit.\+Inter\+Process\+Comms.\+I\+Ipc\+Server}}.
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server_aeaa7187c617201044d0d9eacdcb4302a}\label{class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server_aeaa7187c617201044d0d9eacdcb4302a}} 
+\index{JBToolkit.InterProcessComms.Wcf.WcfServer@{JBToolkit.InterProcessComms.Wcf.WcfServer}!Stop@{Stop}}
+\index{Stop@{Stop}!JBToolkit.InterProcessComms.Wcf.WcfServer@{JBToolkit.InterProcessComms.Wcf.WcfServer}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily void J\+B\+Toolkit.\+Inter\+Process\+Comms.\+Wcf.\+Wcf\+Server.\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_j_b_toolkit_1_1_inter_process_comms_1_1_i_ipc_server_a8be050f093747444f3fe9af7c7548562}{J\+B\+Toolkit.\+Inter\+Process\+Comms.\+I\+Ipc\+Server}}.
+
+
+
+\doxysubsection{Event Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server_a975034aceabeca16b3201123c4820a40}\label{class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server_a975034aceabeca16b3201123c4820a40}} 
+\index{JBToolkit.InterProcessComms.Wcf.WcfServer@{JBToolkit.InterProcessComms.Wcf.WcfServer}!Faulted@{Faulted}}
+\index{Faulted@{Faulted}!JBToolkit.InterProcessComms.Wcf.WcfServer@{JBToolkit.InterProcessComms.Wcf.WcfServer}}
+\doxysubsubsection{\texorpdfstring{Faulted}{Faulted}}
+{\footnotesize\ttfamily Event\+Handler$<$\mbox{\hyperlink{class_event_args}{Event\+Args}}$>$ J\+B\+Toolkit.\+Inter\+Process\+Comms.\+Wcf.\+Wcf\+Server.\+Faulted}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server_af7984e085b6eb5e16ff2b7d69b53b3b8}\label{class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server_af7984e085b6eb5e16ff2b7d69b53b3b8}} 
+\index{JBToolkit.InterProcessComms.Wcf.WcfServer@{JBToolkit.InterProcessComms.Wcf.WcfServer}!Received@{Received}}
+\index{Received@{Received}!JBToolkit.InterProcessComms.Wcf.WcfServer@{JBToolkit.InterProcessComms.Wcf.WcfServer}}
+\doxysubsubsection{\texorpdfstring{Received}{Received}}
+{\footnotesize\ttfamily Event\+Handler$<$\mbox{\hyperlink{class_j_b_toolkit_1_1_inter_process_comms_1_1_data_received_event_args}{Data\+Received\+Event\+Args}}$>$ J\+B\+Toolkit.\+Inter\+Process\+Comms.\+Wcf.\+Wcf\+Server.\+Received}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Inter\+Process\+Comms/\+Wcf/\mbox{\hyperlink{_wcf_server_8cs}{Wcf\+Server.\+cs}}\end{DoxyCompactItemize}

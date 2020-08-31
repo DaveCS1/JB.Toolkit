@@ -1,0 +1,173 @@
+\hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_extraction}{}\doxysection{J\+B\+Toolkit.\+Zip.\+Zip\+Extraction Class Reference}
+\label{class_j_b_toolkit_1_1_zip_1_1_zip_extraction}\index{JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}}
+
+
+Contains multiple method for extracting a zip file to either disk or various streams  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Zip.\+Zip\+Extraction\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{d8/d55/class_j_b_toolkit_1_1_zip_1_1_zip_extraction__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ string, Memory\+Stream $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a6338c0f3598c67d551dd9b420117c4a1}{Extract\+To\+Memory\+Stream\+Dictionary}} (Stream targ\+File\+Stream)
+\begin{DoxyCompactList}\small\item\em Extracts a zip stream to a dictionary of file and Memory \mbox{\hyperlink{namespace_j_b_toolkit_1_1_streams}{Streams}} \end{DoxyCompactList}\item 
+Dictionary$<$ string, Memory\+Stream $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a255d5d389e050719ef268f2a888162b6}{Extract\+To\+Memory\+Stream\+Dictionary}} (string zip\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Extracts a zip file to a dictionary of file and Memory \mbox{\hyperlink{namespace_j_b_toolkit_1_1_streams}{Streams}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Dictionary$<$ string, byte\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a77fef132d916b03ed7a30fbcc248dc9c}{Extract\+To\+Byte\+Array\+Dictionary}} (Stream target\+Stream)
+\begin{DoxyCompactList}\small\item\em Extracts a zip stream to a dictionary of file and byte arrays \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes_collection}{File\+Path\+And\+Bytes\+Collection}} \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a5d6a3d55ca249f163aec55c5961f2e6f}{Extract\+To\+File\+Path\+And\+Bytes\+Collection}} (Stream target\+Stream)
+\begin{DoxyCompactList}\small\item\em Extracts a zip stream to a \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes}{File\+Path\+And\+Bytes}} collection object \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes_collection}{File\+Path\+And\+Bytes\+Collection}} \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a597f6546ba407459b1f4ee9127e55ff8}{Extract\+To\+File\+Path\+And\+Bytes\+Collection}} (string zip\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Extracts a zip file to a \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes}{File\+Path\+And\+Bytes}} collection object \end{DoxyCompactList}\item 
+static Dictionary$<$ string, byte\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a9c355955740190d303280179a468bd81}{Extract\+To\+Byte\+Array\+Dictionary}} (string zip\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Extract a zip file to a dictionary of file paths and byte arrays \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a265b3931dd645823ef5222e02ae5d84c}{Extract\+To\+Disk}} (Stream zip\+Stream, string target\+Path)
+\begin{DoxyCompactList}\small\item\em Extract a zip stream to disk \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a49e25aa96b9f4eaf104c75a5633f79df}{Extract\+To\+Disk}} (string zip\+Path, string target\+Path)
+\begin{DoxyCompactList}\small\item\em Extract a zip file to disk \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains multiple method for extracting a zip file to either disk or various streams 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a77fef132d916b03ed7a30fbcc248dc9c}\label{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a77fef132d916b03ed7a30fbcc248dc9c}} 
+\index{JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}!ExtractToByteArrayDictionary@{ExtractToByteArrayDictionary}}
+\index{ExtractToByteArrayDictionary@{ExtractToByteArrayDictionary}!JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}}
+\doxysubsubsection{\texorpdfstring{ExtractToByteArrayDictionary()}{ExtractToByteArrayDictionary()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static Dictionary$<$string, byte\mbox{[}$\,$\mbox{]}$>$ J\+B\+Toolkit.\+Zip.\+Zip\+Extraction.\+Extract\+To\+Byte\+Array\+Dictionary (\begin{DoxyParamCaption}\item[{Stream}]{target\+Stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Extracts a zip stream to a dictionary of file and byte arrays 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{d9/d0e/class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a77fef132d916b03ed7a30fbcc248dc9c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a9c355955740190d303280179a468bd81}\label{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a9c355955740190d303280179a468bd81}} 
+\index{JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}!ExtractToByteArrayDictionary@{ExtractToByteArrayDictionary}}
+\index{ExtractToByteArrayDictionary@{ExtractToByteArrayDictionary}!JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}}
+\doxysubsubsection{\texorpdfstring{ExtractToByteArrayDictionary()}{ExtractToByteArrayDictionary()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static Dictionary$<$string, byte\mbox{[}$\,$\mbox{]}$>$ J\+B\+Toolkit.\+Zip.\+Zip\+Extraction.\+Extract\+To\+Byte\+Array\+Dictionary (\begin{DoxyParamCaption}\item[{string}]{zip\+File\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Extract a zip file to a dictionary of file paths and byte arrays 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{d9/d0e/class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a9c355955740190d303280179a468bd81_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a265b3931dd645823ef5222e02ae5d84c}\label{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a265b3931dd645823ef5222e02ae5d84c}} 
+\index{JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}!ExtractToDisk@{ExtractToDisk}}
+\index{ExtractToDisk@{ExtractToDisk}!JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}}
+\doxysubsubsection{\texorpdfstring{ExtractToDisk()}{ExtractToDisk()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Zip.\+Zip\+Extraction.\+Extract\+To\+Disk (\begin{DoxyParamCaption}\item[{Stream}]{zip\+Stream,  }\item[{string}]{target\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Extract a zip stream to disk 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a49e25aa96b9f4eaf104c75a5633f79df}\label{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a49e25aa96b9f4eaf104c75a5633f79df}} 
+\index{JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}!ExtractToDisk@{ExtractToDisk}}
+\index{ExtractToDisk@{ExtractToDisk}!JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}}
+\doxysubsubsection{\texorpdfstring{ExtractToDisk()}{ExtractToDisk()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Zip.\+Zip\+Extraction.\+Extract\+To\+Disk (\begin{DoxyParamCaption}\item[{string}]{zip\+Path,  }\item[{string}]{target\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Extract a zip file to disk 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a5d6a3d55ca249f163aec55c5961f2e6f}\label{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a5d6a3d55ca249f163aec55c5961f2e6f}} 
+\index{JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}!ExtractToFilePathAndBytesCollection@{ExtractToFilePathAndBytesCollection}}
+\index{ExtractToFilePathAndBytesCollection@{ExtractToFilePathAndBytesCollection}!JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}}
+\doxysubsubsection{\texorpdfstring{ExtractToFilePathAndBytesCollection()}{ExtractToFilePathAndBytesCollection()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes_collection}{File\+Path\+And\+Bytes\+Collection}} J\+B\+Toolkit.\+Zip.\+Zip\+Extraction.\+Extract\+To\+File\+Path\+And\+Bytes\+Collection (\begin{DoxyParamCaption}\item[{Stream}]{target\+Stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Extracts a zip stream to a \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes}{File\+Path\+And\+Bytes}} collection object 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{d9/d0e/class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a5d6a3d55ca249f163aec55c5961f2e6f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a597f6546ba407459b1f4ee9127e55ff8}\label{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a597f6546ba407459b1f4ee9127e55ff8}} 
+\index{JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}!ExtractToFilePathAndBytesCollection@{ExtractToFilePathAndBytesCollection}}
+\index{ExtractToFilePathAndBytesCollection@{ExtractToFilePathAndBytesCollection}!JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}}
+\doxysubsubsection{\texorpdfstring{ExtractToFilePathAndBytesCollection()}{ExtractToFilePathAndBytesCollection()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes_collection}{File\+Path\+And\+Bytes\+Collection}} J\+B\+Toolkit.\+Zip.\+Zip\+Extraction.\+Extract\+To\+File\+Path\+And\+Bytes\+Collection (\begin{DoxyParamCaption}\item[{string}]{zip\+File\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Extracts a zip file to a \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes}{File\+Path\+And\+Bytes}} collection object 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{d9/d0e/class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a597f6546ba407459b1f4ee9127e55ff8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a6338c0f3598c67d551dd9b420117c4a1}\label{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a6338c0f3598c67d551dd9b420117c4a1}} 
+\index{JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}!ExtractToMemoryStreamDictionary@{ExtractToMemoryStreamDictionary}}
+\index{ExtractToMemoryStreamDictionary@{ExtractToMemoryStreamDictionary}!JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}}
+\doxysubsubsection{\texorpdfstring{ExtractToMemoryStreamDictionary()}{ExtractToMemoryStreamDictionary()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Dictionary$<$string, Memory\+Stream$>$ J\+B\+Toolkit.\+Zip.\+Zip\+Extraction.\+Extract\+To\+Memory\+Stream\+Dictionary (\begin{DoxyParamCaption}\item[{Stream}]{targ\+File\+Stream }\end{DoxyParamCaption})}
+
+
+
+Extracts a zip stream to a dictionary of file and Memory \mbox{\hyperlink{namespace_j_b_toolkit_1_1_streams}{Streams}} 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{d9/d0e/class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a6338c0f3598c67d551dd9b420117c4a1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a255d5d389e050719ef268f2a888162b6}\label{class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a255d5d389e050719ef268f2a888162b6}} 
+\index{JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}!ExtractToMemoryStreamDictionary@{ExtractToMemoryStreamDictionary}}
+\index{ExtractToMemoryStreamDictionary@{ExtractToMemoryStreamDictionary}!JBToolkit.Zip.ZipExtraction@{JBToolkit.Zip.ZipExtraction}}
+\doxysubsubsection{\texorpdfstring{ExtractToMemoryStreamDictionary()}{ExtractToMemoryStreamDictionary()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Dictionary$<$string, Memory\+Stream$>$ J\+B\+Toolkit.\+Zip.\+Zip\+Extraction.\+Extract\+To\+Memory\+Stream\+Dictionary (\begin{DoxyParamCaption}\item[{string}]{zip\+File\+Path }\end{DoxyParamCaption})}
+
+
+
+Extracts a zip file to a dictionary of file and Memory \mbox{\hyperlink{namespace_j_b_toolkit_1_1_streams}{Streams}} 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{d9/d0e/class_j_b_toolkit_1_1_zip_1_1_zip_extraction_a255d5d389e050719ef268f2a888162b6_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Zip/\mbox{\hyperlink{_zip_extraction_8cs}{Zip\+Extraction.\+cs}}\end{DoxyCompactItemize}

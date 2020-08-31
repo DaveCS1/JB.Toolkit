@@ -1,0 +1,253 @@
+\hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip}{}\doxysection{J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip Class Reference}
+\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip}\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+
+
+Nicer Custom Tooltip for controls  
+
+
+
+
+Inheritance diagram for J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{dd/dfc/class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{db/dc9/class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_1_1_tool_tip_control}{Tool\+Tip\+Control}}
+\begin{DoxyCompactList}\small\item\em Provides information about Tool\+Tips that are associated with their controls. This structure is used specifically with the \textquotesingle{}Get\+Tool\+Tip(control)\textquotesingle{} method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a4db3b3a70b6bae1408c13a2698714afd}{Custom\+Tool\+Tip}} ()
+\item 
+void \mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a962930726d5094f9fc9ae5644df11ffa}{Set\+Tool\+Tip}} (\mbox{\hyperlink{class_control}{Control}} control, string description, string title, int duration=6000)
+\begin{DoxyCompactList}\small\item\em Associates \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} title and description with the specified control. \end{DoxyCompactList}\item 
+new void \mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a5fc87af4279b058f036867f9cd2df249}{Set\+Tool\+Tip}} (\mbox{\hyperlink{class_control}{Control}} control, string description)
+\begin{DoxyCompactList}\small\item\em Associates \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} title and description with the specified control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a9e7360429d1376fd57175b7d21725854}{Remove\+Tool\+Tip}} (\mbox{\hyperlink{class_control}{Control}} control)
+\begin{DoxyCompactList}\small\item\em Removes the associated \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} from the specified control. \end{DoxyCompactList}\item 
+new \mbox{\hyperlink{struct_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_1_1_tool_tip_control}{Tool\+Tip\+Control}} \mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a9b3c7888b18a584ad7116810929df2fe}{Get\+Tool\+Tip}} (\mbox{\hyperlink{class_control}{Control}} control)
+\begin{DoxyCompactList}\small\item\em Gets the associated \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} with the specified control. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+new bool \mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_ac30e79087619abd9f88b8c3146d0e472}{Owner\+Draw}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+new bool \mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a7166ccd5c2ac7859f01cfd5aafd14b6f}{Is\+Balloon}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+new Color \mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a429a896aa4178822948c1defe9ba5a54}{Fore\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+new Color \mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_ace97d88bc266228cc1fd0343961c0766}{Back\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the background color for the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}}. No background color is taken into account when a background image is set! \end{DoxyCompactList}\item 
+new string \mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a36eb1c3679f0251971f00d578af3f4d1}{Tool\+Tip\+Title}} = string.\+Empty\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies a title for the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} to use when it is about to be desplayed but only when no title was set for a control in the Tool\+Tip! \end{DoxyCompactList}\item 
+Size \mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a615c85f3bff51ce402a57be9f8251fb4}{Size}} = new Size(100, 70)\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em In order to set this you must set the Auto\+Size value to false. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a92bdf5d53d158f6fc2335c450c0be5a4}{Auto\+Size}} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies whether the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} will calculate its size automatically, or will use a specified size. \end{DoxyCompactList}\item 
+Font \mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a0a02ed494e7a7ad9a059c9eba3608c67}{Title\+Font}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies a Font value for the title on the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}}. \end{DoxyCompactList}\item 
+Font \mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a779d83669d41e3fcd7e92de248145b02}{Description\+Font}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies a Font value for the description on the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a8e37fc9b63371d1eb65b8b71e36729b5}{Max\+Width}} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+new bool \mbox{\hyperlink{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a9f0f8cd869a0eb914ee8736323d8a4ec}{Strip\+Ampersands}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Nicer Custom Tooltip for controls 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a4db3b3a70b6bae1408c13a2698714afd}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a4db3b3a70b6bae1408c13a2698714afd}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!CustomToolTip@{CustomToolTip}}
+\index{CustomToolTip@{CustomToolTip}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{CustomToolTip()}{CustomToolTip()}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Custom\+Tool\+Tip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a9b3c7888b18a584ad7116810929df2fe}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a9b3c7888b18a584ad7116810929df2fe}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!GetToolTip@{GetToolTip}}
+\index{GetToolTip@{GetToolTip}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{GetToolTip()}{GetToolTip()}}
+{\footnotesize\ttfamily new \mbox{\hyperlink{struct_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_1_1_tool_tip_control}{Tool\+Tip\+Control}} J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Get\+Tool\+Tip (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control}{Control}}}]{control }\end{DoxyParamCaption})}
+
+
+
+Gets the associated \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} with the specified control. 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a9e7360429d1376fd57175b7d21725854}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a9e7360429d1376fd57175b7d21725854}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!RemoveToolTip@{RemoveToolTip}}
+\index{RemoveToolTip@{RemoveToolTip}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{RemoveToolTip()}{RemoveToolTip()}}
+{\footnotesize\ttfamily void J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Remove\+Tool\+Tip (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control}{Control}}}]{control }\end{DoxyParamCaption})}
+
+
+
+Removes the associated \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} from the specified control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em control} & The System.\+Windows.\+Forms.\+Control to associate the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} text with.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a5fc87af4279b058f036867f9cd2df249}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a5fc87af4279b058f036867f9cd2df249}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!SetToolTip@{SetToolTip}}
+\index{SetToolTip@{SetToolTip}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{SetToolTip()}{SetToolTip()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily new void J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Set\+Tool\+Tip (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control}{Control}}}]{control,  }\item[{string}]{description }\end{DoxyParamCaption})}
+
+
+
+Associates \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} title and description with the specified control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em control} & The System.\+Windows.\+Forms.\+Control to associate the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} text with.\\
+\hline
+{\em description} & The \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} description to display when the the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} is shown over the specified control.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a962930726d5094f9fc9ae5644df11ffa}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a962930726d5094f9fc9ae5644df11ffa}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!SetToolTip@{SetToolTip}}
+\index{SetToolTip@{SetToolTip}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{SetToolTip()}{SetToolTip()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Set\+Tool\+Tip (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_control}{Control}}}]{control,  }\item[{string}]{description,  }\item[{string}]{title,  }\item[{int}]{duration = {\ttfamily 6000} }\end{DoxyParamCaption})}
+
+
+
+Associates \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} title and description with the specified control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em control} & The System.\+Windows.\+Forms.\+Control to associate the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} text with.\\
+\hline
+{\em description} & The \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} description to display when the the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} is shown over the specified control.\\
+\hline
+{\em title} & The \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} title to display when the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} is shown.\\
+\hline
+{\em duration} & Time in ms into tooltips faddes\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d45/class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a962930726d5094f9fc9ae5644df11ffa_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a92bdf5d53d158f6fc2335c450c0be5a4}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a92bdf5d53d158f6fc2335c450c0be5a4}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!AutoSize@{AutoSize}}
+\index{AutoSize@{AutoSize}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{AutoSize}{AutoSize}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Auto\+Size = true\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies whether the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} will calculate its size automatically, or will use a specified size. 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_ace97d88bc266228cc1fd0343961c0766}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_ace97d88bc266228cc1fd0343961c0766}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!BackColor@{BackColor}}
+\index{BackColor@{BackColor}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{BackColor}{BackColor}}
+{\footnotesize\ttfamily new Color J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Back\+Color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the background color for the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}}. No background color is taken into account when a background image is set! 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a779d83669d41e3fcd7e92de248145b02}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a779d83669d41e3fcd7e92de248145b02}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!DescriptionFont@{DescriptionFont}}
+\index{DescriptionFont@{DescriptionFont}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{DescriptionFont}{DescriptionFont}}
+{\footnotesize\ttfamily Font J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Description\+Font\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies a Font value for the description on the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}}. 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a429a896aa4178822948c1defe9ba5a54}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a429a896aa4178822948c1defe9ba5a54}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!ForeColor@{ForeColor}}
+\index{ForeColor@{ForeColor}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{ForeColor}{ForeColor}}
+{\footnotesize\ttfamily new Color J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Fore\+Color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a7166ccd5c2ac7859f01cfd5aafd14b6f}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a7166ccd5c2ac7859f01cfd5aafd14b6f}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!IsBalloon@{IsBalloon}}
+\index{IsBalloon@{IsBalloon}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{IsBalloon}{IsBalloon}}
+{\footnotesize\ttfamily new bool J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Is\+Balloon\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a8e37fc9b63371d1eb65b8b71e36729b5}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a8e37fc9b63371d1eb65b8b71e36729b5}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!MaxWidth@{MaxWidth}}
+\index{MaxWidth@{MaxWidth}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{MaxWidth}{MaxWidth}}
+{\footnotesize\ttfamily int J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Max\+Width = 0\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_ac30e79087619abd9f88b8c3146d0e472}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_ac30e79087619abd9f88b8c3146d0e472}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!OwnerDraw@{OwnerDraw}}
+\index{OwnerDraw@{OwnerDraw}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{OwnerDraw}{OwnerDraw}}
+{\footnotesize\ttfamily new bool J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Owner\+Draw\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a615c85f3bff51ce402a57be9f8251fb4}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a615c85f3bff51ce402a57be9f8251fb4}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!Size@{Size}}
+\index{Size@{Size}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{Size}{Size}}
+{\footnotesize\ttfamily Size J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Size = new Size(100, 70)\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+In order to set this you must set the Auto\+Size value to false. 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a9f0f8cd869a0eb914ee8736323d8a4ec}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a9f0f8cd869a0eb914ee8736323d8a4ec}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!StripAmpersands@{StripAmpersands}}
+\index{StripAmpersands@{StripAmpersands}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{StripAmpersands}{StripAmpersands}}
+{\footnotesize\ttfamily new bool J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Strip\+Ampersands\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a0a02ed494e7a7ad9a059c9eba3608c67}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a0a02ed494e7a7ad9a059c9eba3608c67}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!TitleFont@{TitleFont}}
+\index{TitleFont@{TitleFont}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{TitleFont}{TitleFont}}
+{\footnotesize\ttfamily Font J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Title\+Font\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies a Font value for the title on the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}}. 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a36eb1c3679f0251971f00d578af3f4d1}\label{class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip_a36eb1c3679f0251971f00d578af3f4d1}} 
+\index{JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}!ToolTipTitle@{ToolTipTitle}}
+\index{ToolTipTitle@{ToolTipTitle}!JBToolkit.WinForms.CustomToolTip@{JBToolkit.WinForms.CustomToolTip}}
+\doxysubsubsection{\texorpdfstring{ToolTipTitle}{ToolTipTitle}}
+{\footnotesize\ttfamily new string J\+B\+Toolkit.\+Win\+Forms.\+Custom\+Tool\+Tip.\+Tool\+Tip\+Title = string.\+Empty\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies a title for the \mbox{\hyperlink{class_tool_tip}{Tool\+Tip}} to use when it is about to be desplayed but only when no title was set for a control in the Tool\+Tip! 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Win\+Forms/\mbox{\hyperlink{_custom_tool_tip_8cs}{Custom\+Tool\+Tip.\+cs}}\end{DoxyCompactItemize}

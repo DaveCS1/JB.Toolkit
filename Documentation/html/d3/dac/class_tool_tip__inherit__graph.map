@@ -1,0 +1,5 @@
+<map id="ToolTip" name="ToolTip">
+<area shape="rect" id="node1" title=" " alt="" coords="180,5,243,83"/>
+<area shape="rect" id="node2" href="$d5/d45/class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip.html" title="Nicer Custom Tooltip for controls" alt="" coords="5,131,193,443"/>
+<area shape="rect" id="node3" href="$d6/dbd/class_j_b_toolkit_1_1_win_forms_1_1_html_tool_tip.html" title="Provides HTML rendering on the tooltips" alt="" coords="218,248,429,325"/>
+</map>

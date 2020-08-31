@@ -1,0 +1,38 @@
+.TH "JBToolkit.Domain.Impersonation.Win32NativeMethods" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Domain.Impersonation.Win32NativeMethods
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBLogonUser\fP (string lpszUserName, string lpszDomain, string lpszPassword, int dwLogonType, int dwLogonProvider, ref IntPtr phToken)"
+.br
+.ti -1c
+.RI "static int \fBDuplicateToken\fP (IntPtr hToken, int impersonationLevel, ref IntPtr hNewToken)"
+.br
+.ti -1c
+.RI "static bool \fBRevertToSelf\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBCloseHandle\fP (IntPtr handle)"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "static bool JBToolkit\&.Domain\&.Impersonation\&.Win32NativeMethods\&.CloseHandle (IntPtr handle)"
+
+.SS "static int JBToolkit\&.Domain\&.Impersonation\&.Win32NativeMethods\&.DuplicateToken (IntPtr hToken, int impersonationLevel, ref IntPtr hNewToken)"
+
+.SS "static int JBToolkit\&.Domain\&.Impersonation\&.Win32NativeMethods\&.LogonUser (string lpszUserName, string lpszDomain, string lpszPassword, int dwLogonType, int dwLogonProvider, ref IntPtr phToken)"
+
+.SS "static bool JBToolkit\&.Domain\&.Impersonation\&.Win32NativeMethods\&.RevertToSelf ()"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

@@ -1,0 +1,202 @@
+.TH "JBToolkit.Web.Http" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Web.Http \- Generic HTTP methods  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBLocationType\fP { \fBLocationType\&.FilePath\fP, \fBLocationType\&.URL\fP, \fBLocationType\&.Base64String\fP, \fBLocationType\&.Unknown\fP }"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static string \fBGetSiteRoot\fP ()"
+.br
+.RI "Return scheme + host + port (i\&.e\&. http://localhost:80) "
+.ti -1c
+.RI "static string \fBRemoveQueryStringFromUrl\fP (string fullUrl)"
+.br
+.RI "Returns just the path of the URL (without query string) "
+.ti -1c
+.RI "static bool \fBDoesImageExistRemotely\fP (string uriToImage)"
+.br
+.RI "Used to test if favicon of quicklink custom site exists, so that if it doesn't we can use a custom image "
+.ti -1c
+.RI "static string \fBGetImageBase64StringFromUrl\fP (String url, bool includeMimeTypeDescriptor=false)"
+.br
+.RI "Peforms a HTTP web request and downloads an image "
+.ti -1c
+.RI "static byte[] \fBGetImageBytesFromUrl\fP (string url)"
+.br
+.RI "Peforms a HTTP web request and downloads an image "
+.ti -1c
+.RI "static Stream \fBGetStreamFromUrl\fP (string url)"
+.br
+.RI "Gets a stream from a remote URL file location "
+.ti -1c
+.RI "static \fBLocationType\fP \fBGetIsPathOrUrlOrBase64\fP (string input)"
+.br
+.RI "Based on given input string - it decides if it's a web URL, a local file path or a base64 string\&. "
+.ti -1c
+.RI "static bool \fBPathIsLocalFile\fP (string path)"
+.br
+.RI "Is the path a local file? I\&.e\&. not a web URL or base 64 string "
+.ti -1c
+.RI "static bool \fBPathIsUrl\fP (string path)"
+.br
+.RI "Is the path a local file? I\&.e\&. not a web URL or base 64 string "
+.ti -1c
+.RI "static string \fBDecompressBrotliFromHttpRequestResponse\fP (HttpWebRequest request)"
+.br
+.RI "Decompress a brotli compressed (br) http requst response stream (i\&.e, Google uses this) "
+.ti -1c
+.RI "static dynamic \fBDecompressBrotliFromHttpRequestResponseAssumingJson\fP (HttpWebRequest request)"
+.br
+.RI "Decompress a brotli compressed (br) http request response stream (i\&.e, Google uses this) "
+.ti -1c
+.RI "static T \fBDecompressBrotliFromHttpRequestResponseAssumingJson< T >\fP (HttpWebRequest request)"
+.br
+.RI "Decompress a brotli compressed (br) http request response stream (i\&.e, Google uses this) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Generic HTTP methods 
+
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBJBToolkit\&.Web\&.Http\&.LocationType\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIFilePath \fP\fP
+.TP
+\fB\fIURL \fP\fP
+.TP
+\fB\fIBase64String \fP\fP
+.TP
+\fB\fIUnknown \fP\fP
+.SH "Member Function Documentation"
+.PP 
+.SS "static string JBToolkit\&.Web\&.Http\&.DecompressBrotliFromHttpRequestResponse (HttpWebRequest request)\fC [static]\fP"
+
+.PP
+Decompress a brotli compressed (br) http requst response stream (i\&.e, Google uses this) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrequest\fP WebClient or HttpWebRequest input
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Raw string
+.RE
+.PP
+
+.SS "static dynamic JBToolkit\&.Web\&.Http\&.DecompressBrotliFromHttpRequestResponseAssumingJson (HttpWebRequest request)\fC [static]\fP"
+
+.PP
+Decompress a brotli compressed (br) http request response stream (i\&.e, Google uses this) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrequest\fP WebClient or HttpWebRequest input
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Deserialised object as a dynamic object
+.RE
+.PP
+
+.SS "static T \fBJBToolkit\&.Web\&.Http\&.DecompressBrotliFromHttpRequestResponseAssumingJson\fP< T > (HttpWebRequest request)\fC [static]\fP"
+
+.PP
+Decompress a brotli compressed (br) http request response stream (i\&.e, Google uses this) 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP Type of object to deserialise to
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIrequest\fP WebClient or HttpWebRequest input
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Deserialised object
+.RE
+.PP
+
+.SS "static bool JBToolkit\&.Web\&.Http\&.DoesImageExistRemotely (string uriToImage)\fC [static]\fP"
+
+.PP
+Used to test if favicon of quicklink custom site exists, so that if it doesn't we can use a custom image 
+.PP
+\fBParameters\fP
+.RS 4
+\fIuriToImage\fP Remote URL
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True or false
+.RE
+.PP
+
+.SS "static string JBToolkit\&.Web\&.Http\&.GetImageBase64StringFromUrl (String url, bool includeMimeTypeDescriptor = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Peforms a HTTP web request and downloads an image 
+.SS "static byte [] JBToolkit\&.Web\&.Http\&.GetImageBytesFromUrl (string url)\fC [static]\fP"
+
+.PP
+Peforms a HTTP web request and downloads an image 
+.SS "static \fBLocationType\fP JBToolkit\&.Web\&.Http\&.GetIsPathOrUrlOrBase64 (string input)\fC [static]\fP"
+
+.PP
+Based on given input string - it decides if it's a web URL, a local file path or a base64 string\&. *Don't rely on this\&. It works by checking the existance of an URL or local file\&. No acutal string pattern matching is performed\&.
+.SS "static string JBToolkit\&.Web\&.Http\&.GetSiteRoot ()\fC [static]\fP"
+
+.PP
+Return scheme + host + port (i\&.e\&. http://localhost:80) 
+.SS "static Stream JBToolkit\&.Web\&.Http\&.GetStreamFromUrl (string url)\fC [static]\fP"
+
+.PP
+Gets a stream from a remote URL file location 
+.PP
+\fBParameters\fP
+.RS 4
+\fIurl\fP 
+.RE
+.PP
+
+.SS "static bool JBToolkit\&.Web\&.Http\&.PathIsLocalFile (string path)\fC [static]\fP"
+
+.PP
+Is the path a local file? I\&.e\&. not a web URL or base 64 string *Don't rely on this\&. It works by checking the existance of a local file\&. No acutal string pattern matching is performed\&.
+.SS "static bool JBToolkit\&.Web\&.Http\&.PathIsUrl (string path)\fC [static]\fP"
+
+.PP
+Is the path a local file? I\&.e\&. not a web URL or base 64 string *Don't rely on this\&. It works by checking the existance of an URL end-point\&. No acutal string pattern matching is performed\&.
+.SS "static string JBToolkit\&.Web\&.Http\&.RemoveQueryStringFromUrl (string fullUrl)\fC [static]\fP"
+
+.PP
+Returns just the path of the URL (without query string) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

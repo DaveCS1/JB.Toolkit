@@ -1,0 +1,112 @@
+.TH "JBToolkit.Web.AccessToken" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Web.AccessToken \- Generates and validates short lives access tokens - Stores in a database  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static HttpResponseMessage \fBGetShortLivedAccessToken\fP (HttpRequestMessage request, string applicationName, string applicationApiKeyToCheckAgainst, string dbNameWhereTheTokenIsStored, int expiryInSeconds=30, string[] whiteListIps=null)"
+.br
+.RI "Generates a short live (default 30 seconds) access token (GUID) to be used when authenticating external / public requests\&. 
+.br
+
+.br
+ Note: Please see the method in \fBJBToolkit\fP: GetShortLivedAccessToken_Request_Example for an example of how the 3rd party would generate the request\&. "
+.ti -1c
+.RI "static HttpResponseMessage \fBGetShortLivedAccessToken\fP (HttpRequestMessage request, string applicationName, string applicationApiKeyToCheckAgainst, string dbNameWhereTheTokenIsStored, string dbConnectionString, int expiryInSeconds=30, string[] whiteListIps=null)"
+.br
+.RI "Generates a short live (default 30 seconds) access token (GUID) to be used when authenticating external / public requests\&. 
+.br
+
+.br
+ Note: Please see the method in \fBJBToolkit\fP: GetShortLivedAccessToken_Request_Example for an example of how the 3rd party would generate the request\&. "
+.ti -1c
+.RI "static bool \fBIsAccessTokenValid\fP (string ipAddress, string dbName, string connectionString, string token)"
+.br
+.RI "Checks if token exists in the database and isn't expired "
+.ti -1c
+.RI "static ? DateTime \fBGetTokenExpiry\fP (string ipAddress, string dbName, string connectionString)"
+.br
+.RI "Get's a token expiry date and time for a given IP address if one exists "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Generates and validates short lives access tokens - Stores in a database 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static HttpResponseMessage JBToolkit\&.Web\&.AccessToken\&.GetShortLivedAccessToken (HttpRequestMessage request, string applicationName, string applicationApiKeyToCheckAgainst, string dbNameWhereTheTokenIsStored, int expiryInSeconds = \fC30\fP, string[] whiteListIps = \fCnull\fP)\fC [static]\fP"
+
+.PP
+Generates a short live (default 30 seconds) access token (GUID) to be used when authenticating external / public requests\&. 
+.br
+
+.br
+ Note: Please see the method in \fBJBToolkit\fP: GetShortLivedAccessToken_Request_Example for an example of how the 3rd party would generate the request\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrequest\fP The http request from the visitor which must contain the IP address in the json object data root and a predefined API as the value of a the request header with the key matching the application name
+.br
+\fIapplicationName\fP A given application name
+.br
+\fIapplicationApiKeyToCheckAgainst\fP A predefined application key
+.br
+\fIexpiryInSeconds\fP How long in seconds the token lives (default 30 seconds)
+.br
+\fIwhiteListIps\fP RECOMMENDED\&. An array of allowed IP address - typically you'd store in config file
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A GUID string as the expiring token
+.RE
+.PP
+
+.SS "static HttpResponseMessage JBToolkit\&.Web\&.AccessToken\&.GetShortLivedAccessToken (HttpRequestMessage request, string applicationName, string applicationApiKeyToCheckAgainst, string dbNameWhereTheTokenIsStored, string dbConnectionString, int expiryInSeconds = \fC30\fP, string[] whiteListIps = \fCnull\fP)\fC [static]\fP"
+
+.PP
+Generates a short live (default 30 seconds) access token (GUID) to be used when authenticating external / public requests\&. 
+.br
+
+.br
+ Note: Please see the method in \fBJBToolkit\fP: GetShortLivedAccessToken_Request_Example for an example of how the 3rd party would generate the request\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrequest\fP The http request from the visitor which must contain the IP address in the json object data root and a predefined API as the value of a the request header with the key matching the application name
+.br
+\fIapplicationName\fP A given application name
+.br
+\fIapplicationApiKeyToCheckAgainst\fP A predefined application key
+.br
+\fIexpiryInSeconds\fP How long in seconds the token lives (default 30 seconds)
+.br
+\fIwhiteListIps\fP RECOMMENDED\&. An array of allowed IP address - typically you'd store in config file
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A GUID string as the expiring token
+.RE
+.PP
+
+.SS "static ? DateTime JBToolkit\&.Web\&.AccessToken\&.GetTokenExpiry (string ipAddress, string dbName, string connectionString)\fC [static]\fP"
+
+.PP
+Get's a token expiry date and time for a given IP address if one exists 
+.SS "static bool JBToolkit\&.Web\&.AccessToken\&.IsAccessTokenValid (string ipAddress, string dbName, string connectionString, string token)\fC [static]\fP"
+
+.PP
+Checks if token exists in the database and isn't expired 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

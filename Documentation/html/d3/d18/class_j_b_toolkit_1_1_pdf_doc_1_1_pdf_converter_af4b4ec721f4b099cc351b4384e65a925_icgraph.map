@@ -1,0 +1,5 @@
+<map id="JBToolkit.PdfDoc.PdfConverter.ConvertPDFToPng" name="JBToolkit.PdfDoc.PdfConverter.ConvertPDFToPng">
+<area shape="rect" id="node1" title="Converts PDF to memory stream array (array memory streams &#45; 1 memory stream for each image for each p..." alt="" coords="511,5,713,47"/>
+<area shape="rect" id="node2" href="$d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter.html#abc56c1fa1259f07ab4c31686f826b785" title="Converts PDF to 3D byte array (array of byte arrays &#45; 1 byte array for each image for each page)" alt="" coords="233,5,463,47"/>
+<area shape="rect" id="node3" href="$da/ded/class_j_b_toolkit_1_1_googe_api_1_1_vision.html#a7e97cf7011f55ccf4b4dc13db252f663" title="Extract text from an a PDF (converts to PNG first)" alt="" coords="5,5,185,47"/>
+</map>

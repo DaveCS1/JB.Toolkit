@@ -1,0 +1,5 @@
+<map id="JBToolkit.Web.EmailResult" name="JBToolkit.Web.EmailResult">
+<area shape="rect" id="node1" title="Contains email sent status information" alt="" coords="113,5,293,97"/>
+<area shape="rect" id="node2" href="$dd/d3f/class_j_b_toolkit_1_1_web_1_1_failure_email_result.html" title="Contains email sent &#39;success&#39; information" alt="" coords="5,145,188,237"/>
+<area shape="rect" id="node3" href="$df/d38/class_j_b_toolkit_1_1_web_1_1_success_email_result.html" title="Contains email sent &#39;success&#39; information" alt="" coords="213,145,407,237"/>
+</map>

@@ -1,0 +1,56 @@
+.TH "JBToolkit.Logger.FileLogger" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Logger.FileLogger \- Logs errors to files stored in the 'Content' directory - used in the event we're unable to log to the database  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBLogError\fP (\fBException\fP ex, string outputDirectory=null)"
+.br
+.RI "Log error with the exception itself\&. "
+.ti -1c
+.RI "static void \fBLogError\fP (string message, string outputDirectory=null)"
+.br
+.RI "Log a message string "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Logs errors to files stored in the 'Content' directory - used in the event we're unable to log to the database 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static void JBToolkit\&.Logger\&.FileLogger\&.LogError (\fBException\fP ex, string outputDirectory = \fCnull\fP)\fC [static]\fP"
+
+.PP
+Log error with the exception itself\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoutputDirectory\fP (Optional) Default is bin\\logs for an app or class library or /Content/logs for a site
+.RE
+.PP
+
+.SS "static void JBToolkit\&.Logger\&.FileLogger\&.LogError (string message, string outputDirectory = \fCnull\fP)\fC [static]\fP"
+
+.PP
+Log a message string 
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP The message to log
+.br
+\fIoutputDirectory\fP (Optional) Default is bin\\logs for an app or class library or /Content/logs for a site
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

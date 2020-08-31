@@ -1,0 +1,288 @@
+\hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table}{}\doxysection{J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table Class Reference}
+\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table}\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+
+
+Editable Data\+Table\+: Generates J\+Qquery Data\+Table H\+T\+ML from a Model that you can edit fields for.  
+
+
+
+
+Inheritance diagram for J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d8/d72/class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d4/df9/class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a0e64cd4a75df386a0d0e9b6278b165ef}{Jquery\+Editor\+Data\+Table}} ()
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a3dc0818541584073671995214a290bdd}{Jquery\+Editor\+Data\+Table}} (string table\+Name, string columns, string column\+Definitions, string url, string fields, string sorting, string additional\+Java\+Script=\char`\"{}\char`\"{}, string unique\+Id=\char`\"{}Default\char`\"{}, bool use\+Custom\+Header=true, bool responsive=false)
+\item 
+override string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_aa41d589adac268227af5b944805da7e8}{Generate\+Filters}} ()
+\begin{DoxyCompactList}\small\item\em Generates the html for custom filters \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a7788f19be161450fa8a638fd0b5dcbcd}{Generate\+Register\+Data\+Table\+Script}} ()
+\begin{DoxyCompactList}\small\item\em Generates the Jquery Data\+Table registration call for the Data\+Table itself \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_aea412518dfb28007320e52ed6a7b37fe}{Generate\+Html\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Generates the table data in the form of a H\+T\+ML table \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_acbb4100c99fa52cc08917c77c6e4818f}{Generate\+Register\+Filters\+Script}} ()
+\begin{DoxyCompactList}\small\item\em Generates the Jquery Data\+Table registration call for the filters \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a4f19809ab58c14ec4a8bb5d34e199956}{Generate\+Additional\+Java\+Script}} ()
+\begin{DoxyCompactList}\small\item\em Generates any additional Java\+Script specified to the buttom of the scripts section. \end{DoxyCompactList}\item 
+async Task$<$ Action\+Result $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_abb90b87b8960e30feb7cd49cd51f15df}{Build\+J\+Query\+Editor\+Data\+Table\+Example}} ()
+\begin{DoxyCompactList}\small\item\em This is just an example chunk of code for building a \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_json_data_table}{Jquery\+Json\+Data\+Table}}. Rather than hard code json, you\textquotesingle{}d serialise from a model or dynamic object as below \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a59ff358139ba0f0a3da9d7cd2cd6b1be}{Columns}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Columns -\/ As json string \href{https://datatables.net/reference/option/columns}{\texttt{ https\+://datatables.\+net/reference/option/columns}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_af5107ff97feb2bcaec481c830eb88339}{Column\+Definitions}} = string.\+Empty\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Option Data\+Table column Definitions \href{https://datatables.net/reference/option/columnDefs}{\texttt{ https\+://datatables.\+net/reference/option/column\+Defs}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a17e6bbe2cf59f83bd78fe07fe1e8d3db}{Url}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Http G\+ET and Http P\+O\+ST Url \href{https://datatables.net/reference/option/ajax}{\texttt{ https\+://datatables.\+net/reference/option/ajax}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a3832dbe1ba610c75672734e8ba9532e8}{Fields}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Editor fields as Json \href{https://editor.datatables.net/reference/type/DataTables.Editor.Field}{\texttt{ https\+://editor.\+datatables.\+net/reference/type/\+Data\+Tables.\+Editor.\+Field}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a3d4fcce80fd187d7a81f4e21014d1a42}{Sorting}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em How to sort the column -\/ A\+SC or D\+E\+SC (ascending by default -\/ optional) and which column to sort by -\/ As json string \href{https://datatables.net/reference/option/order}{\texttt{ https\+://datatables.\+net/reference/option/order}} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_ae6cfb9a083bae0a41232bcbe7f8b75c3}{Enable\+In\+Line\+Editing}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Edit a cell directly from the table, rather than opening up a modal dialog to edit \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a9bc9d3fb8c3603ae123a3c371b008db0}{Enable\+Bubble\+Editing}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Edit cells with a modal dialoge \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_af6206494afb3b075b040ea9cf9eb119a}{Disable\+Action\+Column}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Disable the \textquotesingle{}edit\textquotesingle{} column on the last column \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_ade4c735e072dd0a9c406531a411f3f83}{Post\+Script\+Function\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This allows you to run a specific Java\+Script function after the \textquotesingle{}drawn\textquotesingle{} event for any extra styling (or anthing else). Make sure the function name is unique to the scope. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Editable Data\+Table\+: Generates J\+Qquery Data\+Table H\+T\+ML from a Model that you can edit fields for. 
+
+Uses J\+S\+ON as for data and parameters.
+
+Used in conjunction with the \textquotesingle{}J\+Query\+Data\+Table.\+cshtml\textquotesingle{} view (You can just inherit this from your own model if you wish)
+
+Y\+O\+UR P\+R\+O\+J\+E\+CT M\+U\+ST I\+N\+C\+L\+U\+DE J\+A\+V\+A\+S\+C\+R\+I\+PT P\+A\+C\+K\+A\+G\+ES \& C\+SS for Bootstrap, Data\+Tables, Data\+Tables \mbox{\hyperlink{namespace_j_b_toolkit_1_1_extensions}{Extensions}} and Editor
+
+$<$link href = \char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/3.\+3.\+6/css/bootstrap.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/tree-\/view/bootstrap-\/treeview.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$
+
+$<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/media/css/data\+Tables.\+bootstrap.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/css/buttons.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Responsive/css/responsive.\+data\+Tabl;es.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Responsive/css/responsive.\+boostrap.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Scroller/css/scroller.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Select/css/select.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Col\+Reorder/css/col\+Reorder.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/css/editor.\+bootstrap.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/css/editor.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery-\/1.\+12.\+4.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery.\+validate.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery.\+validate.\+unobtrusive.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery.\+unobtrusive-\/ajax.\+min.\+js\char`\"{}$>$$<$/script$>$
+
+$<$script src = \char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/3.\+3.\+6/js/bootstrap.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/tree-\/view/bootstrap-\/treeview.\+min.\+js\char`\"{}$>$$<$/script$>$
+
+$<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/media/js/jquery.\+data\+Tables.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/media/js/data\+Tables.\+bootstrap.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/data\+Tables.\+buttons.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Responsive/js/data\+Tables.\+responsive.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Responsive/js/responsive.\+bootstrap.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/jszip-\/2.\+5.\+0/jszip.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/pdfmake-\/0.\+1.\+18/pdfmake.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/pdfmake-\/0.\+1.\+18/vfs\+\_\+fonts.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Scroller/js/data\+Tables.\+scroller.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Col\+Reorder/js/data\+Tables.\+col\+Reorder.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Select/js/data\+Tables.\+select.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/buttons.\+html5.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/buttons.\+print.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/buttons.\+col\+Vis.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/js/data\+Tables.\+editor.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/js/editor.\+bootstrap.\+min.\+js\char`\"{}$>$$<$/script$>$
+
+Alternatively, you can use a concatonated and minified C\+DN from here\+: \href{https://datatables.net/download/}{\texttt{ https\+://datatables.\+net/download/}}
+
+However you will need this regardless\+: $<$script src = \char`\"{}$\sim$/\+Scripts/data\+Tables\+Extensions.\+js\char`\"{} $>$$<$/ script $>$ ~\newline
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a0e64cd4a75df386a0d0e9b6278b165ef}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a0e64cd4a75df386a0d0e9b6278b165ef}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!JqueryEditorDataTable@{JqueryEditorDataTable}}
+\index{JqueryEditorDataTable@{JqueryEditorDataTable}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{JqueryEditorDataTable()}{JqueryEditorDataTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Jquery\+Editor\+Data\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a3dc0818541584073671995214a290bdd}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a3dc0818541584073671995214a290bdd}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!JqueryEditorDataTable@{JqueryEditorDataTable}}
+\index{JqueryEditorDataTable@{JqueryEditorDataTable}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{JqueryEditorDataTable()}{JqueryEditorDataTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Jquery\+Editor\+Data\+Table (\begin{DoxyParamCaption}\item[{string}]{table\+Name,  }\item[{string}]{columns,  }\item[{string}]{column\+Definitions,  }\item[{string}]{url,  }\item[{string}]{fields,  }\item[{string}]{sorting,  }\item[{string}]{additional\+Java\+Script = {\ttfamily \char`\"{}\char`\"{}},  }\item[{string}]{unique\+Id = {\ttfamily \char`\"{}Default\char`\"{}},  }\item[{bool}]{use\+Custom\+Header = {\ttfamily true},  }\item[{bool}]{responsive = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_abb90b87b8960e30feb7cd49cd51f15df}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_abb90b87b8960e30feb7cd49cd51f15df}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!BuildJQueryEditorDataTableExample@{BuildJQueryEditorDataTableExample}}
+\index{BuildJQueryEditorDataTableExample@{BuildJQueryEditorDataTableExample}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{BuildJQueryEditorDataTableExample()}{BuildJQueryEditorDataTableExample()}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$>$ J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Build\+J\+Query\+Editor\+Data\+Table\+Example (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This is just an example chunk of code for building a \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_json_data_table}{Jquery\+Json\+Data\+Table}}. Rather than hard code json, you\textquotesingle{}d serialise from a model or dynamic object as below 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a4f19809ab58c14ec4a8bb5d34e199956}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a4f19809ab58c14ec4a8bb5d34e199956}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!GenerateAdditionalJavaScript@{GenerateAdditionalJavaScript}}
+\index{GenerateAdditionalJavaScript@{GenerateAdditionalJavaScript}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{GenerateAdditionalJavaScript()}{GenerateAdditionalJavaScript()}}
+{\footnotesize\ttfamily override string J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Generate\+Additional\+Java\+Script (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generates any additional Java\+Script specified to the buttom of the scripts section. 
+
+
+\begin{DoxyItemize}
+\item Be aware of Java\+Script special characters. Use the \textquotesingle{}$<$string$>$.Get\+Java\+Script\+Acceptable\+String()\textquotesingle{} extension in most circumstances
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_ada6b96b4496c713b8ff581b6d6585b59}{J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table}}.
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_aa41d589adac268227af5b944805da7e8}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_aa41d589adac268227af5b944805da7e8}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!GenerateFilters@{GenerateFilters}}
+\index{GenerateFilters@{GenerateFilters}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{GenerateFilters()}{GenerateFilters()}}
+{\footnotesize\ttfamily override string J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Generate\+Filters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generates the html for custom filters 
+
+
+
+Implements \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a2dccb9675ad0b405b0449798e0a22e6e}{J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table}}.
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_aea412518dfb28007320e52ed6a7b37fe}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_aea412518dfb28007320e52ed6a7b37fe}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!GenerateHtmlTable@{GenerateHtmlTable}}
+\index{GenerateHtmlTable@{GenerateHtmlTable}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{GenerateHtmlTable()}{GenerateHtmlTable()}}
+{\footnotesize\ttfamily override string J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Generate\+Html\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generates the table data in the form of a H\+T\+ML table 
+
+
+
+Implements \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a364cb73f1db7c1aee55ba4be2bba0b20}{J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table}}.
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a7788f19be161450fa8a638fd0b5dcbcd}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a7788f19be161450fa8a638fd0b5dcbcd}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!GenerateRegisterDataTableScript@{GenerateRegisterDataTableScript}}
+\index{GenerateRegisterDataTableScript@{GenerateRegisterDataTableScript}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{GenerateRegisterDataTableScript()}{GenerateRegisterDataTableScript()}}
+{\footnotesize\ttfamily override string J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Generate\+Register\+Data\+Table\+Script (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generates the Jquery Data\+Table registration call for the Data\+Table itself 
+
+
+
+Implements \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a5240710a0ba99e58fc1c3bc94995c740}{J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table}}.
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_acbb4100c99fa52cc08917c77c6e4818f}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_acbb4100c99fa52cc08917c77c6e4818f}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!GenerateRegisterFiltersScript@{GenerateRegisterFiltersScript}}
+\index{GenerateRegisterFiltersScript@{GenerateRegisterFiltersScript}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{GenerateRegisterFiltersScript()}{GenerateRegisterFiltersScript()}}
+{\footnotesize\ttfamily override string J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Generate\+Register\+Filters\+Script (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generates the Jquery Data\+Table registration call for the filters 
+
+
+
+Implements \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a892fa4c2585d8f9e6a64fad5aaf43c6a}{J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_af5107ff97feb2bcaec481c830eb88339}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_af5107ff97feb2bcaec481c830eb88339}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!ColumnDefinitions@{ColumnDefinitions}}
+\index{ColumnDefinitions@{ColumnDefinitions}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{ColumnDefinitions}{ColumnDefinitions}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Column\+Definitions = string.\+Empty\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Option Data\+Table column Definitions \href{https://datatables.net/reference/option/columnDefs}{\texttt{ https\+://datatables.\+net/reference/option/column\+Defs}} 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a59ff358139ba0f0a3da9d7cd2cd6b1be}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a59ff358139ba0f0a3da9d7cd2cd6b1be}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!Columns@{Columns}}
+\index{Columns@{Columns}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{Columns}{Columns}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Columns\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Columns -\/ As json string \href{https://datatables.net/reference/option/columns}{\texttt{ https\+://datatables.\+net/reference/option/columns}} 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_af6206494afb3b075b040ea9cf9eb119a}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_af6206494afb3b075b040ea9cf9eb119a}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!DisableActionColumn@{DisableActionColumn}}
+\index{DisableActionColumn@{DisableActionColumn}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{DisableActionColumn}{DisableActionColumn}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Disable\+Action\+Column = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Disable the \textquotesingle{}edit\textquotesingle{} column on the last column 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a9bc9d3fb8c3603ae123a3c371b008db0}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a9bc9d3fb8c3603ae123a3c371b008db0}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!EnableBubbleEditing@{EnableBubbleEditing}}
+\index{EnableBubbleEditing@{EnableBubbleEditing}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{EnableBubbleEditing}{EnableBubbleEditing}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Enable\+Bubble\+Editing = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Edit cells with a modal dialoge 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_ae6cfb9a083bae0a41232bcbe7f8b75c3}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_ae6cfb9a083bae0a41232bcbe7f8b75c3}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!EnableInLineEditing@{EnableInLineEditing}}
+\index{EnableInLineEditing@{EnableInLineEditing}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{EnableInLineEditing}{EnableInLineEditing}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Enable\+In\+Line\+Editing = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Edit a cell directly from the table, rather than opening up a modal dialog to edit 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a3832dbe1ba610c75672734e8ba9532e8}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a3832dbe1ba610c75672734e8ba9532e8}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!Fields@{Fields}}
+\index{Fields@{Fields}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{Fields}{Fields}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Fields\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Editor fields as Json \href{https://editor.datatables.net/reference/type/DataTables.Editor.Field}{\texttt{ https\+://editor.\+datatables.\+net/reference/type/\+Data\+Tables.\+Editor.\+Field}} 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_ade4c735e072dd0a9c406531a411f3f83}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_ade4c735e072dd0a9c406531a411f3f83}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!PostScriptFunctionName@{PostScriptFunctionName}}
+\index{PostScriptFunctionName@{PostScriptFunctionName}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{PostScriptFunctionName}{PostScriptFunctionName}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Post\+Script\+Function\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+This allows you to run a specific Java\+Script function after the \textquotesingle{}drawn\textquotesingle{} event for any extra styling (or anthing else). Make sure the function name is unique to the scope. 
+
+The function give the ID of the table. I.\+e\+:
+
+function(table\+Id) \{ // Whatever you want to do here \}\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a3d4fcce80fd187d7a81f4e21014d1a42}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a3d4fcce80fd187d7a81f4e21014d1a42}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!Sorting@{Sorting}}
+\index{Sorting@{Sorting}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{Sorting}{Sorting}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Sorting\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+How to sort the column -\/ A\+SC or D\+E\+SC (ascending by default -\/ optional) and which column to sort by -\/ As json string \href{https://datatables.net/reference/option/order}{\texttt{ https\+://datatables.\+net/reference/option/order}} 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a17e6bbe2cf59f83bd78fe07fe1e8d3db}\label{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a17e6bbe2cf59f83bd78fe07fe1e8d3db}} 
+\index{JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}!Url@{Url}}
+\index{Url@{Url}!JBToolkit.Views.JqueryEditorDataTable@{JBToolkit.Views.JqueryEditorDataTable}}
+\doxysubsubsection{\texorpdfstring{Url}{Url}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table.\+Url\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Http G\+ET and Http P\+O\+ST Url \href{https://datatables.net/reference/option/ajax}{\texttt{ https\+://datatables.\+net/reference/option/ajax}} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+J\+Query\+Data\+Table\+View\+Models/\+J\+Query\+Data\+Tables/\mbox{\hyperlink{_jquery_editor_data_table_8cs}{Jquery\+Editor\+Data\+Table.\+cs}}\end{DoxyCompactItemize}

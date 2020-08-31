@@ -1,0 +1,155 @@
+\hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_feed}{}\doxysection{J\+B\+Toolkit.\+Views.\+Jquery\+Feed Class Reference}
+\label{class_j_b_toolkit_1_1_views_1_1_jquery_feed}\index{JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}}
+
+
+Generates J\+Qquery Feed H\+T\+ML from a Model  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Views.\+Jquery\+Feed\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{d6/d2c/class_j_b_toolkit_1_1_views_1_1_jquery_feed__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a7805eac332cd905e91bfb1ea0a7cb979}{Jquery\+Feed}} ()
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a0fe51a4cfe31707dd0b56d5df28d14c9}{Jquery\+Feed}} (string title, \mbox{\hyperlink{class_list}{List}}$<$ \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_j_q_f_row}{J\+Q\+F\+Row}} $>$ \mbox{\hyperlink{_r_e_a_d_m_e_8txt_ace91672ee8b6e4b45442c4fca0127a16}{rows}}, string additional\+Javascript, string unique\+Id=\char`\"{}Default\char`\"{})
+\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a8b0a4329579b04e6968f165d5c63b0ce}{Generate\+Additional\+Java\+Script}} ()
+\begin{DoxyCompactList}\small\item\em Generates any additional Java\+Script specified to the buttom of the scripts section. \end{DoxyCompactList}\item 
+async Task$<$ Action\+Result $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a97a0cf624f9237b37b591d6d8cb41896}{Build\+J\+Query\+Feed\+Example}} ()
+\begin{DoxyCompactList}\small\item\em This is just an example chunk of code for building a J\+Query Feed. You\textquotesingle{}d likely dynamically create from a list or Data\+Table \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a0e70a2387fbd256ddd945d77c8eaaf72}{Title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Main feed title \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a3d5520cc31a0e3701cc39bc41d7ba326}{Custom\+Filter\+Header\+Markup}} = string.\+Empty\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Custom Filter Header (Replace \textquotesingle{}Search\textquotesingle{} area with something else) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_list}{List}}$<$ \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_j_q_f_row}{J\+Q\+F\+Row}} $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a5c9716ebcc82a1dac3b2b11c99960293}{Rows}} = new \mbox{\hyperlink{class_list}{List}}$<$\mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_j_q_f_row}{J\+Q\+F\+Row}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Data to show \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_feed_aa27a88770b5fc76716577703a96425f4}{Additional\+Java\+Script}} = string.\+Empty\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em (Optional) Any additional Java\+Script to add at the end of the page \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a0d860d5b0eb18e7010660bda7734cc1b}{Unique\+ID}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Used so we don\textquotesingle{}t have H\+T\+ML ID clashes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates J\+Qquery Feed H\+T\+ML from a Model 
+
+Used in conjunction with the \textquotesingle{}J\+Query\+Feed.\+cshtml\textquotesingle{} view (You can just inherit this from your own model)
+
+Y\+O\+UR P\+R\+O\+J\+E\+CT M\+U\+ST I\+N\+C\+L\+U\+DE J\+A\+V\+A\+S\+C\+R\+I\+PT P\+A\+C\+K\+A\+G\+ES \& C\+SS for Bootstrap, Data\+Tables, Data\+Tables \mbox{\hyperlink{namespace_j_b_toolkit_1_1_extensions}{Extensions}} and Editor
+
+$<$link href = \char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/3.\+3.\+6/css/bootstrap.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/tree-\/view/bootstrap-\/treeview.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$
+
+$<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/media/css/data\+Tables.\+bootstrap.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/css/buttons.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Scroller/css/scroller.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Select/css/select.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Col\+Reorder/css/col\+Reorder.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/css/editor.\+bootstrap.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/css/editor.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery-\/1.\+12.\+4.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery.\+validate.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery.\+validate.\+unobtrusive.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery.\+unobtrusive-\/ajax.\+min.\+js\char`\"{}$>$$<$/script$>$
+
+$<$script src = \char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/3.\+3.\+6/js/bootstrap.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/tree-\/view/bootstrap-\/treeview.\+min.\+js\char`\"{}$>$$<$/script$>$
+
+$<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/media/js/jquery.\+data\+Tables.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/media/js/data\+Tables.\+bootstrap.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/data\+Tables.\+buttons.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/jszip-\/2.\+5.\+0/jszip.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/pdfmake-\/0.\+1.\+18/pdfmake.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/pdfmake-\/0.\+1.\+18/vfs\+\_\+fonts.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Scroller/js/data\+Tables.\+scroller.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Col\+Reorder/js/data\+Tables.\+col\+Reorder.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Select/js/data\+Tables.\+select.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/buttons.\+html5.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/buttons.\+print.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/buttons.\+col\+Vis.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/js/data\+Tables.\+editor.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/js/editor.\+bootstrap.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/data\+Tables\+Extensions.\+js\char`\"{} $>$$<$/ script $>$ ~\newline
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a7805eac332cd905e91bfb1ea0a7cb979}\label{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a7805eac332cd905e91bfb1ea0a7cb979}} 
+\index{JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}!JqueryFeed@{JqueryFeed}}
+\index{JqueryFeed@{JqueryFeed}!JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}}
+\doxysubsubsection{\texorpdfstring{JqueryFeed()}{JqueryFeed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Views.\+Jquery\+Feed.\+Jquery\+Feed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a0fe51a4cfe31707dd0b56d5df28d14c9}\label{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a0fe51a4cfe31707dd0b56d5df28d14c9}} 
+\index{JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}!JqueryFeed@{JqueryFeed}}
+\index{JqueryFeed@{JqueryFeed}!JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}}
+\doxysubsubsection{\texorpdfstring{JqueryFeed()}{JqueryFeed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Views.\+Jquery\+Feed.\+Jquery\+Feed (\begin{DoxyParamCaption}\item[{string}]{title,  }\item[{\mbox{\hyperlink{class_list}{List}}$<$ \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_j_q_f_row}{J\+Q\+F\+Row}} $>$}]{rows,  }\item[{string}]{additional\+Javascript,  }\item[{string}]{unique\+Id = {\ttfamily \char`\"{}Default\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a97a0cf624f9237b37b591d6d8cb41896}\label{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a97a0cf624f9237b37b591d6d8cb41896}} 
+\index{JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}!BuildJQueryFeedExample@{BuildJQueryFeedExample}}
+\index{BuildJQueryFeedExample@{BuildJQueryFeedExample}!JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}}
+\doxysubsubsection{\texorpdfstring{BuildJQueryFeedExample()}{BuildJQueryFeedExample()}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$>$ J\+B\+Toolkit.\+Views.\+Jquery\+Feed.\+Build\+J\+Query\+Feed\+Example (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This is just an example chunk of code for building a J\+Query Feed. You\textquotesingle{}d likely dynamically create from a list or Data\+Table 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a8b0a4329579b04e6968f165d5c63b0ce}\label{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a8b0a4329579b04e6968f165d5c63b0ce}} 
+\index{JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}!GenerateAdditionalJavaScript@{GenerateAdditionalJavaScript}}
+\index{GenerateAdditionalJavaScript@{GenerateAdditionalJavaScript}!JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}}
+\doxysubsubsection{\texorpdfstring{GenerateAdditionalJavaScript()}{GenerateAdditionalJavaScript()}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Feed.\+Generate\+Additional\+Java\+Script (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates any additional Java\+Script specified to the buttom of the scripts section. 
+
+
+\begin{DoxyItemize}
+\item Be aware of Java\+Script special characters. Use the \textquotesingle{}$<$string$>$.Get\+Java\+Script\+Acceptable\+String()\textquotesingle{} extension in most circumstances
+\end{DoxyItemize}
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_feed_aa27a88770b5fc76716577703a96425f4}\label{class_j_b_toolkit_1_1_views_1_1_jquery_feed_aa27a88770b5fc76716577703a96425f4}} 
+\index{JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}!AdditionalJavaScript@{AdditionalJavaScript}}
+\index{AdditionalJavaScript@{AdditionalJavaScript}!JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}}
+\doxysubsubsection{\texorpdfstring{AdditionalJavaScript}{AdditionalJavaScript}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Feed.\+Additional\+Java\+Script = string.\+Empty\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+(Optional) Any additional Java\+Script to add at the end of the page 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a3d5520cc31a0e3701cc39bc41d7ba326}\label{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a3d5520cc31a0e3701cc39bc41d7ba326}} 
+\index{JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}!CustomFilterHeaderMarkup@{CustomFilterHeaderMarkup}}
+\index{CustomFilterHeaderMarkup@{CustomFilterHeaderMarkup}!JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}}
+\doxysubsubsection{\texorpdfstring{CustomFilterHeaderMarkup}{CustomFilterHeaderMarkup}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Feed.\+Custom\+Filter\+Header\+Markup = string.\+Empty\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Custom Filter Header (Replace \textquotesingle{}Search\textquotesingle{} area with something else) 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a5c9716ebcc82a1dac3b2b11c99960293}\label{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a5c9716ebcc82a1dac3b2b11c99960293}} 
+\index{JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}!Rows@{Rows}}
+\index{Rows@{Rows}!JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}}
+\doxysubsubsection{\texorpdfstring{Rows}{Rows}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_list}{List}}$<$\mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_j_q_f_row}{J\+Q\+F\+Row}}$>$ J\+B\+Toolkit.\+Views.\+Jquery\+Feed.\+Rows = new \mbox{\hyperlink{class_list}{List}}$<$\mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_j_q_f_row}{J\+Q\+F\+Row}}$>$()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Data to show 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a0e70a2387fbd256ddd945d77c8eaaf72}\label{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a0e70a2387fbd256ddd945d77c8eaaf72}} 
+\index{JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}!Title@{Title}}
+\index{Title@{Title}!JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}}
+\doxysubsubsection{\texorpdfstring{Title}{Title}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Feed.\+Title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Main feed title 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a0d860d5b0eb18e7010660bda7734cc1b}\label{class_j_b_toolkit_1_1_views_1_1_jquery_feed_a0d860d5b0eb18e7010660bda7734cc1b}} 
+\index{JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}!UniqueID@{UniqueID}}
+\index{UniqueID@{UniqueID}!JBToolkit.Views.JqueryFeed@{JBToolkit.Views.JqueryFeed}}
+\doxysubsubsection{\texorpdfstring{UniqueID}{UniqueID}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Feed.\+Unique\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Used so we don\textquotesingle{}t have H\+T\+ML ID clashes 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+J\+Query\+Data\+Table\+View\+Models/\mbox{\hyperlink{_jquery_feed_8cs}{Jquery\+Feed.\+cs}}\end{DoxyCompactItemize}

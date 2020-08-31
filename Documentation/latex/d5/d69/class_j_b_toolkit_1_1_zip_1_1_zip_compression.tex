@@ -1,0 +1,392 @@
+\hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression}{}\doxysection{J\+B\+Toolkit.\+Zip.\+Zip\+Compression Class Reference}
+\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression}\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+
+
+Contains multiple method for saving zip files or returning a zip file as a stream  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Zip.\+Zip\+Compression\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{d6/d85/class_j_b_toolkit_1_1_zip_1_1_zip_compression__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a5a52095d4904215ae2cd90b89fc2142a}{Get\+Zip\+Flat\+Files\+Stream}} (\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}, params \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes}{File\+Path\+And\+Bytes}}\mbox{[}$\,$\mbox{]} file\+Bytes)
+\begin{DoxyCompactList}\small\item\em Returns a zip file containing a flat list of files as a Memory Stream. The input being multiple paramters of a File\+Byte object \end{DoxyCompactList}\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a46047f636a02d91268acd45a642f2abd}{Get\+Zip\+Flat\+Files\+Stream}} (\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes_collection}{File\+Path\+And\+Bytes\+Collection}} file\+Bytes, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}})
+\begin{DoxyCompactList}\small\item\em Returns a zip file containing a flat list of files as a Memory Stream. The input being a File\+Bytes collection object \end{DoxyCompactList}\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_ab1acd0a2e2d59c4d677df1599e751d97}{Get\+Zip\+Flat\+Files\+Stream}} (\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}, params string\mbox{[}$\,$\mbox{]} file\+Paths)
+\begin{DoxyCompactList}\small\item\em Returns a zip file containing a flat list of files as a Memory Stream. The input being multiple paramters of file path strings \end{DoxyCompactList}\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a7e9dffc54f4be40d5a47fde4774bc8c1}{Get\+Zip\+Flat\+Files\+Stream}} (\mbox{\hyperlink{class_list}{List}}$<$ string $>$ file\+Paths, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}})
+\begin{DoxyCompactList}\small\item\em Returns a zip file containing a flat list of files as a Memory Stream. The input being a list of file path strings \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_aebba3246903330502b9b9b3e9d9190b2}{Get\+Zip\+Flat\+Files\+Byte\+Array}} (\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}, params \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes}{File\+Path\+And\+Bytes}}\mbox{[}$\,$\mbox{]} file\+Bytes)
+\begin{DoxyCompactList}\small\item\em Returns a zip file containing a flat list of files as a byte array. The input being multiple paramters of a File\+Byte object \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a031cd4c8783fa2a79d25328018bbff66}{Get\+Zip\+Flat\+Files\+Byte\+Array}} (\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes_collection}{File\+Path\+And\+Bytes\+Collection}} file\+Bytes, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}})
+\begin{DoxyCompactList}\small\item\em Returns a zip file containing a flat list of files as a byte array. The input being a File\+Bytes collection object \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a5a08dc7d331cc242fca646c846a9f755}{Get\+Zip\+Flat\+Files\+Byte\+Array}} (\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}, params string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{_l_i_c_e_n_s_e_8txt_a230902626bc74ad7e058274476c0ff96}{files}})
+\begin{DoxyCompactList}\small\item\em Returns a zip file containing a flat list of files as a byte array. The input being multiple paramters of file path strings \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a2ec0be9a364cf89d6bcd2fa43943cd24}{Get\+Zip\+Flat\+Files\+Byte\+Array}} (\mbox{\hyperlink{class_list}{List}}$<$ string $>$ file\+Paths, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}})
+\begin{DoxyCompactList}\small\item\em Returns a zip file containing a flat list of files as a byte array. The input being a list of file path strings \end{DoxyCompactList}\item 
+static File\+Content\+Result \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a86b11f882a1ef5929379f03a644df4cd}{Get\+Zip\+Flat\+Files\+File\+Content\+Result}} (\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}, params \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes}{File\+Path\+And\+Bytes}}\mbox{[}$\,$\mbox{]} file\+Bytes)
+\begin{DoxyCompactList}\small\item\em Returns a zip file containing a flat list of files as a File\+Content\+Result (good for M\+VC file action controller). The input being multiple paramters of a File\+Byte object \end{DoxyCompactList}\item 
+static File\+Content\+Result \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_ae3ffaceb55c880c17813c17656ef37a1}{Get\+Zip\+Flat\+Files\+File\+Content\+Result}} (\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes_collection}{File\+Path\+And\+Bytes\+Collection}} file\+Bytes, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}})
+\begin{DoxyCompactList}\small\item\em Returns a zip file containing a flat list of files as a File\+Content\+Result (good for M\+VC file action controller). The input being a File\+Bytes collection object \end{DoxyCompactList}\item 
+static File\+Content\+Result \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a3fe4c1f9b19bb779b9c993fcb412e94b}{Get\+Zip\+Flat\+Files\+File\+Content\+Result}} (\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}, params string\mbox{[}$\,$\mbox{]} file\+Paths)
+\begin{DoxyCompactList}\small\item\em Returns a zip file containing a flat list of files as a File\+Content\+Result (good for M\+VC file action controller). The input being multiple file path strings \end{DoxyCompactList}\item 
+static File\+Content\+Result \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a18923a25469e20b39c59dea316c822d4}{Get\+Zip\+Flat\+Files\+File\+Content\+Result}} (\mbox{\hyperlink{class_list}{List}}$<$ string $>$ file\+Paths, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}})
+\begin{DoxyCompactList}\small\item\em Returns a zip file containing a flat list of files as a File\+Content\+Result (good for M\+VC file action controller). The input being a list of file paths \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_ab751a00afd1ae81efc6b5431ee5bb861}{Save\+Zip\+Flat\+Files}} (string output\+Path, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}, params \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes}{File\+Path\+And\+Bytes}}\mbox{[}$\,$\mbox{]} file\+Bytes)
+\begin{DoxyCompactList}\small\item\em Saves a zip file containing a flat list of files to disk. The input being multiple paramters of a File\+Byte object \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_ae7bcdc569d2e57320abe3be735e5f198}{Save\+Zip\+Flat\+Files}} (string output\+Path, \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes_collection}{File\+Path\+And\+Bytes\+Collection}} file\+Bytes, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}})
+\begin{DoxyCompactList}\small\item\em Saves a zip file containing a flat list of files to disk. The input being a File\+Bytes collection object \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_afbcbe22850bf36aae6cf7f40ff1768c3}{Save\+Zip\+Flat\+Files}} (string output\+Path, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}, params string\mbox{[}$\,$\mbox{]} file\+Paths)
+\begin{DoxyCompactList}\small\item\em Saves a zip file containing a flat list of files to disk. The input being multiple file path strings \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_aa4f2467f1cb3ddd9b36366458e0f5a78}{Save\+Zip\+Flat\+Files}} (string output\+Path, \mbox{\hyperlink{class_list}{List}}$<$ string $>$ file\+Paths, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}})
+\begin{DoxyCompactList}\small\item\em Saves a zip file containing a flat list of files to disk. The input being a list of file paths \end{DoxyCompactList}\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a775a4b97c501583e27da14665cc4d6d7}{Get\+Zip\+Directory\+Stream}} (string target\+Root\+Directory, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}})
+\begin{DoxyCompactList}\small\item\em Zips and entire directory as a Memory Stream (including sub-\/directories). The input being the target directory \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_aa9c2253a0170935b6471ee5b86a9d352}{Get\+Zip\+Directory\+Byte\+Array}} (string target\+Root\+Directory, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}})
+\begin{DoxyCompactList}\small\item\em Zips and entire directory as a byte array (including sub-\/directories). The input being the target directory \end{DoxyCompactList}\item 
+static File\+Content\+Result \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a269610b97d99df9e6b7b94392429a73b}{Get\+Zip\+Directory\+File\+Content\+Result}} (string target\+Root\+Directory, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}})
+\begin{DoxyCompactList}\small\item\em Zips and entire directory as File\+Content\+Result (including sub-\/directories -\/ Good for M\+VC file action controller). The input being the target directory \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_aa86bb3da037c698b636b9243807f581f}{Save\+Zip\+Directory}} (string output\+Filename, string target\+Root\+Directory, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} compression\+Level=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}, \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} compression\+Method=\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}})
+\begin{DoxyCompactList}\small\item\em Zips and entire directory (including sub-\/directories) and saves to the disk. The input being the target directory \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a4b7514e22a2dc03805413953646a19db}{Zip\+Compression\+Level}} = \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a58073ce23ae050be693d1d526e8ee7d6}{Zip\+Compression\+Method}} = \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains multiple method for saving zip files or returning a zip file as a stream 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_aa9c2253a0170935b6471ee5b86a9d352}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_aa9c2253a0170935b6471ee5b86a9d352}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!GetZipDirectoryByteArray@{GetZipDirectoryByteArray}}
+\index{GetZipDirectoryByteArray@{GetZipDirectoryByteArray}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{GetZipDirectoryByteArray()}{GetZipDirectoryByteArray()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Get\+Zip\+Directory\+Byte\+Array (\begin{DoxyParamCaption}\item[{string}]{target\+Root\+Directory,  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Zips and entire directory as a byte array (including sub-\/directories). The input being the target directory 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression_aa9c2253a0170935b6471ee5b86a9d352_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a269610b97d99df9e6b7b94392429a73b}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a269610b97d99df9e6b7b94392429a73b}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!GetZipDirectoryFileContentResult@{GetZipDirectoryFileContentResult}}
+\index{GetZipDirectoryFileContentResult@{GetZipDirectoryFileContentResult}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{GetZipDirectoryFileContentResult()}{GetZipDirectoryFileContentResult()}}
+{\footnotesize\ttfamily static File\+Content\+Result J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Get\+Zip\+Directory\+File\+Content\+Result (\begin{DoxyParamCaption}\item[{string}]{target\+Root\+Directory,  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Zips and entire directory as File\+Content\+Result (including sub-\/directories -\/ Good for M\+VC file action controller). The input being the target directory 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression_a269610b97d99df9e6b7b94392429a73b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a775a4b97c501583e27da14665cc4d6d7}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a775a4b97c501583e27da14665cc4d6d7}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!GetZipDirectoryStream@{GetZipDirectoryStream}}
+\index{GetZipDirectoryStream@{GetZipDirectoryStream}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{GetZipDirectoryStream()}{GetZipDirectoryStream()}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Get\+Zip\+Directory\+Stream (\begin{DoxyParamCaption}\item[{string}]{target\+Root\+Directory,  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Zips and entire directory as a Memory Stream (including sub-\/directories). The input being the target directory 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression_a775a4b97c501583e27da14665cc4d6d7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression_a775a4b97c501583e27da14665cc4d6d7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a031cd4c8783fa2a79d25328018bbff66}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a031cd4c8783fa2a79d25328018bbff66}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!GetZipFlatFilesByteArray@{GetZipFlatFilesByteArray}}
+\index{GetZipFlatFilesByteArray@{GetZipFlatFilesByteArray}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{GetZipFlatFilesByteArray()}{GetZipFlatFilesByteArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Get\+Zip\+Flat\+Files\+Byte\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes_collection}{File\+Path\+And\+Bytes\+Collection}}}]{file\+Bytes,  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a zip file containing a flat list of files as a byte array. The input being a File\+Bytes collection object 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression_a031cd4c8783fa2a79d25328018bbff66_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a2ec0be9a364cf89d6bcd2fa43943cd24}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a2ec0be9a364cf89d6bcd2fa43943cd24}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!GetZipFlatFilesByteArray@{GetZipFlatFilesByteArray}}
+\index{GetZipFlatFilesByteArray@{GetZipFlatFilesByteArray}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{GetZipFlatFilesByteArray()}{GetZipFlatFilesByteArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Get\+Zip\+Flat\+Files\+Byte\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_list}{List}}$<$ string $>$}]{file\+Paths,  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a zip file containing a flat list of files as a byte array. The input being a list of file path strings 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression_a2ec0be9a364cf89d6bcd2fa43943cd24_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_aebba3246903330502b9b9b3e9d9190b2}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_aebba3246903330502b9b9b3e9d9190b2}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!GetZipFlatFilesByteArray@{GetZipFlatFilesByteArray}}
+\index{GetZipFlatFilesByteArray@{GetZipFlatFilesByteArray}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{GetZipFlatFilesByteArray()}{GetZipFlatFilesByteArray()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Get\+Zip\+Flat\+Files\+Byte\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}},  }\item[{params \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes}{File\+Path\+And\+Bytes}}\mbox{[}$\,$\mbox{]}}]{file\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a zip file containing a flat list of files as a byte array. The input being multiple paramters of a File\+Byte object 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression_aebba3246903330502b9b9b3e9d9190b2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a5a08dc7d331cc242fca646c846a9f755}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a5a08dc7d331cc242fca646c846a9f755}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!GetZipFlatFilesByteArray@{GetZipFlatFilesByteArray}}
+\index{GetZipFlatFilesByteArray@{GetZipFlatFilesByteArray}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{GetZipFlatFilesByteArray()}{GetZipFlatFilesByteArray()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Get\+Zip\+Flat\+Files\+Byte\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}},  }\item[{params string\mbox{[}$\,$\mbox{]}}]{files }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a zip file containing a flat list of files as a byte array. The input being multiple paramters of file path strings 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression_a5a08dc7d331cc242fca646c846a9f755_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_ae3ffaceb55c880c17813c17656ef37a1}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_ae3ffaceb55c880c17813c17656ef37a1}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!GetZipFlatFilesFileContentResult@{GetZipFlatFilesFileContentResult}}
+\index{GetZipFlatFilesFileContentResult@{GetZipFlatFilesFileContentResult}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{GetZipFlatFilesFileContentResult()}{GetZipFlatFilesFileContentResult()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily static File\+Content\+Result J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Get\+Zip\+Flat\+Files\+File\+Content\+Result (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes_collection}{File\+Path\+And\+Bytes\+Collection}}}]{file\+Bytes,  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a zip file containing a flat list of files as a File\+Content\+Result (good for M\+VC file action controller). The input being a File\+Bytes collection object 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression_ae3ffaceb55c880c17813c17656ef37a1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a18923a25469e20b39c59dea316c822d4}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a18923a25469e20b39c59dea316c822d4}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!GetZipFlatFilesFileContentResult@{GetZipFlatFilesFileContentResult}}
+\index{GetZipFlatFilesFileContentResult@{GetZipFlatFilesFileContentResult}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{GetZipFlatFilesFileContentResult()}{GetZipFlatFilesFileContentResult()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily static File\+Content\+Result J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Get\+Zip\+Flat\+Files\+File\+Content\+Result (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_list}{List}}$<$ string $>$}]{file\+Paths,  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a zip file containing a flat list of files as a File\+Content\+Result (good for M\+VC file action controller). The input being a list of file paths 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression_a18923a25469e20b39c59dea316c822d4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a86b11f882a1ef5929379f03a644df4cd}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a86b11f882a1ef5929379f03a644df4cd}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!GetZipFlatFilesFileContentResult@{GetZipFlatFilesFileContentResult}}
+\index{GetZipFlatFilesFileContentResult@{GetZipFlatFilesFileContentResult}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{GetZipFlatFilesFileContentResult()}{GetZipFlatFilesFileContentResult()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily static File\+Content\+Result J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Get\+Zip\+Flat\+Files\+File\+Content\+Result (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}},  }\item[{params \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes}{File\+Path\+And\+Bytes}}\mbox{[}$\,$\mbox{]}}]{file\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a zip file containing a flat list of files as a File\+Content\+Result (good for M\+VC file action controller). The input being multiple paramters of a File\+Byte object 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression_a86b11f882a1ef5929379f03a644df4cd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a3fe4c1f9b19bb779b9c993fcb412e94b}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a3fe4c1f9b19bb779b9c993fcb412e94b}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!GetZipFlatFilesFileContentResult@{GetZipFlatFilesFileContentResult}}
+\index{GetZipFlatFilesFileContentResult@{GetZipFlatFilesFileContentResult}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{GetZipFlatFilesFileContentResult()}{GetZipFlatFilesFileContentResult()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily static File\+Content\+Result J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Get\+Zip\+Flat\+Files\+File\+Content\+Result (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}},  }\item[{params string\mbox{[}$\,$\mbox{]}}]{file\+Paths }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a zip file containing a flat list of files as a File\+Content\+Result (good for M\+VC file action controller). The input being multiple file path strings 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression_a3fe4c1f9b19bb779b9c993fcb412e94b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a46047f636a02d91268acd45a642f2abd}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a46047f636a02d91268acd45a642f2abd}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!GetZipFlatFilesStream@{GetZipFlatFilesStream}}
+\index{GetZipFlatFilesStream@{GetZipFlatFilesStream}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{GetZipFlatFilesStream()}{GetZipFlatFilesStream()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Get\+Zip\+Flat\+Files\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes_collection}{File\+Path\+And\+Bytes\+Collection}}}]{file\+Bytes,  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a zip file containing a flat list of files as a Memory Stream. The input being a File\+Bytes collection object 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a7e9dffc54f4be40d5a47fde4774bc8c1}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a7e9dffc54f4be40d5a47fde4774bc8c1}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!GetZipFlatFilesStream@{GetZipFlatFilesStream}}
+\index{GetZipFlatFilesStream@{GetZipFlatFilesStream}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{GetZipFlatFilesStream()}{GetZipFlatFilesStream()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Get\+Zip\+Flat\+Files\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_list}{List}}$<$ string $>$}]{file\+Paths,  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a zip file containing a flat list of files as a Memory Stream. The input being a list of file path strings 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a5a52095d4904215ae2cd90b89fc2142a}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a5a52095d4904215ae2cd90b89fc2142a}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!GetZipFlatFilesStream@{GetZipFlatFilesStream}}
+\index{GetZipFlatFilesStream@{GetZipFlatFilesStream}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{GetZipFlatFilesStream()}{GetZipFlatFilesStream()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Get\+Zip\+Flat\+Files\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}},  }\item[{params \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes}{File\+Path\+And\+Bytes}}\mbox{[}$\,$\mbox{]}}]{file\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a zip file containing a flat list of files as a Memory Stream. The input being multiple paramters of a File\+Byte object 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression_a5a52095d4904215ae2cd90b89fc2142a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_ab1acd0a2e2d59c4d677df1599e751d97}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_ab1acd0a2e2d59c4d677df1599e751d97}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!GetZipFlatFilesStream@{GetZipFlatFilesStream}}
+\index{GetZipFlatFilesStream@{GetZipFlatFilesStream}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{GetZipFlatFilesStream()}{GetZipFlatFilesStream()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Get\+Zip\+Flat\+Files\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}},  }\item[{params string\mbox{[}$\,$\mbox{]}}]{file\+Paths }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a zip file containing a flat list of files as a Memory Stream. The input being multiple paramters of file path strings 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_aa86bb3da037c698b636b9243807f581f}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_aa86bb3da037c698b636b9243807f581f}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!SaveZipDirectory@{SaveZipDirectory}}
+\index{SaveZipDirectory@{SaveZipDirectory}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{SaveZipDirectory()}{SaveZipDirectory()}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Save\+Zip\+Directory (\begin{DoxyParamCaption}\item[{string}]{output\+Filename,  }\item[{string}]{target\+Root\+Directory,  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Zips and entire directory (including sub-\/directories) and saves to the disk. The input being the target directory 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression_aa86bb3da037c698b636b9243807f581f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_ae7bcdc569d2e57320abe3be735e5f198}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_ae7bcdc569d2e57320abe3be735e5f198}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!SaveZipFlatFiles@{SaveZipFlatFiles}}
+\index{SaveZipFlatFiles@{SaveZipFlatFiles}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{SaveZipFlatFiles()}{SaveZipFlatFiles()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Save\+Zip\+Flat\+Files (\begin{DoxyParamCaption}\item[{string}]{output\+Path,  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes_collection}{File\+Path\+And\+Bytes\+Collection}}}]{file\+Bytes,  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Saves a zip file containing a flat list of files to disk. The input being a File\+Bytes collection object 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_aa4f2467f1cb3ddd9b36366458e0f5a78}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_aa4f2467f1cb3ddd9b36366458e0f5a78}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!SaveZipFlatFiles@{SaveZipFlatFiles}}
+\index{SaveZipFlatFiles@{SaveZipFlatFiles}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{SaveZipFlatFiles()}{SaveZipFlatFiles()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Save\+Zip\+Flat\+Files (\begin{DoxyParamCaption}\item[{string}]{output\+Path,  }\item[{\mbox{\hyperlink{class_list}{List}}$<$ string $>$}]{file\+Paths,  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Saves a zip file containing a flat list of files to disk. The input being a list of file paths 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_ab751a00afd1ae81efc6b5431ee5bb861}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_ab751a00afd1ae81efc6b5431ee5bb861}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!SaveZipFlatFiles@{SaveZipFlatFiles}}
+\index{SaveZipFlatFiles@{SaveZipFlatFiles}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{SaveZipFlatFiles()}{SaveZipFlatFiles()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Save\+Zip\+Flat\+Files (\begin{DoxyParamCaption}\item[{string}]{output\+Path,  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}},  }\item[{params \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes}{File\+Path\+And\+Bytes}}\mbox{[}$\,$\mbox{]}}]{file\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Saves a zip file containing a flat list of files to disk. The input being multiple paramters of a File\+Byte object 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_afbcbe22850bf36aae6cf7f40ff1768c3}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_afbcbe22850bf36aae6cf7f40ff1768c3}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!SaveZipFlatFiles@{SaveZipFlatFiles}}
+\index{SaveZipFlatFiles@{SaveZipFlatFiles}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{SaveZipFlatFiles()}{SaveZipFlatFiles()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Save\+Zip\+Flat\+Files (\begin{DoxyParamCaption}\item[{string}]{output\+Path,  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}}}]{compression\+Level = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}},  }\item[{\mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}}}]{compression\+Method = {\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}},  }\item[{params string\mbox{[}$\,$\mbox{]}}]{file\+Paths }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Saves a zip file containing a flat list of files to disk. The input being multiple file path strings 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a4b7514e22a2dc03805413953646a19db}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a4b7514e22a2dc03805413953646a19db}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!ZipCompressionLevel@{ZipCompressionLevel}}
+\index{ZipCompressionLevel@{ZipCompressionLevel}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{ZipCompressionLevel}{ZipCompressionLevel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25}{Zip\+Compression\+Level}} J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Zip\+Compression\+Level = \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a74607661a7ee0b886145d2a61acf3a25ae16b5b7f26f54214445cbe38d72c2828}{Zip\+Compression\+Level.\+Fast}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a58073ce23ae050be693d1d526e8ee7d6}\label{class_j_b_toolkit_1_1_zip_1_1_zip_compression_a58073ce23ae050be693d1d526e8ee7d6}} 
+\index{JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}!ZipCompressionMethod@{ZipCompressionMethod}}
+\index{ZipCompressionMethod@{ZipCompressionMethod}!JBToolkit.Zip.ZipCompression@{JBToolkit.Zip.ZipCompression}}
+\doxysubsubsection{\texorpdfstring{ZipCompressionMethod}{ZipCompressionMethod}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083b}{Zip\+Compression\+Method}} J\+B\+Toolkit.\+Zip.\+Zip\+Compression.\+Zip\+Compression\+Method = \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip_a4b2a010bede193721e91e7409fdb083bae2430ff724c45c3d68893fb1a3584426}{Zip\+Compression\+Method.\+Deflate}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Zip/\mbox{\hyperlink{_zip_compression_8cs}{Zip\+Compression.\+cs}}\end{DoxyCompactItemize}

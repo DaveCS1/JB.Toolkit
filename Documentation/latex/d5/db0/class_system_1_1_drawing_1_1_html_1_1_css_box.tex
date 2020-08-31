@@ -1,0 +1,1453 @@
+\hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box}{}\doxysection{System.\+Drawing.\+Html.\+Css\+Box Class Reference}
+\label{class_system_1_1_drawing_1_1_html_1_1_css_box}\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+
+
+Represents a C\+SS Box of text or replaced elements.  
+
+
+
+
+Inheritance diagram for System.\+Drawing.\+Html.\+Css\+Box\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dee/class_system_1_1_drawing_1_1_html_1_1_css_box__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for System.\+Drawing.\+Html.\+Css\+Box\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d8/de5/class_system_1_1_drawing_1_1_html_1_1_css_box__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a5b9192fb4368e6ecd78bab2e971be452}{Css\+Box}} (\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box}{Css\+Box}} parent\+Box)
+\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a7851ac6861c5fd0e1bedb27ce8313214}{Get\+Em\+Height}} ()
+\begin{DoxyCompactList}\small\item\em Gets the height of the font in the specified units \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_abf85c47ca043cbb7ddbec62ddc8dd1e8}{Measure\+Bounds}} (Graphics g)
+\begin{DoxyCompactList}\small\item\em Measures the bounds of box and children, recursively. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a7ff5ff211619f4a0ca5fb728cb2440cc}{Paint}} (Graphics g, bool round\+Corners)
+\begin{DoxyCompactList}\small\item\em Paints the fragment \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a7526fe8e08a3ee048ea302e880665ce2}{Set\+Bounds}} (Rectangle r)
+\begin{DoxyCompactList}\small\item\em Sets the bounds of the box \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a96ad07ad8ecd95be7a715ff73fec4cd1}{Set\+Bounds}} (RectangleF rectangle)
+\begin{DoxyCompactList}\small\item\em Sets the bounds of the box \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a04b5b99a704b2f0e9bf16ad4f451fc70}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em To\+String override. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aeef5587e5bd9e4bd6e12e2cafbacf60f}{Available\+Width}}
+\begin{DoxyCompactList}\small\item\em Gets the width available on the box, counting padding and margin. \end{DoxyCompactList}\item 
+RectangleF \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae35e59e79b9a809e6ed58fb9768821a5}{Bounds}} =$>$ new RectangleF(\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a9758963e834097e4f32a5d1f7205bb5e}{Location}}, \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae1a9a87ace72d9c209759c0dc085b713}{Size}})
+\begin{DoxyCompactList}\small\item\em Gets the bounds of the box \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aa8e94509c120157d98d084dd1ecd3d8d}{Client\+Left}} =$>$ Location.\+X + \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ad71d3f3626ec31a67cd2772df230aa3b}{Actual\+Border\+Left\+Width}} + \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a4bf100ea9213a9d84f67778f233e5e6a}{Actual\+Padding\+Left}}
+\begin{DoxyCompactList}\small\item\em Gets the left of the client rectangle (Where content starts rendering) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a6105d6cf59ab7bb5091ded0efaadd286}{Client\+Top}} =$>$ Location.\+Y + \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a38e42d7d01ca5706c407d30355df7cf5}{Actual\+Border\+Top\+Width}} + \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a1210fec38ba3343c6746f77aa23bccc3}{Actual\+Padding\+Top}}
+\begin{DoxyCompactList}\small\item\em Gets the top of the client rectangle (Where content starts rendering) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a7ecd2bd2bbd63be056ae10d357c064be}{Client\+Right}} =$>$ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_af7c7e35c7036c8297b2fddc6446b4664}{Actual\+Right}} -\/ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae590fcbd4f0de36994551ae949e8187d}{Actual\+Padding\+Right}} -\/ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_adbb1a565c3b98186bf451d2e3da5d04a}{Actual\+Border\+Right\+Width}}
+\begin{DoxyCompactList}\small\item\em Gets the right of the client rectangle \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a90ab1b18366a6226840924c72d6d8f0d}{Client\+Bottom}} =$>$ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a52441eb916d512d377ae89e4e1769efc}{Actual\+Bottom}} -\/ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_af1999cbb137572ae8e709a43eeb25215}{Actual\+Padding\+Bottom}} -\/ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a530f38c03e45bffeacef43a5ad01a0fd}{Actual\+Border\+Bottom\+Width}}
+\begin{DoxyCompactList}\small\item\em Gets the bottom of the client rectangle \end{DoxyCompactList}\item 
+RectangleF \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a5af1950135ec9bc35595c9b11dd2e1be}{Client\+Rectangle}} =$>$ Rectangle\+F.\+From\+L\+T\+RB(\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aa8e94509c120157d98d084dd1ecd3d8d}{Client\+Left}}, \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a6105d6cf59ab7bb5091ded0efaadd286}{Client\+Top}}, \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a7ecd2bd2bbd63be056ae10d357c064be}{Client\+Right}}, \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a90ab1b18366a6226840924c72d6d8f0d}{Client\+Bottom}})
+\begin{DoxyCompactList}\small\item\em Gets the client rectangle \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_initial_html_container}{Initial\+Html\+Container}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aa6f4bdc798c53cc67158e05c2af34b10}{Initial\+Container}} =$>$ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a4d6faea825bb3dfef0ff3d5373778ead}{\+\_\+initial\+Container}}
+\begin{DoxyCompactList}\small\item\em Gets the Initial\+Container of the Box. W\+A\+R\+N\+I\+NG\+: May be null. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a7bce7c233833041fdd852d5146395dd2}{Is\+Image}} =$>$ Words.\+Count == 1 \&\& Words\mbox{[}0\mbox{]}.Is\+Image
+\begin{DoxyCompactList}\small\item\em Gets if this box represents an image \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ace4d3dfb11c45b2bdb9f7931a4f94ef2}{Is\+Rounded}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating if at least one of the corners of the box is rounded \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a9e0f968d61eb500c77d27ad8ae756527}{Css\+Box}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_initial_html_container}{Initial\+Html\+Container}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a4d6faea825bb3dfef0ff3d5373778ead}{\+\_\+initial\+Container}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ac07b4f3ccee7eacd95574c87f72de8c5}{Border\+Bottom\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_af9b168493f4acc95ed4dc14bc31f35eb}{Border\+Left\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a776f75170a26aa93fb7b066bc05a5ffe}{Border\+Right\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae8834b5f15321d91c5615bc4a1bbd0a5}{Border\+Top\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_abbeae1e62296110e9ba46ac3ce1901a0}{Border\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a47a0fc60341166d193817e9ccb8208ab}{Border\+Bottom\+Style}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a812c6bb1002b18117372aeca9c2591c8}{Border\+Left\+Style}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a1316b7043f910165de3be8ea94f9ed53}{Border\+Right\+Style}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a61661776cc5fc31fb680a156177c71ba}{Border\+Style}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ac44653c92e483afae5ef0ac1e3dbeef7}{Border\+Top\+Style}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a1702c277560bef8c3eb2f3a19502972d}{Border\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a5a68f762c614a1596e0bb89a387e49ce}{Border\+Bottom\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_acb2be54f610144d51470943d75b41583}{Border\+Left\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae71503cd5781b45beebcbba49a74bb8b}{Border\+Right\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a59e37659bcb670cfb02d1400d1215695}{Border\+Top\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a1d46aeca3156aff52b7bc25a414072de}{Border}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a2fee6006fb805084bf4049c325b91dec}{Border\+Bottom}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a8e53e4770291ba04f22a385f21faa83b}{Border\+Left}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a455e70f1b89066bc3f58cdc93ba88a8a}{Border\+Right}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a3344d3d992786ef55be022dbc0244ba1}{Border\+Top}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a7836973ad852fec619dff30976e518dd}{Border\+Spacing}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a6ae6bc18fea3749503326f50c9c32f20}{Border\+Collapse}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aabd662051c28de6cde5b6312163ec796}{Corner\+Radius}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ad7eecd094f07cee8b1aebe65e88fc628}{Corner\+N\+W\+Radius}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a0fb5adf8ac088916e83ce579a1224d1c}{Corner\+N\+E\+Radius}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ad61a5066c31cb4fceab03418dc65b48d}{Corner\+S\+E\+Radius}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_acdbc90dff679a263d7f1799b532d565f}{Corner\+S\+W\+Radius}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a266b7f88d1917060db5459c496fe00d3}{Margin}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ad665950fb810f942ed4ee860486743d2}{Margin\+Bottom}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ad5e2a203d33f4e9d85a1bb6325c04806}{Margin\+Left}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_adeaf5bf149bf27bfb3d5f2bb21d28e13}{Margin\+Right}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a8faca1270607f15abac5e85a84bee206}{Margin\+Top}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ac028950803c6e142dcd4c7fca1604aa7}{Padding}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a15b47b08ab8694115c703196441263db}{Padding\+Bottom}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ac85f02e5675126cb0b2be78f935c0855}{Padding\+Left}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35adfaab8394485865c054850f67ff1b}{Padding\+Right}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a2c777dfe47b68d1dc6a8c2af2e3985ec}{Padding\+Top}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a01bd51ed0acafb033b7d186ea8322aba}{Left}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ab844606edba335598bec6f24a1c76773}{Top}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a6617d755c556b07f9196cec600f40613}{Right}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ad0e75954e8fd9e106f5324e9634e8692}{Bottom}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_af58fbadb6dc36074378054824ef8f937}{Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a3ce460fd7948d5912da7f1fbb72832c5}{Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_af7f4c2a38e9c46c2b75df5feb2036687}{Background\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae0791f3b04bf8cf145491a5ccd69fcda}{Background\+Image}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a86f807544dd34a741c8a126bcad0644d}{Background\+Repeat}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a2197f690ba54777c43ab52637aa3e09a}{Background\+Gradient}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aef6c9c4cb22d0693a5bacdd33674a9ef}{Background\+Gradient\+Angle}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}{Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a734e2d6f789e0f466a74fc035430996a}{Display}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ad4d367031c9b333b233315d06a32ec52}{Direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aa39d0599cd7ff9b863f81bdb5fea14ab}{Empty\+Cells}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a0200c2337a155e6e5d5cd3ea6f994839}{Float}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a0a06561976a0dc9093845baabd8803c7}{Position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aa380e28e31d14c9cbc50ff084ff3ef8d}{Line\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a05eb57a4d06fda22304a4d5b0a6e5420}{Vertical\+Align}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a4ef565904d260fb877f0839e7db1945b}{Text\+Indent}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a9a6adb9212198b17d19022421c3649a7}{Text\+Align}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a5d650e6b6420b3dcb5e2898cccc8144b}{Text\+Decoration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a5fced435f753db5027b0c51c6bd436e5}{White\+Space}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_acdbe600bc9fb9528814854dea7c61b8e}{Word\+Spacing}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a85a8185b80c85b0ddbb98a00583b93d9}{Font}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a5086dcbd82814b7fdb12817166410569}{Font\+Family}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a72798743c733708b648f1fac120bd7d4}{Font\+Size}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ac6c1326a826b46f369931cd85ea9dafa}{Font\+Style}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae0b1c1fa7e19289b368b1b3457c7fba9}{Font\+Variant}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a8e5bb180aa6e038f4810ccbcd530d42b}{Font\+Weight}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aa6fff3c7306f18ce917fbeba8600668d}{List\+Style}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a65d25da249abe1559c5018b856166c64}{List\+Style\+Position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_af9350d84860a4e6720f75a3a65441b06}{List\+Style\+Image}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aa23a013ff23f4171deed9a496eef1f53}{List\+Style\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a1210fec38ba3343c6746f77aa23bccc3}{Actual\+Padding\+Top}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual top\textquotesingle{}s padding \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a4bf100ea9213a9d84f67778f233e5e6a}{Actual\+Padding\+Left}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual padding on the left \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_af1999cbb137572ae8e709a43eeb25215}{Actual\+Padding\+Bottom}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual Padding of the bottom \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae590fcbd4f0de36994551ae949e8187d}{Actual\+Padding\+Right}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual padding on the right \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a0cf04904d25ea609cf837ef9520a5314}{Actual\+Margin\+Top}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual top\textquotesingle{}s Margin \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_adc559e69e26906e1160010328730d1c0}{Actual\+Margin\+Left}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual Margin on the left \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_acf27da540f0f894c50d114604c26709b}{Actual\+Margin\+Bottom}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual Margin of the bottom \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ab95d3bbeed4a1ba28d80b259285d6442}{Actual\+Margin\+Right}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual Margin on the right \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a38e42d7d01ca5706c407d30355df7cf5}{Actual\+Border\+Top\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual top border width \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ad71d3f3626ec31a67cd2772df230aa3b}{Actual\+Border\+Left\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual Left border width \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a530f38c03e45bffeacef43a5ad01a0fd}{Actual\+Border\+Bottom\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual Bottom border width \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_adbb1a565c3b98186bf451d2e3da5d04a}{Actual\+Border\+Right\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual Right border width \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}{Color}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_acbc02ba2f1c5e658d0b979f2fda8ddd2}{Actual\+Border\+Top\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual top border Color \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}{Color}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a5bf7c0a5407d7bfd8b0ffac420c90a1d}{Actual\+Border\+Left\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual Left border Color \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}{Color}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae64e46e16e655f4241a936989be0ec9e}{Actual\+Border\+Bottom\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual Bottom border Color \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}{Color}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a255f8a3a99f6049b58aa6280b2c68e8d}{Actual\+Border\+Right\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual Right border Color \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a715e73880ecb056d834f4fdce3b7156c}{Actual\+Corner\+NW}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual lenght of the north west corner \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aa5f1fb3fadbd4f4aebbba063968c20e1}{Actual\+Corner\+NE}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual lenght of the north east corner \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aed3329a13b82d4be9be9ba0c337690dc}{Actual\+Corner\+SE}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual lenght of the south east corner \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a89ee3337b04056bd1f5b68c471972f90}{Actual\+Corner\+SW}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual lenght of the south west corner \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aca4f04a1e0c655a104a9fd8f371baf19}{Actual\+Word\+Spacing}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual word spacing of the word. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}{Color}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a14a812b9253d5ec41ebbb57b06296455}{Actual\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual color for the text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}{Color}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ac6631b66d485ccb3e15cc99237fc1ee2}{Actual\+Background\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual background color of the box \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}{Color}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ac0878803f204a2cc04bd0ff160346101}{Actual\+Background\+Gradient}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the second color that creates a gradient for the background \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae53e8308e9ba8c43acf6f0d171871a00}{Actual\+Background\+Gradient\+Angle}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual angle specified for the background gradient \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a85a8185b80c85b0ddbb98a00583b93d9}{Font}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a3833f3e25d13bc96129b916304a883be}{Actual\+Parent\+Font}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual font of the parent \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a85a8185b80c85b0ddbb98a00583b93d9}{Font}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a4cc415b1449235b4caa0cfd399e18d1e}{Actual\+Font}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the font that should be actually used to paint the text of the box \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a3368520cd41734a23e420175a0f27974}{Actual\+Text\+Indent}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the text indentation (on first line only) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae15438bb03a2c4e16c51cb4609000cc2}{Actual\+Border\+Spacing\+Horizontal}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual horizontal border spacing for tables \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a7e7957f76774758529c3a7a963540510}{Actual\+Border\+Spacing\+Vertical}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the actual vertical border spacing for tables \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box}{Css\+Box}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_abc846814e07f507527473623102e7d95}{List\+Item\+Box}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the • box \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a52441eb916d512d377ae89e4e1769efc}{Actual\+Bottom}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the bottom of the box. (When setting, alters only the Size.\+Height of the box) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_list}{List}}$<$ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box}{Css\+Box}} $>$ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae20b7209750e90795f3c97bba2066a85}{Boxes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the childrenn boxes of this box \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box}{Css\+Box}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a0c93159a1244219b23598aed8ad69bac}{Containing\+Block}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the containing block-\/box of this box. (The nearest parent box with display=block) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ac6992622b24a3979f07a4cfb5364c6ec}{Font\+Ascent}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the font\textquotesingle{}s ascent \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aee5b03d91de5a5371921c6b3ed2797a6}{Font\+Line\+Spacing}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the font\textquotesingle{}s line spacing \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aa9af1875a5743d68a1192c4f52b5f875}{Font\+Descent}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the font\textquotesingle{}s descent \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_html_tag}{Html\+Tag}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aca453e763dce0b0e7f0f1d74a83d2899}{Html\+Tag}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the H\+T\+M\+L\+Tag that hosts this box \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a165312840448a3197e41d75cd6bdbdeb}{Is\+Space\+Or\+Empty}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Tells if the box is empty or contains just blank spaces \end{DoxyCompactList}\item 
+PointF \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a9758963e834097e4f32a5d1f7205bb5e}{Location}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the location of the box \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box}{Css\+Box}} \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ac56deca13146cfcfddfb490d311fcf9b}{Parent\+Box}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the parent box of this box \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_af7c7e35c7036c8297b2fddc6446b4664}{Actual\+Right}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the right of the box. When setting, it will affect only the width of the box. \end{DoxyCompactList}\item 
+SizeF \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae1a9a87ace72d9c209759c0dc085b713}{Size}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the size of the box \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a3c7b00f7c7a52c28db1a21771deed87f}{Text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the inner text of the box \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a C\+SS Box of text or replaced elements. 
+
+The Box can contains other boxes, that\textquotesingle{}s the way that the C\+SS Tree is composed. To know more about boxes visit C\+SS spec\+: \href{http://www.w3.org/TR/CSS21/box.html}{\texttt{ http\+://www.\+w3.\+org/\+T\+R/\+C\+S\+S21/box.\+html}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a9e0f968d61eb500c77d27ad8ae756527}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a9e0f968d61eb500c77d27ad8ae756527}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!CssBox@{CssBox}}
+\index{CssBox@{CssBox}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{CssBox()}{CssBox()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily System.\+Drawing.\+Html.\+Css\+Box.\+Css\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a5b9192fb4368e6ecd78bab2e971be452}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a5b9192fb4368e6ecd78bab2e971be452}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!CssBox@{CssBox}}
+\index{CssBox@{CssBox}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{CssBox()}{CssBox()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily System.\+Drawing.\+Html.\+Css\+Box.\+Css\+Box (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box}{Css\+Box}}}]{parent\+Box }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a7851ac6861c5fd0e1bedb27ce8313214}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a7851ac6861c5fd0e1bedb27ce8313214}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!GetEmHeight@{GetEmHeight}}
+\index{GetEmHeight@{GetEmHeight}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{GetEmHeight()}{GetEmHeight()}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Get\+Em\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the height of the font in the specified units 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_abf85c47ca043cbb7ddbec62ddc8dd1e8}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_abf85c47ca043cbb7ddbec62ddc8dd1e8}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!MeasureBounds@{MeasureBounds}}
+\index{MeasureBounds@{MeasureBounds}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{MeasureBounds()}{MeasureBounds()}}
+{\footnotesize\ttfamily virtual void System.\+Drawing.\+Html.\+Css\+Box.\+Measure\+Bounds (\begin{DoxyParamCaption}\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Measures the bounds of box and children, recursively. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Device context to draw\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_initial_html_container_a24ebde781a0f6e402679bcaba57dca5e}{System.\+Drawing.\+Html.\+Initial\+Html\+Container}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{d5/db0/class_system_1_1_drawing_1_1_html_1_1_css_box_abf85c47ca043cbb7ddbec62ddc8dd1e8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{d5/db0/class_system_1_1_drawing_1_1_html_1_1_css_box_abf85c47ca043cbb7ddbec62ddc8dd1e8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a7ff5ff211619f4a0ca5fb728cb2440cc}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a7ff5ff211619f4a0ca5fb728cb2440cc}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Paint@{Paint}}
+\index{Paint@{Paint}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Paint()}{Paint()}}
+{\footnotesize\ttfamily void System.\+Drawing.\+Html.\+Css\+Box.\+Paint (\begin{DoxyParamCaption}\item[{Graphics}]{g,  }\item[{bool}]{round\+Corners }\end{DoxyParamCaption})}
+
+
+
+Paints the fragment 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & \\
+\hline
+{\em round\+Corners} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{d5/db0/class_system_1_1_drawing_1_1_html_1_1_css_box_a7ff5ff211619f4a0ca5fb728cb2440cc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/db0/class_system_1_1_drawing_1_1_html_1_1_css_box_a7ff5ff211619f4a0ca5fb728cb2440cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a7526fe8e08a3ee048ea302e880665ce2}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a7526fe8e08a3ee048ea302e880665ce2}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!SetBounds@{SetBounds}}
+\index{SetBounds@{SetBounds}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{SetBounds()}{SetBounds()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void System.\+Drawing.\+Html.\+Css\+Box.\+Set\+Bounds (\begin{DoxyParamCaption}\item[{Rectangle}]{r }\end{DoxyParamCaption})}
+
+
+
+Sets the bounds of the box 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/db0/class_system_1_1_drawing_1_1_html_1_1_css_box_a7526fe8e08a3ee048ea302e880665ce2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a96ad07ad8ecd95be7a715ff73fec4cd1}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a96ad07ad8ecd95be7a715ff73fec4cd1}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!SetBounds@{SetBounds}}
+\index{SetBounds@{SetBounds}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{SetBounds()}{SetBounds()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void System.\+Drawing.\+Html.\+Css\+Box.\+Set\+Bounds (\begin{DoxyParamCaption}\item[{RectangleF}]{rectangle }\end{DoxyParamCaption})}
+
+
+
+Sets the bounds of the box 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rectangle} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a04b5b99a704b2f0e9bf16ad4f451fc70}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a04b5b99a704b2f0e9bf16ad4f451fc70}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ToString@{ToString}}
+\index{ToString@{ToString}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string System.\+Drawing.\+Html.\+Css\+Box.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+To\+String override. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a4d6faea825bb3dfef0ff3d5373778ead}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a4d6faea825bb3dfef0ff3d5373778ead}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!\_initialContainer@{\_initialContainer}}
+\index{\_initialContainer@{\_initialContainer}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{\_initialContainer}{\_initialContainer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_initial_html_container}{Initial\+Html\+Container}} System.\+Drawing.\+Html.\+Css\+Box.\+\_\+initial\+Container\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_aeef5587e5bd9e4bd6e12e2cafbacf60f}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_aeef5587e5bd9e4bd6e12e2cafbacf60f}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!AvailableWidth@{AvailableWidth}}
+\index{AvailableWidth@{AvailableWidth}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{AvailableWidth}{AvailableWidth}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Available\+Width}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=> \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae1a9a87ace72d9c209759c0dc085b713}{Size}}.Width -\/ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ad71d3f3626ec31a67cd2772df230aa3b}{ActualBorderLeftWidth}} -\/ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a4bf100ea9213a9d84f67778f233e5e6a}{ActualPaddingLeft}} -\/ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae590fcbd4f0de36994551ae949e8187d}{ActualPaddingRight}} -\/}
+\DoxyCodeLine{                                       \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_adbb1a565c3b98186bf451d2e3da5d04a}{ActualBorderRightWidth}}}
+
+\end{DoxyCode}
+
+
+Gets the width available on the box, counting padding and margin. 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ae35e59e79b9a809e6ed58fb9768821a5}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ae35e59e79b9a809e6ed58fb9768821a5}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Bounds@{Bounds}}
+\index{Bounds@{Bounds}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Bounds}{Bounds}}
+{\footnotesize\ttfamily RectangleF System.\+Drawing.\+Html.\+Css\+Box.\+Bounds =$>$ new RectangleF(\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a9758963e834097e4f32a5d1f7205bb5e}{Location}}, \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae1a9a87ace72d9c209759c0dc085b713}{Size}})}
+
+
+
+Gets the bounds of the box 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a90ab1b18366a6226840924c72d6d8f0d}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a90ab1b18366a6226840924c72d6d8f0d}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ClientBottom@{ClientBottom}}
+\index{ClientBottom@{ClientBottom}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ClientBottom}{ClientBottom}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Client\+Bottom =$>$ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a52441eb916d512d377ae89e4e1769efc}{Actual\+Bottom}} -\/ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_af1999cbb137572ae8e709a43eeb25215}{Actual\+Padding\+Bottom}} -\/ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a530f38c03e45bffeacef43a5ad01a0fd}{Actual\+Border\+Bottom\+Width}}}
+
+
+
+Gets the bottom of the client rectangle 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_aa8e94509c120157d98d084dd1ecd3d8d}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_aa8e94509c120157d98d084dd1ecd3d8d}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ClientLeft@{ClientLeft}}
+\index{ClientLeft@{ClientLeft}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ClientLeft}{ClientLeft}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Client\+Left =$>$ Location.\+X + \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ad71d3f3626ec31a67cd2772df230aa3b}{Actual\+Border\+Left\+Width}} + \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a4bf100ea9213a9d84f67778f233e5e6a}{Actual\+Padding\+Left}}}
+
+
+
+Gets the left of the client rectangle (Where content starts rendering) 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a5af1950135ec9bc35595c9b11dd2e1be}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a5af1950135ec9bc35595c9b11dd2e1be}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ClientRectangle@{ClientRectangle}}
+\index{ClientRectangle@{ClientRectangle}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ClientRectangle}{ClientRectangle}}
+{\footnotesize\ttfamily RectangleF System.\+Drawing.\+Html.\+Css\+Box.\+Client\+Rectangle =$>$ Rectangle\+F.\+From\+L\+T\+RB(\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aa8e94509c120157d98d084dd1ecd3d8d}{Client\+Left}}, \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a6105d6cf59ab7bb5091ded0efaadd286}{Client\+Top}}, \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a7ecd2bd2bbd63be056ae10d357c064be}{Client\+Right}}, \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a90ab1b18366a6226840924c72d6d8f0d}{Client\+Bottom}})}
+
+
+
+Gets the client rectangle 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a7ecd2bd2bbd63be056ae10d357c064be}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a7ecd2bd2bbd63be056ae10d357c064be}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ClientRight@{ClientRight}}
+\index{ClientRight@{ClientRight}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ClientRight}{ClientRight}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Client\+Right =$>$ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_af7c7e35c7036c8297b2fddc6446b4664}{Actual\+Right}} -\/ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_ae590fcbd4f0de36994551ae949e8187d}{Actual\+Padding\+Right}} -\/ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_adbb1a565c3b98186bf451d2e3da5d04a}{Actual\+Border\+Right\+Width}}}
+
+
+
+Gets the right of the client rectangle 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a6105d6cf59ab7bb5091ded0efaadd286}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a6105d6cf59ab7bb5091ded0efaadd286}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ClientTop@{ClientTop}}
+\index{ClientTop@{ClientTop}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ClientTop}{ClientTop}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Client\+Top =$>$ Location.\+Y + \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a38e42d7d01ca5706c407d30355df7cf5}{Actual\+Border\+Top\+Width}} + \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a1210fec38ba3343c6746f77aa23bccc3}{Actual\+Padding\+Top}}}
+
+
+
+Gets the top of the client rectangle (Where content starts rendering) 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_aa6f4bdc798c53cc67158e05c2af34b10}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_aa6f4bdc798c53cc67158e05c2af34b10}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!InitialContainer@{InitialContainer}}
+\index{InitialContainer@{InitialContainer}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{InitialContainer}{InitialContainer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_initial_html_container}{Initial\+Html\+Container}} System.\+Drawing.\+Html.\+Css\+Box.\+Initial\+Container =$>$ \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a4d6faea825bb3dfef0ff3d5373778ead}{\+\_\+initial\+Container}}}
+
+
+
+Gets the Initial\+Container of the Box. W\+A\+R\+N\+I\+NG\+: May be null. 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a7bce7c233833041fdd852d5146395dd2}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a7bce7c233833041fdd852d5146395dd2}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!IsImage@{IsImage}}
+\index{IsImage@{IsImage}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{IsImage}{IsImage}}
+{\footnotesize\ttfamily bool System.\+Drawing.\+Html.\+Css\+Box.\+Is\+Image =$>$ Words.\+Count == 1 \&\& Words\mbox{[}0\mbox{]}.Is\+Image}
+
+
+
+Gets if this box represents an image 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ace4d3dfb11c45b2bdb9f7931a4f94ef2}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ace4d3dfb11c45b2bdb9f7931a4f94ef2}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!IsRounded@{IsRounded}}
+\index{IsRounded@{IsRounded}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{IsRounded}{IsRounded}}
+{\footnotesize\ttfamily bool System.\+Drawing.\+Html.\+Css\+Box.\+Is\+Rounded}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=>}
+\DoxyCodeLine{            \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aa5f1fb3fadbd4f4aebbba063968c20e1}{ActualCornerNE}} > 0f || \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a715e73880ecb056d834f4fdce3b7156c}{ActualCornerNW}} > 0f || \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_aed3329a13b82d4be9be9ba0c337690dc}{ActualCornerSE}} > 0f || \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a89ee3337b04056bd1f5b68c471972f90}{ActualCornerSW}} > 0f}
+
+\end{DoxyCode}
+
+
+Gets a value indicating if at least one of the corners of the box is rounded 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ac6631b66d485ccb3e15cc99237fc1ee2}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ac6631b66d485ccb3e15cc99237fc1ee2}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualBackgroundColor@{ActualBackgroundColor}}
+\index{ActualBackgroundColor@{ActualBackgroundColor}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualBackgroundColor}{ActualBackgroundColor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}{Color}} System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Background\+Color\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual background color of the box 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ac0878803f204a2cc04bd0ff160346101}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ac0878803f204a2cc04bd0ff160346101}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualBackgroundGradient@{ActualBackgroundGradient}}
+\index{ActualBackgroundGradient@{ActualBackgroundGradient}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualBackgroundGradient}{ActualBackgroundGradient}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}{Color}} System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Background\+Gradient\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the second color that creates a gradient for the background 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ae53e8308e9ba8c43acf6f0d171871a00}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ae53e8308e9ba8c43acf6f0d171871a00}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualBackgroundGradientAngle@{ActualBackgroundGradientAngle}}
+\index{ActualBackgroundGradientAngle@{ActualBackgroundGradientAngle}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualBackgroundGradientAngle}{ActualBackgroundGradientAngle}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Background\+Gradient\+Angle\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual angle specified for the background gradient 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ae64e46e16e655f4241a936989be0ec9e}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ae64e46e16e655f4241a936989be0ec9e}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualBorderBottomColor@{ActualBorderBottomColor}}
+\index{ActualBorderBottomColor@{ActualBorderBottomColor}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualBorderBottomColor}{ActualBorderBottomColor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}{Color}} System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Border\+Bottom\+Color\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual Bottom border Color 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a530f38c03e45bffeacef43a5ad01a0fd}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a530f38c03e45bffeacef43a5ad01a0fd}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualBorderBottomWidth@{ActualBorderBottomWidth}}
+\index{ActualBorderBottomWidth@{ActualBorderBottomWidth}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualBorderBottomWidth}{ActualBorderBottomWidth}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Border\+Bottom\+Width\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual Bottom border width 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a5bf7c0a5407d7bfd8b0ffac420c90a1d}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a5bf7c0a5407d7bfd8b0ffac420c90a1d}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualBorderLeftColor@{ActualBorderLeftColor}}
+\index{ActualBorderLeftColor@{ActualBorderLeftColor}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualBorderLeftColor}{ActualBorderLeftColor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}{Color}} System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Border\+Left\+Color\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual Left border Color 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ad71d3f3626ec31a67cd2772df230aa3b}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ad71d3f3626ec31a67cd2772df230aa3b}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualBorderLeftWidth@{ActualBorderLeftWidth}}
+\index{ActualBorderLeftWidth@{ActualBorderLeftWidth}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualBorderLeftWidth}{ActualBorderLeftWidth}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Border\+Left\+Width\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual Left border width 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a255f8a3a99f6049b58aa6280b2c68e8d}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a255f8a3a99f6049b58aa6280b2c68e8d}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualBorderRightColor@{ActualBorderRightColor}}
+\index{ActualBorderRightColor@{ActualBorderRightColor}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualBorderRightColor}{ActualBorderRightColor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}{Color}} System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Border\+Right\+Color\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual Right border Color 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_adbb1a565c3b98186bf451d2e3da5d04a}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_adbb1a565c3b98186bf451d2e3da5d04a}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualBorderRightWidth@{ActualBorderRightWidth}}
+\index{ActualBorderRightWidth@{ActualBorderRightWidth}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualBorderRightWidth}{ActualBorderRightWidth}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Border\+Right\+Width\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual Right border width 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ae15438bb03a2c4e16c51cb4609000cc2}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ae15438bb03a2c4e16c51cb4609000cc2}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualBorderSpacingHorizontal@{ActualBorderSpacingHorizontal}}
+\index{ActualBorderSpacingHorizontal@{ActualBorderSpacingHorizontal}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualBorderSpacingHorizontal}{ActualBorderSpacingHorizontal}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Border\+Spacing\+Horizontal\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual horizontal border spacing for tables 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a7e7957f76774758529c3a7a963540510}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a7e7957f76774758529c3a7a963540510}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualBorderSpacingVertical@{ActualBorderSpacingVertical}}
+\index{ActualBorderSpacingVertical@{ActualBorderSpacingVertical}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualBorderSpacingVertical}{ActualBorderSpacingVertical}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Border\+Spacing\+Vertical\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual vertical border spacing for tables 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_acbc02ba2f1c5e658d0b979f2fda8ddd2}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_acbc02ba2f1c5e658d0b979f2fda8ddd2}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualBorderTopColor@{ActualBorderTopColor}}
+\index{ActualBorderTopColor@{ActualBorderTopColor}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualBorderTopColor}{ActualBorderTopColor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}{Color}} System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Border\+Top\+Color\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual top border Color 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a38e42d7d01ca5706c407d30355df7cf5}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a38e42d7d01ca5706c407d30355df7cf5}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualBorderTopWidth@{ActualBorderTopWidth}}
+\index{ActualBorderTopWidth@{ActualBorderTopWidth}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualBorderTopWidth}{ActualBorderTopWidth}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Border\+Top\+Width\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual top border width 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a52441eb916d512d377ae89e4e1769efc}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a52441eb916d512d377ae89e4e1769efc}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualBottom@{ActualBottom}}
+\index{ActualBottom@{ActualBottom}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualBottom}{ActualBottom}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Bottom\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the bottom of the box. (When setting, alters only the Size.\+Height of the box) 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a14a812b9253d5ec41ebbb57b06296455}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a14a812b9253d5ec41ebbb57b06296455}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualColor@{ActualColor}}
+\index{ActualColor@{ActualColor}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualColor}{ActualColor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}{Color}} System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Color\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual color for the text. 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_aa5f1fb3fadbd4f4aebbba063968c20e1}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_aa5f1fb3fadbd4f4aebbba063968c20e1}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualCornerNE@{ActualCornerNE}}
+\index{ActualCornerNE@{ActualCornerNE}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualCornerNE}{ActualCornerNE}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Corner\+NE\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual lenght of the north east corner 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a715e73880ecb056d834f4fdce3b7156c}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a715e73880ecb056d834f4fdce3b7156c}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualCornerNW@{ActualCornerNW}}
+\index{ActualCornerNW@{ActualCornerNW}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualCornerNW}{ActualCornerNW}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Corner\+NW\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual lenght of the north west corner 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_aed3329a13b82d4be9be9ba0c337690dc}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_aed3329a13b82d4be9be9ba0c337690dc}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualCornerSE@{ActualCornerSE}}
+\index{ActualCornerSE@{ActualCornerSE}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualCornerSE}{ActualCornerSE}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Corner\+SE\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual lenght of the south east corner 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a89ee3337b04056bd1f5b68c471972f90}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a89ee3337b04056bd1f5b68c471972f90}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualCornerSW@{ActualCornerSW}}
+\index{ActualCornerSW@{ActualCornerSW}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualCornerSW}{ActualCornerSW}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Corner\+SW\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual lenght of the south west corner 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a4cc415b1449235b4caa0cfd399e18d1e}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a4cc415b1449235b4caa0cfd399e18d1e}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualFont@{ActualFont}}
+\index{ActualFont@{ActualFont}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualFont}{ActualFont}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a85a8185b80c85b0ddbb98a00583b93d9}{Font}} System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Font\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the font that should be actually used to paint the text of the box 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_acf27da540f0f894c50d114604c26709b}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_acf27da540f0f894c50d114604c26709b}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualMarginBottom@{ActualMarginBottom}}
+\index{ActualMarginBottom@{ActualMarginBottom}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualMarginBottom}{ActualMarginBottom}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Margin\+Bottom\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual Margin of the bottom 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_adc559e69e26906e1160010328730d1c0}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_adc559e69e26906e1160010328730d1c0}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualMarginLeft@{ActualMarginLeft}}
+\index{ActualMarginLeft@{ActualMarginLeft}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualMarginLeft}{ActualMarginLeft}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Margin\+Left\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual Margin on the left 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ab95d3bbeed4a1ba28d80b259285d6442}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ab95d3bbeed4a1ba28d80b259285d6442}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualMarginRight@{ActualMarginRight}}
+\index{ActualMarginRight@{ActualMarginRight}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualMarginRight}{ActualMarginRight}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Margin\+Right\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual Margin on the right 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a0cf04904d25ea609cf837ef9520a5314}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a0cf04904d25ea609cf837ef9520a5314}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualMarginTop@{ActualMarginTop}}
+\index{ActualMarginTop@{ActualMarginTop}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualMarginTop}{ActualMarginTop}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Margin\+Top\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual top\textquotesingle{}s Margin 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_af1999cbb137572ae8e709a43eeb25215}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_af1999cbb137572ae8e709a43eeb25215}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualPaddingBottom@{ActualPaddingBottom}}
+\index{ActualPaddingBottom@{ActualPaddingBottom}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualPaddingBottom}{ActualPaddingBottom}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Padding\+Bottom\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual Padding of the bottom 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a4bf100ea9213a9d84f67778f233e5e6a}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a4bf100ea9213a9d84f67778f233e5e6a}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualPaddingLeft@{ActualPaddingLeft}}
+\index{ActualPaddingLeft@{ActualPaddingLeft}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualPaddingLeft}{ActualPaddingLeft}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Padding\+Left\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual padding on the left 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ae590fcbd4f0de36994551ae949e8187d}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ae590fcbd4f0de36994551ae949e8187d}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualPaddingRight@{ActualPaddingRight}}
+\index{ActualPaddingRight@{ActualPaddingRight}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualPaddingRight}{ActualPaddingRight}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Padding\+Right\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual padding on the right 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a1210fec38ba3343c6746f77aa23bccc3}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a1210fec38ba3343c6746f77aa23bccc3}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualPaddingTop@{ActualPaddingTop}}
+\index{ActualPaddingTop@{ActualPaddingTop}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualPaddingTop}{ActualPaddingTop}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Padding\+Top\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual top\textquotesingle{}s padding 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a3833f3e25d13bc96129b916304a883be}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a3833f3e25d13bc96129b916304a883be}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualParentFont@{ActualParentFont}}
+\index{ActualParentFont@{ActualParentFont}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualParentFont}{ActualParentFont}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box_a85a8185b80c85b0ddbb98a00583b93d9}{Font}} System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Parent\+Font\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual font of the parent 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_af7c7e35c7036c8297b2fddc6446b4664}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_af7c7e35c7036c8297b2fddc6446b4664}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualRight@{ActualRight}}
+\index{ActualRight@{ActualRight}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualRight}{ActualRight}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Right\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets the right of the box. When setting, it will affect only the width of the box. 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a3368520cd41734a23e420175a0f27974}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a3368520cd41734a23e420175a0f27974}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualTextIndent@{ActualTextIndent}}
+\index{ActualTextIndent@{ActualTextIndent}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualTextIndent}{ActualTextIndent}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Text\+Indent\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the text indentation (on first line only) 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_aca4f04a1e0c655a104a9fd8f371baf19}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_aca4f04a1e0c655a104a9fd8f371baf19}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ActualWordSpacing@{ActualWordSpacing}}
+\index{ActualWordSpacing@{ActualWordSpacing}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ActualWordSpacing}{ActualWordSpacing}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Actual\+Word\+Spacing\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the actual word spacing of the word. 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_af7f4c2a38e9c46c2b75df5feb2036687}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_af7f4c2a38e9c46c2b75df5feb2036687}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BackgroundColor@{BackgroundColor}}
+\index{BackgroundColor@{BackgroundColor}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BackgroundColor}{BackgroundColor}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Background\+Color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a2197f690ba54777c43ab52637aa3e09a}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a2197f690ba54777c43ab52637aa3e09a}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BackgroundGradient@{BackgroundGradient}}
+\index{BackgroundGradient@{BackgroundGradient}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BackgroundGradient}{BackgroundGradient}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Background\+Gradient\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_aef6c9c4cb22d0693a5bacdd33674a9ef}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_aef6c9c4cb22d0693a5bacdd33674a9ef}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BackgroundGradientAngle@{BackgroundGradientAngle}}
+\index{BackgroundGradientAngle@{BackgroundGradientAngle}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BackgroundGradientAngle}{BackgroundGradientAngle}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Background\+Gradient\+Angle\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ae0791f3b04bf8cf145491a5ccd69fcda}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ae0791f3b04bf8cf145491a5ccd69fcda}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BackgroundImage@{BackgroundImage}}
+\index{BackgroundImage@{BackgroundImage}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BackgroundImage}{BackgroundImage}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Background\+Image\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a86f807544dd34a741c8a126bcad0644d}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a86f807544dd34a741c8a126bcad0644d}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BackgroundRepeat@{BackgroundRepeat}}
+\index{BackgroundRepeat@{BackgroundRepeat}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BackgroundRepeat}{BackgroundRepeat}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Background\+Repeat\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a1d46aeca3156aff52b7bc25a414072de}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a1d46aeca3156aff52b7bc25a414072de}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Border@{Border}}
+\index{Border@{Border}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Border}{Border}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a2fee6006fb805084bf4049c325b91dec}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a2fee6006fb805084bf4049c325b91dec}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderBottom@{BorderBottom}}
+\index{BorderBottom@{BorderBottom}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderBottom}{BorderBottom}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Bottom\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a5a68f762c614a1596e0bb89a387e49ce}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a5a68f762c614a1596e0bb89a387e49ce}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderBottomColor@{BorderBottomColor}}
+\index{BorderBottomColor@{BorderBottomColor}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderBottomColor}{BorderBottomColor}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Bottom\+Color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a47a0fc60341166d193817e9ccb8208ab}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a47a0fc60341166d193817e9ccb8208ab}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderBottomStyle@{BorderBottomStyle}}
+\index{BorderBottomStyle@{BorderBottomStyle}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderBottomStyle}{BorderBottomStyle}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Bottom\+Style\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ac07b4f3ccee7eacd95574c87f72de8c5}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ac07b4f3ccee7eacd95574c87f72de8c5}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderBottomWidth@{BorderBottomWidth}}
+\index{BorderBottomWidth@{BorderBottomWidth}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderBottomWidth}{BorderBottomWidth}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Bottom\+Width\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a6ae6bc18fea3749503326f50c9c32f20}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a6ae6bc18fea3749503326f50c9c32f20}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderCollapse@{BorderCollapse}}
+\index{BorderCollapse@{BorderCollapse}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderCollapse}{BorderCollapse}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Collapse\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a1702c277560bef8c3eb2f3a19502972d}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a1702c277560bef8c3eb2f3a19502972d}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderColor@{BorderColor}}
+\index{BorderColor@{BorderColor}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderColor}{BorderColor}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a8e53e4770291ba04f22a385f21faa83b}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a8e53e4770291ba04f22a385f21faa83b}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderLeft@{BorderLeft}}
+\index{BorderLeft@{BorderLeft}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderLeft}{BorderLeft}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Left\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_acb2be54f610144d51470943d75b41583}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_acb2be54f610144d51470943d75b41583}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderLeftColor@{BorderLeftColor}}
+\index{BorderLeftColor@{BorderLeftColor}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderLeftColor}{BorderLeftColor}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Left\+Color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a812c6bb1002b18117372aeca9c2591c8}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a812c6bb1002b18117372aeca9c2591c8}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderLeftStyle@{BorderLeftStyle}}
+\index{BorderLeftStyle@{BorderLeftStyle}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderLeftStyle}{BorderLeftStyle}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Left\+Style\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_af9b168493f4acc95ed4dc14bc31f35eb}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_af9b168493f4acc95ed4dc14bc31f35eb}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderLeftWidth@{BorderLeftWidth}}
+\index{BorderLeftWidth@{BorderLeftWidth}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderLeftWidth}{BorderLeftWidth}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Left\+Width\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a455e70f1b89066bc3f58cdc93ba88a8a}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a455e70f1b89066bc3f58cdc93ba88a8a}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderRight@{BorderRight}}
+\index{BorderRight@{BorderRight}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderRight}{BorderRight}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Right\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ae71503cd5781b45beebcbba49a74bb8b}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ae71503cd5781b45beebcbba49a74bb8b}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderRightColor@{BorderRightColor}}
+\index{BorderRightColor@{BorderRightColor}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderRightColor}{BorderRightColor}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Right\+Color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a1316b7043f910165de3be8ea94f9ed53}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a1316b7043f910165de3be8ea94f9ed53}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderRightStyle@{BorderRightStyle}}
+\index{BorderRightStyle@{BorderRightStyle}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderRightStyle}{BorderRightStyle}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Right\+Style\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a776f75170a26aa93fb7b066bc05a5ffe}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a776f75170a26aa93fb7b066bc05a5ffe}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderRightWidth@{BorderRightWidth}}
+\index{BorderRightWidth@{BorderRightWidth}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderRightWidth}{BorderRightWidth}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Right\+Width\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a7836973ad852fec619dff30976e518dd}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a7836973ad852fec619dff30976e518dd}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderSpacing@{BorderSpacing}}
+\index{BorderSpacing@{BorderSpacing}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderSpacing}{BorderSpacing}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Spacing\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a61661776cc5fc31fb680a156177c71ba}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a61661776cc5fc31fb680a156177c71ba}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderStyle@{BorderStyle}}
+\index{BorderStyle@{BorderStyle}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderStyle}{BorderStyle}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Style\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a3344d3d992786ef55be022dbc0244ba1}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a3344d3d992786ef55be022dbc0244ba1}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderTop@{BorderTop}}
+\index{BorderTop@{BorderTop}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderTop}{BorderTop}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Top\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a59e37659bcb670cfb02d1400d1215695}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a59e37659bcb670cfb02d1400d1215695}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderTopColor@{BorderTopColor}}
+\index{BorderTopColor@{BorderTopColor}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderTopColor}{BorderTopColor}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Top\+Color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ac44653c92e483afae5ef0ac1e3dbeef7}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ac44653c92e483afae5ef0ac1e3dbeef7}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderTopStyle@{BorderTopStyle}}
+\index{BorderTopStyle@{BorderTopStyle}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderTopStyle}{BorderTopStyle}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Top\+Style\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ae8834b5f15321d91c5615bc4a1bbd0a5}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ae8834b5f15321d91c5615bc4a1bbd0a5}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderTopWidth@{BorderTopWidth}}
+\index{BorderTopWidth@{BorderTopWidth}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderTopWidth}{BorderTopWidth}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Top\+Width\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_abbeae1e62296110e9ba46ac3ce1901a0}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_abbeae1e62296110e9ba46ac3ce1901a0}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!BorderWidth@{BorderWidth}}
+\index{BorderWidth@{BorderWidth}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{BorderWidth}{BorderWidth}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Border\+Width\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ad0e75954e8fd9e106f5324e9634e8692}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ad0e75954e8fd9e106f5324e9634e8692}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Bottom@{Bottom}}
+\index{Bottom@{Bottom}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Bottom}{Bottom}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Bottom\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ae20b7209750e90795f3c97bba2066a85}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ae20b7209750e90795f3c97bba2066a85}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Boxes@{Boxes}}
+\index{Boxes@{Boxes}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Boxes}{Boxes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_list}{List}}$<$\mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box}{Css\+Box}}$>$ System.\+Drawing.\+Html.\+Css\+Box.\+Boxes\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the childrenn boxes of this box 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a35275d16b19d834433c725f19e33b3dc}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Color@{Color}}
+\index{Color@{Color}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a0c93159a1244219b23598aed8ad69bac}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a0c93159a1244219b23598aed8ad69bac}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ContainingBlock@{ContainingBlock}}
+\index{ContainingBlock@{ContainingBlock}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ContainingBlock}{ContainingBlock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box}{Css\+Box}} System.\+Drawing.\+Html.\+Css\+Box.\+Containing\+Block\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the containing block-\/box of this box. (The nearest parent box with display=block) 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a0fb5adf8ac088916e83ce579a1224d1c}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a0fb5adf8ac088916e83ce579a1224d1c}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!CornerNERadius@{CornerNERadius}}
+\index{CornerNERadius@{CornerNERadius}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{CornerNERadius}{CornerNERadius}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Corner\+N\+E\+Radius\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ad7eecd094f07cee8b1aebe65e88fc628}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ad7eecd094f07cee8b1aebe65e88fc628}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!CornerNWRadius@{CornerNWRadius}}
+\index{CornerNWRadius@{CornerNWRadius}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{CornerNWRadius}{CornerNWRadius}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Corner\+N\+W\+Radius\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_aabd662051c28de6cde5b6312163ec796}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_aabd662051c28de6cde5b6312163ec796}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!CornerRadius@{CornerRadius}}
+\index{CornerRadius@{CornerRadius}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{CornerRadius}{CornerRadius}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Corner\+Radius\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ad61a5066c31cb4fceab03418dc65b48d}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ad61a5066c31cb4fceab03418dc65b48d}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!CornerSERadius@{CornerSERadius}}
+\index{CornerSERadius@{CornerSERadius}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{CornerSERadius}{CornerSERadius}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Corner\+S\+E\+Radius\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_acdbc90dff679a263d7f1799b532d565f}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_acdbc90dff679a263d7f1799b532d565f}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!CornerSWRadius@{CornerSWRadius}}
+\index{CornerSWRadius@{CornerSWRadius}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{CornerSWRadius}{CornerSWRadius}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Corner\+S\+W\+Radius\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ad4d367031c9b333b233315d06a32ec52}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ad4d367031c9b333b233315d06a32ec52}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Direction@{Direction}}
+\index{Direction@{Direction}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a734e2d6f789e0f466a74fc035430996a}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a734e2d6f789e0f466a74fc035430996a}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Display@{Display}}
+\index{Display@{Display}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Display}{Display}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Display\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_aa39d0599cd7ff9b863f81bdb5fea14ab}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_aa39d0599cd7ff9b863f81bdb5fea14ab}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!EmptyCells@{EmptyCells}}
+\index{EmptyCells@{EmptyCells}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{EmptyCells}{EmptyCells}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Empty\+Cells\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a0200c2337a155e6e5d5cd3ea6f994839}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a0200c2337a155e6e5d5cd3ea6f994839}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Float@{Float}}
+\index{Float@{Float}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Float}{Float}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Float\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a85a8185b80c85b0ddbb98a00583b93d9}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a85a8185b80c85b0ddbb98a00583b93d9}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Font@{Font}}
+\index{Font@{Font}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Font}{Font}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Font\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ac6992622b24a3979f07a4cfb5364c6ec}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ac6992622b24a3979f07a4cfb5364c6ec}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!FontAscent@{FontAscent}}
+\index{FontAscent@{FontAscent}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{FontAscent}{FontAscent}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Font\+Ascent\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the font\textquotesingle{}s ascent 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_aa9af1875a5743d68a1192c4f52b5f875}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_aa9af1875a5743d68a1192c4f52b5f875}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!FontDescent@{FontDescent}}
+\index{FontDescent@{FontDescent}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{FontDescent}{FontDescent}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Font\+Descent\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the font\textquotesingle{}s descent 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a5086dcbd82814b7fdb12817166410569}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a5086dcbd82814b7fdb12817166410569}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!FontFamily@{FontFamily}}
+\index{FontFamily@{FontFamily}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{FontFamily}{FontFamily}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Font\+Family\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_aee5b03d91de5a5371921c6b3ed2797a6}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_aee5b03d91de5a5371921c6b3ed2797a6}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!FontLineSpacing@{FontLineSpacing}}
+\index{FontLineSpacing@{FontLineSpacing}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{FontLineSpacing}{FontLineSpacing}}
+{\footnotesize\ttfamily float System.\+Drawing.\+Html.\+Css\+Box.\+Font\+Line\+Spacing\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the font\textquotesingle{}s line spacing 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a72798743c733708b648f1fac120bd7d4}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a72798743c733708b648f1fac120bd7d4}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!FontSize@{FontSize}}
+\index{FontSize@{FontSize}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{FontSize}{FontSize}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Font\+Size\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ac6c1326a826b46f369931cd85ea9dafa}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ac6c1326a826b46f369931cd85ea9dafa}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!FontStyle@{FontStyle}}
+\index{FontStyle@{FontStyle}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{FontStyle}{FontStyle}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Font\+Style\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ae0b1c1fa7e19289b368b1b3457c7fba9}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ae0b1c1fa7e19289b368b1b3457c7fba9}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!FontVariant@{FontVariant}}
+\index{FontVariant@{FontVariant}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{FontVariant}{FontVariant}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Font\+Variant\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a8e5bb180aa6e038f4810ccbcd530d42b}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a8e5bb180aa6e038f4810ccbcd530d42b}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!FontWeight@{FontWeight}}
+\index{FontWeight@{FontWeight}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{FontWeight}{FontWeight}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Font\+Weight\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a3ce460fd7948d5912da7f1fbb72832c5}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a3ce460fd7948d5912da7f1fbb72832c5}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Height@{Height}}
+\index{Height@{Height}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Height}{Height}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_aca453e763dce0b0e7f0f1d74a83d2899}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_aca453e763dce0b0e7f0f1d74a83d2899}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!HtmlTag@{HtmlTag}}
+\index{HtmlTag@{HtmlTag}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{HtmlTag}{HtmlTag}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_html_tag}{Html\+Tag}} System.\+Drawing.\+Html.\+Css\+Box.\+Html\+Tag\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the H\+T\+M\+L\+Tag that hosts this box 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a165312840448a3197e41d75cd6bdbdeb}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a165312840448a3197e41d75cd6bdbdeb}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!IsSpaceOrEmpty@{IsSpaceOrEmpty}}
+\index{IsSpaceOrEmpty@{IsSpaceOrEmpty}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{IsSpaceOrEmpty}{IsSpaceOrEmpty}}
+{\footnotesize\ttfamily bool System.\+Drawing.\+Html.\+Css\+Box.\+Is\+Space\+Or\+Empty\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Tells if the box is empty or contains just blank spaces 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a01bd51ed0acafb033b7d186ea8322aba}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a01bd51ed0acafb033b7d186ea8322aba}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Left@{Left}}
+\index{Left@{Left}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Left}{Left}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Left\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_aa380e28e31d14c9cbc50ff084ff3ef8d}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_aa380e28e31d14c9cbc50ff084ff3ef8d}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!LineHeight@{LineHeight}}
+\index{LineHeight@{LineHeight}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{LineHeight}{LineHeight}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Line\+Height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_abc846814e07f507527473623102e7d95}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_abc846814e07f507527473623102e7d95}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ListItemBox@{ListItemBox}}
+\index{ListItemBox@{ListItemBox}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ListItemBox}{ListItemBox}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box}{Css\+Box}} System.\+Drawing.\+Html.\+Css\+Box.\+List\+Item\+Box\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the • box 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_aa6fff3c7306f18ce917fbeba8600668d}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_aa6fff3c7306f18ce917fbeba8600668d}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ListStyle@{ListStyle}}
+\index{ListStyle@{ListStyle}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ListStyle}{ListStyle}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+List\+Style\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_af9350d84860a4e6720f75a3a65441b06}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_af9350d84860a4e6720f75a3a65441b06}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ListStyleImage@{ListStyleImage}}
+\index{ListStyleImage@{ListStyleImage}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ListStyleImage}{ListStyleImage}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+List\+Style\+Image\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a65d25da249abe1559c5018b856166c64}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a65d25da249abe1559c5018b856166c64}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ListStylePosition@{ListStylePosition}}
+\index{ListStylePosition@{ListStylePosition}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ListStylePosition}{ListStylePosition}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+List\+Style\+Position\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_aa23a013ff23f4171deed9a496eef1f53}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_aa23a013ff23f4171deed9a496eef1f53}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ListStyleType@{ListStyleType}}
+\index{ListStyleType@{ListStyleType}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ListStyleType}{ListStyleType}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+List\+Style\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a9758963e834097e4f32a5d1f7205bb5e}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a9758963e834097e4f32a5d1f7205bb5e}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Location@{Location}}
+\index{Location@{Location}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Location}{Location}}
+{\footnotesize\ttfamily PointF System.\+Drawing.\+Html.\+Css\+Box.\+Location\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the location of the box 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a266b7f88d1917060db5459c496fe00d3}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a266b7f88d1917060db5459c496fe00d3}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Margin@{Margin}}
+\index{Margin@{Margin}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Margin}{Margin}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Margin\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ad665950fb810f942ed4ee860486743d2}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ad665950fb810f942ed4ee860486743d2}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!MarginBottom@{MarginBottom}}
+\index{MarginBottom@{MarginBottom}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{MarginBottom}{MarginBottom}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Margin\+Bottom\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ad5e2a203d33f4e9d85a1bb6325c04806}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ad5e2a203d33f4e9d85a1bb6325c04806}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!MarginLeft@{MarginLeft}}
+\index{MarginLeft@{MarginLeft}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{MarginLeft}{MarginLeft}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Margin\+Left\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_adeaf5bf149bf27bfb3d5f2bb21d28e13}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_adeaf5bf149bf27bfb3d5f2bb21d28e13}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!MarginRight@{MarginRight}}
+\index{MarginRight@{MarginRight}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{MarginRight}{MarginRight}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Margin\+Right\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a8faca1270607f15abac5e85a84bee206}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a8faca1270607f15abac5e85a84bee206}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!MarginTop@{MarginTop}}
+\index{MarginTop@{MarginTop}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{MarginTop}{MarginTop}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Margin\+Top\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ac028950803c6e142dcd4c7fca1604aa7}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ac028950803c6e142dcd4c7fca1604aa7}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Padding@{Padding}}
+\index{Padding@{Padding}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Padding}{Padding}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Padding\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a15b47b08ab8694115c703196441263db}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a15b47b08ab8694115c703196441263db}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!PaddingBottom@{PaddingBottom}}
+\index{PaddingBottom@{PaddingBottom}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{PaddingBottom}{PaddingBottom}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Padding\+Bottom\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ac85f02e5675126cb0b2be78f935c0855}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ac85f02e5675126cb0b2be78f935c0855}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!PaddingLeft@{PaddingLeft}}
+\index{PaddingLeft@{PaddingLeft}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{PaddingLeft}{PaddingLeft}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Padding\+Left\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a35adfaab8394485865c054850f67ff1b}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a35adfaab8394485865c054850f67ff1b}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!PaddingRight@{PaddingRight}}
+\index{PaddingRight@{PaddingRight}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{PaddingRight}{PaddingRight}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Padding\+Right\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a2c777dfe47b68d1dc6a8c2af2e3985ec}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a2c777dfe47b68d1dc6a8c2af2e3985ec}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!PaddingTop@{PaddingTop}}
+\index{PaddingTop@{PaddingTop}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{PaddingTop}{PaddingTop}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Padding\+Top\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ac56deca13146cfcfddfb490d311fcf9b}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ac56deca13146cfcfddfb490d311fcf9b}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!ParentBox@{ParentBox}}
+\index{ParentBox@{ParentBox}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{ParentBox}{ParentBox}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_1_1_drawing_1_1_html_1_1_css_box}{Css\+Box}} System.\+Drawing.\+Html.\+Css\+Box.\+Parent\+Box\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the parent box of this box 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a0a06561976a0dc9093845baabd8803c7}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a0a06561976a0dc9093845baabd8803c7}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Position@{Position}}
+\index{Position@{Position}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Position\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a6617d755c556b07f9196cec600f40613}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a6617d755c556b07f9196cec600f40613}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Right@{Right}}
+\index{Right@{Right}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Right}{Right}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Right\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ae1a9a87ace72d9c209759c0dc085b713}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ae1a9a87ace72d9c209759c0dc085b713}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Size@{Size}}
+\index{Size@{Size}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Size}{Size}}
+{\footnotesize\ttfamily SizeF System.\+Drawing.\+Html.\+Css\+Box.\+Size\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the size of the box 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a3c7b00f7c7a52c28db1a21771deed87f}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a3c7b00f7c7a52c28db1a21771deed87f}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Text@{Text}}
+\index{Text@{Text}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Text}{Text}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Text\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the inner text of the box 
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a9a6adb9212198b17d19022421c3649a7}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a9a6adb9212198b17d19022421c3649a7}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!TextAlign@{TextAlign}}
+\index{TextAlign@{TextAlign}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{TextAlign}{TextAlign}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Text\+Align\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a5d650e6b6420b3dcb5e2898cccc8144b}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a5d650e6b6420b3dcb5e2898cccc8144b}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!TextDecoration@{TextDecoration}}
+\index{TextDecoration@{TextDecoration}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{TextDecoration}{TextDecoration}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Text\+Decoration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a4ef565904d260fb877f0839e7db1945b}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a4ef565904d260fb877f0839e7db1945b}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!TextIndent@{TextIndent}}
+\index{TextIndent@{TextIndent}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{TextIndent}{TextIndent}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Text\+Indent\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_ab844606edba335598bec6f24a1c76773}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_ab844606edba335598bec6f24a1c76773}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Top@{Top}}
+\index{Top@{Top}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Top}{Top}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Top\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a05eb57a4d06fda22304a4d5b0a6e5420}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a05eb57a4d06fda22304a4d5b0a6e5420}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!VerticalAlign@{VerticalAlign}}
+\index{VerticalAlign@{VerticalAlign}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{VerticalAlign}{VerticalAlign}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Vertical\+Align\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_a5fced435f753db5027b0c51c6bd436e5}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_a5fced435f753db5027b0c51c6bd436e5}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!WhiteSpace@{WhiteSpace}}
+\index{WhiteSpace@{WhiteSpace}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{WhiteSpace}{WhiteSpace}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+White\+Space\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_af58fbadb6dc36074378054824ef8f937}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_af58fbadb6dc36074378054824ef8f937}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!Width@{Width}}
+\index{Width@{Width}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{Width}{Width}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Width\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_system_1_1_drawing_1_1_html_1_1_css_box_acdbe600bc9fb9528814854dea7c61b8e}\label{class_system_1_1_drawing_1_1_html_1_1_css_box_acdbe600bc9fb9528814854dea7c61b8e}} 
+\index{System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}!WordSpacing@{WordSpacing}}
+\index{WordSpacing@{WordSpacing}!System.Drawing.Html.CssBox@{System.Drawing.Html.CssBox}}
+\doxysubsubsection{\texorpdfstring{WordSpacing}{WordSpacing}}
+{\footnotesize\ttfamily string System.\+Drawing.\+Html.\+Css\+Box.\+Word\+Spacing\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Win\+Forms/\+Helpers/\+Html\+Helper/\mbox{\hyperlink{_css_box_8cs}{Css\+Box.\+cs}}\end{DoxyCompactItemize}

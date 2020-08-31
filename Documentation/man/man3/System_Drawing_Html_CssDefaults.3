@@ -1,0 +1,138 @@
+.TH "System.Drawing.Html.CssDefaults" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+System.Drawing.Html.CssDefaults
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const string \fBDefaultStyleSheet\fP"
+.br
+.RI "CSS Specification's Default Style Sheet for HTML 4 "
+.ti -1c
+.RI "const string \fBErrorOnImageIcon\fP"
+.br
+.RI "\fBHtml\fP Fragment used to draw the icon that shows an error on an IMG HTML element "
+.ti -1c
+.RI "const string \fBErrorOnObjectIcon\fP"
+.br
+.RI "\fBHtml\fP Fragment used to draw the icon that shows an error on an OBJECT HTML element "
+.ti -1c
+.RI "static float \fBFontSize\fP = 12f"
+.br
+.RI "Default font size in points\&. Change this value to modify the default font size\&. "
+.ti -1c
+.RI "static string \fBFontSerif\fP = FontFamily\&.GenericSerif\&.Name"
+.br
+.RI "Default font used for the generic 'serif' family "
+.ti -1c
+.RI "static string \fBFontSansSerif\fP = FontFamily\&.GenericSansSerif\&.Name"
+.br
+.RI "Default font used for the generic 'sans-serif' family "
+.ti -1c
+.RI "static string \fBFontCursive\fP = 'Monotype Corsiva'"
+.br
+.RI "Default font used for the generic 'cursive' family "
+.ti -1c
+.RI "static string \fBFontFantasy\fP = 'Comic Sans MS'"
+.br
+.RI "Default font used for the generic 'fantasy' family "
+.ti -1c
+.RI "static string \fBFontMonospace\fP = FontFamily\&.GenericMonospace\&.Name"
+.br
+.RI "Default font used for the generic 'monospace' family "
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "const string System\&.Drawing\&.Html\&.CssDefaults\&.DefaultStyleSheet\fC [static]\fP"
+
+.PP
+CSS Specification's Default Style Sheet for HTML 4 http://www.w3.org/TR/CSS21/sample.html 
+.SS "const string System\&.Drawing\&.Html\&.CssDefaults\&.ErrorOnImageIcon\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= @"
+        <style>
+          table { 
+
+               border-bottom:1px solid #bbb;
+               border-right:1px solid #bbb;
+               border-spacing:0;
+          }
+          td { 
+               border:1px solid #555;
+               font:bold 9pt Arial;
+               padding:3px;
+               color:red;
+               background-color:#fbfbfb;
+           }
+        </style>
+        <table>
+        <tr>
+        <td>X</td>
+        </tr>
+        </table>"
+.fi
+.PP
+\fBHtml\fP Fragment used to draw the icon that shows an error on an IMG HTML element 
+.SS "const string System\&.Drawing\&.Html\&.CssDefaults\&.ErrorOnObjectIcon\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= @"
+        <style>
+          table { 
+
+               border-bottom:1px solid #bbb;
+               border-right:1px solid #bbb;
+               border-spacing:0;
+          }
+          td { 
+               border:1px solid #555;
+               font:bold 7pt Arial;
+               padding:3px;
+               color:red;
+               background-color:#fbfbfb;
+           }
+        </style>
+        <table>
+        <tr>
+        <td>X</td>
+        </tr>
+        </table>"
+.fi
+.PP
+\fBHtml\fP Fragment used to draw the icon that shows an error on an OBJECT HTML element 
+.SS "string System\&.Drawing\&.Html\&.CssDefaults\&.FontCursive = 'Monotype Corsiva'\fC [static]\fP"
+
+.PP
+Default font used for the generic 'cursive' family 
+.SS "string System\&.Drawing\&.Html\&.CssDefaults\&.FontFantasy = 'Comic Sans MS'\fC [static]\fP"
+
+.PP
+Default font used for the generic 'fantasy' family 
+.SS "string System\&.Drawing\&.Html\&.CssDefaults\&.FontMonospace = FontFamily\&.GenericMonospace\&.Name\fC [static]\fP"
+
+.PP
+Default font used for the generic 'monospace' family 
+.SS "string System\&.Drawing\&.Html\&.CssDefaults\&.FontSansSerif = FontFamily\&.GenericSansSerif\&.Name\fC [static]\fP"
+
+.PP
+Default font used for the generic 'sans-serif' family 
+.SS "string System\&.Drawing\&.Html\&.CssDefaults\&.FontSerif = FontFamily\&.GenericSerif\&.Name\fC [static]\fP"
+
+.PP
+Default font used for the generic 'serif' family 
+.SS "float System\&.Drawing\&.Html\&.CssDefaults\&.FontSize = 12f\fC [static]\fP"
+
+.PP
+Default font size in points\&. Change this value to modify the default font size\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

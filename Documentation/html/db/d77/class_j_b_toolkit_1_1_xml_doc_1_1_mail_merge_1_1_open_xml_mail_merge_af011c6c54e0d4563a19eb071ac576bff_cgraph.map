@@ -1,0 +1,5 @@
+<map id="JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge.MergeDocumentAsBase64String" name="JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge.MergeDocumentAsBase64String">
+<area shape="rect" id="node1" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a base64..." alt="" coords="5,5,255,61"/>
+<area shape="rect" id="node2" href="$db/d77/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge.html#aac77fc50a2d3264bd5c24f831df97d49" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory..." alt="" coords="303,5,549,61"/>
+<area shape="rect" id="node3" href="$db/d77/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge.html#aaa0a320448c071dd7476cef113351bf5" title="Basically performs a mail merge by replacing text defined by a dictionary of keys (in the format «key..." alt="" coords="597,13,831,54"/>
+</map>

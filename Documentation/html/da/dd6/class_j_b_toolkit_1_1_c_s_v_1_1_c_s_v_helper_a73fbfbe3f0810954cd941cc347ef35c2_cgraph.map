@@ -1,0 +1,4 @@
+<map id="JBToolkit.CSV.CSVHelper.GetCSVHeaderNames" name="JBToolkit.CSV.CSVHelper.GetCSVHeaderNames">
+<area shape="rect" id="node1" title="Returns a list of CSV headers" alt="" coords="5,5,184,47"/>
+<area shape="rect" id="node2" href="$da/dd6/class_j_b_toolkit_1_1_c_s_v_1_1_c_s_v_helper.html#a6eb0dd70ad5936faf36343b5864ab48b" title="Tries to auto detect CSV delimiter (tends to do a very good job of it)." alt="" coords="232,5,411,47"/>
+</map>

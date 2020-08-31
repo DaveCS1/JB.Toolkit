@@ -1,0 +1,4 @@
+<map id="JBToolkit.Zip.ZipCompression.GetZipFlatFilesByteArray" name="JBToolkit.Zip.ZipCompression.GetZipFlatFilesByteArray">
+<area shape="rect" id="node1" title="Returns a zip file containing a flat list of files as a byte array. The input being a list of file pa..." alt="" coords="5,5,203,47"/>
+<area shape="rect" id="node2" href="$d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression.html#a5a52095d4904215ae2cd90b89fc2142a" title="Returns a zip file containing a flat list of files as a Memory Stream. The input being multiple param..." alt="" coords="251,5,448,47"/>
+</map>

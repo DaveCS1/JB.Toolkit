@@ -1,0 +1,4 @@
+<map id="JBToolkit.Web.AccessToken.GetShortLivedAccessToken" name="JBToolkit.Web.AccessToken.GetShortLivedAccessToken">
+<area shape="rect" id="node1" title="Generates a short live (default 30 seconds) access token (GUID) to be used when authenticating extern..." alt="" coords="5,5,199,47"/>
+<area shape="rect" id="node2" href="$d2/d3e/class_j_b_toolkit_1_1_web_1_1_i_p_helper.html#af3c85084cbfbc2a9238c1dbf6bca421f" title="Get the IP address of the requestor" alt="" coords="247,5,431,47"/>
+</map>

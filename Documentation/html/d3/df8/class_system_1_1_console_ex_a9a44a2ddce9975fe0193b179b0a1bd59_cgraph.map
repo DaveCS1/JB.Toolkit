@@ -1,0 +1,7 @@
+<map id="System.ConsoleEx.SetupBetterConsole" name="System.ConsoleEx.SetupBetterConsole">
+<area shape="rect" id="node1" title="Set the background colour to a nice dark grey, centre the console and disable the cursor" alt="" coords="5,57,212,98"/>
+<area shape="rect" id="node2" href="$d3/df8/class_system_1_1_console_ex.html#a5d9a44522bc609de3eaab2ac86a67b94" title="Centres the console in the the middle of the screen. You&#39;ll have to add a reference to System...." alt="" coords="260,5,483,32"/>
+<area shape="rect" id="node3" href="$d3/df8/class_system_1_1_console_ex.html#af07c5ff318a94bd5b036a7c72785bee9" title=" " alt="" coords="281,57,462,98"/>
+<area shape="rect" id="node4" href="$dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper.html#aa75700fa41a407f9f4def9e0a807c9b3" title="Color hex to System.Drawing.Color" alt="" coords="270,122,473,163"/>
+<area shape="rect" id="node5" href="$dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper.html#a3b28f43eee0f751e02278bcb4ad25bb6" title="Extract the hex color digits from a string" alt="" coords="531,122,733,163"/>
+</map>

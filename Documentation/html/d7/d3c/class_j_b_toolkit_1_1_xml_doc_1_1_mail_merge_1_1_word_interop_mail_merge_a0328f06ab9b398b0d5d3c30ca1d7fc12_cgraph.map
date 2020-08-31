@@ -1,0 +1,5 @@
+<map id="JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge.RemovedUnmappedMergeFields" name="JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge.RemovedUnmappedMergeFields">
+<area shape="rect" id="node1" title="Remove any unmerged fields remaining in the document" alt="" coords="5,35,276,91"/>
+<area shape="rect" id="node2" href="$d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a5fe84d3a2525369af83ec4310873d132" title="Is a particular field Word mail merge field" alt="" coords="324,5,563,47"/>
+<area shape="rect" id="node3" href="$d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#acaa008fb8d43b87c3bd60ac2e18ede28" title="If a merge field is in the Word document format &#39;MERGEFIELD SomeMergeField&#39; then just return the fiel..." alt="" coords="334,71,553,127"/>
+</map>

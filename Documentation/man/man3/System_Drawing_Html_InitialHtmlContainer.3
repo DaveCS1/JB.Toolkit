@@ -1,0 +1,123 @@
+.TH "System.Drawing.Html.InitialHtmlContainer" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+System.Drawing.Html.InitialHtmlContainer
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBSystem\&.Drawing\&.Html\&.CssBox\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInitialHtmlContainer\fP ()"
+.br
+.ti -1c
+.RI "\fBInitialHtmlContainer\fP (string documentSource)"
+.br
+.ti -1c
+.RI "void \fBFeedStyleSheet\fP (string stylesheet)"
+.br
+.RI "Feeds the source of the stylesheet "
+.ti -1c
+.RI "override void \fBMeasureBounds\fP (Graphics g)"
+.br
+.RI "Measures the bounds of box and children, recursively\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "Dictionary< string, Dictionary< string, \fBCssBlock\fP > > \fBMediaBlocks\fP\fC [get]\fP"
+.br
+.RI "Gets the blocks of style defined on this structure, separated by media type\&. General blocks are defined under the 'all' Key\&. "
+.ti -1c
+.RI "string \fBDocumentSource\fP\fC [get]\fP"
+.br
+.RI "Gets the document's source "
+.ti -1c
+.RI "bool \fBAvoidGeometryAntialias\fP\fC [get, set]\fP"
+.br
+.RI "Gets or sets a value indicating if antialiasing should be avoided for geometry like backgrounds and borders "
+.ti -1c
+.RI "bool \fBAvoidTextAntialias\fP\fC [get, set]\fP"
+.br
+.RI "Gets or sets a value indicating if antialiasing should be avoided for text rendering "
+.ti -1c
+.RI "SizeF \fBMaximumSize\fP\fC [get, set]\fP"
+.br
+.RI "Gets or sets the maximum size of the container "
+.ti -1c
+.RI "PointF \fBScrollOffset\fP\fC [get, set]\fP"
+.br
+.RI "Gets or sets the scroll offset of the document "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "System\&.Drawing\&.Html\&.InitialHtmlContainer\&.InitialHtmlContainer ()"
+
+.SS "System\&.Drawing\&.Html\&.InitialHtmlContainer\&.InitialHtmlContainer (string documentSource)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void System\&.Drawing\&.Html\&.InitialHtmlContainer\&.FeedStyleSheet (string stylesheet)"
+
+.PP
+Feeds the source of the stylesheet 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstylesheet\fP 
+.RE
+.PP
+
+.SS "override void System\&.Drawing\&.Html\&.InitialHtmlContainer\&.MeasureBounds (Graphics g)\fC [virtual]\fP"
+
+.PP
+Measures the bounds of box and children, recursively\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP Device context to draw
+.RE
+.PP
+
+.PP
+Reimplemented from \fBSystem\&.Drawing\&.Html\&.CssBox\fP\&.
+.SH "Property Documentation"
+.PP 
+.SS "bool System\&.Drawing\&.Html\&.InitialHtmlContainer\&.AvoidGeometryAntialias\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Gets or sets a value indicating if antialiasing should be avoided for geometry like backgrounds and borders 
+.SS "bool System\&.Drawing\&.Html\&.InitialHtmlContainer\&.AvoidTextAntialias\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Gets or sets a value indicating if antialiasing should be avoided for text rendering 
+.SS "string System\&.Drawing\&.Html\&.InitialHtmlContainer\&.DocumentSource\fC [get]\fP"
+
+.PP
+Gets the document's source 
+.SS "SizeF System\&.Drawing\&.Html\&.InitialHtmlContainer\&.MaximumSize\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Gets or sets the maximum size of the container 
+.SS "Dictionary<string, Dictionary<string, \fBCssBlock\fP> > System\&.Drawing\&.Html\&.InitialHtmlContainer\&.MediaBlocks\fC [get]\fP"
+
+.PP
+Gets the blocks of style defined on this structure, separated by media type\&. General blocks are defined under the 'all' Key\&. Normal use of this dictionary will be something like: MediaBlocks['print']['strong']\&.Properties
+.IP "\(bu" 2
+Or - MediaBlocks['all']['strong']\&.Properties 
+.PP
+
+.SS "PointF System\&.Drawing\&.Html\&.InitialHtmlContainer\&.ScrollOffset\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Gets or sets the scroll offset of the document 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

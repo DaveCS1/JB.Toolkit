@@ -1,0 +1,7 @@
+<map id="System.ConsoleEx.WriteAsciiArt" name="System.ConsoleEx.WriteAsciiArt">
+<area shape="rect" id="node1" title="Produce ASCII art text (default font)." alt="" coords="5,46,220,73"/>
+<area shape="rect" id="node2" href="$dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper.html#aa75700fa41a407f9f4def9e0a807c9b3" title="Color hex to System.Drawing.Color" alt="" coords="274,8,477,49"/>
+<area shape="rect" id="node4" href="$d3/df8/class_system_1_1_console_ex.html#a3eb13e89c0e819b122d20d5ca8a84ccd" title="Produce ASCII art text. Use a range of FIGlet fonts easily set via enum list." alt="" coords="268,75,483,102"/>
+<area shape="rect" id="node3" href="$dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper.html#a3b28f43eee0f751e02278bcb4ad25bb6" title="Extract the hex color digits from a string" alt="" coords="531,5,733,47"/>
+<area shape="rect" id="node5" href="$dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper.html#a14b3e3466a9bc0debbdaeb49e0180d2e" title="Console color to System.Drawing.Color" alt="" coords="531,71,733,112"/>
+</map>

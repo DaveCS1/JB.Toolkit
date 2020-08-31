@@ -1,0 +1,27 @@
+.TH "JBToolkit.Logger" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Logger
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBDBLogger\fP"
+.br
+.RI "Adds log entries (error or information) to USR_AG_Shared_Log\&. Defaults to standing file logger (current working directory) on DB connection failure (fallback) "
+.ti -1c
+.RI "class \fBFileLogger\fP"
+.br
+.RI "Logs errors to files stored in the 'Content' directory - used in the event we're unable to log to the database "
+.ti -1c
+.RI "class \fBWindowsEventLogger\fP"
+.br
+.RI "Log error to \fBWindows\fP' Event Log "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

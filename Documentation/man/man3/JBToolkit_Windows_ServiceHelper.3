@@ -1,0 +1,159 @@
+.TH "JBToolkit.Windows.ServiceHelper" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Windows.ServiceHelper \- Contain method for remote reliably manipulating \fBWindows\fP Services\&. You will likely need to use impersonatation when calling i\&.e:  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static string \fBGetServiceSatus\fP (string serviceName, string serverName, ref string errMsg)"
+.br
+.RI "Gets remote service status as a string\&. You will likely need to use impersonatation when calling\&. "
+.ti -1c
+.RI "static bool \fBStopService\fP (string serviceName, string serverName, ref string errMsg)"
+.br
+.RI "Stop a remote \fBWindows\fP service\&. You will likely need to use impersonatation when calling\&. "
+.ti -1c
+.RI "static bool \fBStartService\fP (string serviceName, string serverName, ref string errMsg)"
+.br
+.RI "Start a remote \fBWindows\fP service\&. You will likely need to use impersonatation when calling\&. "
+.ti -1c
+.RI "static bool \fBRestartService\fP (string serviceName, string serverName, ref string errMsg, string processNameOptional=null, string authUsername=null, string authPassword=null, string domain=null)"
+.br
+.RI "Restarts a service using multiple attemps if failing\&. You will likely need to use impersonatation when calling\&. If you wish agressivly restart the service (i\&.e\&. kill the actual process if failing), you will need to pass the impersonator object\&. "
+.ti -1c
+.RI "static bool \fBAgressiveRestartService\fP (string serviceName, string processName, string serverName, string authUsername, string authPassword, ref string errMsg, string domain)"
+.br
+.RI "Performs an aggressive restart of a service (i\&.e\&. kill the actual process if failing)\&. You will likely need to use impersonatation when calling\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contain method for remote reliably manipulating \fBWindows\fP Services\&. You will likely need to use impersonatation when calling i\&.e: 
+
+
+.PP
+.nf
+using (new Impersonator(ServerType.DOMAIN, "username", "password")) 
+
+.fi
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static bool JBToolkit\&.Windows\&.ServiceHelper\&.AgressiveRestartService (string serviceName, string processName, string serverName, string authUsername, string authPassword, ref string errMsg, string domain)\fC [static]\fP"
+
+.PP
+Performs an aggressive restart of a service (i\&.e\&. kill the actual process if failing)\&. You will likely need to use impersonatation when calling\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIserviceName\fP Name of the service to restart
+.br
+\fIprocessName\fP Name of the actual process of the service
+.br
+\fIserverName\fP Server host name
+.br
+\fIimpersonator\fP Impersonator object
+.br
+\fIerrMsg\fP Reference error message string
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if successful, false otherwise
+.RE
+.PP
+
+.SS "static string JBToolkit\&.Windows\&.ServiceHelper\&.GetServiceSatus (string serviceName, string serverName, ref string errMsg)\fC [static]\fP"
+
+.PP
+Gets remote service status as a string\&. You will likely need to use impersonatation when calling\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIserviceName\fP Name of \fBWindows\fP service
+.br
+\fIserverName\fP Host machine to query
+.br
+\fIerrMsg\fP Output error message (if any)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String status
+.RE
+.PP
+
+.SS "static bool JBToolkit\&.Windows\&.ServiceHelper\&.RestartService (string serviceName, string serverName, ref string errMsg, string processNameOptional = \fCnull\fP, string authUsername = \fCnull\fP, string authPassword = \fCnull\fP, string domain = \fCnull\fP)\fC [static]\fP"
+
+.PP
+Restarts a service using multiple attemps if failing\&. You will likely need to use impersonatation when calling\&. If you wish agressivly restart the service (i\&.e\&. kill the actual process if failing), you will need to pass the impersonator object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIserviceName\fP Name of the service to restart
+.br
+\fIserverName\fP Server host name
+.br
+\fIerrMsg\fP Reference an error message string
+.br
+\fIprocessNameOptional\fP Optional process name
+.br
+\fIimpersonatorOptional\fP Optional impersonator object
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if successful, false otherwise
+.RE
+.PP
+
+.SS "static bool JBToolkit\&.Windows\&.ServiceHelper\&.StartService (string serviceName, string serverName, ref string errMsg)\fC [static]\fP"
+
+.PP
+Start a remote \fBWindows\fP service\&. You will likely need to use impersonatation when calling\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIserviceName\fP Name of \fBWindows\fP service
+.br
+\fIserverName\fP Host machine to query
+.br
+\fIerrMsg\fP Output error message (if any)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if successful, false otherwise
+.RE
+.PP
+
+.SS "static bool JBToolkit\&.Windows\&.ServiceHelper\&.StopService (string serviceName, string serverName, ref string errMsg)\fC [static]\fP"
+
+.PP
+Stop a remote \fBWindows\fP service\&. You will likely need to use impersonatation when calling\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIserviceName\fP Name of \fBWindows\fP service
+.br
+\fIserverName\fP Host machine to query
+.br
+\fIerrMsg\fP Output error message (if any)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if successful, false otherwise
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

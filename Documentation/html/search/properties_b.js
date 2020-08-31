@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['manager_4108',['Manager',['../d7/df8/class_j_b_toolkit_1_1_domain_1_1_a_d_user.html#a44ab9dc728b0ddf496773cb8d8788625',1,'JBToolkit::Domain::ADUser']]],
+  ['margin_4109',['Margin',['../d5/db0/class_system_1_1_drawing_1_1_html_1_1_css_box.html#a266b7f88d1917060db5459c496fe00d3',1,'System::Drawing::Html::CssBox']]],
+  ['marginbottom_4110',['MarginBottom',['../d5/db0/class_system_1_1_drawing_1_1_html_1_1_css_box.html#ad665950fb810f942ed4ee860486743d2',1,'System::Drawing::Html::CssBox']]],
+  ['marginleft_4111',['MarginLeft',['../d5/db0/class_system_1_1_drawing_1_1_html_1_1_css_box.html#ad5e2a203d33f4e9d85a1bb6325c04806',1,'System::Drawing::Html::CssBox']]],
+  ['marginright_4112',['MarginRight',['../d5/db0/class_system_1_1_drawing_1_1_html_1_1_css_box.html#adeaf5bf149bf27bfb3d5f2bb21d28e13',1,'System::Drawing::Html::CssBox']]],
+  ['margintop_4113',['MarginTop',['../d5/db0/class_system_1_1_drawing_1_1_html_1_1_css_box.html#a8faca1270607f15abac5e85a84bee206',1,'System::Drawing::Html::CssBox']]],
+  ['match_4114',['Match',['../dd/d8c/class_j_b_toolkit_1_1_fuzzy_logic_1_1_algorithms_1_1_quick_fuzzy_match.html#af87749b3f01069aab27103b94de2e313',1,'JBToolkit::FuzzyLogic::Algorithms::QuickFuzzyMatch']]],
+  ['matchtext_4115',['MatchText',['../d6/d3b/class_j_b_toolkit_1_1_fuzzy_logic_1_1_algorithms_1_1_best_fuzzy_match.html#ad121c6cdb036c1a516e538f8cfdefea5',1,'JBToolkit.FuzzyLogic.Algorithms.BestFuzzyMatch.MatchText()'],['../df/d4e/class_j_b_toolkit_1_1_fuzzy_logic_1_1_algorithms_1_1_fuzzy_match.html#af333ba7c065f5c06a0b0a2d9ce034cde',1,'JBToolkit.FuzzyLogic.Algorithms.FuzzyMatch.MatchText()']]],
+  ['maxbytespersecond_4116',['MaxBytesPerSecond',['../d0/df5/class_j_b_toolkit_1_1_streams_1_1_throttled_stream.html#a6dbfa8e6a08b97012812e0819f0e0a12',1,'JBToolkit::Streams::ThrottledStream']]],
+  ['maximumsize_4117',['MaximumSize',['../d0/d18/class_system_1_1_drawing_1_1_html_1_1_initial_html_container.html#a0b736602504fa71b6f59d17916170eea',1,'System::Drawing::Html::InitialHtmlContainer']]],
+  ['maxvaluecount_4118',['MaxValueCount',['../d6/de4/class_j_b_toolkit_1_1_windows_1_1_console_helper_1_1_option.html#a823583dd905505b2784c6df875a84961',1,'JBToolkit::Windows::ConsoleHelper::Option']]],
+  ['maxwidth_4119',['MaxWidth',['../d5/d45/class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip.html#a8e37fc9b63371d1eb65b8b71e36729b5',1,'JBToolkit::WinForms::CustomToolTip']]],
+  ['mediablocks_4120',['MediaBlocks',['../d0/d18/class_system_1_1_drawing_1_1_html_1_1_initial_html_container.html#a2bcd7bc79a22f13b5a3c79ff7746153b',1,'System::Drawing::Html::InitialHtmlContainer']]],
+  ['memberships_4121',['Memberships',['../d7/df8/class_j_b_toolkit_1_1_domain_1_1_a_d_user.html#a0ba3b6e231fd02ea2ad0fb2b3130c1d8',1,'JBToolkit::Domain::ADUser']]],
+  ['message_4122',['Message',['../d4/d04/class_j_b_toolkit_1_1_database_1_1_d_b_result.html#accae4ec984f19c7704b628c950c710d6',1,'JBToolkit.Database.DBResult.Message()'],['../dd/d18/class_j_b_toolkit_1_1_logger_1_1_windows_event_logger_1_1_event_logger_result.html#a151a9087087fd2849465c1e58065ccf1',1,'JBToolkit.Logger.WindowsEventLogger.EventLoggerResult.Message()'],['../d3/db5/class_j_b_toolkit_1_1_web_1_1_email_result.html#a9052a906c63907179839f29270acef35',1,'JBToolkit.Web.EmailResult.Message()']]],
+  ['messagelocalizer_4123',['MessageLocalizer',['../d8/d6c/class_j_b_toolkit_1_1_windows_1_1_console_helper_1_1_option_set.html#a17209b448d2f81081c75d74a5a918f98',1,'JBToolkit::Windows::ConsoleHelper::OptionSet']]],
+  ['messagetext_4124',['MessageText',['../d2/def/class_j_b_toolkit_1_1_win_forms_1_1_custom_message_box.html#aceb7506989ac161f830d3b5663e571be',1,'JBToolkit::WinForms::CustomMessageBox']]],
+  ['messagetype_4125',['MessageType',['../d2/def/class_j_b_toolkit_1_1_win_forms_1_1_custom_message_box.html#a7b1cf59906115fd978e21df55f9fe419',1,'JBToolkit::WinForms::CustomMessageBox']]],
+  ['mimetype_4126',['MimeType',['../d8/daf/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image.html#a0be02461af94bad2811ad37f03fe1b6e',1,'JBToolkit::Images::ImageHelper::HtmlImageHelper::DataImage']]],
+  ['mobile_4127',['Mobile',['../d7/df8/class_j_b_toolkit_1_1_domain_1_1_a_d_user.html#a0b5b948adce12d07dbc7072670893121',1,'JBToolkit::Domain::ADUser']]],
+  ['multiplebestmatchesfound_4128',['MultipleBestMatchesFound',['../d6/d87/class_j_b_toolkit_1_1_fuzzy_logic_1_1_algorithms_1_1_best_detailed_fuzzy_match.html#a0c3cb7d6f26d6a59fc5b9246a6ccf3be',1,'JBToolkit::FuzzyLogic::Algorithms::BestDetailedFuzzyMatch']]]
+];

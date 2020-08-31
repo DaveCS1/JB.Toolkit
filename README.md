@@ -2,7 +2,7 @@
 &nbsp;
 [![N|Solid](https://portfolio.jb-net.co.uk/shared/Logo-Only-100px.png)](https://github.com/jamesbrindle/JB.Toolkit)
 
-A collection of useful classes, extensions and tools written in C# to aid in a wide variety of development. With components for ASP Net MVC, Winform and Console applications. Integrations for Google, AD and SQL and pre-written implementations / helpers for a variety of tasks (see below).
+A collection of useful classes, extensions and tools written in C# to aid in a wide variety of development. With components for ASP Net MVC, Winform and Console applications. Integrations for Google, AD and SQL and pre-written implementations / helpers for a variety of tasks... Just Because (see below).
 &nbsp;
 &nbsp;
 

@@ -1,0 +1,67 @@
+\hypertarget{class_j_b_toolkit_1_1_web_1_1_access_log}{}\doxysection{J\+B\+Toolkit.\+Web.\+Access\+Log Class Reference}
+\label{class_j_b_toolkit_1_1_web_1_1_access_log}\index{JBToolkit.Web.AccessLog@{JBToolkit.Web.AccessLog}}
+
+
+Used to store remote access logs into the databse  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Web.\+Access\+Log\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{d7/dec/class_j_b_toolkit_1_1_web_1_1_access_log__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_access_log_ab4dc93a08c1c7ae0688092004535d15a}{Log\+Access}} (string db\+Name, string connection\+String, string ip\+Address, string application\+Name, string end\+Point, bool? access\+Granted, string access\+Denied\+Reason)
+\begin{DoxyCompactList}\small\item\em Insert an access log entry into the database \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Used to store remote access logs into the databse 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_access_log_ab4dc93a08c1c7ae0688092004535d15a}\label{class_j_b_toolkit_1_1_web_1_1_access_log_ab4dc93a08c1c7ae0688092004535d15a}} 
+\index{JBToolkit.Web.AccessLog@{JBToolkit.Web.AccessLog}!LogAccess@{LogAccess}}
+\index{LogAccess@{LogAccess}!JBToolkit.Web.AccessLog@{JBToolkit.Web.AccessLog}}
+\doxysubsubsection{\texorpdfstring{LogAccess()}{LogAccess()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Web.\+Access\+Log.\+Log\+Access (\begin{DoxyParamCaption}\item[{string}]{db\+Name,  }\item[{string}]{connection\+String,  }\item[{string}]{ip\+Address,  }\item[{string}]{application\+Name,  }\item[{string}]{end\+Point,  }\item[{bool?}]{access\+Granted,  }\item[{string}]{access\+Denied\+Reason }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Insert an access log entry into the database 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip\+Address} & Visitor or 3rd party IP\\
+\hline
+{\em application\+Name} & Name of applications requested\\
+\hline
+{\em end\+Point} & A\+PI End point or method requested\\
+\hline
+{\em access\+Granted} & Whether or not the request has granted or denied\\
+\hline
+{\em access\+Denied\+Reason} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the insert succeeded, false otherwise
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d09/class_j_b_toolkit_1_1_web_1_1_access_log_ab4dc93a08c1c7ae0688092004535d15a_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Web/\mbox{\hyperlink{_access_log_8cs}{Access\+Log.\+cs}}\end{DoxyCompactItemize}

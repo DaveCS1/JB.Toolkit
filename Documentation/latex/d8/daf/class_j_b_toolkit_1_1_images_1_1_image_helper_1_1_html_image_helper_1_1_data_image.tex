@@ -1,0 +1,145 @@
+\hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image}{}\doxysection{J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper.\+Data\+Image Class Reference}
+\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image}\index{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}}
+
+
+Parse base 64 to \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image}{Data\+Image}} object consisting of raw byte\mbox{[}\mbox{]} data and the image and mime type.  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper.\+Data\+Image\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{d9/dcc/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_af2afd76538f9edf45d02f50516c4eded}{Data\+Image}} (string image\+Type, byte\mbox{[}$\,$\mbox{]} raw\+Data)
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a184e77693d043fdfb0f2001bf0514147}{Data\+Image}} (string mime\+Type, string image\+Type, byte\mbox{[}$\,$\mbox{]} raw\+Data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a83f3208cae1e10d6091aca9af2ccb701}{Try\+Parse}} (string data\+Uri, out \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image}{Data\+Image}} image)
+\begin{DoxyCompactList}\small\item\em Try to parse a base64 encoded image and return a \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image}{Data\+Image}} object of the raw bytes and mime types \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+System.\+Drawing.\+Image \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_aa9c53f95f07860ed27ba3e3fd52479dc}{Image}} =$>$ System.\+Drawing.\+Image.\+From\+Stream(new Memory\+Stream(\mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_ac53fd693e575f713de15d486a5f51800}{Raw\+Data}}))
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly Regex \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a32c7107ee83815c04df9da53015bce60}{Data\+Uri\+Pattern}} = new Regex(@\char`\"{}$^\wedge$data\textbackslash{}\+:(?$<$mime\+Type$>$image\textbackslash{}/(?$<$image\+Type$>$png$\vert$tiff$\vert$tif$\vert$jpg$\vert$jpeg$\vert$gif$\vert$bmp$\vert$svg));base64,(?$<$data$>$\mbox{[}A-\/Z0-\/9\textbackslash{}+\textbackslash{}/\textbackslash{}=\mbox{]}+)\$\char`\"{}, Regex\+Options.\+Compiled $\vert$ Regex\+Options.\+Explicit\+Capture $\vert$ Regex\+Options.\+Ignore\+Case)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a0be02461af94bad2811ad37f03fe1b6e}{Mime\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_ac53fd693e575f713de15d486a5f51800}{Raw\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a2c14d8783601ae5972f9ad5a3b175230}{Image\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parse base 64 to \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image}{Data\+Image}} object consisting of raw byte\mbox{[}\mbox{]} data and the image and mime type. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_af2afd76538f9edf45d02f50516c4eded}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_af2afd76538f9edf45d02f50516c4eded}} 
+\index{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}!DataImage@{DataImage}}
+\index{DataImage@{DataImage}!JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}}
+\doxysubsubsection{\texorpdfstring{DataImage()}{DataImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper.\+Data\+Image.\+Data\+Image (\begin{DoxyParamCaption}\item[{string}]{image\+Type,  }\item[{byte\mbox{[}$\,$\mbox{]}}]{raw\+Data }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/daf/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_af2afd76538f9edf45d02f50516c4eded_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a184e77693d043fdfb0f2001bf0514147}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a184e77693d043fdfb0f2001bf0514147}} 
+\index{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}!DataImage@{DataImage}}
+\index{DataImage@{DataImage}!JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}}
+\doxysubsubsection{\texorpdfstring{DataImage()}{DataImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper.\+Data\+Image.\+Data\+Image (\begin{DoxyParamCaption}\item[{string}]{mime\+Type,  }\item[{string}]{image\+Type,  }\item[{byte\mbox{[}$\,$\mbox{]}}]{raw\+Data }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a83f3208cae1e10d6091aca9af2ccb701}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a83f3208cae1e10d6091aca9af2ccb701}} 
+\index{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}!TryParse@{TryParse}}
+\index{TryParse@{TryParse}!JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}}
+\doxysubsubsection{\texorpdfstring{TryParse()}{TryParse()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper.\+Data\+Image.\+Try\+Parse (\begin{DoxyParamCaption}\item[{string}]{data\+Uri,  }\item[{out \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image}{Data\+Image}}}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Try to parse a base64 encoded image and return a \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image}{Data\+Image}} object of the raw bytes and mime types 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Uri} & \\
+\hline
+{\em image} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/daf/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a83f3208cae1e10d6091aca9af2ccb701_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a32c7107ee83815c04df9da53015bce60}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a32c7107ee83815c04df9da53015bce60}} 
+\index{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}!DataUriPattern@{DataUriPattern}}
+\index{DataUriPattern@{DataUriPattern}!JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}}
+\doxysubsubsection{\texorpdfstring{DataUriPattern}{DataUriPattern}}
+{\footnotesize\ttfamily readonly Regex J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper.\+Data\+Image.\+Data\+Uri\+Pattern = new Regex(@\char`\"{}$^\wedge$data\textbackslash{}\+:(?$<$mime\+Type$>$image\textbackslash{}/(?$<$image\+Type$>$png$\vert$tiff$\vert$tif$\vert$jpg$\vert$jpeg$\vert$gif$\vert$bmp$\vert$svg));base64,(?$<$data$>$\mbox{[}A-\/Z0-\/9\textbackslash{}+\textbackslash{}/\textbackslash{}=\mbox{]}+)\$\char`\"{}, Regex\+Options.\+Compiled $\vert$ Regex\+Options.\+Explicit\+Capture $\vert$ Regex\+Options.\+Ignore\+Case)\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_aa9c53f95f07860ed27ba3e3fd52479dc}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_aa9c53f95f07860ed27ba3e3fd52479dc}} 
+\index{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}!Image@{Image}}
+\index{Image@{Image}!JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}}
+\doxysubsubsection{\texorpdfstring{Image}{Image}}
+{\footnotesize\ttfamily System.\+Drawing.\+Image J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper.\+Data\+Image.\+Image =$>$ System.\+Drawing.\+Image.\+From\+Stream(new Memory\+Stream(\mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_ac53fd693e575f713de15d486a5f51800}{Raw\+Data}}))}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a2c14d8783601ae5972f9ad5a3b175230}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a2c14d8783601ae5972f9ad5a3b175230}} 
+\index{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}!ImageType@{ImageType}}
+\index{ImageType@{ImageType}!JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}}
+\doxysubsubsection{\texorpdfstring{ImageType}{ImageType}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper.\+Data\+Image.\+Image\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a0be02461af94bad2811ad37f03fe1b6e}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_a0be02461af94bad2811ad37f03fe1b6e}} 
+\index{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}!MimeType@{MimeType}}
+\index{MimeType@{MimeType}!JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}}
+\doxysubsubsection{\texorpdfstring{MimeType}{MimeType}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper.\+Data\+Image.\+Mime\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_ac53fd693e575f713de15d486a5f51800}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image_ac53fd693e575f713de15d486a5f51800}} 
+\index{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}!RawData@{RawData}}
+\index{RawData@{RawData}!JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage@{JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage}}
+\doxysubsubsection{\texorpdfstring{RawData}{RawData}}
+{\footnotesize\ttfamily byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper.\+Data\+Image.\+Raw\+Data\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Imaging/\mbox{\hyperlink{_html_image_helper_8cs}{Html\+Image\+Helper.\+cs}}\end{DoxyCompactItemize}

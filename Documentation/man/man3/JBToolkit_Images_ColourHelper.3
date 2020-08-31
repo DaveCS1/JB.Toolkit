@@ -1,0 +1,102 @@
+.TH "JBToolkit.Images.ColourHelper" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Images.ColourHelper \- Methods to convert RGB to hex, hex to RGB, alter colour brightness, lightness, intensity, also generate random 'nice' colours\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBColourGenerator\fP"
+.br
+.RI "Generates random colours close to primary colours as hex string and doesn't repeat a colour "
+.ti -1c
+.RI "class \fBIntensityValue\fP"
+.br
+.ti -1c
+.RI "class \fBIntensityValueWalker\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static Color \fBHexStringToColor\fP (string hexColor)"
+.br
+.RI "Color hex to System\&.Drawing\&.Color "
+.ti -1c
+.RI "static Color \fBConsoleColorToColor\fP (ConsoleColor consoleColor)"
+.br
+.RI "Console color to System\&.Drawing\&.Color "
+.ti -1c
+.RI "static string \fBExtractHexDigits\fP (string input)"
+.br
+.RI "Extract the hex color digits from a string "
+.ti -1c
+.RI "static Color \fBChangeColorBrightness\fP (Color color, float correctionFactor)"
+.br
+.RI "Change the brightness of a colour "
+.ti -1c
+.RI "static Bitmap \fBAdjustBrightness\fP (System\&.Drawing\&.Image image, float brightness)"
+.br
+.RI "Change the brightness of an image "
+.ti -1c
+.RI "static Bitmap \fBLightenImage\fP (Bitmap bmp)"
+.br
+.RI "Lighten (the gamma) of an image "
+.ti -1c
+.RI "static string \fBRGBColorStringToHex\fP (string colorString)"
+.br
+.RI "Change RGB color string to hex string "
+.ti -1c
+.RI "static string \fBColorToHexString\fP (Color color)"
+.br
+.RI "System\&.Drawing\&.Color to hex string "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Methods to convert RGB to hex, hex to RGB, alter colour brightness, lightness, intensity, also generate random 'nice' colours\&. 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static Bitmap JBToolkit\&.Images\&.ColourHelper\&.AdjustBrightness (System\&.Drawing\&.Image image, float brightness)\fC [static]\fP"
+
+.PP
+Change the brightness of an image 
+.SS "static Color JBToolkit\&.Images\&.ColourHelper\&.ChangeColorBrightness (Color color, float correctionFactor)\fC [static]\fP"
+
+.PP
+Change the brightness of a colour 
+.SS "static string JBToolkit\&.Images\&.ColourHelper\&.ColorToHexString (Color color)\fC [static]\fP"
+
+.PP
+System\&.Drawing\&.Color to hex string 
+.SS "static Color JBToolkit\&.Images\&.ColourHelper\&.ConsoleColorToColor (ConsoleColor consoleColor)\fC [static]\fP"
+
+.PP
+Console color to System\&.Drawing\&.Color 
+.SS "static string JBToolkit\&.Images\&.ColourHelper\&.ExtractHexDigits (string input)\fC [static]\fP"
+
+.PP
+Extract the hex color digits from a string 
+.SS "static Color JBToolkit\&.Images\&.ColourHelper\&.HexStringToColor (string hexColor)\fC [static]\fP"
+
+.PP
+Color hex to System\&.Drawing\&.Color 
+.SS "static Bitmap JBToolkit\&.Images\&.ColourHelper\&.LightenImage (Bitmap bmp)\fC [static]\fP"
+
+.PP
+Lighten (the gamma) of an image 
+.SS "static string JBToolkit\&.Images\&.ColourHelper\&.RGBColorStringToHex (string colorString)\fC [static]\fP"
+
+.PP
+Change RGB color string to hex string 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

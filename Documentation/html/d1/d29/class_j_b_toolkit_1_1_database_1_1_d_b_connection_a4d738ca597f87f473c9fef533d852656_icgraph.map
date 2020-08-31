@@ -1,0 +1,4 @@
+<map id="JBToolkit.Database.DBConnection.GetDataSet" name="JBToolkit.Database.DBConnection.GetDataSet">
+<area shape="rect" id="node1" title="Returns a datatable result from an SQL query string (data set can hold multiple DataTables,..." alt="" coords="279,5,504,47"/>
+<area shape="rect" id="node2" href="$d1/d29/class_j_b_toolkit_1_1_database_1_1_d_b_connection.html#a98e881c330df51302bdfa1cf83c10291" title="Returns a datatable result from an SQL query string (data set can hold multiple DataTables,..." alt="" coords="5,5,231,47"/>
+</map>

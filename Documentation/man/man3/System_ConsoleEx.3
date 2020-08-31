@@ -1,0 +1,891 @@
+.TH "System.ConsoleEx" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+System.ConsoleEx \- Console extension methods, particularly writing out text and lines easily in a particular colour and setting background text\&. Also sses the nuget package ColorFul\&.Console so you can utilise System\&.Drawing\&.Color rather just the standard few ConsoleColor list\&. You can also use hex strings and even convert text to ASCII art\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBFigFontEnum\fP { \fBFigFontEnum\&.ThreeDAscii\fP, \fBFigFontEnum\&.ThreeDDiagonal\fP, \fBFigFontEnum\&.Threepoint\fP, \fBFigFontEnum\&.ThreeX5\fP, \fBFigFontEnum\&.Ticks\fP, \fBFigFontEnum\&.Ticksslant\fP, \fBFigFontEnum\&.Tiles\fP, \fBFigFontEnum\&.Tinkertoy\fP, \fBFigFontEnum\&.Tombstone\fP, \fBFigFontEnum\&.Train\fP, \fBFigFontEnum\&.Trek\fP, \fBFigFontEnum\&.Tsalagi\fP, \fBFigFontEnum\&.Tubular\fP, \fBFigFontEnum\&.Twisted\fP, \fBFigFontEnum\&.Twopoint\fP, \fBFigFontEnum\&.Univers\fP, \fBFigFontEnum\&.Usaflag\fP, \fBFigFontEnum\&.Varsity\fP, \fBFigFontEnum\&.Wavy\fP, \fBFigFontEnum\&.Weird\fP, \fBFigFontEnum\&.Wetletter\fP, \fBFigFontEnum\&.Whimsy\fP, \fBFigFontEnum\&.Wow\fP, \fBFigFontEnum\&.Acrobatic\fP, \fBFigFontEnum\&.Alligator\fP, \fBFigFontEnum\&.Alligator2\fP, \fBFigFontEnum\&.Alligator3\fP, \fBFigFontEnum\&.Alpha\fP, \fBFigFontEnum\&.Alphabet\fP, \fBFigFontEnum\&.Amc3Line\fP, \fBFigFontEnum\&.Amc3Liv1\fP, \fBFigFontEnum\&.Amcaaa01\fP, \fBFigFontEnum\&.Amcneko\fP, \fBFigFontEnum\&.Amcrazo2\fP, \fBFigFontEnum\&.Amcrazor\fP, \fBFigFontEnum\&.Amcrazor2\fP, \fBFigFontEnum\&.Amcslash\fP, \fBFigFontEnum\&.Amcslder\fP, \fBFigFontEnum\&.Amcslider\fP, \fBFigFontEnum\&.Amcthin\fP, \fBFigFontEnum\&.Amctubes\fP, \fBFigFontEnum\&.Amcun\fP, \fBFigFontEnum\&.Amcuntitled\fP, \fBFigFontEnum\&.Ansiregular\fP, \fBFigFontEnum\&.Ansishadow\fP, \fBFigFontEnum\&.Arrows\fP, \fBFigFontEnum\&.AsciiNewRoman\fP, \fBFigFontEnum\&.Avatar\fP, \fBFigFontEnum\&.B1ff\fP, \fBFigFontEnum\&.Banner\fP, \fBFigFontEnum\&.Banner3\fP, \fBFigFontEnum\&.Banner3d\fP, \fBFigFontEnum\&.Banner4\fP, \fBFigFontEnum\&.Barbwire\fP, \fBFigFontEnum\&.Basic\fP, \fBFigFontEnum\&.Bear\fP, \fBFigFontEnum\&.Bell\fP, \fBFigFontEnum\&.Benjamin\fP, \fBFigFontEnum\&.Big\fP, \fBFigFontEnum\&.Bigchief\fP, \fBFigFontEnum\&.Bigfig\fP, \fBFigFontEnum\&.Bigmoneyne\fP, \fBFigFontEnum\&.Bigmoneynw\fP, \fBFigFontEnum\&.Bigmoneyse\fP, \fBFigFontEnum\&.Bigmoneysw\fP, \fBFigFontEnum\&.Binary\fP, \fBFigFontEnum\&.Block\fP, \fBFigFontEnum\&.Blocks\fP, \fBFigFontEnum\&.Bloody\fP, \fBFigFontEnum\&.Bolger\fP, \fBFigFontEnum\&.Braced\fP, \fBFigFontEnum\&.Bright\fP, \fBFigFontEnum\&.Broadway\fP, \fBFigFontEnum\&.Broadway_Kb\fP, \fBFigFontEnum\&.Broadwaykb\fP, \fBFigFontEnum\&.Bubble\fP, \fBFigFontEnum\&.Bulbhead\fP, \fBFigFontEnum\&.Calgphy2\fP, \fBFigFontEnum\&.Caligraphy\fP, \fBFigFontEnum\&.Caligraphy2\fP, \fBFigFontEnum\&.Calvins\fP, \fBFigFontEnum\&.Cards\fP, \fBFigFontEnum\&.Catwalk\fP, \fBFigFontEnum\&.Chiseled\fP, \fBFigFontEnum\&.Chunky\fP, \fBFigFontEnum\&.Coinstak\fP, \fBFigFontEnum\&.Cola\fP, \fBFigFontEnum\&.Colossal\fP, \fBFigFontEnum\&.Computer\fP, \fBFigFontEnum\&.Contessa\fP, \fBFigFontEnum\&.Contrast\fP, \fBFigFontEnum\&.Cosmic\fP, \fBFigFontEnum\&.Cosmike\fP, \fBFigFontEnum\&.Crawford\fP, \fBFigFontEnum\&.Crawford2\fP, \fBFigFontEnum\&.Crazy\fP, \fBFigFontEnum\&.Cricket\fP, \fBFigFontEnum\&.Cursive\fP, \fBFigFontEnum\&.Cyberlarge\fP, \fBFigFontEnum\&.Cybermedium\fP, \fBFigFontEnum\&.Cybersmall\fP, \fBFigFontEnum\&.Cygnet\fP, \fBFigFontEnum\&.Danc4\fP, \fBFigFontEnum\&.Dancingfont\fP, \fBFigFontEnum\&.Decimal\fP, \fBFigFontEnum\&.Defleppard\fP, \fBFigFontEnum\&.Deltacorpspriest1\fP, \fBFigFontEnum\&.Diamond\fP, \fBFigFontEnum\&.Dietcola\fP, \fBFigFontEnum\&.Digital\fP, \fBFigFontEnum\&.Doh\fP, \fBFigFontEnum\&.Doom\fP, \fBFigFontEnum\&.Dosrebel\fP, \fBFigFontEnum\&.Dotmatrix\fP, \fBFigFontEnum\&.Double\fP, \fBFigFontEnum\&.Doubleshorts\fP, \fBFigFontEnum\&.Drpepper\fP, \fBFigFontEnum\&.Dwhistled\fP, \fBFigFontEnum\&.Eftichess\fP, \fBFigFontEnum\&.Eftifont\fP, \fBFigFontEnum\&.Eftiitalic\fP, \fBFigFontEnum\&.Eftipiti\fP, \fBFigFontEnum\&.Eftirobot\fP, \fBFigFontEnum\&.Eftitalic\fP, \fBFigFontEnum\&.Eftiwall\fP, \fBFigFontEnum\&.Eftiwater\fP, \fBFigFontEnum\&.Electronic\fP, \fBFigFontEnum\&.Elite\fP, \fBFigFontEnum\&.Epic\fP, \fBFigFontEnum\&.Fender\fP, \fBFigFontEnum\&.Filter\fP, \fBFigFontEnum\&.Fire_Fontk\fP, \fBFigFontEnum\&.Fire_Fonts\fP, \fBFigFontEnum\&.Firefontk\fP, \fBFigFontEnum\&.Firefonts\fP, \fBFigFontEnum\&.FiveLineOlique\fP, \fBFigFontEnum\&.Flipped\fP, \fBFigFontEnum\&.Flowerpower\fP, \fBFigFontEnum\&.Fourtops\fP, \fBFigFontEnum\&.Fraktur\fP, \fBFigFontEnum\&.Funface\fP, \fBFigFontEnum\&.Funfaces\fP, \fBFigFontEnum\&.Fuzzy\fP, \fBFigFontEnum\&.Georgi16\fP, \fBFigFontEnum\&.Georgia11\fP, \fBFigFontEnum\&.Ghost\fP, \fBFigFontEnum\&.Ghoulish\fP, \fBFigFontEnum\&.Glenyn\fP, \fBFigFontEnum\&.Goofy\fP, \fBFigFontEnum\&.Gothic\fP, \fBFigFontEnum\&.Graceful\fP, \fBFigFontEnum\&.Gradient\fP, \fBFigFontEnum\&.Graffiti\fP, \fBFigFontEnum\&.Greek\fP, \fBFigFontEnum\&.Heart_Left\fP, \fBFigFontEnum\&.Heart_Right\fP, \fBFigFontEnum\&.Heartleft\fP, \fBFigFontEnum\&.Heartright\fP, \fBFigFontEnum\&.Henry3d\fP, \fBFigFontEnum\&.Hex\fP, \fBFigFontEnum\&.Hieroglyphs\fP, \fBFigFontEnum\&.Hollywood\fP, \fBFigFontEnum\&.Horizontalleft\fP, \fBFigFontEnum\&.Horizontalright\fP, \fBFigFontEnum\&.Icl1900\fP, \fBFigFontEnum\&.Impossible\fP, \fBFigFontEnum\&.Invita\fP, \fBFigFontEnum\&.Isometric1\fP, \fBFigFontEnum\&.Isometric2\fP, \fBFigFontEnum\&.Isometric3\fP, \fBFigFontEnum\&.Isometric4\fP, \fBFigFontEnum\&.Italic\fP, \fBFigFontEnum\&.Ivrit\fP, \fBFigFontEnum\&.Jacky\fP, \fBFigFontEnum\&.Jazmine\fP, \fBFigFontEnum\&.Jerusalem\fP, \fBFigFontEnum\&.Jsblockletters\fP, \fBFigFontEnum\&.Jsbracketletters\fP, \fBFigFontEnum\&.Jscapitalcurves\fP, \fBFigFontEnum\&.Jscursive\fP, \fBFigFontEnum\&.Jsstickletters\fP, \fBFigFontEnum\&.Katakana\fP, \fBFigFontEnum\&.Kban\fP, \fBFigFontEnum\&.Keyboard\fP, \fBFigFontEnum\&.Knob\fP, \fBFigFontEnum\&.Konto\fP, \fBFigFontEnum\&.Kontoslant\fP, \fBFigFontEnum\&.Larry3d\fP, \fBFigFontEnum\&.Larry3d2\fP, \fBFigFontEnum\&.Lcd\fP, \fBFigFontEnum\&.Lean\fP, \fBFigFontEnum\&.Letters\fP, \fBFigFontEnum\&.Lildevil\fP, \fBFigFontEnum\&.Lineblocks\fP, \fBFigFontEnum\&.Linux\fP, \fBFigFontEnum\&.Lockergnome\fP, \fBFigFontEnum\&.Madrid\fP, \fBFigFontEnum\&.Marquee\fP, \fBFigFontEnum\&.Max4\fP, \fBFigFontEnum\&.Maxfour\fP, \fBFigFontEnum\&.Maxiwi\fP, \fBFigFontEnum\&.Merlin1\fP, \fBFigFontEnum\&.Merlin2\fP, \fBFigFontEnum\&.Mike\fP, \fBFigFontEnum\&.Mini\fP, \fBFigFontEnum\&.Miniwi\fP, \fBFigFontEnum\&.Mirror\fP, \fBFigFontEnum\&.Mnemonic\fP, \fBFigFontEnum\&.Modular\fP, \fBFigFontEnum\&.Morse\fP, \fBFigFontEnum\&.Morse2\fP, \fBFigFontEnum\&.Moscow\fP, \fBFigFontEnum\&.Mshebrew210\fP, \fBFigFontEnum\&.Muzzle\fP, \fBFigFontEnum\&.Nancyj\fP, \fBFigFontEnum\&.Nancyjfancy\fP, \fBFigFontEnum\&.Nancyjimproved\fP, \fBFigFontEnum\&.Nancyjunderlined\fP, \fBFigFontEnum\&.Nipples\fP, \fBFigFontEnum\&.Nscript\fP, \fBFigFontEnum\&.Ntgreek\fP, \fBFigFontEnum\&.Nvscript\fP, \fBFigFontEnum\&.O8\fP, \fBFigFontEnum\&.Octal\fP, \fBFigFontEnum\&.Ogre\fP, \fBFigFontEnum\&.Oldbanner\fP, \fBFigFontEnum\&.OneRow\fP, \fBFigFontEnum\&.Os2\fP, \fBFigFontEnum\&.PatorjkHex\fP, \fBFigFontEnum\&.PatorjkCheese\fP, \fBFigFontEnum\&.Pawp\fP, \fBFigFontEnum\&.Peaks\fP, \fBFigFontEnum\&.Peaksslant\fP, \fBFigFontEnum\&.Pebbles\fP, \fBFigFontEnum\&.Pepper\fP, \fBFigFontEnum\&.Poison\fP, \fBFigFontEnum\&.Puffy\fP, \fBFigFontEnum\&.Puzzle\fP, \fBFigFontEnum\&.Pyramid\fP, \fBFigFontEnum\&.Rammstein\fP, \fBFigFontEnum\&.Rectangles\fP, \fBFigFontEnum\&.RedPhoenix\fP, \fBFigFontEnum\&.Relief\fP, \fBFigFontEnum\&.Relief2\fP, \fBFigFontEnum\&.Rev\fP, \fBFigFontEnum\&.Reverse\fP, \fBFigFontEnum\&.Roman\fP, \fBFigFontEnum\&.Rot13\fP, \fBFigFontEnum\&.Rotated\fP, \fBFigFontEnum\&.Rounded\fP, \fBFigFontEnum\&.Rowancap\fP, \fBFigFontEnum\&.Rozzo\fP, \fBFigFontEnum\&.Runic\fP, \fBFigFontEnum\&.Runyc\fP, \fBFigFontEnum\&.Santaclara\fP, \fBFigFontEnum\&.Sblood\fP, \fBFigFontEnum\&.Script\fP, \fBFigFontEnum\&.Serifcap\fP, \fBFigFontEnum\&.Shadow\fP, \fBFigFontEnum\&.Shimrod\fP, \fBFigFontEnum\&.Short\fP, \fBFigFontEnum\&.Slant\fP, \fBFigFontEnum\&.Slantrelief\fP, \fBFigFontEnum\&.Slide\fP, \fBFigFontEnum\&.Slscript\fP, \fBFigFontEnum\&.Small\fP, \fBFigFontEnum\&.Smallcaps\fP, \fBFigFontEnum\&.Smallisometric1\fP, \fBFigFontEnum\&.Smallkeyboard\fP, \fBFigFontEnum\&.Smallpoison\fP, \fBFigFontEnum\&.Smallscript\fP, \fBFigFontEnum\&.Smallshadow\fP, \fBFigFontEnum\&.Smallslant\fP, \fBFigFontEnum\&.Smalltengwar\fP, \fBFigFontEnum\&.Smisome1\fP, \fBFigFontEnum\&.Smkeyboard\fP, \fBFigFontEnum\&.Smpoison\fP, \fBFigFontEnum\&.Smscript\fP, \fBFigFontEnum\&.Smshadow\fP, \fBFigFontEnum\&.Smslant\fP, \fBFigFontEnum\&.Smtengwar\fP, \fBFigFontEnum\&.Soft\fP, \fBFigFontEnum\&.Speed\fP, \fBFigFontEnum\&.Spliff\fP, \fBFigFontEnum\&.Srelief\fP, \fBFigFontEnum\&.Stacey\fP, \fBFigFontEnum\&.Stampate\fP, \fBFigFontEnum\&.Stampatello\fP, \fBFigFontEnum\&.Standard\fP, \fBFigFontEnum\&.Starstrips\fP, \fBFigFontEnum\&.Starwars\fP, \fBFigFontEnum\&.Stellar\fP, \fBFigFontEnum\&.Stforek\fP, \fBFigFontEnum\&.Stickletters\fP, \fBFigFontEnum\&.Stop\fP, \fBFigFontEnum\&.Straight\fP, \fBFigFontEnum\&.Strongerthanall\fP, \fBFigFontEnum\&.Subzero\fP, \fBFigFontEnum\&.Swampland\fP, \fBFigFontEnum\&.Swan\fP, \fBFigFontEnum\&.Sweet\fP, \fBFigFontEnum\&.Tanja\fP, \fBFigFontEnum\&.Tengwar\fP, \fBFigFontEnum\&.Term\fP, \fBFigFontEnum\&.Test1\fP, \fBFigFontEnum\&.Theedge\fP, \fBFigFontEnum\&.Thick\fP, \fBFigFontEnum\&.Thin\fP, \fBFigFontEnum\&.This\fP, \fBFigFontEnum\&.Thorned\fP, \fBFigFontEnum\&.ThreeD\fP }"
+.br
+.RI "\fBList\fP of available FIGLet fonts embedded into assembly "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBWriteColouredLine\fP (ConsoleColor consoleColor, string text)"
+.br
+.RI "Write line in a colour as of a ConsoleColor (limited range of colours) "
+.ti -1c
+.RI "static void \fBWriteColouredLine\fP (string colorHex, string text)"
+.br
+.RI "Write line in a colour as of a hex colour (with or without the #)\&. Full range of colours\&. "
+.ti -1c
+.RI "static void \fBWriteColouredLine\fP (Color color, string text)"
+.br
+.RI "Write line in a colour as of a System\&.Drawing\&.Color (full range of colours) "
+.ti -1c
+.RI "static void \fBWriteColoured\fP (ConsoleColor consoleColor, string text)"
+.br
+.RI "Write text in a colour as of a ConsoleColor (limited range of colours) "
+.ti -1c
+.RI "static void \fBWriteColoured\fP (string colorHex, string text)"
+.br
+.RI "Write text in a colour as of a hex colour (with or without the #)\&. Full range of colours\&. "
+.ti -1c
+.RI "static void \fBWriteColoured\fP (Color color, string text)"
+.br
+.RI "Write text in a colour as of a System\&.Drawing\&.Color (full range of colours) "
+.ti -1c
+.RI "static void \fBWriteColouredText\fP (ConsoleColor consoleColor, string text)"
+.br
+.RI "Write text in a colour as of a ConsoleColor (limited range of colours) "
+.ti -1c
+.RI "static void \fBWriteColouredText\fP (string colorHex, string text)"
+.br
+.RI "Write text in a colour as of a hex colour (with or without the #)\&. Full range of colours\&. "
+.ti -1c
+.RI "static void \fBWriteColouredText\fP (Color color, string text)"
+.br
+.RI "Write text in a colour as of a System\&.Drawing\&.Color (full range of colours) "
+.ti -1c
+.RI "static void \fBSetBackgroundColour\fP (ConsoleColor consoleColor, bool clearConsole=false)"
+.br
+.RI "Set the console background colour\&. Typically you have to clear the console to replace the whole window however if you already have text on the console this will clear as well\&. You're best off calling SetBackgroundColour(color, true) at the start of your application\&. Colour as of a ConsoleColor (limited range of colours) "
+.ti -1c
+.RI "static void \fBSetBackgroundColour\fP (string hexColor, bool clearConsole=false)"
+.br
+.RI "Set the console background colour\&. Typically you have to clear the console to replace the whole window however if you already have text on the console this will clear as well\&. You're best off calling SetBackgroundColour(color, true) at the start of your application\&. Colour as of a hex string (with or without the #)\&. Full range of colours\&. "
+.ti -1c
+.RI "static void \fBSetBackgroundColour\fP (Color color, bool clearConsole=false)"
+.br
+.RI "Set the console background colour\&. Typically you have to clear the console to replace the whole window however if you already have text on the console this will clear as well\&. You're best off calling SetBackgroundColour(color, true) at the start of your application\&. Colour as of a System\&.Drawing\&.Color (full range of colours) "
+.ti -1c
+.RI "static void \fBSetupBetterConsole\fP ()"
+.br
+.RI "Set the background colour to a nice dark grey, centre the console and disable the cursor "
+.ti -1c
+.RI "static void \fBWriteAsciiArt\fP (\fBFigFontEnum\fP font, ConsoleColor consoleColor, string text)"
+.br
+.RI "Produce ASCII art text\&. Use a range of FIGlet fonts easily set via enum list\&. "
+.ti -1c
+.RI "static void \fBWriteAsciiArt\fP (\fBFigFontEnum\fP font, string hexColor, string text)"
+.br
+.RI "Produce ASCII art text\&. Use a range of FIGlet fonts easily set via enum list\&. "
+.ti -1c
+.RI "static void \fBWriteAsciiArt\fP (\fBFigFontEnum\fP font, Color color, string text)"
+.br
+.RI "Produce ASCII art text\&. Use a range of FIGlet fonts easily set via enum list\&. "
+.ti -1c
+.RI "static void \fBWriteAsciiArt\fP (ConsoleColor consoleColor, string text)"
+.br
+.RI "Produce ASCII art text (default font)\&. "
+.ti -1c
+.RI "static void \fBWriteAsciiArt\fP (string hexColor, string text)"
+.br
+.RI "Produce ASCII art text (default font)\&. "
+.ti -1c
+.RI "static void \fBWriteAsciiArt\fP (Color color, string text)"
+.br
+.RI "Produce ASCII art text (default font)\&. "
+.ti -1c
+.RI "static void \fBDisableCursor\fP ()"
+.br
+.ti -1c
+.RI "static void \fBEnableCursor\fP ()"
+.br
+.ti -1c
+.RI "static void \fBShowSpinner\fP ()"
+.br
+.RI "Shows an animated spinner "
+.ti -1c
+.RI "static void \fBStopSpinner\fP ()"
+.br
+.RI "Stops the animated spinner "
+.ti -1c
+.RI "static void \fBCentreConsole\fP ()"
+.br
+.RI "Centres the console in the the middle of the screen\&. You'll have to add a reference to System\&.Windows\&.Forms\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Console extension methods, particularly writing out text and lines easily in a particular colour and setting background text\&. Also sses the nuget package ColorFul\&.Console so you can utilise System\&.Drawing\&.Color rather just the standard few ConsoleColor list\&. You can also use hex strings and even convert text to ASCII art\&. 
+
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBSystem\&.ConsoleEx\&.FigFontEnum\fP\fC [strong]\fP"
+
+.PP
+\fBList\fP of available FIGLet fonts embedded into assembly 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIThreeDAscii \fP\fP
+.TP
+\fB\fIThreeDDiagonal \fP\fP
+.TP
+\fB\fIThreepoint \fP\fP
+.TP
+\fB\fIThreeX5 \fP\fP
+.TP
+\fB\fITicks \fP\fP
+.TP
+\fB\fITicksslant \fP\fP
+.TP
+\fB\fITiles \fP\fP
+.TP
+\fB\fITinkertoy \fP\fP
+.TP
+\fB\fITombstone \fP\fP
+.TP
+\fB\fITrain \fP\fP
+.TP
+\fB\fITrek \fP\fP
+.TP
+\fB\fITsalagi \fP\fP
+.TP
+\fB\fITubular \fP\fP
+.TP
+\fB\fITwisted \fP\fP
+.TP
+\fB\fITwopoint \fP\fP
+.TP
+\fB\fIUnivers \fP\fP
+.TP
+\fB\fIUsaflag \fP\fP
+.TP
+\fB\fIVarsity \fP\fP
+.TP
+\fB\fIWavy \fP\fP
+.TP
+\fB\fIWeird \fP\fP
+.TP
+\fB\fIWetletter \fP\fP
+.TP
+\fB\fIWhimsy \fP\fP
+.TP
+\fB\fIWow \fP\fP
+.TP
+\fB\fIAcrobatic \fP\fP
+.TP
+\fB\fIAlligator \fP\fP
+.TP
+\fB\fIAlligator2 \fP\fP
+.TP
+\fB\fIAlligator3 \fP\fP
+.TP
+\fB\fIAlpha \fP\fP
+.TP
+\fB\fIAlphabet \fP\fP
+.TP
+\fB\fIAmc3Line \fP\fP
+.TP
+\fB\fIAmc3Liv1 \fP\fP
+.TP
+\fB\fIAmcaaa01 \fP\fP
+.TP
+\fB\fIAmcneko \fP\fP
+.TP
+\fB\fIAmcrazo2 \fP\fP
+.TP
+\fB\fIAmcrazor \fP\fP
+.TP
+\fB\fIAmcrazor2 \fP\fP
+.TP
+\fB\fIAmcslash \fP\fP
+.TP
+\fB\fIAmcslder \fP\fP
+.TP
+\fB\fIAmcslider \fP\fP
+.TP
+\fB\fIAmcthin \fP\fP
+.TP
+\fB\fIAmctubes \fP\fP
+.TP
+\fB\fIAmcun \fP\fP
+.TP
+\fB\fIAmcuntitled \fP\fP
+.TP
+\fB\fIAnsiregular \fP\fP
+.TP
+\fB\fIAnsishadow \fP\fP
+.TP
+\fB\fIArrows \fP\fP
+.TP
+\fB\fIAsciiNewRoman \fP\fP
+.TP
+\fB\fIAvatar \fP\fP
+.TP
+\fB\fIB1ff \fP\fP
+.TP
+\fB\fIBanner \fP\fP
+.TP
+\fB\fIBanner3 \fP\fP
+.TP
+\fB\fIBanner3d \fP\fP
+.TP
+\fB\fIBanner4 \fP\fP
+.TP
+\fB\fIBarbwire \fP\fP
+.TP
+\fB\fIBasic \fP\fP
+.TP
+\fB\fIBear \fP\fP
+.TP
+\fB\fIBell \fP\fP
+.TP
+\fB\fIBenjamin \fP\fP
+.TP
+\fB\fIBig \fP\fP
+.TP
+\fB\fIBigchief \fP\fP
+.TP
+\fB\fIBigfig \fP\fP
+.TP
+\fB\fIBigmoneyne \fP\fP
+.TP
+\fB\fIBigmoneynw \fP\fP
+.TP
+\fB\fIBigmoneyse \fP\fP
+.TP
+\fB\fIBigmoneysw \fP\fP
+.TP
+\fB\fIBinary \fP\fP
+.TP
+\fB\fIBlock \fP\fP
+.TP
+\fB\fIBlocks \fP\fP
+.TP
+\fB\fIBloody \fP\fP
+.TP
+\fB\fIBolger \fP\fP
+.TP
+\fB\fIBraced \fP\fP
+.TP
+\fB\fIBright \fP\fP
+.TP
+\fB\fIBroadway \fP\fP
+.TP
+\fB\fIBroadway_Kb \fP\fP
+.TP
+\fB\fIBroadwaykb \fP\fP
+.TP
+\fB\fIBubble \fP\fP
+.TP
+\fB\fIBulbhead \fP\fP
+.TP
+\fB\fICalgphy2 \fP\fP
+.TP
+\fB\fICaligraphy \fP\fP
+.TP
+\fB\fICaligraphy2 \fP\fP
+.TP
+\fB\fICalvins \fP\fP
+.TP
+\fB\fICards \fP\fP
+.TP
+\fB\fICatwalk \fP\fP
+.TP
+\fB\fIChiseled \fP\fP
+.TP
+\fB\fIChunky \fP\fP
+.TP
+\fB\fICoinstak \fP\fP
+.TP
+\fB\fICola \fP\fP
+.TP
+\fB\fIColossal \fP\fP
+.TP
+\fB\fIComputer \fP\fP
+.TP
+\fB\fIContessa \fP\fP
+.TP
+\fB\fIContrast \fP\fP
+.TP
+\fB\fICosmic \fP\fP
+.TP
+\fB\fICosmike \fP\fP
+.TP
+\fB\fICrawford \fP\fP
+.TP
+\fB\fICrawford2 \fP\fP
+.TP
+\fB\fICrazy \fP\fP
+.TP
+\fB\fICricket \fP\fP
+.TP
+\fB\fICursive \fP\fP
+.TP
+\fB\fICyberlarge \fP\fP
+.TP
+\fB\fICybermedium \fP\fP
+.TP
+\fB\fICybersmall \fP\fP
+.TP
+\fB\fICygnet \fP\fP
+.TP
+\fB\fIDanc4 \fP\fP
+.TP
+\fB\fIDancingfont \fP\fP
+.TP
+\fB\fIDecimal \fP\fP
+.TP
+\fB\fIDefleppard \fP\fP
+.TP
+\fB\fIDeltacorpspriest1 \fP\fP
+.TP
+\fB\fIDiamond \fP\fP
+.TP
+\fB\fIDietcola \fP\fP
+.TP
+\fB\fIDigital \fP\fP
+.TP
+\fB\fIDoh \fP\fP
+.TP
+\fB\fIDoom \fP\fP
+.TP
+\fB\fIDosrebel \fP\fP
+.TP
+\fB\fIDotmatrix \fP\fP
+.TP
+\fB\fIDouble \fP\fP
+.TP
+\fB\fIDoubleshorts \fP\fP
+.TP
+\fB\fIDrpepper \fP\fP
+.TP
+\fB\fIDwhistled \fP\fP
+.TP
+\fB\fIEftichess \fP\fP
+.TP
+\fB\fIEftifont \fP\fP
+.TP
+\fB\fIEftiitalic \fP\fP
+.TP
+\fB\fIEftipiti \fP\fP
+.TP
+\fB\fIEftirobot \fP\fP
+.TP
+\fB\fIEftitalic \fP\fP
+.TP
+\fB\fIEftiwall \fP\fP
+.TP
+\fB\fIEftiwater \fP\fP
+.TP
+\fB\fIElectronic \fP\fP
+.TP
+\fB\fIElite \fP\fP
+.TP
+\fB\fIEpic \fP\fP
+.TP
+\fB\fIFender \fP\fP
+.TP
+\fB\fIFilter \fP\fP
+.TP
+\fB\fIFire_Fontk \fP\fP
+.TP
+\fB\fIFire_Fonts \fP\fP
+.TP
+\fB\fIFirefontk \fP\fP
+.TP
+\fB\fIFirefonts \fP\fP
+.TP
+\fB\fIFiveLineOlique \fP\fP
+.TP
+\fB\fIFlipped \fP\fP
+.TP
+\fB\fIFlowerpower \fP\fP
+.TP
+\fB\fIFourtops \fP\fP
+.TP
+\fB\fIFraktur \fP\fP
+.TP
+\fB\fIFunface \fP\fP
+.TP
+\fB\fIFunfaces \fP\fP
+.TP
+\fB\fIFuzzy \fP\fP
+.TP
+\fB\fIGeorgi16 \fP\fP
+.TP
+\fB\fIGeorgia11 \fP\fP
+.TP
+\fB\fIGhost \fP\fP
+.TP
+\fB\fIGhoulish \fP\fP
+.TP
+\fB\fIGlenyn \fP\fP
+.TP
+\fB\fIGoofy \fP\fP
+.TP
+\fB\fIGothic \fP\fP
+.TP
+\fB\fIGraceful \fP\fP
+.TP
+\fB\fIGradient \fP\fP
+.TP
+\fB\fIGraffiti \fP\fP
+.TP
+\fB\fIGreek \fP\fP
+.TP
+\fB\fIHeart_Left \fP\fP
+.TP
+\fB\fIHeart_Right \fP\fP
+.TP
+\fB\fIHeartleft \fP\fP
+.TP
+\fB\fIHeartright \fP\fP
+.TP
+\fB\fIHenry3d \fP\fP
+.TP
+\fB\fIHex \fP\fP
+.TP
+\fB\fIHieroglyphs \fP\fP
+.TP
+\fB\fIHollywood \fP\fP
+.TP
+\fB\fIHorizontalleft \fP\fP
+.TP
+\fB\fIHorizontalright \fP\fP
+.TP
+\fB\fIIcl1900 \fP\fP
+.TP
+\fB\fIImpossible \fP\fP
+.TP
+\fB\fIInvita \fP\fP
+.TP
+\fB\fIIsometric1 \fP\fP
+.TP
+\fB\fIIsometric2 \fP\fP
+.TP
+\fB\fIIsometric3 \fP\fP
+.TP
+\fB\fIIsometric4 \fP\fP
+.TP
+\fB\fIItalic \fP\fP
+.TP
+\fB\fIIvrit \fP\fP
+.TP
+\fB\fIJacky \fP\fP
+.TP
+\fB\fIJazmine \fP\fP
+.TP
+\fB\fIJerusalem \fP\fP
+.TP
+\fB\fIJsblockletters \fP\fP
+.TP
+\fB\fIJsbracketletters \fP\fP
+.TP
+\fB\fIJscapitalcurves \fP\fP
+.TP
+\fB\fIJscursive \fP\fP
+.TP
+\fB\fIJsstickletters \fP\fP
+.TP
+\fB\fIKatakana \fP\fP
+.TP
+\fB\fIKban \fP\fP
+.TP
+\fB\fIKeyboard \fP\fP
+.TP
+\fB\fIKnob \fP\fP
+.TP
+\fB\fIKonto \fP\fP
+.TP
+\fB\fIKontoslant \fP\fP
+.TP
+\fB\fILarry3d \fP\fP
+.TP
+\fB\fILarry3d2 \fP\fP
+.TP
+\fB\fILcd \fP\fP
+.TP
+\fB\fILean \fP\fP
+.TP
+\fB\fILetters \fP\fP
+.TP
+\fB\fILildevil \fP\fP
+.TP
+\fB\fILineblocks \fP\fP
+.TP
+\fB\fILinux \fP\fP
+.TP
+\fB\fILockergnome \fP\fP
+.TP
+\fB\fIMadrid \fP\fP
+.TP
+\fB\fIMarquee \fP\fP
+.TP
+\fB\fIMax4 \fP\fP
+.TP
+\fB\fIMaxfour \fP\fP
+.TP
+\fB\fIMaxiwi \fP\fP
+.TP
+\fB\fIMerlin1 \fP\fP
+.TP
+\fB\fIMerlin2 \fP\fP
+.TP
+\fB\fIMike \fP\fP
+.TP
+\fB\fIMini \fP\fP
+.TP
+\fB\fIMiniwi \fP\fP
+.TP
+\fB\fIMirror \fP\fP
+.TP
+\fB\fIMnemonic \fP\fP
+.TP
+\fB\fIModular \fP\fP
+.TP
+\fB\fIMorse \fP\fP
+.TP
+\fB\fIMorse2 \fP\fP
+.TP
+\fB\fIMoscow \fP\fP
+.TP
+\fB\fIMshebrew210 \fP\fP
+.TP
+\fB\fIMuzzle \fP\fP
+.TP
+\fB\fINancyj \fP\fP
+.TP
+\fB\fINancyjfancy \fP\fP
+.TP
+\fB\fINancyjimproved \fP\fP
+.TP
+\fB\fINancyjunderlined \fP\fP
+.TP
+\fB\fINipples \fP\fP
+.TP
+\fB\fINscript \fP\fP
+.TP
+\fB\fINtgreek \fP\fP
+.TP
+\fB\fINvscript \fP\fP
+.TP
+\fB\fIO8 \fP\fP
+.TP
+\fB\fIOctal \fP\fP
+.TP
+\fB\fIOgre \fP\fP
+.TP
+\fB\fIOldbanner \fP\fP
+.TP
+\fB\fIOneRow \fP\fP
+.TP
+\fB\fIOs2 \fP\fP
+.TP
+\fB\fIPatorjkHex \fP\fP
+.TP
+\fB\fIPatorjkCheese \fP\fP
+.TP
+\fB\fIPawp \fP\fP
+.TP
+\fB\fIPeaks \fP\fP
+.TP
+\fB\fIPeaksslant \fP\fP
+.TP
+\fB\fIPebbles \fP\fP
+.TP
+\fB\fIPepper \fP\fP
+.TP
+\fB\fIPoison \fP\fP
+.TP
+\fB\fIPuffy \fP\fP
+.TP
+\fB\fIPuzzle \fP\fP
+.TP
+\fB\fIPyramid \fP\fP
+.TP
+\fB\fIRammstein \fP\fP
+.TP
+\fB\fIRectangles \fP\fP
+.TP
+\fB\fIRedPhoenix \fP\fP
+.TP
+\fB\fIRelief \fP\fP
+.TP
+\fB\fIRelief2 \fP\fP
+.TP
+\fB\fIRev \fP\fP
+.TP
+\fB\fIReverse \fP\fP
+.TP
+\fB\fIRoman \fP\fP
+.TP
+\fB\fIRot13 \fP\fP
+.TP
+\fB\fIRotated \fP\fP
+.TP
+\fB\fIRounded \fP\fP
+.TP
+\fB\fIRowancap \fP\fP
+.TP
+\fB\fIRozzo \fP\fP
+.TP
+\fB\fIRunic \fP\fP
+.TP
+\fB\fIRunyc \fP\fP
+.TP
+\fB\fISantaclara \fP\fP
+.TP
+\fB\fISblood \fP\fP
+.TP
+\fB\fIScript \fP\fP
+.TP
+\fB\fISerifcap \fP\fP
+.TP
+\fB\fIShadow \fP\fP
+.TP
+\fB\fIShimrod \fP\fP
+.TP
+\fB\fIShort \fP\fP
+.TP
+\fB\fISlant \fP\fP
+.TP
+\fB\fISlantrelief \fP\fP
+.TP
+\fB\fISlide \fP\fP
+.TP
+\fB\fISlscript \fP\fP
+.TP
+\fB\fISmall \fP\fP
+.TP
+\fB\fISmallcaps \fP\fP
+.TP
+\fB\fISmallisometric1 \fP\fP
+.TP
+\fB\fISmallkeyboard \fP\fP
+.TP
+\fB\fISmallpoison \fP\fP
+.TP
+\fB\fISmallscript \fP\fP
+.TP
+\fB\fISmallshadow \fP\fP
+.TP
+\fB\fISmallslant \fP\fP
+.TP
+\fB\fISmalltengwar \fP\fP
+.TP
+\fB\fISmisome1 \fP\fP
+.TP
+\fB\fISmkeyboard \fP\fP
+.TP
+\fB\fISmpoison \fP\fP
+.TP
+\fB\fISmscript \fP\fP
+.TP
+\fB\fISmshadow \fP\fP
+.TP
+\fB\fISmslant \fP\fP
+.TP
+\fB\fISmtengwar \fP\fP
+.TP
+\fB\fISoft \fP\fP
+.TP
+\fB\fISpeed \fP\fP
+.TP
+\fB\fISpliff \fP\fP
+.TP
+\fB\fISrelief \fP\fP
+.TP
+\fB\fIStacey \fP\fP
+.TP
+\fB\fIStampate \fP\fP
+.TP
+\fB\fIStampatello \fP\fP
+.TP
+\fB\fIStandard \fP\fP
+.TP
+\fB\fIStarstrips \fP\fP
+.TP
+\fB\fIStarwars \fP\fP
+.TP
+\fB\fIStellar \fP\fP
+.TP
+\fB\fIStforek \fP\fP
+.TP
+\fB\fIStickletters \fP\fP
+.TP
+\fB\fIStop \fP\fP
+.TP
+\fB\fIStraight \fP\fP
+.TP
+\fB\fIStrongerthanall \fP\fP
+.TP
+\fB\fISubzero \fP\fP
+.TP
+\fB\fISwampland \fP\fP
+.TP
+\fB\fISwan \fP\fP
+.TP
+\fB\fISweet \fP\fP
+.TP
+\fB\fITanja \fP\fP
+.TP
+\fB\fITengwar \fP\fP
+.TP
+\fB\fITerm \fP\fP
+.TP
+\fB\fITest1 \fP\fP
+.TP
+\fB\fITheedge \fP\fP
+.TP
+\fB\fIThick \fP\fP
+.TP
+\fB\fIThin \fP\fP
+.TP
+\fB\fIThis \fP\fP
+.TP
+\fB\fIThorned \fP\fP
+.TP
+\fB\fIThreeD \fP\fP
+.SH "Member Function Documentation"
+.PP 
+.SS "static void System\&.ConsoleEx\&.CentreConsole ()\fC [static]\fP"
+
+.PP
+Centres the console in the the middle of the screen\&. You'll have to add a reference to System\&.Windows\&.Forms\&. 
+.SS "static void System\&.ConsoleEx\&.DisableCursor ()\fC [static]\fP"
+
+.SS "static void System\&.ConsoleEx\&.EnableCursor ()\fC [static]\fP"
+
+.SS "static void System\&.ConsoleEx\&.SetBackgroundColour (Color color, bool clearConsole = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Set the console background colour\&. Typically you have to clear the console to replace the whole window however if you already have text on the console this will clear as well\&. You're best off calling SetBackgroundColour(color, true) at the start of your application\&. Colour as of a System\&.Drawing\&.Color (full range of colours) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIclearConsole\fP 
+.RE
+.PP
+
+.SS "static void System\&.ConsoleEx\&.SetBackgroundColour (ConsoleColor consoleColor, bool clearConsole = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Set the console background colour\&. Typically you have to clear the console to replace the whole window however if you already have text on the console this will clear as well\&. You're best off calling SetBackgroundColour(color, true) at the start of your application\&. Colour as of a ConsoleColor (limited range of colours) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIclearConsole\fP 
+.RE
+.PP
+
+.SS "static void System\&.ConsoleEx\&.SetBackgroundColour (string hexColor, bool clearConsole = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Set the console background colour\&. Typically you have to clear the console to replace the whole window however if you already have text on the console this will clear as well\&. You're best off calling SetBackgroundColour(color, true) at the start of your application\&. Colour as of a hex string (with or without the #)\&. Full range of colours\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIclearConsole\fP 
+.RE
+.PP
+
+.SS "static void System\&.ConsoleEx\&.SetupBetterConsole ()\fC [static]\fP"
+
+.PP
+Set the background colour to a nice dark grey, centre the console and disable the cursor 
+.SS "static void System\&.ConsoleEx\&.ShowSpinner ()\fC [static]\fP"
+
+.PP
+Shows an animated spinner 
+.SS "static void System\&.ConsoleEx\&.StopSpinner ()\fC [static]\fP"
+
+.PP
+Stops the animated spinner 
+.SS "static void System\&.ConsoleEx\&.WriteAsciiArt (Color color, string text)\fC [static]\fP"
+
+.PP
+Produce ASCII art text (default font)\&. 
+.SS "static void System\&.ConsoleEx\&.WriteAsciiArt (ConsoleColor consoleColor, string text)\fC [static]\fP"
+
+.PP
+Produce ASCII art text (default font)\&. 
+.SS "static void System\&.ConsoleEx\&.WriteAsciiArt (\fBFigFontEnum\fP font, Color color, string text)\fC [static]\fP"
+
+.PP
+Produce ASCII art text\&. Use a range of FIGlet fonts easily set via enum list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfont\fP FIGlet Font enum
+.RE
+.PP
+
+.SS "static void System\&.ConsoleEx\&.WriteAsciiArt (\fBFigFontEnum\fP font, ConsoleColor consoleColor, string text)\fC [static]\fP"
+
+.PP
+Produce ASCII art text\&. Use a range of FIGlet fonts easily set via enum list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfont\fP FIGlet Font enum
+.RE
+.PP
+
+.SS "static void System\&.ConsoleEx\&.WriteAsciiArt (\fBFigFontEnum\fP font, string hexColor, string text)\fC [static]\fP"
+
+.PP
+Produce ASCII art text\&. Use a range of FIGlet fonts easily set via enum list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfont\fP FIGlet Font enum
+.RE
+.PP
+
+.SS "static void System\&.ConsoleEx\&.WriteAsciiArt (string hexColor, string text)\fC [static]\fP"
+
+.PP
+Produce ASCII art text (default font)\&. 
+.SS "static void System\&.ConsoleEx\&.WriteColoured (Color color, string text)\fC [static]\fP"
+
+.PP
+Write text in a colour as of a System\&.Drawing\&.Color (full range of colours) 
+.SS "static void System\&.ConsoleEx\&.WriteColoured (ConsoleColor consoleColor, string text)\fC [static]\fP"
+
+.PP
+Write text in a colour as of a ConsoleColor (limited range of colours) 
+.SS "static void System\&.ConsoleEx\&.WriteColoured (string colorHex, string text)\fC [static]\fP"
+
+.PP
+Write text in a colour as of a hex colour (with or without the #)\&. Full range of colours\&. 
+.SS "static void System\&.ConsoleEx\&.WriteColouredLine (Color color, string text)\fC [static]\fP"
+
+.PP
+Write line in a colour as of a System\&.Drawing\&.Color (full range of colours) 
+.SS "static void System\&.ConsoleEx\&.WriteColouredLine (ConsoleColor consoleColor, string text)\fC [static]\fP"
+
+.PP
+Write line in a colour as of a ConsoleColor (limited range of colours) 
+.SS "static void System\&.ConsoleEx\&.WriteColouredLine (string colorHex, string text)\fC [static]\fP"
+
+.PP
+Write line in a colour as of a hex colour (with or without the #)\&. Full range of colours\&. 
+.SS "static void System\&.ConsoleEx\&.WriteColouredText (Color color, string text)\fC [static]\fP"
+
+.PP
+Write text in a colour as of a System\&.Drawing\&.Color (full range of colours) 
+.SS "static void System\&.ConsoleEx\&.WriteColouredText (ConsoleColor consoleColor, string text)\fC [static]\fP"
+
+.PP
+Write text in a colour as of a ConsoleColor (limited range of colours) 
+.SS "static void System\&.ConsoleEx\&.WriteColouredText (string colorHex, string text)\fC [static]\fP"
+
+.PP
+Write text in a colour as of a hex colour (with or without the #)\&. Full range of colours\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

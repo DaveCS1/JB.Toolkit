@@ -1,0 +1,147 @@
+\hypertarget{class_j_b_toolkit_1_1_web_1_1_memory_file}{}\doxysection{J\+B\+Toolkit.\+Web.\+Memory\+File Class Reference}
+\label{class_j_b_toolkit_1_1_web_1_1_memory_file}\index{JBToolkit.Web.MemoryFile@{JBToolkit.Web.MemoryFile}}
+
+
+Inherits from \textquotesingle{}\mbox{\hyperlink{class_http_posted_file_base}{Http\+Posted\+File\+Base}}\textquotesingle{} -\/ Used to create email attachments, and takes a Stream or Memory\+Stream)  
+
+
+
+
+Inheritance diagram for J\+B\+Toolkit.\+Web.\+Memory\+File\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{d4/dfa/class_j_b_toolkit_1_1_web_1_1_memory_file__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Web.\+Memory\+File\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{d2/d78/class_j_b_toolkit_1_1_web_1_1_memory_file__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_memory_file_a86b16c0e449495c21574f314f2b9b22d}{Memory\+File}} (Stream stream, string content\+Type\+Mime\+String, string file\+Name)
+\begin{DoxyCompactList}\small\item\em Stream or Memory\+Stream \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_memory_file_ac674b0f79340d8f792bf39a5a71703d0}{Save\+As}} (string filename)
+\begin{DoxyCompactList}\small\item\em Save a memory stream to file \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_memory_file_ac9ad28fbad12094923e32e7b0d961b57}{Get\+Stream\+From\+Url}} (string url)
+\begin{DoxyCompactList}\small\item\em Gets a stream from a remote U\+RL file location \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+override int \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_memory_file_a602acf00a6e9de828e00fd7236098468}{Content\+Length}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override string \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_memory_file_a32b2211b53b99b740299d26e5b5c8c39}{Content\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override string \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_memory_file_ae2e4e64f5f79846636d33a60738e4a54}{File\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_memory_file_a6b7cb8c95a6948485ed4aa901f1e8413}{Input\+Stream}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Inherits from \textquotesingle{}\mbox{\hyperlink{class_http_posted_file_base}{Http\+Posted\+File\+Base}}\textquotesingle{} -\/ Used to create email attachments, and takes a Stream or Memory\+Stream) 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_memory_file_a86b16c0e449495c21574f314f2b9b22d}\label{class_j_b_toolkit_1_1_web_1_1_memory_file_a86b16c0e449495c21574f314f2b9b22d}} 
+\index{JBToolkit.Web.MemoryFile@{JBToolkit.Web.MemoryFile}!MemoryFile@{MemoryFile}}
+\index{MemoryFile@{MemoryFile}!JBToolkit.Web.MemoryFile@{JBToolkit.Web.MemoryFile}}
+\doxysubsubsection{\texorpdfstring{MemoryFile()}{MemoryFile()}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Web.\+Memory\+File.\+Memory\+File (\begin{DoxyParamCaption}\item[{Stream}]{stream,  }\item[{string}]{content\+Type\+Mime\+String,  }\item[{string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Stream or Memory\+Stream 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & \\
+\hline
+{\em content\+Type\+Mime\+String} & M\+I\+ME Type i.\+e. \textquotesingle{}application/pdf\textquotesingle{} or \textquotesingle{}image/png\textquotesingle{}\\
+\hline
+{\em file\+Name} & Given filename for the email attachment\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_memory_file_ac9ad28fbad12094923e32e7b0d961b57}\label{class_j_b_toolkit_1_1_web_1_1_memory_file_ac9ad28fbad12094923e32e7b0d961b57}} 
+\index{JBToolkit.Web.MemoryFile@{JBToolkit.Web.MemoryFile}!GetStreamFromUrl@{GetStreamFromUrl}}
+\index{GetStreamFromUrl@{GetStreamFromUrl}!JBToolkit.Web.MemoryFile@{JBToolkit.Web.MemoryFile}}
+\doxysubsubsection{\texorpdfstring{GetStreamFromUrl()}{GetStreamFromUrl()}}
+{\footnotesize\ttfamily static Stream J\+B\+Toolkit.\+Web.\+Memory\+File.\+Get\+Stream\+From\+Url (\begin{DoxyParamCaption}\item[{string}]{url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets a stream from a remote U\+RL file location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/db2/class_j_b_toolkit_1_1_web_1_1_memory_file_ac9ad28fbad12094923e32e7b0d961b57_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_memory_file_ac674b0f79340d8f792bf39a5a71703d0}\label{class_j_b_toolkit_1_1_web_1_1_memory_file_ac674b0f79340d8f792bf39a5a71703d0}} 
+\index{JBToolkit.Web.MemoryFile@{JBToolkit.Web.MemoryFile}!SaveAs@{SaveAs}}
+\index{SaveAs@{SaveAs}!JBToolkit.Web.MemoryFile@{JBToolkit.Web.MemoryFile}}
+\doxysubsubsection{\texorpdfstring{SaveAs()}{SaveAs()}}
+{\footnotesize\ttfamily override void J\+B\+Toolkit.\+Web.\+Memory\+File.\+Save\+As (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Save a memory stream to file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_memory_file_a602acf00a6e9de828e00fd7236098468}\label{class_j_b_toolkit_1_1_web_1_1_memory_file_a602acf00a6e9de828e00fd7236098468}} 
+\index{JBToolkit.Web.MemoryFile@{JBToolkit.Web.MemoryFile}!ContentLength@{ContentLength}}
+\index{ContentLength@{ContentLength}!JBToolkit.Web.MemoryFile@{JBToolkit.Web.MemoryFile}}
+\doxysubsubsection{\texorpdfstring{ContentLength}{ContentLength}}
+{\footnotesize\ttfamily override int J\+B\+Toolkit.\+Web.\+Memory\+File.\+Content\+Length\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_memory_file_a32b2211b53b99b740299d26e5b5c8c39}\label{class_j_b_toolkit_1_1_web_1_1_memory_file_a32b2211b53b99b740299d26e5b5c8c39}} 
+\index{JBToolkit.Web.MemoryFile@{JBToolkit.Web.MemoryFile}!ContentType@{ContentType}}
+\index{ContentType@{ContentType}!JBToolkit.Web.MemoryFile@{JBToolkit.Web.MemoryFile}}
+\doxysubsubsection{\texorpdfstring{ContentType}{ContentType}}
+{\footnotesize\ttfamily override string J\+B\+Toolkit.\+Web.\+Memory\+File.\+Content\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_memory_file_ae2e4e64f5f79846636d33a60738e4a54}\label{class_j_b_toolkit_1_1_web_1_1_memory_file_ae2e4e64f5f79846636d33a60738e4a54}} 
+\index{JBToolkit.Web.MemoryFile@{JBToolkit.Web.MemoryFile}!FileName@{FileName}}
+\index{FileName@{FileName}!JBToolkit.Web.MemoryFile@{JBToolkit.Web.MemoryFile}}
+\doxysubsubsection{\texorpdfstring{FileName}{FileName}}
+{\footnotesize\ttfamily override string J\+B\+Toolkit.\+Web.\+Memory\+File.\+File\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_memory_file_a6b7cb8c95a6948485ed4aa901f1e8413}\label{class_j_b_toolkit_1_1_web_1_1_memory_file_a6b7cb8c95a6948485ed4aa901f1e8413}} 
+\index{JBToolkit.Web.MemoryFile@{JBToolkit.Web.MemoryFile}!InputStream@{InputStream}}
+\index{InputStream@{InputStream}!JBToolkit.Web.MemoryFile@{JBToolkit.Web.MemoryFile}}
+\doxysubsubsection{\texorpdfstring{InputStream}{InputStream}}
+{\footnotesize\ttfamily override Stream J\+B\+Toolkit.\+Web.\+Memory\+File.\+Input\+Stream\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Web/\mbox{\hyperlink{_memory_file_8cs}{Memory\+File.\+cs}}\end{DoxyCompactItemize}

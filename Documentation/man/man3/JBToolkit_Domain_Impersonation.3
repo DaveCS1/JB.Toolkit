@@ -1,0 +1,105 @@
+.TH "JBToolkit.Domain.Impersonation" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Domain.Impersonation
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBImpersonator\fP"
+.br
+.RI "Used to perform execution of code under an elivated permission context "
+.ti -1c
+.RI "class \fBWin32NativeMethods\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBServerType\fP { \fBServerType\&.DMZ\fP, \fBServerType\&.DOMAIN\fP }"
+.br
+.ti -1c
+.RI "enum \fBLogonType\fP { \fBLogonType\&.LOGON32_LOGON_INTERACTIVE\fP = 2, \fBLogonType\&.LOGON32_LOGON_NETWORK\fP = 3, \fBLogonType\&.LOGON32_LOGON_BATCH\fP = 4, \fBLogonType\&.LOGON32_LOGON_SERVICE\fP = 5, \fBLogonType\&.LOGON32_LOGON_UNLOCK\fP = 7, \fBLogonType\&.LOGON32_LOGON_NETWORK_CLEARTEXT\fP = 8, \fBLogonType\&.LOGON32_LOGON_NEW_CREDENTIALS\fP = 9 }"
+.br
+.ti -1c
+.RI "enum \fBLogonProvider\fP { \fBLogonProvider\&.LOGON32_PROVIDER_DEFAULT\fP = 0, \fBLogonProvider\&.LOGON32_PROVIDER_WINNT35\fP = 1, \fBLogonProvider\&.LOGON32_PROVIDER_WINNT40\fP = 2, \fBLogonProvider\&.LOGON32_PROVIDER_WINNT50\fP = 3 }"
+.br
+.ti -1c
+.RI "enum \fBImpersonationLevel\fP { \fBImpersonationLevel\&.SecurityAnonymous\fP = 0, \fBImpersonationLevel\&.SecurityIdentification\fP = 1, \fBImpersonationLevel\&.SecurityImpersonation\fP = 2, \fBImpersonationLevel\&.SecurityDelegation\fP = 3 }"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBJBToolkit\&.Domain\&.Impersonation\&.ImpersonationLevel\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISecurityAnonymous \fP\fP
+The server cannot impersonate or identify the client\&. 
+.TP
+\fB\fISecurityIdentification \fP\fP
+The server can get the identity and privileges of the client, but cannot impersonate the client\&. 
+.TP
+\fB\fISecurityImpersonation \fP\fP
+The server can impersonate the client's security context on the local system\&. 
+.TP
+\fB\fISecurityDelegation \fP\fP
+The server can impersonate the client's security context on remote systems\&. 
+.SS "enum \fBJBToolkit\&.Domain\&.Impersonation\&.LogonProvider\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILOGON32_PROVIDER_DEFAULT \fP\fP
+.TP
+\fB\fILOGON32_PROVIDER_WINNT35 \fP\fP
+.TP
+\fB\fILOGON32_PROVIDER_WINNT40 \fP\fP
+.TP
+\fB\fILOGON32_PROVIDER_WINNT50 \fP\fP
+.SS "enum \fBJBToolkit\&.Domain\&.Impersonation\&.LogonType\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILOGON32_LOGON_INTERACTIVE \fP\fP
+This logon type is intended for users who will be interactively using the computer, such as a user being logged on by a terminal server, remote shell, or similar process\&. This logon type has the additional expense of caching logon information for disconnected operations; therefore, it is inappropriate for some client/server applications, such as a mail server\&. 
+.TP
+\fB\fILOGON32_LOGON_NETWORK \fP\fP
+This logon type is intended for high performance servers to authenticate plaintext passwords\&. The LogonUser function does not cache credentials for this logon type\&. 
+.TP
+\fB\fILOGON32_LOGON_BATCH \fP\fP
+This logon type is intended for batch servers, where processes may be executing on behalf of a user without their direct intervention\&. This type is also for higher performance servers that process many plaintext authentication attempts at a time, such as mail or web servers\&. 
+.TP
+\fB\fILOGON32_LOGON_SERVICE \fP\fP
+Indicates a service-type logon\&. The account provided must have the service privilege enabled\&. 
+.TP
+\fB\fILOGON32_LOGON_UNLOCK \fP\fP
+GINAs are no longer supported\&. \fBWindows\fP Server 2003 and \fBWindows\fP XP: This logon type is for GINA DLLs that log on users who will be interactively using the computer\&. This logon type can generate a unique audit record that shows when the workstation was unlocked\&. 
+.TP
+\fB\fILOGON32_LOGON_NETWORK_CLEARTEXT \fP\fP
+This logon type preserves the name and password in the authentication package, which allows the server to make connections to other network servers while impersonating the client\&. A server can accept plaintext credentials from a client, call LogonUser, verify that the user can access the system across the network, and still communicate with other servers\&. 
+.TP
+\fB\fILOGON32_LOGON_NEW_CREDENTIALS \fP\fP
+This logon type allows the caller to clone its current token and specify new credentials for outbound connections\&. The new logon session has the same local identifier but uses different credentials for other network connections\&. This logon type is supported only by the LOGON32_PROVIDER_WINNT50 logon provider\&. 
+.SS "enum \fBJBToolkit\&.Domain\&.Impersonation\&.ServerType\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIDMZ \fP\fP
+.TP
+\fB\fIDOMAIN \fP\fP
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

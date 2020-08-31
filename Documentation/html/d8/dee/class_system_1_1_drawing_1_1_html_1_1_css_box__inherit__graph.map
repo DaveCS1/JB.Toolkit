@@ -1,0 +1,9 @@
+<map id="System.Drawing.Html.CssBox" name="System.Drawing.Html.CssBox">
+<area shape="rect" id="node1" title="Represents a CSS Box of text or replaced elements." alt="" coords="439,5,637,728"/>
+<area shape="rect" id="node2" href="$d8/de4/class_system_1_1_drawing_1_1_html_1_1_css_anonymous_block_box.html" title="Represents an anonymous block box" alt="" coords="5,835,249,941"/>
+<area shape="rect" id="node4" href="$df/dee/class_system_1_1_drawing_1_1_html_1_1_css_anonymous_box.html" title="Represents an anonymous inline box" alt="" coords="274,849,541,927"/>
+<area shape="rect" id="node6" href="$dd/da3/class_system_1_1_drawing_1_1_html_1_1_css_table_1_1_spacing_box.html" title="Used to make space on vertical cell combination" alt="" coords="565,827,775,949"/>
+<area shape="rect" id="node7" href="$d0/d18/class_system_1_1_drawing_1_1_html_1_1_initial_html_container.html" title=" " alt="" coords="800,776,983,1000"/>
+<area shape="rect" id="node3" href="$dc/db4/class_system_1_1_drawing_1_1_html_1_1_css_anonymous_space_block_box.html" title="Represents an AnonymousBlockBox which contains only blank spaces" alt="" coords="5,1048,249,1155"/>
+<area shape="rect" id="node5" href="$da/dbd/class_system_1_1_drawing_1_1_html_1_1_css_anonymous_space_box.html" title="Represents an anonymous inline box which contains nothing but blank spaces" alt="" coords="285,1055,529,1147"/>
+</map>

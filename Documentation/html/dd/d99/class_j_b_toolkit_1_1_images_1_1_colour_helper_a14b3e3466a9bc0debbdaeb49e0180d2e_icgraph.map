@@ -1,0 +1,13 @@
+<map id="JBToolkit.Images.ColourHelper.ConsoleColorToColor" name="JBToolkit.Images.ColourHelper.ConsoleColorToColor">
+<area shape="rect" id="node1" title="Console color to System.Drawing.Color" alt="" coords="592,115,795,156"/>
+<area shape="rect" id="node2" href="$d3/df8/class_system_1_1_console_ex.html#a95bd25b78a8c78aaf49b022a3c5aa70d" title="Set the console background colour. Typically you have to clear the console to replace the whole windo..." alt="" coords="308,5,535,47"/>
+<area shape="rect" id="node4" href="$d3/df8/class_system_1_1_console_ex.html#a3eb13e89c0e819b122d20d5ca8a84ccd" title="Produce ASCII art text. Use a range of FIGlet fonts easily set via enum list." alt="" coords="314,71,529,98"/>
+<area shape="rect" id="node6" href="$d3/df8/class_system_1_1_console_ex.html#a3c02b6f186995998aa1ac9eaf39025ce" title="Write text in a colour as of a ConsoleColor (limited range of colours)" alt="" coords="311,122,531,149"/>
+<area shape="rect" id="node8" href="$d3/df8/class_system_1_1_console_ex.html#a00b16240439a0cff1827dc68a19eec1b" title="Write line in a colour as of a ConsoleColor (limited range of colours)" alt="" coords="299,173,543,199"/>
+<area shape="rect" id="node10" href="$d3/df8/class_system_1_1_console_ex.html#afb1e9012cdc2742765f65e1b4d2e4265" title="Write text in a colour as of a ConsoleColor (limited range of colours)" alt="" coords="299,223,544,250"/>
+<area shape="rect" id="node3" href="$d3/df8/class_system_1_1_console_ex.html#ac7e43b83c144718126bf93f27dceffd1" title="Set the console background colour. Typically you have to clear the console to replace the whole windo..." alt="" coords="15,5,241,47"/>
+<area shape="rect" id="node5" href="$d3/df8/class_system_1_1_console_ex.html#a41e1a8c70f684d57b16ed746707257f1" title="Produce ASCII art text. Use a range of FIGlet fonts easily set via enum list." alt="" coords="21,71,235,98"/>
+<area shape="rect" id="node7" href="$d3/df8/class_system_1_1_console_ex.html#aae96a97557732c870aa84b0aacbc246b" title="Write text in a colour as of a hex colour (with or without the #). Full range of colours." alt="" coords="18,122,238,149"/>
+<area shape="rect" id="node9" href="$d3/df8/class_system_1_1_console_ex.html#a4f4c5a7c1bf9c91c92aa61f6a16bcbf5" title="Write line in a colour as of a hex colour (with or without the #). Full range of colours." alt="" coords="6,173,250,199"/>
+<area shape="rect" id="node11" href="$d3/df8/class_system_1_1_console_ex.html#ad77bc5f17c92e7051a5169a7199975fe" title="Write text in a colour as of a hex colour (with or without the #). Full range of colours." alt="" coords="5,223,251,250"/>
+</map>

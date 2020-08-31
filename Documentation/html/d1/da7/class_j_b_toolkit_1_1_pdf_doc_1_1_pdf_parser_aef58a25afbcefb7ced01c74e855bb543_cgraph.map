@@ -1,0 +1,5 @@
+<map id="JBToolkit.PdfDoc.PdfParser.GetPDFContentAsString" name="JBToolkit.PdfDoc.PdfParser.GetPDFContentAsString">
+<area shape="rect" id="node1" title="Converts PDF to pure text using iTextSharp (very quick) and optionally falls back to using xPDF PDFto..." alt="" coords="5,5,192,47"/>
+<area shape="rect" id="node2" href="$d1/da7/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser.html#ad9ad9ce5b7554a8fd8f6595a0c555436" title="Converts PDF to pure text using xPDF PDFtoText command line utility (embedded) if iTextSharp text ext..." alt="" coords="240,5,487,47"/>
+<area shape="rect" id="node3" href="$da/dbe/class_j_b_toolkit_1_1_windows_1_1_process_helper.html#afb518659a5ed37e209117d9fcf66de41" title="Executes a process and reads the output (std out and error out) &#45; Useful for working with command lin..." alt="" coords="535,5,788,47"/>
+</map>

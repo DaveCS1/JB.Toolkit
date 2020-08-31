@@ -1,0 +1,137 @@
+.TH "JBToolkit.Windows.ProcessHelper" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Windows.ProcessHelper \-  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBMoveFileEx\fP (string lpExistingFileName, string lpNewFileName, int dwFlags)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static Process[] \fBGetRemoteProcess\fP (string processName, string remoteHost)"
+.br
+.RI "Get remote process(s) by name (can also be used to get local process if you use 'localhost')\&. You will likely need to use impersonatation when calling "
+.ti -1c
+.RI "static int \fBGetProcessMemoryUsage\fP (string processName, string remoteHost)"
+.br
+.RI "Get the memory usage in KB of a particular processs\&. You will likely need to use impersonatation when calling\&. "
+.ti -1c
+.RI "static string \fBExecuteProcessAndReadStdOut\fP (string path, out string errorOutput, string arguments='', string workingDirectory='', int timeoutSeconds=60, bool throwOnError=true)"
+.br
+.RI "Executes a process and reads the output (std out and error out) - Useful for working with command line utilties in managed code "
+.ti -1c
+.RI "static \fBList\fP< Process > \fBWhoIsLocking\fP (string path)"
+.br
+.RI "Find out what process(es) have a lock on the specified file\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const int \fBMOVEFILE_DELAY_UNTIL_REBOOT\fP = 0x4"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+
+Helper class for manipulating mainly remote processes\&. Most likely you will need to wrap the call with Impersonatation\&. I\&.e:
+.SH "Member Function Documentation"
+.PP 
+.SS "static string JBToolkit\&.Windows\&.ProcessHelper\&.ExecuteProcessAndReadStdOut (string path, out string errorOutput, string arguments = \fC''\fP, string workingDirectory = \fC''\fP, int timeoutSeconds = \fC60\fP, bool throwOnError = \fCtrue\fP)\fC [static]\fP"
+
+.PP
+Executes a process and reads the output (std out and error out) - Useful for working with command line utilties in managed code 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP Path of program to execute
+.br
+\fIarguments\fP Optionally include and command line arguments
+.br
+\fIworkingDirectory\fP Working folder path
+.br
+\fItimeoutSeconds\fP End process timeout\&. Defaults to 30 seconds
+.br
+\fIthrowOnError\fP Should the method throw an error when exception caught or just ignore
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return STD + Err output
+.RE
+.PP
+
+.SS "static int JBToolkit\&.Windows\&.ProcessHelper\&.GetProcessMemoryUsage (string processName, string remoteHost)\fC [static]\fP"
+
+.PP
+Get the memory usage in KB of a particular processs\&. You will likely need to use impersonatation when calling\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprocess\fP The process object to get the memory usage of
+.br
+\fIremoteHost\fP The remote host where the process resides
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Memory usage in KB
+.RE
+.PP
+
+.SS "static Process [] JBToolkit\&.Windows\&.ProcessHelper\&.GetRemoteProcess (string processName, string remoteHost)\fC [static]\fP"
+
+.PP
+Get remote process(s) by name (can also be used to get local process if you use 'localhost')\&. You will likely need to use impersonatation when calling 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprocessName\fP Name of process to get info for
+.br
+\fIremoteHost\fP Remote host where process resides
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Process array object
+.RE
+.PP
+
+.SS "static bool JBToolkit\&.Windows\&.ProcessHelper\&.MoveFileEx (string lpExistingFileName, string lpNewFileName, int dwFlags)"
+
+.SS "static \fBList\fP<Process> JBToolkit\&.Windows\&.ProcessHelper\&.WhoIsLocking (string path)\fC [static]\fP"
+
+.PP
+Find out what process(es) have a lock on the specified file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP Path of the file\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Processes locking the file
+.RE
+.PP
+.PP
+See also: http://msdn.microsoft.com/en-us/library/windows/desktop/aa373661(v=vs.85).aspx http://wyupdate.googlecode.com/svn-history/r401/trunk/frmFilesInUse.cs (no copyright in code at time of viewing)
+.SH "Member Data Documentation"
+.PP 
+.SS "const int JBToolkit\&.Windows\&.ProcessHelper\&.MOVEFILE_DELAY_UNTIL_REBOOT = 0x4\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

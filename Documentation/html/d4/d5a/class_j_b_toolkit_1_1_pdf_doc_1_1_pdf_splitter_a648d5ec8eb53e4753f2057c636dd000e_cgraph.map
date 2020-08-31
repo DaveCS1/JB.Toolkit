@@ -1,0 +1,7 @@
+<map id="JBToolkit.PdfDoc.PdfSplitter.SplitAfterPagesWhereStringAppearsInContent" name="JBToolkit.PdfDoc.PdfSplitter.SplitAfterPagesWhereStringAppearsInContent">
+<area shape="rect" id="node1" title="Use the content of the document to determine where to split the document. I.e. on a document code in ..." alt="" coords="5,31,237,87"/>
+<area shape="rect" id="node2" href="$d1/da7/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser.html#aef58a25afbcefb7ced01c74e855bb543" title="Converts PDF to pure text using iTextSharp (very quick) and optionally falls back to using xPDF PDFto..." alt="" coords="289,5,475,47"/>
+<area shape="rect" id="node5" href="$d4/d5a/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter.html#a3e748dc7bc446d32829c6376aeafb686" title="Split a document on multiples and save to file. the name will be the original number plus the documen..." alt="" coords="285,71,479,112"/>
+<area shape="rect" id="node3" href="$d1/da7/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser.html#ad9ad9ce5b7554a8fd8f6595a0c555436" title="Converts PDF to pure text using xPDF PDFtoText command line utility (embedded) if iTextSharp text ext..." alt="" coords="527,5,773,47"/>
+<area shape="rect" id="node4" href="$da/dbe/class_j_b_toolkit_1_1_windows_1_1_process_helper.html#afb518659a5ed37e209117d9fcf66de41" title="Executes a process and reads the output (std out and error out) &#45; Useful for working with command lin..." alt="" coords="821,5,1075,47"/>
+</map>

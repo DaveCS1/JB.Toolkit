@@ -1,0 +1,62 @@
+.TH "JBToolkit.InterProcessComms" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.InterProcessComms \- Gist from: https://weblogs.asp.net/ricardoperes/local-machine-interprocess-communication-with-netD  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBMemoryMappedFiles\fP"
+.br
+.RI "Memory-mapped files in \fBWindows\fP allow us to either map a “window” of a large file on the filesystem, or to create a named memory area that can be shared among processes\&. A shared area on the fly is created and uses named AutoResetEvents to control access to it\&. "
+.ti -1c
+.RI "namespace \fBMessageQueues\fP"
+.br
+.RI "\fBWindows\fP has included a message queues implementation for a long time, something that is often forgotten by developers\&. If you don’t have it installed – you can check if the Message Queuing service exists – you can install it through Programs and Features – Turn \fBWindows\fP features on and off on the \fBControl\fP Panel\&. "
+.ti -1c
+.RI "namespace \fBNamedPipes\fP"
+.br
+.RI "Named pipes in \fBWindows\fP is a duplex means of sending data between \fBWindows\fP hosts\&. We used it in the WCF implementation, but \&.NET has its own built-in support for named pipes communication\&. "
+.ti -1c
+.RI "namespace \fBNetRemoting\fP"
+.br
+.RI "\&.NET Remoting, in the old days, was \&.NET’s response to Java RMI, and basically was a remote references implementation, similar to CORBA\&. With Remoting, one can call methods on an object that resides in a different machine\&. \&.NET Remoting has long since been superseded by WCF, but it is still a viable alternative, particularly because WCF does not allow remote references\&. "
+.ti -1c
+.RI "namespace \fBSockets\fP"
+.br
+.RI "\fBWindows\fP does not support the AF_UNIX family of sockets, only TCP/IP, so, for demonstrating IP network communication I could have chosen either TCP or UDP, but I went for UDP because of the better performance and because of the relative simplicity that this example required\&. "
+.ti -1c
+.RI "namespace \fBWcf\fP"
+.br
+.RI "It is binary; "
+.ti -1c
+.RI "namespace \fBWM_COPYDATA\fP"
+.br
+.RI "\fBWM_COPYDATA\fP probably doesn’t say much to \&.NET developers, but for old-school Win32 C/C++ developers it certainly does! Basically, it was a way by which one could send arbitrary data, including structured data, between processes (actually, strictly speaking, windows)\&. One would send a \fBWM_COPYDATA\fP message to a window handle, running on any process, and \fBWindows\fP would take care of marshalling the data so that it is available outside the address space of the sending process\&. It is even possible to send it to all processes, using HWND_BROADCAST, but that probably wouldn’t be wise, because different applications might have different interpretations of it\&. Also, it needs to be passed with SendMessage, PostMessage won’t work\&. "
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBDataReceivedEventArgs\fP"
+.br
+.ti -1c
+.RI "interface \fBIIpcClient\fP"
+.br
+.ti -1c
+.RI "interface \fBIIpcServer\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Gist from: https://weblogs.asp.net/ricardoperes/local-machine-interprocess-communication-with-netD 
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

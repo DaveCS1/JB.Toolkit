@@ -1,0 +1,30 @@
+.TH "JBToolkit.InterProcessComms.WM_COPYDATA" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.InterProcessComms.WM_COPYDATA \- \fBWM_COPYDATA\fP probably doesn’t say much to \&.NET developers, but for old-school Win32 C/C++ developers it certainly does! Basically, it was a way by which one could send arbitrary data, including structured data, between processes (actually, strictly speaking, windows)\&. One would send a \fBWM_COPYDATA\fP message to a window handle, running on any process, and \fBWindows\fP would take care of marshalling the data so that it is available outside the address space of the sending process\&. It is even possible to send it to all processes, using HWND_BROADCAST, but that probably wouldn’t be wise, because different applications might have different interpretations of it\&. Also, it needs to be passed with SendMessage, PostMessage won’t work\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBCopyDataClient\fP"
+.br
+.ti -1c
+.RI "class \fBCopyDataServer\fP"
+.br
+.ti -1c
+.RI "struct \fBCOPYDATASTRUCT\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBWM_COPYDATA\fP probably doesn’t say much to \&.NET developers, but for old-school Win32 C/C++ developers it certainly does! Basically, it was a way by which one could send arbitrary data, including structured data, between processes (actually, strictly speaking, windows)\&. One would send a \fBWM_COPYDATA\fP message to a window handle, running on any process, and \fBWindows\fP would take care of marshalling the data so that it is available outside the address space of the sending process\&. It is even possible to send it to all processes, using HWND_BROADCAST, but that probably wouldn’t be wise, because different applications might have different interpretations of it\&. Also, it needs to be passed with SendMessage, PostMessage won’t work\&. 
+
+Gist from: https://weblogs.asp.net/ricardoperes/local-machine-interprocess-communication-with-net
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

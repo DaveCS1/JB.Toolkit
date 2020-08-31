@@ -1,0 +1,8 @@
+<map id="JBToolkit.Views.IJqueryDataTable" name="JBToolkit.Views.IJqueryDataTable">
+<area shape="rect" id="node1" title=" " alt="" coords="363,5,576,171"/>
+<area shape="rect" id="node2" href="$dc/daf/class_j_b_toolkit_1_1_views_1_1___jquery_data_table.html" title="Generates JQquery DataTable HTML from a Model" alt="" coords="363,219,576,487"/>
+<area shape="rect" id="node3" href="$dc/d59/class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table.html" title="Optional Sever&#45;side processing: Generates JQuery DataTable HTML from a Model, using data from ajax ca..." alt="" coords="5,549,219,861"/>
+<area shape="rect" id="node4" href="$d1/d9c/class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table.html" title="Editable DataTable: Generates JQquery DataTable HTML from a Model that you can edit fields for." alt="" coords="243,535,456,876"/>
+<area shape="rect" id="node5" href="$d7/d62/class_j_b_toolkit_1_1_views_1_1_jquery_html_data_table.html" title="Generates JQquery DataTable HTML from a model." alt="" coords="480,571,701,839"/>
+<area shape="rect" id="node6" href="$dc/d75/class_j_b_toolkit_1_1_views_1_1_jquery_json_data_table.html" title="Generates JQuery DataTable HTML from a Model." alt="" coords="725,564,939,847"/>
+</map>

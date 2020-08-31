@@ -1,0 +1,238 @@
+\hypertarget{class_j_b_toolkit_1_1_views_1_1___jquery_data_table}{}\doxysection{J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table Class Reference}
+\label{class_j_b_toolkit_1_1_views_1_1___jquery_data_table}\index{JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}}
+
+
+Generates J\+Qquery Data\+Table H\+T\+ML from a Model  
+
+
+
+
+Inheritance diagram for J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/dcc/class_j_b_toolkit_1_1_views_1_1___jquery_data_table__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{da/db1/class_j_b_toolkit_1_1_views_1_1___jquery_data_table__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a2dccb9675ad0b405b0449798e0a22e6e}{Generate\+Filters}} ()
+\item 
+abstract string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a5240710a0ba99e58fc1c3bc94995c740}{Generate\+Register\+Data\+Table\+Script}} ()
+\item 
+abstract string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a892fa4c2585d8f9e6a64fad5aaf43c6a}{Generate\+Register\+Filters\+Script}} ()
+\item 
+abstract string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_ada6b96b4496c713b8ff581b6d6585b59}{Generate\+Additional\+Java\+Script}} ()
+\item 
+abstract string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a364cb73f1db7c1aee55ba4be2bba0b20}{Generate\+Html\+Table}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a13bf0d926a1fb7cbda470d6c38775422}{Table\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Table name -\/ will display as header -\/ can included spaces \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a4146013300315831c5a283f21d81b0a9}{Hide\+Title}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Hides the top left header table name title text \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a33f1c2038b82c9400ad0fdbceda3c346}{Pull\+Nav\+Bar\+Up}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Pulls the navbar bottom border up 2px if there\textquotesingle{}s a gap (sometimes happenes with displaying datatable within a nested divs) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_ac4116e24ccf5283404cfdbbd37688e5c}{Use\+Custom\+Header}} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether or not to include the cool custom header or just use the Data\+Table default \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_af09134fefeee11f779ef0cade9667aff}{Hide\+Header}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Completely hide the auto filter, search, display amount and buttons \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a72c55dcf1046f4ba6342f15445ec76c0}{Responsive}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Collapse columns that don\textquotesingle{}t find into the width of the screen / window \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a6659eaa1965f69b53bd59e8b470dd310}{Additional\+Java\+Script}} = string.\+Empty\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Adds custom Java\+Script To Bottom of Page \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a18f6a09728fb6e3593a3157c18342bec}{Unique\+ID}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Used so we don\textquotesingle{}t have H\+T\+ML ID clashes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates J\+Qquery Data\+Table H\+T\+ML from a Model 
+
+Used in conjunction with the \textquotesingle{}J\+Query\+Data\+Table.\+cshtml\textquotesingle{} view (You can just inherit this from your own model if you wish)
+
+Y\+O\+UR P\+R\+O\+J\+E\+CT M\+U\+ST I\+N\+C\+L\+U\+DE J\+A\+V\+A\+S\+C\+R\+I\+PT P\+A\+C\+K\+A\+G\+ES \& C\+SS for Bootstrap, Data\+Tables, Data\+Tables \mbox{\hyperlink{namespace_j_b_toolkit_1_1_extensions}{Extensions}} and Editor
+
+$<$link href = \char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/3.\+3.\+6/css/bootstrap.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/tree-\/view/bootstrap-\/treeview.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$
+
+$<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/media/css/data\+Tables.\+bootstrap.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/css/buttons.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Responsive/css/responsive.\+data\+Tabl;es.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Responsive/css/responsive.\+boostrap.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Scroller/css/scroller.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Select/css/select.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Col\+Reorder/css/col\+Reorder.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/css/editor.\+bootstrap.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/css/editor.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery-\/1.\+12.\+4.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery.\+validate.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery.\+validate.\+unobtrusive.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery.\+unobtrusive-\/ajax.\+min.\+js\char`\"{}$>$$<$/script$>$
+
+$<$script src = \char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/3.\+3.\+6/js/bootstrap.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/tree-\/view/bootstrap-\/treeview.\+min.\+js\char`\"{}$>$$<$/script$>$
+
+$<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/media/js/jquery.\+data\+Tables.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/media/js/data\+Tables.\+bootstrap.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/data\+Tables.\+buttons.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Responsive/js/data\+Tables.\+responsive.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Responsive/js/responsive.\+bootstrap.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/jszip-\/2.\+5.\+0/jszip.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/pdfmake-\/0.\+1.\+18/pdfmake.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/pdfmake-\/0.\+1.\+18/vfs\+\_\+fonts.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Scroller/js/data\+Tables.\+scroller.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Col\+Reorder/js/data\+Tables.\+col\+Reorder.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Select/js/data\+Tables.\+select.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/buttons.\+html5.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/buttons.\+print.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/buttons.\+col\+Vis.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/js/data\+Tables.\+editor.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/js/editor.\+bootstrap.\+min.\+js\char`\"{}$>$$<$/script$>$
+
+Alternatively, you can use a concatonated and minified C\+DN from here\+: \href{https://datatables.net/download/}{\texttt{ https\+://datatables.\+net/download/}}
+
+However you will need this regardless\+: $<$script src = \char`\"{}$\sim$/\+Scripts/data\+Tables\+Extensions.\+js\char`\"{} $>$$<$/ script $>$ ~\newline
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_ada6b96b4496c713b8ff581b6d6585b59}\label{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_ada6b96b4496c713b8ff581b6d6585b59}} 
+\index{JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}!GenerateAdditionalJavaScript@{GenerateAdditionalJavaScript}}
+\index{GenerateAdditionalJavaScript@{GenerateAdditionalJavaScript}!JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}}
+\doxysubsubsection{\texorpdfstring{GenerateAdditionalJavaScript()}{GenerateAdditionalJavaScript()}}
+{\footnotesize\ttfamily abstract string J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table.\+Generate\+Additional\+Java\+Script (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_j_b_toolkit_1_1_views_1_1_i_jquery_data_table_aff3b39970cdee9d21cb6571dc51bcfdd}{J\+B\+Toolkit.\+Views.\+I\+Jquery\+Data\+Table}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a4f19809ab58c14ec4a8bb5d34e199956}{J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table}}, \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a3ffff18dd771074cbfad03e9208f9300}{J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table}}, \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_json_data_table_ae9d5d21aa9c25f4d392742891c3312ba}{J\+B\+Toolkit.\+Views.\+Jquery\+Json\+Data\+Table}}, and \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_html_data_table_a398de2e48ec7307d0e78f0621c572119}{J\+B\+Toolkit.\+Views.\+Jquery\+Html\+Data\+Table}}.
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a2dccb9675ad0b405b0449798e0a22e6e}\label{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a2dccb9675ad0b405b0449798e0a22e6e}} 
+\index{JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}!GenerateFilters@{GenerateFilters}}
+\index{GenerateFilters@{GenerateFilters}!JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}}
+\doxysubsubsection{\texorpdfstring{GenerateFilters()}{GenerateFilters()}}
+{\footnotesize\ttfamily abstract string J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table.\+Generate\+Filters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_j_b_toolkit_1_1_views_1_1_i_jquery_data_table_aa33b71651558f67679ef1ad0026879f8}{J\+B\+Toolkit.\+Views.\+I\+Jquery\+Data\+Table}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_aa41d589adac268227af5b944805da7e8}{J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table}}, \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a3ab7f70d52ec7f0ebb9a1c2cf0713ce7}{J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table}}, \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_json_data_table_ad5a01f26652a8310dc841ebf384655b8}{J\+B\+Toolkit.\+Views.\+Jquery\+Json\+Data\+Table}}, and \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_html_data_table_a0b27e6f216a74b1ddbe14f50c151578d}{J\+B\+Toolkit.\+Views.\+Jquery\+Html\+Data\+Table}}.
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a364cb73f1db7c1aee55ba4be2bba0b20}\label{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a364cb73f1db7c1aee55ba4be2bba0b20}} 
+\index{JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}!GenerateHtmlTable@{GenerateHtmlTable}}
+\index{GenerateHtmlTable@{GenerateHtmlTable}!JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}}
+\doxysubsubsection{\texorpdfstring{GenerateHtmlTable()}{GenerateHtmlTable()}}
+{\footnotesize\ttfamily abstract string J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table.\+Generate\+Html\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_j_b_toolkit_1_1_views_1_1_i_jquery_data_table_a35e4498c27b6cfdff3ad803e3ad7c1b2}{J\+B\+Toolkit.\+Views.\+I\+Jquery\+Data\+Table}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_html_data_table_a077203fbceee60cece1df48a11b070ef}{J\+B\+Toolkit.\+Views.\+Jquery\+Html\+Data\+Table}}, \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_aea412518dfb28007320e52ed6a7b37fe}{J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table}}, \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_ae957891868a002124345d87d990964bf}{J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table}}, and \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_json_data_table_a7cea3f270013cd329bab34840cbbc246}{J\+B\+Toolkit.\+Views.\+Jquery\+Json\+Data\+Table}}.
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a5240710a0ba99e58fc1c3bc94995c740}\label{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a5240710a0ba99e58fc1c3bc94995c740}} 
+\index{JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}!GenerateRegisterDataTableScript@{GenerateRegisterDataTableScript}}
+\index{GenerateRegisterDataTableScript@{GenerateRegisterDataTableScript}!JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}}
+\doxysubsubsection{\texorpdfstring{GenerateRegisterDataTableScript()}{GenerateRegisterDataTableScript()}}
+{\footnotesize\ttfamily abstract string J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table.\+Generate\+Register\+Data\+Table\+Script (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_j_b_toolkit_1_1_views_1_1_i_jquery_data_table_a82be9c8be8f5245a971c4f7efa80b73f}{J\+B\+Toolkit.\+Views.\+I\+Jquery\+Data\+Table}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_a7788f19be161450fa8a638fd0b5dcbcd}{J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table}}, \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a9bf8b4d2e61fd2285e0d25c40e555055}{J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table}}, \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_html_data_table_a38d33b9b2630798b43d7fd94df21902f}{J\+B\+Toolkit.\+Views.\+Jquery\+Html\+Data\+Table}}, and \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_json_data_table_a3127fbe9170abf2344d5577820ed0d9f}{J\+B\+Toolkit.\+Views.\+Jquery\+Json\+Data\+Table}}.
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a892fa4c2585d8f9e6a64fad5aaf43c6a}\label{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a892fa4c2585d8f9e6a64fad5aaf43c6a}} 
+\index{JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}!GenerateRegisterFiltersScript@{GenerateRegisterFiltersScript}}
+\index{GenerateRegisterFiltersScript@{GenerateRegisterFiltersScript}!JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}}
+\doxysubsubsection{\texorpdfstring{GenerateRegisterFiltersScript()}{GenerateRegisterFiltersScript()}}
+{\footnotesize\ttfamily abstract string J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table.\+Generate\+Register\+Filters\+Script (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_j_b_toolkit_1_1_views_1_1_i_jquery_data_table_a4dafd53a44abfe9984ab06735545269e}{J\+B\+Toolkit.\+Views.\+I\+Jquery\+Data\+Table}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_editor_data_table_acbb4100c99fa52cc08917c77c6e4818f}{J\+B\+Toolkit.\+Views.\+Jquery\+Editor\+Data\+Table}}, \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a7667acb4a375c6f058fbb7751905fd9f}{J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table}}, \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_json_data_table_ac6c418d5d4a59e230bb7db5c5f076ab3}{J\+B\+Toolkit.\+Views.\+Jquery\+Json\+Data\+Table}}, and \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_html_data_table_a2a94ca1f637a8e031d33c708f30686c2}{J\+B\+Toolkit.\+Views.\+Jquery\+Html\+Data\+Table}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a6659eaa1965f69b53bd59e8b470dd310}\label{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a6659eaa1965f69b53bd59e8b470dd310}} 
+\index{JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}!AdditionalJavaScript@{AdditionalJavaScript}}
+\index{AdditionalJavaScript@{AdditionalJavaScript}!JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}}
+\doxysubsubsection{\texorpdfstring{AdditionalJavaScript}{AdditionalJavaScript}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table.\+Additional\+Java\+Script = string.\+Empty\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Adds custom Java\+Script To Bottom of Page 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_af09134fefeee11f779ef0cade9667aff}\label{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_af09134fefeee11f779ef0cade9667aff}} 
+\index{JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}!HideHeader@{HideHeader}}
+\index{HideHeader@{HideHeader}!JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}}
+\doxysubsubsection{\texorpdfstring{HideHeader}{HideHeader}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table.\+Hide\+Header = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Completely hide the auto filter, search, display amount and buttons 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a4146013300315831c5a283f21d81b0a9}\label{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a4146013300315831c5a283f21d81b0a9}} 
+\index{JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}!HideTitle@{HideTitle}}
+\index{HideTitle@{HideTitle}!JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}}
+\doxysubsubsection{\texorpdfstring{HideTitle}{HideTitle}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table.\+Hide\+Title = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Hides the top left header table name title text 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a33f1c2038b82c9400ad0fdbceda3c346}\label{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a33f1c2038b82c9400ad0fdbceda3c346}} 
+\index{JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}!PullNavBarUp@{PullNavBarUp}}
+\index{PullNavBarUp@{PullNavBarUp}!JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}}
+\doxysubsubsection{\texorpdfstring{PullNavBarUp}{PullNavBarUp}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table.\+Pull\+Nav\+Bar\+Up = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Pulls the navbar bottom border up 2px if there\textquotesingle{}s a gap (sometimes happenes with displaying datatable within a nested divs) 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a72c55dcf1046f4ba6342f15445ec76c0}\label{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a72c55dcf1046f4ba6342f15445ec76c0}} 
+\index{JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}!Responsive@{Responsive}}
+\index{Responsive@{Responsive}!JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}}
+\doxysubsubsection{\texorpdfstring{Responsive}{Responsive}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table.\+Responsive = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Collapse columns that don\textquotesingle{}t find into the width of the screen / window 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a13bf0d926a1fb7cbda470d6c38775422}\label{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a13bf0d926a1fb7cbda470d6c38775422}} 
+\index{JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}!TableName@{TableName}}
+\index{TableName@{TableName}!JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}}
+\doxysubsubsection{\texorpdfstring{TableName}{TableName}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table.\+Table\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Table name -\/ will display as header -\/ can included spaces 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a18f6a09728fb6e3593a3157c18342bec}\label{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a18f6a09728fb6e3593a3157c18342bec}} 
+\index{JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}!UniqueID@{UniqueID}}
+\index{UniqueID@{UniqueID}!JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}}
+\doxysubsubsection{\texorpdfstring{UniqueID}{UniqueID}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table.\+Unique\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Used so we don\textquotesingle{}t have H\+T\+ML ID clashes 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_ac4116e24ccf5283404cfdbbd37688e5c}\label{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_ac4116e24ccf5283404cfdbbd37688e5c}} 
+\index{JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}!UseCustomHeader@{UseCustomHeader}}
+\index{UseCustomHeader@{UseCustomHeader}!JBToolkit.Views.\_JqueryDataTable@{JBToolkit.Views.\_JqueryDataTable}}
+\doxysubsubsection{\texorpdfstring{UseCustomHeader}{UseCustomHeader}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table.\+Use\+Custom\+Header = true\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether or not to include the cool custom header or just use the Data\+Table default 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+J\+Query\+Data\+Table\+View\+Models/\+J\+Query\+Data\+Tables/\mbox{\hyperlink{___jquery_data_table_8cs}{\+\_\+\+Jquery\+Data\+Table.\+cs}}\end{DoxyCompactItemize}

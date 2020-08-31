@@ -1,0 +1,4 @@
+<map id="JBToolkit.Windows.ServiceHelper.AgressiveRestartService" name="JBToolkit.Windows.ServiceHelper.AgressiveRestartService">
+<area shape="rect" id="node1" title="Performs an aggressive restart of a service (i.e. kill the actual process if failing)...." alt="" coords="5,5,208,47"/>
+<area shape="rect" id="node2" href="$da/dbe/class_j_b_toolkit_1_1_windows_1_1_process_helper.html#a1e9abd54a8394b6a07af2ab104595539" title="Get remote process(s) by name (can also be used to get local process if you use &#39;localhost&#39;)...." alt="" coords="256,5,440,47"/>
+</map>

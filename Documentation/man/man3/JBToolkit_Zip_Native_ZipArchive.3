@@ -1,0 +1,144 @@
+.TH "JBToolkit.Zip.Native.ZipArchive" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Zip.Native.ZipArchive \- Read, write and modify \fBZip\fP files using the \fBZip\fP implementation native to \fBWindows\fP\&. It doesn't require any third party packages to utilise which can be benefifical in some circumstances\&. It may struggle with large zip files however\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBIDisposable\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBZipFileInfo\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBCompressionMethodEnum\fP { \fBCompressionMethodEnum\&.Stored\fP, \fBCompressionMethodEnum\&.Deflated\fP }"
+.br
+.ti -1c
+.RI "enum \fBDeflateOptionEnum\fP { \fBDeflateOptionEnum\&.Normal\fP, \fBDeflateOptionEnum\&.Maximum\fP, \fBDeflateOptionEnum\&.Fast\fP, \fBDeflateOptionEnum\&.SuperFast\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBZipArchive\fP ()"
+.br
+.ti -1c
+.RI "\fBZipFileInfo\fP \fBAddFile\fP (string path, \fBCompressionMethodEnum\fP compmeth=\fBCompressionMethodEnum\&.Deflated\fP, \fBDeflateOptionEnum\fP option=\fBDeflateOptionEnum\&.Normal\fP)"
+.br
+.ti -1c
+.RI "void \fBDeleteFile\fP (string name)"
+.br
+.ti -1c
+.RI "void \fBDispose\fP ()"
+.br
+.ti -1c
+.RI "\fBZipFileInfo\fP \fBGetFile\fP (string name)"
+.br
+.ti -1c
+.RI "Stream \fBGetFile\fP (string zipPath, string fileName)"
+.br
+.ti -1c
+.RI "Stream \fBGetFile\fP (Stream zipStream, string fileName)"
+.br
+.ti -1c
+.RI "void \fBExtractFile\fP (string zipPath, string fileName, string outputPath)"
+.br
+.ti -1c
+.RI "void \fBExtractFile\fP (Stream zipStream, string fileName, string outputPath)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBZipArchive\fP \fBOpenOnFile\fP (string path, FileMode mode=FileMode\&.Open, FileAccess access=FileAccess\&.Read, FileShare share=FileShare\&.Read, bool streaming=false)"
+.br
+.ti -1c
+.RI "static \fBZipArchive\fP \fBOpenOnStream\fP (Stream stream, FileMode mode=FileMode\&.OpenOrCreate, FileAccess access=FileAccess\&.ReadWrite, bool streaming=false)"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "\fBIEnumerable\fP< \fBZipFileInfo\fP > \fBFiles\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "\fBIEnumerable\fP< string > \fBFileNames\fP\fC [get]\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Read, write and modify \fBZip\fP files using the \fBZip\fP implementation native to \fBWindows\fP\&. It doesn't require any third party packages to utilise which can be benefifical in some circumstances\&. It may struggle with large zip files however\&. 
+
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBJBToolkit\&.Zip\&.Native\&.ZipArchive\&.CompressionMethodEnum\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIStored \fP\fP
+.TP
+\fB\fIDeflated \fP\fP
+.SS "enum \fBJBToolkit\&.Zip\&.Native\&.ZipArchive\&.DeflateOptionEnum\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINormal \fP\fP
+.TP
+\fB\fIMaximum \fP\fP
+.TP
+\fB\fIFast \fP\fP
+.TP
+\fB\fISuperFast \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.Zip\&.Native\&.ZipArchive\&.ZipArchive ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBZipFileInfo\fP JBToolkit\&.Zip\&.Native\&.ZipArchive\&.AddFile (string path, \fBCompressionMethodEnum\fP compmeth = \fC\fBCompressionMethodEnum\&.Deflated\fP\fP, \fBDeflateOptionEnum\fP option = \fC\fBDeflateOptionEnum\&.Normal\fP\fP)"
+
+.SS "void JBToolkit\&.Zip\&.Native\&.ZipArchive\&.DeleteFile (string name)"
+
+.SS "void JBToolkit\&.Zip\&.Native\&.ZipArchive\&.Dispose ()"
+
+.SS "void JBToolkit\&.Zip\&.Native\&.ZipArchive\&.ExtractFile (Stream zipStream, string fileName, string outputPath)"
+
+.SS "void JBToolkit\&.Zip\&.Native\&.ZipArchive\&.ExtractFile (string zipPath, string fileName, string outputPath)"
+
+.SS "Stream JBToolkit\&.Zip\&.Native\&.ZipArchive\&.GetFile (Stream zipStream, string fileName)"
+
+.SS "\fBZipFileInfo\fP JBToolkit\&.Zip\&.Native\&.ZipArchive\&.GetFile (string name)"
+
+.SS "Stream JBToolkit\&.Zip\&.Native\&.ZipArchive\&.GetFile (string zipPath, string fileName)"
+
+.SS "static \fBZipArchive\fP JBToolkit\&.Zip\&.Native\&.ZipArchive\&.OpenOnFile (string path, FileMode mode = \fCFileMode\&.Open\fP, FileAccess access = \fCFileAccess\&.Read\fP, FileShare share = \fCFileShare\&.Read\fP, bool streaming = \fCfalse\fP)\fC [static]\fP"
+
+.SS "static \fBZipArchive\fP JBToolkit\&.Zip\&.Native\&.ZipArchive\&.OpenOnStream (Stream stream, FileMode mode = \fCFileMode\&.OpenOrCreate\fP, FileAccess access = \fCFileAccess\&.ReadWrite\fP, bool streaming = \fCfalse\fP)\fC [static]\fP"
+
+.SH "Property Documentation"
+.PP 
+.SS "\fBIEnumerable\fP<string> JBToolkit\&.Zip\&.Native\&.ZipArchive\&.FileNames\fC [get]\fP"
+
+.SS "\fBIEnumerable\fP<\fBZipFileInfo\fP> JBToolkit\&.Zip\&.Native\&.ZipArchive\&.Files\fC [get]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

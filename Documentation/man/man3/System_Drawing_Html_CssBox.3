@@ -1,0 +1,954 @@
+.TH "System.Drawing.Html.CssBox" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+System.Drawing.Html.CssBox \- Represents a CSS Box of text or replaced elements\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBSystem\&.Drawing\&.Html\&.CssAnonymousBlockBox\fP, \fBSystem\&.Drawing\&.Html\&.CssAnonymousBox\fP, \fBSystem\&.Drawing\&.Html\&.CssTable\&.SpacingBox\fP, and \fBSystem\&.Drawing\&.Html\&.InitialHtmlContainer\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCssBox\fP (\fBCssBox\fP parentBox)"
+.br
+.ti -1c
+.RI "float \fBGetEmHeight\fP ()"
+.br
+.RI "Gets the height of the font in the specified units "
+.ti -1c
+.RI "virtual void \fBMeasureBounds\fP (Graphics g)"
+.br
+.RI "Measures the bounds of box and children, recursively\&. "
+.ti -1c
+.RI "void \fBPaint\fP (Graphics g, bool roundCorners)"
+.br
+.RI "Paints the fragment "
+.ti -1c
+.RI "void \fBSetBounds\fP (Rectangle r)"
+.br
+.RI "Sets the bounds of the box "
+.ti -1c
+.RI "void \fBSetBounds\fP (RectangleF rectangle)"
+.br
+.RI "Sets the bounds of the box "
+.ti -1c
+.RI "override string \fBToString\fP ()"
+.br
+.RI "ToString override\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBAvailableWidth\fP"
+.br
+.RI "Gets the width available on the box, counting padding and margin\&. "
+.ti -1c
+.RI "RectangleF \fBBounds\fP => new RectangleF(\fBLocation\fP, \fBSize\fP)"
+.br
+.RI "Gets the bounds of the box "
+.ti -1c
+.RI "float \fBClientLeft\fP => Location\&.X + \fBActualBorderLeftWidth\fP + \fBActualPaddingLeft\fP"
+.br
+.RI "Gets the left of the client rectangle (Where content starts rendering) "
+.ti -1c
+.RI "float \fBClientTop\fP => Location\&.Y + \fBActualBorderTopWidth\fP + \fBActualPaddingTop\fP"
+.br
+.RI "Gets the top of the client rectangle (Where content starts rendering) "
+.ti -1c
+.RI "float \fBClientRight\fP => \fBActualRight\fP \- \fBActualPaddingRight\fP \- \fBActualBorderRightWidth\fP"
+.br
+.RI "Gets the right of the client rectangle "
+.ti -1c
+.RI "float \fBClientBottom\fP => \fBActualBottom\fP \- \fBActualPaddingBottom\fP \- \fBActualBorderBottomWidth\fP"
+.br
+.RI "Gets the bottom of the client rectangle "
+.ti -1c
+.RI "RectangleF \fBClientRectangle\fP => RectangleF\&.FromLTRB(\fBClientLeft\fP, \fBClientTop\fP, \fBClientRight\fP, \fBClientBottom\fP)"
+.br
+.RI "Gets the client rectangle "
+.ti -1c
+.RI "\fBInitialHtmlContainer\fP \fBInitialContainer\fP => \fB_initialContainer\fP"
+.br
+.RI "Gets the InitialContainer of the Box\&. WARNING: May be null\&. "
+.ti -1c
+.RI "bool \fBIsImage\fP => Words\&.Count == 1 && Words[0]\&.IsImage"
+.br
+.RI "Gets if this box represents an image "
+.ti -1c
+.RI "bool \fBIsRounded\fP"
+.br
+.RI "Gets a value indicating if at least one of the corners of the box is rounded "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCssBox\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBInitialHtmlContainer\fP \fB_initialContainer\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "string \fBBorderBottomWidth\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderLeftWidth\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderRightWidth\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderTopWidth\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderWidth\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderBottomStyle\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderLeftStyle\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderRightStyle\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderStyle\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderTopStyle\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderColor\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderBottomColor\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderLeftColor\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderRightColor\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderTopColor\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorder\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderBottom\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderLeft\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderRight\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderTop\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderSpacing\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBorderCollapse\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBCornerRadius\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBCornerNWRadius\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBCornerNERadius\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBCornerSERadius\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBCornerSWRadius\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBMargin\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBMarginBottom\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBMarginLeft\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBMarginRight\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBMarginTop\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBPadding\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBPaddingBottom\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBPaddingLeft\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBPaddingRight\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBPaddingTop\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBLeft\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBTop\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBRight\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBottom\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBWidth\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBHeight\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBackgroundColor\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBackgroundImage\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBackgroundRepeat\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBackgroundGradient\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBBackgroundGradientAngle\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBColor\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBDisplay\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBDirection\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBEmptyCells\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBFloat\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBPosition\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBLineHeight\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBVerticalAlign\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBTextIndent\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBTextAlign\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBTextDecoration\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBWhiteSpace\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBWordSpacing\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBFont\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBFontFamily\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBFontSize\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBFontStyle\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBFontVariant\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBFontWeight\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBListStyle\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBListStylePosition\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBListStyleImage\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBListStyleType\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "float \fBActualPaddingTop\fP\fC [get]\fP"
+.br
+.RI "Gets the actual top's padding "
+.ti -1c
+.RI "float \fBActualPaddingLeft\fP\fC [get]\fP"
+.br
+.RI "Gets the actual padding on the left "
+.ti -1c
+.RI "float \fBActualPaddingBottom\fP\fC [get]\fP"
+.br
+.RI "Gets the actual Padding of the bottom "
+.ti -1c
+.RI "float \fBActualPaddingRight\fP\fC [get]\fP"
+.br
+.RI "Gets the actual padding on the right "
+.ti -1c
+.RI "float \fBActualMarginTop\fP\fC [get]\fP"
+.br
+.RI "Gets the actual top's Margin "
+.ti -1c
+.RI "float \fBActualMarginLeft\fP\fC [get]\fP"
+.br
+.RI "Gets the actual Margin on the left "
+.ti -1c
+.RI "float \fBActualMarginBottom\fP\fC [get]\fP"
+.br
+.RI "Gets the actual Margin of the bottom "
+.ti -1c
+.RI "float \fBActualMarginRight\fP\fC [get]\fP"
+.br
+.RI "Gets the actual Margin on the right "
+.ti -1c
+.RI "float \fBActualBorderTopWidth\fP\fC [get]\fP"
+.br
+.RI "Gets the actual top border width "
+.ti -1c
+.RI "float \fBActualBorderLeftWidth\fP\fC [get]\fP"
+.br
+.RI "Gets the actual Left border width "
+.ti -1c
+.RI "float \fBActualBorderBottomWidth\fP\fC [get]\fP"
+.br
+.RI "Gets the actual Bottom border width "
+.ti -1c
+.RI "float \fBActualBorderRightWidth\fP\fC [get]\fP"
+.br
+.RI "Gets the actual Right border width "
+.ti -1c
+.RI "\fBColor\fP \fBActualBorderTopColor\fP\fC [get]\fP"
+.br
+.RI "Gets the actual top border Color "
+.ti -1c
+.RI "\fBColor\fP \fBActualBorderLeftColor\fP\fC [get]\fP"
+.br
+.RI "Gets the actual Left border Color "
+.ti -1c
+.RI "\fBColor\fP \fBActualBorderBottomColor\fP\fC [get]\fP"
+.br
+.RI "Gets the actual Bottom border Color "
+.ti -1c
+.RI "\fBColor\fP \fBActualBorderRightColor\fP\fC [get]\fP"
+.br
+.RI "Gets the actual Right border Color "
+.ti -1c
+.RI "float \fBActualCornerNW\fP\fC [get]\fP"
+.br
+.RI "Gets the actual lenght of the north west corner "
+.ti -1c
+.RI "float \fBActualCornerNE\fP\fC [get]\fP"
+.br
+.RI "Gets the actual lenght of the north east corner "
+.ti -1c
+.RI "float \fBActualCornerSE\fP\fC [get]\fP"
+.br
+.RI "Gets the actual lenght of the south east corner "
+.ti -1c
+.RI "float \fBActualCornerSW\fP\fC [get]\fP"
+.br
+.RI "Gets the actual lenght of the south west corner "
+.ti -1c
+.RI "float \fBActualWordSpacing\fP\fC [get]\fP"
+.br
+.RI "Gets the actual word spacing of the word\&. "
+.ti -1c
+.RI "\fBColor\fP \fBActualColor\fP\fC [get]\fP"
+.br
+.RI "Gets the actual color for the text\&. "
+.ti -1c
+.RI "\fBColor\fP \fBActualBackgroundColor\fP\fC [get]\fP"
+.br
+.RI "Gets the actual background color of the box "
+.ti -1c
+.RI "\fBColor\fP \fBActualBackgroundGradient\fP\fC [get]\fP"
+.br
+.RI "Gets the second color that creates a gradient for the background "
+.ti -1c
+.RI "float \fBActualBackgroundGradientAngle\fP\fC [get]\fP"
+.br
+.RI "Gets the actual angle specified for the background gradient "
+.ti -1c
+.RI "\fBFont\fP \fBActualParentFont\fP\fC [get]\fP"
+.br
+.RI "Gets the actual font of the parent "
+.ti -1c
+.RI "\fBFont\fP \fBActualFont\fP\fC [get]\fP"
+.br
+.RI "Gets the font that should be actually used to paint the text of the box "
+.ti -1c
+.RI "float \fBActualTextIndent\fP\fC [get]\fP"
+.br
+.RI "Gets the text indentation (on first line only) "
+.ti -1c
+.RI "float \fBActualBorderSpacingHorizontal\fP\fC [get]\fP"
+.br
+.RI "Gets the actual horizontal border spacing for tables "
+.ti -1c
+.RI "float \fBActualBorderSpacingVertical\fP\fC [get]\fP"
+.br
+.RI "Gets the actual vertical border spacing for tables "
+.ti -1c
+.RI "\fBCssBox\fP \fBListItemBox\fP\fC [get]\fP"
+.br
+.RI "Gets the • box "
+.ti -1c
+.RI "float \fBActualBottom\fP\fC [get, set]\fP"
+.br
+.RI "Gets or sets the bottom of the box\&. (When setting, alters only the Size\&.Height of the box) "
+.ti -1c
+.RI "\fBList\fP< \fBCssBox\fP > \fBBoxes\fP\fC [get]\fP"
+.br
+.RI "Gets the childrenn boxes of this box "
+.ti -1c
+.RI "\fBCssBox\fP \fBContainingBlock\fP\fC [get]\fP"
+.br
+.RI "Gets the containing block-box of this box\&. (The nearest parent box with display=block) "
+.ti -1c
+.RI "float \fBFontAscent\fP\fC [get]\fP"
+.br
+.RI "Gets the font's ascent "
+.ti -1c
+.RI "float \fBFontLineSpacing\fP\fC [get]\fP"
+.br
+.RI "Gets the font's line spacing "
+.ti -1c
+.RI "float \fBFontDescent\fP\fC [get]\fP"
+.br
+.RI "Gets the font's descent "
+.ti -1c
+.RI "\fBHtmlTag\fP \fBHtmlTag\fP\fC [get]\fP"
+.br
+.RI "Gets the HTMLTag that hosts this box "
+.ti -1c
+.RI "bool \fBIsSpaceOrEmpty\fP\fC [get]\fP"
+.br
+.RI "Tells if the box is empty or contains just blank spaces "
+.ti -1c
+.RI "PointF \fBLocation\fP\fC [get, set]\fP"
+.br
+.RI "Gets or sets the location of the box "
+.ti -1c
+.RI "\fBCssBox\fP \fBParentBox\fP\fC [get, set]\fP"
+.br
+.RI "Gets or sets the parent box of this box "
+.ti -1c
+.RI "float \fBActualRight\fP\fC [get, set]\fP"
+.br
+.RI "Gets the right of the box\&. When setting, it will affect only the width of the box\&. "
+.ti -1c
+.RI "SizeF \fBSize\fP\fC [get, set]\fP"
+.br
+.RI "Gets or sets the size of the box "
+.ti -1c
+.RI "string \fBText\fP\fC [get, set]\fP"
+.br
+.RI "Gets or sets the inner text of the box "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents a CSS Box of text or replaced elements\&. 
+
+The Box can contains other boxes, that's the way that the CSS Tree is composed\&. To know more about boxes visit CSS spec: http://www.w3.org/TR/CSS21/box.html 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "System\&.Drawing\&.Html\&.CssBox\&.CssBox ()\fC [protected]\fP"
+
+.SS "System\&.Drawing\&.Html\&.CssBox\&.CssBox (\fBCssBox\fP parentBox)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.GetEmHeight ()"
+
+.PP
+Gets the height of the font in the specified units 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "virtual void System\&.Drawing\&.Html\&.CssBox\&.MeasureBounds (Graphics g)\fC [virtual]\fP"
+
+.PP
+Measures the bounds of box and children, recursively\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP Device context to draw
+.RE
+.PP
+
+.PP
+Reimplemented in \fBSystem\&.Drawing\&.Html\&.InitialHtmlContainer\fP\&.
+.SS "void System\&.Drawing\&.Html\&.CssBox\&.Paint (Graphics g, bool roundCorners)"
+
+.PP
+Paints the fragment 
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP 
+.br
+\fIroundCorners\fP 
+.RE
+.PP
+
+.SS "void System\&.Drawing\&.Html\&.CssBox\&.SetBounds (Rectangle r)"
+
+.PP
+Sets the bounds of the box 
+.PP
+\fBParameters\fP
+.RS 4
+\fIr\fP 
+.RE
+.PP
+
+.SS "void System\&.Drawing\&.Html\&.CssBox\&.SetBounds (RectangleF rectangle)"
+
+.PP
+Sets the bounds of the box 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrectangle\fP 
+.RE
+.PP
+
+.SS "override string System\&.Drawing\&.Html\&.CssBox\&.ToString ()"
+
+.PP
+ToString override\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBInitialHtmlContainer\fP System\&.Drawing\&.Html\&.CssBox\&._initialContainer\fC [protected]\fP"
+
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.AvailableWidth"
+\fBInitial value:\fP
+.PP
+.nf
+=> Size\&.Width - ActualBorderLeftWidth - ActualPaddingLeft - ActualPaddingRight -
+                                       ActualBorderRightWidth
+.fi
+.PP
+Gets the width available on the box, counting padding and margin\&. 
+.SS "RectangleF System\&.Drawing\&.Html\&.CssBox\&.Bounds => new RectangleF(\fBLocation\fP, \fBSize\fP)"
+
+.PP
+Gets the bounds of the box 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ClientBottom => \fBActualBottom\fP \- \fBActualPaddingBottom\fP \- \fBActualBorderBottomWidth\fP"
+
+.PP
+Gets the bottom of the client rectangle 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ClientLeft => Location\&.X + \fBActualBorderLeftWidth\fP + \fBActualPaddingLeft\fP"
+
+.PP
+Gets the left of the client rectangle (Where content starts rendering) 
+.SS "RectangleF System\&.Drawing\&.Html\&.CssBox\&.ClientRectangle => RectangleF\&.FromLTRB(\fBClientLeft\fP, \fBClientTop\fP, \fBClientRight\fP, \fBClientBottom\fP)"
+
+.PP
+Gets the client rectangle 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ClientRight => \fBActualRight\fP \- \fBActualPaddingRight\fP \- \fBActualBorderRightWidth\fP"
+
+.PP
+Gets the right of the client rectangle 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ClientTop => Location\&.Y + \fBActualBorderTopWidth\fP + \fBActualPaddingTop\fP"
+
+.PP
+Gets the top of the client rectangle (Where content starts rendering) 
+.SS "\fBInitialHtmlContainer\fP System\&.Drawing\&.Html\&.CssBox\&.InitialContainer => \fB_initialContainer\fP"
+
+.PP
+Gets the InitialContainer of the Box\&. WARNING: May be null\&. 
+.SS "bool System\&.Drawing\&.Html\&.CssBox\&.IsImage => Words\&.Count == 1 && Words[0]\&.IsImage"
+
+.PP
+Gets if this box represents an image 
+.SS "bool System\&.Drawing\&.Html\&.CssBox\&.IsRounded"
+\fBInitial value:\fP
+.PP
+.nf
+=>
+            ActualCornerNE > 0f || ActualCornerNW > 0f || ActualCornerSE > 0f || ActualCornerSW > 0f
+.fi
+.PP
+Gets a value indicating if at least one of the corners of the box is rounded 
+.SH "Property Documentation"
+.PP 
+.SS "\fBColor\fP System\&.Drawing\&.Html\&.CssBox\&.ActualBackgroundColor\fC [get]\fP"
+
+.PP
+Gets the actual background color of the box 
+.SS "\fBColor\fP System\&.Drawing\&.Html\&.CssBox\&.ActualBackgroundGradient\fC [get]\fP"
+
+.PP
+Gets the second color that creates a gradient for the background 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualBackgroundGradientAngle\fC [get]\fP"
+
+.PP
+Gets the actual angle specified for the background gradient 
+.SS "\fBColor\fP System\&.Drawing\&.Html\&.CssBox\&.ActualBorderBottomColor\fC [get]\fP"
+
+.PP
+Gets the actual Bottom border Color 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualBorderBottomWidth\fC [get]\fP"
+
+.PP
+Gets the actual Bottom border width 
+.SS "\fBColor\fP System\&.Drawing\&.Html\&.CssBox\&.ActualBorderLeftColor\fC [get]\fP"
+
+.PP
+Gets the actual Left border Color 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualBorderLeftWidth\fC [get]\fP"
+
+.PP
+Gets the actual Left border width 
+.SS "\fBColor\fP System\&.Drawing\&.Html\&.CssBox\&.ActualBorderRightColor\fC [get]\fP"
+
+.PP
+Gets the actual Right border Color 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualBorderRightWidth\fC [get]\fP"
+
+.PP
+Gets the actual Right border width 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualBorderSpacingHorizontal\fC [get]\fP"
+
+.PP
+Gets the actual horizontal border spacing for tables 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualBorderSpacingVertical\fC [get]\fP"
+
+.PP
+Gets the actual vertical border spacing for tables 
+.SS "\fBColor\fP System\&.Drawing\&.Html\&.CssBox\&.ActualBorderTopColor\fC [get]\fP"
+
+.PP
+Gets the actual top border Color 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualBorderTopWidth\fC [get]\fP"
+
+.PP
+Gets the actual top border width 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualBottom\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Gets or sets the bottom of the box\&. (When setting, alters only the Size\&.Height of the box) 
+.SS "\fBColor\fP System\&.Drawing\&.Html\&.CssBox\&.ActualColor\fC [get]\fP"
+
+.PP
+Gets the actual color for the text\&. 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualCornerNE\fC [get]\fP"
+
+.PP
+Gets the actual lenght of the north east corner 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualCornerNW\fC [get]\fP"
+
+.PP
+Gets the actual lenght of the north west corner 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualCornerSE\fC [get]\fP"
+
+.PP
+Gets the actual lenght of the south east corner 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualCornerSW\fC [get]\fP"
+
+.PP
+Gets the actual lenght of the south west corner 
+.SS "\fBFont\fP System\&.Drawing\&.Html\&.CssBox\&.ActualFont\fC [get]\fP"
+
+.PP
+Gets the font that should be actually used to paint the text of the box 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualMarginBottom\fC [get]\fP"
+
+.PP
+Gets the actual Margin of the bottom 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualMarginLeft\fC [get]\fP"
+
+.PP
+Gets the actual Margin on the left 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualMarginRight\fC [get]\fP"
+
+.PP
+Gets the actual Margin on the right 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualMarginTop\fC [get]\fP"
+
+.PP
+Gets the actual top's Margin 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualPaddingBottom\fC [get]\fP"
+
+.PP
+Gets the actual Padding of the bottom 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualPaddingLeft\fC [get]\fP"
+
+.PP
+Gets the actual padding on the left 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualPaddingRight\fC [get]\fP"
+
+.PP
+Gets the actual padding on the right 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualPaddingTop\fC [get]\fP"
+
+.PP
+Gets the actual top's padding 
+.SS "\fBFont\fP System\&.Drawing\&.Html\&.CssBox\&.ActualParentFont\fC [get]\fP"
+
+.PP
+Gets the actual font of the parent 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualRight\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Gets the right of the box\&. When setting, it will affect only the width of the box\&. 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualTextIndent\fC [get]\fP"
+
+.PP
+Gets the text indentation (on first line only) 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.ActualWordSpacing\fC [get]\fP"
+
+.PP
+Gets the actual word spacing of the word\&. 
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BackgroundColor\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BackgroundGradient\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BackgroundGradientAngle\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BackgroundImage\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BackgroundRepeat\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Border\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderBottom\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderBottomColor\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderBottomStyle\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderBottomWidth\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderCollapse\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderColor\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderLeft\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderLeftColor\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderLeftStyle\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderLeftWidth\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderRight\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderRightColor\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderRightStyle\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderRightWidth\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderSpacing\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderStyle\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderTop\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderTopColor\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderTopStyle\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderTopWidth\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.BorderWidth\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Bottom\fC [get]\fP, \fC [set]\fP"
+
+.SS "\fBList\fP<\fBCssBox\fP> System\&.Drawing\&.Html\&.CssBox\&.Boxes\fC [get]\fP"
+
+.PP
+Gets the childrenn boxes of this box 
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Color\fC [get]\fP, \fC [set]\fP"
+
+.SS "\fBCssBox\fP System\&.Drawing\&.Html\&.CssBox\&.ContainingBlock\fC [get]\fP"
+
+.PP
+Gets the containing block-box of this box\&. (The nearest parent box with display=block) 
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.CornerNERadius\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.CornerNWRadius\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.CornerRadius\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.CornerSERadius\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.CornerSWRadius\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Direction\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Display\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.EmptyCells\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Float\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Font\fC [get]\fP, \fC [set]\fP"
+
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.FontAscent\fC [get]\fP"
+
+.PP
+Gets the font's ascent 
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.FontDescent\fC [get]\fP"
+
+.PP
+Gets the font's descent 
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.FontFamily\fC [get]\fP, \fC [set]\fP"
+
+.SS "float System\&.Drawing\&.Html\&.CssBox\&.FontLineSpacing\fC [get]\fP"
+
+.PP
+Gets the font's line spacing 
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.FontSize\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.FontStyle\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.FontVariant\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.FontWeight\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Height\fC [get]\fP, \fC [set]\fP"
+
+.SS "\fBHtmlTag\fP System\&.Drawing\&.Html\&.CssBox\&.HtmlTag\fC [get]\fP"
+
+.PP
+Gets the HTMLTag that hosts this box 
+.SS "bool System\&.Drawing\&.Html\&.CssBox\&.IsSpaceOrEmpty\fC [get]\fP"
+
+.PP
+Tells if the box is empty or contains just blank spaces 
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Left\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.LineHeight\fC [get]\fP, \fC [set]\fP"
+
+.SS "\fBCssBox\fP System\&.Drawing\&.Html\&.CssBox\&.ListItemBox\fC [get]\fP"
+
+.PP
+Gets the • box 
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.ListStyle\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.ListStyleImage\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.ListStylePosition\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.ListStyleType\fC [get]\fP, \fC [set]\fP"
+
+.SS "PointF System\&.Drawing\&.Html\&.CssBox\&.Location\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Gets or sets the location of the box 
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Margin\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.MarginBottom\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.MarginLeft\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.MarginRight\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.MarginTop\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Padding\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.PaddingBottom\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.PaddingLeft\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.PaddingRight\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.PaddingTop\fC [get]\fP, \fC [set]\fP"
+
+.SS "\fBCssBox\fP System\&.Drawing\&.Html\&.CssBox\&.ParentBox\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Gets or sets the parent box of this box 
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Position\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Right\fC [get]\fP, \fC [set]\fP"
+
+.SS "SizeF System\&.Drawing\&.Html\&.CssBox\&.Size\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Gets or sets the size of the box 
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Text\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Gets or sets the inner text of the box 
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.TextAlign\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.TextDecoration\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.TextIndent\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Top\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.VerticalAlign\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.WhiteSpace\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.Width\fC [get]\fP, \fC [set]\fP"
+
+.SS "string System\&.Drawing\&.Html\&.CssBox\&.WordSpacing\fC [get]\fP, \fC [set]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

@@ -1,0 +1,136 @@
+.TH "JBToolkit.WinForms" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.WinForms
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAbstractControlDescriptionProvider\fP"
+.br
+.ti -1c
+.RI "class \fBColorPickerCell\fP"
+.br
+.RI "Cell colour - to be used with the ColourPicker control "
+.ti -1c
+.RI "class \fBColorPickerColumn\fP"
+.br
+.RI "Column colour - to be used with the ColourPicker control "
+.ti -1c
+.RI "class \fBColorPickerControl\fP"
+.br
+.RI "Colour picker control (Requires dll: LaMarvin\&.Windows\&.Forms\&.ColorPicker - Install-Package \fBColorPicker\fP -Version 1\&.0\&.2) "
+.ti -1c
+.RI "class \fBColourHelper\fP"
+.br
+.RI "Methods to convert RGB to hex, hex to RGB, alter colour brightness, lightness, intensity, also generate random 'nice' colours\&. "
+.ti -1c
+.RI "class \fBControlDirtyTracker\fP"
+.br
+.ti -1c
+.RI "class \fBControlDirtyTrackerCollection\fP"
+.br
+.ti -1c
+.RI "class \fBCursorHelper\fP"
+.br
+.ti -1c
+.RI "class \fBCustomMessageBox\fP"
+.br
+.RI "Simplified MsgBox style dialogue using MetroForms layout "
+.ti -1c
+.RI "class \fBCustomToolTip\fP"
+.br
+.RI "Nicer Custom Tooltip for controls "
+.ti -1c
+.RI "class \fBDirtyTrackerControlIgnoreList\fP"
+.br
+.RI "Put any control you don't want to be picked up by the dirty tracker here "
+.ti -1c
+.RI "class \fBEventDrivenDirtyTracker\fP"
+.br
+.RI "Tracks control changes\&. Good if you want to be able to tell if something needs saving or not - It fires on the changing event of the control without taking into account the value of say a text box\&.\&.\&. Use the '\fBValueDrivenDirtyTracker\fP' instead to enable that option "
+.ti -1c
+.RI "class \fBFastScrollDataGridView\fP"
+.br
+.RI "Must smoother scrolling \fBDataGridView\fP wrapper control "
+.ti -1c
+.RI "class \fBFilterTextBox\fP"
+.br
+.RI "Text Box control input mask wrapper "
+.ti -1c
+.RI "class \fBHtmlLabel\fP"
+.br
+.RI "Provides HTML rendering on the text of the label "
+.ti -1c
+.RI "class \fBHtmlPanel\fP"
+.br
+.RI "Provides HTML rendering on a panel "
+.ti -1c
+.RI "class \fBHtmlToolTip\fP"
+.br
+.RI "Provides HTML rendering on the tooltips "
+.ti -1c
+.RI "class \fBImageButton\fP"
+.br
+.RI "Image as button (with Cursor swap) "
+.ti -1c
+.RI "class \fBOptimisedMetroForm\fP"
+.br
+.RI "Abstract form to inherit that uses the MetroForms styler, and optimises buffering, drawing, size grips, resizing shadow, allows custom tooltip for each control by putting a string in the control's 'Tag' property and handles client screen DPI not set to 100% more effectively\&. "
+.ti -1c
+.RI "class \fBPopup\fP"
+.br
+.RI "Simple, nice general popup with a delay before dissappearing "
+.ti -1c
+.RI "class \fBRoundButton\fP"
+.br
+.RI "Nicer looking 'round' edge button "
+.ti -1c
+.RI "class \fBRoundedRectangleF\fP"
+.br
+.RI "Produces a rectangle graphics path with curved edges "
+.ti -1c
+.RI "class \fBRoundPictureBox\fP"
+.br
+.ti -1c
+.RI "class \fBRoundTextBox\fP"
+.br
+.RI "Nicer looking 'round' edge text box "
+.ti -1c
+.RI "class \fBScrollingListBox\fP"
+.br
+.RI "Event handling for 'scoll' of listbox - Can come in handy, say if you want to scroll two list boxes simultaneously "
+.ti -1c
+.RI "class \fBValueDrivenDirtyTracker\fP"
+.br
+.RI "Tracks control changes\&. Good if you want to be able to tell if something needs saving or not - It fires on the changing event while also taking into account the initial values (of say a text box) "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBMouseState\fP { \fBMouseState\&.Enter\fP, \fBMouseState\&.Leave\fP, \fBMouseState\&.Down\fP, \fBMouseState\&.Up\fP }"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBJBToolkit\&.WinForms\&.MouseState\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIEnter \fP\fP
+.TP
+\fB\fILeave \fP\fP
+.TP
+\fB\fIDown \fP\fP
+.TP
+\fB\fIUp \fP\fP
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

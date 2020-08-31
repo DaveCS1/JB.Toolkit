@@ -1,0 +1,7 @@
+<map id="JBToolkit.Images.ImageHelper.ResizeImageMaintainAspectRatio" name="JBToolkit.Images.ImageHelper.ResizeImageMaintainAspectRatio">
+<area shape="rect" id="node1" title="Resizes an image based on specific width and height" alt="" coords="555,71,772,112"/>
+<area shape="rect" id="node2" href="$d7/d87/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper.html#a4c87bef8e775c1722a9dfa9b88854dd7" title="Converts a Image to a icon (ico) with all the sizes windows likes" alt="" coords="280,5,481,47"/>
+<area shape="rect" id="node4" href="$de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper.html#a452df11286d2fc79555ab611259b0a5a" title="Resize an image with specific width and height and saved it to file" alt="" coords="272,71,489,112"/>
+<area shape="rect" id="node5" href="$de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper.html#a5601c4e5b92e8eb43ee28a7bda841be8" title="Resize an image with specific width and height and saved it to file" alt="" coords="255,136,507,177"/>
+<area shape="rect" id="node3" href="$d7/d87/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper.html#ae46d09535716587f944c5d4e87119d2a" title="Converts an image to a icon (ico)" alt="" coords="5,5,207,47"/>
+</map>

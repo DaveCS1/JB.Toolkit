@@ -1,0 +1,310 @@
+\hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common}{}\doxysection{J\+B\+Toolkit.\+Regular\+Expressions.\+Common Class Reference}
+\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common}\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Regular\+Expressions.\+Common\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{da/d81/class_j_b_toolkit_1_1_regular_expressions_1_1_common__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_af77c000b2af3ec983fb94d35bc608dab}{Pattern\+\_\+\+Email}} = @\char`\"{}$^\wedge$(\mbox{[}\textbackslash{}w-\/\textbackslash{}.\mbox{]}+)@((\textbackslash{}\mbox{[}\mbox{[}0-\/9\mbox{]}\{1,3\}\textbackslash{}.\mbox{[}0-\/9\mbox{]}\{1,3\}\textbackslash{}.\mbox{[}0-\/9\mbox{]}\{1,3\}\textbackslash{}.)$\vert$((\mbox{[}\textbackslash{}w-\/\mbox{]}+\textbackslash{}.)+))(\mbox{[}a-\/zA-\/Z\mbox{]}\{2,4\}$\vert$\mbox{[}0-\/9\mbox{]}\{1,3\})(\textbackslash{}\mbox{]}?)\$\char`\"{}
+\begin{DoxyCompactList}\small\item\em Includes uncomon email addresses \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ab1007a4ab0c7ff5eb5146b279a8a4b74}{Pattern\+\_\+\+Moderate\+Password}} = @\char`\"{}(?=(.$\ast$\mbox{[}0-\/9\mbox{]}))(?=.$\ast$\mbox{[}\textbackslash{}!@\#\$\%$^\wedge$\&$\ast$()\textbackslash{}\textbackslash{}\mbox{[}\textbackslash{}\mbox{]}\{\}\textbackslash{}-\/\+\_\++=$\sim$\`{}$\vert$\+:;\char`\"{}\char`\"{}\textquotesingle{}$<$$>$,./?\mbox{]})(?=.$\ast$\mbox{[}a-\/z\mbox{]})(?=(.$\ast$\mbox{[}A-\/Z\mbox{]}))(?=(.$\ast$)).\{8,\}\char`\"{}
+\begin{DoxyCompactList}\small\item\em Should have 1 lowercase letter, 1 uppercase letter, 1 number, and be at least 8 characters long \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a9c984d1d5f18ce8300b29fae03c62a36}{Pattern\+\_\+\+Complex\+Password}} = @\char`\"{}(?=(.$\ast$\mbox{[}0-\/9\mbox{]}))((?=.$\ast$\mbox{[}A-\/Za-\/z0-\/9\mbox{]})(?=.$\ast$\mbox{[}A-\/Z\mbox{]})(?=.$\ast$\mbox{[}a-\/z\mbox{]}))$^\wedge$.\{8,\}\$\char`\"{}
+\begin{DoxyCompactList}\small\item\em 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character and be at least 8 characters long \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a9800d5c67552525cd622b88c72d3c23c}{Pattern\+\_\+\+U\+R\+L\+With\+Protocol}} = @\char`\"{}https?\+:\textbackslash{}/\textbackslash{}/(www\textbackslash{}.)?\mbox{[}-\/a-\/zA-\/Z0-\/9@\+:\%.\+\_\+\textbackslash{}+$\sim$\#=\mbox{]}\{2,256\}\textbackslash{}.\mbox{[}a-\/z\mbox{]}\{2,6\}\textbackslash{}b(\mbox{[}-\/a-\/zA-\/Z0-\/9@\+:\%\+\_\+\textbackslash{}+.$\sim$\#()?\&//=\mbox{]}$\ast$)\char`\"{}
+\begin{DoxyCompactList}\small\item\em Has to include protocol (http / https) \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ae0f5849cca323e967f3ee4680d67bd68}{Pattern\+\_\+\+U\+RL}} = @\char`\"{}/$^\wedge$((https?$\vert$ftp$\vert$file)\+:\textbackslash{}/\textbackslash{}/)?(\mbox{[}\textbackslash{}da-\/z\textbackslash{}.-\/\mbox{]}+)\textbackslash{}.(\mbox{[}a-\/z\textbackslash{}.\mbox{]}\{2,6\})(\mbox{[}\textbackslash{}/\textbackslash{}w \textbackslash{}.-\/\mbox{]}$\ast$)$\ast$\textbackslash{}/?\$/\char`\"{}
+\begin{DoxyCompactList}\small\item\em Protocal (http / https optional) \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ae6878376b36804cb7a9b9e194b0515ef}{Pattern\+\_\+\+Phone\+Number\+International}} = @\char`\"{}$^\wedge$(?\+:(?\+:\textbackslash{}(?(?\+:00$\vert$\textbackslash{}+)(\mbox{[}1-\/4\mbox{]}\textbackslash{}d\textbackslash{}d$\vert$\mbox{[}1-\/9\mbox{]}\textbackslash{}d?)\textbackslash{})?)?\mbox{[}\textbackslash{}-\/\textbackslash{}.\textbackslash{} \textbackslash{}\textbackslash{}\textbackslash{}/\mbox{]}?)?((?\+:\textbackslash{}(?\textbackslash{}d\{1,\}\textbackslash{})?\mbox{[}\textbackslash{}-\/\textbackslash{}.\textbackslash{} \textbackslash{}\textbackslash{}\textbackslash{}/\mbox{]}?)\{0,\})(?\+:\mbox{[}\textbackslash{}-\/\textbackslash{}.\textbackslash{} \textbackslash{}\textbackslash{}\textbackslash{}/\mbox{]}?(?\+:\#$\vert$ext\textbackslash{}.?$\vert$extension$\vert$x)\mbox{[}\textbackslash{}-\/\textbackslash{}.\textbackslash{} \textbackslash{}\textbackslash{}\textbackslash{}/\mbox{]}?(\textbackslash{}d+))?\$\char`\"{}
+\begin{DoxyCompactList}\small\item\em International Phone Number (Optional country code / extension) \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ab7c337baf759803df45ce812505fee52}{Pattern\+\_\+\+Phone\+Number\+Basic}} = @\char`\"{}$^\wedge$\textbackslash{}b\textbackslash{}d\{3\}\mbox{[}-\/.\mbox{]}?\textbackslash{}d\{3\}\mbox{[}-\/.\mbox{]}?\textbackslash{}d\{4\}\textbackslash{}b\$\char`\"{}
+\begin{DoxyCompactList}\small\item\em Basic phone number \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_aa82a0a5b3d1256d711fa5b3cc00a9867}{Pattern\+\_\+\+File\+Path}} = @\char`\"{}((\textbackslash{}/$\vert$\textbackslash{}\textbackslash{}$\vert$\textbackslash{}/\textbackslash{}/$\vert$https?\+:\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}$\vert$https?\+:\textbackslash{}/\textbackslash{}/)\mbox{[}a-\/z0-\/9 \+\_\+@\textbackslash{}-\/$^\wedge$!\#\$\%\&+=\{\}.\textbackslash{}/\textbackslash{}\textbackslash{}\textbackslash{}\mbox{[}\textbackslash{}\mbox{]}\mbox{]}+)+\textbackslash{}.\mbox{[}a-\/z\mbox{]}+\$\char`\"{}
+\begin{DoxyCompactList}\small\item\em File path with directory, name, extension \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a75f48f714fcd1ec0812beba07ab9248b}{Pattern\+\_\+\+File\+Path\+Extension\+Optional}} = @\char`\"{}$^\wedge$(.+)/(\mbox{[}$^\wedge$/\mbox{]}+)\$\char`\"{}
+\begin{DoxyCompactList}\small\item\em File Path with optional Filename, extension \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_aac55a2861988e8689a36f0699e48027d}{Pattern\+\_\+\+National\+Insurance}} = @\char`\"{}$^\wedge$\mbox{[}A-\/C\+E\+G\+HJ-\/PR-\/TW-\/Z\mbox{]}\{1\}\mbox{[}A-\/C\+E\+G\+HJ-\/N\+PR-\/TW-\/Z\mbox{]}\{1\}\mbox{[}0-\/9\mbox{]}\{6\}\mbox{[}A-\/D\+FM\mbox{]}\{0,1\}\$\char`\"{}
+\begin{DoxyCompactList}\small\item\em Administration number optional \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a99dd79949559430481c21894dcc2d397}{Pattern\+\_\+\+Post\+Code}} = @\char`\"{}(\mbox{[}Gg\mbox{]}\mbox{[}Ii\mbox{]}\mbox{[}Rr\mbox{]} 0\mbox{[}Aa\mbox{]}\{2\})$\vert$(((\mbox{[}A-\/Za-\/z\mbox{]}\mbox{[}0-\/9\mbox{]}\{1,2\})$\vert$((\mbox{[}A-\/Za-\/z\mbox{]}\mbox{[}A-\/Ha-\/hJ-\/Yj-\/y\mbox{]}\mbox{[}0-\/9\mbox{]}\{1,2\})$\vert$((\mbox{[}A-\/Za-\/z\mbox{]}\mbox{[}0-\/9\mbox{]}\mbox{[}A-\/Za-\/z\mbox{]})$\vert$(\mbox{[}A-\/Za-\/z\mbox{]}\mbox{[}A-\/Ha-\/hJ-\/Yj-\/y\mbox{]}\mbox{[}0-\/9\mbox{]}\mbox{[}A-\/Za-\/z\mbox{]}?))))\textbackslash{}s?\mbox{[}0-\/9\mbox{]}\mbox{[}A-\/Za-\/z\mbox{]}\{2\})\char`\"{}
+\begin{DoxyCompactList}\small\item\em UK post code \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a557763befbdd9d17f8bf0fbc7885658b}{Pattern\+\_\+\+I\+Pv4\+Address}} = @\char`\"{}$^\wedge$(?\+:(?\+:25\mbox{[}0-\/5\mbox{]}$\vert$2\mbox{[}0-\/4\mbox{]}\mbox{[}0-\/9\mbox{]}$\vert$\mbox{[}01\mbox{]}?\mbox{[}0-\/9\mbox{]}\mbox{[}0-\/9\mbox{]}?)\textbackslash{}.)\{3\}(?\+:25\mbox{[}0-\/5\mbox{]}$\vert$2\mbox{[}0-\/4\mbox{]}\mbox{[}0-\/9\mbox{]}$\vert$\mbox{[}01\mbox{]}?\mbox{[}0-\/9\mbox{]}\mbox{[}0-\/9\mbox{]}?)\$\char`\"{}
+\begin{DoxyCompactList}\small\item\em ipv4 \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a857d6673da0c723233298117db112365}{Pattern\+\_\+\+I\+Pv6\+Address}} = @\char`\"{}$^\wedge$((\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{7,7\}\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}$\vert$(\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{1,7\}\+:$\vert$(\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{1,6\}\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}$\vert$(\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{1,5\}(\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\})\{1,2\}$\vert$(\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{1,4\}(\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\})\{1,3\}$\vert$(\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{1,3\}(\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\})\{1,4\}$\vert$(\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{1,2\}(\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\})\{1,5\}$\vert$\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:((\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\})\{1,6\})$\vert$\+:((\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\})\{1,7\}$\vert$\+:)$\vert$fe80\+:(\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{0,4\})\{0,4\}\%\mbox{[}0-\/9a-\/zA-\/Z\mbox{]}\{1,\}$\vert$\+::(ffff(\+:0\{1,4\})\{0,1\}\+:)\{0,1\}((25\mbox{[}0-\/5\mbox{]}$\vert$(2\mbox{[}0-\/4\mbox{]}$\vert$1\{0,1\}\mbox{[}0-\/9\mbox{]})\{0,1\}\mbox{[}0-\/9\mbox{]})\textbackslash{}.)\{3,3\}(25\mbox{[}0-\/5\mbox{]}$\vert$(2\mbox{[}0-\/4\mbox{]}$\vert$1\{0,1\}\mbox{[}0-\/9\mbox{]})\{0,1\}\mbox{[}0-\/9\mbox{]})$\vert$(\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{1,4\}\+:((25\mbox{[}0-\/5\mbox{]}$\vert$(2\mbox{[}0-\/4\mbox{]}$\vert$1\{0,1\}\mbox{[}0-\/9\mbox{]})\{0,1\}\mbox{[}0-\/9\mbox{]})\textbackslash{}.)\{3,3\}(25\mbox{[}0-\/5\mbox{]}$\vert$(2\mbox{[}0-\/4\mbox{]}$\vert$1\{0,1\}\mbox{[}0-\/9\mbox{]})\{0,1\}\mbox{[}0-\/9\mbox{]}))\$\char`\"{}
+\begin{DoxyCompactList}\small\item\em ipv6 \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a6acf22d073feecf10f7787646baa7888}{Pattern\+\_\+\+Html\+Tag}} = @\char`\"{}$<$\textbackslash{}/?\mbox{[}\textbackslash{}w\textbackslash{}s\mbox{]}$\ast$$>$$\vert$$<$.+\mbox{[}\textbackslash{}W\mbox{]}$>$\char`\"{}
+\begin{DoxyCompactList}\small\item\em String is H\+T\+ML / X\+ML Tag \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a780c359374b58c7be7b86c74ec98a6d4}{Pattern\+\_\+\+Slug}} = @\char`\"{}$^\wedge$\mbox{[}a-\/z0-\/9\mbox{]}+(?\+:-\/\mbox{[}a-\/z0-\/9\mbox{]}+)$\ast$\$\char`\"{}
+\begin{DoxyCompactList}\small\item\em U\+RL Slug \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_abd5c9bb7c52c782854a5999ee9f0a9c0}{Pattern\+\_\+\+Java\+Script\+Handler}} = @\char`\"{}\textbackslash{}bon\textbackslash{}w+=\textbackslash{}S+(?=.$\ast$$>$)\char`\"{}
+\begin{DoxyCompactList}\small\item\em Java\+Script Handler \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a253340ece0fc96ad2c65672831309d17}{Pattern\+\_\+\+Java\+Script\+Handler\+With\+Element}} = @\char`\"{}(?\+:$<$\mbox{[}$^\wedge$$>$\mbox{]}+\textbackslash{}s)(on\textbackslash{}S+)=\mbox{[}\char`\"{}\char`\"{}\textquotesingle{}\mbox{]}?((?\+:.(?!\mbox{[}\char`\"{}\char`\"{}\textquotesingle{}\mbox{]}?\textbackslash{}s+(?\+:\textbackslash{}S+)=$\vert$\mbox{[}$>$\char`\"{}\char`\"{}\textquotesingle{}\mbox{]}))+.)\mbox{[}\char`\"{}\char`\"{}\textquotesingle{}\mbox{]}?\char`\"{}
+\begin{DoxyCompactList}\small\item\em Java\+Script Handler with element4 \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_af421b5db2e79c1d8636d28a21b99d118}{Pattern\+\_\+\+Hex\+Colour}} = @\char`\"{}$^\wedge$\#?(\mbox{[}a-\/fA-\/F0-\/9\mbox{]}\{6\}$\vert$\mbox{[}a-\/fA-\/F0-\/9\mbox{]}\{3\})\$\char`\"{}
+\begin{DoxyCompactList}\small\item\em Hex Colour \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a6467aa4ca1b5c1f28538b8d7be58d5e6}{Pattern\+\_\+\+Date\+\_\+ddmmmm\+Y\+Y\+YY}} = @\char`\"{}$^\wedge$(?\+:(?\+:31(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)(?\+:0?\mbox{[}13578\mbox{]}$\vert$1\mbox{[}02\mbox{]}$\vert$(?\+:Jan$\vert$Mar$\vert$May$\vert$Jul$\vert$Aug$\vert$Oct$\vert$Dec)))\textbackslash{}1$\vert$(?\+:(?\+:29$\vert$30)(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)(?\+:0?\mbox{[}1,3-\/9\mbox{]}$\vert$1\mbox{[}0-\/2\mbox{]}$\vert$(?\+:Jan$\vert$Mar$\vert$Apr$\vert$May$\vert$Jun$\vert$Jul$\vert$Aug$\vert$Sep$\vert$Oct$\vert$Nov$\vert$Dec))\textbackslash{}2))(?\+:(?\+:1\mbox{[}6-\/9\mbox{]}$\vert$\mbox{[}2-\/9\mbox{]}\textbackslash{}d)?\textbackslash{}d\{2\})\$$\vert$$^\wedge$(?\+:29(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)(?\+:0?2$\vert$(?\+:Feb))\textbackslash{}3(?\+:(?\+:(?\+:1\mbox{[}6-\/9\mbox{]}$\vert$\mbox{[}2-\/9\mbox{]}\textbackslash{}d)?(?\+:0\mbox{[}48\mbox{]}$\vert$\mbox{[}2468\mbox{]}\mbox{[}048\mbox{]}$\vert$\mbox{[}13579\mbox{]}\mbox{[}26\mbox{]})$\vert$(?\+:(?\+:16$\vert$\mbox{[}2468\mbox{]}\mbox{[}048\mbox{]}$\vert$\mbox{[}3579\mbox{]}\mbox{[}26\mbox{]})00))))\$$\vert$$^\wedge$(?\+:0?\mbox{[}1-\/9\mbox{]}$\vert$1\textbackslash{}d$\vert$2\mbox{[}0-\/8\mbox{]})(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)(?\+:(?\+:0?\mbox{[}1-\/9\mbox{]}$\vert$(?\+:Jan$\vert$Feb$\vert$Mar$\vert$Apr$\vert$May$\vert$Jun$\vert$Jul$\vert$Aug$\vert$Sep))$\vert$(?\+:1\mbox{[}0-\/2\mbox{]}$\vert$(?\+:Oct$\vert$Nov$\vert$Dec)))\textbackslash{}4(?\+:(?\+:1\mbox{[}6-\/9\mbox{]}$\vert$\mbox{[}2-\/9\mbox{]}\textbackslash{}d)?\textbackslash{}d\{2\})\$\char`\"{}
+\begin{DoxyCompactList}\small\item\em Date Format dd-\/mmm-\/\+Y\+Y\+YY or dd/mmm/\+Y\+Y\+YY or dd.\+mmm.\+Y\+Y\+YY \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ae1b6733543e218fef9ec8d35b3aabe36}{Pattern\+\_\+\+Date\+\_\+dd\+M\+M\+Y\+Y\+YY}} = @\char`\"{}$^\wedge$(?\+:(?\+:31(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)(?\+:0?\mbox{[}13578\mbox{]}$\vert$1\mbox{[}02\mbox{]}))\textbackslash{}1$\vert$(?\+:(?\+:29$\vert$30)(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)(?\+:0?\mbox{[}1,3-\/9\mbox{]}$\vert$1\mbox{[}0-\/2\mbox{]})\textbackslash{}2))(?\+:(?\+:1\mbox{[}6-\/9\mbox{]}$\vert$\mbox{[}2-\/9\mbox{]}\textbackslash{}d)?\textbackslash{}d\{2\})\$$\vert$$^\wedge$(?\+:29(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)0?2\textbackslash{}3(?\+:(?\+:(?\+:1\mbox{[}6-\/9\mbox{]}$\vert$\mbox{[}2-\/9\mbox{]}\textbackslash{}d)?(?\+:0\mbox{[}48\mbox{]}$\vert$\mbox{[}2468\mbox{]}\mbox{[}048\mbox{]}$\vert$\mbox{[}13579\mbox{]}\mbox{[}26\mbox{]})$\vert$(?\+:(?\+:16$\vert$\mbox{[}2468\mbox{]}\mbox{[}048\mbox{]}$\vert$\mbox{[}3579\mbox{]}\mbox{[}26\mbox{]})00))))\$$\vert$$^\wedge$(?\+:0?\mbox{[}1-\/9\mbox{]}$\vert$1\textbackslash{}d$\vert$2\mbox{[}0-\/8\mbox{]})(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)(?\+:(?\+:0?\mbox{[}1-\/9\mbox{]})$\vert$(?\+:1\mbox{[}0-\/2\mbox{]}))\textbackslash{}4(?\+:(?\+:1\mbox{[}6-\/9\mbox{]}$\vert$\mbox{[}2-\/9\mbox{]}\textbackslash{}d)?\textbackslash{}d\{2\})\$\char`\"{}
+\begin{DoxyCompactList}\small\item\em Date Format dd-\/\+M\+M-\/\+Y\+Y\+YY or dd/\+M\+M/\+Y\+Y\+YY or dd.\+M\+M.\+Y\+Y\+YY \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ab9c8163606b2718ece39706d178871fb}{Pattern\+\_\+\+Date\+\_\+\+Y\+Y\+Y\+Y\+M\+Mdd}} = @\char`\"{}(\mbox{[}12\mbox{]}\textbackslash{}d\{3\}-\/(0\mbox{[}1-\/9\mbox{]}$\vert$1\mbox{[}0-\/2\mbox{]})-\/(0\mbox{[}1-\/9\mbox{]}$\vert$\mbox{[}12\mbox{]}\textbackslash{}d$\vert$3\mbox{[}01\mbox{]}))\char`\"{}
+\begin{DoxyCompactList}\small\item\em Date Format Y\+Y\+Y\+Y-\/\+M\+M-\/dd using separator -\/ \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a317bc447a20abc3cbd7c0a864ae474c9}{Pattern\+\_\+\+Time\+\_\+12\+Hour}} = @\char`\"{}$^\wedge$(0?\mbox{[}1-\/9\mbox{]}$\vert$1\mbox{[}0-\/2\mbox{]})\+:\mbox{[}0-\/5\mbox{]}\mbox{[}0-\/9\mbox{]}\$\char`\"{}
+\begin{DoxyCompactList}\small\item\em Time only 12 hour \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a4bb367e23e86ad474f19bedc3b8acf2d}{Pattern\+\_\+\+Time\+\_\+\+Am\+Pm}} = @\char`\"{}((1\mbox{[}0-\/2\mbox{]}$\vert$0?\mbox{[}1-\/9\mbox{]})\+:(\mbox{[}0-\/5\mbox{]}\mbox{[}0-\/9\mbox{]}) ?(\mbox{[}Aa\+Pp\mbox{]}\mbox{[}Mm\mbox{]}))\char`\"{}
+\begin{DoxyCompactList}\small\item\em Time with AM PM \end{DoxyCompactList}\item 
+static readonly string \mbox{\hyperlink{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a5e6d3e4d4e1dcd6b1c62fc2cc0c1a825}{Pattern\+\_\+\+Time\+\_\+24\+Hour}} = @\char`\"{}$^\wedge$(\mbox{[}0-\/9\mbox{]}$\vert$0\mbox{[}0-\/9\mbox{]}$\vert$1\mbox{[}0-\/9\mbox{]}$\vert$2\mbox{[}0-\/3\mbox{]})\+:\mbox{[}0-\/5\mbox{]}\mbox{[}0-\/9\mbox{]}\$\char`\"{}
+\begin{DoxyCompactList}\small\item\em Time 24 hour \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a9c984d1d5f18ce8300b29fae03c62a36}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a9c984d1d5f18ce8300b29fae03c62a36}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_ComplexPassword@{Pattern\_ComplexPassword}}
+\index{Pattern\_ComplexPassword@{Pattern\_ComplexPassword}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_ComplexPassword}{Pattern\_ComplexPassword}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Complex\+Password = @\char`\"{}(?=(.$\ast$\mbox{[}0-\/9\mbox{]}))((?=.$\ast$\mbox{[}A-\/Za-\/z0-\/9\mbox{]})(?=.$\ast$\mbox{[}A-\/Z\mbox{]})(?=.$\ast$\mbox{[}a-\/z\mbox{]}))$^\wedge$.\{8,\}\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+1 lowercase letter, 1 uppercase letter, 1 number, 1 special character and be at least 8 characters long 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a6467aa4ca1b5c1f28538b8d7be58d5e6}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a6467aa4ca1b5c1f28538b8d7be58d5e6}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_Date\_ddmmmmYYYY@{Pattern\_Date\_ddmmmmYYYY}}
+\index{Pattern\_Date\_ddmmmmYYYY@{Pattern\_Date\_ddmmmmYYYY}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_Date\_ddmmmmYYYY}{Pattern\_Date\_ddmmmmYYYY}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Date\+\_\+ddmmmm\+Y\+Y\+YY = @\char`\"{}$^\wedge$(?\+:(?\+:31(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)(?\+:0?\mbox{[}13578\mbox{]}$\vert$1\mbox{[}02\mbox{]}$\vert$(?\+:Jan$\vert$Mar$\vert$May$\vert$Jul$\vert$Aug$\vert$Oct$\vert$Dec)))\textbackslash{}1$\vert$(?\+:(?\+:29$\vert$30)(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)(?\+:0?\mbox{[}1,3-\/9\mbox{]}$\vert$1\mbox{[}0-\/2\mbox{]}$\vert$(?\+:Jan$\vert$Mar$\vert$Apr$\vert$May$\vert$Jun$\vert$Jul$\vert$Aug$\vert$Sep$\vert$Oct$\vert$Nov$\vert$Dec))\textbackslash{}2))(?\+:(?\+:1\mbox{[}6-\/9\mbox{]}$\vert$\mbox{[}2-\/9\mbox{]}\textbackslash{}d)?\textbackslash{}d\{2\})\$$\vert$$^\wedge$(?\+:29(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)(?\+:0?2$\vert$(?\+:Feb))\textbackslash{}3(?\+:(?\+:(?\+:1\mbox{[}6-\/9\mbox{]}$\vert$\mbox{[}2-\/9\mbox{]}\textbackslash{}d)?(?\+:0\mbox{[}48\mbox{]}$\vert$\mbox{[}2468\mbox{]}\mbox{[}048\mbox{]}$\vert$\mbox{[}13579\mbox{]}\mbox{[}26\mbox{]})$\vert$(?\+:(?\+:16$\vert$\mbox{[}2468\mbox{]}\mbox{[}048\mbox{]}$\vert$\mbox{[}3579\mbox{]}\mbox{[}26\mbox{]})00))))\$$\vert$$^\wedge$(?\+:0?\mbox{[}1-\/9\mbox{]}$\vert$1\textbackslash{}d$\vert$2\mbox{[}0-\/8\mbox{]})(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)(?\+:(?\+:0?\mbox{[}1-\/9\mbox{]}$\vert$(?\+:Jan$\vert$Feb$\vert$Mar$\vert$Apr$\vert$May$\vert$Jun$\vert$Jul$\vert$Aug$\vert$Sep))$\vert$(?\+:1\mbox{[}0-\/2\mbox{]}$\vert$(?\+:Oct$\vert$Nov$\vert$Dec)))\textbackslash{}4(?\+:(?\+:1\mbox{[}6-\/9\mbox{]}$\vert$\mbox{[}2-\/9\mbox{]}\textbackslash{}d)?\textbackslash{}d\{2\})\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Date Format dd-\/mmm-\/\+Y\+Y\+YY or dd/mmm/\+Y\+Y\+YY or dd.\+mmm.\+Y\+Y\+YY 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ae1b6733543e218fef9ec8d35b3aabe36}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ae1b6733543e218fef9ec8d35b3aabe36}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_Date\_ddMMYYYY@{Pattern\_Date\_ddMMYYYY}}
+\index{Pattern\_Date\_ddMMYYYY@{Pattern\_Date\_ddMMYYYY}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_Date\_ddMMYYYY}{Pattern\_Date\_ddMMYYYY}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Date\+\_\+dd\+M\+M\+Y\+Y\+YY = @\char`\"{}$^\wedge$(?\+:(?\+:31(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)(?\+:0?\mbox{[}13578\mbox{]}$\vert$1\mbox{[}02\mbox{]}))\textbackslash{}1$\vert$(?\+:(?\+:29$\vert$30)(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)(?\+:0?\mbox{[}1,3-\/9\mbox{]}$\vert$1\mbox{[}0-\/2\mbox{]})\textbackslash{}2))(?\+:(?\+:1\mbox{[}6-\/9\mbox{]}$\vert$\mbox{[}2-\/9\mbox{]}\textbackslash{}d)?\textbackslash{}d\{2\})\$$\vert$$^\wedge$(?\+:29(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)0?2\textbackslash{}3(?\+:(?\+:(?\+:1\mbox{[}6-\/9\mbox{]}$\vert$\mbox{[}2-\/9\mbox{]}\textbackslash{}d)?(?\+:0\mbox{[}48\mbox{]}$\vert$\mbox{[}2468\mbox{]}\mbox{[}048\mbox{]}$\vert$\mbox{[}13579\mbox{]}\mbox{[}26\mbox{]})$\vert$(?\+:(?\+:16$\vert$\mbox{[}2468\mbox{]}\mbox{[}048\mbox{]}$\vert$\mbox{[}3579\mbox{]}\mbox{[}26\mbox{]})00))))\$$\vert$$^\wedge$(?\+:0?\mbox{[}1-\/9\mbox{]}$\vert$1\textbackslash{}d$\vert$2\mbox{[}0-\/8\mbox{]})(\textbackslash{}/$\vert$-\/$\vert$\textbackslash{}.)(?\+:(?\+:0?\mbox{[}1-\/9\mbox{]})$\vert$(?\+:1\mbox{[}0-\/2\mbox{]}))\textbackslash{}4(?\+:(?\+:1\mbox{[}6-\/9\mbox{]}$\vert$\mbox{[}2-\/9\mbox{]}\textbackslash{}d)?\textbackslash{}d\{2\})\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Date Format dd-\/\+M\+M-\/\+Y\+Y\+YY or dd/\+M\+M/\+Y\+Y\+YY or dd.\+M\+M.\+Y\+Y\+YY 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ab9c8163606b2718ece39706d178871fb}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ab9c8163606b2718ece39706d178871fb}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_Date\_YYYYMMdd@{Pattern\_Date\_YYYYMMdd}}
+\index{Pattern\_Date\_YYYYMMdd@{Pattern\_Date\_YYYYMMdd}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_Date\_YYYYMMdd}{Pattern\_Date\_YYYYMMdd}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Date\+\_\+\+Y\+Y\+Y\+Y\+M\+Mdd = @\char`\"{}(\mbox{[}12\mbox{]}\textbackslash{}d\{3\}-\/(0\mbox{[}1-\/9\mbox{]}$\vert$1\mbox{[}0-\/2\mbox{]})-\/(0\mbox{[}1-\/9\mbox{]}$\vert$\mbox{[}12\mbox{]}\textbackslash{}d$\vert$3\mbox{[}01\mbox{]}))\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Date Format Y\+Y\+Y\+Y-\/\+M\+M-\/dd using separator -\/ 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_af77c000b2af3ec983fb94d35bc608dab}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_af77c000b2af3ec983fb94d35bc608dab}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_Email@{Pattern\_Email}}
+\index{Pattern\_Email@{Pattern\_Email}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_Email}{Pattern\_Email}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Email = @\char`\"{}$^\wedge$(\mbox{[}\textbackslash{}w-\/\textbackslash{}.\mbox{]}+)@((\textbackslash{}\mbox{[}\mbox{[}0-\/9\mbox{]}\{1,3\}\textbackslash{}.\mbox{[}0-\/9\mbox{]}\{1,3\}\textbackslash{}.\mbox{[}0-\/9\mbox{]}\{1,3\}\textbackslash{}.)$\vert$((\mbox{[}\textbackslash{}w-\/\mbox{]}+\textbackslash{}.)+))(\mbox{[}a-\/zA-\/Z\mbox{]}\{2,4\}$\vert$\mbox{[}0-\/9\mbox{]}\{1,3\})(\textbackslash{}\mbox{]}?)\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Includes uncomon email addresses 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_aa82a0a5b3d1256d711fa5b3cc00a9867}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_aa82a0a5b3d1256d711fa5b3cc00a9867}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_FilePath@{Pattern\_FilePath}}
+\index{Pattern\_FilePath@{Pattern\_FilePath}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_FilePath}{Pattern\_FilePath}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+File\+Path = @\char`\"{}((\textbackslash{}/$\vert$\textbackslash{}\textbackslash{}$\vert$\textbackslash{}/\textbackslash{}/$\vert$https?\+:\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}$\vert$https?\+:\textbackslash{}/\textbackslash{}/)\mbox{[}a-\/z0-\/9 \+\_\+@\textbackslash{}-\/$^\wedge$!\#\$\%\&+=\{\}.\textbackslash{}/\textbackslash{}\textbackslash{}\textbackslash{}\mbox{[}\textbackslash{}\mbox{]}\mbox{]}+)+\textbackslash{}.\mbox{[}a-\/z\mbox{]}+\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+File path with directory, name, extension 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a75f48f714fcd1ec0812beba07ab9248b}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a75f48f714fcd1ec0812beba07ab9248b}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_FilePathExtensionOptional@{Pattern\_FilePathExtensionOptional}}
+\index{Pattern\_FilePathExtensionOptional@{Pattern\_FilePathExtensionOptional}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_FilePathExtensionOptional}{Pattern\_FilePathExtensionOptional}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+File\+Path\+Extension\+Optional = @\char`\"{}$^\wedge$(.+)/(\mbox{[}$^\wedge$/\mbox{]}+)\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+File Path with optional Filename, extension 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_af421b5db2e79c1d8636d28a21b99d118}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_af421b5db2e79c1d8636d28a21b99d118}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_HexColour@{Pattern\_HexColour}}
+\index{Pattern\_HexColour@{Pattern\_HexColour}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_HexColour}{Pattern\_HexColour}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Hex\+Colour = @\char`\"{}$^\wedge$\#?(\mbox{[}a-\/fA-\/F0-\/9\mbox{]}\{6\}$\vert$\mbox{[}a-\/fA-\/F0-\/9\mbox{]}\{3\})\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Hex Colour 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a6acf22d073feecf10f7787646baa7888}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a6acf22d073feecf10f7787646baa7888}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_HtmlTag@{Pattern\_HtmlTag}}
+\index{Pattern\_HtmlTag@{Pattern\_HtmlTag}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_HtmlTag}{Pattern\_HtmlTag}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Html\+Tag = @\char`\"{}$<$\textbackslash{}/?\mbox{[}\textbackslash{}w\textbackslash{}s\mbox{]}$\ast$$>$$\vert$$<$.+\mbox{[}\textbackslash{}W\mbox{]}$>$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+String is H\+T\+ML / X\+ML Tag 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a557763befbdd9d17f8bf0fbc7885658b}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a557763befbdd9d17f8bf0fbc7885658b}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_IPv4Address@{Pattern\_IPv4Address}}
+\index{Pattern\_IPv4Address@{Pattern\_IPv4Address}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_IPv4Address}{Pattern\_IPv4Address}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+I\+Pv4\+Address = @\char`\"{}$^\wedge$(?\+:(?\+:25\mbox{[}0-\/5\mbox{]}$\vert$2\mbox{[}0-\/4\mbox{]}\mbox{[}0-\/9\mbox{]}$\vert$\mbox{[}01\mbox{]}?\mbox{[}0-\/9\mbox{]}\mbox{[}0-\/9\mbox{]}?)\textbackslash{}.)\{3\}(?\+:25\mbox{[}0-\/5\mbox{]}$\vert$2\mbox{[}0-\/4\mbox{]}\mbox{[}0-\/9\mbox{]}$\vert$\mbox{[}01\mbox{]}?\mbox{[}0-\/9\mbox{]}\mbox{[}0-\/9\mbox{]}?)\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ipv4 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a857d6673da0c723233298117db112365}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a857d6673da0c723233298117db112365}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_IPv6Address@{Pattern\_IPv6Address}}
+\index{Pattern\_IPv6Address@{Pattern\_IPv6Address}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_IPv6Address}{Pattern\_IPv6Address}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+I\+Pv6\+Address = @\char`\"{}$^\wedge$((\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{7,7\}\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}$\vert$(\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{1,7\}\+:$\vert$(\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{1,6\}\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}$\vert$(\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{1,5\}(\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\})\{1,2\}$\vert$(\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{1,4\}(\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\})\{1,3\}$\vert$(\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{1,3\}(\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\})\{1,4\}$\vert$(\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{1,2\}(\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\})\{1,5\}$\vert$\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:((\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\})\{1,6\})$\vert$\+:((\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\})\{1,7\}$\vert$\+:)$\vert$fe80\+:(\+:\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{0,4\})\{0,4\}\%\mbox{[}0-\/9a-\/zA-\/Z\mbox{]}\{1,\}$\vert$\+::(ffff(\+:0\{1,4\})\{0,1\}\+:)\{0,1\}((25\mbox{[}0-\/5\mbox{]}$\vert$(2\mbox{[}0-\/4\mbox{]}$\vert$1\{0,1\}\mbox{[}0-\/9\mbox{]})\{0,1\}\mbox{[}0-\/9\mbox{]})\textbackslash{}.)\{3,3\}(25\mbox{[}0-\/5\mbox{]}$\vert$(2\mbox{[}0-\/4\mbox{]}$\vert$1\{0,1\}\mbox{[}0-\/9\mbox{]})\{0,1\}\mbox{[}0-\/9\mbox{]})$\vert$(\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{1,4\}\+:)\{1,4\}\+:((25\mbox{[}0-\/5\mbox{]}$\vert$(2\mbox{[}0-\/4\mbox{]}$\vert$1\{0,1\}\mbox{[}0-\/9\mbox{]})\{0,1\}\mbox{[}0-\/9\mbox{]})\textbackslash{}.)\{3,3\}(25\mbox{[}0-\/5\mbox{]}$\vert$(2\mbox{[}0-\/4\mbox{]}$\vert$1\{0,1\}\mbox{[}0-\/9\mbox{]})\{0,1\}\mbox{[}0-\/9\mbox{]}))\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ipv6 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_abd5c9bb7c52c782854a5999ee9f0a9c0}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_abd5c9bb7c52c782854a5999ee9f0a9c0}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_JavaScriptHandler@{Pattern\_JavaScriptHandler}}
+\index{Pattern\_JavaScriptHandler@{Pattern\_JavaScriptHandler}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_JavaScriptHandler}{Pattern\_JavaScriptHandler}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Java\+Script\+Handler = @\char`\"{}\textbackslash{}bon\textbackslash{}w+=\textbackslash{}S+(?=.$\ast$$>$)\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Java\+Script Handler 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a253340ece0fc96ad2c65672831309d17}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a253340ece0fc96ad2c65672831309d17}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_JavaScriptHandlerWithElement@{Pattern\_JavaScriptHandlerWithElement}}
+\index{Pattern\_JavaScriptHandlerWithElement@{Pattern\_JavaScriptHandlerWithElement}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_JavaScriptHandlerWithElement}{Pattern\_JavaScriptHandlerWithElement}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Java\+Script\+Handler\+With\+Element = @\char`\"{}(?\+:$<$\mbox{[}$^\wedge$$>$\mbox{]}+\textbackslash{}s)(on\textbackslash{}S+)=\mbox{[}\char`\"{}\char`\"{}\textquotesingle{}\mbox{]}?((?\+:.(?!\mbox{[}\char`\"{}\char`\"{}\textquotesingle{}\mbox{]}?\textbackslash{}s+(?\+:\textbackslash{}S+)=$\vert$\mbox{[}$>$\char`\"{}\char`\"{}\textquotesingle{}\mbox{]}))+.)\mbox{[}\char`\"{}\char`\"{}\textquotesingle{}\mbox{]}?\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Java\+Script Handler with element4 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ab1007a4ab0c7ff5eb5146b279a8a4b74}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ab1007a4ab0c7ff5eb5146b279a8a4b74}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_ModeratePassword@{Pattern\_ModeratePassword}}
+\index{Pattern\_ModeratePassword@{Pattern\_ModeratePassword}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_ModeratePassword}{Pattern\_ModeratePassword}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Moderate\+Password = @\char`\"{}(?=(.$\ast$\mbox{[}0-\/9\mbox{]}))(?=.$\ast$\mbox{[}\textbackslash{}!@\#\$\%$^\wedge$\&$\ast$()\textbackslash{}\textbackslash{}\mbox{[}\textbackslash{}\mbox{]}\{\}\textbackslash{}-\/\+\_\++=$\sim$\`{}$\vert$\+:;\char`\"{}\char`\"{}\textquotesingle{}$<$$>$,./?\mbox{]})(?=.$\ast$\mbox{[}a-\/z\mbox{]})(?=(.$\ast$\mbox{[}A-\/Z\mbox{]}))(?=(.$\ast$)).\{8,\}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Should have 1 lowercase letter, 1 uppercase letter, 1 number, and be at least 8 characters long 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_aac55a2861988e8689a36f0699e48027d}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_aac55a2861988e8689a36f0699e48027d}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_NationalInsurance@{Pattern\_NationalInsurance}}
+\index{Pattern\_NationalInsurance@{Pattern\_NationalInsurance}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_NationalInsurance}{Pattern\_NationalInsurance}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+National\+Insurance = @\char`\"{}$^\wedge$\mbox{[}A-\/C\+E\+G\+HJ-\/PR-\/TW-\/Z\mbox{]}\{1\}\mbox{[}A-\/C\+E\+G\+HJ-\/N\+PR-\/TW-\/Z\mbox{]}\{1\}\mbox{[}0-\/9\mbox{]}\{6\}\mbox{[}A-\/D\+FM\mbox{]}\{0,1\}\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Administration number optional 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ab7c337baf759803df45ce812505fee52}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ab7c337baf759803df45ce812505fee52}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_PhoneNumberBasic@{Pattern\_PhoneNumberBasic}}
+\index{Pattern\_PhoneNumberBasic@{Pattern\_PhoneNumberBasic}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_PhoneNumberBasic}{Pattern\_PhoneNumberBasic}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Phone\+Number\+Basic = @\char`\"{}$^\wedge$\textbackslash{}b\textbackslash{}d\{3\}\mbox{[}-\/.\mbox{]}?\textbackslash{}d\{3\}\mbox{[}-\/.\mbox{]}?\textbackslash{}d\{4\}\textbackslash{}b\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Basic phone number 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ae6878376b36804cb7a9b9e194b0515ef}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ae6878376b36804cb7a9b9e194b0515ef}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_PhoneNumberInternational@{Pattern\_PhoneNumberInternational}}
+\index{Pattern\_PhoneNumberInternational@{Pattern\_PhoneNumberInternational}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_PhoneNumberInternational}{Pattern\_PhoneNumberInternational}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Phone\+Number\+International = @\char`\"{}$^\wedge$(?\+:(?\+:\textbackslash{}(?(?\+:00$\vert$\textbackslash{}+)(\mbox{[}1-\/4\mbox{]}\textbackslash{}d\textbackslash{}d$\vert$\mbox{[}1-\/9\mbox{]}\textbackslash{}d?)\textbackslash{})?)?\mbox{[}\textbackslash{}-\/\textbackslash{}.\textbackslash{} \textbackslash{}\textbackslash{}\textbackslash{}/\mbox{]}?)?((?\+:\textbackslash{}(?\textbackslash{}d\{1,\}\textbackslash{})?\mbox{[}\textbackslash{}-\/\textbackslash{}.\textbackslash{} \textbackslash{}\textbackslash{}\textbackslash{}/\mbox{]}?)\{0,\})(?\+:\mbox{[}\textbackslash{}-\/\textbackslash{}.\textbackslash{} \textbackslash{}\textbackslash{}\textbackslash{}/\mbox{]}?(?\+:\#$\vert$ext\textbackslash{}.?$\vert$extension$\vert$x)\mbox{[}\textbackslash{}-\/\textbackslash{}.\textbackslash{} \textbackslash{}\textbackslash{}\textbackslash{}/\mbox{]}?(\textbackslash{}d+))?\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+International Phone Number (Optional country code / extension) 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a99dd79949559430481c21894dcc2d397}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a99dd79949559430481c21894dcc2d397}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_PostCode@{Pattern\_PostCode}}
+\index{Pattern\_PostCode@{Pattern\_PostCode}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_PostCode}{Pattern\_PostCode}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Post\+Code = @\char`\"{}(\mbox{[}Gg\mbox{]}\mbox{[}Ii\mbox{]}\mbox{[}Rr\mbox{]} 0\mbox{[}Aa\mbox{]}\{2\})$\vert$(((\mbox{[}A-\/Za-\/z\mbox{]}\mbox{[}0-\/9\mbox{]}\{1,2\})$\vert$((\mbox{[}A-\/Za-\/z\mbox{]}\mbox{[}A-\/Ha-\/hJ-\/Yj-\/y\mbox{]}\mbox{[}0-\/9\mbox{]}\{1,2\})$\vert$((\mbox{[}A-\/Za-\/z\mbox{]}\mbox{[}0-\/9\mbox{]}\mbox{[}A-\/Za-\/z\mbox{]})$\vert$(\mbox{[}A-\/Za-\/z\mbox{]}\mbox{[}A-\/Ha-\/hJ-\/Yj-\/y\mbox{]}\mbox{[}0-\/9\mbox{]}\mbox{[}A-\/Za-\/z\mbox{]}?))))\textbackslash{}s?\mbox{[}0-\/9\mbox{]}\mbox{[}A-\/Za-\/z\mbox{]}\{2\})\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+UK post code 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a780c359374b58c7be7b86c74ec98a6d4}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a780c359374b58c7be7b86c74ec98a6d4}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_Slug@{Pattern\_Slug}}
+\index{Pattern\_Slug@{Pattern\_Slug}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_Slug}{Pattern\_Slug}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Slug = @\char`\"{}$^\wedge$\mbox{[}a-\/z0-\/9\mbox{]}+(?\+:-\/\mbox{[}a-\/z0-\/9\mbox{]}+)$\ast$\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+U\+RL Slug 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a317bc447a20abc3cbd7c0a864ae474c9}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a317bc447a20abc3cbd7c0a864ae474c9}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_Time\_12Hour@{Pattern\_Time\_12Hour}}
+\index{Pattern\_Time\_12Hour@{Pattern\_Time\_12Hour}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_Time\_12Hour}{Pattern\_Time\_12Hour}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Time\+\_\+12\+Hour = @\char`\"{}$^\wedge$(0?\mbox{[}1-\/9\mbox{]}$\vert$1\mbox{[}0-\/2\mbox{]})\+:\mbox{[}0-\/5\mbox{]}\mbox{[}0-\/9\mbox{]}\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Time only 12 hour 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a5e6d3e4d4e1dcd6b1c62fc2cc0c1a825}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a5e6d3e4d4e1dcd6b1c62fc2cc0c1a825}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_Time\_24Hour@{Pattern\_Time\_24Hour}}
+\index{Pattern\_Time\_24Hour@{Pattern\_Time\_24Hour}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_Time\_24Hour}{Pattern\_Time\_24Hour}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Time\+\_\+24\+Hour = @\char`\"{}$^\wedge$(\mbox{[}0-\/9\mbox{]}$\vert$0\mbox{[}0-\/9\mbox{]}$\vert$1\mbox{[}0-\/9\mbox{]}$\vert$2\mbox{[}0-\/3\mbox{]})\+:\mbox{[}0-\/5\mbox{]}\mbox{[}0-\/9\mbox{]}\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Time 24 hour 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a4bb367e23e86ad474f19bedc3b8acf2d}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a4bb367e23e86ad474f19bedc3b8acf2d}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_Time\_AmPm@{Pattern\_Time\_AmPm}}
+\index{Pattern\_Time\_AmPm@{Pattern\_Time\_AmPm}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_Time\_AmPm}{Pattern\_Time\_AmPm}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+Time\+\_\+\+Am\+Pm = @\char`\"{}((1\mbox{[}0-\/2\mbox{]}$\vert$0?\mbox{[}1-\/9\mbox{]})\+:(\mbox{[}0-\/5\mbox{]}\mbox{[}0-\/9\mbox{]}) ?(\mbox{[}Aa\+Pp\mbox{]}\mbox{[}Mm\mbox{]}))\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Time with AM PM 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ae0f5849cca323e967f3ee4680d67bd68}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_ae0f5849cca323e967f3ee4680d67bd68}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_URL@{Pattern\_URL}}
+\index{Pattern\_URL@{Pattern\_URL}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_URL}{Pattern\_URL}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+U\+RL = @\char`\"{}/$^\wedge$((https?$\vert$ftp$\vert$file)\+:\textbackslash{}/\textbackslash{}/)?(\mbox{[}\textbackslash{}da-\/z\textbackslash{}.-\/\mbox{]}+)\textbackslash{}.(\mbox{[}a-\/z\textbackslash{}.\mbox{]}\{2,6\})(\mbox{[}\textbackslash{}/\textbackslash{}w \textbackslash{}.-\/\mbox{]}$\ast$)$\ast$\textbackslash{}/?\$/\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Protocal (http / https optional) 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a9800d5c67552525cd622b88c72d3c23c}\label{class_j_b_toolkit_1_1_regular_expressions_1_1_common_a9800d5c67552525cd622b88c72d3c23c}} 
+\index{JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}!Pattern\_URLWithProtocol@{Pattern\_URLWithProtocol}}
+\index{Pattern\_URLWithProtocol@{Pattern\_URLWithProtocol}!JBToolkit.RegularExpressions.Common@{JBToolkit.RegularExpressions.Common}}
+\doxysubsubsection{\texorpdfstring{Pattern\_URLWithProtocol}{Pattern\_URLWithProtocol}}
+{\footnotesize\ttfamily readonly string J\+B\+Toolkit.\+Regular\+Expressions.\+Common.\+Pattern\+\_\+\+U\+R\+L\+With\+Protocol = @\char`\"{}https?\+:\textbackslash{}/\textbackslash{}/(www\textbackslash{}.)?\mbox{[}-\/a-\/zA-\/Z0-\/9@\+:\%.\+\_\+\textbackslash{}+$\sim$\#=\mbox{]}\{2,256\}\textbackslash{}.\mbox{[}a-\/z\mbox{]}\{2,6\}\textbackslash{}b(\mbox{[}-\/a-\/zA-\/Z0-\/9@\+:\%\+\_\+\textbackslash{}+.$\sim$\#()?\&//=\mbox{]}$\ast$)\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Has to include protocol (http / https) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Regular\+Expressions/\mbox{\hyperlink{_common_8cs}{Common.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,260 @@
+\hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive}{}\doxysection{J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive Class Reference}
+\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive}\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+
+
+Read, write and modify \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip}{Zip}} files using the \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip}{Zip}} implementation native to \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}}. It doesn\textquotesingle{}t require any third party packages to utilise which can be benefifical in some circumstances. It may struggle with large zip files however.  
+
+
+
+
+Inheritance diagram for J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{d8/d2c/class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{dd/df7/class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_1_1_zip_file_info}{Zip\+File\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a442edf86d17d138c80c8e65ea1dbad82}{Compression\+Method\+Enum}} \{ \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a442edf86d17d138c80c8e65ea1dbad82a7bf2d26eab899c413218b729d4d914b7}{Compression\+Method\+Enum.\+Stored}}, 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a442edf86d17d138c80c8e65ea1dbad82adf0f5c624593b88a2cb8cf43e1d1cb05}{Compression\+Method\+Enum.\+Deflated}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0}{Deflate\+Option\+Enum}} \{ \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0a960b44c579bc2f6818d2daaf9e4c16f0}{Deflate\+Option\+Enum.\+Normal}}, 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0a8321e79c278ec510f63675c040594892}{Deflate\+Option\+Enum.\+Maximum}}, 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0ae16b5b7f26f54214445cbe38d72c2828}{Deflate\+Option\+Enum.\+Fast}}, 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0a4140a6a9047f86082259bc7d925d3db0}{Deflate\+Option\+Enum.\+Super\+Fast}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a33a57903a472b9538df1dc854b80b9ec}{Zip\+Archive}} ()
+\item 
+\mbox{\hyperlink{struct_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_1_1_zip_file_info}{Zip\+File\+Info}} \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af3658c4fbe4554bf3d77a38c2e160717}{Add\+File}} (string path, \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a442edf86d17d138c80c8e65ea1dbad82}{Compression\+Method\+Enum}} compmeth=\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a442edf86d17d138c80c8e65ea1dbad82adf0f5c624593b88a2cb8cf43e1d1cb05}{Compression\+Method\+Enum.\+Deflated}}, \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0}{Deflate\+Option\+Enum}} option=\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0a960b44c579bc2f6818d2daaf9e4c16f0}{Deflate\+Option\+Enum.\+Normal}})
+\item 
+void \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a13a3c8f8e2820656ca13cb5d00710670}{Delete\+File}} (string name)
+\item 
+void \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_ae91e07892b2ef960065ed88628e40e49}{Dispose}} ()
+\item 
+\mbox{\hyperlink{struct_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_1_1_zip_file_info}{Zip\+File\+Info}} \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_ad9cef182bb03d153d61118a7806e50c7}{Get\+File}} (string name)
+\item 
+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a206d623b5ab1147a6f424112f4fe4b9b}{Get\+File}} (string zip\+Path, string file\+Name)
+\item 
+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af2c32664cdd6bf35994d3ab23f894d23}{Get\+File}} (Stream zip\+Stream, string file\+Name)
+\item 
+void \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a014a989348e83242cbb85097c4e8f076}{Extract\+File}} (string zip\+Path, string file\+Name, string output\+Path)
+\item 
+void \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a5741d7d0013a2e658003cd5ed9f278e9}{Extract\+File}} (Stream zip\+Stream, string file\+Name, string output\+Path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive}{Zip\+Archive}} \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a636145c1e3cbe65a83bdaba093c042bf}{Open\+On\+File}} (string path, File\+Mode mode=File\+Mode.\+Open, File\+Access access=File\+Access.\+Read, File\+Share share=File\+Share.\+Read, bool streaming=false)
+\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive}{Zip\+Archive}} \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a2097b4d1421872153b9b70f078ff3949}{Open\+On\+Stream}} (Stream stream, File\+Mode mode=File\+Mode.\+Open\+Or\+Create, File\+Access access=File\+Access.\+Read\+Write, bool streaming=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}}$<$ \mbox{\hyperlink{struct_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_1_1_zip_file_info}{Zip\+File\+Info}} $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a36e857d920a3eb0486fd9d1e77dce69b}{Files}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}}$<$ string $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_abec55c2d7d5c30ad01a005fc10bb1a78}{File\+Names}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Read, write and modify \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip}{Zip}} files using the \mbox{\hyperlink{namespace_j_b_toolkit_1_1_zip}{Zip}} implementation native to \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}}. It doesn\textquotesingle{}t require any third party packages to utilise which can be benefifical in some circumstances. It may struggle with large zip files however. 
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a442edf86d17d138c80c8e65ea1dbad82}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a442edf86d17d138c80c8e65ea1dbad82}} 
+\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!CompressionMethodEnum@{CompressionMethodEnum}}
+\index{CompressionMethodEnum@{CompressionMethodEnum}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+\doxysubsubsection{\texorpdfstring{CompressionMethodEnum}{CompressionMethodEnum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a442edf86d17d138c80c8e65ea1dbad82}{J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive.\+Compression\+Method\+Enum}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Stored@{Stored}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!Stored@{Stored}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a442edf86d17d138c80c8e65ea1dbad82a7bf2d26eab899c413218b729d4d914b7}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a442edf86d17d138c80c8e65ea1dbad82a7bf2d26eab899c413218b729d4d914b7}} 
+Stored&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Deflated@{Deflated}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!Deflated@{Deflated}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a442edf86d17d138c80c8e65ea1dbad82adf0f5c624593b88a2cb8cf43e1d1cb05}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a442edf86d17d138c80c8e65ea1dbad82adf0f5c624593b88a2cb8cf43e1d1cb05}} 
+Deflated&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0}} 
+\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!DeflateOptionEnum@{DeflateOptionEnum}}
+\index{DeflateOptionEnum@{DeflateOptionEnum}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+\doxysubsubsection{\texorpdfstring{DeflateOptionEnum}{DeflateOptionEnum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0}{J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive.\+Deflate\+Option\+Enum}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Normal@{Normal}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!Normal@{Normal}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0a960b44c579bc2f6818d2daaf9e4c16f0}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0a960b44c579bc2f6818d2daaf9e4c16f0}} 
+Normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Maximum@{Maximum}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!Maximum@{Maximum}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0a8321e79c278ec510f63675c040594892}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0a8321e79c278ec510f63675c040594892}} 
+Maximum&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fast@{Fast}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!Fast@{Fast}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0ae16b5b7f26f54214445cbe38d72c2828}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0ae16b5b7f26f54214445cbe38d72c2828}} 
+Fast&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SuperFast@{SuperFast}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!SuperFast@{SuperFast}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0a4140a6a9047f86082259bc7d925d3db0}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0a4140a6a9047f86082259bc7d925d3db0}} 
+Super\+Fast&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a33a57903a472b9538df1dc854b80b9ec}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a33a57903a472b9538df1dc854b80b9ec}} 
+\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!ZipArchive@{ZipArchive}}
+\index{ZipArchive@{ZipArchive}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+\doxysubsubsection{\texorpdfstring{ZipArchive()}{ZipArchive()}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive.\+Zip\+Archive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af3658c4fbe4554bf3d77a38c2e160717}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af3658c4fbe4554bf3d77a38c2e160717}} 
+\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!AddFile@{AddFile}}
+\index{AddFile@{AddFile}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+\doxysubsubsection{\texorpdfstring{AddFile()}{AddFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_1_1_zip_file_info}{Zip\+File\+Info}} J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive.\+Add\+File (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a442edf86d17d138c80c8e65ea1dbad82}{Compression\+Method\+Enum}}}]{compmeth = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a442edf86d17d138c80c8e65ea1dbad82adf0f5c624593b88a2cb8cf43e1d1cb05}{Compression\+Method\+Enum.\+Deflated}}},  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0}{Deflate\+Option\+Enum}}}]{option = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af75f6908cd00435a903bf747e89cdbc0a960b44c579bc2f6818d2daaf9e4c16f0}{Deflate\+Option\+Enum.\+Normal}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a13a3c8f8e2820656ca13cb5d00710670}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a13a3c8f8e2820656ca13cb5d00710670}} 
+\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!DeleteFile@{DeleteFile}}
+\index{DeleteFile@{DeleteFile}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+\doxysubsubsection{\texorpdfstring{DeleteFile()}{DeleteFile()}}
+{\footnotesize\ttfamily void J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive.\+Delete\+File (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_ae91e07892b2ef960065ed88628e40e49}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_ae91e07892b2ef960065ed88628e40e49}} 
+\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a5741d7d0013a2e658003cd5ed9f278e9}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a5741d7d0013a2e658003cd5ed9f278e9}} 
+\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!ExtractFile@{ExtractFile}}
+\index{ExtractFile@{ExtractFile}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+\doxysubsubsection{\texorpdfstring{ExtractFile()}{ExtractFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive.\+Extract\+File (\begin{DoxyParamCaption}\item[{Stream}]{zip\+Stream,  }\item[{string}]{file\+Name,  }\item[{string}]{output\+Path }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/dbf/class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a5741d7d0013a2e658003cd5ed9f278e9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a014a989348e83242cbb85097c4e8f076}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a014a989348e83242cbb85097c4e8f076}} 
+\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!ExtractFile@{ExtractFile}}
+\index{ExtractFile@{ExtractFile}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+\doxysubsubsection{\texorpdfstring{ExtractFile()}{ExtractFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive.\+Extract\+File (\begin{DoxyParamCaption}\item[{string}]{zip\+Path,  }\item[{string}]{file\+Name,  }\item[{string}]{output\+Path }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/dbf/class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a014a989348e83242cbb85097c4e8f076_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af2c32664cdd6bf35994d3ab23f894d23}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af2c32664cdd6bf35994d3ab23f894d23}} 
+\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!GetFile@{GetFile}}
+\index{GetFile@{GetFile}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+\doxysubsubsection{\texorpdfstring{GetFile()}{GetFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Stream J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive.\+Get\+File (\begin{DoxyParamCaption}\item[{Stream}]{zip\+Stream,  }\item[{string}]{file\+Name }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/dbf/class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_af2c32664cdd6bf35994d3ab23f894d23_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_ad9cef182bb03d153d61118a7806e50c7}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_ad9cef182bb03d153d61118a7806e50c7}} 
+\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!GetFile@{GetFile}}
+\index{GetFile@{GetFile}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+\doxysubsubsection{\texorpdfstring{GetFile()}{GetFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_1_1_zip_file_info}{Zip\+File\+Info}} J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive.\+Get\+File (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a206d623b5ab1147a6f424112f4fe4b9b}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a206d623b5ab1147a6f424112f4fe4b9b}} 
+\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!GetFile@{GetFile}}
+\index{GetFile@{GetFile}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+\doxysubsubsection{\texorpdfstring{GetFile()}{GetFile()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Stream J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive.\+Get\+File (\begin{DoxyParamCaption}\item[{string}]{zip\+Path,  }\item[{string}]{file\+Name }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/dbf/class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a206d623b5ab1147a6f424112f4fe4b9b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a636145c1e3cbe65a83bdaba093c042bf}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a636145c1e3cbe65a83bdaba093c042bf}} 
+\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!OpenOnFile@{OpenOnFile}}
+\index{OpenOnFile@{OpenOnFile}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+\doxysubsubsection{\texorpdfstring{OpenOnFile()}{OpenOnFile()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive}{Zip\+Archive}} J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive.\+Open\+On\+File (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{File\+Mode}]{mode = {\ttfamily FileMode.Open},  }\item[{File\+Access}]{access = {\ttfamily FileAccess.Read},  }\item[{File\+Share}]{share = {\ttfamily FileShare.Read},  }\item[{bool}]{streaming = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/dbf/class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a636145c1e3cbe65a83bdaba093c042bf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a2097b4d1421872153b9b70f078ff3949}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a2097b4d1421872153b9b70f078ff3949}} 
+\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!OpenOnStream@{OpenOnStream}}
+\index{OpenOnStream@{OpenOnStream}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+\doxysubsubsection{\texorpdfstring{OpenOnStream()}{OpenOnStream()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive}{Zip\+Archive}} J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive.\+Open\+On\+Stream (\begin{DoxyParamCaption}\item[{Stream}]{stream,  }\item[{File\+Mode}]{mode = {\ttfamily FileMode.OpenOrCreate},  }\item[{File\+Access}]{access = {\ttfamily FileAccess.ReadWrite},  }\item[{bool}]{streaming = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/dbf/class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a2097b4d1421872153b9b70f078ff3949_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_abec55c2d7d5c30ad01a005fc10bb1a78}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_abec55c2d7d5c30ad01a005fc10bb1a78}} 
+\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!FileNames@{FileNames}}
+\index{FileNames@{FileNames}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+\doxysubsubsection{\texorpdfstring{FileNames}{FileNames}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}}$<$string$>$ J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive.\+File\+Names\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a36e857d920a3eb0486fd9d1e77dce69b}\label{class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_a36e857d920a3eb0486fd9d1e77dce69b}} 
+\index{JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}!Files@{Files}}
+\index{Files@{Files}!JBToolkit.Zip.Native.ZipArchive@{JBToolkit.Zip.Native.ZipArchive}}
+\doxysubsubsection{\texorpdfstring{Files}{Files}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}}$<$\mbox{\hyperlink{struct_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive_1_1_zip_file_info}{Zip\+File\+Info}}$>$ J\+B\+Toolkit.\+Zip.\+Native.\+Zip\+Archive.\+Files\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Zip/\mbox{\hyperlink{_zip_archive_8_native_8cs}{Zip\+Archive.\+Native.\+cs}}\end{DoxyCompactItemize}

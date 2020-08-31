@@ -1,0 +1,24 @@
+\hypertarget{namespace_j_b_toolkit_1_1_inter_process_comms_1_1_sockets}{}\doxysection{J\+B\+Toolkit.\+Inter\+Process\+Comms.\+Sockets Namespace Reference}
+\label{namespace_j_b_toolkit_1_1_inter_process_comms_1_1_sockets}\index{JBToolkit.InterProcessComms.Sockets@{JBToolkit.InterProcessComms.Sockets}}
+
+
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} does not support the A\+F\+\_\+\+U\+N\+IX family of sockets, only T\+C\+P/\+IP, so, for demonstrating IP network communication I could have chosen either T\+CP or U\+DP, but I went for U\+DP because of the better performance and because of the relative simplicity that this example required.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_inter_process_comms_1_1_sockets_1_1_socket_client}{Socket\+Client}}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_inter_process_comms_1_1_sockets_1_1_socket_server}{Socket\+Server}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} does not support the A\+F\+\_\+\+U\+N\+IX family of sockets, only T\+C\+P/\+IP, so, for demonstrating IP network communication I could have chosen either T\+CP or U\+DP, but I went for U\+DP because of the better performance and because of the relative simplicity that this example required. 
+
+It leverages the Udp\+Client class to send byte-\/array messages, because this class hides some of the complexity of Socket, making it easier to use. As a side note, it is even possible to use W\+CF with a U\+DP transport (binding).
+
+Because the Receive method blocks until there is some contents to receive, we need to spawn a thread to avoid blocking.
+
+Gist from\+: \href{https://weblogs.asp.net/ricardoperes/local-machine-interprocess-communication-with-net}{\texttt{ https\+://weblogs.\+asp.\+net/ricardoperes/local-\/machine-\/interprocess-\/communication-\/with-\/net}}

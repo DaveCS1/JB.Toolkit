@@ -1,0 +1,36 @@
+.TH "JBToolkit.Views.JQTSelectableDataSource" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Views.JQTSelectableDataSource \- You'll have to handle the javascript in the parent view, via creating an event handler referencing the given UniqueID  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "string \fBUniqueID\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "\fBList\fP< \fBJQTSelectableDataSourceItem\fP > \fBItems\fP\fC [get, set]\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+You'll have to handle the javascript in the parent view, via creating an event handler referencing the given UniqueID 
+
+Example:
+.PP
+$('#<UniqueID>')\&.on('change', function () { alert('value = ' + this\&.value + ' - extra = ' + \&.find(':selected')\&.data('extra')); });
+.SH "Property Documentation"
+.PP 
+.SS "\fBList\fP<\fBJQTSelectableDataSourceItem\fP> JBToolkit\&.Views\&.JQTSelectableDataSource\&.Items\fC [get]\fP, \fC [set]\fP"
+
+.SS "string JBToolkit\&.Views\&.JQTSelectableDataSource\&.UniqueID\fC [get]\fP, \fC [set]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

@@ -1,0 +1,5 @@
+<map id="JBToolkit.InterProcessComms.Wcf.WcfClient" name="JBToolkit.InterProcessComms.Wcf.WcfClient">
+<area shape="rect" id="node1" title="Client to host communication (1 direction) Named Pipe implementation." alt="" coords="57,131,258,252"/>
+<area shape="rect" id="node2" href="$d6/d68/class_client_base.html" title=" " alt="" coords="5,5,168,83"/>
+<area shape="rect" id="node3" href="$d4/dcd/interface_j_b_toolkit_1_1_inter_process_comms_1_1_i_ipc_client.html" title=" " alt="" coords="192,5,267,83"/>
+</map>

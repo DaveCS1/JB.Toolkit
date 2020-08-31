@@ -1,0 +1,84 @@
+.TH "JBToolkit.Encryption.ConnectionStringEncryptor" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Encryption.ConnectionStringEncryptor \- Very simple connection string encryptor\&. Useful to hide the connection string from ordinary service and not have any invalid XML characters, while also being sharable or to be easily decrypted if needs be  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static string \fBEncryptString\fP (string input)"
+.br
+.RI "Encrypt a string "
+.ti -1c
+.RI "static string \fBDecryptString\fP (string encryptedInput)"
+.br
+.RI "Decrypt a string "
+.ti -1c
+.RI "static bool \fBIsEncrypted\fP (string input)"
+.br
+.RI "Tests whether a string is already encrypted or not\&. Quite simply, it runs it through the encrytion process\&. If it works it wasn't encrypted "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Very simple connection string encryptor\&. Useful to hide the connection string from ordinary service and not have any invalid XML characters, while also being sharable or to be easily decrypted if needs be 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static string JBToolkit\&.Encryption\&.ConnectionStringEncryptor\&.DecryptString (string encryptedInput)\fC [static]\fP"
+
+.PP
+Decrypt a string 
+.PP
+\fBParameters\fP
+.RS 4
+\fIencryptedInput\fP An encrypted string
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Encrypted string
+.RE
+.PP
+
+.SS "static string JBToolkit\&.Encryption\&.ConnectionStringEncryptor\&.EncryptString (string input)\fC [static]\fP"
+
+.PP
+Encrypt a string 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinput\fP String to be encrypted
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Encrypted string
+.RE
+.PP
+
+.SS "static bool JBToolkit\&.Encryption\&.ConnectionStringEncryptor\&.IsEncrypted (string input)\fC [static]\fP"
+
+.PP
+Tests whether a string is already encrypted or not\&. Quite simply, it runs it through the encrytion process\&. If it works it wasn't encrypted 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinput\fP String to test if it's encrypted or not
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True is encrypted, false otherwise
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

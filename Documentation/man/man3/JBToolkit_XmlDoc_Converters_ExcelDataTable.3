@@ -1,0 +1,109 @@
+.TH "JBToolkit.XmlDoc.Converters.ExcelDataTable" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.XmlDoc.Converters.ExcelDataTable
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static byte[] \fBDataTableToExcel\fP (\fBDataTable\fP dataTable, string heading='', bool showSrNo=false)"
+.br
+.RI "Convert DataTable to Excel and output byte aray "
+.ti -1c
+.RI "static byte[] \fBListToExcel< T >\fP (\fBList\fP< T > data, string Heading='', bool showSlno=false)"
+.br
+.RI "Convert list to Excel and output byte array "
+.ti -1c
+.RI "static void \fBSaveAsExcel< T >\fP (\fBList\fP< T > data, string path, string Heading='', bool showSlno=false)"
+.br
+.RI "Save \fBList\fP as Excel file "
+.ti -1c
+.RI "static void \fBSaveAsExcel\fP (\fBDataTable\fP data, string path, string Heading='', bool showSlno=false)"
+.br
+.RI "Save DataTable as Excel file "
+.ti -1c
+.RI "static \fBDataTable\fP \fBExcelToDataTable\fP (string inputPath, bool hasHeaderRow, string worksheetName, out string errorMessages)"
+.br
+.RI "Converts Xlsx document to DataTable input as filepath "
+.ti -1c
+.RI "static \fBDataTable\fP \fBExcelWorksheetToDataTable\fP (byte[] inputBytes, bool hasHeaderRow, string worksheetName, out string errorMessages)"
+.br
+.RI "Converts Xlsx document to DataTable input as byte array "
+.ti -1c
+.RI "static \fBDataTable\fP \fBExcelToDataTable\fP (string inputPath, bool hasHeaderRow, int worksheetNumber, out string errorMessages)"
+.br
+.RI "Converts Xlsx document to DataTable input as filepath "
+.ti -1c
+.RI "static \fBDataTable\fP \fBExcelWorksheetToDataTable\fP (byte[] inputBytes, bool hasHeaderRow, int worksheetNumber, out string errorMessages)"
+.br
+.RI "Converts Xlsx document to DataTable input as byte array "
+.ti -1c
+.RI "static DataSet \fBExcelToDataSet\fP (string inputPath, bool hasHeaderRow, out string errorMessages)"
+.br
+.RI "Converts Xlsx document to DataSet (mulitple DataTables, 1 per sheet) input as file path "
+.ti -1c
+.RI "static DataSet \fBExcelToDataSet\fP (byte[] inputBytes, bool hasHeaderRow, out string errorMessages)"
+.br
+.RI "Converts Xlsx document to DataSet (mulitple DataTables, 1 per sheet) input as byte array "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "static string \fBExcelContentType\fP\fC [get]\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "static byte [] JBToolkit\&.XmlDoc\&.Converters\&.ExcelDataTable\&.DataTableToExcel (\fBDataTable\fP dataTable, string heading = \fC''\fP, bool showSrNo = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Convert DataTable to Excel and output byte aray 
+.SS "static DataSet JBToolkit\&.XmlDoc\&.Converters\&.ExcelDataTable\&.ExcelToDataSet (byte[] inputBytes, bool hasHeaderRow, out string errorMessages)\fC [static]\fP"
+
+.PP
+Converts Xlsx document to DataSet (mulitple DataTables, 1 per sheet) input as byte array 
+.SS "static DataSet JBToolkit\&.XmlDoc\&.Converters\&.ExcelDataTable\&.ExcelToDataSet (string inputPath, bool hasHeaderRow, out string errorMessages)\fC [static]\fP"
+
+.PP
+Converts Xlsx document to DataSet (mulitple DataTables, 1 per sheet) input as file path 
+.SS "static \fBDataTable\fP JBToolkit\&.XmlDoc\&.Converters\&.ExcelDataTable\&.ExcelToDataTable (string inputPath, bool hasHeaderRow, int worksheetNumber, out string errorMessages)\fC [static]\fP"
+
+.PP
+Converts Xlsx document to DataTable input as filepath 
+.SS "static \fBDataTable\fP JBToolkit\&.XmlDoc\&.Converters\&.ExcelDataTable\&.ExcelToDataTable (string inputPath, bool hasHeaderRow, string worksheetName, out string errorMessages)\fC [static]\fP"
+
+.PP
+Converts Xlsx document to DataTable input as filepath 
+.SS "static \fBDataTable\fP JBToolkit\&.XmlDoc\&.Converters\&.ExcelDataTable\&.ExcelWorksheetToDataTable (byte[] inputBytes, bool hasHeaderRow, int worksheetNumber, out string errorMessages)\fC [static]\fP"
+
+.PP
+Converts Xlsx document to DataTable input as byte array 
+.SS "static \fBDataTable\fP JBToolkit\&.XmlDoc\&.Converters\&.ExcelDataTable\&.ExcelWorksheetToDataTable (byte[] inputBytes, bool hasHeaderRow, string worksheetName, out string errorMessages)\fC [static]\fP"
+
+.PP
+Converts Xlsx document to DataTable input as byte array 
+.SS "static byte [] JBToolkit\&.XmlDoc\&.Converters\&.ExcelDataTable\&.ListToExcel< T > (\fBList\fP< T > data, string Heading = \fC''\fP, bool showSlno = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Convert list to Excel and output byte array 
+.SS "static void JBToolkit\&.XmlDoc\&.Converters\&.ExcelDataTable\&.SaveAsExcel (\fBDataTable\fP data, string path, string Heading = \fC''\fP, bool showSlno = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Save DataTable as Excel file 
+.SS "static void \fBJBToolkit\&.XmlDoc\&.Converters\&.ExcelDataTable\&.SaveAsExcel\fP< T > (\fBList\fP< T > data, string path, string Heading = \fC''\fP, bool showSlno = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Save \fBList\fP as Excel file 
+.SH "Property Documentation"
+.PP 
+.SS "string JBToolkit\&.XmlDoc\&.Converters\&.ExcelDataTable\&.ExcelContentType\fC [static]\fP, \fC [get]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

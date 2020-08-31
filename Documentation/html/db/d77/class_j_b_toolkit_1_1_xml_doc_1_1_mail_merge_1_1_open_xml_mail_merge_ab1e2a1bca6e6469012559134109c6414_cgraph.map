@@ -1,0 +1,4 @@
+<map id="JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge.MergeDocumentAndSave" name="JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge.MergeDocumentAndSave">
+<area shape="rect" id="node1" title="Performs a mail merges given a dictionary of merge fields and their merge values and save to file" alt="" coords="5,5,289,47"/>
+<area shape="rect" id="node2" href="$db/d77/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge.html#aaa0a320448c071dd7476cef113351bf5" title="Basically performs a mail merge by replacing text defined by a dictionary of keys (in the format «key..." alt="" coords="337,5,571,47"/>
+</map>

@@ -1,0 +1,126 @@
+.TH "JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge \- Uses OpenXML to perform a Word Mail Merge\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBMergeDocumentAndSave\fP (string templatePath, string outputPath, Dictionary< string, string > fieldAndValues, bool saveAsPDF)"
+.br
+.RI "Performs a mail merges given a dictionary of merge fields and their merge values and save to file "
+.ti -1c
+.RI "static byte[] \fBMergeDocumentToByteArray\fP (string templatePath, Dictionary< string, string > fieldAndValues, bool saveAsPDF)"
+.br
+.RI "Performs a mail merges given a dictionary of merge fields and their merge values and returns a byte array "
+.ti -1c
+.RI "static string \fBMergeDocumentAsBase64String\fP (string templatePath, Dictionary< string, string > fieldAndValues, bool saveAsPDF)"
+.br
+.RI "Performs a mail merges given a dictionary of merge fields and their merge values and returns a base64 string (for blobs) "
+.ti -1c
+.RI "static MemoryStream \fBMergeDocumentToMemoryStream\fP (string templatePath, Dictionary< string, string > fieldAndValues, bool saveAsPDF)"
+.br
+.RI "Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory Stream "
+.ti -1c
+.RI "static string \fBFindAndReplace\fP (string templatePath, Dictionary< string, string > values, string saveAsPath=null, string tempFolderRoot=null)"
+.br
+.RI "Basically performs a mail merge by replacing text defined by a dictionary of keys (in the format «key») with the replacing text in the value of the dictionary\&. This method's default is to produce a temporary file and output the name of the file that has been created unless the 'SaveAsPath' parameter has been specified "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Uses OpenXML to perform a Word Mail Merge\&. 
+
+It's quick, but no always very reliable\&. Perhaps this class needs some modifications\&.\&.\&. Also, OpenXML doesn't have the facility to convert to PDF, so we have to use the M-Files API to do this for us\&. It's usually quick, but can be slow if M-Files is busy\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static string JBToolkit\&.XmlDoc\&.MailMerge\&.OpenXmlMailMerge\&.FindAndReplace (string templatePath, Dictionary< string, string > values, string saveAsPath = \fCnull\fP, string tempFolderRoot = \fCnull\fP)\fC [static]\fP"
+
+.PP
+Basically performs a mail merge by replacing text defined by a dictionary of keys (in the format «key») with the replacing text in the value of the dictionary\&. This method's default is to produce a temporary file and output the name of the file that has been created unless the 'SaveAsPath' parameter has been specified 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplatePath\fP Template document path
+.br
+\fIvalues\fP Dictionary of values to replace
+.br
+\fIsaveAsPath\fP Optional output path
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The default temp path of the created mail merge or a specified path
+.RE
+.PP
+
+.SS "static void JBToolkit\&.XmlDoc\&.MailMerge\&.OpenXmlMailMerge\&.MergeDocumentAndSave (string templatePath, string outputPath, Dictionary< string, string > fieldAndValues, bool saveAsPDF)\fC [static]\fP"
+
+.PP
+Performs a mail merges given a dictionary of merge fields and their merge values and save to file 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplatePath\fP Path to mail merge template
+.br
+\fIoutputPath\fP Where to save the file to
+.br
+\fIfieldAndValues\fP A Dictionary of Merge Fields and values
+.br
+\fIsaveAsPDF\fP Whether to save as PDF or docx
+.RE
+.PP
+
+.SS "static string JBToolkit\&.XmlDoc\&.MailMerge\&.OpenXmlMailMerge\&.MergeDocumentAsBase64String (string templatePath, Dictionary< string, string > fieldAndValues, bool saveAsPDF)\fC [static]\fP"
+
+.PP
+Performs a mail merges given a dictionary of merge fields and their merge values and returns a base64 string (for blobs) 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplatePath\fP Path to mail merge template
+.br
+\fIfieldAndValues\fP A Dictionary of Merge Fields and values
+.br
+\fIsaveAsPDF\fP Whether to save as PDF or docx
+.RE
+.PP
+
+.SS "static byte [] JBToolkit\&.XmlDoc\&.MailMerge\&.OpenXmlMailMerge\&.MergeDocumentToByteArray (string templatePath, Dictionary< string, string > fieldAndValues, bool saveAsPDF)\fC [static]\fP"
+
+.PP
+Performs a mail merges given a dictionary of merge fields and their merge values and returns a byte array 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplatePath\fP Path to mail merge template
+.br
+\fIfieldAndValues\fP A Dictionary of Merge Fields and values
+.br
+\fIsaveAsPDF\fP Whether to save as PDF or docx
+.RE
+.PP
+
+.SS "static MemoryStream JBToolkit\&.XmlDoc\&.MailMerge\&.OpenXmlMailMerge\&.MergeDocumentToMemoryStream (string templatePath, Dictionary< string, string > fieldAndValues, bool saveAsPDF)\fC [static]\fP"
+
+.PP
+Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory Stream 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplatePath\fP Path to mail merge template
+.br
+\fIfieldAndValues\fP A Dictionary of Merge Fields and values
+.br
+\fIsaveAsPDF\fP Whether to save as PDF or docx
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

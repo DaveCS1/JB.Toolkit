@@ -1,0 +1,11 @@
+<map id="JBToolkit.Images.ColourHelper.ExtractHexDigits" name="JBToolkit.Images.ColourHelper.ExtractHexDigits">
+<area shape="rect" id="node1" title="Extract the hex color digits from a string" alt="" coords="549,195,752,236"/>
+<area shape="rect" id="node2" href="$dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper.html#aa75700fa41a407f9f4def9e0a807c9b3" title="Color hex to System.Drawing.Color" alt="" coords="299,195,501,236"/>
+<area shape="rect" id="node3" href="$d2/d76/class_j_b_toolkit_1_1_images_1_1_colour_helper_1_1_colour_generator.html#aab13e135dfb8ff764d9a1a1acf92263f" title=" " alt="" coords="15,5,241,47"/>
+<area shape="rect" id="node4" href="$d3/df8/class_system_1_1_console_ex.html#ac7e43b83c144718126bf93f27dceffd1" title="Set the console background colour. Typically you have to clear the console to replace the whole windo..." alt="" coords="15,71,241,112"/>
+<area shape="rect" id="node5" href="$d3/df8/class_system_1_1_console_ex.html#a9a44a2ddce9975fe0193b179b0a1bd59" title="Set the background colour to a nice dark grey, centre the console and disable the cursor" alt="" coords="25,136,231,177"/>
+<area shape="rect" id="node6" href="$d3/df8/class_system_1_1_console_ex.html#a41e1a8c70f684d57b16ed746707257f1" title="Produce ASCII art text. Use a range of FIGlet fonts easily set via enum list." alt="" coords="21,202,235,229"/>
+<area shape="rect" id="node7" href="$d3/df8/class_system_1_1_console_ex.html#aae96a97557732c870aa84b0aacbc246b" title="Write text in a colour as of a hex colour (with or without the #). Full range of colours." alt="" coords="18,253,238,279"/>
+<area shape="rect" id="node8" href="$d3/df8/class_system_1_1_console_ex.html#a4f4c5a7c1bf9c91c92aa61f6a16bcbf5" title="Write line in a colour as of a hex colour (with or without the #). Full range of colours." alt="" coords="6,303,250,330"/>
+<area shape="rect" id="node9" href="$d3/df8/class_system_1_1_console_ex.html#ad77bc5f17c92e7051a5169a7199975fe" title="Write text in a colour as of a hex colour (with or without the #). Full range of colours." alt="" coords="5,354,251,381"/>
+</map>

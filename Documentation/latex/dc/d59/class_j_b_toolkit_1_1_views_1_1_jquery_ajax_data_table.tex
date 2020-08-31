@@ -1,0 +1,264 @@
+\hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table}{}\doxysection{J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table Class Reference}
+\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table}\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+
+
+Optional Sever-\/side processing\+: Generates J\+Query Data\+Table H\+T\+ML from a Model, using data from ajax calls for server-\/side processing.  
+
+
+
+
+Inheritance diagram for J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{db/d17/class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{dd/df9/class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a98778cd313f7a02e97a590d39c3ba7a9}{Jquery\+Ajax\+Data\+Table}} ()
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_aab72f18adf719e675c43dc96c195a6d2}{Jquery\+Ajax\+Data\+Table}} (string table\+Name, string columns, string url, string sorting, string additional\+Java\+Script=\char`\"{}\char`\"{}, string unique\+Id=\char`\"{}Default\char`\"{}, string column\+Definitions=null, bool use\+Custom\+Header=true, bool responsive=false, bool server\+Side=false, int pipeline\+Pages=1)
+\item 
+override string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a3ab7f70d52ec7f0ebb9a1c2cf0713ce7}{Generate\+Filters}} ()
+\begin{DoxyCompactList}\small\item\em Generates the html for custom filters \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a9bf8b4d2e61fd2285e0d25c40e555055}{Generate\+Register\+Data\+Table\+Script}} ()
+\begin{DoxyCompactList}\small\item\em Generates the Jquery Data\+Table registration call for the Data\+Table itself \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_ae957891868a002124345d87d990964bf}{Generate\+Html\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Generates the table data in the form of a H\+T\+ML table \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a7667acb4a375c6f058fbb7751905fd9f}{Generate\+Register\+Filters\+Script}} ()
+\begin{DoxyCompactList}\small\item\em Generates the Jquery Data\+Table registration call for the filters \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a3ffff18dd771074cbfad03e9208f9300}{Generate\+Additional\+Java\+Script}} ()
+\begin{DoxyCompactList}\small\item\em Generates any additional Java\+Script specified to the buttom of the scripts section. \end{DoxyCompactList}\item 
+async Task$<$ Action\+Result $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a6d8ad6cd50388a34f9ab3e55f69ce991}{Build\+J\+Query\+Ajax\+Data\+Table\+Example}} ()
+\begin{DoxyCompactList}\small\item\em This is just an example chunk of code for building a \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_json_data_table}{Jquery\+Json\+Data\+Table}}. Rather than hard code json, you\textquotesingle{}d serialise from a model or dynamic object as below \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a191f50552ca38d7585cb06607fe102f8}{Columns}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Columns -\/ As json string \href{https://datatables.net/reference/option/columns}{\texttt{ https\+://datatables.\+net/reference/option/columns}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a71b9b3a13b0bbd2838f782481d8e567f}{Column\+Definitions}} = string.\+Empty\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional Data\+Table column Definitions \href{https://datatables.net/reference/option/columnDefs}{\texttt{ https\+://datatables.\+net/reference/option/column\+Defs}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a284202bd6a73c1038b4441ee9dac8d94}{Url}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Http G\+ET and Http P\+O\+ST Url \href{https://datatables.net/reference/option/ajax}{\texttt{ https\+://datatables.\+net/reference/option/ajax}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a39e2f24f80622ec84677856aba4c0aec}{Sorting}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em How to sort the column -\/ A\+SC or D\+E\+SC (ascending by default -\/ optional) and which column to sort by -\/ As json string \href{https://datatables.net/reference/option/order}{\texttt{ https\+://datatables.\+net/reference/option/order}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a75be57dd368c86b7c7e872546a4e958a}{Post\+Script\+Function\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This allows you to run a specific Java\+Script function after the \textquotesingle{}drawn\textquotesingle{} event for any extra styling (or anthing else). Make sure the function name is unique to the scope. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_ada4244323d283d8a69991439b421c823}{Server\+Side}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set Data\+Table to use server side processing (ideal for large data-\/sets with processing per paging page, or optionally, use the \textquotesingle{}Pipeline\+Pages\textquotesingle{} option as well to process say every \textquotesingle{}5\textquotesingle{} pages or so (i.\+e. Data\+Tables will display 10 items per page, but rather than make an ajax request for every page, you can pretech and cache say 5 pages and therefore only make an ajax call every 5 pages). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a7c5e92ee59a97849b94b9ac68fcc4055}{Pipeline\+Pages}} = 1\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Caches a number of pages in memory to reduce the number of Ajax calls... i.\+e. Data\+Tables will display 10 items per page, but rather than make an ajax request for every page, you can prefetch and cache say 5 pages and therefore only make an ajax call every 5 pages). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Optional Sever-\/side processing\+: Generates J\+Query Data\+Table H\+T\+ML from a Model, using data from ajax calls for server-\/side processing. 
+
+\href{https://datatables.net/examples/data_sources/ajax.html}{\texttt{ https\+://datatables.\+net/examples/data\+\_\+sources/ajax.\+html}}
+
+Used in conjunction with the \textquotesingle{}J\+Query\+Data\+Table.\+cshtml\textquotesingle{} view (You can just inherit this from your own model if you wish)
+
+Y\+O\+UR P\+R\+O\+J\+E\+CT M\+U\+ST I\+N\+C\+L\+U\+DE J\+A\+V\+A\+S\+C\+R\+I\+PT P\+A\+C\+K\+A\+G\+ES \& C\+SS for Bootstrap, Data\+Tables, Data\+Tables \mbox{\hyperlink{namespace_j_b_toolkit_1_1_extensions}{Extensions}} and Editor
+
+$<$link href = \char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/3.\+3.\+6/css/bootstrap.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/tree-\/view/bootstrap-\/treeview.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$
+
+$<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/media/css/data\+Tables.\+bootstrap.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/css/buttons.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Responsive/css/responsive.\+data\+Tabl;es.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Responsive/css/responsive.\+boostrap.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Scroller/css/scroller.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Select/css/select.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Col\+Reorder/css/col\+Reorder.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/css/editor.\+bootstrap.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$link href = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/css/editor.\+data\+Tables.\+min.\+css\char`\"{} rel=\char`\"{}stylesheet\char`\"{} $>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery-\/1.\+12.\+4.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery.\+validate.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery.\+validate.\+unobtrusive.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/jquery-\/1.\+12.\+4/jquery.\+unobtrusive-\/ajax.\+min.\+js\char`\"{}$>$$<$/script$>$
+
+$<$script src = \char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/3.\+3.\+6/js/bootstrap.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/bootstrap-\/tree-\/view/bootstrap-\/treeview.\+min.\+js\char`\"{}$>$$<$/script$>$
+
+$<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/media/js/jquery.\+data\+Tables.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/media/js/data\+Tables.\+bootstrap.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/data\+Tables.\+buttons.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Responsive/js/data\+Tables.\+responsive.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Responsive/js/responsive.\+bootstrap.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/jszip-\/2.\+5.\+0/jszip.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/pdfmake-\/0.\+1.\+18/pdfmake.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/pdfmake-\/0.\+1.\+18/vfs\+\_\+fonts.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Scroller/js/data\+Tables.\+scroller.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Col\+Reorder/js/data\+Tables.\+col\+Reorder.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Select/js/data\+Tables.\+select.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/buttons.\+html5.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/buttons.\+print.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Buttons/js/buttons.\+col\+Vis.\+min.\+js\char`\"{}$>$$<$/script$>$ $<$script src = \char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/js/data\+Tables.\+editor.\+min.\+js\char`\"{} $>$$<$/ script $>$ $<$script src=\char`\"{}$\sim$/\+Scripts/packages/\+Data\+Tables-\/1.\+10.\+20/extensions/\+Editor/js/editor.\+bootstrap.\+min.\+js\char`\"{}$>$$<$/script$>$
+
+Alternatively, you can use a concatonated and minified C\+DN from here\+: \href{https://datatables.net/download/}{\texttt{ https\+://datatables.\+net/download/}}
+
+However you will need this regardless\+: $<$script src = \char`\"{}$\sim$/\+Scripts/data\+Tables\+Extensions.\+js\char`\"{} $>$$<$/ script $>$ ~\newline
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a98778cd313f7a02e97a590d39c3ba7a9}\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a98778cd313f7a02e97a590d39c3ba7a9}} 
+\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}!JqueryAjaxDataTable@{JqueryAjaxDataTable}}
+\index{JqueryAjaxDataTable@{JqueryAjaxDataTable}!JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+\doxysubsubsection{\texorpdfstring{JqueryAjaxDataTable()}{JqueryAjaxDataTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table.\+Jquery\+Ajax\+Data\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_aab72f18adf719e675c43dc96c195a6d2}\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_aab72f18adf719e675c43dc96c195a6d2}} 
+\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}!JqueryAjaxDataTable@{JqueryAjaxDataTable}}
+\index{JqueryAjaxDataTable@{JqueryAjaxDataTable}!JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+\doxysubsubsection{\texorpdfstring{JqueryAjaxDataTable()}{JqueryAjaxDataTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table.\+Jquery\+Ajax\+Data\+Table (\begin{DoxyParamCaption}\item[{string}]{table\+Name,  }\item[{string}]{columns,  }\item[{string}]{url,  }\item[{string}]{sorting,  }\item[{string}]{additional\+Java\+Script = {\ttfamily \char`\"{}\char`\"{}},  }\item[{string}]{unique\+Id = {\ttfamily \char`\"{}Default\char`\"{}},  }\item[{string}]{column\+Definitions = {\ttfamily null},  }\item[{bool}]{use\+Custom\+Header = {\ttfamily true},  }\item[{bool}]{responsive = {\ttfamily false},  }\item[{bool}]{server\+Side = {\ttfamily false},  }\item[{int}]{pipeline\+Pages = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a6d8ad6cd50388a34f9ab3e55f69ce991}\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a6d8ad6cd50388a34f9ab3e55f69ce991}} 
+\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}!BuildJQueryAjaxDataTableExample@{BuildJQueryAjaxDataTableExample}}
+\index{BuildJQueryAjaxDataTableExample@{BuildJQueryAjaxDataTableExample}!JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+\doxysubsubsection{\texorpdfstring{BuildJQueryAjaxDataTableExample()}{BuildJQueryAjaxDataTableExample()}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$>$ J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table.\+Build\+J\+Query\+Ajax\+Data\+Table\+Example (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This is just an example chunk of code for building a \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1_jquery_json_data_table}{Jquery\+Json\+Data\+Table}}. Rather than hard code json, you\textquotesingle{}d serialise from a model or dynamic object as below 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a3ffff18dd771074cbfad03e9208f9300}\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a3ffff18dd771074cbfad03e9208f9300}} 
+\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}!GenerateAdditionalJavaScript@{GenerateAdditionalJavaScript}}
+\index{GenerateAdditionalJavaScript@{GenerateAdditionalJavaScript}!JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+\doxysubsubsection{\texorpdfstring{GenerateAdditionalJavaScript()}{GenerateAdditionalJavaScript()}}
+{\footnotesize\ttfamily override string J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table.\+Generate\+Additional\+Java\+Script (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generates any additional Java\+Script specified to the buttom of the scripts section. 
+
+
+\begin{DoxyItemize}
+\item Be aware of Java\+Script special characters. Use the \textquotesingle{}$<$string$>$.Get\+Java\+Script\+Acceptable\+String()\textquotesingle{} extension in most circumstances
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_ada6b96b4496c713b8ff581b6d6585b59}{J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table}}.
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a3ab7f70d52ec7f0ebb9a1c2cf0713ce7}\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a3ab7f70d52ec7f0ebb9a1c2cf0713ce7}} 
+\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}!GenerateFilters@{GenerateFilters}}
+\index{GenerateFilters@{GenerateFilters}!JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+\doxysubsubsection{\texorpdfstring{GenerateFilters()}{GenerateFilters()}}
+{\footnotesize\ttfamily override string J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table.\+Generate\+Filters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generates the html for custom filters 
+
+
+
+Implements \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a2dccb9675ad0b405b0449798e0a22e6e}{J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table}}.
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_ae957891868a002124345d87d990964bf}\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_ae957891868a002124345d87d990964bf}} 
+\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}!GenerateHtmlTable@{GenerateHtmlTable}}
+\index{GenerateHtmlTable@{GenerateHtmlTable}!JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+\doxysubsubsection{\texorpdfstring{GenerateHtmlTable()}{GenerateHtmlTable()}}
+{\footnotesize\ttfamily override string J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table.\+Generate\+Html\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generates the table data in the form of a H\+T\+ML table 
+
+
+
+Implements \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a364cb73f1db7c1aee55ba4be2bba0b20}{J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table}}.
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a9bf8b4d2e61fd2285e0d25c40e555055}\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a9bf8b4d2e61fd2285e0d25c40e555055}} 
+\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}!GenerateRegisterDataTableScript@{GenerateRegisterDataTableScript}}
+\index{GenerateRegisterDataTableScript@{GenerateRegisterDataTableScript}!JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+\doxysubsubsection{\texorpdfstring{GenerateRegisterDataTableScript()}{GenerateRegisterDataTableScript()}}
+{\footnotesize\ttfamily override string J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table.\+Generate\+Register\+Data\+Table\+Script (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generates the Jquery Data\+Table registration call for the Data\+Table itself 
+
+
+
+Implements \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a5240710a0ba99e58fc1c3bc94995c740}{J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table}}.
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a7667acb4a375c6f058fbb7751905fd9f}\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a7667acb4a375c6f058fbb7751905fd9f}} 
+\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}!GenerateRegisterFiltersScript@{GenerateRegisterFiltersScript}}
+\index{GenerateRegisterFiltersScript@{GenerateRegisterFiltersScript}!JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+\doxysubsubsection{\texorpdfstring{GenerateRegisterFiltersScript()}{GenerateRegisterFiltersScript()}}
+{\footnotesize\ttfamily override string J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table.\+Generate\+Register\+Filters\+Script (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generates the Jquery Data\+Table registration call for the filters 
+
+
+
+Implements \mbox{\hyperlink{class_j_b_toolkit_1_1_views_1_1___jquery_data_table_a892fa4c2585d8f9e6a64fad5aaf43c6a}{J\+B\+Toolkit.\+Views.\+\_\+\+Jquery\+Data\+Table}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a71b9b3a13b0bbd2838f782481d8e567f}\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a71b9b3a13b0bbd2838f782481d8e567f}} 
+\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}!ColumnDefinitions@{ColumnDefinitions}}
+\index{ColumnDefinitions@{ColumnDefinitions}!JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+\doxysubsubsection{\texorpdfstring{ColumnDefinitions}{ColumnDefinitions}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table.\+Column\+Definitions = string.\+Empty\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Optional Data\+Table column Definitions \href{https://datatables.net/reference/option/columnDefs}{\texttt{ https\+://datatables.\+net/reference/option/column\+Defs}} 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a191f50552ca38d7585cb06607fe102f8}\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a191f50552ca38d7585cb06607fe102f8}} 
+\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}!Columns@{Columns}}
+\index{Columns@{Columns}!JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+\doxysubsubsection{\texorpdfstring{Columns}{Columns}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table.\+Columns\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Columns -\/ As json string \href{https://datatables.net/reference/option/columns}{\texttt{ https\+://datatables.\+net/reference/option/columns}} 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a7c5e92ee59a97849b94b9ac68fcc4055}\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a7c5e92ee59a97849b94b9ac68fcc4055}} 
+\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}!PipelinePages@{PipelinePages}}
+\index{PipelinePages@{PipelinePages}!JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+\doxysubsubsection{\texorpdfstring{PipelinePages}{PipelinePages}}
+{\footnotesize\ttfamily int J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table.\+Pipeline\+Pages = 1\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Caches a number of pages in memory to reduce the number of Ajax calls... i.\+e. Data\+Tables will display 10 items per page, but rather than make an ajax request for every page, you can prefetch and cache say 5 pages and therefore only make an ajax call every 5 pages). 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a75be57dd368c86b7c7e872546a4e958a}\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a75be57dd368c86b7c7e872546a4e958a}} 
+\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}!PostScriptFunctionName@{PostScriptFunctionName}}
+\index{PostScriptFunctionName@{PostScriptFunctionName}!JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+\doxysubsubsection{\texorpdfstring{PostScriptFunctionName}{PostScriptFunctionName}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table.\+Post\+Script\+Function\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+This allows you to run a specific Java\+Script function after the \textquotesingle{}drawn\textquotesingle{} event for any extra styling (or anthing else). Make sure the function name is unique to the scope. 
+
+The function give the ID of the table. I.\+e\+:
+
+function(table\+Id) \{ // Whatever you want to do here \}\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_ada4244323d283d8a69991439b421c823}\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_ada4244323d283d8a69991439b421c823}} 
+\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}!ServerSide@{ServerSide}}
+\index{ServerSide@{ServerSide}!JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+\doxysubsubsection{\texorpdfstring{ServerSide}{ServerSide}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table.\+Server\+Side = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Set Data\+Table to use server side processing (ideal for large data-\/sets with processing per paging page, or optionally, use the \textquotesingle{}Pipeline\+Pages\textquotesingle{} option as well to process say every \textquotesingle{}5\textquotesingle{} pages or so (i.\+e. Data\+Tables will display 10 items per page, but rather than make an ajax request for every page, you can pretech and cache say 5 pages and therefore only make an ajax call every 5 pages). 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a39e2f24f80622ec84677856aba4c0aec}\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a39e2f24f80622ec84677856aba4c0aec}} 
+\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}!Sorting@{Sorting}}
+\index{Sorting@{Sorting}!JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+\doxysubsubsection{\texorpdfstring{Sorting}{Sorting}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table.\+Sorting\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+How to sort the column -\/ A\+SC or D\+E\+SC (ascending by default -\/ optional) and which column to sort by -\/ As json string \href{https://datatables.net/reference/option/order}{\texttt{ https\+://datatables.\+net/reference/option/order}} 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a284202bd6a73c1038b4441ee9dac8d94}\label{class_j_b_toolkit_1_1_views_1_1_jquery_ajax_data_table_a284202bd6a73c1038b4441ee9dac8d94}} 
+\index{JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}!Url@{Url}}
+\index{Url@{Url}!JBToolkit.Views.JqueryAjaxDataTable@{JBToolkit.Views.JqueryAjaxDataTable}}
+\doxysubsubsection{\texorpdfstring{Url}{Url}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Views.\+Jquery\+Ajax\+Data\+Table.\+Url\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Http G\+ET and Http P\+O\+ST Url \href{https://datatables.net/reference/option/ajax}{\texttt{ https\+://datatables.\+net/reference/option/ajax}} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+J\+Query\+Data\+Table\+View\+Models/\+J\+Query\+Data\+Tables/\mbox{\hyperlink{_jquery_ajax_data_table_8cs}{Jquery\+Ajax\+Data\+Table.\+cs}}\end{DoxyCompactItemize}

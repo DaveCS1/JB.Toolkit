@@ -1,0 +1,126 @@
+.TH "JBToolkit.Images.ImageHelper.IconHelper.Icon" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Images.ImageHelper.IconHelper.Icon \- Extension of the System\&.Drawing\&.Icon for getting header information and individsual icons from a multi-resolution icon  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBIDisposable\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBIconEntry\fP"
+.br
+.RI "Each icon if the file has its own header with information, stored in this object "
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBDisplayType\fP { \fBDisplayType\&.Largest\fP = 0, \fBDisplayType\&.Smallest\fP = 1 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "System\&.Drawing\&.Icon \fBBuildIcon\fP (int index)"
+.br
+.RI "Returns a System\&.Drawing\&.Icon from the array list of a multi-resolution icon "
+.ti -1c
+.RI "System\&.Drawing\&.Icon \fBFindIcon\fP (\fBDisplayType\fP displayType)"
+.br
+.RI "Get the largest of small icon based on icon size "
+.ti -1c
+.RI "\fBIcon\fP (string filename)"
+.br
+.RI "Loads the icon file into the memory stream "
+.ti -1c
+.RI "\fBIcon\fP (MemoryStream ms)"
+.br
+.RI "Loads the icon from memory stream "
+.ti -1c
+.RI "\fBIcon\fP (byte[] bytes)"
+.br
+.RI "Loads the icon from bytes "
+.ti -1c
+.RI "\fBIcon\fP (System\&.Drawing\&.Icon icon)"
+.br
+.RI "Loads the icon from bytes "
+.ti -1c
+.RI "void \fBDispose\fP ()"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "\fBList\fP< \fBIconEntry\fP > \fBIconsInfo\fP\fC [get]\fP"
+.br
+.RI "Information on each imame in the icon object "
+.ti -1c
+.RI "int \fBCount\fP\fC [get]\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Extension of the System\&.Drawing\&.Icon for getting header information and individsual icons from a multi-resolution icon 
+
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBJBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.Icon\&.DisplayType\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILargest \fP\fP
+.TP
+\fB\fISmallest \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.Icon\&.Icon (string filename)"
+
+.PP
+Loads the icon file into the memory stream 
+.SS "JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.Icon\&.Icon (MemoryStream ms)"
+
+.PP
+Loads the icon from memory stream 
+.SS "JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.Icon\&.Icon (byte[] bytes)"
+
+.PP
+Loads the icon from bytes 
+.SS "JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.Icon\&.Icon (System\&.Drawing\&.Icon icon)"
+
+.PP
+Loads the icon from bytes 
+.SH "Member Function Documentation"
+.PP 
+.SS "System\&.Drawing\&.Icon JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.Icon\&.BuildIcon (int index)"
+
+.PP
+Returns a System\&.Drawing\&.Icon from the array list of a multi-resolution icon 
+.SS "void JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.Icon\&.Dispose ()"
+
+.SS "System\&.Drawing\&.Icon JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.Icon\&.FindIcon (\fBDisplayType\fP displayType)"
+
+.PP
+Get the largest of small icon based on icon size 
+.SH "Property Documentation"
+.PP 
+.SS "int JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.Icon\&.Count\fC [get]\fP"
+
+.SS "\fBList\fP<\fBIconEntry\fP> JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.Icon\&.IconsInfo\fC [get]\fP"
+
+.PP
+Information on each imame in the icon object 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

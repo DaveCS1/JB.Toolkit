@@ -1,0 +1,296 @@
+\hypertarget{class_j_b_toolkit_1_1_web_1_1_http}{}\doxysection{J\+B\+Toolkit.\+Web.\+Http Class Reference}
+\label{class_j_b_toolkit_1_1_web_1_1_http}\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}}
+
+
+Generic H\+T\+TP methods  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Web.\+Http\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{dc/da6/class_j_b_toolkit_1_1_web_1_1_http__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703e}{Location\+Type}} \{ \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703ea2fb403e71d8ade2ba79af3f6c4695d09}{Location\+Type.\+File\+Path}}, 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703eae6b391a8d2c4d45902a23a8b6585703d}{Location\+Type.\+U\+RL}}, 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703ea0e3a0b6dbb80a488b6865e2aebdccb6c}{Location\+Type.\+Base64\+String}}, 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703ea88183b946cc5f0e8c96b2e66e1c74a7e}{Location\+Type.\+Unknown}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a70f30a16b7267c52394c157ac34a3dfd}{Get\+Site\+Root}} ()
+\begin{DoxyCompactList}\small\item\em Return scheme + host + port (i.\+e. \href{http://localhost:80}{\texttt{ http\+://localhost\+:80}}) \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a21524cc25f79e7586021747bb2883055}{Remove\+Query\+String\+From\+Url}} (string full\+Url)
+\begin{DoxyCompactList}\small\item\em Returns just the path of the U\+RL (without query string) \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a0916408db1aa27794de547b8d7b86acd}{Does\+Image\+Exist\+Remotely}} (string uri\+To\+Image)
+\begin{DoxyCompactList}\small\item\em Used to test if favicon of quicklink custom site exists, so that if it doesn\textquotesingle{}t we can use a custom image \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_aa115905f11a8b727dfbe3754a4c54819}{Get\+Image\+Base64\+String\+From\+Url}} (String url, bool include\+Mime\+Type\+Descriptor=false)
+\begin{DoxyCompactList}\small\item\em Peforms a H\+T\+TP web request and downloads an image \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_aa43b32d47aef3e294e6a02f43d970dac}{Get\+Image\+Bytes\+From\+Url}} (string url)
+\begin{DoxyCompactList}\small\item\em Peforms a H\+T\+TP web request and downloads an image \end{DoxyCompactList}\item 
+static Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_aeb3558b489160693e23cf906092a6c8b}{Get\+Stream\+From\+Url}} (string url)
+\begin{DoxyCompactList}\small\item\em Gets a stream from a remote U\+RL file location \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703e}{Location\+Type}} \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a0a17985de64b263fcc5846c18af2be81}{Get\+Is\+Path\+Or\+Url\+Or\+Base64}} (string input)
+\begin{DoxyCompactList}\small\item\em Based on given input string -\/ it decides if it\textquotesingle{}s a web U\+RL, a local file path or a base64 string. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a89b91530aa036e1c5ef634898aa79d14}{Path\+Is\+Local\+File}} (string path)
+\begin{DoxyCompactList}\small\item\em Is the path a local file? I.\+e. not a web U\+RL or base 64 string \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_ac7b1ccc8153f3a03e1e96c5828a64ed1}{Path\+Is\+Url}} (string path)
+\begin{DoxyCompactList}\small\item\em Is the path a local file? I.\+e. not a web U\+RL or base 64 string \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a14b23af241df7472f14f1c9f9fa6af4a}{Decompress\+Brotli\+From\+Http\+Request\+Response}} (Http\+Web\+Request request)
+\begin{DoxyCompactList}\small\item\em Decompress a brotli compressed (br) http requst response stream (i.\+e, Google uses this) \end{DoxyCompactList}\item 
+static dynamic \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a86baee653dd1839693dec6ceb893bde7}{Decompress\+Brotli\+From\+Http\+Request\+Response\+Assuming\+Json}} (Http\+Web\+Request request)
+\begin{DoxyCompactList}\small\item\em Decompress a brotli compressed (br) http request response stream (i.\+e, Google uses this) \end{DoxyCompactList}\item 
+static T \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_afb1afaa3537de11717d132a69613ffa9}{Decompress\+Brotli\+From\+Http\+Request\+Response\+Assuming\+Json$<$ T $>$}} (Http\+Web\+Request request)
+\begin{DoxyCompactList}\small\item\em Decompress a brotli compressed (br) http request response stream (i.\+e, Google uses this) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic H\+T\+TP methods 
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703e}\label{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703e}} 
+\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!LocationType@{LocationType}}
+\index{LocationType@{LocationType}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}
+\doxysubsubsection{\texorpdfstring{LocationType}{LocationType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703e}{J\+B\+Toolkit.\+Web.\+Http.\+Location\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FilePath@{FilePath}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!FilePath@{FilePath}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703ea2fb403e71d8ade2ba79af3f6c4695d09}\label{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703ea2fb403e71d8ade2ba79af3f6c4695d09}} 
+File\+Path&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{URL@{URL}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!URL@{URL}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703eae6b391a8d2c4d45902a23a8b6585703d}\label{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703eae6b391a8d2c4d45902a23a8b6585703d}} 
+U\+RL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Base64String@{Base64String}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!Base64String@{Base64String}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703ea0e3a0b6dbb80a488b6865e2aebdccb6c}\label{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703ea0e3a0b6dbb80a488b6865e2aebdccb6c}} 
+Base64\+String&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unknown@{Unknown}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!Unknown@{Unknown}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703ea88183b946cc5f0e8c96b2e66e1c74a7e}\label{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703ea88183b946cc5f0e8c96b2e66e1c74a7e}} 
+Unknown&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_a14b23af241df7472f14f1c9f9fa6af4a}\label{class_j_b_toolkit_1_1_web_1_1_http_a14b23af241df7472f14f1c9f9fa6af4a}} 
+\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!DecompressBrotliFromHttpRequestResponse@{DecompressBrotliFromHttpRequestResponse}}
+\index{DecompressBrotliFromHttpRequestResponse@{DecompressBrotliFromHttpRequestResponse}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}
+\doxysubsubsection{\texorpdfstring{DecompressBrotliFromHttpRequestResponse()}{DecompressBrotliFromHttpRequestResponse()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Web.\+Http.\+Decompress\+Brotli\+From\+Http\+Request\+Response (\begin{DoxyParamCaption}\item[{Http\+Web\+Request}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Decompress a brotli compressed (br) http requst response stream (i.\+e, Google uses this) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & Web\+Client or Http\+Web\+Request input\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Raw string
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_a86baee653dd1839693dec6ceb893bde7}\label{class_j_b_toolkit_1_1_web_1_1_http_a86baee653dd1839693dec6ceb893bde7}} 
+\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!DecompressBrotliFromHttpRequestResponseAssumingJson@{DecompressBrotliFromHttpRequestResponseAssumingJson}}
+\index{DecompressBrotliFromHttpRequestResponseAssumingJson@{DecompressBrotliFromHttpRequestResponseAssumingJson}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}
+\doxysubsubsection{\texorpdfstring{DecompressBrotliFromHttpRequestResponseAssumingJson()}{DecompressBrotliFromHttpRequestResponseAssumingJson()}}
+{\footnotesize\ttfamily static dynamic J\+B\+Toolkit.\+Web.\+Http.\+Decompress\+Brotli\+From\+Http\+Request\+Response\+Assuming\+Json (\begin{DoxyParamCaption}\item[{Http\+Web\+Request}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Decompress a brotli compressed (br) http request response stream (i.\+e, Google uses this) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & Web\+Client or Http\+Web\+Request input\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Deserialised object as a dynamic object
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_afb1afaa3537de11717d132a69613ffa9}\label{class_j_b_toolkit_1_1_web_1_1_http_afb1afaa3537de11717d132a69613ffa9}} 
+\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!DecompressBrotliFromHttpRequestResponseAssumingJson$<$ T $>$@{DecompressBrotliFromHttpRequestResponseAssumingJson$<$ T $>$}}
+\index{DecompressBrotliFromHttpRequestResponseAssumingJson$<$ T $>$@{DecompressBrotliFromHttpRequestResponseAssumingJson$<$ T $>$}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}
+\doxysubsubsection{\texorpdfstring{DecompressBrotliFromHttpRequestResponseAssumingJson$<$ T $>$()}{DecompressBrotliFromHttpRequestResponseAssumingJson< T >()}}
+{\footnotesize\ttfamily static T \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a86baee653dd1839693dec6ceb893bde7}{J\+B\+Toolkit.\+Web.\+Http.\+Decompress\+Brotli\+From\+Http\+Request\+Response\+Assuming\+Json}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{Http\+Web\+Request}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Decompress a brotli compressed (br) http request response stream (i.\+e, Google uses this) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of object to deserialise to\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em request} & Web\+Client or Http\+Web\+Request input\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Deserialised object
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_a0916408db1aa27794de547b8d7b86acd}\label{class_j_b_toolkit_1_1_web_1_1_http_a0916408db1aa27794de547b8d7b86acd}} 
+\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!DoesImageExistRemotely@{DoesImageExistRemotely}}
+\index{DoesImageExistRemotely@{DoesImageExistRemotely}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}
+\doxysubsubsection{\texorpdfstring{DoesImageExistRemotely()}{DoesImageExistRemotely()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Web.\+Http.\+Does\+Image\+Exist\+Remotely (\begin{DoxyParamCaption}\item[{string}]{uri\+To\+Image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Used to test if favicon of quicklink custom site exists, so that if it doesn\textquotesingle{}t we can use a custom image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uri\+To\+Image} & Remote U\+RL\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_aa115905f11a8b727dfbe3754a4c54819}\label{class_j_b_toolkit_1_1_web_1_1_http_aa115905f11a8b727dfbe3754a4c54819}} 
+\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!GetImageBase64StringFromUrl@{GetImageBase64StringFromUrl}}
+\index{GetImageBase64StringFromUrl@{GetImageBase64StringFromUrl}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}
+\doxysubsubsection{\texorpdfstring{GetImageBase64StringFromUrl()}{GetImageBase64StringFromUrl()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Web.\+Http.\+Get\+Image\+Base64\+String\+From\+Url (\begin{DoxyParamCaption}\item[{String}]{url,  }\item[{bool}]{include\+Mime\+Type\+Descriptor = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Peforms a H\+T\+TP web request and downloads an image 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/class_j_b_toolkit_1_1_web_1_1_http_aa115905f11a8b727dfbe3754a4c54819_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_aa43b32d47aef3e294e6a02f43d970dac}\label{class_j_b_toolkit_1_1_web_1_1_http_aa43b32d47aef3e294e6a02f43d970dac}} 
+\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!GetImageBytesFromUrl@{GetImageBytesFromUrl}}
+\index{GetImageBytesFromUrl@{GetImageBytesFromUrl}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}
+\doxysubsubsection{\texorpdfstring{GetImageBytesFromUrl()}{GetImageBytesFromUrl()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Web.\+Http.\+Get\+Image\+Bytes\+From\+Url (\begin{DoxyParamCaption}\item[{string}]{url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Peforms a H\+T\+TP web request and downloads an image 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/class_j_b_toolkit_1_1_web_1_1_http_aa43b32d47aef3e294e6a02f43d970dac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_a0a17985de64b263fcc5846c18af2be81}\label{class_j_b_toolkit_1_1_web_1_1_http_a0a17985de64b263fcc5846c18af2be81}} 
+\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!GetIsPathOrUrlOrBase64@{GetIsPathOrUrlOrBase64}}
+\index{GetIsPathOrUrlOrBase64@{GetIsPathOrUrlOrBase64}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}
+\doxysubsubsection{\texorpdfstring{GetIsPathOrUrlOrBase64()}{GetIsPathOrUrlOrBase64()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_web_1_1_http_a433be9e79fb844077361a3311738703e}{Location\+Type}} J\+B\+Toolkit.\+Web.\+Http.\+Get\+Is\+Path\+Or\+Url\+Or\+Base64 (\begin{DoxyParamCaption}\item[{string}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Based on given input string -\/ it decides if it\textquotesingle{}s a web U\+RL, a local file path or a base64 string. 
+
+$\ast$\+Don\textquotesingle{}t rely on this. It works by checking the existance of an U\+RL or local file. No acutal string pattern matching is performed.Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/class_j_b_toolkit_1_1_web_1_1_http_a0a17985de64b263fcc5846c18af2be81_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_a70f30a16b7267c52394c157ac34a3dfd}\label{class_j_b_toolkit_1_1_web_1_1_http_a70f30a16b7267c52394c157ac34a3dfd}} 
+\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!GetSiteRoot@{GetSiteRoot}}
+\index{GetSiteRoot@{GetSiteRoot}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}
+\doxysubsubsection{\texorpdfstring{GetSiteRoot()}{GetSiteRoot()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Web.\+Http.\+Get\+Site\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return scheme + host + port (i.\+e. \href{http://localhost:80}{\texttt{ http\+://localhost\+:80}}) 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_aeb3558b489160693e23cf906092a6c8b}\label{class_j_b_toolkit_1_1_web_1_1_http_aeb3558b489160693e23cf906092a6c8b}} 
+\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!GetStreamFromUrl@{GetStreamFromUrl}}
+\index{GetStreamFromUrl@{GetStreamFromUrl}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}
+\doxysubsubsection{\texorpdfstring{GetStreamFromUrl()}{GetStreamFromUrl()}}
+{\footnotesize\ttfamily static Stream J\+B\+Toolkit.\+Web.\+Http.\+Get\+Stream\+From\+Url (\begin{DoxyParamCaption}\item[{string}]{url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets a stream from a remote U\+RL file location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/class_j_b_toolkit_1_1_web_1_1_http_aeb3558b489160693e23cf906092a6c8b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_a89b91530aa036e1c5ef634898aa79d14}\label{class_j_b_toolkit_1_1_web_1_1_http_a89b91530aa036e1c5ef634898aa79d14}} 
+\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!PathIsLocalFile@{PathIsLocalFile}}
+\index{PathIsLocalFile@{PathIsLocalFile}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}
+\doxysubsubsection{\texorpdfstring{PathIsLocalFile()}{PathIsLocalFile()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Web.\+Http.\+Path\+Is\+Local\+File (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Is the path a local file? I.\+e. not a web U\+RL or base 64 string 
+
+$\ast$\+Don\textquotesingle{}t rely on this. It works by checking the existance of a local file. No acutal string pattern matching is performed.Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/class_j_b_toolkit_1_1_web_1_1_http_a89b91530aa036e1c5ef634898aa79d14_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_ac7b1ccc8153f3a03e1e96c5828a64ed1}\label{class_j_b_toolkit_1_1_web_1_1_http_ac7b1ccc8153f3a03e1e96c5828a64ed1}} 
+\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!PathIsUrl@{PathIsUrl}}
+\index{PathIsUrl@{PathIsUrl}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}
+\doxysubsubsection{\texorpdfstring{PathIsUrl()}{PathIsUrl()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Web.\+Http.\+Path\+Is\+Url (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Is the path a local file? I.\+e. not a web U\+RL or base 64 string 
+
+$\ast$\+Don\textquotesingle{}t rely on this. It works by checking the existance of an U\+RL end-\/point. No acutal string pattern matching is performed.Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d24/class_j_b_toolkit_1_1_web_1_1_http_ac7b1ccc8153f3a03e1e96c5828a64ed1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_web_1_1_http_a21524cc25f79e7586021747bb2883055}\label{class_j_b_toolkit_1_1_web_1_1_http_a21524cc25f79e7586021747bb2883055}} 
+\index{JBToolkit.Web.Http@{JBToolkit.Web.Http}!RemoveQueryStringFromUrl@{RemoveQueryStringFromUrl}}
+\index{RemoveQueryStringFromUrl@{RemoveQueryStringFromUrl}!JBToolkit.Web.Http@{JBToolkit.Web.Http}}
+\doxysubsubsection{\texorpdfstring{RemoveQueryStringFromUrl()}{RemoveQueryStringFromUrl()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Web.\+Http.\+Remove\+Query\+String\+From\+Url (\begin{DoxyParamCaption}\item[{string}]{full\+Url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns just the path of the U\+RL (without query string) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Web/\mbox{\hyperlink{_http_8cs}{Http.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,196 @@
+.TH "System.Drawing.Html.CssLength" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+System.Drawing.Html.CssLength \- Represents and gets info about a CSS Length  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBCssUnit\fP { \fBCssUnit\&.None\fP, \fBCssUnit\&.Ems\fP, \fBCssUnit\&.Pixels\fP, \fBCssUnit\&.Ex\fP, \fBCssUnit\&.Inches\fP, \fBCssUnit\&.Centimeters\fP, \fBCssUnit\&.Milimeters\fP, \fBCssUnit\&.Points\fP, \fBCssUnit\&.Picas\fP }"
+.br
+.RI "Represents the possible units of the CSS lengths "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCssLength\fP (string length)"
+.br
+.RI "Creates a new \fBCssLength\fP from a length specified on a CSS style sheet or fragment "
+.ti -1c
+.RI "\fBCssLength\fP \fBConvertEmToPoints\fP (float emSize)"
+.br
+.RI "If length is in Ems, returns its value in points "
+.ti -1c
+.RI "\fBCssLength\fP \fBConvertEmToPixels\fP (float pixelFactor)"
+.br
+.RI "If length is in Ems, returns its value in pixels "
+.ti -1c
+.RI "override string \fBToString\fP ()"
+.br
+.RI "Returns the length formatted ready for CSS interpreting\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBNumber\fP => _number"
+.br
+.RI "Gets the number in the length "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "bool \fBHasError\fP\fC [get]\fP"
+.br
+.RI "Gets if the length has some parsing error "
+.ti -1c
+.RI "bool \fBIsPercentage\fP\fC [get]\fP"
+.br
+.RI "Gets if the length represents a precentage (not actually a length) "
+.ti -1c
+.RI "bool \fBIsRelative\fP\fC [get]\fP"
+.br
+.RI "Gets if the length is specified in relative units "
+.ti -1c
+.RI "\fBCssUnit\fP \fBUnit\fP\fC [get]\fP"
+.br
+.RI "Gets the unit of the length "
+.ti -1c
+.RI "string \fBLength\fP\fC [get]\fP"
+.br
+.RI "Gets the length as specified in the string "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents and gets info about a CSS Length 
+
+http://www.w3.org/TR/CSS21/syndata.html#length-units 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBSystem\&.Drawing\&.Html\&.CssLength\&.CssUnit\fP\fC [strong]\fP"
+
+.PP
+Represents the possible units of the CSS lengths http://www.w3.org/TR/CSS21/syndata.html#length-units 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINone \fP\fP
+.TP
+\fB\fIEms \fP\fP
+.TP
+\fB\fIPixels \fP\fP
+.TP
+\fB\fIEx \fP\fP
+.TP
+\fB\fIInches \fP\fP
+.TP
+\fB\fICentimeters \fP\fP
+.TP
+\fB\fIMilimeters \fP\fP
+.TP
+\fB\fIPoints \fP\fP
+.TP
+\fB\fIPicas \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "System\&.Drawing\&.Html\&.CssLength\&.CssLength (string length)"
+
+.PP
+Creates a new \fBCssLength\fP from a length specified on a CSS style sheet or fragment 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlength\fP Length as specified in the Style Sheet or style fragment
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBCssLength\fP System\&.Drawing\&.Html\&.CssLength\&.ConvertEmToPixels (float pixelFactor)"
+
+.PP
+If length is in Ems, returns its value in pixels 
+.PP
+\fBReturns\fP
+.RS 4
+Pixels size of this em
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIInvalidOperationException\fP If length has an error or isn't in ems
+.RE
+.PP
+
+.SS "\fBCssLength\fP System\&.Drawing\&.Html\&.CssLength\&.ConvertEmToPoints (float emSize)"
+
+.PP
+If length is in Ems, returns its value in points 
+.PP
+\fBParameters\fP
+.RS 4
+\fIemSize\fP Em size factor to multiply
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Points size of this em
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIInvalidOperationException\fP If length has an error or isn't in ems
+.RE
+.PP
+
+.SS "override string System\&.Drawing\&.Html\&.CssLength\&.ToString ()"
+
+.PP
+Returns the length formatted ready for CSS interpreting\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "float System\&.Drawing\&.Html\&.CssLength\&.Number => _number"
+
+.PP
+Gets the number in the length 
+.SH "Property Documentation"
+.PP 
+.SS "bool System\&.Drawing\&.Html\&.CssLength\&.HasError\fC [get]\fP"
+
+.PP
+Gets if the length has some parsing error 
+.SS "bool System\&.Drawing\&.Html\&.CssLength\&.IsPercentage\fC [get]\fP"
+
+.PP
+Gets if the length represents a precentage (not actually a length) 
+.SS "bool System\&.Drawing\&.Html\&.CssLength\&.IsRelative\fC [get]\fP"
+
+.PP
+Gets if the length is specified in relative units 
+.SS "string System\&.Drawing\&.Html\&.CssLength\&.Length\fC [get]\fP"
+
+.PP
+Gets the length as specified in the string 
+.SS "\fBCssUnit\fP System\&.Drawing\&.Html\&.CssLength\&.Unit\fC [get]\fP"
+
+.PP
+Gets the unit of the length 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

@@ -1,0 +1,4 @@
+<map id="JBToolkit.Database.DBConnection.QueryAsync&lt; T &gt;" name="JBToolkit.Database.DBConnection.QueryAsync&lt; T &gt;">
+<area shape="rect" id="node1" title="Uses Dapper to query the database, returning an IEnumerable of the object" alt="" coords="5,5,231,47"/>
+<area shape="rect" id="node2" href="$d1/d29/class_j_b_toolkit_1_1_database_1_1_d_b_connection.html#a7b2a05378cac50485ba7cf9c4ee9b3f1" title=" " alt="" coords="279,5,521,47"/>
+</map>

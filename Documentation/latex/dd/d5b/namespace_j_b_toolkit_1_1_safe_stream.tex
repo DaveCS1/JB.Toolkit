@@ -1,0 +1,7 @@
+\hypertarget{namespace_j_b_toolkit_1_1_safe_stream}{}\doxysection{J\+B\+Toolkit.\+Safe\+Stream Namespace Reference}
+\label{namespace_j_b_toolkit_1_1_safe_stream}\index{JBToolkit.SafeStream@{JBToolkit.SafeStream}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_safe_stream_1_1_safe_file_stream}{Safe\+File\+Stream}}
+\begin{DoxyCompactList}\small\item\em This is a wrapper around a File\+Stream. While it is not a Stream itself, it can be cast to one (keep in mind that this might throw an exception). It\textquotesingle{}s a mechanism for creating a stream from a file without the issue if it still being used by the calling process later when you want to access it again. \end{DoxyCompactList}\end{DoxyCompactItemize}

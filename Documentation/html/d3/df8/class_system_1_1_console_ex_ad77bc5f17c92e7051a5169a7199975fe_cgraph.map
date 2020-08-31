@@ -1,0 +1,7 @@
+<map id="System.ConsoleEx.WriteColouredText" name="System.ConsoleEx.WriteColouredText">
+<area shape="rect" id="node1" title="Write text in a colour as of a hex colour (with or without the #). Full range of colours." alt="" coords="5,46,251,73"/>
+<area shape="rect" id="node2" href="$dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper.html#aa75700fa41a407f9f4def9e0a807c9b3" title="Color hex to System.Drawing.Color" alt="" coords="320,8,523,49"/>
+<area shape="rect" id="node4" href="$d3/df8/class_system_1_1_console_ex.html#afb1e9012cdc2742765f65e1b4d2e4265" title="Write text in a colour as of a ConsoleColor (limited range of colours)" alt="" coords="299,75,544,102"/>
+<area shape="rect" id="node3" href="$dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper.html#a3b28f43eee0f751e02278bcb4ad25bb6" title="Extract the hex color digits from a string" alt="" coords="592,5,795,47"/>
+<area shape="rect" id="node5" href="$dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper.html#a14b3e3466a9bc0debbdaeb49e0180d2e" title="Console color to System.Drawing.Color" alt="" coords="592,71,795,112"/>
+</map>

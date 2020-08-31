@@ -1,0 +1,16 @@
+\hypertarget{_c_o_p_y_d_a_t_a_s_t_r_u_c_t_8cs}{}\doxysection{D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+JB.Toolkit/\+J\+B\+Toolkit/\+Inter\+Process\+Comms/\+Wm\+Copy\+Data/\+C\+O\+P\+Y\+D\+A\+T\+A\+S\+T\+R\+U\+CT.cs File Reference}
+\label{_c_o_p_y_d_a_t_a_s_t_r_u_c_t_8cs}\index{D:/OneDrive/Documents/Work/Repositories/JB.Toolkit/JBToolkit/InterProcessComms/WmCopyData/COPYDATASTRUCT.cs@{D:/OneDrive/Documents/Work/Repositories/JB.Toolkit/JBToolkit/InterProcessComms/WmCopyData/COPYDATASTRUCT.cs}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_j_b_toolkit_1_1_inter_process_comms_1_1_w_m___c_o_p_y_d_a_t_a_1_1_c_o_p_y_d_a_t_a_s_t_r_u_c_t}{J\+B\+Toolkit.\+Inter\+Process\+Comms.\+W\+M\+\_\+\+C\+O\+P\+Y\+D\+A\+T\+A.\+C\+O\+P\+Y\+D\+A\+T\+A\+S\+T\+R\+U\+CT}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_j_b_toolkit}{J\+B\+Toolkit}}
+\item 
+namespace \mbox{\hyperlink{namespace_j_b_toolkit_1_1_inter_process_comms}{J\+B\+Toolkit.\+Inter\+Process\+Comms}}
+\begin{DoxyCompactList}\small\item\em Gist from\+: \href{https://weblogs.asp.net/ricardoperes/local-machine-interprocess-communication-with-netD}{\texttt{ https\+://weblogs.\+asp.\+net/ricardoperes/local-\/machine-\/interprocess-\/communication-\/with-\/netD}} \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_j_b_toolkit_1_1_inter_process_comms_1_1_w_m___c_o_p_y_d_a_t_a}{J\+B\+Toolkit.\+Inter\+Process\+Comms.\+W\+M\+\_\+\+C\+O\+P\+Y\+D\+A\+TA}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_j_b_toolkit_1_1_inter_process_comms_1_1_w_m___c_o_p_y_d_a_t_a}{W\+M\+\_\+\+C\+O\+P\+Y\+D\+A\+TA}} probably doesn’t say much to .N\+ET developers, but for old-\/school Win32 C/\+C++ developers it certainly does! Basically, it was a way by which one could send arbitrary data, including structured data, between processes (actually, strictly speaking, windows). One would send a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_inter_process_comms_1_1_w_m___c_o_p_y_d_a_t_a}{W\+M\+\_\+\+C\+O\+P\+Y\+D\+A\+TA}} message to a window handle, running on any process, and \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} would take care of marshalling the data so that it is available outside the address space of the sending process. It is even possible to send it to all processes, using H\+W\+N\+D\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST, but that probably wouldn’t be wise, because different applications might have different interpretations of it. Also, it needs to be passed with Send\+Message, Post\+Message won’t work. \end{DoxyCompactList}\end{DoxyCompactItemize}

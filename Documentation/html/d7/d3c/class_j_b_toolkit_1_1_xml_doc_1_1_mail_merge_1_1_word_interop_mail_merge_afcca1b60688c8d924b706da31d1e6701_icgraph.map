@@ -1,0 +1,5 @@
+<map id="JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge.MergeDocumentToMemoryStream" name="JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge.MergeDocumentToMemoryStream">
+<area shape="rect" id="node1" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory..." alt="" coords="304,45,555,101"/>
+<area shape="rect" id="node2" href="$d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a558cb96cda9edb12e4f49d761530b865" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a base64..." alt="" coords="5,5,256,61"/>
+<area shape="rect" id="node3" href="$d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a3194d6f68821c2cf01b04c9913c3a478" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a byte a..." alt="" coords="5,85,256,141"/>
+</map>

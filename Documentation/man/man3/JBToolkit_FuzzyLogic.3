@@ -1,0 +1,99 @@
+.TH "JBToolkit.FuzzyLogic" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.FuzzyLogic
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAlgorithms\fP"
+.br
+.RI "Origin (before extension): https://github.com/kdjones/fuzzystring "
+.ti -1c
+.RI "class \fBDoubleMetaphoneAlgorithm\fP"
+.br
+.RI "https://en.wikipedia.org/wiki/Metaphone 
+.br
+
+.br
+ Get a 4 character 'soundex' - to compare 
+.br
+
+.br
+ Metaphone is a phonetic algorithm, published by Lawrence Philips in 1990, for indexing words by their English pronunciation\&.[1] It fundamentally improves on the Soundex algorithm by using information about variations and inconsistencies in English spelling and pronunciation to produce a more accurate encoding, which does a better job of matching words and names which sound similar\&. 
+.br
+
+.br
+ Origin: https://github.com/tylerjensen/FuzzyStrings "
+.ti -1c
+.RI "class \fBFuzzyLogicExample\fP"
+.br
+.ti -1c
+.RI "class \fBOperations\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBFuzzyStringComparisonOptions\fP { \fBFuzzyStringComparisonOptions\&.UseHammingDistance\fP, \fBFuzzyStringComparisonOptions\&.UseJaccardDistance\fP, \fBFuzzyStringComparisonOptions\&.UseJaroDistance\fP, \fBFuzzyStringComparisonOptions\&.UseJaroWinklerDistance\fP, \fBFuzzyStringComparisonOptions\&.UseLevenshteinDistance\fP, \fBFuzzyStringComparisonOptions\&.UseDamareuLevenshteinDistance\fP, \fBFuzzyStringComparisonOptions\&.UseLongestCommonSubsequence\fP, \fBFuzzyStringComparisonOptions\&.UseLongestCommonSubstring\fP, \fBFuzzyStringComparisonOptions\&.UseNormalizedLevenshteinDistance\fP, \fBFuzzyStringComparisonOptions\&.UseOverlapCoefficient\fP, \fBFuzzyStringComparisonOptions\&.UseRatcliffObershelpSimilarity\fP, \fBFuzzyStringComparisonOptions\&.UseSorensenDiceDistance\fP, \fBFuzzyStringComparisonOptions\&.UseTanimotoCoefficient\fP, \fBFuzzyStringComparisonOptions\&.CaseSensitive\fP }"
+.br
+.ti -1c
+.RI "enum \fBFuzzyStringComparisonTolerance\fP { \fBFuzzyStringComparisonTolerance\&.Strong\fP, \fBFuzzyStringComparisonTolerance\&.Normal\fP, \fBFuzzyStringComparisonTolerance\&.Weak\fP, \fBFuzzyStringComparisonTolerance\&.Manual\fP }"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBJBToolkit\&.FuzzyLogic\&.FuzzyStringComparisonOptions\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIUseHammingDistance \fP\fP
+.TP
+\fB\fIUseJaccardDistance \fP\fP
+.TP
+\fB\fIUseJaroDistance \fP\fP
+.TP
+\fB\fIUseJaroWinklerDistance \fP\fP
+.TP
+\fB\fIUseLevenshteinDistance \fP\fP
+.TP
+\fB\fIUseDamareuLevenshteinDistance \fP\fP
+.TP
+\fB\fIUseLongestCommonSubsequence \fP\fP
+.TP
+\fB\fIUseLongestCommonSubstring \fP\fP
+.TP
+\fB\fIUseNormalizedLevenshteinDistance \fP\fP
+.TP
+\fB\fIUseOverlapCoefficient \fP\fP
+.TP
+\fB\fIUseRatcliffObershelpSimilarity \fP\fP
+.TP
+\fB\fIUseSorensenDiceDistance \fP\fP
+.TP
+\fB\fIUseTanimotoCoefficient \fP\fP
+.TP
+\fB\fICaseSensitive \fP\fP
+.SS "enum \fBJBToolkit\&.FuzzyLogic\&.FuzzyStringComparisonTolerance\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIStrong \fP\fP
+.TP
+\fB\fINormal \fP\fP
+.TP
+\fB\fIWeak \fP\fP
+.TP
+\fB\fIManual \fP\fP
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

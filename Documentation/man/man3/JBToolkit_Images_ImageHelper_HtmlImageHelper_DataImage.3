@@ -1,0 +1,102 @@
+.TH "JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Images.ImageHelper.HtmlImageHelper.DataImage \- Parse base 64 to \fBDataImage\fP object consisting of raw byte[] data and the image and mime type\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDataImage\fP (string imageType, byte[] rawData)"
+.br
+.ti -1c
+.RI "\fBDataImage\fP (string mimeType, string imageType, byte[] rawData)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBTryParse\fP (string dataUri, out \fBDataImage\fP image)"
+.br
+.RI "Try to parse a base64 encoded image and return a \fBDataImage\fP object of the raw bytes and mime types "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "System\&.Drawing\&.Image \fBImage\fP => System\&.Drawing\&.Image\&.FromStream(new MemoryStream(\fBRawData\fP))"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static readonly Regex \fBDataUriPattern\fP = new Regex(@'^data\\:(?<mimeType>image\\/(?<imageType>png|tiff|tif|jpg|jpeg|gif|bmp|svg));base64,(?<data>[A\-Z0\-9\\+\\/\\=]+)$', RegexOptions\&.Compiled | RegexOptions\&.ExplicitCapture | RegexOptions\&.IgnoreCase)"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "string \fBMimeType\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "byte[] \fBRawData\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "string \fBImageType\fP\fC [get]\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Parse base 64 to \fBDataImage\fP object consisting of raw byte[] data and the image and mime type\&. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.Images\&.ImageHelper\&.HtmlImageHelper\&.DataImage\&.DataImage (string imageType, byte[] rawData)"
+
+.SS "JBToolkit\&.Images\&.ImageHelper\&.HtmlImageHelper\&.DataImage\&.DataImage (string mimeType, string imageType, byte[] rawData)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static bool JBToolkit\&.Images\&.ImageHelper\&.HtmlImageHelper\&.DataImage\&.TryParse (string dataUri, out \fBDataImage\fP image)\fC [static]\fP"
+
+.PP
+Try to parse a base64 encoded image and return a \fBDataImage\fP object of the raw bytes and mime types 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdataUri\fP 
+.br
+\fIimage\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "readonly Regex JBToolkit\&.Images\&.ImageHelper\&.HtmlImageHelper\&.DataImage\&.DataUriPattern = new Regex(@'^data\\:(?<mimeType>image\\/(?<imageType>png|tiff|tif|jpg|jpeg|gif|bmp|svg));base64,(?<data>[A\-Z0\-9\\+\\/\\=]+)$', RegexOptions\&.Compiled | RegexOptions\&.ExplicitCapture | RegexOptions\&.IgnoreCase)\fC [static]\fP"
+
+.SS "System\&.Drawing\&.Image JBToolkit\&.Images\&.ImageHelper\&.HtmlImageHelper\&.DataImage\&.Image => System\&.Drawing\&.Image\&.FromStream(new MemoryStream(\fBRawData\fP))"
+
+.SH "Property Documentation"
+.PP 
+.SS "string JBToolkit\&.Images\&.ImageHelper\&.HtmlImageHelper\&.DataImage\&.ImageType\fC [get]\fP"
+
+.SS "string JBToolkit\&.Images\&.ImageHelper\&.HtmlImageHelper\&.DataImage\&.MimeType\fC [get]\fP"
+
+.SS "byte [] JBToolkit\&.Images\&.ImageHelper\&.HtmlImageHelper\&.DataImage\&.RawData\fC [get]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

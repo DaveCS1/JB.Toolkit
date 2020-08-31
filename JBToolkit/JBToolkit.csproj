@@ -792,6 +792,8 @@
     <EmbeddedResource Include="Dependencies_Embedded\wkhtmltopdf.zip" />
     <None Include="JBToolkit.nuspec" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="images\favicon-50px.png" />
+    <None Include="images\favicon-100px.png" />
     <Content Include="Scripts\packages\pdfjs\build\pdf.js.map" />
     <Content Include="Scripts\packages\pdfjs\build\pdf.worker.js.map" />
     <Content Include="Scripts\packages\pdfjs\LICENSE" />

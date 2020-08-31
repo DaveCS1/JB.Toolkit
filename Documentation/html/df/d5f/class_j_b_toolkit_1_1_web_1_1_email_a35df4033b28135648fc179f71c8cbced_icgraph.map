@@ -1,0 +1,6 @@
+<map id="JBToolkit.Web.Email.SendMail" name="JBToolkit.Web.Email.SendMail">
+<area shape="rect" id="node1" title="Basic send email method" alt="" coords="255,71,456,98"/>
+<area shape="rect" id="node2" href="$df/d5f/class_j_b_toolkit_1_1_web_1_1_email.html#a8be8b1c0452dc54c84b81dc8660bac5c" title="Standardise easy sent email of an error or issue" alt="" coords="16,5,196,47"/>
+<area shape="rect" id="node3" href="$df/d5f/class_j_b_toolkit_1_1_web_1_1_email.html#aba0cc67b748fbe7a5d24739f454568f4" title="Easy call method to send an email returning a Email Send Result object" alt="" coords="5,71,207,98"/>
+<area shape="rect" id="node4" href="$df/d5f/class_j_b_toolkit_1_1_web_1_1_email.html#a956023464034ede71d8a1c81a97900e0" title="Send a DatTable to be formatted and displayed in a HTML email. Column names are wordified." alt="" coords="17,123,195,164"/>
+</map>

@@ -1,0 +1,228 @@
+\hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge}{}\doxysection{J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Word\+Interop\+Mail\+Merge Class Reference}
+\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge}\index{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge@{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge}}
+
+
+Uses Open\+X\+ML to perform a Word Mail Merge.  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Word\+Interop\+Mail\+Merge\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{db/dfa/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a3194d6f68821c2cf01b04c9913c3a478}{Merge\+Document\+To\+Byte\+Array}} (string template\+Path, \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} mail\+Merge\+Data, bool save\+As\+P\+DF)
+\begin{DoxyCompactList}\small\item\em Performs a mail merges given a dictionary of merge fields and their merge values and returns a byte array \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a558cb96cda9edb12e4f49d761530b865}{Merge\+Document\+As\+Base64\+String}} (string template\+Path, \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} mail\+Merge\+Data, bool save\+As\+P\+DF)
+\begin{DoxyCompactList}\small\item\em Performs a mail merges given a dictionary of merge fields and their merge values and returns a base64 string (for blobs) \end{DoxyCompactList}\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_afcca1b60688c8d924b706da31d1e6701}{Merge\+Document\+To\+Memory\+Stream}} (string template\+Path, \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} mail\+Merge\+Data, bool save\+As\+P\+DF)
+\begin{DoxyCompactList}\small\item\em Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory Stream \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a059ef99d3e87774d3d401506a65d9648}{Merge\+Document\+And\+Save}} (string template\+Path, string output\+Path, \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} mail\+Merge\+Data, bool save\+As\+P\+DF, bool open\+And\+Render=false)
+\begin{DoxyCompactList}\small\item\em Performs a mail merges given a dictionary of merge fields and their merge values and saves or opens word for user interaction \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a5fe84d3a2525369af83ec4310873d132}{Is\+A\+Merge\+Field}} (Field field)
+\begin{DoxyCompactList}\small\item\em Is a particular field Word mail merge field \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a0328f06ab9b398b0d5d3c30ca1d7fc12}{Removed\+Unmapped\+Merge\+Fields}} (Document document, \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} merge\+Data)
+\begin{DoxyCompactList}\small\item\em Remove any unmerged fields remaining in the document \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_acaa008fb8d43b87c3bd60ac2e18ede28}{Strip\+Merge\+Field\+Formatting}} (string merge\+Field\+Text)
+\begin{DoxyCompactList}\small\item\em If a merge field is in the Word document format \textquotesingle{}M\+E\+R\+G\+E\+F\+I\+E\+LD Some\+Merge\+Field\textquotesingle{} then just return the field as it\textquotesingle{}s shown between the \textquotesingle{}«\textquotesingle{} and \textquotesingle{}»". Useful if you\textquotesingle{}re trying to automate mapping Data\+Table column names to merge fields \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Uses Open\+X\+ML to perform a Word Mail Merge. 
+
+Microsoft Word needs to be installed on the executing machine in order to use this. It uses an Interop A\+PI, which means to perform the mail merge, Word needs to be opened in the background, then the mail merge is run and finally office is closed down.
+
+This is the most reliable in terms of output format, and you can extend to run macros, however this isn\textquotesingle{}t the best means in terms of efficiency and it isn\textquotesingle{}t cross user thread safe. So if you\textquotesingle{}re wanting to use as part of a web service / web site running on I\+IS, you\textquotesingle{}ll need to make sure Office is installed, you employ lock / wait timers and additional configurations are setup, refer to this guides\+:
+
+\href{https://www.ryadel.com/en/office-interop-dcom-config-windows-server-iis-word-excel-access-asp-net-c-sharp/}{\texttt{ https\+://www.\+ryadel.\+com/en/office-\/interop-\/dcom-\/config-\/windows-\/server-\/iis-\/word-\/excel-\/access-\/asp-\/net-\/c-\/sharp/}} \href{http://www.bloing.net/2011/01/how-to-make-iis7-play-nice-with-office-interop/}{\texttt{ http\+://www.\+bloing.\+net/2011/01/how-\/to-\/make-\/iis7-\/play-\/nice-\/with-\/office-\/interop/}}
+
+Don\textquotesingle{}t use if the class will get hammered. Either try the Open\+X\+ML implementation in this toolkit or speak to someone to invest in Aspose software.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a5fe84d3a2525369af83ec4310873d132}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a5fe84d3a2525369af83ec4310873d132}} 
+\index{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge@{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge}!IsAMergeField@{IsAMergeField}}
+\index{IsAMergeField@{IsAMergeField}!JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge@{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge}}
+\doxysubsubsection{\texorpdfstring{IsAMergeField()}{IsAMergeField()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Word\+Interop\+Mail\+Merge.\+Is\+A\+Merge\+Field (\begin{DoxyParamCaption}\item[{Field}]{field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Is a particular field Word mail merge field 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a5fe84d3a2525369af83ec4310873d132_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a059ef99d3e87774d3d401506a65d9648}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a059ef99d3e87774d3d401506a65d9648}} 
+\index{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge@{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge}!MergeDocumentAndSave@{MergeDocumentAndSave}}
+\index{MergeDocumentAndSave@{MergeDocumentAndSave}!JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge@{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge}}
+\doxysubsubsection{\texorpdfstring{MergeDocumentAndSave()}{MergeDocumentAndSave()}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Word\+Interop\+Mail\+Merge.\+Merge\+Document\+And\+Save (\begin{DoxyParamCaption}\item[{string}]{template\+Path,  }\item[{string}]{output\+Path,  }\item[{\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}}}]{mail\+Merge\+Data,  }\item[{bool}]{save\+As\+P\+DF,  }\item[{bool}]{open\+And\+Render = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs a mail merges given a dictionary of merge fields and their merge values and saves or opens word for user interaction 
+
+
+\begin{DoxyParams}{Parameters}
+{\em template\+Path} & Path to mail merge template\\
+\hline
+{\em mail\+Merge\+Data} & A Dictionary of Merge Fields and values\\
+\hline
+{\em save\+As\+P\+DF} & Whether to save as P\+DF or docx\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a059ef99d3e87774d3d401506a65d9648_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a059ef99d3e87774d3d401506a65d9648_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a558cb96cda9edb12e4f49d761530b865}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a558cb96cda9edb12e4f49d761530b865}} 
+\index{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge@{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge}!MergeDocumentAsBase64String@{MergeDocumentAsBase64String}}
+\index{MergeDocumentAsBase64String@{MergeDocumentAsBase64String}!JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge@{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge}}
+\doxysubsubsection{\texorpdfstring{MergeDocumentAsBase64String()}{MergeDocumentAsBase64String()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Word\+Interop\+Mail\+Merge.\+Merge\+Document\+As\+Base64\+String (\begin{DoxyParamCaption}\item[{string}]{template\+Path,  }\item[{\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}}}]{mail\+Merge\+Data,  }\item[{bool}]{save\+As\+P\+DF }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs a mail merges given a dictionary of merge fields and their merge values and returns a base64 string (for blobs) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em template\+Path} & Path to mail merge template\\
+\hline
+{\em mail\+Merge\+Data} & A Dictionary of Merge Fields and values\\
+\hline
+{\em save\+As\+P\+DF} & Whether to save as P\+DF or docx\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a558cb96cda9edb12e4f49d761530b865_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a3194d6f68821c2cf01b04c9913c3a478}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a3194d6f68821c2cf01b04c9913c3a478}} 
+\index{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge@{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge}!MergeDocumentToByteArray@{MergeDocumentToByteArray}}
+\index{MergeDocumentToByteArray@{MergeDocumentToByteArray}!JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge@{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge}}
+\doxysubsubsection{\texorpdfstring{MergeDocumentToByteArray()}{MergeDocumentToByteArray()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Word\+Interop\+Mail\+Merge.\+Merge\+Document\+To\+Byte\+Array (\begin{DoxyParamCaption}\item[{string}]{template\+Path,  }\item[{\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}}}]{mail\+Merge\+Data,  }\item[{bool}]{save\+As\+P\+DF }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs a mail merges given a dictionary of merge fields and their merge values and returns a byte array 
+
+
+\begin{DoxyParams}{Parameters}
+{\em template\+Path} & Path to mail merge template\\
+\hline
+{\em mail\+Merge\+Data} & A Dictionary of Merge Fields and values\\
+\hline
+{\em save\+As\+P\+DF} & Whether to save as P\+DF or docx\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a3194d6f68821c2cf01b04c9913c3a478_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_afcca1b60688c8d924b706da31d1e6701}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_afcca1b60688c8d924b706da31d1e6701}} 
+\index{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge@{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge}!MergeDocumentToMemoryStream@{MergeDocumentToMemoryStream}}
+\index{MergeDocumentToMemoryStream@{MergeDocumentToMemoryStream}!JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge@{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge}}
+\doxysubsubsection{\texorpdfstring{MergeDocumentToMemoryStream()}{MergeDocumentToMemoryStream()}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Word\+Interop\+Mail\+Merge.\+Merge\+Document\+To\+Memory\+Stream (\begin{DoxyParamCaption}\item[{string}]{template\+Path,  }\item[{\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}}}]{mail\+Merge\+Data,  }\item[{bool}]{save\+As\+P\+DF }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory Stream 
+
+
+\begin{DoxyParams}{Parameters}
+{\em template\+Path} & Path to mail merge template\\
+\hline
+{\em mail\+Merge\+Data} & A Dictionary of Merge Fields and values\\
+\hline
+{\em save\+As\+P\+DF} & Whether to save as P\+DF or docx\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_afcca1b60688c8d924b706da31d1e6701_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_afcca1b60688c8d924b706da31d1e6701_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a0328f06ab9b398b0d5d3c30ca1d7fc12}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a0328f06ab9b398b0d5d3c30ca1d7fc12}} 
+\index{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge@{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge}!RemovedUnmappedMergeFields@{RemovedUnmappedMergeFields}}
+\index{RemovedUnmappedMergeFields@{RemovedUnmappedMergeFields}!JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge@{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge}}
+\doxysubsubsection{\texorpdfstring{RemovedUnmappedMergeFields()}{RemovedUnmappedMergeFields()}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Word\+Interop\+Mail\+Merge.\+Removed\+Unmapped\+Merge\+Fields (\begin{DoxyParamCaption}\item[{Document}]{document,  }\item[{\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}}}]{merge\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Remove any unmerged fields remaining in the document 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a0328f06ab9b398b0d5d3c30ca1d7fc12_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a0328f06ab9b398b0d5d3c30ca1d7fc12_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_acaa008fb8d43b87c3bd60ac2e18ede28}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_acaa008fb8d43b87c3bd60ac2e18ede28}} 
+\index{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge@{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge}!StripMergeFieldFormatting@{StripMergeFieldFormatting}}
+\index{StripMergeFieldFormatting@{StripMergeFieldFormatting}!JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge@{JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge}}
+\doxysubsubsection{\texorpdfstring{StripMergeFieldFormatting()}{StripMergeFieldFormatting()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Word\+Interop\+Mail\+Merge.\+Strip\+Merge\+Field\+Formatting (\begin{DoxyParamCaption}\item[{string}]{merge\+Field\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+If a merge field is in the Word document format \textquotesingle{}M\+E\+R\+G\+E\+F\+I\+E\+LD Some\+Merge\+Field\textquotesingle{} then just return the field as it\textquotesingle{}s shown between the \textquotesingle{}«\textquotesingle{} and \textquotesingle{}»". Useful if you\textquotesingle{}re trying to automate mapping Data\+Table column names to merge fields 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_acaa008fb8d43b87c3bd60ac2e18ede28_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Xml\+Doc/\+Mail\+Merge/\mbox{\hyperlink{_word_interop_mail_merge_8cs}{Word\+Interop\+Mail\+Merge.\+cs}}\end{DoxyCompactItemize}

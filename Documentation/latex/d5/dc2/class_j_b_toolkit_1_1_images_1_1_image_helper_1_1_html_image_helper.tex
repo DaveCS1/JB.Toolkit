@@ -1,0 +1,118 @@
+\hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper}{}\doxysection{J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper Class Reference}
+\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper}\index{JBToolkit.Images.ImageHelper.HtmlImageHelper@{JBToolkit.Images.ImageHelper.HtmlImageHelper}}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{da/d89/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image}{Data\+Image}}
+\begin{DoxyCompactList}\small\item\em Parse base 64 to \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_data_image}{Data\+Image}} object consisting of raw byte\mbox{[}\mbox{]} data and the image and mime type. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_html_path}{Html\+Path}}
+\begin{DoxyCompactList}\small\item\em Paths to image in Html file along with a path type (i.\+e. local, relative, remote, data) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_list}{List}}$<$ \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_html_path}{Html\+Path}} $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_ae29498a550ab82abf26afa39ed059532}{Get\+Html\+Image\+Paths\+From\+Html}} (string \mbox{\hyperlink{_r_e_a_d_m_e_8txt_a8bcb48f256a0a4bf843d4a47586817d1}{html}})
+\begin{DoxyCompactList}\small\item\em Returns a list of paths to images in a Html file along with a path type (i.\+e. local, relative, remote, data) \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_afc779a85812d2abf8bfbcb643d502e39}{Does\+Image\+Exist\+Remotely}} (string uri\+To\+Image)
+\begin{DoxyCompactList}\small\item\em Peforms a H\+T\+TP web request to see if an image exists remotely \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_ab1952286b4779484c1d08465b82b1d13}{Get\+Image\+Base64\+String\+From\+Url}} (String url, bool include\+Mime\+Type\+Descriptor=false)
+\begin{DoxyCompactList}\small\item\em Peforms a H\+T\+TP web request and downloads an image \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_ad695a6252c7bc9cc8497c711aa84371b}{Get\+Image\+Bytes\+From\+Url}} (string url)
+\begin{DoxyCompactList}\small\item\em Peforms a H\+T\+TP web request and downloads an image \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_a53f03c92ecd048fba601f087e2a390d2}{Get\+Base64\+String\+From\+Bytes\+With\+Mime}} (byte\mbox{[}$\,$\mbox{]} image\+Bytes)
+\begin{DoxyCompactList}\small\item\em Returns a base64 string, with detected mime type (using magic numbers) from a image byte array I\+M\+P\+O\+R\+T\+A\+NT\+: Uses urlmon.\+dll D\+L\+L\+I\+M\+P\+O\+RT -\/$>$ If you\textquotesingle{}re deployment an app that uses this is I\+IS, you must enable allow 32-\/Bit applications in the App\+Pool \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_afc779a85812d2abf8bfbcb643d502e39}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_afc779a85812d2abf8bfbcb643d502e39}} 
+\index{JBToolkit.Images.ImageHelper.HtmlImageHelper@{JBToolkit.Images.ImageHelper.HtmlImageHelper}!DoesImageExistRemotely@{DoesImageExistRemotely}}
+\index{DoesImageExistRemotely@{DoesImageExistRemotely}!JBToolkit.Images.ImageHelper.HtmlImageHelper@{JBToolkit.Images.ImageHelper.HtmlImageHelper}}
+\doxysubsubsection{\texorpdfstring{DoesImageExistRemotely()}{DoesImageExistRemotely()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper.\+Does\+Image\+Exist\+Remotely (\begin{DoxyParamCaption}\item[{string}]{uri\+To\+Image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Peforms a H\+T\+TP web request to see if an image exists remotely 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_a53f03c92ecd048fba601f087e2a390d2}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_a53f03c92ecd048fba601f087e2a390d2}} 
+\index{JBToolkit.Images.ImageHelper.HtmlImageHelper@{JBToolkit.Images.ImageHelper.HtmlImageHelper}!GetBase64StringFromBytesWithMime@{GetBase64StringFromBytesWithMime}}
+\index{GetBase64StringFromBytesWithMime@{GetBase64StringFromBytesWithMime}!JBToolkit.Images.ImageHelper.HtmlImageHelper@{JBToolkit.Images.ImageHelper.HtmlImageHelper}}
+\doxysubsubsection{\texorpdfstring{GetBase64StringFromBytesWithMime()}{GetBase64StringFromBytesWithMime()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper.\+Get\+Base64\+String\+From\+Bytes\+With\+Mime (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{image\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a base64 string, with detected mime type (using magic numbers) from a image byte array I\+M\+P\+O\+R\+T\+A\+NT\+: Uses urlmon.\+dll D\+L\+L\+I\+M\+P\+O\+RT -\/$>$ If you\textquotesingle{}re deployment an app that uses this is I\+IS, you must enable allow 32-\/Bit applications in the App\+Pool 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dc2/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_a53f03c92ecd048fba601f087e2a390d2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_ae29498a550ab82abf26afa39ed059532}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_ae29498a550ab82abf26afa39ed059532}} 
+\index{JBToolkit.Images.ImageHelper.HtmlImageHelper@{JBToolkit.Images.ImageHelper.HtmlImageHelper}!GetHtmlImagePathsFromHtml@{GetHtmlImagePathsFromHtml}}
+\index{GetHtmlImagePathsFromHtml@{GetHtmlImagePathsFromHtml}!JBToolkit.Images.ImageHelper.HtmlImageHelper@{JBToolkit.Images.ImageHelper.HtmlImageHelper}}
+\doxysubsubsection{\texorpdfstring{GetHtmlImagePathsFromHtml()}{GetHtmlImagePathsFromHtml()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_list}{List}}$<$\mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_html_path}{Html\+Path}}$>$ J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper.\+Get\+Html\+Image\+Paths\+From\+Html (\begin{DoxyParamCaption}\item[{string}]{html }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a list of paths to images in a Html file along with a path type (i.\+e. local, relative, remote, data) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em html} & Html text as string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Html\+Paths object consisting of path and path type
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_ab1952286b4779484c1d08465b82b1d13}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_ab1952286b4779484c1d08465b82b1d13}} 
+\index{JBToolkit.Images.ImageHelper.HtmlImageHelper@{JBToolkit.Images.ImageHelper.HtmlImageHelper}!GetImageBase64StringFromUrl@{GetImageBase64StringFromUrl}}
+\index{GetImageBase64StringFromUrl@{GetImageBase64StringFromUrl}!JBToolkit.Images.ImageHelper.HtmlImageHelper@{JBToolkit.Images.ImageHelper.HtmlImageHelper}}
+\doxysubsubsection{\texorpdfstring{GetImageBase64StringFromUrl()}{GetImageBase64StringFromUrl()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper.\+Get\+Image\+Base64\+String\+From\+Url (\begin{DoxyParamCaption}\item[{String}]{url,  }\item[{bool}]{include\+Mime\+Type\+Descriptor = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Peforms a H\+T\+TP web request and downloads an image 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dc2/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_ab1952286b4779484c1d08465b82b1d13_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_ad695a6252c7bc9cc8497c711aa84371b}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_ad695a6252c7bc9cc8497c711aa84371b}} 
+\index{JBToolkit.Images.ImageHelper.HtmlImageHelper@{JBToolkit.Images.ImageHelper.HtmlImageHelper}!GetImageBytesFromUrl@{GetImageBytesFromUrl}}
+\index{GetImageBytesFromUrl@{GetImageBytesFromUrl}!JBToolkit.Images.ImageHelper.HtmlImageHelper@{JBToolkit.Images.ImageHelper.HtmlImageHelper}}
+\doxysubsubsection{\texorpdfstring{GetImageBytesFromUrl()}{GetImageBytesFromUrl()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Html\+Image\+Helper.\+Get\+Image\+Bytes\+From\+Url (\begin{DoxyParamCaption}\item[{string}]{url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Peforms a H\+T\+TP web request and downloads an image 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dc2/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_ad695a6252c7bc9cc8497c711aa84371b_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Imaging/\mbox{\hyperlink{_html_image_helper_8cs}{Html\+Image\+Helper.\+cs}}\end{DoxyCompactItemize}

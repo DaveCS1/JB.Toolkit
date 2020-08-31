@@ -1,0 +1,195 @@
+\hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter}{}\doxysection{J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Splitter Class Reference}
+\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter}\index{JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}}
+
+
+Methods to split up a P\+DF document with various criteria such as page quantity multiples, an array of page numbers to split after or actual string content (included regular expression matching) within the document itself. You can input and output a memory stream or save to file.  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Splitter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{d5/d31/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a3e748dc7bc446d32829c6376aeafb686}{Split\+To\+Page\+Quantity\+Multiples}} (string input\+File\+Path, string output\+Directory, int page\+Quantity\+Multiple)
+\begin{DoxyCompactList}\small\item\em Split a document on multiples and save to file. the name will be the original number plus the document number \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a3d60c2b5c5599e583990af9440dd5b8d}{Split\+To\+Page\+Quantity\+Multiples}} (Memory\+Stream ms, string title, string output\+Directory, int page\+Quantity\+Multiple)
+\begin{DoxyCompactList}\small\item\em Split a document on multiples and save to file. the name will be the original number plus the document number \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_list}{List}}$<$ Memory\+Stream $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_ab44a18ae9124c7e280d5272a4a5813e8}{Split\+To\+Page\+Quantity\+Multiples}} (Memory\+Stream ms, int page\+Quantity\+Multiples)
+\begin{DoxyCompactList}\small\item\em Split a document on multiples and return a Memory Stream list \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_aee623766c1f67c4243b98c292757d10a}{Split\+After\+Page\+Numbers}} (string input\+File\+Path, string output\+Directory, int\mbox{[}$\,$\mbox{]} page\+Numbers)
+\begin{DoxyCompactList}\small\item\em Split a document on specific pages and save to file. the name will be the original number plus the document number \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a84e70a83d938c62974693c7e101f77c0}{Split\+After\+Page\+Numbers}} (Memory\+Stream ms, string title, string output\+Directory, int\mbox{[}$\,$\mbox{]} page\+Numbers)
+\begin{DoxyCompactList}\small\item\em Split a document after specific pages and save to file. the name will be the original number plus the document number \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_list}{List}}$<$ Memory\+Stream $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_ac077fef739996ee4266a5d1732fa9a2e}{Split\+After\+Page\+Numbers}} (Memory\+Stream ms, int\mbox{[}$\,$\mbox{]} page\+Numbers)
+\begin{DoxyCompactList}\small\item\em Split a document after specific pages and return a Memory Stream list \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a648d5ec8eb53e4753f2057c636dd000e}{Split\+After\+Pages\+Where\+String\+Appears\+In\+Content}} (string input\+File\+Path, string output\+Directory, string string\+Code, bool is\+String\+Regular\+Expression=false, bool if\+Using\+Regulare\+Expression\+Then\+Use\+Match\+Value\+As\+Document\+Tile=true, bool add\+Ticks\+To\+Filename=false)
+\begin{DoxyCompactList}\small\item\em Use the content of the document to determine where to split the document. I.\+e. on a document code in the header. You may use a static string or a regular expression. You can also set the document title to be the value of the match string. Saves to file. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a1ebb968b804e70b3e2d72a5ed17d243b}{Split\+After\+Pages\+Where\+String\+Appears\+In\+Content}} (Memory\+Stream ms, string title, string output\+Directory, string string\+Code, bool is\+String\+Regular\+Expression=false, bool if\+Using\+Regulare\+Expression\+Then\+Use\+Match\+Value\+As\+Document\+Tile=true, bool add\+Ticks\+To\+Filename=false)
+\begin{DoxyCompactList}\small\item\em Use the content of the document to determine where to split the document. I.\+e. on a document code in the header. You may use a static string or a regular expression. You can also set the document title to be the value of the match string. Saves to file. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_list}{List}}$<$ Memory\+Stream $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a5344aa839446342eff1fe9a19b53ee46}{Split\+After\+Pages\+Where\+String\+Appears\+In\+Content}} (Memory\+Stream ms, string string\+Code, bool is\+String\+Regular\+Expression=false, bool if\+Using\+Regulare\+Expression\+Then\+Use\+Match\+Value\+As\+Document\+Tile=true)
+\begin{DoxyCompactList}\small\item\em Use the content of the document to determine where to split the document. I.\+e. on a document code in the header. You may use a static string or a regular expression. You can also set the document title to be the value of the match string. Retuns Memory Stream list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Methods to split up a P\+DF document with various criteria such as page quantity multiples, an array of page numbers to split after or actual string content (included regular expression matching) within the document itself. You can input and output a memory stream or save to file. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_ac077fef739996ee4266a5d1732fa9a2e}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_ac077fef739996ee4266a5d1732fa9a2e}} 
+\index{JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}!SplitAfterPageNumbers@{SplitAfterPageNumbers}}
+\index{SplitAfterPageNumbers@{SplitAfterPageNumbers}!JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}}
+\doxysubsubsection{\texorpdfstring{SplitAfterPageNumbers()}{SplitAfterPageNumbers()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_list}{List}}$<$Memory\+Stream$>$ J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Splitter.\+Split\+After\+Page\+Numbers (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{int\mbox{[}$\,$\mbox{]}}]{page\+Numbers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Split a document after specific pages and return a Memory Stream list 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a84e70a83d938c62974693c7e101f77c0}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a84e70a83d938c62974693c7e101f77c0}} 
+\index{JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}!SplitAfterPageNumbers@{SplitAfterPageNumbers}}
+\index{SplitAfterPageNumbers@{SplitAfterPageNumbers}!JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}}
+\doxysubsubsection{\texorpdfstring{SplitAfterPageNumbers()}{SplitAfterPageNumbers()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Splitter.\+Split\+After\+Page\+Numbers (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{string}]{title,  }\item[{string}]{output\+Directory,  }\item[{int\mbox{[}$\,$\mbox{]}}]{page\+Numbers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Split a document after specific pages and save to file. the name will be the original number plus the document number 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_aee623766c1f67c4243b98c292757d10a}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_aee623766c1f67c4243b98c292757d10a}} 
+\index{JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}!SplitAfterPageNumbers@{SplitAfterPageNumbers}}
+\index{SplitAfterPageNumbers@{SplitAfterPageNumbers}!JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}}
+\doxysubsubsection{\texorpdfstring{SplitAfterPageNumbers()}{SplitAfterPageNumbers()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Splitter.\+Split\+After\+Page\+Numbers (\begin{DoxyParamCaption}\item[{string}]{input\+File\+Path,  }\item[{string}]{output\+Directory,  }\item[{int\mbox{[}$\,$\mbox{]}}]{page\+Numbers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Split a document on specific pages and save to file. the name will be the original number plus the document number 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a5344aa839446342eff1fe9a19b53ee46}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a5344aa839446342eff1fe9a19b53ee46}} 
+\index{JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}!SplitAfterPagesWhereStringAppearsInContent@{SplitAfterPagesWhereStringAppearsInContent}}
+\index{SplitAfterPagesWhereStringAppearsInContent@{SplitAfterPagesWhereStringAppearsInContent}!JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}}
+\doxysubsubsection{\texorpdfstring{SplitAfterPagesWhereStringAppearsInContent()}{SplitAfterPagesWhereStringAppearsInContent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_list}{List}}$<$Memory\+Stream$>$ J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Splitter.\+Split\+After\+Pages\+Where\+String\+Appears\+In\+Content (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{string}]{string\+Code,  }\item[{bool}]{is\+String\+Regular\+Expression = {\ttfamily false},  }\item[{bool}]{if\+Using\+Regulare\+Expression\+Then\+Use\+Match\+Value\+As\+Document\+Tile = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Use the content of the document to determine where to split the document. I.\+e. on a document code in the header. You may use a static string or a regular expression. You can also set the document title to be the value of the match string. Retuns Memory Stream list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string\+Code} & Static string or regular expression -\/ Will split \textquotesingle{}after\textquotesingle{} the page where this string exists\\
+\hline
+{\em is\+String\+Regular\+Expression} & If the string code is regular expression or not (not being a static string)\\
+\hline
+{\em if\+Using\+Regulare\+Expression\+Then\+Use\+Match\+Value\+As\+Document\+Tile} & U\+Se the match string value as part of the filename and title of each document\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d5a/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a5344aa839446342eff1fe9a19b53ee46_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a1ebb968b804e70b3e2d72a5ed17d243b}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a1ebb968b804e70b3e2d72a5ed17d243b}} 
+\index{JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}!SplitAfterPagesWhereStringAppearsInContent@{SplitAfterPagesWhereStringAppearsInContent}}
+\index{SplitAfterPagesWhereStringAppearsInContent@{SplitAfterPagesWhereStringAppearsInContent}!JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}}
+\doxysubsubsection{\texorpdfstring{SplitAfterPagesWhereStringAppearsInContent()}{SplitAfterPagesWhereStringAppearsInContent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Splitter.\+Split\+After\+Pages\+Where\+String\+Appears\+In\+Content (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{string}]{title,  }\item[{string}]{output\+Directory,  }\item[{string}]{string\+Code,  }\item[{bool}]{is\+String\+Regular\+Expression = {\ttfamily false},  }\item[{bool}]{if\+Using\+Regulare\+Expression\+Then\+Use\+Match\+Value\+As\+Document\+Tile = {\ttfamily true},  }\item[{bool}]{add\+Ticks\+To\+Filename = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Use the content of the document to determine where to split the document. I.\+e. on a document code in the header. You may use a static string or a regular expression. You can also set the document title to be the value of the match string. Saves to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string\+Code} & Static string or regular expression -\/ Will split \textquotesingle{}after\textquotesingle{} the page where this string exists\\
+\hline
+{\em is\+String\+Regular\+Expression} & If the string code is regular expression or not (not being a static string)\\
+\hline
+{\em if\+Using\+Regulare\+Expression\+Then\+Use\+Match\+Value\+As\+Document\+Tile} & U\+Se the match string value as part of the filename and title of each document\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d5a/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a1ebb968b804e70b3e2d72a5ed17d243b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a648d5ec8eb53e4753f2057c636dd000e}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a648d5ec8eb53e4753f2057c636dd000e}} 
+\index{JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}!SplitAfterPagesWhereStringAppearsInContent@{SplitAfterPagesWhereStringAppearsInContent}}
+\index{SplitAfterPagesWhereStringAppearsInContent@{SplitAfterPagesWhereStringAppearsInContent}!JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}}
+\doxysubsubsection{\texorpdfstring{SplitAfterPagesWhereStringAppearsInContent()}{SplitAfterPagesWhereStringAppearsInContent()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Splitter.\+Split\+After\+Pages\+Where\+String\+Appears\+In\+Content (\begin{DoxyParamCaption}\item[{string}]{input\+File\+Path,  }\item[{string}]{output\+Directory,  }\item[{string}]{string\+Code,  }\item[{bool}]{is\+String\+Regular\+Expression = {\ttfamily false},  }\item[{bool}]{if\+Using\+Regulare\+Expression\+Then\+Use\+Match\+Value\+As\+Document\+Tile = {\ttfamily true},  }\item[{bool}]{add\+Ticks\+To\+Filename = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Use the content of the document to determine where to split the document. I.\+e. on a document code in the header. You may use a static string or a regular expression. You can also set the document title to be the value of the match string. Saves to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string\+Code} & Static string or regular expression -\/ Will split \textquotesingle{}after\textquotesingle{} the page where this string exists\\
+\hline
+{\em is\+String\+Regular\+Expression} & If the string code is regular expression or not (not being a static string)\\
+\hline
+{\em if\+Using\+Regulare\+Expression\+Then\+Use\+Match\+Value\+As\+Document\+Tile} & U\+Se the match string value as part of the filename and title of each document\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d5a/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a648d5ec8eb53e4753f2057c636dd000e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_ab44a18ae9124c7e280d5272a4a5813e8}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_ab44a18ae9124c7e280d5272a4a5813e8}} 
+\index{JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}!SplitToPageQuantityMultiples@{SplitToPageQuantityMultiples}}
+\index{SplitToPageQuantityMultiples@{SplitToPageQuantityMultiples}!JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}}
+\doxysubsubsection{\texorpdfstring{SplitToPageQuantityMultiples()}{SplitToPageQuantityMultiples()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_list}{List}}$<$Memory\+Stream$>$ J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Splitter.\+Split\+To\+Page\+Quantity\+Multiples (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{int}]{page\+Quantity\+Multiples }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Split a document on multiples and return a Memory Stream list 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a3d60c2b5c5599e583990af9440dd5b8d}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a3d60c2b5c5599e583990af9440dd5b8d}} 
+\index{JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}!SplitToPageQuantityMultiples@{SplitToPageQuantityMultiples}}
+\index{SplitToPageQuantityMultiples@{SplitToPageQuantityMultiples}!JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}}
+\doxysubsubsection{\texorpdfstring{SplitToPageQuantityMultiples()}{SplitToPageQuantityMultiples()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Splitter.\+Split\+To\+Page\+Quantity\+Multiples (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{string}]{title,  }\item[{string}]{output\+Directory,  }\item[{int}]{page\+Quantity\+Multiple }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Split a document on multiples and save to file. the name will be the original number plus the document number 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a3e748dc7bc446d32829c6376aeafb686}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a3e748dc7bc446d32829c6376aeafb686}} 
+\index{JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}!SplitToPageQuantityMultiples@{SplitToPageQuantityMultiples}}
+\index{SplitToPageQuantityMultiples@{SplitToPageQuantityMultiples}!JBToolkit.PdfDoc.PdfSplitter@{JBToolkit.PdfDoc.PdfSplitter}}
+\doxysubsubsection{\texorpdfstring{SplitToPageQuantityMultiples()}{SplitToPageQuantityMultiples()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Splitter.\+Split\+To\+Page\+Quantity\+Multiples (\begin{DoxyParamCaption}\item[{string}]{input\+File\+Path,  }\item[{string}]{output\+Directory,  }\item[{int}]{page\+Quantity\+Multiple }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Split a document on multiples and save to file. the name will be the original number plus the document number 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d5a/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter_a3e748dc7bc446d32829c6376aeafb686_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Pdf\+Doc/\mbox{\hyperlink{_pdf_splitter_8cs}{Pdf\+Splitter.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,8 @@
+<map id="JBToolkit.Database.DBConnection.ApplyInitialCatalogToConnectionString" name="JBToolkit.Database.DBConnection.ApplyInitialCatalogToConnectionString">
+<area shape="rect" id="node1" title=" " alt="" coords="279,136,521,177"/>
+<area shape="rect" id="node2" href="$d1/d29/class_j_b_toolkit_1_1_database_1_1_d_b_connection.html#a0b3f8fc41c4ed1b1c40dd7a57fe91cf3" title="Uses Dapper to execute a command (i.e. insert or udpate statement) &#45; Returning an integer if a row up..." alt="" coords="5,5,231,47"/>
+<area shape="rect" id="node3" href="$d1/d29/class_j_b_toolkit_1_1_database_1_1_d_b_connection.html#a7c30f2fc0708df9c974a764ba76ded72" title="Uses Dapper to query the database, returning an object of a given type &#45; returning object of a single..." alt="" coords="5,71,231,112"/>
+<area shape="rect" id="node4" href="$d1/d29/class_j_b_toolkit_1_1_database_1_1_d_b_connection.html#afaa72e7c356c5c04ea5afdef7d244bfa" title="Uses Dapper to query the database, returning an object of a given type &#45; returning object of a single..." alt="" coords="5,136,231,177"/>
+<area shape="rect" id="node5" href="$d1/d29/class_j_b_toolkit_1_1_database_1_1_d_b_connection.html#a964980379f0d1fa34484d6a4587d89c5" title="Uses Dapper to query the database, returning an IEnumerable of the object" alt="" coords="5,201,231,243"/>
+<area shape="rect" id="node6" href="$d1/d29/class_j_b_toolkit_1_1_database_1_1_d_b_connection.html#a1b4ce05aa4666470e1a53d6901c04f1e" title="Uses Dapper to query the database, returning an object of a given type &#45; returning object of a single..." alt="" coords="5,267,231,308"/>
+</map>

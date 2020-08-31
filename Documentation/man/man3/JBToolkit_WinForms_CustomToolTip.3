@@ -1,0 +1,181 @@
+.TH "JBToolkit.WinForms.CustomToolTip" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.WinForms.CustomToolTip \- Nicer Custom Tooltip for controls  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBToolTip\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBToolTipControl\fP"
+.br
+.RI "Provides information about ToolTips that are associated with their controls\&. This structure is used specifically with the 'GetToolTip(control)' method\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCustomToolTip\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetToolTip\fP (\fBControl\fP control, string description, string title, int duration=6000)"
+.br
+.RI "Associates \fBToolTip\fP title and description with the specified control\&. "
+.ti -1c
+.RI "new void \fBSetToolTip\fP (\fBControl\fP control, string description)"
+.br
+.RI "Associates \fBToolTip\fP title and description with the specified control\&. "
+.ti -1c
+.RI "void \fBRemoveToolTip\fP (\fBControl\fP control)"
+.br
+.RI "Removes the associated \fBToolTip\fP from the specified control\&. "
+.ti -1c
+.RI "new \fBToolTipControl\fP \fBGetToolTip\fP (\fBControl\fP control)"
+.br
+.RI "Gets the associated \fBToolTip\fP with the specified control\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "new bool \fBOwnerDraw\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "new bool \fBIsBalloon\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "new Color \fBForeColor\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "new Color \fBBackColor\fP\fC [get, set]\fP"
+.br
+.RI "Gets or sets the background color for the \fBToolTip\fP\&. No background color is taken into account when a background image is set! "
+.ti -1c
+.RI "new string \fBToolTipTitle\fP = string\&.Empty\fC [get, set]\fP"
+.br
+.RI "Specifies a title for the \fBToolTip\fP to use when it is about to be desplayed but only when no title was set for a control in the ToolTip! "
+.ti -1c
+.RI "Size \fBSize\fP = new Size(100, 70)\fC [get, set]\fP"
+.br
+.RI "In order to set this you must set the AutoSize value to false\&. "
+.ti -1c
+.RI "bool \fBAutoSize\fP = true\fC [get, set]\fP"
+.br
+.RI "Specifies whether the \fBToolTip\fP will calculate its size automatically, or will use a specified size\&. "
+.ti -1c
+.RI "Font \fBTitleFont\fP\fC [get, set]\fP"
+.br
+.RI "Specifies a Font value for the title on the \fBToolTip\fP\&. "
+.ti -1c
+.RI "Font \fBDescriptionFont\fP\fC [get, set]\fP"
+.br
+.RI "Specifies a Font value for the description on the \fBToolTip\fP\&. "
+.ti -1c
+.RI "int \fBMaxWidth\fP = 0\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "new bool \fBStripAmpersands\fP\fC [get, set]\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Nicer Custom Tooltip for controls 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.WinForms\&.CustomToolTip\&.CustomToolTip ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "new \fBToolTipControl\fP JBToolkit\&.WinForms\&.CustomToolTip\&.GetToolTip (\fBControl\fP control)"
+
+.PP
+Gets the associated \fBToolTip\fP with the specified control\&. 
+.SS "void JBToolkit\&.WinForms\&.CustomToolTip\&.RemoveToolTip (\fBControl\fP control)"
+
+.PP
+Removes the associated \fBToolTip\fP from the specified control\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontrol\fP The System\&.Windows\&.Forms\&.Control to associate the \fBToolTip\fP text with\&.
+.RE
+.PP
+
+.SS "new void JBToolkit\&.WinForms\&.CustomToolTip\&.SetToolTip (\fBControl\fP control, string description)"
+
+.PP
+Associates \fBToolTip\fP title and description with the specified control\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontrol\fP The System\&.Windows\&.Forms\&.Control to associate the \fBToolTip\fP text with\&.
+.br
+\fIdescription\fP The \fBToolTip\fP description to display when the the \fBToolTip\fP is shown over the specified control\&.
+.RE
+.PP
+
+.SS "void JBToolkit\&.WinForms\&.CustomToolTip\&.SetToolTip (\fBControl\fP control, string description, string title, int duration = \fC6000\fP)"
+
+.PP
+Associates \fBToolTip\fP title and description with the specified control\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontrol\fP The System\&.Windows\&.Forms\&.Control to associate the \fBToolTip\fP text with\&.
+.br
+\fIdescription\fP The \fBToolTip\fP description to display when the the \fBToolTip\fP is shown over the specified control\&.
+.br
+\fItitle\fP The \fBToolTip\fP title to display when the \fBToolTip\fP is shown\&.
+.br
+\fIduration\fP Time in ms into tooltips faddes
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "bool JBToolkit\&.WinForms\&.CustomToolTip\&.AutoSize = true\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Specifies whether the \fBToolTip\fP will calculate its size automatically, or will use a specified size\&. 
+.SS "new Color JBToolkit\&.WinForms\&.CustomToolTip\&.BackColor\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Gets or sets the background color for the \fBToolTip\fP\&. No background color is taken into account when a background image is set! 
+.SS "Font JBToolkit\&.WinForms\&.CustomToolTip\&.DescriptionFont\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Specifies a Font value for the description on the \fBToolTip\fP\&. 
+.SS "new Color JBToolkit\&.WinForms\&.CustomToolTip\&.ForeColor\fC [get]\fP, \fC [set]\fP"
+
+.SS "new bool JBToolkit\&.WinForms\&.CustomToolTip\&.IsBalloon\fC [get]\fP, \fC [set]\fP"
+
+.SS "int JBToolkit\&.WinForms\&.CustomToolTip\&.MaxWidth = 0\fC [get]\fP, \fC [set]\fP"
+
+.SS "new bool JBToolkit\&.WinForms\&.CustomToolTip\&.OwnerDraw\fC [get]\fP, \fC [set]\fP"
+
+.SS "Size JBToolkit\&.WinForms\&.CustomToolTip\&.Size = new Size(100, 70)\fC [get]\fP, \fC [set]\fP"
+
+.PP
+In order to set this you must set the AutoSize value to false\&. 
+.SS "new bool JBToolkit\&.WinForms\&.CustomToolTip\&.StripAmpersands\fC [get]\fP, \fC [set]\fP"
+
+.SS "Font JBToolkit\&.WinForms\&.CustomToolTip\&.TitleFont\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Specifies a Font value for the title on the \fBToolTip\fP\&. 
+.SS "new string JBToolkit\&.WinForms\&.CustomToolTip\&.ToolTipTitle = string\&.Empty\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Specifies a title for the \fBToolTip\fP to use when it is about to be desplayed but only when no title was set for a control in the ToolTip! 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

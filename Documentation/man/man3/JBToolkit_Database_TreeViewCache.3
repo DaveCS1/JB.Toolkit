@@ -1,0 +1,46 @@
+.TH "JBToolkit.Database.TreeViewCache" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Database.TreeViewCache \- For saving JSTree states (hierarchy, expanded nodes) - Saves in a provided DataBase\&. If the standard table doesn't exist this class will create it  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTreeViewCache\fP (string dbName, string connectionString, int treeViewCacheTimeout)"
+.br
+.ti -1c
+.RI "string \fBGetTreeViewData\fP (string linkId, string linkType, int userId)"
+.br
+.ti -1c
+.RI "bool \fBClearCacheEntry\fP (string linkId, string linkType, out string errMsg)"
+.br
+.ti -1c
+.RI "bool \fBUpdateTreeViewData\fP (string linkId, string linkType, int userId, string treeData, bool includesSensitveData)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+For saving JSTree states (hierarchy, expanded nodes) - Saves in a provided DataBase\&. If the standard table doesn't exist this class will create it 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.Database\&.TreeViewCache\&.TreeViewCache (string dbName, string connectionString, int treeViewCacheTimeout)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool JBToolkit\&.Database\&.TreeViewCache\&.ClearCacheEntry (string linkId, string linkType, out string errMsg)"
+
+.SS "string JBToolkit\&.Database\&.TreeViewCache\&.GetTreeViewData (string linkId, string linkType, int userId)"
+
+.SS "bool JBToolkit\&.Database\&.TreeViewCache\&.UpdateTreeViewData (string linkId, string linkType, int userId, string treeData, bool includesSensitveData)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

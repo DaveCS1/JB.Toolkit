@@ -1,0 +1,11 @@
+<map id="JBToolkit.InterProcessComms.IIpcClient" name="JBToolkit.InterProcessComms.IIpcClient">
+<area shape="rect" id="node1" title=" " alt="" coords="908,5,1109,97"/>
+<area shape="rect" id="node2" href="$d8/d74/class_j_b_toolkit_1_1_inter_process_comms_1_1_memory_mapped_files_1_1_shared_memory_client.html" title=" " alt="" coords="5,145,273,267"/>
+<area shape="rect" id="node3" href="$df/d8f/class_j_b_toolkit_1_1_inter_process_comms_1_1_message_queues_1_1_message_queue_client.html" title=" " alt="" coords="298,145,546,267"/>
+<area shape="rect" id="node4" href="$de/d0d/class_j_b_toolkit_1_1_inter_process_comms_1_1_named_pipes_1_1_named_pipe_client.html" title=" " alt="" coords="571,145,772,267"/>
+<area shape="rect" id="node5" href="$d9/d08/class_j_b_toolkit_1_1_inter_process_comms_1_1_net_remoting_1_1_remote_object.html" title=" " alt="" coords="796,145,997,267"/>
+<area shape="rect" id="node6" href="$d6/ded/class_j_b_toolkit_1_1_inter_process_comms_1_1_net_remoting_1_1_remoting_client.html" title=" " alt="" coords="1021,160,1223,252"/>
+<area shape="rect" id="node7" href="$dc/d1d/class_j_b_toolkit_1_1_inter_process_comms_1_1_sockets_1_1_socket_client.html" title=" " alt="" coords="1247,145,1448,267"/>
+<area shape="rect" id="node8" href="$df/d9a/class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_client.html" title="Client to host communication (1 direction) Named Pipe implementation." alt="" coords="1472,145,1673,267"/>
+<area shape="rect" id="node9" href="$d8/d09/class_j_b_toolkit_1_1_inter_process_comms_1_1_w_m___c_o_p_y_d_a_t_a_1_1_copy_data_client.html" title=" " alt="" coords="1698,145,1917,267"/>
+</map>

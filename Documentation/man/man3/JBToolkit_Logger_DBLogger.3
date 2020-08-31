@@ -1,0 +1,73 @@
+.TH "JBToolkit.Logger.DBLogger" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Logger.DBLogger \- Adds log entries (error or information) to USR_AG_Shared_Log\&. Defaults to standing file logger (current working directory) on DB connection failure (fallback)  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDBLogger\fP (string dbName, string connectionString, int userId=0, string applicationName=null)"
+.br
+.ti -1c
+.RI "bool \fBLogToDB\fP (\fBException\fP e, string additional=null)"
+.br
+.RI "Logs an exception to the database "
+.ti -1c
+.RI "bool \fBLogToDB\fP (bool isError, string source, string message, string stackTrace)"
+.br
+.RI "Logs an error to the database "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "string \fBDBName\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "int \fBUserId\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBConnectionString\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBApplicatioName\fP\fC [get, set]\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Adds log entries (error or information) to USR_AG_Shared_Log\&. Defaults to standing file logger (current working directory) on DB connection failure (fallback) 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.Logger\&.DBLogger\&.DBLogger (string dbName, string connectionString, int userId = \fC0\fP, string applicationName = \fCnull\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool JBToolkit\&.Logger\&.DBLogger\&.LogToDB (bool isError, string source, string message, string stackTrace)"
+
+.PP
+Logs an error to the database 
+.SS "bool JBToolkit\&.Logger\&.DBLogger\&.LogToDB (\fBException\fP e, string additional = \fCnull\fP)"
+
+.PP
+Logs an exception to the database 
+.SH "Property Documentation"
+.PP 
+.SS "string JBToolkit\&.Logger\&.DBLogger\&.ApplicatioName\fC [get]\fP, \fC [set]\fP"
+
+.SS "string JBToolkit\&.Logger\&.DBLogger\&.ConnectionString\fC [get]\fP, \fC [set]\fP"
+
+.SS "string JBToolkit\&.Logger\&.DBLogger\&.DBName\fC [get]\fP, \fC [set]\fP"
+
+.SS "int JBToolkit\&.Logger\&.DBLogger\&.UserId\fC [get]\fP, \fC [set]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

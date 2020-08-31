@@ -1,0 +1,67 @@
+\hypertarget{class_j_b_toolkit_1_1_database_1_1_tree_view_cache}{}\doxysection{J\+B\+Toolkit.\+Database.\+Tree\+View\+Cache Class Reference}
+\label{class_j_b_toolkit_1_1_database_1_1_tree_view_cache}\index{JBToolkit.Database.TreeViewCache@{JBToolkit.Database.TreeViewCache}}
+
+
+For saving J\+S\+Tree states (hierarchy, expanded nodes) -\/ Saves in a provided Data\+Base. If the standard table doesn\textquotesingle{}t exist this class will create it  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Database.\+Tree\+View\+Cache\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{d9/d6b/class_j_b_toolkit_1_1_database_1_1_tree_view_cache__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_tree_view_cache_a760e1ee1db9964117d89671ba9ef5c55}{Tree\+View\+Cache}} (string db\+Name, string connection\+String, int tree\+View\+Cache\+Timeout)
+\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_tree_view_cache_a0548cf7ea1277509d296c31d2fc3aeb2}{Get\+Tree\+View\+Data}} (string link\+Id, string link\+Type, int user\+Id)
+\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_tree_view_cache_a3c7c3c2d68d5c8599d95b8c879592de2}{Clear\+Cache\+Entry}} (string link\+Id, string link\+Type, out string err\+Msg)
+\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_tree_view_cache_a488fa89e45b1420602e210592d3cb8f4}{Update\+Tree\+View\+Data}} (string link\+Id, string link\+Type, int user\+Id, string tree\+Data, bool includes\+Sensitve\+Data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+For saving J\+S\+Tree states (hierarchy, expanded nodes) -\/ Saves in a provided Data\+Base. If the standard table doesn\textquotesingle{}t exist this class will create it 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_tree_view_cache_a760e1ee1db9964117d89671ba9ef5c55}\label{class_j_b_toolkit_1_1_database_1_1_tree_view_cache_a760e1ee1db9964117d89671ba9ef5c55}} 
+\index{JBToolkit.Database.TreeViewCache@{JBToolkit.Database.TreeViewCache}!TreeViewCache@{TreeViewCache}}
+\index{TreeViewCache@{TreeViewCache}!JBToolkit.Database.TreeViewCache@{JBToolkit.Database.TreeViewCache}}
+\doxysubsubsection{\texorpdfstring{TreeViewCache()}{TreeViewCache()}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Database.\+Tree\+View\+Cache.\+Tree\+View\+Cache (\begin{DoxyParamCaption}\item[{string}]{db\+Name,  }\item[{string}]{connection\+String,  }\item[{int}]{tree\+View\+Cache\+Timeout }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_tree_view_cache_a3c7c3c2d68d5c8599d95b8c879592de2}\label{class_j_b_toolkit_1_1_database_1_1_tree_view_cache_a3c7c3c2d68d5c8599d95b8c879592de2}} 
+\index{JBToolkit.Database.TreeViewCache@{JBToolkit.Database.TreeViewCache}!ClearCacheEntry@{ClearCacheEntry}}
+\index{ClearCacheEntry@{ClearCacheEntry}!JBToolkit.Database.TreeViewCache@{JBToolkit.Database.TreeViewCache}}
+\doxysubsubsection{\texorpdfstring{ClearCacheEntry()}{ClearCacheEntry()}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Database.\+Tree\+View\+Cache.\+Clear\+Cache\+Entry (\begin{DoxyParamCaption}\item[{string}]{link\+Id,  }\item[{string}]{link\+Type,  }\item[{out string}]{err\+Msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_tree_view_cache_a0548cf7ea1277509d296c31d2fc3aeb2}\label{class_j_b_toolkit_1_1_database_1_1_tree_view_cache_a0548cf7ea1277509d296c31d2fc3aeb2}} 
+\index{JBToolkit.Database.TreeViewCache@{JBToolkit.Database.TreeViewCache}!GetTreeViewData@{GetTreeViewData}}
+\index{GetTreeViewData@{GetTreeViewData}!JBToolkit.Database.TreeViewCache@{JBToolkit.Database.TreeViewCache}}
+\doxysubsubsection{\texorpdfstring{GetTreeViewData()}{GetTreeViewData()}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Database.\+Tree\+View\+Cache.\+Get\+Tree\+View\+Data (\begin{DoxyParamCaption}\item[{string}]{link\+Id,  }\item[{string}]{link\+Type,  }\item[{int}]{user\+Id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_tree_view_cache_a488fa89e45b1420602e210592d3cb8f4}\label{class_j_b_toolkit_1_1_database_1_1_tree_view_cache_a488fa89e45b1420602e210592d3cb8f4}} 
+\index{JBToolkit.Database.TreeViewCache@{JBToolkit.Database.TreeViewCache}!UpdateTreeViewData@{UpdateTreeViewData}}
+\index{UpdateTreeViewData@{UpdateTreeViewData}!JBToolkit.Database.TreeViewCache@{JBToolkit.Database.TreeViewCache}}
+\doxysubsubsection{\texorpdfstring{UpdateTreeViewData()}{UpdateTreeViewData()}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Database.\+Tree\+View\+Cache.\+Update\+Tree\+View\+Data (\begin{DoxyParamCaption}\item[{string}]{link\+Id,  }\item[{string}]{link\+Type,  }\item[{int}]{user\+Id,  }\item[{string}]{tree\+Data,  }\item[{bool}]{includes\+Sensitve\+Data }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Database/\mbox{\hyperlink{_tree_view_cache_8cs}{Tree\+View\+Cache.\+cs}}\end{DoxyCompactItemize}

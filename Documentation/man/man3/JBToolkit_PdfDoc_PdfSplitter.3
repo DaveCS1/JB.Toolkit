@@ -1,0 +1,129 @@
+.TH "JBToolkit.PdfDoc.PdfSplitter" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.PdfDoc.PdfSplitter \- Methods to split up a PDF document with various criteria such as page quantity multiples, an array of page numbers to split after or actual string content (included regular expression matching) within the document itself\&. You can input and output a memory stream or save to file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBSplitToPageQuantityMultiples\fP (string inputFilePath, string outputDirectory, int pageQuantityMultiple)"
+.br
+.RI "Split a document on multiples and save to file\&. the name will be the original number plus the document number "
+.ti -1c
+.RI "static void \fBSplitToPageQuantityMultiples\fP (MemoryStream ms, string title, string outputDirectory, int pageQuantityMultiple)"
+.br
+.RI "Split a document on multiples and save to file\&. the name will be the original number plus the document number "
+.ti -1c
+.RI "static \fBList\fP< MemoryStream > \fBSplitToPageQuantityMultiples\fP (MemoryStream ms, int pageQuantityMultiples)"
+.br
+.RI "Split a document on multiples and return a Memory Stream list "
+.ti -1c
+.RI "static void \fBSplitAfterPageNumbers\fP (string inputFilePath, string outputDirectory, int[] pageNumbers)"
+.br
+.RI "Split a document on specific pages and save to file\&. the name will be the original number plus the document number "
+.ti -1c
+.RI "static void \fBSplitAfterPageNumbers\fP (MemoryStream ms, string title, string outputDirectory, int[] pageNumbers)"
+.br
+.RI "Split a document after specific pages and save to file\&. the name will be the original number plus the document number "
+.ti -1c
+.RI "static \fBList\fP< MemoryStream > \fBSplitAfterPageNumbers\fP (MemoryStream ms, int[] pageNumbers)"
+.br
+.RI "Split a document after specific pages and return a Memory Stream list "
+.ti -1c
+.RI "static void \fBSplitAfterPagesWhereStringAppearsInContent\fP (string inputFilePath, string outputDirectory, string stringCode, bool isStringRegularExpression=false, bool ifUsingRegulareExpressionThenUseMatchValueAsDocumentTile=true, bool addTicksToFilename=false)"
+.br
+.RI "Use the content of the document to determine where to split the document\&. I\&.e\&. on a document code in the header\&. You may use a static string or a regular expression\&. You can also set the document title to be the value of the match string\&. Saves to file\&. "
+.ti -1c
+.RI "static void \fBSplitAfterPagesWhereStringAppearsInContent\fP (MemoryStream ms, string title, string outputDirectory, string stringCode, bool isStringRegularExpression=false, bool ifUsingRegulareExpressionThenUseMatchValueAsDocumentTile=true, bool addTicksToFilename=false)"
+.br
+.RI "Use the content of the document to determine where to split the document\&. I\&.e\&. on a document code in the header\&. You may use a static string or a regular expression\&. You can also set the document title to be the value of the match string\&. Saves to file\&. "
+.ti -1c
+.RI "static \fBList\fP< MemoryStream > \fBSplitAfterPagesWhereStringAppearsInContent\fP (MemoryStream ms, string stringCode, bool isStringRegularExpression=false, bool ifUsingRegulareExpressionThenUseMatchValueAsDocumentTile=true)"
+.br
+.RI "Use the content of the document to determine where to split the document\&. I\&.e\&. on a document code in the header\&. You may use a static string or a regular expression\&. You can also set the document title to be the value of the match string\&. Retuns Memory Stream list\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Methods to split up a PDF document with various criteria such as page quantity multiples, an array of page numbers to split after or actual string content (included regular expression matching) within the document itself\&. You can input and output a memory stream or save to file\&. 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBList\fP<MemoryStream> JBToolkit\&.PdfDoc\&.PdfSplitter\&.SplitAfterPageNumbers (MemoryStream ms, int[] pageNumbers)\fC [static]\fP"
+
+.PP
+Split a document after specific pages and return a Memory Stream list 
+.SS "static void JBToolkit\&.PdfDoc\&.PdfSplitter\&.SplitAfterPageNumbers (MemoryStream ms, string title, string outputDirectory, int[] pageNumbers)\fC [static]\fP"
+
+.PP
+Split a document after specific pages and save to file\&. the name will be the original number plus the document number 
+.SS "static void JBToolkit\&.PdfDoc\&.PdfSplitter\&.SplitAfterPageNumbers (string inputFilePath, string outputDirectory, int[] pageNumbers)\fC [static]\fP"
+
+.PP
+Split a document on specific pages and save to file\&. the name will be the original number plus the document number 
+.SS "static \fBList\fP<MemoryStream> JBToolkit\&.PdfDoc\&.PdfSplitter\&.SplitAfterPagesWhereStringAppearsInContent (MemoryStream ms, string stringCode, bool isStringRegularExpression = \fCfalse\fP, bool ifUsingRegulareExpressionThenUseMatchValueAsDocumentTile = \fCtrue\fP)\fC [static]\fP"
+
+.PP
+Use the content of the document to determine where to split the document\&. I\&.e\&. on a document code in the header\&. You may use a static string or a regular expression\&. You can also set the document title to be the value of the match string\&. Retuns Memory Stream list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstringCode\fP Static string or regular expression - Will split 'after' the page where this string exists
+.br
+\fIisStringRegularExpression\fP If the string code is regular expression or not (not being a static string)
+.br
+\fIifUsingRegulareExpressionThenUseMatchValueAsDocumentTile\fP USe the match string value as part of the filename and title of each document
+.RE
+.PP
+
+.SS "static void JBToolkit\&.PdfDoc\&.PdfSplitter\&.SplitAfterPagesWhereStringAppearsInContent (MemoryStream ms, string title, string outputDirectory, string stringCode, bool isStringRegularExpression = \fCfalse\fP, bool ifUsingRegulareExpressionThenUseMatchValueAsDocumentTile = \fCtrue\fP, bool addTicksToFilename = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Use the content of the document to determine where to split the document\&. I\&.e\&. on a document code in the header\&. You may use a static string or a regular expression\&. You can also set the document title to be the value of the match string\&. Saves to file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstringCode\fP Static string or regular expression - Will split 'after' the page where this string exists
+.br
+\fIisStringRegularExpression\fP If the string code is regular expression or not (not being a static string)
+.br
+\fIifUsingRegulareExpressionThenUseMatchValueAsDocumentTile\fP USe the match string value as part of the filename and title of each document
+.RE
+.PP
+
+.SS "static void JBToolkit\&.PdfDoc\&.PdfSplitter\&.SplitAfterPagesWhereStringAppearsInContent (string inputFilePath, string outputDirectory, string stringCode, bool isStringRegularExpression = \fCfalse\fP, bool ifUsingRegulareExpressionThenUseMatchValueAsDocumentTile = \fCtrue\fP, bool addTicksToFilename = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Use the content of the document to determine where to split the document\&. I\&.e\&. on a document code in the header\&. You may use a static string or a regular expression\&. You can also set the document title to be the value of the match string\&. Saves to file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstringCode\fP Static string or regular expression - Will split 'after' the page where this string exists
+.br
+\fIisStringRegularExpression\fP If the string code is regular expression or not (not being a static string)
+.br
+\fIifUsingRegulareExpressionThenUseMatchValueAsDocumentTile\fP USe the match string value as part of the filename and title of each document
+.RE
+.PP
+
+.SS "static \fBList\fP<MemoryStream> JBToolkit\&.PdfDoc\&.PdfSplitter\&.SplitToPageQuantityMultiples (MemoryStream ms, int pageQuantityMultiples)\fC [static]\fP"
+
+.PP
+Split a document on multiples and return a Memory Stream list 
+.SS "static void JBToolkit\&.PdfDoc\&.PdfSplitter\&.SplitToPageQuantityMultiples (MemoryStream ms, string title, string outputDirectory, int pageQuantityMultiple)\fC [static]\fP"
+
+.PP
+Split a document on multiples and save to file\&. the name will be the original number plus the document number 
+.SS "static void JBToolkit\&.PdfDoc\&.PdfSplitter\&.SplitToPageQuantityMultiples (string inputFilePath, string outputDirectory, int pageQuantityMultiple)\fC [static]\fP"
+
+.PP
+Split a document on multiples and save to file\&. the name will be the original number plus the document number 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

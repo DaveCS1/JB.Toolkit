@@ -1,0 +1,52 @@
+.TH "JBToolkit.WinForms.EventDrivenDirtyTracker" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.WinForms.EventDrivenDirtyTracker \- Tracks control changes\&. Good if you want to be able to tell if something needs saving or not - It fires on the changing event of the control without taking into account the value of say a text box\&.\&.\&. Use the '\fBValueDrivenDirtyTracker\fP' instead to enable that option  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEventDrivenDirtyTracker\fP (\fBForm\fP frm)"
+.br
+.ti -1c
+.RI "void \fBSetAsDirty\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetAsClean\fP ()"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "bool \fBIsDirty\fP\fC [get, set]\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Tracks control changes\&. Good if you want to be able to tell if something needs saving or not - It fires on the changing event of the control without taking into account the value of say a text box\&.\&.\&. Use the '\fBValueDrivenDirtyTracker\fP' instead to enable that option 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.WinForms\&.EventDrivenDirtyTracker\&.EventDrivenDirtyTracker (\fBForm\fP frm)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void JBToolkit\&.WinForms\&.EventDrivenDirtyTracker\&.SetAsClean ()"
+
+.SS "void JBToolkit\&.WinForms\&.EventDrivenDirtyTracker\&.SetAsDirty ()"
+
+.SH "Property Documentation"
+.PP 
+.SS "bool JBToolkit\&.WinForms\&.EventDrivenDirtyTracker\&.IsDirty\fC [get]\fP, \fC [set]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

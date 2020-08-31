@@ -1,0 +1,179 @@
+\hypertarget{class_j_b_toolkit_1_1_images_1_1_colour_helper}{}\doxysection{J\+B\+Toolkit.\+Images.\+Colour\+Helper Class Reference}
+\label{class_j_b_toolkit_1_1_images_1_1_colour_helper}\index{JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}}
+
+
+Methods to convert R\+GB to hex, hex to R\+GB, alter colour brightness, lightness, intensity, also generate random \textquotesingle{}nice\textquotesingle{} colours.  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Images.\+Colour\+Helper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{d9/d5d/class_j_b_toolkit_1_1_images_1_1_colour_helper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_colour_helper_1_1_colour_generator}{Colour\+Generator}}
+\begin{DoxyCompactList}\small\item\em Generates random colours close to primary colours as hex string and doesn\textquotesingle{}t repeat a colour \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_colour_helper_1_1_intensity_value}{Intensity\+Value}}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_colour_helper_1_1_intensity_value_walker}{Intensity\+Value\+Walker}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Color \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_colour_helper_aa75700fa41a407f9f4def9e0a807c9b3}{Hex\+String\+To\+Color}} (string hex\+Color)
+\begin{DoxyCompactList}\small\item\em Color hex to System.\+Drawing.\+Color \end{DoxyCompactList}\item 
+static Color \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_colour_helper_a14b3e3466a9bc0debbdaeb49e0180d2e}{Console\+Color\+To\+Color}} (Console\+Color console\+Color)
+\begin{DoxyCompactList}\small\item\em Console color to System.\+Drawing.\+Color \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_colour_helper_a3b28f43eee0f751e02278bcb4ad25bb6}{Extract\+Hex\+Digits}} (string input)
+\begin{DoxyCompactList}\small\item\em Extract the hex color digits from a string \end{DoxyCompactList}\item 
+static Color \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_colour_helper_a9d12ebcaec6e56726578518695cca633}{Change\+Color\+Brightness}} (Color color, float correction\+Factor)
+\begin{DoxyCompactList}\small\item\em Change the brightness of a colour \end{DoxyCompactList}\item 
+static Bitmap \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_colour_helper_af78d4c649559196c4f226894acb90e4c}{Adjust\+Brightness}} (System.\+Drawing.\+Image image, float brightness)
+\begin{DoxyCompactList}\small\item\em Change the brightness of an image \end{DoxyCompactList}\item 
+static Bitmap \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_colour_helper_a01de9f1d2b793ba1ed1d614457cbb7af}{Lighten\+Image}} (Bitmap bmp)
+\begin{DoxyCompactList}\small\item\em Lighten (the gamma) of an image \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_colour_helper_a3254a645176df1f9b9c31638a551d23b}{R\+G\+B\+Color\+String\+To\+Hex}} (string color\+String)
+\begin{DoxyCompactList}\small\item\em Change R\+GB color string to hex string \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_colour_helper_abf8ef69b4d4c46e33cd342f4d795906e}{Color\+To\+Hex\+String}} (Color color)
+\begin{DoxyCompactList}\small\item\em System.\+Drawing.\+Color to hex string \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Methods to convert R\+GB to hex, hex to R\+GB, alter colour brightness, lightness, intensity, also generate random \textquotesingle{}nice\textquotesingle{} colours. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_colour_helper_af78d4c649559196c4f226894acb90e4c}\label{class_j_b_toolkit_1_1_images_1_1_colour_helper_af78d4c649559196c4f226894acb90e4c}} 
+\index{JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}!AdjustBrightness@{AdjustBrightness}}
+\index{AdjustBrightness@{AdjustBrightness}!JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}}
+\doxysubsubsection{\texorpdfstring{AdjustBrightness()}{AdjustBrightness()}}
+{\footnotesize\ttfamily static Bitmap J\+B\+Toolkit.\+Images.\+Colour\+Helper.\+Adjust\+Brightness (\begin{DoxyParamCaption}\item[{System.\+Drawing.\+Image}]{image,  }\item[{float}]{brightness }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Change the brightness of an image 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_colour_helper_a9d12ebcaec6e56726578518695cca633}\label{class_j_b_toolkit_1_1_images_1_1_colour_helper_a9d12ebcaec6e56726578518695cca633}} 
+\index{JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}!ChangeColorBrightness@{ChangeColorBrightness}}
+\index{ChangeColorBrightness@{ChangeColorBrightness}!JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}}
+\doxysubsubsection{\texorpdfstring{ChangeColorBrightness()}{ChangeColorBrightness()}}
+{\footnotesize\ttfamily static Color J\+B\+Toolkit.\+Images.\+Colour\+Helper.\+Change\+Color\+Brightness (\begin{DoxyParamCaption}\item[{Color}]{color,  }\item[{float}]{correction\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Change the brightness of a colour 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_colour_helper_abf8ef69b4d4c46e33cd342f4d795906e}\label{class_j_b_toolkit_1_1_images_1_1_colour_helper_abf8ef69b4d4c46e33cd342f4d795906e}} 
+\index{JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}!ColorToHexString@{ColorToHexString}}
+\index{ColorToHexString@{ColorToHexString}!JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}}
+\doxysubsubsection{\texorpdfstring{ColorToHexString()}{ColorToHexString()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Colour\+Helper.\+Color\+To\+Hex\+String (\begin{DoxyParamCaption}\item[{Color}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+System.\+Drawing.\+Color to hex string 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper_abf8ef69b4d4c46e33cd342f4d795906e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_colour_helper_a14b3e3466a9bc0debbdaeb49e0180d2e}\label{class_j_b_toolkit_1_1_images_1_1_colour_helper_a14b3e3466a9bc0debbdaeb49e0180d2e}} 
+\index{JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}!ConsoleColorToColor@{ConsoleColorToColor}}
+\index{ConsoleColorToColor@{ConsoleColorToColor}!JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}}
+\doxysubsubsection{\texorpdfstring{ConsoleColorToColor()}{ConsoleColorToColor()}}
+{\footnotesize\ttfamily static Color J\+B\+Toolkit.\+Images.\+Colour\+Helper.\+Console\+Color\+To\+Color (\begin{DoxyParamCaption}\item[{Console\+Color}]{console\+Color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Console color to System.\+Drawing.\+Color 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper_a14b3e3466a9bc0debbdaeb49e0180d2e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_colour_helper_a3b28f43eee0f751e02278bcb4ad25bb6}\label{class_j_b_toolkit_1_1_images_1_1_colour_helper_a3b28f43eee0f751e02278bcb4ad25bb6}} 
+\index{JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}!ExtractHexDigits@{ExtractHexDigits}}
+\index{ExtractHexDigits@{ExtractHexDigits}!JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}}
+\doxysubsubsection{\texorpdfstring{ExtractHexDigits()}{ExtractHexDigits()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Colour\+Helper.\+Extract\+Hex\+Digits (\begin{DoxyParamCaption}\item[{string}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Extract the hex color digits from a string 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper_a3b28f43eee0f751e02278bcb4ad25bb6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_colour_helper_aa75700fa41a407f9f4def9e0a807c9b3}\label{class_j_b_toolkit_1_1_images_1_1_colour_helper_aa75700fa41a407f9f4def9e0a807c9b3}} 
+\index{JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}!HexStringToColor@{HexStringToColor}}
+\index{HexStringToColor@{HexStringToColor}!JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}}
+\doxysubsubsection{\texorpdfstring{HexStringToColor()}{HexStringToColor()}}
+{\footnotesize\ttfamily static Color J\+B\+Toolkit.\+Images.\+Colour\+Helper.\+Hex\+String\+To\+Color (\begin{DoxyParamCaption}\item[{string}]{hex\+Color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Color hex to System.\+Drawing.\+Color 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper_aa75700fa41a407f9f4def9e0a807c9b3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper_aa75700fa41a407f9f4def9e0a807c9b3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_colour_helper_a01de9f1d2b793ba1ed1d614457cbb7af}\label{class_j_b_toolkit_1_1_images_1_1_colour_helper_a01de9f1d2b793ba1ed1d614457cbb7af}} 
+\index{JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}!LightenImage@{LightenImage}}
+\index{LightenImage@{LightenImage}!JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}}
+\doxysubsubsection{\texorpdfstring{LightenImage()}{LightenImage()}}
+{\footnotesize\ttfamily static Bitmap J\+B\+Toolkit.\+Images.\+Colour\+Helper.\+Lighten\+Image (\begin{DoxyParamCaption}\item[{Bitmap}]{bmp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lighten (the gamma) of an image 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_colour_helper_a3254a645176df1f9b9c31638a551d23b}\label{class_j_b_toolkit_1_1_images_1_1_colour_helper_a3254a645176df1f9b9c31638a551d23b}} 
+\index{JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}!RGBColorStringToHex@{RGBColorStringToHex}}
+\index{RGBColorStringToHex@{RGBColorStringToHex}!JBToolkit.Images.ColourHelper@{JBToolkit.Images.ColourHelper}}
+\doxysubsubsection{\texorpdfstring{RGBColorStringToHex()}{RGBColorStringToHex()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Colour\+Helper.\+R\+G\+B\+Color\+String\+To\+Hex (\begin{DoxyParamCaption}\item[{string}]{color\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Change R\+GB color string to hex string 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d99/class_j_b_toolkit_1_1_images_1_1_colour_helper_a3254a645176df1f9b9c31638a551d23b_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Imaging/\mbox{\hyperlink{_imaging_2_colour_helper_8cs}{Colour\+Helper.\+cs}}\end{DoxyCompactItemize}

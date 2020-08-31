@@ -1,0 +1,56 @@
+\hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_parser}{}\doxysection{J\+B\+Toolkit.\+Xml\+Doc.\+Parser Class Reference}
+\label{class_j_b_toolkit_1_1_xml_doc_1_1_parser}\index{JBToolkit.XmlDoc.Parser@{JBToolkit.XmlDoc.Parser}}
+
+
+Parses and returns the text an MS Office document (docx, xlsx, msg, eml, pptx, vsdx, pub), P\+DF, or Image (using O\+CR)  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Xml\+Doc.\+Parser\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{d4/dbb/class_j_b_toolkit_1_1_xml_doc_1_1_parser__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_parser_a81ec0211fd3101fecef6266714aa37b1}{Get\+Text\+From\+Document}} (string input\+Path, bool try\+Keep\+Text\+Position=false, int timeout\+Seconds=60)
+\begin{DoxyCompactList}\small\item\em Parses and returns the text an MS Office document (docx, xlsx, msg, eml, pptx, vsdx, pub), P\+DF, or Image (using O\+CR) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parses and returns the text an MS Office document (docx, xlsx, msg, eml, pptx, vsdx, pub), P\+DF, or Image (using O\+CR) 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_parser_a81ec0211fd3101fecef6266714aa37b1}\label{class_j_b_toolkit_1_1_xml_doc_1_1_parser_a81ec0211fd3101fecef6266714aa37b1}} 
+\index{JBToolkit.XmlDoc.Parser@{JBToolkit.XmlDoc.Parser}!GetTextFromDocument@{GetTextFromDocument}}
+\index{GetTextFromDocument@{GetTextFromDocument}!JBToolkit.XmlDoc.Parser@{JBToolkit.XmlDoc.Parser}}
+\doxysubsubsection{\texorpdfstring{GetTextFromDocument()}{GetTextFromDocument()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Xml\+Doc.\+Parser.\+Get\+Text\+From\+Document (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{bool}]{try\+Keep\+Text\+Position = {\ttfamily false},  }\item[{int}]{timeout\+Seconds = {\ttfamily 60} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses and returns the text an MS Office document (docx, xlsx, msg, eml, pptx, vsdx, pub), P\+DF, or Image (using O\+CR) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Path} & Document input path\\
+\hline
+{\em try\+Keep\+Text\+Position} & Converts to a P\+DF memory stream first then extracts text. The P\+DF text extractor is better at maintaining text, paragraph and formatting locations (slow)\\
+\hline
+{\em timeout\+Seconds} & Time in seconds before throwing timeout exception\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Text string
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Xml\+Doc/\mbox{\hyperlink{_xml_doc_2_parser_8cs}{Parser.\+cs}}\end{DoxyCompactItemize}

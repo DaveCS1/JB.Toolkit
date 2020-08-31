@@ -1,0 +1,4 @@
+<map id="JBToolkit.Zip.ZipCompression.GetZipFlatFilesFileContentResult" name="JBToolkit.Zip.ZipCompression.GetZipFlatFilesFileContentResult">
+<area shape="rect" id="node1" title="Returns a zip file containing a flat list of files as a FileContentResult (good for MVC file action c..." alt="" coords="5,5,219,47"/>
+<area shape="rect" id="node2" href="$d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression.html#a5a52095d4904215ae2cd90b89fc2142a" title="Returns a zip file containing a flat list of files as a Memory Stream. The input being multiple param..." alt="" coords="267,5,464,47"/>
+</map>

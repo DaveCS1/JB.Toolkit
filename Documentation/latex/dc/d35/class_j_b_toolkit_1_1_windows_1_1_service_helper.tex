@@ -1,0 +1,183 @@
+\hypertarget{class_j_b_toolkit_1_1_windows_1_1_service_helper}{}\doxysection{J\+B\+Toolkit.\+Windows.\+Service\+Helper Class Reference}
+\label{class_j_b_toolkit_1_1_windows_1_1_service_helper}\index{JBToolkit.Windows.ServiceHelper@{JBToolkit.Windows.ServiceHelper}}
+
+
+Contain method for remote reliably manipulating \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} Services. You will likely need to use impersonatation when calling i.\+e\+:  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Windows.\+Service\+Helper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{d2/d34/class_j_b_toolkit_1_1_windows_1_1_service_helper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_windows_1_1_service_helper_a79cc8d5ae9cca39a3e974d22c3838c6b}{Get\+Service\+Satus}} (string service\+Name, string server\+Name, ref string err\+Msg)
+\begin{DoxyCompactList}\small\item\em Gets remote service status as a string. You will likely need to use impersonatation when calling. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_windows_1_1_service_helper_ae374ab948d32aa93c1f7c8edcab2eeaa}{Stop\+Service}} (string service\+Name, string server\+Name, ref string err\+Msg)
+\begin{DoxyCompactList}\small\item\em Stop a remote \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} service. You will likely need to use impersonatation when calling. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_windows_1_1_service_helper_a2d36470d91cec1094bcb24beb8724e9b}{Start\+Service}} (string service\+Name, string server\+Name, ref string err\+Msg)
+\begin{DoxyCompactList}\small\item\em Start a remote \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} service. You will likely need to use impersonatation when calling. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_windows_1_1_service_helper_a789bc1855cab13d044ce925ff6d3e9f0}{Restart\+Service}} (string service\+Name, string server\+Name, ref string err\+Msg, string process\+Name\+Optional=null, string auth\+Username=null, string auth\+Password=null, string domain=null)
+\begin{DoxyCompactList}\small\item\em Restarts a service using multiple attemps if failing. You will likely need to use impersonatation when calling. If you wish agressivly restart the service (i.\+e. kill the actual process if failing), you will need to pass the impersonator object. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_windows_1_1_service_helper_a2b3c910da47f6f1d64ec163c21c81990}{Agressive\+Restart\+Service}} (string service\+Name, string process\+Name, string server\+Name, string auth\+Username, string auth\+Password, ref string err\+Msg, string domain)
+\begin{DoxyCompactList}\small\item\em Performs an aggressive restart of a service (i.\+e. kill the actual process if failing). You will likely need to use impersonatation when calling. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contain method for remote reliably manipulating \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} Services. You will likely need to use impersonatation when calling i.\+e\+: 
+
+\begin{DoxyVerb}using (new Impersonator(ServerType.DOMAIN, "username", "password")) 
+\end{DoxyVerb}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_windows_1_1_service_helper_a2b3c910da47f6f1d64ec163c21c81990}\label{class_j_b_toolkit_1_1_windows_1_1_service_helper_a2b3c910da47f6f1d64ec163c21c81990}} 
+\index{JBToolkit.Windows.ServiceHelper@{JBToolkit.Windows.ServiceHelper}!AgressiveRestartService@{AgressiveRestartService}}
+\index{AgressiveRestartService@{AgressiveRestartService}!JBToolkit.Windows.ServiceHelper@{JBToolkit.Windows.ServiceHelper}}
+\doxysubsubsection{\texorpdfstring{AgressiveRestartService()}{AgressiveRestartService()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Windows.\+Service\+Helper.\+Agressive\+Restart\+Service (\begin{DoxyParamCaption}\item[{string}]{service\+Name,  }\item[{string}]{process\+Name,  }\item[{string}]{server\+Name,  }\item[{string}]{auth\+Username,  }\item[{string}]{auth\+Password,  }\item[{ref string}]{err\+Msg,  }\item[{string}]{domain }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs an aggressive restart of a service (i.\+e. kill the actual process if failing). You will likely need to use impersonatation when calling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+Name} & Name of the service to restart\\
+\hline
+{\em process\+Name} & Name of the actual process of the service\\
+\hline
+{\em server\+Name} & Server host name\\
+\hline
+{\em impersonator} & Impersonator object\\
+\hline
+{\em err\+Msg} & Reference error message string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d35/class_j_b_toolkit_1_1_windows_1_1_service_helper_a2b3c910da47f6f1d64ec163c21c81990_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d35/class_j_b_toolkit_1_1_windows_1_1_service_helper_a2b3c910da47f6f1d64ec163c21c81990_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_windows_1_1_service_helper_a79cc8d5ae9cca39a3e974d22c3838c6b}\label{class_j_b_toolkit_1_1_windows_1_1_service_helper_a79cc8d5ae9cca39a3e974d22c3838c6b}} 
+\index{JBToolkit.Windows.ServiceHelper@{JBToolkit.Windows.ServiceHelper}!GetServiceSatus@{GetServiceSatus}}
+\index{GetServiceSatus@{GetServiceSatus}!JBToolkit.Windows.ServiceHelper@{JBToolkit.Windows.ServiceHelper}}
+\doxysubsubsection{\texorpdfstring{GetServiceSatus()}{GetServiceSatus()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Windows.\+Service\+Helper.\+Get\+Service\+Satus (\begin{DoxyParamCaption}\item[{string}]{service\+Name,  }\item[{string}]{server\+Name,  }\item[{ref string}]{err\+Msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets remote service status as a string. You will likely need to use impersonatation when calling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+Name} & Name of \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} service\\
+\hline
+{\em server\+Name} & Host machine to query\\
+\hline
+{\em err\+Msg} & Output error message (if any)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String status
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_windows_1_1_service_helper_a789bc1855cab13d044ce925ff6d3e9f0}\label{class_j_b_toolkit_1_1_windows_1_1_service_helper_a789bc1855cab13d044ce925ff6d3e9f0}} 
+\index{JBToolkit.Windows.ServiceHelper@{JBToolkit.Windows.ServiceHelper}!RestartService@{RestartService}}
+\index{RestartService@{RestartService}!JBToolkit.Windows.ServiceHelper@{JBToolkit.Windows.ServiceHelper}}
+\doxysubsubsection{\texorpdfstring{RestartService()}{RestartService()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Windows.\+Service\+Helper.\+Restart\+Service (\begin{DoxyParamCaption}\item[{string}]{service\+Name,  }\item[{string}]{server\+Name,  }\item[{ref string}]{err\+Msg,  }\item[{string}]{process\+Name\+Optional = {\ttfamily null},  }\item[{string}]{auth\+Username = {\ttfamily null},  }\item[{string}]{auth\+Password = {\ttfamily null},  }\item[{string}]{domain = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Restarts a service using multiple attemps if failing. You will likely need to use impersonatation when calling. If you wish agressivly restart the service (i.\+e. kill the actual process if failing), you will need to pass the impersonator object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+Name} & Name of the service to restart\\
+\hline
+{\em server\+Name} & Server host name\\
+\hline
+{\em err\+Msg} & Reference an error message string\\
+\hline
+{\em process\+Name\+Optional} & Optional process name\\
+\hline
+{\em impersonator\+Optional} & Optional impersonator object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d35/class_j_b_toolkit_1_1_windows_1_1_service_helper_a789bc1855cab13d044ce925ff6d3e9f0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_windows_1_1_service_helper_a2d36470d91cec1094bcb24beb8724e9b}\label{class_j_b_toolkit_1_1_windows_1_1_service_helper_a2d36470d91cec1094bcb24beb8724e9b}} 
+\index{JBToolkit.Windows.ServiceHelper@{JBToolkit.Windows.ServiceHelper}!StartService@{StartService}}
+\index{StartService@{StartService}!JBToolkit.Windows.ServiceHelper@{JBToolkit.Windows.ServiceHelper}}
+\doxysubsubsection{\texorpdfstring{StartService()}{StartService()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Windows.\+Service\+Helper.\+Start\+Service (\begin{DoxyParamCaption}\item[{string}]{service\+Name,  }\item[{string}]{server\+Name,  }\item[{ref string}]{err\+Msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Start a remote \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} service. You will likely need to use impersonatation when calling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+Name} & Name of \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} service\\
+\hline
+{\em server\+Name} & Host machine to query\\
+\hline
+{\em err\+Msg} & Output error message (if any)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_windows_1_1_service_helper_ae374ab948d32aa93c1f7c8edcab2eeaa}\label{class_j_b_toolkit_1_1_windows_1_1_service_helper_ae374ab948d32aa93c1f7c8edcab2eeaa}} 
+\index{JBToolkit.Windows.ServiceHelper@{JBToolkit.Windows.ServiceHelper}!StopService@{StopService}}
+\index{StopService@{StopService}!JBToolkit.Windows.ServiceHelper@{JBToolkit.Windows.ServiceHelper}}
+\doxysubsubsection{\texorpdfstring{StopService()}{StopService()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Windows.\+Service\+Helper.\+Stop\+Service (\begin{DoxyParamCaption}\item[{string}]{service\+Name,  }\item[{string}]{server\+Name,  }\item[{ref string}]{err\+Msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Stop a remote \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} service. You will likely need to use impersonatation when calling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\+Name} & Name of \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} service\\
+\hline
+{\em server\+Name} & Host machine to query\\
+\hline
+{\em err\+Msg} & Output error message (if any)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Windows/\mbox{\hyperlink{_service_helper_8cs}{Service\+Helper.\+cs}}\end{DoxyCompactItemize}

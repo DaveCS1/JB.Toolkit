@@ -1,0 +1,4 @@
+<map id="JBToolkit.PdfDoc.PdfParser.GetPDFContentAsString" name="JBToolkit.PdfDoc.PdfParser.GetPDFContentAsString">
+<area shape="rect" id="node1" title="Converts PDF to pure text using iTextSharp (very quick) and optionally falls back to using xPDF PDFto..." alt="" coords="285,13,472,54"/>
+<area shape="rect" id="node2" href="$d4/d5a/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter.html#a648d5ec8eb53e4753f2057c636dd000e" title="Use the content of the document to determine where to split the document. I.e. on a document code in ..." alt="" coords="5,5,237,61"/>
+</map>

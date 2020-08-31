@@ -1,0 +1,81 @@
+.TH "JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf \- Methods to convert Docx to PDF through M-Files\&. I've done it this way as it's costs a tonne for a docx to pdf converter license with the likes of Aspose, Spire, ABCpdf etc and M-Files is already using Aspose so just utilise that\&. The process involves uploading a file to M-Files, converting it to a PDF there, then downloading it as PDF and finally deleting (destroying) the file in the M-Files vault  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static MemoryStream \fBConvertToPDF\fP (string inputPath)"
+.br
+.RI "Converts MS Office document (xlsx, doc, ppt etc) to memory stream (i\&.e\&. for use in \fBWeb\fP Requests) "
+.ti -1c
+.RI "static MemoryStream \fBConvertToPDF\fP (MemoryStream ms, string fileExtension)"
+.br
+.RI "Converts MS Office document (xlsx, doc, ppt etc) to memory stream (i\&.e\&. for use in \fBWeb\fP Requests) "
+.ti -1c
+.RI "static void \fBSaveAsPdf\fP (string inputPath, string pdfOutputPath)"
+.br
+.RI "Save a MS Office doc as a PDF "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Methods to convert Docx to PDF through M-Files\&. I've done it this way as it's costs a tonne for a docx to pdf converter license with the likes of Aspose, Spire, ABCpdf etc and M-Files is already using Aspose so just utilise that\&. The process involves uploading a file to M-Files, converting it to a PDF there, then downloading it as PDF and finally deleting (destroying) the file in the M-Files vault 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static MemoryStream JBToolkit\&.XmlDoc\&.Converters\&.MSOfficeDocToPdf\&.ConvertToPDF (MemoryStream ms, string fileExtension)\fC [static]\fP"
+
+.PP
+Converts MS Office document (xlsx, doc, ppt etc) to memory stream (i\&.e\&. for use in \fBWeb\fP Requests) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocxInputPath\fP File path
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Memory stream
+.RE
+.PP
+
+.SS "static MemoryStream JBToolkit\&.XmlDoc\&.Converters\&.MSOfficeDocToPdf\&.ConvertToPDF (string inputPath)\fC [static]\fP"
+
+.PP
+Converts MS Office document (xlsx, doc, ppt etc) to memory stream (i\&.e\&. for use in \fBWeb\fP Requests) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocxInputPath\fP File path
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Memory stream
+.RE
+.PP
+
+.SS "static void JBToolkit\&.XmlDoc\&.Converters\&.MSOfficeDocToPdf\&.SaveAsPdf (string inputPath, string pdfOutputPath)\fC [static]\fP"
+
+.PP
+Save a MS Office doc as a PDF 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinputPath\fP \&.docx path
+.br
+\fIpdfOutputPath\fP Save PDF file path
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

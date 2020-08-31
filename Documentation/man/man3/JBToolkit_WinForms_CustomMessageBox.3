@@ -1,0 +1,117 @@
+.TH "JBToolkit.WinForms.CustomMessageBox" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.WinForms.CustomMessageBox \- Simplified MsgBox style dialogue using MetroForms layout  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBJBToolkit\&.WinForms\&.OptimisedMetroForm\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBMessageTypeEnum\fP { \fBMessageTypeEnum\&.Info\fP, \fBMessageTypeEnum\&.Question\fP, \fBMessageTypeEnum\&.Warning\fP, \fBMessageTypeEnum\&.Danger\fP, \fBMessageTypeEnum\&.Success\fP }"
+.br
+.ti -1c
+.RI "enum \fBButtonTypeEnum\fP { \fBButtonTypeEnum\&.Close\fP, \fBButtonTypeEnum\&.OKCancel\fP, \fBButtonTypeEnum\&.YesNo\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCustomMessageBox\fP (string titleText, string messageText, \fBMessageTypeEnum\fP messageType, \fBButtonTypeEnum\fP buttonType, int width=570, int height=245)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override void \fBDispose\fP (bool disposing)"
+.br
+.RI "Clean up any resources being used\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "\fBMessageTypeEnum\fP \fBMessageType\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "\fBButtonTypeEnum\fP \fBButtonType\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBTitleText\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBMessageText\fP\fC [get, set]\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Simplified MsgBox style dialogue using MetroForms layout 
+
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBJBToolkit\&.WinForms\&.CustomMessageBox\&.ButtonTypeEnum\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIClose \fP\fP
+.TP
+\fB\fIOKCancel \fP\fP
+.TP
+\fB\fIYesNo \fP\fP
+.SS "enum \fBJBToolkit\&.WinForms\&.CustomMessageBox\&.MessageTypeEnum\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIInfo \fP\fP
+.TP
+\fB\fIQuestion \fP\fP
+.TP
+\fB\fIWarning \fP\fP
+.TP
+\fB\fIDanger \fP\fP
+.TP
+\fB\fISuccess \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.WinForms\&.CustomMessageBox\&.CustomMessageBox (string titleText, string messageText, \fBMessageTypeEnum\fP messageType, \fBButtonTypeEnum\fP buttonType, int width = \fC570\fP, int height = \fC245\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "override void JBToolkit\&.WinForms\&.CustomMessageBox\&.Dispose (bool disposing)\fC [protected]\fP"
+
+.PP
+Clean up any resources being used\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdisposing\fP true if managed resources should be disposed; otherwise, false\&.
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "\fBButtonTypeEnum\fP JBToolkit\&.WinForms\&.CustomMessageBox\&.ButtonType\fC [get]\fP, \fC [set]\fP"
+
+.SS "string JBToolkit\&.WinForms\&.CustomMessageBox\&.MessageText\fC [get]\fP, \fC [set]\fP"
+
+.SS "\fBMessageTypeEnum\fP JBToolkit\&.WinForms\&.CustomMessageBox\&.MessageType\fC [get]\fP, \fC [set]\fP"
+
+.SS "string JBToolkit\&.WinForms\&.CustomMessageBox\&.TitleText\fC [get]\fP, \fC [set]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

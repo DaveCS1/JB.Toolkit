@@ -1,0 +1,733 @@
+\hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper}{}\doxysection{J\+B\+Toolkit.\+Images.\+Image\+Helper Class Reference}
+\label{class_j_b_toolkit_1_1_images_1_1_image_helper}\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+
+
+Image manipulation helper methods  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Images.\+Image\+Helper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{de/da7/class_j_b_toolkit_1_1_images_1_1_image_helper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper}{Html\+Image\+Helper}}
+\item 
+class \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper}{Icon\+Helper}}
+\begin{DoxyCompactList}\small\item\em A Helper class for multi-\/resolution icon files \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_aac3f6f3615aa32471271a9ea443ec651}{Get\+Mime\+From\+Bytes}} (byte\mbox{[}$\,$\mbox{]} data)
+\begin{DoxyCompactList}\small\item\em Gets the mime type from an image byte array I\+M\+P\+O\+R\+T\+A\+NT\+: Uses urlmon.\+dll D\+L\+L\+I\+M\+P\+O\+RT -\/$>$ If you\textquotesingle{}re deployment an app that uses this is I\+IS, you must enable allow 32-\/Bit applications in the App\+Pool \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a64c115559ba3f85d75444bbe2e0baf55}{Get\+Mime\+From\+Raw\+Base64\+String}} (string raw\+Base64\+String)
+\begin{DoxyCompactList}\small\item\em Gets the mime type from a a raw Base64 string (without mime type descriptor) I\+M\+P\+O\+R\+T\+A\+NT\+: Uses urlmon.\+dll D\+L\+L\+I\+M\+P\+O\+RT -\/$>$ If you\textquotesingle{}re deployment an app that uses this is I\+IS, you must enable allow 32-\/Bit applications in the App\+Pool \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_ae843a94e1dc925ed5eeb5847150515b5}{Get\+Mime\+From\+Image}} (Image image)
+\begin{DoxyCompactList}\small\item\em Returns the M\+I\+ME type string from a System.\+Drawing.\+Image i.\+e. image/pdf \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_ace07a4949fc4dd39bf85dbcaa25cbc6e}{Get\+Base64\+String\+From\+Bytes\+With\+Mime}} (byte\mbox{[}$\,$\mbox{]} image\+Bytes)
+\begin{DoxyCompactList}\small\item\em Returns a base64 string, with detected mime type (using magic numbers) from a image byte array I\+M\+P\+O\+R\+T\+A\+NT\+: Uses urlmon.\+dll D\+L\+L\+I\+M\+P\+O\+RT -\/$>$ If you\textquotesingle{}re deployment an app that uses this is I\+IS, you must enable allow 32-\/Bit applications in the App\+Pool \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a75611fae931038c0e030923371a8ac4f}{Get\+Base64\+String\+With\+Mime\+Type\+From\+Base64\+String\+Witout\+Mime\+Type}} (string raw\+Base64\+String)
+\begin{DoxyCompactList}\small\item\em Returns a base64 string, with detected mime type (using magic numbers) from a raw base64 image string (without mime descriptor) I\+M\+P\+O\+R\+T\+A\+NT\+: Uses urlmon.\+dll D\+L\+L\+I\+M\+P\+O\+RT -\/$>$ If you\textquotesingle{}re deployment an app that uses this is I\+IS, you must enable allow 32-\/Bit applications in the App\+Pool \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_aad1de590a716342a94108c857eb5ebcb}{Convert\+Image\+Format}} (byte\mbox{[}$\,$\mbox{]} bytes, Image\+Format new\+Format)
+\begin{DoxyCompactList}\small\item\em Convert image from one format to another Requires \mbox{\hyperlink{namespace_system_1_1_drawing}{System.\+Drawing}} \end{DoxyCompactList}\item 
+static System.\+Drawing.\+Image \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_affe241c095a10f0fb3ff14a7010828c5}{Convert\+Image\+Format}} (System.\+Drawing.\+Image image, Image\+Format new\+Format)
+\begin{DoxyCompactList}\small\item\em Convert image from one format to another Requires \mbox{\hyperlink{namespace_system_1_1_drawing}{System.\+Drawing}} \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a1b3cbfaaec88764d071c4f4706f3f21a}{Convert\+Image\+Format}} (string input\+Path, string output\+Path, Image\+Format new\+Format)
+\begin{DoxyCompactList}\small\item\em Convert image from one format to another and save to file Requires \mbox{\hyperlink{namespace_system_1_1_drawing}{System.\+Drawing}} \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_af49ae6e96d5b9bc3c7cb5e2abf469bc9}{Save\+Image\+As\+Format}} (string input\+Path, string output\+Path, Image\+Format new\+Format)
+\begin{DoxyCompactList}\small\item\em Convert image from one format to another and save to file Requires \mbox{\hyperlink{namespace_system_1_1_drawing}{System.\+Drawing}} \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a17e54cfc30af3d33a9eb8b818fba539b}{Resize\+Image}} (byte\mbox{[}$\,$\mbox{]} image, int width, int height)
+\begin{DoxyCompactList}\small\item\em Resizes an image based on specific width and height \end{DoxyCompactList}\item 
+static System.\+Drawing.\+Image \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a04408a128759fbe41ee0f859ccad5a89}{Resize\+Image}} (System.\+Drawing.\+Image image, int width, int height)
+\begin{DoxyCompactList}\small\item\em Resize an image with specific width and height \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a217ef7cf10721c64ac52a36e4ae5081e}{Resized\+Image}} (string input\+Path, string output\+Path, int width, int height)
+\begin{DoxyCompactList}\small\item\em Resize an image with specific width and height and saved it to file \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_ac60e4dcfef2f76faa8e5b3829c057d5a}{Save\+Resized\+Image}} (string input\+Path, string output\+Path, int width, int height)
+\begin{DoxyCompactList}\small\item\em Resize an image with specific width and height and saved it to file \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a8312bb5f4866f4fdf9d7c06822a6c762}{Resize\+Image}} (byte\mbox{[}$\,$\mbox{]} image, int percentage)
+\begin{DoxyCompactList}\small\item\em Resize an image based on percentage to increase (above 100\%) or decrease (below 100\%) \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_aa991ba237b941b28cdfc737f5768c374}{Save\+Resized\+Image}} (string input\+Path, string output\+Path, int percentage)
+\begin{DoxyCompactList}\small\item\em Resize an image based on percentage to increase (above 100\%) or decrease (below 100\%) and saves it to file \end{DoxyCompactList}\item 
+static System.\+Drawing.\+Image \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_ad867689af2304d9bff0456c4682f45aa}{Resize\+Image}} (System.\+Drawing.\+Image image, int percentage)
+\begin{DoxyCompactList}\small\item\em Resize an image based on percentage to increase (above 100\%) or decrease (below 100\%) \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_aed8fdf4194df575e4a3b46f8e6a0de78}{Resize\+Image\+Maintain\+Aspect\+Ratio}} (byte\mbox{[}$\,$\mbox{]} image, int width, int height)
+\begin{DoxyCompactList}\small\item\em Resizes an image based on specific width and height \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a452df11286d2fc79555ab611259b0a5a}{Resize\+Image\+Maintain\+Aspect\+Ratio}} (string input\+Path, string output\+Path, int width, int height)
+\begin{DoxyCompactList}\small\item\em Resize an image with specific width and height and saved it to file \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a5601c4e5b92e8eb43ee28a7bda841be8}{Save\+Resized\+Image\+Maintain\+Aspect\+Ratio}} (string input\+Path, string output\+Path, int width, int height)
+\begin{DoxyCompactList}\small\item\em Resize an image with specific width and height and saved it to file \end{DoxyCompactList}\item 
+static Image \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a9163d882415ca8326cf3a9cf6b453dbd}{Resize\+Image\+Maintain\+Aspect\+Ratio}} (Image image, int width, int height)
+\begin{DoxyCompactList}\small\item\em Resizes an image and keeps the aspect ratio \end{DoxyCompactList}\item 
+static System.\+Drawing.\+Image \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a9911767d12716069aa504eae8abe0303}{Adjust\+Brightness}} (System.\+Drawing.\+Image image, float brightness)
+\begin{DoxyCompactList}\small\item\em Adjust the brightness of an image \end{DoxyCompactList}\item 
+static System.\+Drawing.\+Image \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a79166d359bdc9ab1507d41d6d53fffbe}{Lighten\+Image}} (System.\+Drawing.\+Image image)
+\begin{DoxyCompactList}\small\item\em Lightens an image \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a3b1f490d757b462b0b2d5b7ad1621848}{Compress\+Jpgeg}} (byte\mbox{[}$\,$\mbox{]} data, long quality=50L)
+\begin{DoxyCompactList}\small\item\em Compress Jpgeg image \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a30dcc088fe44ed41fc9f0b70be129a2b}{Image\+Xx\+Hash}} (Image image)
+\begin{DoxyCompactList}\small\item\em Get a 32bit xx\+Hash of an image (useful for comparing) \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_af8917a0454c900da6232797584d7d88d}{Is\+Same\+Image}} (Image imageA, Image imageB)
+\begin{DoxyCompactList}\small\item\em Checks if 1 image is the same as another by comparing its S\+HA hash. Also performs a quick check on image dimentions to avoid performs cost of unnecessarily generating a hash \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a1e67296609dcf772b521d00568512c9b}{Convert\+Image\+To\+Byte\+Array}} (System.\+Drawing.\+Image image)
+\item 
+static System.\+Drawing.\+Image \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a42bedfb8a40ccea3cd8668b6050af020}{Convert\+Byte\+Array\+To\+Image}} (byte\mbox{[}$\,$\mbox{]} bytes)
+\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a87e93f01bb376be46a8490fd8376c9f4}{Convert\+Image\+To\+Memory\+Stream}} (System.\+Drawing.\+Image image)
+\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a8969181e9b422f554c7ce7c474a6e63c}{Convert\+Memory\+Stream\+To\+Byte\+Array}} (Memory\+Stream ms)
+\item 
+static System.\+Drawing.\+Image \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a41bc0fa073380fae6c05e11510b0b7f7}{Convert\+Memory\+Stream\+To\+Image}} (Memory\+Stream ms)
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a3095a1f3142a925a6d66eae286cfcc54}{Convert\+Image\+To\+Base64\+String}} (System.\+Drawing.\+Image image, bool include\+Mime\+Type\+Descriptor=false)
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a7c0255fa814cdd6dd36838c6d796851f}{Convert\+Image\+To\+Base64\+String}} (byte\mbox{[}$\,$\mbox{]} bytes, Image\+Format format, bool include\+Mime\+Type\+Descriptor=false)
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_aa177992e188ba1f763f770d2a455501e}{Convert\+Byte\+Array\+To\+Base64\+String}} (byte\mbox{[}$\,$\mbox{]} bytes, bool include\+Mime\+Type\+Descriptor=false)
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a871d21ca170a4b870d66e8aba0b79cbe}{Convert\+Byte\+Array\+To\+Base64\+String}} (byte\mbox{[}$\,$\mbox{]} bytes, Image\+Format format, bool include\+Mime\+Type\+Descriptor=false)
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a984759957bf15c5d4c9e7807dd265fd7}{Convert\+Memory\+Stream\+To\+Base64\+String}} (Memory\+Stream ms, bool include\+Mime\+Type\+Descriptor=false)
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_af526f3f56ead7e22d9da83374f465e53}{Convert\+Memory\+Stream\+To\+Base64\+String}} (Memory\+Stream ms, Image\+Format format, bool include\+Mime\+Type\+Descriptor=false)
+\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a0f822ddc51a28a5d4019d48bd012c8d2}{Convert\+Base64\+String\+To\+Byte\+Array}} (string base64\+String)
+\item 
+static System.\+Drawing.\+Image \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_acb7e6d8253c170f7414a9102399d49a1}{Convert\+Base64\+String\+To\+Image}} (string base64\+String)
+\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a31631bac17e80e7d64c78f8d1a955a41}{Convert\+Base64\+String\+To\+Memory\+Stream}} (string base64\+String)
+\item 
+static Data\+Image \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a5dac417cd7390c6e567bb07f35ece559}{Convert\+Base64\+String\+To\+Data\+Image}} (string base64\+String)
+\item 
+static System.\+Drawing.\+Image \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a2ffc4f62798d95f37161779aaab08668}{Normalize\+Orientation}} (System.\+Drawing.\+Image image)
+\begin{DoxyCompactList}\small\item\em This looks to see if there\textquotesingle{}s an exif property on the image (meta property on image file that\textquotesingle{}s usually applied when using the context menu in \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} to rotate an image). If there is it properly rotates the image and removes the exif meta property. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a32d3f93e44be8c3aea91708967c1cb7b}{Mime\+Sample\+Size}} = 256
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_images_1_1_image_helper_a6fb1ac19d88c760523b19edc5dbe5a41}{Default\+Mime\+Type}} = \char`\"{}application/octet-\/stream\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Image manipulation helper methods 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a9911767d12716069aa504eae8abe0303}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a9911767d12716069aa504eae8abe0303}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!AdjustBrightness@{AdjustBrightness}}
+\index{AdjustBrightness@{AdjustBrightness}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{AdjustBrightness()}{AdjustBrightness()}}
+{\footnotesize\ttfamily static System.\+Drawing.\+Image J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Adjust\+Brightness (\begin{DoxyParamCaption}\item[{System.\+Drawing.\+Image}]{image,  }\item[{float}]{brightness }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Adjust the brightness of an image 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a3b1f490d757b462b0b2d5b7ad1621848}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a3b1f490d757b462b0b2d5b7ad1621848}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!CompressJpgeg@{CompressJpgeg}}
+\index{CompressJpgeg@{CompressJpgeg}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{CompressJpgeg()}{CompressJpgeg()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Compress\+Jpgeg (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{data,  }\item[{long}]{quality = {\ttfamily 50L} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Compress Jpgeg image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quality} & Percentage. I.\+e. 0 = zero quality level, 50 = 50\% quality, 100 = no \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a0f822ddc51a28a5d4019d48bd012c8d2}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a0f822ddc51a28a5d4019d48bd012c8d2}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertBase64StringToByteArray@{ConvertBase64StringToByteArray}}
+\index{ConvertBase64StringToByteArray@{ConvertBase64StringToByteArray}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertBase64StringToByteArray()}{ConvertBase64StringToByteArray()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Base64\+String\+To\+Byte\+Array (\begin{DoxyParamCaption}\item[{string}]{base64\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a5dac417cd7390c6e567bb07f35ece559}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a5dac417cd7390c6e567bb07f35ece559}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertBase64StringToDataImage@{ConvertBase64StringToDataImage}}
+\index{ConvertBase64StringToDataImage@{ConvertBase64StringToDataImage}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertBase64StringToDataImage()}{ConvertBase64StringToDataImage()}}
+{\footnotesize\ttfamily static Data\+Image J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Base64\+String\+To\+Data\+Image (\begin{DoxyParamCaption}\item[{string}]{base64\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_acb7e6d8253c170f7414a9102399d49a1}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_acb7e6d8253c170f7414a9102399d49a1}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertBase64StringToImage@{ConvertBase64StringToImage}}
+\index{ConvertBase64StringToImage@{ConvertBase64StringToImage}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertBase64StringToImage()}{ConvertBase64StringToImage()}}
+{\footnotesize\ttfamily static System.\+Drawing.\+Image J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Base64\+String\+To\+Image (\begin{DoxyParamCaption}\item[{string}]{base64\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_acb7e6d8253c170f7414a9102399d49a1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a31631bac17e80e7d64c78f8d1a955a41}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a31631bac17e80e7d64c78f8d1a955a41}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertBase64StringToMemoryStream@{ConvertBase64StringToMemoryStream}}
+\index{ConvertBase64StringToMemoryStream@{ConvertBase64StringToMemoryStream}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertBase64StringToMemoryStream()}{ConvertBase64StringToMemoryStream()}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Base64\+String\+To\+Memory\+Stream (\begin{DoxyParamCaption}\item[{string}]{base64\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a31631bac17e80e7d64c78f8d1a955a41_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_aa177992e188ba1f763f770d2a455501e}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_aa177992e188ba1f763f770d2a455501e}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertByteArrayToBase64String@{ConvertByteArrayToBase64String}}
+\index{ConvertByteArrayToBase64String@{ConvertByteArrayToBase64String}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertByteArrayToBase64String()}{ConvertByteArrayToBase64String()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Byte\+Array\+To\+Base64\+String (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{bytes,  }\item[{bool}]{include\+Mime\+Type\+Descriptor = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_aa177992e188ba1f763f770d2a455501e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_aa177992e188ba1f763f770d2a455501e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a871d21ca170a4b870d66e8aba0b79cbe}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a871d21ca170a4b870d66e8aba0b79cbe}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertByteArrayToBase64String@{ConvertByteArrayToBase64String}}
+\index{ConvertByteArrayToBase64String@{ConvertByteArrayToBase64String}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertByteArrayToBase64String()}{ConvertByteArrayToBase64String()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Byte\+Array\+To\+Base64\+String (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{bytes,  }\item[{Image\+Format}]{format,  }\item[{bool}]{include\+Mime\+Type\+Descriptor = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a871d21ca170a4b870d66e8aba0b79cbe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a42bedfb8a40ccea3cd8668b6050af020}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a42bedfb8a40ccea3cd8668b6050af020}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertByteArrayToImage@{ConvertByteArrayToImage}}
+\index{ConvertByteArrayToImage@{ConvertByteArrayToImage}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertByteArrayToImage()}{ConvertByteArrayToImage()}}
+{\footnotesize\ttfamily static System.\+Drawing.\+Image J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Byte\+Array\+To\+Image (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a42bedfb8a40ccea3cd8668b6050af020_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_aad1de590a716342a94108c857eb5ebcb}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_aad1de590a716342a94108c857eb5ebcb}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertImageFormat@{ConvertImageFormat}}
+\index{ConvertImageFormat@{ConvertImageFormat}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertImageFormat()}{ConvertImageFormat()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Image\+Format (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{bytes,  }\item[{Image\+Format}]{new\+Format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert image from one format to another Requires \mbox{\hyperlink{namespace_system_1_1_drawing}{System.\+Drawing}} 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_aad1de590a716342a94108c857eb5ebcb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a1b3cbfaaec88764d071c4f4706f3f21a}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a1b3cbfaaec88764d071c4f4706f3f21a}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertImageFormat@{ConvertImageFormat}}
+\index{ConvertImageFormat@{ConvertImageFormat}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertImageFormat()}{ConvertImageFormat()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Image\+Format (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{string}]{output\+Path,  }\item[{Image\+Format}]{new\+Format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert image from one format to another and save to file Requires \mbox{\hyperlink{namespace_system_1_1_drawing}{System.\+Drawing}} 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a1b3cbfaaec88764d071c4f4706f3f21a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_affe241c095a10f0fb3ff14a7010828c5}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_affe241c095a10f0fb3ff14a7010828c5}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertImageFormat@{ConvertImageFormat}}
+\index{ConvertImageFormat@{ConvertImageFormat}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertImageFormat()}{ConvertImageFormat()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static System.\+Drawing.\+Image J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Image\+Format (\begin{DoxyParamCaption}\item[{System.\+Drawing.\+Image}]{image,  }\item[{Image\+Format}]{new\+Format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert image from one format to another Requires \mbox{\hyperlink{namespace_system_1_1_drawing}{System.\+Drawing}} 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_affe241c095a10f0fb3ff14a7010828c5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a7c0255fa814cdd6dd36838c6d796851f}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a7c0255fa814cdd6dd36838c6d796851f}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertImageToBase64String@{ConvertImageToBase64String}}
+\index{ConvertImageToBase64String@{ConvertImageToBase64String}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertImageToBase64String()}{ConvertImageToBase64String()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Image\+To\+Base64\+String (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{bytes,  }\item[{Image\+Format}]{format,  }\item[{bool}]{include\+Mime\+Type\+Descriptor = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a7c0255fa814cdd6dd36838c6d796851f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a3095a1f3142a925a6d66eae286cfcc54}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a3095a1f3142a925a6d66eae286cfcc54}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertImageToBase64String@{ConvertImageToBase64String}}
+\index{ConvertImageToBase64String@{ConvertImageToBase64String}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertImageToBase64String()}{ConvertImageToBase64String()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Image\+To\+Base64\+String (\begin{DoxyParamCaption}\item[{System.\+Drawing.\+Image}]{image,  }\item[{bool}]{include\+Mime\+Type\+Descriptor = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a3095a1f3142a925a6d66eae286cfcc54_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a3095a1f3142a925a6d66eae286cfcc54_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a1e67296609dcf772b521d00568512c9b}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a1e67296609dcf772b521d00568512c9b}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertImageToByteArray@{ConvertImageToByteArray}}
+\index{ConvertImageToByteArray@{ConvertImageToByteArray}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertImageToByteArray()}{ConvertImageToByteArray()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Image\+To\+Byte\+Array (\begin{DoxyParamCaption}\item[{System.\+Drawing.\+Image}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a87e93f01bb376be46a8490fd8376c9f4}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a87e93f01bb376be46a8490fd8376c9f4}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertImageToMemoryStream@{ConvertImageToMemoryStream}}
+\index{ConvertImageToMemoryStream@{ConvertImageToMemoryStream}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertImageToMemoryStream()}{ConvertImageToMemoryStream()}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Image\+To\+Memory\+Stream (\begin{DoxyParamCaption}\item[{System.\+Drawing.\+Image}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a87e93f01bb376be46a8490fd8376c9f4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a984759957bf15c5d4c9e7807dd265fd7}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a984759957bf15c5d4c9e7807dd265fd7}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertMemoryStreamToBase64String@{ConvertMemoryStreamToBase64String}}
+\index{ConvertMemoryStreamToBase64String@{ConvertMemoryStreamToBase64String}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertMemoryStreamToBase64String()}{ConvertMemoryStreamToBase64String()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Memory\+Stream\+To\+Base64\+String (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{bool}]{include\+Mime\+Type\+Descriptor = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a984759957bf15c5d4c9e7807dd265fd7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_af526f3f56ead7e22d9da83374f465e53}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_af526f3f56ead7e22d9da83374f465e53}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertMemoryStreamToBase64String@{ConvertMemoryStreamToBase64String}}
+\index{ConvertMemoryStreamToBase64String@{ConvertMemoryStreamToBase64String}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertMemoryStreamToBase64String()}{ConvertMemoryStreamToBase64String()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Memory\+Stream\+To\+Base64\+String (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{Image\+Format}]{format,  }\item[{bool}]{include\+Mime\+Type\+Descriptor = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_af526f3f56ead7e22d9da83374f465e53_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a8969181e9b422f554c7ce7c474a6e63c}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a8969181e9b422f554c7ce7c474a6e63c}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertMemoryStreamToByteArray@{ConvertMemoryStreamToByteArray}}
+\index{ConvertMemoryStreamToByteArray@{ConvertMemoryStreamToByteArray}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertMemoryStreamToByteArray()}{ConvertMemoryStreamToByteArray()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Memory\+Stream\+To\+Byte\+Array (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a8969181e9b422f554c7ce7c474a6e63c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a41bc0fa073380fae6c05e11510b0b7f7}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a41bc0fa073380fae6c05e11510b0b7f7}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ConvertMemoryStreamToImage@{ConvertMemoryStreamToImage}}
+\index{ConvertMemoryStreamToImage@{ConvertMemoryStreamToImage}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertMemoryStreamToImage()}{ConvertMemoryStreamToImage()}}
+{\footnotesize\ttfamily static System.\+Drawing.\+Image J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Convert\+Memory\+Stream\+To\+Image (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a41bc0fa073380fae6c05e11510b0b7f7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_ace07a4949fc4dd39bf85dbcaa25cbc6e}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_ace07a4949fc4dd39bf85dbcaa25cbc6e}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!GetBase64StringFromBytesWithMime@{GetBase64StringFromBytesWithMime}}
+\index{GetBase64StringFromBytesWithMime@{GetBase64StringFromBytesWithMime}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{GetBase64StringFromBytesWithMime()}{GetBase64StringFromBytesWithMime()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Get\+Base64\+String\+From\+Bytes\+With\+Mime (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{image\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a base64 string, with detected mime type (using magic numbers) from a image byte array I\+M\+P\+O\+R\+T\+A\+NT\+: Uses urlmon.\+dll D\+L\+L\+I\+M\+P\+O\+RT -\/$>$ If you\textquotesingle{}re deployment an app that uses this is I\+IS, you must enable allow 32-\/Bit applications in the App\+Pool 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_ace07a4949fc4dd39bf85dbcaa25cbc6e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a75611fae931038c0e030923371a8ac4f}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a75611fae931038c0e030923371a8ac4f}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!GetBase64StringWithMimeTypeFromBase64StringWitoutMimeType@{GetBase64StringWithMimeTypeFromBase64StringWitoutMimeType}}
+\index{GetBase64StringWithMimeTypeFromBase64StringWitoutMimeType@{GetBase64StringWithMimeTypeFromBase64StringWitoutMimeType}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{GetBase64StringWithMimeTypeFromBase64StringWitoutMimeType()}{GetBase64StringWithMimeTypeFromBase64StringWitoutMimeType()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Get\+Base64\+String\+With\+Mime\+Type\+From\+Base64\+String\+Witout\+Mime\+Type (\begin{DoxyParamCaption}\item[{string}]{raw\+Base64\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a base64 string, with detected mime type (using magic numbers) from a raw base64 image string (without mime descriptor) I\+M\+P\+O\+R\+T\+A\+NT\+: Uses urlmon.\+dll D\+L\+L\+I\+M\+P\+O\+RT -\/$>$ If you\textquotesingle{}re deployment an app that uses this is I\+IS, you must enable allow 32-\/Bit applications in the App\+Pool 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a75611fae931038c0e030923371a8ac4f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_aac3f6f3615aa32471271a9ea443ec651}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_aac3f6f3615aa32471271a9ea443ec651}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!GetMimeFromBytes@{GetMimeFromBytes}}
+\index{GetMimeFromBytes@{GetMimeFromBytes}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{GetMimeFromBytes()}{GetMimeFromBytes()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Get\+Mime\+From\+Bytes (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the mime type from an image byte array I\+M\+P\+O\+R\+T\+A\+NT\+: Uses urlmon.\+dll D\+L\+L\+I\+M\+P\+O\+RT -\/$>$ If you\textquotesingle{}re deployment an app that uses this is I\+IS, you must enable allow 32-\/Bit applications in the App\+Pool 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_aac3f6f3615aa32471271a9ea443ec651_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_ae843a94e1dc925ed5eeb5847150515b5}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_ae843a94e1dc925ed5eeb5847150515b5}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!GetMimeFromImage@{GetMimeFromImage}}
+\index{GetMimeFromImage@{GetMimeFromImage}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{GetMimeFromImage()}{GetMimeFromImage()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Get\+Mime\+From\+Image (\begin{DoxyParamCaption}\item[{Image}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the M\+I\+ME type string from a System.\+Drawing.\+Image i.\+e. image/pdf 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_ae843a94e1dc925ed5eeb5847150515b5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a64c115559ba3f85d75444bbe2e0baf55}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a64c115559ba3f85d75444bbe2e0baf55}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!GetMimeFromRawBase64String@{GetMimeFromRawBase64String}}
+\index{GetMimeFromRawBase64String@{GetMimeFromRawBase64String}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{GetMimeFromRawBase64String()}{GetMimeFromRawBase64String()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Get\+Mime\+From\+Raw\+Base64\+String (\begin{DoxyParamCaption}\item[{string}]{raw\+Base64\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the mime type from a a raw Base64 string (without mime type descriptor) I\+M\+P\+O\+R\+T\+A\+NT\+: Uses urlmon.\+dll D\+L\+L\+I\+M\+P\+O\+RT -\/$>$ If you\textquotesingle{}re deployment an app that uses this is I\+IS, you must enable allow 32-\/Bit applications in the App\+Pool 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a64c115559ba3f85d75444bbe2e0baf55_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a30dcc088fe44ed41fc9f0b70be129a2b}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a30dcc088fe44ed41fc9f0b70be129a2b}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ImageXxHash@{ImageXxHash}}
+\index{ImageXxHash@{ImageXxHash}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ImageXxHash()}{ImageXxHash()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Image\+Xx\+Hash (\begin{DoxyParamCaption}\item[{Image}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get a 32bit xx\+Hash of an image (useful for comparing) 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a30dcc088fe44ed41fc9f0b70be129a2b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_af8917a0454c900da6232797584d7d88d}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_af8917a0454c900da6232797584d7d88d}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!IsSameImage@{IsSameImage}}
+\index{IsSameImage@{IsSameImage}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{IsSameImage()}{IsSameImage()}}
+{\footnotesize\ttfamily static bool J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Is\+Same\+Image (\begin{DoxyParamCaption}\item[{Image}]{imageA,  }\item[{Image}]{imageB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if 1 image is the same as another by comparing its S\+HA hash. Also performs a quick check on image dimentions to avoid performs cost of unnecessarily generating a hash 
+
+\begin{DoxyReturn}{Returns}
+True if the same, false otherwise
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_af8917a0454c900da6232797584d7d88d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a79166d359bdc9ab1507d41d6d53fffbe}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a79166d359bdc9ab1507d41d6d53fffbe}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!LightenImage@{LightenImage}}
+\index{LightenImage@{LightenImage}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{LightenImage()}{LightenImage()}}
+{\footnotesize\ttfamily static System.\+Drawing.\+Image J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Lighten\+Image (\begin{DoxyParamCaption}\item[{System.\+Drawing.\+Image}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lightens an image 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a2ffc4f62798d95f37161779aaab08668}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a2ffc4f62798d95f37161779aaab08668}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!NormalizeOrientation@{NormalizeOrientation}}
+\index{NormalizeOrientation@{NormalizeOrientation}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{NormalizeOrientation()}{NormalizeOrientation()}}
+{\footnotesize\ttfamily static System.\+Drawing.\+Image J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Normalize\+Orientation (\begin{DoxyParamCaption}\item[{System.\+Drawing.\+Image}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This looks to see if there\textquotesingle{}s an exif property on the image (meta property on image file that\textquotesingle{}s usually applied when using the context menu in \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} to rotate an image). If there is it properly rotates the image and removes the exif meta property. 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a217ef7cf10721c64ac52a36e4ae5081e}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a217ef7cf10721c64ac52a36e4ae5081e}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ResizedImage@{ResizedImage}}
+\index{ResizedImage@{ResizedImage}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ResizedImage()}{ResizedImage()}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Resized\+Image (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{string}]{output\+Path,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Resize an image with specific width and height and saved it to file 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a217ef7cf10721c64ac52a36e4ae5081e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a8312bb5f4866f4fdf9d7c06822a6c762}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a8312bb5f4866f4fdf9d7c06822a6c762}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ResizeImage@{ResizeImage}}
+\index{ResizeImage@{ResizeImage}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ResizeImage()}{ResizeImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Resize\+Image (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{image,  }\item[{int}]{percentage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Resize an image based on percentage to increase (above 100\%) or decrease (below 100\%) 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a8312bb5f4866f4fdf9d7c06822a6c762_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a17e54cfc30af3d33a9eb8b818fba539b}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a17e54cfc30af3d33a9eb8b818fba539b}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ResizeImage@{ResizeImage}}
+\index{ResizeImage@{ResizeImage}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ResizeImage()}{ResizeImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Resize\+Image (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{image,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Resizes an image based on specific width and height 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a17e54cfc30af3d33a9eb8b818fba539b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_ad867689af2304d9bff0456c4682f45aa}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_ad867689af2304d9bff0456c4682f45aa}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ResizeImage@{ResizeImage}}
+\index{ResizeImage@{ResizeImage}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ResizeImage()}{ResizeImage()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily static System.\+Drawing.\+Image J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Resize\+Image (\begin{DoxyParamCaption}\item[{System.\+Drawing.\+Image}]{image,  }\item[{int}]{percentage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Resize an image based on percentage to increase (above 100\%) or decrease (below 100\%) 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a04408a128759fbe41ee0f859ccad5a89}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a04408a128759fbe41ee0f859ccad5a89}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ResizeImage@{ResizeImage}}
+\index{ResizeImage@{ResizeImage}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ResizeImage()}{ResizeImage()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily static System.\+Drawing.\+Image J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Resize\+Image (\begin{DoxyParamCaption}\item[{System.\+Drawing.\+Image}]{image,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Resize an image with specific width and height 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_aed8fdf4194df575e4a3b46f8e6a0de78}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_aed8fdf4194df575e4a3b46f8e6a0de78}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ResizeImageMaintainAspectRatio@{ResizeImageMaintainAspectRatio}}
+\index{ResizeImageMaintainAspectRatio@{ResizeImageMaintainAspectRatio}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ResizeImageMaintainAspectRatio()}{ResizeImageMaintainAspectRatio()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Resize\+Image\+Maintain\+Aspect\+Ratio (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{image,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Resizes an image based on specific width and height 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_aed8fdf4194df575e4a3b46f8e6a0de78_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a9163d882415ca8326cf3a9cf6b453dbd}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a9163d882415ca8326cf3a9cf6b453dbd}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ResizeImageMaintainAspectRatio@{ResizeImageMaintainAspectRatio}}
+\index{ResizeImageMaintainAspectRatio@{ResizeImageMaintainAspectRatio}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ResizeImageMaintainAspectRatio()}{ResizeImageMaintainAspectRatio()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static Image J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Resize\+Image\+Maintain\+Aspect\+Ratio (\begin{DoxyParamCaption}\item[{Image}]{image,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Resizes an image and keeps the aspect ratio 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a452df11286d2fc79555ab611259b0a5a}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a452df11286d2fc79555ab611259b0a5a}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!ResizeImageMaintainAspectRatio@{ResizeImageMaintainAspectRatio}}
+\index{ResizeImageMaintainAspectRatio@{ResizeImageMaintainAspectRatio}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{ResizeImageMaintainAspectRatio()}{ResizeImageMaintainAspectRatio()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Resize\+Image\+Maintain\+Aspect\+Ratio (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{string}]{output\+Path,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Resize an image with specific width and height and saved it to file 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a452df11286d2fc79555ab611259b0a5a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_af49ae6e96d5b9bc3c7cb5e2abf469bc9}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_af49ae6e96d5b9bc3c7cb5e2abf469bc9}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!SaveImageAsFormat@{SaveImageAsFormat}}
+\index{SaveImageAsFormat@{SaveImageAsFormat}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{SaveImageAsFormat()}{SaveImageAsFormat()}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Save\+Image\+As\+Format (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{string}]{output\+Path,  }\item[{Image\+Format}]{new\+Format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert image from one format to another and save to file Requires \mbox{\hyperlink{namespace_system_1_1_drawing}{System.\+Drawing}} 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_af49ae6e96d5b9bc3c7cb5e2abf469bc9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_aa991ba237b941b28cdfc737f5768c374}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_aa991ba237b941b28cdfc737f5768c374}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!SaveResizedImage@{SaveResizedImage}}
+\index{SaveResizedImage@{SaveResizedImage}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{SaveResizedImage()}{SaveResizedImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Save\+Resized\+Image (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{string}]{output\+Path,  }\item[{int}]{percentage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Resize an image based on percentage to increase (above 100\%) or decrease (below 100\%) and saves it to file 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_aa991ba237b941b28cdfc737f5768c374_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_ac60e4dcfef2f76faa8e5b3829c057d5a}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_ac60e4dcfef2f76faa8e5b3829c057d5a}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!SaveResizedImage@{SaveResizedImage}}
+\index{SaveResizedImage@{SaveResizedImage}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{SaveResizedImage()}{SaveResizedImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Save\+Resized\+Image (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{string}]{output\+Path,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Resize an image with specific width and height and saved it to file 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_ac60e4dcfef2f76faa8e5b3829c057d5a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a5601c4e5b92e8eb43ee28a7bda841be8}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a5601c4e5b92e8eb43ee28a7bda841be8}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!SaveResizedImageMaintainAspectRatio@{SaveResizedImageMaintainAspectRatio}}
+\index{SaveResizedImageMaintainAspectRatio@{SaveResizedImageMaintainAspectRatio}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{SaveResizedImageMaintainAspectRatio()}{SaveResizedImageMaintainAspectRatio()}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Save\+Resized\+Image\+Maintain\+Aspect\+Ratio (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{string}]{output\+Path,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Resize an image with specific width and height and saved it to file 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper_a5601c4e5b92e8eb43ee28a7bda841be8_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a6fb1ac19d88c760523b19edc5dbe5a41}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a6fb1ac19d88c760523b19edc5dbe5a41}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!DefaultMimeType@{DefaultMimeType}}
+\index{DefaultMimeType@{DefaultMimeType}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{DefaultMimeType}{DefaultMimeType}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Default\+Mime\+Type = \char`\"{}application/octet-\/stream\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_images_1_1_image_helper_a32d3f93e44be8c3aea91708967c1cb7b}\label{class_j_b_toolkit_1_1_images_1_1_image_helper_a32d3f93e44be8c3aea91708967c1cb7b}} 
+\index{JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}!MimeSampleSize@{MimeSampleSize}}
+\index{MimeSampleSize@{MimeSampleSize}!JBToolkit.Images.ImageHelper@{JBToolkit.Images.ImageHelper}}
+\doxysubsubsection{\texorpdfstring{MimeSampleSize}{MimeSampleSize}}
+{\footnotesize\ttfamily int J\+B\+Toolkit.\+Images.\+Image\+Helper.\+Mime\+Sample\+Size = 256\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Imaging/\mbox{\hyperlink{_html_image_helper_8cs}{Html\+Image\+Helper.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Imaging/\mbox{\hyperlink{_image_helper_8cs}{Image\+Helper.\+cs}}\end{DoxyCompactItemize}

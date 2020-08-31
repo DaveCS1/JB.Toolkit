@@ -1,0 +1,184 @@
+\hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge}{}\doxysection{J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Open\+Xml\+Mail\+Merge Class Reference}
+\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge}\index{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge@{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge}}
+
+
+Uses Open\+X\+ML to perform a Word Mail Merge.  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Open\+Xml\+Mail\+Merge\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{de/d7f/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_ab1e2a1bca6e6469012559134109c6414}{Merge\+Document\+And\+Save}} (string template\+Path, string output\+Path, Dictionary$<$ string, string $>$ field\+And\+Values, bool save\+As\+P\+DF)
+\begin{DoxyCompactList}\small\item\em Performs a mail merges given a dictionary of merge fields and their merge values and save to file \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_a7b68469c4b811daea903467e333f6b37}{Merge\+Document\+To\+Byte\+Array}} (string template\+Path, Dictionary$<$ string, string $>$ field\+And\+Values, bool save\+As\+P\+DF)
+\begin{DoxyCompactList}\small\item\em Performs a mail merges given a dictionary of merge fields and their merge values and returns a byte array \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_af011c6c54e0d4563a19eb071ac576bff}{Merge\+Document\+As\+Base64\+String}} (string template\+Path, Dictionary$<$ string, string $>$ field\+And\+Values, bool save\+As\+P\+DF)
+\begin{DoxyCompactList}\small\item\em Performs a mail merges given a dictionary of merge fields and their merge values and returns a base64 string (for blobs) \end{DoxyCompactList}\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_aac77fc50a2d3264bd5c24f831df97d49}{Merge\+Document\+To\+Memory\+Stream}} (string template\+Path, Dictionary$<$ string, string $>$ field\+And\+Values, bool save\+As\+P\+DF)
+\begin{DoxyCompactList}\small\item\em Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory Stream \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_aaa0a320448c071dd7476cef113351bf5}{Find\+And\+Replace}} (string template\+Path, Dictionary$<$ string, string $>$ values, string save\+As\+Path=null, string temp\+Folder\+Root=null)
+\begin{DoxyCompactList}\small\item\em Basically performs a mail merge by replacing text defined by a dictionary of keys (in the format «key») with the replacing text in the value of the dictionary. This method\textquotesingle{}s default is to produce a temporary file and output the name of the file that has been created unless the \textquotesingle{}Save\+As\+Path\textquotesingle{} parameter has been specified \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Uses Open\+X\+ML to perform a Word Mail Merge. 
+
+It\textquotesingle{}s quick, but no always very reliable. Perhaps this class needs some modifications... Also, Open\+X\+ML doesn\textquotesingle{}t have the facility to convert to P\+DF, so we have to use the M-\/\+Files A\+PI to do this for us. It\textquotesingle{}s usually quick, but can be slow if M-\/\+Files is busy.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_aaa0a320448c071dd7476cef113351bf5}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_aaa0a320448c071dd7476cef113351bf5}} 
+\index{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge@{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge}!FindAndReplace@{FindAndReplace}}
+\index{FindAndReplace@{FindAndReplace}!JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge@{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge}}
+\doxysubsubsection{\texorpdfstring{FindAndReplace()}{FindAndReplace()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Open\+Xml\+Mail\+Merge.\+Find\+And\+Replace (\begin{DoxyParamCaption}\item[{string}]{template\+Path,  }\item[{Dictionary$<$ string, string $>$}]{values,  }\item[{string}]{save\+As\+Path = {\ttfamily null},  }\item[{string}]{temp\+Folder\+Root = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Basically performs a mail merge by replacing text defined by a dictionary of keys (in the format «key») with the replacing text in the value of the dictionary. This method\textquotesingle{}s default is to produce a temporary file and output the name of the file that has been created unless the \textquotesingle{}Save\+As\+Path\textquotesingle{} parameter has been specified 
+
+
+\begin{DoxyParams}{Parameters}
+{\em template\+Path} & Template document path\\
+\hline
+{\em values} & Dictionary of values to replace\\
+\hline
+{\em save\+As\+Path} & Optional output path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The default temp path of the created mail merge or a specified path
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d77/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_aaa0a320448c071dd7476cef113351bf5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_ab1e2a1bca6e6469012559134109c6414}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_ab1e2a1bca6e6469012559134109c6414}} 
+\index{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge@{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge}!MergeDocumentAndSave@{MergeDocumentAndSave}}
+\index{MergeDocumentAndSave@{MergeDocumentAndSave}!JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge@{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge}}
+\doxysubsubsection{\texorpdfstring{MergeDocumentAndSave()}{MergeDocumentAndSave()}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Open\+Xml\+Mail\+Merge.\+Merge\+Document\+And\+Save (\begin{DoxyParamCaption}\item[{string}]{template\+Path,  }\item[{string}]{output\+Path,  }\item[{Dictionary$<$ string, string $>$}]{field\+And\+Values,  }\item[{bool}]{save\+As\+P\+DF }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs a mail merges given a dictionary of merge fields and their merge values and save to file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em template\+Path} & Path to mail merge template\\
+\hline
+{\em output\+Path} & Where to save the file to\\
+\hline
+{\em field\+And\+Values} & A Dictionary of Merge Fields and values\\
+\hline
+{\em save\+As\+P\+DF} & Whether to save as P\+DF or docx\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d77/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_ab1e2a1bca6e6469012559134109c6414_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_af011c6c54e0d4563a19eb071ac576bff}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_af011c6c54e0d4563a19eb071ac576bff}} 
+\index{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge@{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge}!MergeDocumentAsBase64String@{MergeDocumentAsBase64String}}
+\index{MergeDocumentAsBase64String@{MergeDocumentAsBase64String}!JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge@{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge}}
+\doxysubsubsection{\texorpdfstring{MergeDocumentAsBase64String()}{MergeDocumentAsBase64String()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Open\+Xml\+Mail\+Merge.\+Merge\+Document\+As\+Base64\+String (\begin{DoxyParamCaption}\item[{string}]{template\+Path,  }\item[{Dictionary$<$ string, string $>$}]{field\+And\+Values,  }\item[{bool}]{save\+As\+P\+DF }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs a mail merges given a dictionary of merge fields and their merge values and returns a base64 string (for blobs) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em template\+Path} & Path to mail merge template\\
+\hline
+{\em field\+And\+Values} & A Dictionary of Merge Fields and values\\
+\hline
+{\em save\+As\+P\+DF} & Whether to save as P\+DF or docx\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d77/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_af011c6c54e0d4563a19eb071ac576bff_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_a7b68469c4b811daea903467e333f6b37}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_a7b68469c4b811daea903467e333f6b37}} 
+\index{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge@{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge}!MergeDocumentToByteArray@{MergeDocumentToByteArray}}
+\index{MergeDocumentToByteArray@{MergeDocumentToByteArray}!JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge@{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge}}
+\doxysubsubsection{\texorpdfstring{MergeDocumentToByteArray()}{MergeDocumentToByteArray()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Open\+Xml\+Mail\+Merge.\+Merge\+Document\+To\+Byte\+Array (\begin{DoxyParamCaption}\item[{string}]{template\+Path,  }\item[{Dictionary$<$ string, string $>$}]{field\+And\+Values,  }\item[{bool}]{save\+As\+P\+DF }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs a mail merges given a dictionary of merge fields and their merge values and returns a byte array 
+
+
+\begin{DoxyParams}{Parameters}
+{\em template\+Path} & Path to mail merge template\\
+\hline
+{\em field\+And\+Values} & A Dictionary of Merge Fields and values\\
+\hline
+{\em save\+As\+P\+DF} & Whether to save as P\+DF or docx\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d77/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_a7b68469c4b811daea903467e333f6b37_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_aac77fc50a2d3264bd5c24f831df97d49}\label{class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_aac77fc50a2d3264bd5c24f831df97d49}} 
+\index{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge@{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge}!MergeDocumentToMemoryStream@{MergeDocumentToMemoryStream}}
+\index{MergeDocumentToMemoryStream@{MergeDocumentToMemoryStream}!JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge@{JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge}}
+\doxysubsubsection{\texorpdfstring{MergeDocumentToMemoryStream()}{MergeDocumentToMemoryStream()}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Xml\+Doc.\+Mail\+Merge.\+Open\+Xml\+Mail\+Merge.\+Merge\+Document\+To\+Memory\+Stream (\begin{DoxyParamCaption}\item[{string}]{template\+Path,  }\item[{Dictionary$<$ string, string $>$}]{field\+And\+Values,  }\item[{bool}]{save\+As\+P\+DF }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory Stream 
+
+
+\begin{DoxyParams}{Parameters}
+{\em template\+Path} & Path to mail merge template\\
+\hline
+{\em field\+And\+Values} & A Dictionary of Merge Fields and values\\
+\hline
+{\em save\+As\+P\+DF} & Whether to save as P\+DF or docx\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d77/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_aac77fc50a2d3264bd5c24f831df97d49_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d77/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge_aac77fc50a2d3264bd5c24f831df97d49_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Xml\+Doc/\+Mail\+Merge/\mbox{\hyperlink{_open_xml_mail_merge_8cs}{Open\+Xml\+Mail\+Merge.\+cs}}\end{DoxyCompactItemize}

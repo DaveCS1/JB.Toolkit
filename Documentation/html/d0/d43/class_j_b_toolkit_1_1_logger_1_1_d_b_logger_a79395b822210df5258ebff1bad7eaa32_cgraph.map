@@ -1,0 +1,4 @@
+<map id="JBToolkit.Logger.DBLogger.LogToDB" name="JBToolkit.Logger.DBLogger.LogToDB">
+<area shape="rect" id="node1" title="Logs an error to the database" alt="" coords="5,5,188,47"/>
+<area shape="rect" id="node2" href="$d7/d00/class_j_b_toolkit_1_1_logger_1_1_file_logger.html#ac2869b3c30740e4e327afe15fec8bec6" title="Log error with the exception itself." alt="" coords="236,5,423,47"/>
+</map>

@@ -1,0 +1,56 @@
+.TH "JBToolkit.InterProcessComms.Wcf.WcfServer" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.InterProcessComms.Wcf.WcfServer \- Client to host communication (1 direction) Named Pipe implementation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBJBToolkit\&.InterProcessComms\&.IIpcServer\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBStart\fP ()"
+.br
+.ti -1c
+.RI "void \fBStop\fP ()"
+.br
+.in -1c
+.SS "Events"
+
+.in +1c
+.ti -1c
+.RI "EventHandler< \fBDataReceivedEventArgs\fP > \fBReceived\fP"
+.br
+.ti -1c
+.RI "EventHandler< \fBEventArgs\fP > \fBFaulted\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Client to host communication (1 direction) Named Pipe implementation\&. 
+
+Give the server an application specific unique name\&. When implementing the 'Faulted' method, you need to actually recreate the \fBWcfServer\fP object to undo it's faulted state\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void JBToolkit\&.InterProcessComms\&.Wcf\&.WcfServer\&.Start ()"
+
+.PP
+Implements \fBJBToolkit\&.InterProcessComms\&.IIpcServer\fP\&.
+.SS "void JBToolkit\&.InterProcessComms\&.Wcf\&.WcfServer\&.Stop ()"
+
+.PP
+Implements \fBJBToolkit\&.InterProcessComms\&.IIpcServer\fP\&.
+.SH "Event Documentation"
+.PP 
+.SS "EventHandler<\fBEventArgs\fP> JBToolkit\&.InterProcessComms\&.Wcf\&.WcfServer\&.Faulted"
+
+.SS "EventHandler<\fBDataReceivedEventArgs\fP> JBToolkit\&.InterProcessComms\&.Wcf\&.WcfServer\&.Received"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

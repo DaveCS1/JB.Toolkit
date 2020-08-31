@@ -1,0 +1,91 @@
+\hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_m_s_office_doc_to_pdf}{}\doxysection{J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+M\+S\+Office\+Doc\+To\+Pdf Class Reference}
+\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_m_s_office_doc_to_pdf}\index{JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf@{JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf}}
+
+
+Methods to convert Docx to P\+DF through M-\/\+Files. I\textquotesingle{}ve done it this way as it\textquotesingle{}s costs a tonne for a docx to pdf converter license with the likes of Aspose, Spire, A\+B\+Cpdf etc and M-\/\+Files is already using Aspose so just utilise that. The process involves uploading a file to M-\/\+Files, converting it to a P\+DF there, then downloading it as P\+DF and finally deleting (destroying) the file in the M-\/\+Files vault  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+M\+S\+Office\+Doc\+To\+Pdf\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{db/dcf/class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_m_s_office_doc_to_pdf__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_m_s_office_doc_to_pdf_a6b2ea8e63da35ac5ce065fee23e1ec72}{Convert\+To\+P\+DF}} (string input\+Path)
+\begin{DoxyCompactList}\small\item\em Converts MS Office document (xlsx, doc, ppt etc) to memory stream (i.\+e. for use in \mbox{\hyperlink{namespace_j_b_toolkit_1_1_web}{Web}} Requests) \end{DoxyCompactList}\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_m_s_office_doc_to_pdf_aeb8a6814298f73a3693efd17940453d0}{Convert\+To\+P\+DF}} (Memory\+Stream ms, string file\+Extension)
+\begin{DoxyCompactList}\small\item\em Converts MS Office document (xlsx, doc, ppt etc) to memory stream (i.\+e. for use in \mbox{\hyperlink{namespace_j_b_toolkit_1_1_web}{Web}} Requests) \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_m_s_office_doc_to_pdf_a9479fe1c524d832d2170f232c865a04d}{Save\+As\+Pdf}} (string input\+Path, string pdf\+Output\+Path)
+\begin{DoxyCompactList}\small\item\em Save a MS Office doc as a P\+DF \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Methods to convert Docx to P\+DF through M-\/\+Files. I\textquotesingle{}ve done it this way as it\textquotesingle{}s costs a tonne for a docx to pdf converter license with the likes of Aspose, Spire, A\+B\+Cpdf etc and M-\/\+Files is already using Aspose so just utilise that. The process involves uploading a file to M-\/\+Files, converting it to a P\+DF there, then downloading it as P\+DF and finally deleting (destroying) the file in the M-\/\+Files vault 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_m_s_office_doc_to_pdf_aeb8a6814298f73a3693efd17940453d0}\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_m_s_office_doc_to_pdf_aeb8a6814298f73a3693efd17940453d0}} 
+\index{JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf@{JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf}!ConvertToPDF@{ConvertToPDF}}
+\index{ConvertToPDF@{ConvertToPDF}!JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf@{JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf}}
+\doxysubsubsection{\texorpdfstring{ConvertToPDF()}{ConvertToPDF()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+M\+S\+Office\+Doc\+To\+Pdf.\+Convert\+To\+P\+DF (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{string}]{file\+Extension }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts MS Office document (xlsx, doc, ppt etc) to memory stream (i.\+e. for use in \mbox{\hyperlink{namespace_j_b_toolkit_1_1_web}{Web}} Requests) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em docx\+Input\+Path} & File path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Memory stream
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_m_s_office_doc_to_pdf_a6b2ea8e63da35ac5ce065fee23e1ec72}\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_m_s_office_doc_to_pdf_a6b2ea8e63da35ac5ce065fee23e1ec72}} 
+\index{JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf@{JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf}!ConvertToPDF@{ConvertToPDF}}
+\index{ConvertToPDF@{ConvertToPDF}!JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf@{JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf}}
+\doxysubsubsection{\texorpdfstring{ConvertToPDF()}{ConvertToPDF()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+M\+S\+Office\+Doc\+To\+Pdf.\+Convert\+To\+P\+DF (\begin{DoxyParamCaption}\item[{string}]{input\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts MS Office document (xlsx, doc, ppt etc) to memory stream (i.\+e. for use in \mbox{\hyperlink{namespace_j_b_toolkit_1_1_web}{Web}} Requests) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em docx\+Input\+Path} & File path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Memory stream
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_m_s_office_doc_to_pdf_a9479fe1c524d832d2170f232c865a04d}\label{class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_m_s_office_doc_to_pdf_a9479fe1c524d832d2170f232c865a04d}} 
+\index{JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf@{JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf}!SaveAsPdf@{SaveAsPdf}}
+\index{SaveAsPdf@{SaveAsPdf}!JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf@{JBToolkit.XmlDoc.Converters.MSOfficeDocToPdf}}
+\doxysubsubsection{\texorpdfstring{SaveAsPdf()}{SaveAsPdf()}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Xml\+Doc.\+Converters.\+M\+S\+Office\+Doc\+To\+Pdf.\+Save\+As\+Pdf (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{string}]{pdf\+Output\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Save a MS Office doc as a P\+DF 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Path} & .docx path\\
+\hline
+{\em pdf\+Output\+Path} & Save P\+DF file path\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Xml\+Doc/\+Converters/\mbox{\hyperlink{_m_s_office_doc_to_pdf_8cs}{M\+S\+Office\+Doc\+To\+Pdf.\+cs}}\end{DoxyCompactItemize}
