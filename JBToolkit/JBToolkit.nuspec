@@ -37,7 +37,6 @@
       <frameworkAssembly assemblyName="System.ServiceProcess"  />
       <frameworkAssembly assemblyName="System.Web"  />
       <frameworkAssembly assemblyName="System.Web.Mvc"  />
-      <frameworkAssembly assemblyName="System.Web.Http"  />
       <frameworkAssembly assemblyName="System.Windows.Forms"  />
       <frameworkAssembly assemblyName="System.Xml"  />
       <frameworkAssembly assemblyName="System.Xml.Linq"  />
