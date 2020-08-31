@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Net;
-using static JBToolkit.Global.DatabaseConfiguration;
 
 namespace JBToolkit.Database
 {
@@ -21,11 +19,6 @@ namespace JBToolkit.Database
         private string DBName { get; set; }
         private string ConnectionString { get; set; }
         private bool TableExistanceChecked { get; set; } = false;
-
-        public DataTableStates(string dbName, DatabaseEnvironmentType environmentType)
-        {
-            Initialise(dbName, new NetworkCredential("", Global.DatabaseConfiguration.Database.GetEnvironmentConnectionString(environmentType)).Password);
-        }
 
         public DataTableStates(string dbName, string connectionString)
         {

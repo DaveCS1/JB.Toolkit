@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Net;
 using System.Runtime.InteropServices;
 using System.Security.Principal;
 
@@ -14,14 +13,14 @@ namespace JBToolkit.Domain.Impersonation
     /*
      Usage:
 
-         using (new Impersonator(ServerType.DOMAIN))
+         using (new Impersonator(ServerType.DOMAIN, "<username>", "<password>"))
          {
           
          }
          
        or
 
-         using (new Impersonator(ServerType.DMZ, "DMZ-WEB01-D"))
+         using (new Impersonator(ServerType.DMZ, "<username>", "<password>", "DMZ-WEB01-D"))
          {
           
          }
@@ -143,39 +142,7 @@ namespace JBToolkit.Domain.Impersonation
     /// </summary>
     public class Impersonator : IDisposable
     {
-        private static readonly string m_dmzAdminUser = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.AdAdminUser).Password);
-        private static readonly string m_dmzAdminPass = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.AdAdminPassword).Password);
-
-        private static readonly string m_adAdminUser = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminUser).Password);
-        private static readonly string m_adAdminPass = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminPassword).Password);
-
-        private static readonly string m_ad_domain = Global.ADConfiguration.AdDomain;
-
         private WindowsImpersonationContext _wic;
-
-        /// <summary>
-        /// Begins impersonation with the given credentials, Logon type and Logon provider.
-        /// </summary>
-        public Impersonator(ServerType serverType, string domainOrServerName = "default")
-        {
-            if (domainOrServerName == "default")
-            {
-                domainOrServerName = Global.ADConfiguration.AdDomain;
-            }
-
-            switch (serverType)
-            {
-                case ServerType.DMZ:
-                    Impersonate(m_dmzAdminUser, domainOrServerName, m_dmzAdminPass, LogonType.LOGON32_LOGON_NEW_CREDENTIALS, LogonProvider.LOGON32_PROVIDER_WINNT50);
-                    break;
-                case ServerType.DOMAIN:
-                    Impersonate(m_adAdminUser, domainOrServerName, m_adAdminPass, LogonType.LOGON32_LOGON_NEW_CREDENTIALS, LogonProvider.LOGON32_PROVIDER_WINNT50);
-                    break;
-                default:
-                    Impersonate(m_adAdminUser, m_ad_domain, m_adAdminPass, LogonType.LOGON32_LOGON_NEW_CREDENTIALS, LogonProvider.LOGON32_PROVIDER_WINNT50);
-                    break;
-            }
-        }
 
         /// <summary>
         /// Begins impersonation with the given credentials, Logon type and Logon provider.
@@ -192,6 +159,15 @@ namespace JBToolkit.Domain.Impersonation
         public Impersonator(string userName, string domainName, string password)
         {
             Impersonate(userName, domainName, password, LogonType.LOGON32_LOGON_INTERACTIVE, LogonProvider.LOGON32_PROVIDER_DEFAULT);
+        }
+
+        /// <summary>
+        /// Begins impersonation with the given credentials.
+        /// </summary>
+        ///
+        public Impersonator(string userName, string password)
+        {
+            Impersonate(userName, Environment.UserDomainName, password, LogonType.LOGON32_LOGON_INTERACTIVE, LogonProvider.LOGON32_PROVIDER_DEFAULT);
         }
 
         /// <summary>
@@ -218,6 +194,15 @@ namespace JBToolkit.Domain.Impersonation
         public void Impersonate(string userName, string domainName, string password)
         {
             Impersonate(userName, domainName, password, LogonType.LOGON32_LOGON_INTERACTIVE, LogonProvider.LOGON32_PROVIDER_DEFAULT);
+        }
+
+        /// <summary>
+        /// Impersonates the specified user account.
+        /// </summary>
+        ///
+        public void Impersonate(string userName, string password)
+        {
+            Impersonate(userName, Environment.UserDomainName, password, LogonType.LOGON32_LOGON_INTERACTIVE, LogonProvider.LOGON32_PROVIDER_DEFAULT);
         }
 
         /// <summary>
@@ -294,37 +279,33 @@ namespace JBToolkit.Domain.Impersonation
         {
             public string Username { get; set; }
             public string Password { get; set; }
-            public string Domain { get; set; }
+            public string Domain { get; set; } = Environment.UserDomainName;
 
-            public static ImpersonatorCredentials GetImpersonatatorCredentials(ServerType serverType, string dmzHost = null)
+            public static ImpersonatorCredentials GetImpersonatatorCredentials(
+                ServerType serverType,
+                string credentialUsename,
+                string credentialPassword,
+                string dmzHost = null)
             {
                 var cred = new ImpersonatorCredentials();
 
                 switch (serverType)
                 {
                     case ServerType.DMZ:
-                        cred.Username = m_dmzAdminUser;
-                        cred.Password = m_dmzAdminPass;
+                        cred.Username = credentialUsename;
+                        cred.Password = credentialPassword;
                         cred.Domain = dmzHost;
                         break;
                     case ServerType.DOMAIN:
-                        cred.Username = m_adAdminUser;
-                        cred.Domain = m_ad_domain;
-                        cred.Password = m_adAdminPass;
+                        cred.Username = credentialUsename;
+                        cred.Domain = Environment.UserDomainName;
+                        cred.Password = credentialPassword;
                         break;
                     default:
                         return null;
                 }
 
                 return cred;
-            }
-
-            public static NetworkCredential NetworkCredentials
-            {
-                get
-                {
-                    return new NetworkCredential(m_adAdminUser, m_adAdminPass, m_ad_domain);
-                }
             }
         }
     }

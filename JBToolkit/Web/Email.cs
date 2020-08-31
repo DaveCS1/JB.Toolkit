@@ -9,7 +9,6 @@ using System.Net.Mail;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
-using static JBToolkit.Global;
 
 namespace JBToolkit.Web
 {
@@ -22,24 +21,17 @@ namespace JBToolkit.Web
         /// Basic send email method
         /// </summary>
         /// <returns>EmailSendResult Object</returns>
-        public static EmailResult SendMail(MailMessage email)
+        public static EmailResult SendMail(
+            MailMessage email,
+            string smptHost,
+            int smptPort,
+            string
+            smtpUsername,
+            string smtpPassword)
         {
-            bool impersonate = false;
-
-            EmailConfiguration emailProfile;
-            if (EmailConfiguration.EmailProfile(email.From) != null)
-                emailProfile = EmailConfiguration.EmailProfile(email.From.Address);
-            else
+            using (var client = new SmtpClient(smptHost, smptPort))
             {
-                emailProfile = EmailConfiguration<EmailProfile.StandardEmailProfile>.Profile;
-                impersonate = true;
-            }
-
-            using (var client = new SmtpClient(
-                                        emailProfile.Smtp,
-                                        emailProfile.Port.ToInt()))
-            {
-                if (emailProfile.SecurePassword == null)
+                if (string.IsNullOrEmpty(smtpPassword))
                 {
                     client.UseDefaultCredentials = true;
                     client.EnableSsl = false;
@@ -47,41 +39,10 @@ namespace JBToolkit.Web
                 else
                 {
                     client.EnableSsl = true;
-                    client.Credentials = new NetworkCredential(emailProfile.EmailAddress,
-                                                               emailProfile.SecurePassword);
+                    client.Credentials = new NetworkCredential(smtpUsername,
+                                                               smtpPassword);
                 }
 
-                if (impersonate)
-                {
-                    emailProfile.EmailAddress = email.From.Address;
-                    emailProfile.DisplayName = email.From.DisplayName;
-                }
-
-                try
-                {
-                    client.Send(email);
-                    return new SuccessEmailResult();
-                }
-                catch (Exception ex)
-                {
-                    return new FailureEmailResult(ex.Message);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Basic send email method
-        /// </summary>
-        /// <returns>EmailSendResult Object</returns>
-        public static EmailResult SendMail(EmailConfiguration emailProfile, MailMessage email)
-        {
-            using (var client = new SmtpClient(
-                                        emailProfile.Smtp,
-                                        emailProfile.Port.ToInt()))
-            {
-                client.EnableSsl = true;
-                client.Credentials = new NetworkCredential(emailProfile.EmailAddress,
-                                                           emailProfile.SecurePassword);
                 try
                 {
                     client.Send(email);
@@ -99,6 +60,10 @@ namespace JBToolkit.Web
         /// </summary>
         /// <returns>EmailSendResult Object</returns>
         public static EmailResult SendMail(
+            string smptHost,
+            int smtpPort,
+            string smtpUsername,
+            string smtpPassword,
             string senderName,
             string senderEmail,
             string emailTo,
@@ -111,8 +76,23 @@ namespace JBToolkit.Web
             try
             {
                 string errMsg = string.Empty;
-                if (SendMail(senderName, senderEmail, emailTo, ccTo, subject, body, attachments, out errMsg, useWebConfig))
+                if (SendMail(
+                        smptHost,
+                        smtpPort,
+                        smtpUsername,
+                        smtpPassword,
+                        senderName,
+                        senderEmail,
+                        emailTo,
+                        ccTo,
+                        subject,
+                        body,
+                        attachments,
+                        out errMsg,
+                        useWebConfig))
+                {
                     return new SuccessEmailResult();
+                }
                 else
                     return new FailureEmailResult(errMsg);
             }
@@ -127,6 +107,10 @@ namespace JBToolkit.Web
         /// </summary>
         /// <returns>True if sending successful</returns>
         public static bool SendMail(
+            string smptHost,
+            int smtpPort,
+            string smtpUsername,
+            string smtpPassword,
             string senderName,
             string senderEmail,
             string emailTo,
@@ -140,19 +124,6 @@ namespace JBToolkit.Web
             try
             {
                 warningMessage = null;
-                bool impersonate = false;
-
-                EmailConfiguration emailProfile;
-                if (EmailConfiguration.EmailProfile(senderEmail) != null)
-                    emailProfile = EmailConfiguration.EmailProfile(senderEmail);
-                else if (EmailConfiguration.EmailProfile(senderName) != null)
-                    emailProfile = EmailConfiguration.EmailProfile(senderName);
-                else
-                {
-                    impersonate = true;
-                    emailProfile = EmailConfiguration<EmailProfile.StandardEmailProfile>.Profile;
-                }
-
                 SmtpClient client = new SmtpClient
                 {
                     Timeout = 30000, // 30 seconds
@@ -161,10 +132,10 @@ namespace JBToolkit.Web
 
                 if (!useWebConfig)
                 {
-                    client.Host = emailProfile.Smtp;
-                    client.Port = emailProfile.Port.ToInt();
+                    client.Host = smptHost;
+                    client.Port = smtpPort;
 
-                    if (emailProfile.SecurePassword == null)
+                    if (string.IsNullOrEmpty(smtpPassword))
                     {
                         client.UseDefaultCredentials = true;
                         client.EnableSsl = false;
@@ -172,15 +143,9 @@ namespace JBToolkit.Web
                     else
                     {
                         client.EnableSsl = true;
-                        client.Credentials = new NetworkCredential(emailProfile.EmailAddress,
-                                                                   emailProfile.SecurePassword);
+                        client.Credentials = new NetworkCredential(smtpUsername,
+                                                                   smtpPassword);
                     }
-                }
-
-                if (impersonate)
-                {
-                    emailProfile.EmailAddress = senderEmail;
-                    emailProfile.DisplayName = senderName;
                 }
 
                 MailMessage mm = new MailMessage()
@@ -251,96 +216,10 @@ namespace JBToolkit.Web
             }
             catch (Exception e)
             {
-                try
-                {
-                    warningMessage = null;
+                FileLogger.LogError(e);
+                warningMessage = e.Message;
 
-                    SmtpClient client = new SmtpClient
-                    {
-                        Timeout = 30000, // 30 seconds
-                        DeliveryMethod = SmtpDeliveryMethod.Network,
-
-                    };
-
-                    client.Host = GoogleConfiguration.Smtp;
-                    client.Port = GoogleConfiguration.Port.ToInt();
-                    client.EnableSsl = true;
-                    client.Credentials = new NetworkCredential(GoogleConfiguration.GmailUser,
-                                                               GoogleConfiguration.GmailPassword);
-
-                    MailMessage mm = new MailMessage()
-                    {
-                        From = new MailAddress(string.Format("{0} <{1}>", senderName, GoogleConfiguration.GmailUser)),
-                        Body = body,
-                        Subject = subject,
-                        BodyEncoding = Encoding.UTF8,
-                        IsBodyHtml = true,
-                        DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure
-                    };
-
-                    foreach (var email in emailTo.Replace(" ", "").Split(';'))
-                        mm.To.Add(new MailAddress(email));
-
-                    if (!string.IsNullOrEmpty(ccTo))
-                        foreach (var email in ccTo.Replace(" ", "").Split(';'))
-                            mm.CC.Add(new MailAddress(email));
-
-                    // Do some validation on attachments - If done correctly, this would have already been done as part of the 
-                    // attribute tag on the modal propertly, however if this method is used elsewhere and it's not added, this is a fallback.
-
-                    if (attachments != null)
-                    {
-                        if (attachments.Count > 0)
-                        {
-                            int filesSize = 0;
-
-                            foreach (var postedFileBase in attachments)
-                            {
-                                var fileExt = System.IO.Path.GetExtension(postedFileBase.FileName).Substring(1).ToLower();
-
-                                // may need to remove some files with unsupported file types
-                                if (System.Web.Mvc.HtmlExtensions.UnsupportedFilesTypes.Contains(fileExt))
-                                {
-                                    if (string.IsNullOrEmpty(warningMessage))
-                                        warningMessage = "Some files with unsupported file types have been removed: ";
-
-                                    warningMessage += postedFileBase.FileName + ",";
-                                }
-                                else
-                                {
-                                    filesSize += postedFileBase.ContentLength;
-
-                                    var attachment = new Attachment(postedFileBase.InputStream, postedFileBase.FileName);
-                                    mm.Attachments.Add(attachment);
-                                }
-                            }
-
-                            // 24mb (1mb below thje 25mb max just in case)
-                            if (filesSize > 24 * 1024 * 1024)
-                            {
-                                // fail
-
-                                warningMessage = "Attached files exceeds 24MB.";
-                                return false;
-                            }
-                        }
-                    }
-
-                    // remove trailing comma ',' if needs be
-                    if (!string.IsNullOrEmpty(warningMessage))
-                        warningMessage = warningMessage.Substring(0, warningMessage.Length - 2);
-
-                    client.Send(mm);
-
-                    return true;
-                }
-                catch (Exception ex)
-                {
-                    FileLogger.LogError(e);
-                    warningMessage = ex.Message;
-
-                    return false;
-                }
+                return false;
             }
         }
 
@@ -348,6 +227,10 @@ namespace JBToolkit.Web
         /// Send a DatTable to be formatted and displayed in a HTML email. Column names are wordified.
         /// </summary>
         public static EmailResult SendResultsEmail(
+            string smptHost,
+            int smtpPort,
+            string smtpUsername,
+            string smtpPassword,
             DataTable dataTable,
             string senderName,
             string senderEmail,
@@ -362,6 +245,10 @@ namespace JBToolkit.Web
             try
             {
                 if (SendResultsEmail(
+                        smptHost,
+                        smtpPort,
+                        smtpUsername,
+                        smtpPassword,
                         dataTable,
                         senderName,
                         senderEmail,
@@ -392,6 +279,10 @@ namespace JBToolkit.Web
         /// </summary>
         /// <returns>True if sending successful</returns>
         public static bool SendResultsEmail(
+            string smptHost,
+            int smtpPort,
+            string smtpUsername,
+            string smtpPassword,
             DataTable dataTable,
             string senderName,
             string senderEmail,
@@ -441,6 +332,10 @@ namespace JBToolkit.Web
             try
             {
                 SendMail(
+                    smptHost,
+                    smtpPort,
+                    smtpUsername,
+                    smtpPassword,
                     senderName,
                     senderEmail,
                     emailTo,
@@ -464,6 +359,10 @@ namespace JBToolkit.Web
         /// </summary>
         /// <returns>EmailSendResult Object</returns>
         public static void EmailError(
+            string smptHost,
+            int smtpPort,
+            string smtpUsername,
+            string smtpPassword,
             string siteOrApplicationName,
             string senderName,
             string senderEmail,
@@ -473,8 +372,19 @@ namespace JBToolkit.Web
             string additionalMessage = "",
             bool useWebConfig = false)
         {
-            EmailError(siteOrApplicationName, senderName, senderEmail, recipient, string.Format("{0} Error - {1}", siteOrApplicationName, subject),
-               string.Format("{0}<h4>Error:</h4>{1}<br /><br /><h4>Stack Trace:</h4>{2}",
+            EmailError(
+                smptHost,
+                smtpPort,
+                smtpUsername,
+                smtpPassword,
+                siteOrApplicationName,
+                senderName,
+                senderEmail,
+                recipient,
+                string.Format("{0} Error - {1}",
+                siteOrApplicationName,
+                subject),
+                string.Format("{0}<h4>Error:</h4>{1}<br /><br /><h4>Stack Trace:</h4>{2}",
                         string.IsNullOrEmpty(additionalMessage)
                                     ? ""
                                     : "<h4>" + additionalMessage + "<h4><br /><br />",
@@ -486,6 +396,10 @@ namespace JBToolkit.Web
         /// Standardise easy sent email of an error or issue
         /// </summary>
         public static void EmailError(
+            string smptHost,
+            int smtpPort,
+            string smtpUsername,
+            string smtpPassword,
             string siteOrApplicationName,
             string senderName,
             string senderEmail,
@@ -509,6 +423,10 @@ namespace JBToolkit.Web
             try
             {
                 SendMail(
+                    smptHost,
+                    smtpPort,
+                    smtpUsername,
+                    smtpPassword,
                     siteOrApplicationName + senderName,
                     senderEmail,
                     recipient,

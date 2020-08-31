@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Net;
-using static JBToolkit.Global.DatabaseConfiguration;
 
 namespace JBToolkit.Logger
 {
@@ -17,15 +15,6 @@ namespace JBToolkit.Logger
         public string ConnectionString { get; set; }
         public string ApplicatioName { get; set; }
         private bool TableExistanceChecked { get; set; } = false;
-
-        public DBLogger(
-            string dbName,
-            DatabaseEnvironmentType environmentType,
-            int userId = 0,
-            string applicationName = null)
-        {
-            Initialise(dbName, new NetworkCredential("", Global.DatabaseConfiguration.Database.GetEnvironmentConnectionString(environmentType)).Password, userId, applicationName);
-        }
 
         public DBLogger(
             string dbName,
@@ -88,7 +77,7 @@ namespace JBToolkit.Logger
                         DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"),
                         Convert.ToInt32(isError),
                         UserId,
-                        GetUsername(UserId),
+                        Environment.UserName,
                         (string.IsNullOrEmpty(ApplicatioName) ? "NULL" : ApplicatioName),
                         source.GetSQLAcceptableString(),
                         message.GetSQLAcceptableString(),
@@ -126,52 +115,6 @@ namespace JBToolkit.Logger
                 }
             }
         }
-
-        private string GetUsername(int userId)
-        {
-            if (userId != 0)
-            {
-                try
-                {
-                    using (SqlConnection conn = new SqlConnection(ConnectionString))
-                    {
-                        string command = string.Format(
-                            @"SELECT TOP 1 '" + Global.ADConfiguration.AdDomain + "\' + Username_VC [Username_VC] FROM {0}.dbo.Shared_Users_T (NOLOCK) WHERE User_ID = {1}",
-                            DBName,
-                            userId);
-
-                        conn.Open();
-
-                        using (var sqlCommand = new SqlCommand(@"EXECUTE sp_executesql @cmd", conn))
-                        {
-                            sqlCommand.Parameters.AddWithValue("@cmd", command);
-                            SqlDataReader reader = sqlCommand.ExecuteReader();
-
-                            if (reader.HasRows)
-                            {
-                                if (reader.Read())
-                                {
-                                    try
-                                    {
-                                        return reader.GetString(0);
-                                    }
-                                    catch { }
-                                }
-                            }
-
-                            reader.Close();
-                            reader.Dispose();
-                        }
-
-                        conn.Close();
-                    }
-                }
-                catch { }
-            }
-
-            return System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-        }
-
         private void CreateIfNoTableExists()
         {
             if (!TableExistanceChecked)

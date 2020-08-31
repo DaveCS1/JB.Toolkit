@@ -14,9 +14,9 @@ namespace JBToolkit.GoogeApi
         /// <summary>
         /// Get a formatted address from longitude and latitude coordinates
         /// </summary>
-        public static string GetFormattedAddressFromLatLong(string lat, string lng)
+        public static string GetFormattedAddressFromLatLong(string lat, string lng, string googleApiKey)
         {
-            GoogleGeolocationObject gco = GetGeolocationObjectFromLatLong(lat, lng);
+            GoogleGeolocationObject gco = GetGeolocationObjectFromLatLong(lat, lng, googleApiKey);
 
             if (gco == null)
             {
@@ -33,9 +33,9 @@ namespace JBToolkit.GoogeApi
         /// through the address string taking off the first character for each iteration on 'zero result'... Which would hopefully resolve
         /// to the nearest say 'street, area, town, city etc' - However this won't give as accurate result when having to resolve.
         /// </summary>
-        public static Location GetLatLongFromAddress(string address, bool attemptForceResolve)
+        public static Location GetLatLongFromAddress(string address, string googleApiKey, bool attemptForceResolve)
         {
-            GoogleGeolocationObject gco = GetGeolocationObjectFromAddress(address, attemptForceResolve);
+            GoogleGeolocationObject gco = GetGeolocationObjectFromAddress(address, googleApiKey, attemptForceResolve);
 
             if (gco == null)
             {
@@ -52,9 +52,9 @@ namespace JBToolkit.GoogeApi
         /// through the address string taking off the first character for each iteration on 'zero result'... Which would hopefully resolve
         /// to the nearest say 'street, area, town, city etc' - However this won't give as accurate result when having to resolve.
         /// </summary>
-        public static GoogleGeolocationObject GetGeolocationObjectFromAddress(string address, bool attemptForceResolve = false)
+        public static GoogleGeolocationObject GetGeolocationObjectFromAddress(string address, string googleApiKey, bool attemptForceResolve = false)
         {
-            string requestUri = string.Format("{0}/geocode/json?address={1}&key={2}", Global.GoogleConfiguration.GoogleApiUrl, Uri.EscapeDataString(address), new NetworkCredential("", Global.GoogleConfiguration.GoogleApiKey).Password);
+            string requestUri = string.Format("{0}/geocode/json?address={1}&key={2}", "https://maps.googleapis.com/maps/api", Uri.EscapeDataString(address), googleApiKey);
 
             WebRequest request = WebRequest.Create(requestUri);
             WebResponse response = request.GetResponse();
@@ -76,7 +76,7 @@ namespace JBToolkit.GoogeApi
                 {
                     if (address.Length > 1) // shorten start of address (until we eventually get to 'town', 'city' etc
                     {
-                        return GetGeolocationObjectFromAddress(address.Substring(1, address.Length - 1), true);
+                        return GetGeolocationObjectFromAddress(address.Substring(1, address.Length - 1), googleApiKey, true);
                     }
                     else
                     {
@@ -94,9 +94,9 @@ namespace JBToolkit.GoogeApi
         /// <summary>
         /// Get the entire Google geocoordinates object from a latitute and longitude coordinates.
         /// </summary>
-        public static GoogleGeolocationObject GetGeolocationObjectFromLatLong(string lat, string lng)
+        public static GoogleGeolocationObject GetGeolocationObjectFromLatLong(string lat, string lng, string googleApiKey)
         {
-            string requestUri = string.Format("{0}/geocode/json?latlng={1}&key={2}", Global.GoogleConfiguration.GoogleApiUrl, lat + "," + lng, new NetworkCredential("", Global.GoogleConfiguration.GoogleApiKey).Password);
+            string requestUri = string.Format("{0}/geocode/json?latlng={1}&key={2}", "https://maps.googleapis.com/maps/api", lat + "," + lng, googleApiKey);
 
             WebRequest request = WebRequest.Create(requestUri);
             WebResponse response = request.GetResponse();

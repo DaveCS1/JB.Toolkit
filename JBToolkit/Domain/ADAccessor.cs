@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.DirectoryServices;
 using System.DirectoryServices.AccountManagement;
-using System.Net;
 using System.Web;
 
 namespace JBToolkit.Domain
@@ -11,19 +10,53 @@ namespace JBToolkit.Domain
     /// Accesses a given Active Directory server as specified in the web.config for retrieving additional user information
     /// </summary>
     public class ADAccessor
-    {
+    {        /// <summary>
+             /// Gets Active Directory attributes of a given user specified by username
+             /// </summary>
+             /// <param name="username">The username to retrieve AD attribute for</param>
+             /// <param name="callingFromWithinDomain">Are we call from within AD or from a DMZ</param>
+             /// <param name="adServerIpAddress">IP Address of AD controller</param>
+             /// <param name="adServerHostName">Host name of AD controller</param>
+             /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
+             /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
+             /// <returns>A custom AD object with limited attributes</returns>
+        public static ADUser GetADUser(
+            string username,
+            bool callingFromWithinDomain,
+            string adServerIpAddress,
+            string adServerHostName,
+            string adAdminUsername,
+            string adAdminPassword)
+        {
+            return GetADUser(
+                    username,
+                    callingFromWithinDomain,
+                    adServerIpAddress,
+                    adServerHostName,
+                    Environment.UserDomainName,
+                    adAdminUsername,
+                    adAdminPassword);
+        }
+
         /// <summary>
         /// Gets Active Directory attributes of a given user specified by username
         /// </summary>
         /// <param name="username">The username to retrieve AD attribute for</param>
+        /// <param name="callingFromWithinDomain">Are we call from within AD or from a DMZ</param>
+        /// <param name="adServerIpAddress">IP Address of AD controller</param>
+        /// <param name="adServerHostName">Host name of AD controller</param>
+        /// <param name="adDomainName">I.e. Likely be the company name</param>
+        /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
+        /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
         /// <returns>A custom AD object with limited attributes</returns>
         public static ADUser GetADUser(
-            string username,
-            bool callingFromWithinDomain,
-            string adAddress = null,
-            string adServerName = null,
-            string adUser = null,
-            string adPassword = null)
+        string username,
+        bool callingFromWithinDomain,
+        string adServerIpAddress,
+        string adServerHostName,
+        string adDomainName,
+        string adAdminUsername,
+        string adAdminPassword)
         {
             if (username.Contains("\\"))
             {
@@ -32,30 +65,10 @@ namespace JBToolkit.Domain
 
             try
             {
-                if (string.IsNullOrEmpty(adAddress))
-                {
-                    adAddress = Global.ADConfiguration.AdServerIP;
-                }
-
-                if (string.IsNullOrEmpty(adServerName))
-                {
-                    adServerName = Global.ADConfiguration.AdServerName;
-                }
-
-                if (string.IsNullOrEmpty(adUser))
-                {
-                    adUser = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminUser).Password);
-                }
-
-                if (string.IsNullOrEmpty(adPassword))
-                {
-                    adPassword = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminPassword).Password);
-                }
-
                 // DEBUG
-                string ldapAddress = "LDAP://" + (callingFromWithinDomain || string.IsNullOrEmpty(HttpContext.Current.User.Identity.Name) ? adServerName : adAddress);
+                string ldapAddress = "LDAP://" + (callingFromWithinDomain || string.IsNullOrEmpty(HttpContext.Current.User.Identity.Name) ? adServerHostName : adServerIpAddress);
 
-                DirectoryEntry de = new DirectoryEntry(ldapAddress, adUser, adPassword);
+                DirectoryEntry de = new DirectoryEntry(ldapAddress, adAdminUsername, adAdminPassword);
 
                 DirectorySearcher dSearch = new DirectorySearcher(de)
                 {
@@ -81,8 +94,8 @@ namespace JBToolkit.Domain
                 {
                     DisplayName = GetProperty(sResultSet, "displayname"),
                     Username = username,
-                    Domain = Global.ADConfiguration.AdDomain,
-                    UserAccount = Global.ADConfiguration.AdDomain + "\\" + username,
+                    Domain = adDomainName,
+                    UserAccount = adDomainName + "\\" + username,
                     JobTitle = GetProperty(sResultSet, "description"),
                     Office = GetProperty(sResultSet, "physicalDeliveryOfficeName"),
                     Department = GetProperty(sResultSet, "department"),
@@ -91,7 +104,7 @@ namespace JBToolkit.Domain
                     Fax = GetProperty(sResultSet, "facsimileTelephoneNumber"),
                     IPPhone = GetProperty(sResultSet, "	ipPhone"),
                     Mobile = GetProperty(sResultSet, "	mobile"),
-                    Manager = GetADUserManager(managerAccount, callingFromWithinDomain, adAddress, adServerName, adUser, adPassword),
+                    Manager = GetADUserManager(managerAccount, callingFromWithinDomain, adServerIpAddress, adServerHostName, adDomainName, adAdminUsername, adAdminPassword),
                     Memberships = new List<string>()
                 };
 
@@ -148,14 +161,49 @@ namespace JBToolkit.Domain
         /// <summary>
         /// Returns the manager ADUser object of the user
         /// </summary>
+        /// <param name="adServerIpAddress">IP Address of AD controller</param>
+        /// <param name="adServerHostName">Host name of AD controller</param>
+        /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
+        /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
         public static ADUser GetADUserManager(
             string username,
             bool callingFromWithinDomain,
-            string adAddress = null,
-            string adServerName = null,
-            string adUser = null,
-            string adPassword = null,
+            string adServerIpAddress,
+            string adServerHostName,
+            string adAdminUsername,
+            string adAdminPassword,
             bool recursivelyGetHierarchyAbove = false)
+        {
+            return GetADUserManager(
+                    username,
+                    callingFromWithinDomain,
+                    adServerIpAddress,
+                    adServerHostName,
+                    Environment.UserDomainName,
+                    adAdminUsername,
+                    adAdminPassword,
+                    recursivelyGetHierarchyAbove
+                );
+        }
+
+        /// <summary>
+        /// Returns the manager ADUser object of the user
+        /// </summary>
+        /// <param name="adServerIpAddress">IP Address of AD controller</param>
+        /// <param name="adServerHostName">Host name of AD controller</param>
+        /// <param name="adDomainName">I.e. Likely be the company name</param>
+        /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
+        /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
+        public static ADUser GetADUserManager(
+        string username,
+        bool callingFromWithinDomain,
+        string adServerIpAddress,
+        string adServerHostName,
+        string adDomainName,
+        string adAdminUsername,
+        string adAdminPassword,
+
+        bool recursivelyGetHierarchyAbove = false)
         {
             if (username.Contains("\\"))
             {
@@ -164,31 +212,11 @@ namespace JBToolkit.Domain
 
             try
             {
-                if (string.IsNullOrEmpty(adAddress))
-                {
-                    adAddress = Global.ADConfiguration.AdServerIP;
-                }
-
-                if (string.IsNullOrEmpty(adServerName))
-                {
-                    adServerName = Global.ADConfiguration.AdServerName;
-                }
-
-                if (string.IsNullOrEmpty(adUser))
-                {
-                    adUser = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminUser).Password);
-                }
-
-                if (string.IsNullOrEmpty(adPassword))
-                {
-                    adPassword = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminPassword).Password);
-                }
-
                 // DEBUG
                 string ldapAddress = "LDAP://" + (callingFromWithinDomain ||
-                    string.IsNullOrEmpty(HttpContext.Current.User.Identity.Name) ? adServerName : adAddress);
+                    string.IsNullOrEmpty(HttpContext.Current.User.Identity.Name) ? adServerHostName : adServerIpAddress);
 
-                DirectoryEntry de = new DirectoryEntry(ldapAddress, adUser, adPassword);
+                DirectoryEntry de = new DirectoryEntry(ldapAddress, adAdminUsername, adAdminPassword);
 
                 DirectorySearcher dSearch = new DirectorySearcher(de)
                 {
@@ -217,8 +245,8 @@ namespace JBToolkit.Domain
                 {
                     DisplayName = GetProperty(sResultSet, "displayname"),
                     Username = username,
-                    Domain = Global.ADConfiguration.AdDomain,
-                    UserAccount = Global.ADConfiguration.AdDomain + "\\" + username,
+                    Domain = adDomainName,
+                    UserAccount = adDomainName + "\\" + username,
                     JobTitle = GetProperty(sResultSet, "description"),
                     Office = GetProperty(sResultSet, "physicalDeliveryOfficeName"),
                     Department = GetProperty(sResultSet, "department"),
@@ -230,10 +258,11 @@ namespace JBToolkit.Domain
                     Manager = recursivelyGetHierarchyAbove ? GetADUserManager(
                                                                 managerAccount,
                                                                 callingFromWithinDomain,
-                                                                adAddress,
-                                                                adServerName,
-                                                                adUser,
-                                                                adPassword) : null
+                                                                adServerIpAddress,
+                                                                adServerHostName,
+                                                                adDomainName,
+                                                                adAdminUsername,
+                                                                adAdminPassword) : null
                 };
 
                 return usr;
@@ -275,13 +304,17 @@ namespace JBToolkit.Domain
         /// <summary>
         /// Returns the username from an AD search by email address
         /// </summary>
+        /// <param name="adServerIpAddress">IP Address of AD controller</param>
+        /// <param name="adServerHostName">Host name of AD controller</param>
+        /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
+        /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
         public static string GetUsernameFromEmailAddress(
             string emailAddress,
             bool callingFromWithinDomain,
-            string adAddress = null,
-            string adServerName = null,
-            string adUser = null,
-            string adPassword = null)
+            string adServerIpAddress,
+            string adServerHostName,
+            string adAdminUsername,
+            string adAdminPassword)
         {
             try
             {
@@ -289,10 +322,10 @@ namespace JBToolkit.Domain
                     emailAddress,
                     "mail",
                     callingFromWithinDomain,
-                    adAddress,
-                    adServerName,
-                    adUser,
-                    adPassword).Properties["samaccountname"][0].ToString();
+                    adServerIpAddress,
+                    adServerHostName,
+                    adAdminUsername,
+                    adAdminPassword).Properties["samaccountname"][0].ToString();
                 return username;
             }
             catch
@@ -304,13 +337,17 @@ namespace JBToolkit.Domain
         /// <summary>
         /// Returns the full name from an AD search by email address
         /// </summary>
+        /// <param name="adServerIpAddress">IP Address of AD controller</param>
+        /// <param name="adServerHostName">Host name of AD controller</param>
+        /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
+        /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
         public static string GetNameFromEmailAddress(
             string emailAddress,
             bool callingFromWithinDomain,
-            string adAddress = null,
-            string adServerName = null,
-            string adUser = null,
-            string adPassword = null)
+            string adServerIpAddress,
+            string adServerHostName,
+            string adAdminUsername,
+            string adAdminPassword)
         {
             try
             {
@@ -318,10 +355,10 @@ namespace JBToolkit.Domain
                     emailAddress,
                     "mail",
                     callingFromWithinDomain,
-                    adAddress,
-                    adServerName,
-                    adUser,
-                    adPassword).Properties["DisplayName"][0].ToString();
+                    adServerIpAddress,
+                    adServerHostName,
+                    adAdminUsername,
+                    adAdminPassword).Properties["DisplayName"][0].ToString();
 
                 return fullName;
             }
@@ -334,13 +371,17 @@ namespace JBToolkit.Domain
         /// <summary>
         /// Returns the full name from an AD search by username
         /// </summary>
+        /// <param name="adServerIpAddress">IP Address of AD controller</param>
+        /// <param name="adServerHostName">Host name of AD controller</param>
+        /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
+        /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
         public static string GetNameFromUsername(
             string username,
             bool callingFromWithinDomain,
-            string adAddress = null,
-            string adServerName = null,
-            string adUser = null,
-            string adPassword = null)
+            string adServerIpAddress,
+            string adServerHostName,
+            string adAdminUsername,
+            string adAdminPassword)
         {
             try
             {
@@ -348,10 +389,10 @@ namespace JBToolkit.Domain
                     username,
                     "samaccountname",
                     callingFromWithinDomain,
-                    adAddress,
-                    adServerName,
-                    adUser,
-                    adPassword).Properties["DisplayName"][0].ToString();
+                    adServerIpAddress,
+                    adServerHostName,
+                    adAdminUsername,
+                    adAdminPassword).Properties["DisplayName"][0].ToString();
 
                 return fullName;
             }
@@ -364,13 +405,17 @@ namespace JBToolkit.Domain
         /// <summary>
         /// Returns the email from an AD search by username
         /// </summary>
+        /// <param name="adServerIpAddress">IP Address of AD controller</param>
+        /// <param name="adServerHostName">Host name of AD controller</param>
+        /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
+        /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
         public static string GetEmailFromUsername(
             string username,
             bool callingFromWithinDomain,
-            string adAddress = null,
-            string adServerName = null,
-            string adUser = null,
-            string adPassword = null)
+            string adServerIpAddress,
+            string adServerHostName,
+            string adAdminUsername,
+            string adAdminPassword)
         {
             try
             {
@@ -378,10 +423,10 @@ namespace JBToolkit.Domain
                     username,
                     "samaccountname",
                     callingFromWithinDomain,
-                    adAddress,
-                    adServerName,
-                    adUser,
-                    adPassword).Properties["mail"][0].ToString();
+                    adServerIpAddress,
+                    adServerHostName,
+                    adAdminUsername,
+                    adAdminPassword).Properties["mail"][0].ToString();
 
                 return email;
             }
@@ -402,13 +447,17 @@ namespace JBToolkit.Domain
         /// <summary>
         /// Gets the photo stored in AD user
         /// </summary>
+        /// <param name="adServerIpAddress">IP Address of AD controller</param>
+        /// <param name="adServerHostName">Host name of AD controller</param>
+        /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
+        /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
         public static byte[] GetADPhotoFromEmail(
             string email,
             bool callingFromWithinDomain,
-            string adAddress = null,
-            string adServerName = null,
-            string adUser = null,
-            string adPassword = null)
+            string adServerIpAddress,
+            string adServerHostName,
+            string adAdminUsername,
+            string adAdminPassword)
         {
             try
             {
@@ -416,10 +465,10 @@ namespace JBToolkit.Domain
                     email,
                     "mail",
                     callingFromWithinDomain,
-                    adAddress,
-                    adServerName,
-                    adUser,
-                    adPassword).Properties["thumbnailPhoto"][0];
+                    adServerIpAddress,
+                    adServerHostName,
+                    adAdminUsername,
+                    adAdminPassword).Properties["thumbnailPhoto"][0];
 
                 return bb;
             }
@@ -432,13 +481,17 @@ namespace JBToolkit.Domain
         /// <summary>
         /// Gets the photo stored in AD user
         /// </summary>
+        /// <param name="adServerIpAddress">IP Address of AD controller</param>
+        /// <param name="adServerHostName">Host name of AD controller</param>
+        /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
+        /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
         public static byte[] GetADPhotoFromUsername(
             string username,
             bool callingFromWithinDomain,
-            string adAddress = null,
-            string adServerName = null,
-            string adUser = null,
-            string adPassword = null)
+            string adServerIpAddress,
+            string adServerHostName,
+            string adAdminUsername,
+            string adAdminPassword)
         {
             try
             {
@@ -446,10 +499,10 @@ namespace JBToolkit.Domain
                     username,
                     "samaccountname",
                     callingFromWithinDomain,
-                    adAddress,
-                    adServerName,
-                    adUser,
-                    adPassword).Properties["thumbnailPhoto"][0];
+                    adServerIpAddress,
+                    adServerHostName,
+                    adAdminUsername,
+                    adAdminPassword).Properties["thumbnailPhoto"][0];
 
                 return bb;
             }
@@ -462,12 +515,16 @@ namespace JBToolkit.Domain
         /// <summary>
         /// Returns all users of the domain
         /// </summary>
+        /// <param name="adServerIpAddress">IP Address of AD controller</param>
+        /// <param name="adServerHostName">Host name of AD controller</param>
+        /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
+        /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
         public static SearchResultCollection GetAllUsers(
             bool callingFromWithinDomain,
-            string adAddress = null,
-            string adServerName = null,
-            string adUser = null,
-            string adPassword = null)
+            string adServerIpAddress,
+            string adServerHostName,
+            string adAdminUsername,
+            string adAdminPassword)
         {
             try
             {
@@ -475,10 +532,10 @@ namespace JBToolkit.Domain
                                                 null,
                                                 null,
                                                 callingFromWithinDomain,
-                                                adAddress,
-                                                adServerName,
-                                                adUser,
-                                                adPassword);
+                                                adServerIpAddress,
+                                                adServerHostName,
+                                                adAdminUsername,
+                                                adAdminPassword);
                 return au;
             }
             catch
@@ -490,42 +547,26 @@ namespace JBToolkit.Domain
         /// <summary>
         /// Returns a DirectoryServices SearchResult object
         /// </summary>
+        /// <param name="adServerIpAddress">IP Address of AD controller</param>
+        /// <param name="adServerHostName">Host name of AD controller</param>
+        /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
+        /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
         public static SearchResult GetADSearchResult(
             string searchString,
             string searchFilter,
             bool callingFromWithinDomain,
-            string adAddress = null,
-            string adServerName = null,
-            string adUser = null, string
-            adPassword = null)
+            string adServerIpAddress,
+            string adServerHostName,
+            string adAdminUsername,
+            string adAdminPassword)
         {
-            if (string.IsNullOrEmpty(adAddress))
-            {
-                adAddress = Global.ADConfiguration.AdServerIP;
-            }
-
-            if (string.IsNullOrEmpty(adServerName))
-            {
-                adServerName = Global.ADConfiguration.AdServerName;
-            }
-
-            if (string.IsNullOrEmpty(adUser))
-            {
-                adUser = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminUser).Password);
-            }
-
-            if (string.IsNullOrEmpty(adPassword))
-            {
-                adPassword = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminPassword).Password);
-            }
-
             string ldapAddress = "LDAP://" + (callingFromWithinDomain ||
-                string.IsNullOrEmpty(HttpContext.Current.User.Identity.Name) ? adServerName : adAddress);
+                string.IsNullOrEmpty(HttpContext.Current.User.Identity.Name) ? adServerHostName : adServerIpAddress);
 
             DirectoryEntry adEntry = new DirectoryEntry(ldapAddress)
             {
-                Username = adUser,
-                Password = adPassword
+                Username = adAdminUsername,
+                Password = adAdminPassword
             };
 
             DirectorySearcher adSearcher = new DirectorySearcher(adEntry)
@@ -541,42 +582,26 @@ namespace JBToolkit.Domain
         /// <summary>
         /// Returns a DirectoryServices SearchResult object
         /// </summary>
+        /// <param name="adServerIpAddress">IP Address of AD controller</param>
+        /// <param name="adServerHostName">Host name of AD controller</param>
+        /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
+        /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
         public static SearchResultCollection GetADSearchResults(
             string searchString,
             string searchFilter,
             bool callingFromWithinDomain,
-            string adAddress = null,
-            string adServerName = null,
-            string adUser = null,
-            string adPassword = null)
+            string adServerIpAddress,
+            string adServerHostName,
+            string adAdminUsername,
+            string adAdminPassword)
         {
-            if (string.IsNullOrEmpty(adAddress))
-            {
-                adAddress = Global.ADConfiguration.AdServerIP;
-            }
-
-            if (string.IsNullOrEmpty(adServerName))
-            {
-                adServerName = Global.ADConfiguration.AdServerName;
-            }
-
-            if (string.IsNullOrEmpty(adUser))
-            {
-                adUser = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminUser).Password);
-            }
-
-            if (string.IsNullOrEmpty(adPassword))
-            {
-                adPassword = Encryption.ConnectionStringEncryptor.DecryptString(new NetworkCredential("", Global.ADConfiguration.DmzAdminPassword).Password);
-            }
-
             string ldapAddress = "LDAP://" + (callingFromWithinDomain ||
-                string.IsNullOrEmpty(HttpContext.Current.User.Identity.Name) ? adServerName : adAddress);
+                string.IsNullOrEmpty(HttpContext.Current.User.Identity.Name) ? adServerHostName : adServerIpAddress);
 
             DirectoryEntry adEntry = new DirectoryEntry(ldapAddress)
             {
-                Username = adUser,
-                Password = adPassword
+                Username = adAdminUsername,
+                Password = adAdminPassword
             };
 
             DirectorySearcher adSearcher = new DirectorySearcher(adEntry)

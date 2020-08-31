@@ -1,5 +1,4 @@
-﻿using JBToolkit;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -304,7 +303,7 @@ namespace System
     public static class ProcessExtensions
     {
         // Attempt various means of killing process
-        public static void KillRemoteProcess(this Process p, string user, string password)
+        public static void KillRemoteProcess(this Process p, string user, string password, string domain = null)
         {
             // METHOD 1:
 
@@ -321,7 +320,9 @@ namespace System
                 ConnectionOptions options = new ConnectionOptions
                 {
                     Password = password,
-                    Username = Global.ADConfiguration.AdDomain + "\\" + user
+                    Username = domain ??
+                                    Net.NetworkInformation.IPGlobalProperties.GetIPGlobalProperties().DomainName +
+                               "\\" + user
                 };
 
                 var scope = new ManagementScope(@"\\" + p.MachineName + @"\root\cimv2", options);

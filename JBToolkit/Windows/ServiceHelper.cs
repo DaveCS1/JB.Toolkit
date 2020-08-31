@@ -8,7 +8,7 @@ namespace JBToolkit.Windows
     /// <summary>
     /// Contain method for remote reliably manipulating Windows Services. You will likely need to use impersonatation when calling i.e:
     /// 
-    ///     using (new Impersonator(ServerType.DOMAIN))
+    ///     using (new Impersonator(ServerType.DOMAIN, "username", "password"))
     //      {
     //          GetServiceSatus("EPCInterfaceService", "HMS-DAME01-D", out errMsg);
     //      }
@@ -131,9 +131,23 @@ namespace JBToolkit.Windows
         /// <param name="processNameOptional">Optional process name</param>
         /// <param name="impersonatorOptional">Optional impersonator object</param>
         /// <returns>True if successful, false otherwise</returns>
-        public static bool RestartService(string serviceName, string serverName, ref string errMsg, string processNameOptional = null, string authUsername = null, string authPassword = null)
+        public static bool RestartService(
+            string serviceName,
+            string serverName,
+            ref string errMsg,
+            string processNameOptional = null,
+            string authUsername = null,
+            string authPassword = null,
+            string domain = null)
         {
-            return AgressiveRestartService(serviceName, processNameOptional, serverName, authUsername, authPassword, ref errMsg);
+            return AgressiveRestartService(
+                serviceName,
+                processNameOptional,
+                serverName,
+                authUsername,
+                authPassword,
+                ref errMsg,
+                domain);
         }
 
         /// <summary>
@@ -145,7 +159,14 @@ namespace JBToolkit.Windows
         /// <param name="impersonator">Impersonator object</param>
         /// <param name="errMsg">Reference error message string</param>
         /// <returns>True if successful, false otherwise</returns>
-        public static bool AgressiveRestartService(string serviceName, string processName, string serverName, string authUsername, string authPassword, ref string errMsg)
+        public static bool AgressiveRestartService(
+            string serviceName,
+            string processName,
+            string serverName,
+            string authUsername,
+            string authPassword,
+            ref string errMsg,
+            string domain)
         {
             ServiceController sc;
 
@@ -172,7 +193,11 @@ namespace JBToolkit.Windows
                     {
                         for (int j = 0; j < procs.Length; j++)
                         {
-                            procs[j].KillRemoteProcess(authUsername, authPassword);
+                            procs[j].KillRemoteProcess(
+                                authUsername,
+                                authPassword,
+                                domain ??
+                                    Environment.UserDomainName);
                         }
 
                         Thread.Sleep(1000);
@@ -226,7 +251,11 @@ namespace JBToolkit.Windows
 
                                             for (int i = 0; i < procs.Length; i++)
                                             {
-                                                procs[i].KillRemoteProcess(authUsername, authPassword);
+                                                procs[i].KillRemoteProcess(
+                                                    authUsername,
+                                                    authPassword,
+                                                    domain ??
+                                                        Environment.UserDomainName);
                                             }
 
                                             Thread.Sleep(6000);
@@ -345,7 +374,11 @@ namespace JBToolkit.Windows
 
                                                 for (int i = 0; i < procs.Length; i++)
                                                 {
-                                                    procs[i].KillRemoteProcess(authUsername, authPassword);
+                                                    procs[i].KillRemoteProcess(
+                                                        authUsername,
+                                                        authPassword,
+                                                        domain ??
+                                                            Environment.UserDomainName);
                                                 }
 
                                                 Thread.Sleep(6000);

@@ -1,8 +1,6 @@
 ﻿using JBToolkit.Database;
 using System;
 using System.Data.SqlClient;
-using System.Net;
-using static JBToolkit.Global.DatabaseConfiguration;
 
 namespace JBToolkit.Web
 {
@@ -14,34 +12,6 @@ namespace JBToolkit.Web
         private static string TableName { get; } = "[dbo].[USR_AG_Shared_Remote_AccessLog_T]";
 
         private static bool TableExistanceChecked { get; set; } = false;
-
-        /// <summary>
-        /// Insert an access log entry into the database
-        /// </summary>
-        /// <param name="ipAddress">Visitor or 3rd party IP</param>
-        /// <param name="applicationName">Name of applications requested</param>
-        /// <param name="endPoint">API End point or method requested</param>
-        /// <param name="accessGranted">Whether or not the request has granted or denied</param>
-        /// <param name="accessDeniedReason"></param>
-        /// <returns>True if the insert succeeded, false otherwise</returns>
-        public static bool LogAccess(
-            string dbName,
-            DatabaseEnvironmentType environmentType,
-            string ipAddress,
-            string applicationName,
-            string endPoint
-            , bool? accessGranted,
-            string accessDeniedReason)
-        {
-            return LogAccess(
-                dbName,
-                new NetworkCredential("", Global.DatabaseConfiguration.Database.GetEnvironmentConnectionString(environmentType)).Password,
-                ipAddress,
-                applicationName,
-                endPoint,
-                accessGranted,
-                accessDeniedReason);
-        }
 
         /// <summary>
         /// Insert an access log entry into the database

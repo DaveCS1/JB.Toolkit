@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Net;
-using static JBToolkit.Global.DatabaseConfiguration;
 
 namespace JBToolkit.Database
 {
@@ -16,11 +14,6 @@ namespace JBToolkit.Database
         private string ConnectionString { get; set; }
         private int TreeViewCacheTimeout { get; set; }
         private bool TableExistanceChecked { get; set; } = false;
-
-        public TreeViewCache(string dbName, DatabaseEnvironmentType environmentType, int treeViewCacheTimeout)
-        {
-            Initialise(dbName, new NetworkCredential("", Global.DatabaseConfiguration.Database.GetEnvironmentConnectionString(environmentType)).Password, treeViewCacheTimeout);
-        }
 
         public TreeViewCache(string dbName, string connectionString, int treeViewCacheTimeout)
         {

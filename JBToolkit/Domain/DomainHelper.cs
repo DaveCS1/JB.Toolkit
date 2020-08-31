@@ -1,5 +1,4 @@
-﻿using System;
-using System.DirectoryServices;
+﻿using System.DirectoryServices;
 using System.DirectoryServices.ActiveDirectory;
 using System.Net.NetworkInformation;
 using System.Security.Principal;
@@ -20,25 +19,6 @@ namespace JBToolkit.Domain
             get
             {
                 return HttpContext.Current.Server.MachineName;
-            }
-        }
-
-        /// <summary>
-        /// Returns whether this site in on a host that is part of the AD domain or not
-        /// </summary>
-        public static bool SiteOnDomain
-        {
-            get
-            {
-                try
-                {
-                    return IPGlobalProperties.GetIPGlobalProperties().DomainName.ToLower().In(Global.ADConfiguration.AdServerName.ToLower(), Global.ADConfiguration.AdUrl.ToLower());
-                }
-
-                catch
-                {
-                    return false;
-                }
             }
         }
 

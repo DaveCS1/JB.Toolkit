@@ -1,5 +1,4 @@
-﻿using JBToolkit.Domain.Impersonation;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Text;
 
@@ -44,63 +43,19 @@ namespace JBToolkit.Logger
             {
                 try
                 {
-                    if (Domain.DomainHelper.SiteOnDomain)
+                    using (EventLog eventLog = new EventLog("Application"))
                     {
-                        using (new Impersonator(ServerType.DOMAIN))
-                        {
-                            using (EventLog eventLog = new EventLog("Application"))
-                            {
-                                if (!EventLog.SourceExists(source))
-                                {
-                                    EventLog.CreateEventSource(source, "Application");
-                                }
+                        eventLog.Source = "Application";
+                        eventLog.WriteEntry(message, logType);
 
-                                eventLog.Source = source;
-                                eventLog.WriteEntry(message, logType);
-
-                                result.Success = true;
-                                result.Message = "Event logged successfully";
-                            }
-                        }
-                    }
-                    else
-                    {
-                        using (new Impersonator(ServerType.DMZ))
-                        {
-                            using (EventLog eventLog = new EventLog("Application"))
-                            {
-                                if (!EventLog.SourceExists(source))
-                                {
-                                    EventLog.CreateEventSource(source, "Application");
-                                }
-
-                                eventLog.Source = source;
-                                eventLog.WriteEntry(message, logType);
-
-                                result.Success = true;
-                                result.Message = "Event logged successfully";
-                            }
-                        }
+                        result.Success = true;
+                        result.Message = "Event logged but source wasn't found or created. Logged under 'Application' instead.";
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
-                    try
-                    {
-                        using (EventLog eventLog = new EventLog("Application"))
-                        {
-                            eventLog.Source = "Application";
-                            eventLog.WriteEntry(message, logType);
-
-                            result.Success = true;
-                            result.Message = "Event logged but source wasn't foudn or created. Logged under 'Application' instead.";
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        result.Success = false;
-                        result.Message = "Event logging failed: " + ex.Message;
-                    }
+                    result.Success = false;
+                    result.Message = "Event logging failed: " + ex.Message;
                 }
             }
 

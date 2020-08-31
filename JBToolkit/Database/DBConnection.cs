@@ -1,6 +1,4 @@
 ﻿using JBToolkit.Logger;
-using System.Net;
-using static JBToolkit.Global.DatabaseConfiguration;
 
 namespace JBToolkit.Database
 {
@@ -27,24 +25,6 @@ namespace JBToolkit.Database
         /// Include logger class for logging of errors
         /// </summary>
         public DBLogger Logger { get; set; }
-
-        public DBConnection(
-            string dbName,
-            DatabaseEnvironmentType environmentType,
-            int userId = 0,
-            bool enableLogging = true,
-            string applicationName = null)
-        {
-            using (var env = Global.DatabaseConfiguration.Database.GetEnvironmentConnectionString(environmentType))
-            {
-                Initialise(
-                    dbName,
-                    new NetworkCredential("", env).Password,
-                    userId,
-                    enableLogging,
-                    applicationName);
-            }
-        }
 
         public DBConnection(
             string dbName,

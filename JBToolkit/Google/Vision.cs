@@ -1,5 +1,4 @@
 ﻿using Google.Cloud.Vision.V1;
-using JBToolkit.Domain.Impersonation;
 using JBToolkit.PdfDoc;
 using JBToolkit.Windows;
 using System;
@@ -308,21 +307,8 @@ namespace JBToolkit.GoogeApi
 
         private static void SetGoogleAPICredentialEnvironmentVariable()
         {
-            // This may throw an error with incorrect persmissions - but we do want it to
-
-            try
-            {
-                Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", GetGooglejsonLocation(), EnvironmentVariableTarget.User);
-                Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", GetGooglejsonLocation(), EnvironmentVariableTarget.Process);
-            }
-            catch
-            {
-                using (new Impersonator(ServerType.DOMAIN))
-                {
-                    Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", GetGooglejsonLocation(), EnvironmentVariableTarget.User);
-                    Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", GetGooglejsonLocation(), EnvironmentVariableTarget.Process);
-                }
-            }
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", GetGooglejsonLocation(), EnvironmentVariableTarget.User);
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", GetGooglejsonLocation(), EnvironmentVariableTarget.Process);
         }
 
         /// <summary>
