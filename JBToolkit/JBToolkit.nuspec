@@ -6,6 +6,7 @@
     <title>JB.Toolkit</title>
     <authors>James Brindle, JB-Net Software Solutions</authors>
     <icon>images\favicon.png</icon>
+    <license type="file">LICENSE.txt</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes></releaseNotes>
@@ -51,6 +52,7 @@
     </references>
   </metadata>
   <files>
+    <file src="licenses\LICENSE.txt" target="" />
     <file src="images\favicon.png" target="images\"/>
     <file src="bin\Release\JBToolkit.dll" target="ref\net452"/>
     <file src="lib\Microsoft.Office.Interop.Word.dll" target="ref\net452"/>

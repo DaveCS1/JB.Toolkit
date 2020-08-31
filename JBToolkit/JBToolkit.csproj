@@ -904,6 +904,7 @@
     <None Include="content\Scripts\packages\pdfjs\web\locale\zh-TW\viewer.properties" />
     <None Include="content\Scripts\packages\pdfjs\web\locale\zu\viewer.properties" />
     <None Include="Dependencies_Embedded\OfficeToPDF.zip" />
+    <Content Include="licenses\LICENSE.txt" />
     <None Include="packages.config" />
     <EmbeddedResource Include="Dependencies_Embedded\Images\cmb-danger.png" />
     <EmbeddedResource Include="Dependencies_Embedded\Images\cmb-info.png" />
