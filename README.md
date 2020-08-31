@@ -24,6 +24,7 @@ A collection of useful classes, extensions and tools written in C# to aid in a w
 	* Spinner
 	* Progress bar
 	* Any console foreground and background colour (ColourFul.Console)
+	* FIGLet fonts (ASCII art)
 * **Database**
 	* Get data table, get scaler, execute non-Query, execute non-query with scoped identity
 	* Dapper

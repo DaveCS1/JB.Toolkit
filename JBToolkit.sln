@@ -7,12 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBToolkit", "JBToolkit\JBTo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README.md", "README.md", "{F315894B-F0F3-4731-920C-F8ED4EB6955E}"
 	ProjectSection(SolutionItems) = preProject
+		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
+		CONTRIBUTING.md = CONTRIBUTING.md
+		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{51230636-0A39-403B-954B-F43A63F6E6CB}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.gitignore = .gitignore
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBToolkit.Testing", "JBToolkit.Testing\JBToolkit.Testing.csproj", "{8984EAC4-5850-4456-8026-E0677A95480A}"

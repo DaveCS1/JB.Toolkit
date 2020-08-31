@@ -3,9 +3,9 @@
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
-    <title>JB Toolkit</title>
+    <title>JB.Toolkit</title>
     <authors>James Brindle, JB-Net Software Solutions</authors>
-    <iconUrl>http://tfs01/images/packages/jbtoolkit.png</iconUrl>
+    <iconUrl>https://portfolio.jb-net.co.uk/shared/Logo-Only-100px.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes></releaseNotes>
