@@ -4,6 +4,9 @@
 *.user
 *.*.user
 
+*.nupkg
+*.*.nupkg
+
 ARCHIVE
 _Archive
 

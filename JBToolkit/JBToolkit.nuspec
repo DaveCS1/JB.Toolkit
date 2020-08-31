@@ -3,16 +3,18 @@
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
-    <title>JB Toolkit</title>
+    <title>JB.Toolkit</title>
     <authors>James Brindle, JB-Net Software Solutions</authors>
-    <iconUrl>http://tfs01/images/packages/jbtoolkit.png</iconUrl>
+    <icon>images\favicon.png</icon>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes></releaseNotes>
     <copyright>© JB-Net Software Solutions 2020</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="Newtonsoft.Json" version="10.0.0.0" />
+      <group targetFramework=".NETFramework4.5.2" >
+        <dependency id="Newtonsoft.Json" version="10.0.0.0" />
+      </group>
     </dependencies>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="Microsoft.CSharp"  />
@@ -49,8 +51,13 @@
     </references>
   </metadata>
   <files>
-    <file src="lib\Interop.MFilesAPI.dll" target="lib\net452"/>
+    <file src="images\favicon.png" target="images\"/>
+    <file src="bin\Release\JBToolkit.dll" target="ref\net452"/>
+    <file src="lib\Microsoft.Office.Interop.Word.dll" target="ref\net452"/>
+    <file src="lib\LaMarvin.Windows.Forms.ColorPicker.dll" target="ref\net452"/>
     <file src="lib\Microsoft.Office.Interop.Word.dll" target="lib\net452"/>
     <file src="lib\LaMarvin.Windows.Forms.ColorPicker.dll" target="lib\net452"/>
+    <file src="lib\grpc_csharp_ext.x64.dll" target="lib\net452"/>
+    <file src="lib\grpc_csharp_ext.x86.dll" target="lib\net452"/>
   </files>
 </package>

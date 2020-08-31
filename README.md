@@ -2,11 +2,17 @@
 &nbsp;
 [![N|Solid](https://portfolio.jb-net.co.uk/shared/Logo-Only-100px.png)](https://github.com/jamesbrindle/JB.Toolkit)
 
-A collection of useful classes, extensions and tools written in C# to aid in a wide variety of development. With components for ASP Net MVC, Winform and Console applications. Integrations for Google, AD and SQL and pre-written implementations for a variety of tasks (see below).
+A collection of useful classes, extensions and tools written in C# to aid in a wide variety of development. With components for ASP Net MVC, Winform and Console applications. Integrations for Google, AD and SQL and pre-written implementations / helpers for a variety of tasks (see below).
 &nbsp;
 &nbsp;
 
-## Tools Include, But Not Limited To:
+## Nuget Package
+
+Install-Package JBToolkit
+&nbsp;
+&nbsp;
+
+## Tools Include, But Not Limited To
 
 * **Assembly Helper**
 	* Retrive embedded resources
@@ -24,6 +30,7 @@ A collection of useful classes, extensions and tools written in C# to aid in a w
 	* Spinner
 	* Progress bar
 	* Any console foreground and background colour (ColourFul.Console)
+	* FIGLet fonts (ASCII art)
 * **Database**
 	* Get data table, get scaler, execute non-Query, execute non-query with scoped identity
 	* Dapper

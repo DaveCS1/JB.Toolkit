@@ -298,10 +298,10 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Google\Geocoding.cs" />
     <Compile Include="Google\Vision.cs" />
-    <Compile Include="Images\ColourHelper.cs" />
-    <Compile Include="Images\HtmlImageHelper.cs" />
-    <Compile Include="Images\IconImageHelper.cs" />
-    <Compile Include="Images\ImageHelper.cs" />
+    <Compile Include="Imaging\ColourHelper.cs" />
+    <Compile Include="Imaging\HtmlImageHelper.cs" />
+    <Compile Include="Imaging\IconImageHelper.cs" />
+    <Compile Include="Imaging\ImageHelper.cs" />
     <Compile Include="InterProcessComms\MemoryMappedFile\MemoryMappedFilesClient.cs" />
     <Compile Include="InterProcessComms\MemoryMappedFile\MemoryMappedFilesServer.cs" />
     <Compile Include="InterProcessComms\MessageQueues\MessageQueuesClient.cs" />
@@ -457,6 +457,9 @@
     <Compile Include="Zip\ZipArchive.Native.cs" />
     <Compile Include="Zip\ZipCompression.cs" />
     <Compile Include="Zip\ZipExtraction.cs" />
+    <Content Include="images\favicon.png" />
+    <None Include="lib\grpc_csharp_ext.x64.dll" />
+    <None Include="lib\grpc_csharp_ext.x86.dll" />
     <EmbeddedResource Include="Dependencies_Embedded\googlevisionapikey.zip" />
     <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Acrobatic.zip" />
     <EmbeddedResource Include="Dependencies_Embedded\FIGLetFonts\Alligator.zip" />
@@ -1654,10 +1657,6 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
-  </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
       <UserProperties BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_UseGlobalSettings="True" BuildVersion_BuildAction="Build" BuildVersion_StartDate="2000/1/1" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
@@ -1677,4 +1676,20 @@
   </Target>
   <Import Project="..\packages\Brotli.NET.2.0.4.2\build\Brotli.NET.targets" Condition="Exists('..\packages\Brotli.NET.2.0.4.2\build\Brotli.NET.targets')" />
   <Import Project="..\packages\Grpc.Core.1.22.1\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.1.22.1\build\net45\Grpc.Core.targets')" />
+  <Target Name="PostBuildMacros">
+    <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
+      <Output TaskParameter="Assemblies" ItemName="Targets" />
+    </GetAssemblyIdentity>
+    <ItemGroup>
+      <VersionNumber Include="@(Targets->'%(Version)')" />
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <PostBuildEventDependsOn>
+    $(PostBuildEventDependsOn);
+    PostBuildMacros;
+  </PostBuildEventDependsOn>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
 </Project>
