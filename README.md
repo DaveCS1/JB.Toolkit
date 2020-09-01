@@ -9,7 +9,7 @@ A collection of useful classes, extensions and tools written in C# to aid in a w
 ## Nuget Package
 
 ```
-Install-Package JBToolkit
+Install-Package JB.Toolkit
 ```
 &nbsp;
 &nbsp;

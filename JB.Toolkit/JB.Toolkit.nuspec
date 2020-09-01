@@ -44,7 +44,7 @@
     </frameworkAssemblies>
     <references>
       <group targetFramework="net452">
-        <reference file="JBToolkit.dll" />
+        <reference file="JB.Toolkit.dll" />
         <reference file="Microsoft.Office.Interop.Word.dll" />
         <reference file="LaMarvin.Windows.Forms.ColorPicker.dll" />
       </group>
@@ -53,7 +53,7 @@
   <files>
     <file src="licenses\LICENSE.txt" target="" />
     <file src="images\favicon.png" target="images\"/>
-    <file src="bin\Release\JBToolkit.dll" target="ref\net452"/>
+    <file src="bin\Release\JB.Toolkit.dll" target="ref\net452"/>
     <file src="lib\Microsoft.Office.Interop.Word.dll" target="ref\net452"/>
     <file src="lib\LaMarvin.Windows.Forms.ColorPicker.dll" target="ref\net452"/>
     <file src="lib\Microsoft.Office.Interop.Word.dll" target="lib\net452"/>

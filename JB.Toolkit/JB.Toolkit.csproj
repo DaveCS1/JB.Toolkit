@@ -13,7 +13,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>JBToolkit</RootNamespace>
-    <AssemblyName>JBToolkit</AssemblyName>
+    <AssemblyName>JB.Toolkit</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -456,6 +456,7 @@
     <Compile Include="Zip\ZipArchive.Native.cs" />
     <Compile Include="Zip\ZipCompression.cs" />
     <Compile Include="Zip\ZipExtraction.cs" />
+    <EmbeddedResource Include="Dependencies_Embedded\ReAlPDFc.zip" />
     <None Include="images\favicon.png" />
     <None Include="lib\grpc_csharp_ext.x64.dll" />
     <None Include="lib\grpc_csharp_ext.x86.dll" />
@@ -777,7 +778,6 @@
     <EmbeddedResource Include="WinForms\Popup.resx">
       <DependentUpon>Popup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dependencies_Embedded\ReAlPDFc.zip" />
     <None Include="Dependencies_Embedded\OfficeToPDF.zip" />
     <None Include="licenses\LICENSE.txt" />
     <None Include="packages.config" />
@@ -790,7 +790,7 @@
     <EmbeddedResource Include="Dependencies_Embedded\pdftopng.zip" />
     <EmbeddedResource Include="Dependencies_Embedded\pdftotext.zip" />
     <EmbeddedResource Include="Dependencies_Embedded\wkhtmltopdf.zip" />
-    <None Include="JBToolkit.nuspec" />
+    <None Include="JB.Toolkit.nuspec" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="images\favicon-50px.png" />
     <None Include="images\favicon-100px.png" />

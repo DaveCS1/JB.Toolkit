@@ -6,7 +6,7 @@ namespace JBToolkit.Testing
     {
         static void Main()
         {
-
+            JBToolkit.PdfDoc.PdfConverter.ConvertToPDF(@"c:\temp\Test.docx", @"c:\temp\Test.pdf");
         }
     }
 }

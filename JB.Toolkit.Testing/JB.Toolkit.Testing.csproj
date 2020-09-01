@@ -7,7 +7,7 @@
     <ProjectGuid>{8984EAC4-5850-4456-8026-E0677A95480A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>JBToolkit.Testing</RootNamespace>
-    <AssemblyName>JBToolkit.Testing</AssemblyName>
+    <AssemblyName>JB.Toolkit.Testing</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JBToolkit\JBToolkit.csproj">
+    <ProjectReference Include="..\JB.Toolkit\JB.Toolkit.csproj">
       <Project>{43aa263c-1db9-490d-99ea-5af526df56af}</Project>
-      <Name>JBToolkit</Name>
+      <Name>JB.Toolkit</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -78,7 +78,11 @@ namespace JBToolkit.AssemblyHelper
                         byte[] ba = null;
 
                         bool resourcePresent = true;
-                        using (Stream stm = targetAssembly.GetManifestResourceStream(targetAssembly.GetName().Name + "." + resourcePath + "." + fileName))
+                        string targetAssemblyName = targetAssembly.GetName().Name;
+                        if (targetAssemblyName == "JB.Toolkit")
+                            targetAssemblyName = "JBToolkit";
+
+                        using (Stream stm = targetAssembly.GetManifestResourceStream(targetAssemblyName + "." + resourcePath + "." + fileName))
                         {
                             try
                             {
@@ -156,8 +160,11 @@ namespace JBToolkit.AssemblyHelper
             string outputFilename)
         {
             bool resourceExists = true;
+            string targetAssemblyName = targetAssembly.GetName().Name;
+            if (targetAssemblyName == "JB.Toolkit")
+                targetAssemblyName = "JBToolkit";
 
-            using (Stream s = targetAssembly.GetManifestResourceStream(targetAssembly.GetName().Name.Replace("-", "_") + "." + resourcePath + "." + fileName))
+            using (Stream s = targetAssembly.GetManifestResourceStream(targetAssemblyName.Replace("-", "_") + "." + resourcePath + "." + fileName))
             {
                 if (s != null)
                 {
@@ -180,7 +187,7 @@ namespace JBToolkit.AssemblyHelper
                 // Perhaps we've zipped it?
 
                 string zippedFilename = Path.ChangeExtension(fileName, "zip");
-                using (Stream z = targetAssembly.GetManifestResourceStream(targetAssembly.GetName().Name.Replace("-", "_") + "." + resourcePath + "." + zippedFilename))
+                using (Stream z = targetAssembly.GetManifestResourceStream(targetAssemblyName.Replace("-", "_") + "." + resourcePath + "." + zippedFilename))
                 {
                     if (z == null)
                         throw new Exception("Cannot find embedded resource '" + fileName + "'");
@@ -191,7 +198,7 @@ namespace JBToolkit.AssemblyHelper
                 }
             }
 
-            throw new Exception("Cannot find embedded resource '" + targetAssembly.GetName().Name.Replace("-", "_") + "." + resourcePath + "." + fileName);
+            throw new Exception("Cannot find embedded resource '" + targetAssemblyName.Replace("-", "_") + "." + resourcePath + "." + fileName);
         }
 
         /// <summary>
@@ -206,8 +213,11 @@ namespace JBToolkit.AssemblyHelper
             string resourcePath)
         {
             bool resourceExists = true;
+            string targetAssemblyName = targetAssembly.GetName().Name;
+            if (targetAssemblyName == "JB.Toolkit")
+                targetAssemblyName = "JBToolkit";
 
-            using (Stream s = targetAssembly.GetManifestResourceStream(targetAssembly.GetName().Name.Replace("-", "_") + "." + resourcePath + "." + fileName))
+            using (Stream s = targetAssembly.GetManifestResourceStream(targetAssemblyName.Replace("-", "_") + "." + resourcePath + "." + fileName))
             {
                 if (s != null)
                 {
@@ -225,7 +235,7 @@ namespace JBToolkit.AssemblyHelper
                 // Perhaps we've zipped it?
 
                 string zippedFilename = Path.ChangeExtension(resourcePath, "zip");
-                using (Stream z = targetAssembly.GetManifestResourceStream(targetAssembly.GetName().Name.Replace("-", "_") + "." + resourcePath + "." + zippedFilename))
+                using (Stream z = targetAssembly.GetManifestResourceStream(targetAssemblyName.Replace("-", "_") + "." + resourcePath + "." + zippedFilename))
                 {
                     if (z == null)
                         throw new Exception("Cannot find embedded resource '" + resourcePath + "'");
@@ -236,7 +246,7 @@ namespace JBToolkit.AssemblyHelper
                 }
             }
 
-            throw new Exception("Cannot find embedded resource '" + targetAssembly.GetName().Name.Replace("-", "_") + "." + resourcePath + "." + fileName);
+            throw new Exception("Cannot find embedded resource '" + targetAssemblyName.Replace("-", "_") + "." + resourcePath + "." + fileName);
         }
 
         /// <summary>
@@ -291,8 +301,11 @@ namespace JBToolkit.AssemblyHelper
             string resourcePath)
         {
             bool resourceExists = true;
+            string targetAssemblyName = targetAssembly.GetName().Name;
+            if (targetAssemblyName == "JB.Toolkit")
+                targetAssemblyName = "JBToolkit";
 
-            using (Stream s = targetAssembly.GetManifestResourceStream(targetAssembly.GetName().Name.Replace("-", "_") + "." + resourcePath + "." + fileName))
+            using (Stream s = targetAssembly.GetManifestResourceStream(targetAssemblyName.Replace("-", "_") + "." + resourcePath + "." + fileName))
             {
                 if (s != null)
                 {
@@ -310,7 +323,7 @@ namespace JBToolkit.AssemblyHelper
                 // Perhaps we've zipped it?
 
                 string zippedFilename = Path.ChangeExtension(resourcePath, "zip");
-                using (Stream z = targetAssembly.GetManifestResourceStream(targetAssembly.GetName().Name.Replace("-", "_") + "." + resourcePath + "." + zippedFilename))
+                using (Stream z = targetAssembly.GetManifestResourceStream(targetAssemblyName.Replace("-", "_") + "." + resourcePath + "." + zippedFilename))
                 {
                     if (z == null)
                         throw new Exception("Cannot find embedded resource '" + resourcePath + "'");
@@ -321,7 +334,7 @@ namespace JBToolkit.AssemblyHelper
                 }
             }
 
-            throw new Exception("Cannot find embedded resource '" + targetAssembly.GetName().Name.Replace("-", "_") + "." + resourcePath + "." + fileName);
+            throw new Exception("Cannot find embedded resource '" + targetAssemblyName.Replace("-", "_") + "." + resourcePath + "." + fileName);
         }
 
         /// <summary>
