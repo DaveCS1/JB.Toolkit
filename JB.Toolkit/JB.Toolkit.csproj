@@ -275,7 +275,7 @@
     <Compile Include="Database\TreeViewCache.cs" />
     <Compile Include="Assembly\EmbeddedResourceHelper.cs" />
     <Compile Include="Assembly\VersionHelper.cs" />
-    <Compile Include="CSV\CSVHelper.cs" />
+    <Compile Include="CSV\CsvHelper.cs" />
     <Compile Include="Extensions\EncodingExtensions.cs" />
     <Compile Include="Extensions\SourceCodeFormatter.cs" />
     <Compile Include="FuzzyLogic\Algorithms\DoubleMetaphoneAlgorithm.cs" />
@@ -339,10 +339,10 @@
     <Compile Include="Web\AccessLog.cs" />
     <Compile Include="Web\AccessToken.cs" />
     <Compile Include="Web\MemoryFile.cs" />
-    <Compile Include="Windows\ConsoleHelper\Options.cs" />
-    <Compile Include="Windows\ConsoleHelper\ProgressBar.cs" />
-    <Compile Include="Windows\ConsoleHelper\Spinner.cs" />
-    <Compile Include="Windows\ConsoleHelper\Writer.cs" />
+    <Compile Include="ConsoleHelper\Options.cs" />
+    <Compile Include="ConsoleHelper\ProgressBar.cs" />
+    <Compile Include="ConsoleHelper\Spinner.cs" />
+    <Compile Include="ConsoleHelper\Writer.cs" />
     <Compile Include="Windows\DirectoryHelper.cs" />
     <Compile Include="PdfDoc\Converters\PdfConverter_HtmlToPdf.cs" />
     <Compile Include="PdfDoc\PdfMerger.cs" />
@@ -355,7 +355,7 @@
     <Compile Include="Database\DBConnection.cs" />
     <Compile Include="Web\Email.cs" />
     <Compile Include="Web\Http.cs" />
-    <Compile Include="Logger\DBLogger.cs" />
+    <Compile Include="Logger\DbLogger.cs" />
     <Compile Include="Domain\DomainHelper.cs" />
     <Compile Include="Encryption\StringEncrypt.cs" />
     <Compile Include="Encryption\ConnectionStringEncryptor.cs" />
@@ -437,10 +437,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="XmlDoc\Converters\BulkDocumentToPdfConverter.cs" />
-    <Compile Include="XmlDoc\Converters\MSOfficeDocToPdf.cs" />
     <Compile Include="Extensions\Generic.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
-    <Compile Include="Domain\ADAccessor.cs" />
+    <Compile Include="Domain\AdAccessor.cs" />
     <Compile Include="Domain\Impersonation.cs" />
     <Compile Include="Logger\FileLogger.cs" />
     <Compile Include="Streams\SafeFileStream.cs" />
@@ -452,7 +451,7 @@
     <Compile Include="XmlDoc\MailMerge\ReAlMailMerge.cs" />
     <Compile Include="XmlDoc\MailMerge\WordInteropMailMerge.cs" />
     <Compile Include="XmlDoc\Parser.cs" />
-    <Compile Include="Zip\ExtractOtherArchiveType.cs" />
+    <Compile Include="Zip\ExtractOtherCompressedArchiveTypes.cs" />
     <Compile Include="Zip\ZipArchive.Native.cs" />
     <Compile Include="Zip\ZipCompression.cs" />
     <Compile Include="Zip\ZipExtraction.cs" />

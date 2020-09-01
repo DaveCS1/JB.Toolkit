@@ -8,7 +8,7 @@ namespace JBToolkit.Database
     /// <summary>
     /// Abstract database provider class
     /// </summary>
-    public abstract partial class DBConnection
+    public abstract partial class DbConnection
     {
         /// <summary>
         /// Uses Dapper to query the database, returning an IEnumerable of the object
@@ -19,7 +19,7 @@ namespace JBToolkit.Database
         /// <returns>IEnumerable of type of oject</returns>
         protected async Task<IEnumerable<T>> QueryAsync<T>(string sql, object sqlParameters = null)
         {
-            using (var conn = new SqlConnection(ApplyInitialCatalogToConnectionString(DBName, ConnectionString)))
+            using (var conn = new SqlConnection(ApplyInitialCatalogToConnectionString(DbName, ConnectionString)))
             {
                 return (await conn.QueryAsync<T>(sql, sqlParameters));
             }
@@ -34,7 +34,7 @@ namespace JBToolkit.Database
         /// <returns>object of a given type</returns>
         protected async Task<T> FirstOrDefaultAsync<T>(string sql, object sqlParameters)
         {
-            using (var conn = new SqlConnection(ApplyInitialCatalogToConnectionString(DBName, ConnectionString)))
+            using (var conn = new SqlConnection(ApplyInitialCatalogToConnectionString(DbName, ConnectionString)))
             {
                 return (await conn.QueryFirstOrDefaultAsync<T>(sql, sqlParameters));
             }
@@ -49,7 +49,7 @@ namespace JBToolkit.Database
         /// <returns>object of a given type</returns>
         protected async Task<T> SingleOrDefaultAsync<T>(string sql, object sqlParameters = null)
         {
-            using (var conn = new SqlConnection(ApplyInitialCatalogToConnectionString(DBName, ConnectionString)))
+            using (var conn = new SqlConnection(ApplyInitialCatalogToConnectionString(DbName, ConnectionString)))
             {
                 return (await conn.QuerySingleOrDefaultAsync<T>(sql, sqlParameters));
             }
@@ -63,7 +63,7 @@ namespace JBToolkit.Database
         /// <returns>Integer of row update primary key or increment</returns>
         protected async Task<int> ExecuteAsync(string sql, object sqlParameters)
         {
-            using (var conn = new SqlConnection(ApplyInitialCatalogToConnectionString(DBName, ConnectionString)))
+            using (var conn = new SqlConnection(ApplyInitialCatalogToConnectionString(DbName, ConnectionString)))
             {
                 return await conn.ExecuteAsync(sql, sqlParameters);
             }
@@ -78,7 +78,7 @@ namespace JBToolkit.Database
         /// <returns>object of a given type</returns>
         protected async Task<T> ExecuteScalarAsync<T>(string sql, object sqlParameters)
         {
-            using (var conn = new SqlConnection(ApplyInitialCatalogToConnectionString(DBName, ConnectionString)))
+            using (var conn = new SqlConnection(ApplyInitialCatalogToConnectionString(DbName, ConnectionString)))
             {
                 return (await conn.ExecuteScalarAsync<T>(sql, sqlParameters));
             }

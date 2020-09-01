@@ -32,7 +32,7 @@ namespace JBToolkit.Web
             string accessDeniedReason)
         {
             CreateIfNoTableExists(dbName, connectionString);
-            DBGeneric dbCon = new DBGeneric(dbName, connectionString, applicationName);
+            DbGeneric dbCon = new DbGeneric(dbName, connectionString, applicationName);
 
             string accessGrantedStr = "NULL";
             if (accessGranted != null)

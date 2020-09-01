@@ -16,6 +16,5 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "IDE0074:Use compound assignment", Justification = "<Pending>", Scope = "member", Target = "~P:JBToolkit.Images.ColourHelper.IntensityValue.ChildB")]
 [assembly: SuppressMessage("Design", "CA1063:Implement IDisposable Correctly", Justification = "<Pending>", Scope = "member", Target = "~M:JBToolkit.Zip.Native.ZipArchive.Dispose")]
 [assembly: SuppressMessage("Design", "CA1063:Implement IDisposable Correctly", Justification = "<Pending>", Scope = "type", Target = "~T:JBToolkit.Zip.Native.ZipArchive")]
-[assembly: SuppressMessage("Design", "CA1063:Implement IDisposable Correctly", Justification = "<Pending>", Scope = "member", Target = "~M:JBToolkit.Windows.ConsoleHelper.ProgressBar.Dispose")]
-[assembly: SuppressMessage("Design", "CA1063:Implement IDisposable Correctly", Justification = "<Pending>", Scope = "type", Target = "~T:JBToolkit.Windows.ConsoleHelper.ProgressBar")]
-[assembly: SuppressMessage("Style", "IDE0034:Simplify 'default' expression", Justification = "<Pending>", Scope = "member", Target = "~M:JBToolkit.Windows.ConsoleHelper.Option.Parse``1(System.String,JBToolkit.Windows.ConsoleHelper.OptionContext)~``0")]
+[assembly: SuppressMessage("Design", "CA1063:Implement IDisposable Correctly", Justification = "<Pending>", Scope = "type", Target = "~T:JBToolkit.ConsoleHelper.ProgressBar")]
+[assembly: SuppressMessage("Style", "IDE0034:Simplify 'default' expression", Justification = "<Pending>", Scope = "member", Target = "~M:JBToolkit.ConsoleHelper.Options.Option.Parse``1(System.String,JBToolkit.ConsoleHelper.Options.OptionContext)~``0")]

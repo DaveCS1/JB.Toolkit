@@ -1,6 +1,6 @@
 <map id="KeyedCollection" name="KeyedCollection">
-<area shape="rect" id="node1" title=" " alt="" coords="160,5,276,83"/>
-<area shape="rect" id="node2" href="$d4/ddb/class_j_b_toolkit_1_1_windows_1_1_console_helper_1_1_command_set.html" title=" " alt="" coords="5,138,207,523"/>
-<area shape="rect" id="node3" href="$d8/d6c/class_j_b_toolkit_1_1_windows_1_1_console_helper_1_1_option_set.html" title=" " alt="" coords="231,131,429,531"/>
-<area shape="rect" id="node4" href="$d5/dc8/class_j_b_toolkit_1_1_windows_1_1_console_helper_1_1_command_option_set.html" title=" " alt="" coords="239,579,421,700"/>
+<area shape="rect" id="node1" title=" " alt="" coords="137,5,253,83"/>
+<area shape="rect" id="node2" href="$dc/d95/class_j_b_toolkit_1_1_console_helper_1_1_options_1_1_command_set.html" title=" " alt="" coords="5,138,176,523"/>
+<area shape="rect" id="node3" href="$d3/d93/class_j_b_toolkit_1_1_console_helper_1_1_options_1_1_option_set.html" title=" " alt="" coords="200,131,397,531"/>
+<area shape="rect" id="node4" href="$df/d01/class_j_b_toolkit_1_1_console_helper_1_1_options_1_1_command_option_set.html" title=" " alt="" coords="205,579,393,700"/>
 </map>

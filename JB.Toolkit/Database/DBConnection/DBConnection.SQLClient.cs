@@ -2,14 +2,14 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using static JBToolkit.Database.DBResult;
+using static JBToolkit.Database.DbResult;
 
 namespace JBToolkit.Database
 {
     /// <summary>
     /// Abstract database provider class
     /// </summary>
-    public abstract partial class DBConnection
+    public abstract partial class DbConnection
     {
         /// <summary>
         /// Returns a datatable result from an SQL query string
@@ -36,7 +36,7 @@ namespace JBToolkit.Database
 
                 if (EnableLogging)
                 {
-                    Logger.LogToDB(e, "Command: " + command);
+                    Logger.LogToDb(e, "Command: " + command);
                 }
 
                 if (throwOnError)
@@ -55,7 +55,7 @@ namespace JBToolkit.Database
         /// </summary>
         /// <param name="jqt">The pre-created Jquery Data Table object</param>
         /// <returns>DBResult Success or failure bool and any messages and results</returns>
-        public virtual DBResult GetDataTableEx(string command)
+        public virtual DbResult GetDataTableEx(string command)
         {
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -93,7 +93,7 @@ namespace JBToolkit.Database
             CommandType commandType = CommandType.DEFAULT,
             bool throwOnError = true)
         {
-            if (string.IsNullOrEmpty(DBName))
+            if (string.IsNullOrEmpty(DbName))
             {
                 throw new ApplicationException("DB instance name not set");
             }
@@ -108,7 +108,7 @@ namespace JBToolkit.Database
 
                     using (var sqlCommand = new SqlCommand(@"EXECUTE sp_executesql @cmd", conn))
                     {
-                        sqlCommand.Parameters.AddWithValue("@cmd", string.Format("use {0}", DBName) + " " + command);
+                        sqlCommand.Parameters.AddWithValue("@cmd", string.Format("use {0}", DbName) + " " + command);
                         sqlCommand.CommandTimeout = 2400;
 
                         switch (commandType)
@@ -134,7 +134,7 @@ namespace JBToolkit.Database
             {
                 if (EnableLogging)
                 {
-                    Logger.LogToDB(e, "Command: " + command);
+                    Logger.LogToDb(e, "Command: " + command);
                 }
 
                 if (throwOnError)
@@ -152,7 +152,7 @@ namespace JBToolkit.Database
         /// </summary>
         /// <param name="jqt">The pre-created Jquery Data Table object</param>
         /// <returns>DBResult Success or failure bool and any messages and results</returns>
-        public virtual DBResult GetDataSetEx(string command)
+        public virtual DbResult GetDataSetEx(string command)
         {
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -204,7 +204,7 @@ namespace JBToolkit.Database
 
                 if (EnableLogging)
                 {
-                    Logger.LogToDB(e, "Command: " + command);
+                    Logger.LogToDb(e, "Command: " + command);
                 }
 
                 if (throwOnError)
@@ -231,7 +231,7 @@ namespace JBToolkit.Database
             CommandType commandType = CommandType.DEFAULT,
             bool throwOnError = true)
         {
-            if (string.IsNullOrEmpty(DBName))
+            if (string.IsNullOrEmpty(DbName))
             {
                 throw new ApplicationException("DB instance name not set");
             }
@@ -249,7 +249,7 @@ namespace JBToolkit.Database
                     {
                         SelectCommand = new SqlCommand(@"EXECUTE sp_executesql @cmd", conn)
                     };
-                    adapter.SelectCommand.Parameters.AddWithValue("@cmd", string.Format("use {0}", DBName) + " " + command);
+                    adapter.SelectCommand.Parameters.AddWithValue("@cmd", string.Format("use {0}", DbName) + " " + command);
                     adapter.SelectCommand.CommandTimeout = 2400;
 
                     switch (commandType)
@@ -272,7 +272,7 @@ namespace JBToolkit.Database
             {
                 if (EnableLogging)
                 {
-                    Logger.LogToDB(e, "Command: " + command);
+                    Logger.LogToDb(e, "Command: " + command);
                 }
 
                 if (throwOnError)
@@ -304,7 +304,7 @@ namespace JBToolkit.Database
 
                 if (EnableLogging)
                 {
-                    Logger.LogToDB(e, "Command: " + command);
+                    Logger.LogToDb(e, "Command: " + command);
                 }
 
                 if (throwOnError)
@@ -321,7 +321,7 @@ namespace JBToolkit.Database
         /// </summary>
         /// <param name="command">SQL Command string</param>
         /// <returns>DBResult Success or failure bool and any messages and results</returns>
-        public virtual DBResult GetScalerResultEx(string command)
+        public virtual DbResult GetScalerResultEx(string command)
         {
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -354,7 +354,7 @@ namespace JBToolkit.Database
         /// <returns>A sting string - i.e. of HTML</returns>
         public virtual string GetScalerResult(string command, bool throwOnError = true)
         {
-            if (string.IsNullOrEmpty(DBName))
+            if (string.IsNullOrEmpty(DbName))
             {
                 throw new ApplicationException("DB instance name not set");
             }
@@ -368,7 +368,7 @@ namespace JBToolkit.Database
                     conn.Open();
                     using (var sqlCommand = new SqlCommand(@"EXECUTE sp_executesql @cmd", conn))
                     {
-                        sqlCommand.Parameters.AddWithValue("@cmd", string.Format("use {0}", DBName) + " " + command);
+                        sqlCommand.Parameters.AddWithValue("@cmd", string.Format("use {0}", DbName) + " " + command);
                         sqlCommand.CommandTimeout = 240;
 
                         using (SqlDataReader dr = sqlCommand.ExecuteReader())
@@ -390,7 +390,7 @@ namespace JBToolkit.Database
             {
                 if (EnableLogging)
                 {
-                    Logger.LogToDB(e, "Command: " + command);
+                    Logger.LogToDb(e, "Command: " + command);
                 }
 
                 if (throwOnError)
@@ -411,7 +411,7 @@ namespace JBToolkit.Database
         /// </summary>
         /// <param name="command"></param>
         /// <returns>DBResult Success or failure bool and any messages and results</returns>
-        public virtual DBResult ExecuteNonQueryEx(string command)
+        public virtual DbResult ExecuteNonQueryEx(string command)
         {
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -446,7 +446,7 @@ namespace JBToolkit.Database
         {
             errMsg = string.Empty;
 
-            if (string.IsNullOrEmpty(DBName))
+            if (string.IsNullOrEmpty(DbName))
             {
                 throw new ApplicationException("DB instance name not set");
             }
@@ -461,7 +461,7 @@ namespace JBToolkit.Database
 
                     using (var sqlCommand = new SqlCommand(@"EXECUTE sp_executesql @cmd", conn))
                     {
-                        sqlCommand.Parameters.AddWithValue("@cmd", string.Format("use {0}", DBName) + " " + command);
+                        sqlCommand.Parameters.AddWithValue("@cmd", string.Format("use {0}", DbName) + " " + command);
                         sqlCommand.CommandTimeout = 240;
                         sqlCommand.ExecuteNonQuery();
                         conn.Close();
@@ -474,7 +474,7 @@ namespace JBToolkit.Database
             {
                 if (EnableLogging)
                 {
-                    Logger.LogToDB(e, "Command: " + command);
+                    Logger.LogToDb(e, "Command: " + command);
                 }
 
                 if (throwOnError)
@@ -495,7 +495,7 @@ namespace JBToolkit.Database
         /// </summary>
         /// <param name="command"></param>
         /// <returns>DBResult Success or failure bool and any messages and results</returns>
-        public virtual DBResult ExecuteNonQueryScopeIdentityEx(string command)
+        public virtual DbResult ExecuteNonQueryScopeIdentityEx(string command)
         {
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -537,7 +537,7 @@ namespace JBToolkit.Database
             errMsg = string.Empty;
             scopedIdentity = "0";
 
-            if (string.IsNullOrEmpty(DBName))
+            if (string.IsNullOrEmpty(DbName))
             {
                 throw new ApplicationException("DB instance name not set");
             }
@@ -552,7 +552,7 @@ namespace JBToolkit.Database
 
                     using (var sqlCommand = new SqlCommand(@"EXECUTE sp_executesql @cmd", conn))
                     {
-                        sqlCommand.Parameters.AddWithValue("@cmd", string.Format("use {0}", DBName) + " " + command + "; SELECT SCOPE_IDENTITY();");
+                        sqlCommand.Parameters.AddWithValue("@cmd", string.Format("use {0}", DbName) + " " + command + "; SELECT SCOPE_IDENTITY();");
                         sqlCommand.CommandTimeout = 240;
 
                         scopedIdentity = sqlCommand.ExecuteScalar().ToString();
@@ -566,7 +566,7 @@ namespace JBToolkit.Database
             {
                 if (EnableLogging)
                 {
-                    Logger.LogToDB(e, "Command: " + command);
+                    Logger.LogToDb(e, "Command: " + command);
                 }
 
                 if (throwOnError)

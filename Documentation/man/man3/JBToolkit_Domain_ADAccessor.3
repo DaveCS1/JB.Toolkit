@@ -1,8 +1,8 @@
-.TH "JBToolkit.Domain.ADAccessor" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.TH "JBToolkit.Domain.AdAccessor" 3 "Tue Sep 1 2020" "JB.Toolkit" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-JBToolkit.Domain.ADAccessor \- Accesses a given Active Directory server as specified in the web\&.config for retrieving additional user information  
+JBToolkit.Domain.AdAccessor \- Accesses a given Active Directory server as specified in the web\&.config for retrieving additional user information  
 
 .SH SYNOPSIS
 .br
@@ -18,21 +18,21 @@ JBToolkit.Domain.ADAccessor \- Accesses a given Active Directory server as speci
 
 .in +1c
 .ti -1c
-.RI "static \fBADUser\fP \fBGetADUser\fP (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)"
+.RI "static \fBAdUser\fP \fBGetAdUser\fP (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)"
 .br
 .RI "Gets Active Directory attributes of a given user specified by username "
 .ti -1c
-.RI "static \fBADUser\fP \fBGetADUser\fP (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adDomainName, string adAdminUsername, string adAdminPassword)"
+.RI "static \fBAdUser\fP \fBGetAdUser\fP (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adDomainName, string adAdminUsername, string adAdminPassword)"
 .br
 .RI "Gets Active Directory attributes of a given user specified by username "
 .ti -1c
-.RI "static \fBADUser\fP \fBGetADUserManager\fP (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword, bool recursivelyGetHierarchyAbove=false)"
+.RI "static \fBAdUser\fP \fBGetAdUserManager\fP (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword, bool recursivelyGetHierarchyAbove=false)"
 .br
-.RI "Returns the manager \fBADUser\fP object of the user "
+.RI "Returns the manager ADUser object of the user "
 .ti -1c
-.RI "static \fBADUser\fP \fBGetADUserManager\fP (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adDomainName, string adAdminUsername, string adAdminPassword, bool recursivelyGetHierarchyAbove=false)"
+.RI "static \fBAdUser\fP \fBGetADUserManager\fP (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adDomainName, string adAdminUsername, string adAdminPassword, bool recursivelyGetHierarchyAbove=false)"
 .br
-.RI "Returns the manager \fBADUser\fP object of the user "
+.RI "Returns the manager ADUser object of the user "
 .ti -1c
 .RI "static string \fBGetUsernameFromEmailAddress\fP (string emailAddress, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)"
 .br
@@ -54,11 +54,11 @@ JBToolkit.Domain.ADAccessor \- Accesses a given Active Directory server as speci
 .br
 .RI "Returns the logged in user email (don't use this if deploying to IIS without \fBWindows\fP authentication) "
 .ti -1c
-.RI "static byte[] \fBGetADPhotoFromEmail\fP (string email, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)"
+.RI "static byte[] \fBGetAdPhotoFromEmail\fP (string email, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)"
 .br
 .RI "Gets the photo stored in AD user "
 .ti -1c
-.RI "static byte[] \fBGetADPhotoFromUsername\fP (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)"
+.RI "static byte[] \fBGetAdPhotoFromUsername\fP (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)"
 .br
 .RI "Gets the photo stored in AD user "
 .ti -1c
@@ -66,11 +66,11 @@ JBToolkit.Domain.ADAccessor \- Accesses a given Active Directory server as speci
 .br
 .RI "Returns all users of the domain "
 .ti -1c
-.RI "static SearchResult \fBGetADSearchResult\fP (string searchString, string searchFilter, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)"
+.RI "static SearchResult \fBGetAdSearchResult\fP (string searchString, string searchFilter, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)"
 .br
 .RI "Returns a DirectoryServices SearchResult object "
 .ti -1c
-.RI "static SearchResultCollection \fBGetADSearchResults\fP (string searchString, string searchFilter, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)"
+.RI "static SearchResultCollection \fBGetAdSearchResults\fP (string searchString, string searchFilter, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)"
 .br
 .RI "Returns a DirectoryServices SearchResult object "
 .ti -1c
@@ -85,7 +85,7 @@ Accesses a given Active Directory server as specified in the web\&.config for re
 
 .SH "Member Enumeration Documentation"
 .PP 
-.SS "enum \fBJBToolkit\&.Domain\&.ADAccessor\&.IdentityType\fP\fC [strong]\fP"
+.SS "enum \fBJBToolkit\&.Domain\&.AdAccessor\&.IdentityType\fP\fC [strong]\fP"
 
 .PP
 \fBEnumerator\fP
@@ -98,7 +98,7 @@ Accesses a given Active Directory server as specified in the web\&.config for re
 \fB\fIPrincipleIdentity \fP\fP
 .SH "Member Function Documentation"
 .PP 
-.SS "static byte [] JBToolkit\&.Domain\&.ADAccessor\&.GetADPhotoFromEmail (string email, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
+.SS "static byte [] JBToolkit\&.Domain\&.AdAccessor\&.GetAdPhotoFromEmail (string email, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
 
 .PP
 Gets the photo stored in AD user 
@@ -115,7 +115,7 @@ Gets the photo stored in AD user
 .RE
 .PP
 
-.SS "static byte [] JBToolkit\&.Domain\&.ADAccessor\&.GetADPhotoFromUsername (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
+.SS "static byte [] JBToolkit\&.Domain\&.AdAccessor\&.GetAdPhotoFromUsername (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
 
 .PP
 Gets the photo stored in AD user 
@@ -132,7 +132,7 @@ Gets the photo stored in AD user
 .RE
 .PP
 
-.SS "static SearchResult JBToolkit\&.Domain\&.ADAccessor\&.GetADSearchResult (string searchString, string searchFilter, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
+.SS "static SearchResult JBToolkit\&.Domain\&.AdAccessor\&.GetAdSearchResult (string searchString, string searchFilter, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
 
 .PP
 Returns a DirectoryServices SearchResult object 
@@ -149,7 +149,7 @@ Returns a DirectoryServices SearchResult object
 .RE
 .PP
 
-.SS "static SearchResultCollection JBToolkit\&.Domain\&.ADAccessor\&.GetADSearchResults (string searchString, string searchFilter, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
+.SS "static SearchResultCollection JBToolkit\&.Domain\&.AdAccessor\&.GetAdSearchResults (string searchString, string searchFilter, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
 
 .PP
 Returns a DirectoryServices SearchResult object 
@@ -166,7 +166,7 @@ Returns a DirectoryServices SearchResult object
 .RE
 .PP
 
-.SS "static \fBADUser\fP JBToolkit\&.Domain\&.ADAccessor\&.GetADUser (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
+.SS "static \fBAdUser\fP JBToolkit\&.Domain\&.AdAccessor\&.GetAdUser (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
 
 .PP
 Gets Active Directory attributes of a given user specified by username 
@@ -192,7 +192,7 @@ A custom AD object with limited attributes
 .RE
 .PP
 
-.SS "static \fBADUser\fP JBToolkit\&.Domain\&.ADAccessor\&.GetADUser (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adDomainName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
+.SS "static \fBAdUser\fP JBToolkit\&.Domain\&.AdAccessor\&.GetAdUser (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adDomainName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
 
 .PP
 Gets Active Directory attributes of a given user specified by username 
@@ -220,10 +220,10 @@ A custom AD object with limited attributes
 .RE
 .PP
 
-.SS "static \fBADUser\fP JBToolkit\&.Domain\&.ADAccessor\&.GetADUserManager (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword, bool recursivelyGetHierarchyAbove = \fCfalse\fP)\fC [static]\fP"
+.SS "static \fBAdUser\fP JBToolkit\&.Domain\&.AdAccessor\&.GetAdUserManager (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword, bool recursivelyGetHierarchyAbove = \fCfalse\fP)\fC [static]\fP"
 
 .PP
-Returns the manager \fBADUser\fP object of the user 
+Returns the manager ADUser object of the user 
 .PP
 \fBParameters\fP
 .RS 4
@@ -237,10 +237,10 @@ Returns the manager \fBADUser\fP object of the user
 .RE
 .PP
 
-.SS "static \fBADUser\fP JBToolkit\&.Domain\&.ADAccessor\&.GetADUserManager (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adDomainName, string adAdminUsername, string adAdminPassword, bool recursivelyGetHierarchyAbove = \fCfalse\fP)\fC [static]\fP"
+.SS "static \fBAdUser\fP JBToolkit\&.Domain\&.AdAccessor\&.GetADUserManager (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adDomainName, string adAdminUsername, string adAdminPassword, bool recursivelyGetHierarchyAbove = \fCfalse\fP)\fC [static]\fP"
 
 .PP
-Returns the manager \fBADUser\fP object of the user 
+Returns the manager ADUser object of the user 
 .PP
 \fBParameters\fP
 .RS 4
@@ -256,7 +256,7 @@ Returns the manager \fBADUser\fP object of the user
 .RE
 .PP
 
-.SS "static SearchResultCollection JBToolkit\&.Domain\&.ADAccessor\&.GetAllUsers (bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
+.SS "static SearchResultCollection JBToolkit\&.Domain\&.AdAccessor\&.GetAllUsers (bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
 
 .PP
 Returns all users of the domain 
@@ -273,7 +273,7 @@ Returns all users of the domain
 .RE
 .PP
 
-.SS "static string JBToolkit\&.Domain\&.ADAccessor\&.GetEmailFromUsername (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
+.SS "static string JBToolkit\&.Domain\&.AdAccessor\&.GetEmailFromUsername (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
 
 .PP
 Returns the email from an AD search by username 
@@ -290,11 +290,11 @@ Returns the email from an AD search by username
 .RE
 .PP
 
-.SS "static string JBToolkit\&.Domain\&.ADAccessor\&.GetLoggedInUserEmail ()\fC [static]\fP"
+.SS "static string JBToolkit\&.Domain\&.AdAccessor\&.GetLoggedInUserEmail ()\fC [static]\fP"
 
 .PP
 Returns the logged in user email (don't use this if deploying to IIS without \fBWindows\fP authentication) 
-.SS "static string JBToolkit\&.Domain\&.ADAccessor\&.GetNameFromEmailAddress (string emailAddress, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
+.SS "static string JBToolkit\&.Domain\&.AdAccessor\&.GetNameFromEmailAddress (string emailAddress, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
 
 .PP
 Returns the full name from an AD search by email address 
@@ -311,7 +311,7 @@ Returns the full name from an AD search by email address
 .RE
 .PP
 
-.SS "static string JBToolkit\&.Domain\&.ADAccessor\&.GetNameFromUsername (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
+.SS "static string JBToolkit\&.Domain\&.AdAccessor\&.GetNameFromUsername (string username, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
 
 .PP
 Returns the full name from an AD search by username 
@@ -328,11 +328,11 @@ Returns the full name from an AD search by username
 .RE
 .PP
 
-.SS "static string JBToolkit\&.Domain\&.ADAccessor\&.GetUsername (\fBIdentityType\fP identityType)\fC [static]\fP"
+.SS "static string JBToolkit\&.Domain\&.AdAccessor\&.GetUsername (\fBIdentityType\fP identityType)\fC [static]\fP"
 
 .PP
 Get username based on different types of 'IdentityType' 
-.SS "static string JBToolkit\&.Domain\&.ADAccessor\&.GetUsernameFromEmailAddress (string emailAddress, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
+.SS "static string JBToolkit\&.Domain\&.AdAccessor\&.GetUsernameFromEmailAddress (string emailAddress, bool callingFromWithinDomain, string adServerIpAddress, string adServerHostName, string adAdminUsername, string adAdminPassword)\fC [static]\fP"
 
 .PP
 Returns the username from an AD search by email address 

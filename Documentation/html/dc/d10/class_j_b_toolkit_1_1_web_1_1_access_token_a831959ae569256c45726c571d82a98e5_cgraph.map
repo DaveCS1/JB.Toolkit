@@ -1,4 +1,4 @@
 <map id="JBToolkit.Web.AccessToken.IsAccessTokenValid" name="JBToolkit.Web.AccessToken.IsAccessTokenValid">
 <area shape="rect" id="node1" title="Checks if token exists in the database and isn&#39;t expired" alt="" coords="5,5,199,47"/>
-<area shape="rect" id="node2" href="$d1/d29/class_j_b_toolkit_1_1_database_1_1_d_b_connection.html#a3366b375690d0238e72ce4e34d5b090e" title="Gets a single string from the database given an SQL query (first column, first row) &#45; Typically used ..." alt="" coords="247,5,472,47"/>
+<area shape="rect" id="node2" href="$d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection.html#a8f706f53782c7cfb84361db5f365e164" title="Gets a single string from the database given an SQL query (first column, first row) &#45; Typically used ..." alt="" coords="247,5,469,47"/>
 </map>

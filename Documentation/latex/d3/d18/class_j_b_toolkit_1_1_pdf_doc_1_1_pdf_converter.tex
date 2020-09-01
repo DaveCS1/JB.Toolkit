@@ -11,13 +11,13 @@ Collaboration diagram for J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter\+:\nopagebre
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=231pt]{d4/dac/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter__coll__graph}
+\includegraphics[width=229pt]{d4/dac/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a030c947d4086699ba236bb6ec06a028a}{Save\+M\+S\+Office\+Doc\+As\+Pdf}} (string doc\+Input\+Path, string pdf\+Output\+Path)
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ab0c5ab033d891ca357b0549b41e8259d}{Save\+Ms\+Office\+Doc\+As\+Pdf}} (string doc\+Input\+Path, string pdf\+Output\+Path)
 \begin{DoxyCompactList}\small\item\em Save Docx document to P\+DF to file 
 \begin{DoxyParams}{Parameters}
 {\em doc\+Input\+Path} & Input .docx path\\
@@ -26,9 +26,9 @@ static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a03
 \hline
 \end{DoxyParams}
 \end{DoxyCompactList}\item 
-static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aee56ff829abd0c3db272728f8d7b167c}{Convert\+M\+S\+Office\+Doc\+To\+P\+DF}} (string doc\+Input\+Path)
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a8f232fc2c04f45cca6177e9eebea1ce4}{Convert\+Ms\+Office\+Doc\+To\+Pdf}} (string doc\+Input\+Path)
 \begin{DoxyCompactList}\small\item\em Converts Docx document to P\+DF memory stream (i.\+e. for use in \mbox{\hyperlink{namespace_j_b_toolkit_1_1_web}{Web}} Requests) \end{DoxyCompactList}\item 
-static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aa3d7b84584cb32e6b40d2bf0533014e6}{Convert\+M\+S\+Office\+Doc\+To\+P\+DF}} (Memory\+Stream ms, string file\+Extension)
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a21164df0420ff5f34a58640d6cd26dfa}{Convert\+Ms\+Office\+Doc\+To\+Pdf}} (Memory\+Stream ms, string file\+Extension)
 \begin{DoxyCompactList}\small\item\em Converts Docx document to P\+DF memory stream (i.\+e. for use in \mbox{\hyperlink{namespace_j_b_toolkit_1_1_web}{Web}} Requests) \end{DoxyCompactList}\item 
 static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ae6d7c836626ad29dc1a641b3fcfc49a4}{Convert\+Html\+To\+Pdf}} (string \mbox{\hyperlink{_r_e_a_d_m_e_8txt_a8bcb48f256a0a4bf843d4a47586817d1}{html}})
 \begin{DoxyCompactList}\small\item\em Convert H\+T\+ML text to P\+DF \end{DoxyCompactList}\item 
@@ -44,21 +44,21 @@ static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a16
 \begin{DoxyCompactList}\small\item\em Save H\+T\+ML as a P\+DF file \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_output}{Pdf\+Output}} \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aa00a37ece3224335be4d9b795565def7}{Save\+Html\+To\+Pdf}} (\mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_convert_document}{Pdf\+Convert\+Document}} document, \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_convert_environment}{Pdf\+Convert\+Environment}} environment, \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_output}{Pdf\+Output}} woutput)
 \begin{DoxyCompactList}\small\item\em Save H\+T\+ML as a P\+DF file \end{DoxyCompactList}\item 
-static string \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a8a601f0d114f9479014505d4a1d3c6ae}{Save\+P\+D\+F\+To\+Html}} (string path, string document\+Name, string output\+Root\+Path=\char`\"{}\char`\"{}, bool overwrite\+If\+Exists=false, int timeout\+Seconds=30)
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aa2b88e829e9689b0f55b3d03247a6637}{Save\+Pdf\+As\+Html}} (string path, string document\+Name, string output\+Root\+Path=\char`\"{}\char`\"{}, bool overwrite\+If\+Exists=false, int timeout\+Seconds=30)
 \begin{DoxyCompactList}\small\item\em Saves a P\+DF file as H\+T\+ML file(s) -\/ 1 H\+T\+ML file per P\+DF page. The output string is the root path where the files have been created \end{DoxyCompactList}\item 
-static byte\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_abc56c1fa1259f07ab4c31686f826b785}{Convert\+P\+D\+F\+To\+Image\+Byte\+Array\+Array}} (string path, bool using\+To\+Extract\+Text=false, int timeout\+Seconds=30)
+static byte\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a1a2afddd2f6549e318414e71a95834bc}{Convert\+Pdf\+To\+Image2\+D\+Byte\+Array}} (string path, bool using\+To\+Extract\+Text=false, int timeout\+Seconds=30)
 \begin{DoxyCompactList}\small\item\em Converts P\+DF to 3D byte array (array of byte arrays -\/ 1 byte array for each image for each page) \end{DoxyCompactList}\item 
-static Memory\+Stream\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_af4b4ec721f4b099cc351b4384e65a925}{Convert\+P\+D\+F\+To\+Png}} (string path, bool using\+To\+Extact\+Text=false, int timeout\+Seconds=30)
+static Memory\+Stream\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aabe1e175297337e4b96fd0455fab1dc9}{Convert\+Pdf\+To\+Png}} (string path, bool using\+To\+Extact\+Text=false, int timeout\+Seconds=30)
 \begin{DoxyCompactList}\small\item\em Converts P\+DF to memory stream array (array memory streams -\/ 1 memory stream for each image for each page) \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a6061d6a4912c19ddf5cedff9ab762a6e}{Save\+P\+D\+F\+As\+Png}} (string input\+Path, string root\+Output\+Path, string image\+Title, int timeout\+Seconds=30)
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ad982a6679fd1143cabcbe42752b5682e}{Save\+Pdf\+As\+Png}} (string input\+Path, string root\+Output\+Path, string image\+Title, int timeout\+Seconds=30)
 \begin{DoxyCompactList}\small\item\em Converts and saves a P\+DF file as 1 or more P\+NG images (1 image per P\+DF page) \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aa0ba34122dcf6d47eb0ce6d5f6b4c850}{Save\+As\+Pdf}} (string doc\+Input\+Path, string pdf\+Output\+Path)
 \begin{DoxyCompactList}\small\item\em Save document file or image to P\+DF \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a7c073aef3d66121765edc733452c3c0a}{Convert\+To\+P\+DF}} (string doc\+Input\+Path, string pdf\+Output\+Path)
-\begin{DoxyCompactList}\small\item\em Save document file or image to P\+DF \end{DoxyCompactList}\item 
-static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a88730c3578f275269da09371b6c790f2}{Convert\+To\+P\+DF}} (Memory\+Stream ms, string file\+Extension)
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a837197e9a08771cb3678c30180385bbf}{Convert\+To\+Pdf}} (string doc\+Input\+Path, string pdf\+Output\+Path)
+\begin{DoxyCompactList}\small\item\em Convert and save pretty much any office file (.docx, .xlsx, .pptx, .vsdx, .pub, .msg etc), image or text file to P\+DF \end{DoxyCompactList}\item 
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ae544ca257edef0eb490d028d8b155c57}{Convert\+To\+Pdf}} (Memory\+Stream ms, string file\+Extension)
 \begin{DoxyCompactList}\small\item\em Converts document file or image to P\+DF memory stream (i.\+e. for use in \mbox{\hyperlink{namespace_j_b_toolkit_1_1_web}{Web}} Requests) \end{DoxyCompactList}\item 
-static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ad66bee9cd91a56376636fa243562fbc9}{Convert\+To\+P\+DF}} (string doc\+Input\+Put)
+static Memory\+Stream \mbox{\hyperlink{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ab9cb72f47ac9d0c6d1c2abb4945f856a}{Convert\+To\+Pdf}} (string doc\+Input\+Put)
 \begin{DoxyCompactList}\small\item\em Converts document file or image to P\+DF memory stream (i.\+e. for use in \mbox{\hyperlink{namespace_j_b_toolkit_1_1_web}{Web}} Requests) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -160,11 +160,11 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aa49ad654271f4d59a22d203e480c4396_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aa3d7b84584cb32e6b40d2bf0533014e6}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aa3d7b84584cb32e6b40d2bf0533014e6}} 
-\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!ConvertMSOfficeDocToPDF@{ConvertMSOfficeDocToPDF}}
-\index{ConvertMSOfficeDocToPDF@{ConvertMSOfficeDocToPDF}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
-\doxysubsubsection{\texorpdfstring{ConvertMSOfficeDocToPDF()}{ConvertMSOfficeDocToPDF()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Convert\+M\+S\+Office\+Doc\+To\+P\+DF (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{string}]{file\+Extension }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a21164df0420ff5f34a58640d6cd26dfa}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a21164df0420ff5f34a58640d6cd26dfa}} 
+\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!ConvertMsOfficeDocToPdf@{ConvertMsOfficeDocToPdf}}
+\index{ConvertMsOfficeDocToPdf@{ConvertMsOfficeDocToPdf}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
+\doxysubsubsection{\texorpdfstring{ConvertMsOfficeDocToPdf()}{ConvertMsOfficeDocToPdf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Convert\+Ms\+Office\+Doc\+To\+Pdf (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{string}]{file\+Extension }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -182,14 +182,14 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aa3d7b84584cb32e6b40d2bf0533014e6_cgraph}
+\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a21164df0420ff5f34a58640d6cd26dfa_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aee56ff829abd0c3db272728f8d7b167c}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aee56ff829abd0c3db272728f8d7b167c}} 
-\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!ConvertMSOfficeDocToPDF@{ConvertMSOfficeDocToPDF}}
-\index{ConvertMSOfficeDocToPDF@{ConvertMSOfficeDocToPDF}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
-\doxysubsubsection{\texorpdfstring{ConvertMSOfficeDocToPDF()}{ConvertMSOfficeDocToPDF()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Convert\+M\+S\+Office\+Doc\+To\+P\+DF (\begin{DoxyParamCaption}\item[{string}]{doc\+Input\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a8f232fc2c04f45cca6177e9eebea1ce4}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a8f232fc2c04f45cca6177e9eebea1ce4}} 
+\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!ConvertMsOfficeDocToPdf@{ConvertMsOfficeDocToPdf}}
+\index{ConvertMsOfficeDocToPdf@{ConvertMsOfficeDocToPdf}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
+\doxysubsubsection{\texorpdfstring{ConvertMsOfficeDocToPdf()}{ConvertMsOfficeDocToPdf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Convert\+Ms\+Office\+Doc\+To\+Pdf (\begin{DoxyParamCaption}\item[{string}]{doc\+Input\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -207,14 +207,14 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aee56ff829abd0c3db272728f8d7b167c_cgraph}
+\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a8f232fc2c04f45cca6177e9eebea1ce4_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_abc56c1fa1259f07ab4c31686f826b785}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_abc56c1fa1259f07ab4c31686f826b785}} 
-\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!ConvertPDFToImageByteArrayArray@{ConvertPDFToImageByteArrayArray}}
-\index{ConvertPDFToImageByteArrayArray@{ConvertPDFToImageByteArrayArray}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
-\doxysubsubsection{\texorpdfstring{ConvertPDFToImageByteArrayArray()}{ConvertPDFToImageByteArrayArray()}}
-{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Convert\+P\+D\+F\+To\+Image\+Byte\+Array\+Array (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{bool}]{using\+To\+Extract\+Text = {\ttfamily false},  }\item[{int}]{timeout\+Seconds = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a1a2afddd2f6549e318414e71a95834bc}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a1a2afddd2f6549e318414e71a95834bc}} 
+\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!ConvertPdfToImage2DByteArray@{ConvertPdfToImage2DByteArray}}
+\index{ConvertPdfToImage2DByteArray@{ConvertPdfToImage2DByteArray}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
+\doxysubsubsection{\texorpdfstring{ConvertPdfToImage2DByteArray()}{ConvertPdfToImage2DByteArray()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Convert\+Pdf\+To\+Image2\+D\+Byte\+Array (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{bool}]{using\+To\+Extract\+Text = {\ttfamily false},  }\item[{int}]{timeout\+Seconds = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -236,21 +236,21 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_abc56c1fa1259f07ab4c31686f826b785_cgraph}
+\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a1a2afddd2f6549e318414e71a95834bc_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_abc56c1fa1259f07ab4c31686f826b785_icgraph}
+\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a1a2afddd2f6549e318414e71a95834bc_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_af4b4ec721f4b099cc351b4384e65a925}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_af4b4ec721f4b099cc351b4384e65a925}} 
-\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!ConvertPDFToPng@{ConvertPDFToPng}}
-\index{ConvertPDFToPng@{ConvertPDFToPng}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
-\doxysubsubsection{\texorpdfstring{ConvertPDFToPng()}{ConvertPDFToPng()}}
-{\footnotesize\ttfamily static Memory\+Stream \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Convert\+P\+D\+F\+To\+Png (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{bool}]{using\+To\+Extact\+Text = {\ttfamily false},  }\item[{int}]{timeout\+Seconds = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aabe1e175297337e4b96fd0455fab1dc9}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aabe1e175297337e4b96fd0455fab1dc9}} 
+\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!ConvertPdfToPng@{ConvertPdfToPng}}
+\index{ConvertPdfToPng@{ConvertPdfToPng}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
+\doxysubsubsection{\texorpdfstring{ConvertPdfToPng()}{ConvertPdfToPng()}}
+{\footnotesize\ttfamily static Memory\+Stream \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Convert\+Pdf\+To\+Png (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{bool}]{using\+To\+Extact\+Text = {\ttfamily false},  }\item[{int}]{timeout\+Seconds = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -272,21 +272,21 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_af4b4ec721f4b099cc351b4384e65a925_cgraph}
+\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aabe1e175297337e4b96fd0455fab1dc9_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_af4b4ec721f4b099cc351b4384e65a925_icgraph}
+\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aabe1e175297337e4b96fd0455fab1dc9_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a88730c3578f275269da09371b6c790f2}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a88730c3578f275269da09371b6c790f2}} 
-\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!ConvertToPDF@{ConvertToPDF}}
-\index{ConvertToPDF@{ConvertToPDF}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
-\doxysubsubsection{\texorpdfstring{ConvertToPDF()}{ConvertToPDF()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Convert\+To\+P\+DF (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{string}]{file\+Extension }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ae544ca257edef0eb490d028d8b155c57}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ae544ca257edef0eb490d028d8b155c57}} 
+\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!ConvertToPdf@{ConvertToPdf}}
+\index{ConvertToPdf@{ConvertToPdf}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
+\doxysubsubsection{\texorpdfstring{ConvertToPdf()}{ConvertToPdf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Convert\+To\+Pdf (\begin{DoxyParamCaption}\item[{Memory\+Stream}]{ms,  }\item[{string}]{file\+Extension }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -306,22 +306,22 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a88730c3578f275269da09371b6c790f2_cgraph}
+\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ae544ca257edef0eb490d028d8b155c57_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a7c073aef3d66121765edc733452c3c0a}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a7c073aef3d66121765edc733452c3c0a}} 
-\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!ConvertToPDF@{ConvertToPDF}}
-\index{ConvertToPDF@{ConvertToPDF}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
-\doxysubsubsection{\texorpdfstring{ConvertToPDF()}{ConvertToPDF()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Convert\+To\+P\+DF (\begin{DoxyParamCaption}\item[{string}]{doc\+Input\+Path,  }\item[{string}]{pdf\+Output\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a837197e9a08771cb3678c30180385bbf}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a837197e9a08771cb3678c30180385bbf}} 
+\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!ConvertToPdf@{ConvertToPdf}}
+\index{ConvertToPdf@{ConvertToPdf}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
+\doxysubsubsection{\texorpdfstring{ConvertToPdf()}{ConvertToPdf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Convert\+To\+Pdf (\begin{DoxyParamCaption}\item[{string}]{doc\+Input\+Path,  }\item[{string}]{pdf\+Output\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Save document file or image to P\+DF 
+Convert and save pretty much any office file (.docx, .xlsx, .pptx, .vsdx, .pub, .msg etc), image or text file to P\+DF 
 
 
 \begin{DoxyParams}{Parameters}
-{\em doc\+Input\+Path} & Input document path\\
+{\em doc\+Input\+Path} & Input document or image path path\\
 \hline
 {\em pdf\+Output\+Path} & Output .pdf path\\
 \hline
@@ -330,14 +330,14 @@ Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a7c073aef3d66121765edc733452c3c0a_icgraph}
+\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a837197e9a08771cb3678c30180385bbf_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ad66bee9cd91a56376636fa243562fbc9}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ad66bee9cd91a56376636fa243562fbc9}} 
-\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!ConvertToPDF@{ConvertToPDF}}
-\index{ConvertToPDF@{ConvertToPDF}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
-\doxysubsubsection{\texorpdfstring{ConvertToPDF()}{ConvertToPDF()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Convert\+To\+P\+DF (\begin{DoxyParamCaption}\item[{string}]{doc\+Input\+Put }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ab9cb72f47ac9d0c6d1c2abb4945f856a}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ab9cb72f47ac9d0c6d1c2abb4945f856a}} 
+\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!ConvertToPdf@{ConvertToPdf}}
+\index{ConvertToPdf@{ConvertToPdf}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
+\doxysubsubsection{\texorpdfstring{ConvertToPdf()}{ConvertToPdf()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static Memory\+Stream J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Convert\+To\+Pdf (\begin{DoxyParamCaption}\item[{string}]{doc\+Input\+Put }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -480,11 +480,11 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a500e8cf07eff951de7fe9856a3bf87a6_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a030c947d4086699ba236bb6ec06a028a}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a030c947d4086699ba236bb6ec06a028a}} 
-\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!SaveMSOfficeDocAsPdf@{SaveMSOfficeDocAsPdf}}
-\index{SaveMSOfficeDocAsPdf@{SaveMSOfficeDocAsPdf}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
-\doxysubsubsection{\texorpdfstring{SaveMSOfficeDocAsPdf()}{SaveMSOfficeDocAsPdf()}}
-{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Save\+M\+S\+Office\+Doc\+As\+Pdf (\begin{DoxyParamCaption}\item[{string}]{doc\+Input\+Path,  }\item[{string}]{pdf\+Output\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ab0c5ab033d891ca357b0549b41e8259d}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ab0c5ab033d891ca357b0549b41e8259d}} 
+\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!SaveMsOfficeDocAsPdf@{SaveMsOfficeDocAsPdf}}
+\index{SaveMsOfficeDocAsPdf@{SaveMsOfficeDocAsPdf}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
+\doxysubsubsection{\texorpdfstring{SaveMsOfficeDocAsPdf()}{SaveMsOfficeDocAsPdf()}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Save\+Ms\+Office\+Doc\+As\+Pdf (\begin{DoxyParamCaption}\item[{string}]{doc\+Input\+Path,  }\item[{string}]{pdf\+Output\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -501,44 +501,14 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a030c947d4086699ba236bb6ec06a028a_cgraph}
+\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ab0c5ab033d891ca357b0549b41e8259d_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a6061d6a4912c19ddf5cedff9ab762a6e}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a6061d6a4912c19ddf5cedff9ab762a6e}} 
-\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!SavePDFAsPng@{SavePDFAsPng}}
-\index{SavePDFAsPng@{SavePDFAsPng}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
-\doxysubsubsection{\texorpdfstring{SavePDFAsPng()}{SavePDFAsPng()}}
-{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Save\+P\+D\+F\+As\+Png (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{string}]{root\+Output\+Path,  }\item[{string}]{image\+Title,  }\item[{int}]{timeout\+Seconds = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Converts and saves a P\+DF file as 1 or more P\+NG images (1 image per P\+DF page) 
-
-
-\begin{DoxyParams}{Parameters}
-{\em input\+Path} & Input file path of P\+DF file\\
-\hline
-{\em root\+Output\+Path} & Root output folder where P\+NG images will be saved to\\
-\hline
-{\em image\+Title} & A given title for the prefix of the set of images\\
-\hline
-{\em timeout\+Seconds} & Timeout in seconds before error is reported\\
-\hline
-{\em throw\+On\+Error} & \\
-\hline
-\end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a6061d6a4912c19ddf5cedff9ab762a6e_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a8a601f0d114f9479014505d4a1d3c6ae}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a8a601f0d114f9479014505d4a1d3c6ae}} 
-\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!SavePDFToHtml@{SavePDFToHtml}}
-\index{SavePDFToHtml@{SavePDFToHtml}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
-\doxysubsubsection{\texorpdfstring{SavePDFToHtml()}{SavePDFToHtml()}}
-{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Save\+P\+D\+F\+To\+Html (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{string}]{document\+Name,  }\item[{string}]{output\+Root\+Path = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{overwrite\+If\+Exists = {\ttfamily false},  }\item[{int}]{timeout\+Seconds = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aa2b88e829e9689b0f55b3d03247a6637}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aa2b88e829e9689b0f55b3d03247a6637}} 
+\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!SavePdfAsHtml@{SavePdfAsHtml}}
+\index{SavePdfAsHtml@{SavePdfAsHtml}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
+\doxysubsubsection{\texorpdfstring{SavePdfAsHtml()}{SavePdfAsHtml()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Save\+Pdf\+As\+Html (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{string}]{document\+Name,  }\item[{string}]{output\+Root\+Path = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{overwrite\+If\+Exists = {\ttfamily false},  }\item[{int}]{timeout\+Seconds = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -564,7 +534,37 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_a8a601f0d114f9479014505d4a1d3c6ae_cgraph}
+\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_aa2b88e829e9689b0f55b3d03247a6637_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ad982a6679fd1143cabcbe42752b5682e}\label{class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ad982a6679fd1143cabcbe42752b5682e}} 
+\index{JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}!SavePdfAsPng@{SavePdfAsPng}}
+\index{SavePdfAsPng@{SavePdfAsPng}!JBToolkit.PdfDoc.PdfConverter@{JBToolkit.PdfDoc.PdfConverter}}
+\doxysubsubsection{\texorpdfstring{SavePdfAsPng()}{SavePdfAsPng()}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Pdf\+Doc.\+Pdf\+Converter.\+Save\+Pdf\+As\+Png (\begin{DoxyParamCaption}\item[{string}]{input\+Path,  }\item[{string}]{root\+Output\+Path,  }\item[{string}]{image\+Title,  }\item[{int}]{timeout\+Seconds = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts and saves a P\+DF file as 1 or more P\+NG images (1 image per P\+DF page) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Path} & Input file path of P\+DF file\\
+\hline
+{\em root\+Output\+Path} & Root output folder where P\+NG images will be saved to\\
+\hline
+{\em image\+Title} & A given title for the prefix of the set of images\\
+\hline
+{\em timeout\+Seconds} & Timeout in seconds before error is reported\\
+\hline
+{\em throw\+On\+Error} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_ad982a6679fd1143cabcbe42752b5682e_cgraph}
 \end{center}
 \end{figure}
 
@@ -580,8 +580,8 @@ Here is the call graph for this function\+:\nopagebreak
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Pdf\+Doc/\+Converters/\mbox{\hyperlink{_pdf_converter___doc_to_pdf_8cs}{Pdf\+Converter\+\_\+\+Doc\+To\+Pdf.\+cs}}\item 
-D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Pdf\+Doc/\+Converters/\mbox{\hyperlink{_pdf_converter___html_to_pdf_8cs}{Pdf\+Converter\+\_\+\+Html\+To\+Pdf.\+cs}}\item 
-D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Pdf\+Doc/\+Converters/\mbox{\hyperlink{_pdf_converter___pdf_to_html_8cs}{Pdf\+Converter\+\_\+\+Pdf\+To\+Html.\+cs}}\item 
-D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Pdf\+Doc/\+Converters/\mbox{\hyperlink{_pdf_converter___pdf_to_png_8cs}{Pdf\+Converter\+\_\+\+Pdf\+To\+Png.\+cs}}\item 
-D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B\+Toolkit/\+Pdf\+Doc/\mbox{\hyperlink{_pdf_converter_8cs}{Pdf\+Converter.\+cs}}\end{DoxyCompactItemize}
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Pdf\+Doc/\+Converters/\mbox{\hyperlink{_pdf_converter___doc_to_pdf_8cs}{Pdf\+Converter\+\_\+\+Doc\+To\+Pdf.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Pdf\+Doc/\+Converters/\mbox{\hyperlink{_pdf_converter___html_to_pdf_8cs}{Pdf\+Converter\+\_\+\+Html\+To\+Pdf.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Pdf\+Doc/\+Converters/\mbox{\hyperlink{_pdf_converter___pdf_to_html_8cs}{Pdf\+Converter\+\_\+\+Pdf\+To\+Html.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Pdf\+Doc/\+Converters/\mbox{\hyperlink{_pdf_converter___pdf_to_png_8cs}{Pdf\+Converter\+\_\+\+Pdf\+To\+Png.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Pdf\+Doc/\mbox{\hyperlink{_pdf_converter_8cs}{Pdf\+Converter.\+cs}}\end{DoxyCompactItemize}

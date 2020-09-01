@@ -37,7 +37,7 @@ namespace JBToolkit.Web
         /// Determines if there's a valid internet connection by querying google. Either by ping or by http request.
         /// </summary>
         /// <returns>True if there is, false otherwise</returns>
-        public static bool IsThereAnInternetConnetion(bool useNonPingMethod = false)
+        public static bool IsThereAnInternetConnection(bool useNonPingMethod = false)
         {
             try
             {

@@ -1,4 +1,4 @@
-.TH "JBToolkit.Streams" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.TH "JBToolkit.Streams" 3 "Tue Sep 1 2020" "JB.Toolkit" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -9,6 +9,10 @@ JBToolkit.Streams
 .SS "Classes"
 
 .in +1c
+.ti -1c
+.RI "class \fBSafeFileStream\fP"
+.br
+.RI "This is a wrapper around a FileStream\&. While it is not a Stream itself, it can be cast to one (keep in mind that this might throw an exception)\&. It's a mechanism for creating a stream from a file without the issue if it still being used by the calling process later when you want to access it again\&. "
 .ti -1c
 .RI "class \fBThrottledStream\fP"
 .br

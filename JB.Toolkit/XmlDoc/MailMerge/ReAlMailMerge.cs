@@ -29,7 +29,7 @@ namespace JBToolkit.XmlDoc.MailMerge
             bool overwriteExisting = true)
         {
             string tempFile = Path.Combine(Path.GetTempPath(), DateTime.Now.Ticks + ".csv");
-            data.ToCSVFile(tempFile, ',', true, true);
+            data.ToCsvFile(tempFile, ',', true, true);
 
             RunCommand(
                 inputPath,
@@ -56,7 +56,7 @@ namespace JBToolkit.XmlDoc.MailMerge
             int timeoutSeconds = 60)
         {
             string tempFile = Path.Combine(Path.GetTempPath(), DateTime.Now.Ticks + ".csv");
-            data.ToCSVFile(tempFile, ',', true, true);
+            data.ToCsvFile(tempFile, ',', true, true);
 
             var result = Convert.FromBase64String(
                                     RunCommand(
@@ -85,7 +85,7 @@ namespace JBToolkit.XmlDoc.MailMerge
             int timeoutSeconds = 60)
         {
             string tempFile = Path.Combine(Path.GetTempPath(), DateTime.Now.Ticks + ".csv");
-            data.ToCSVFile(tempFile, ',', true, true);
+            data.ToCsvFile(tempFile, ',', true, true);
 
             var result = new MemoryStream(
                                 Convert.FromBase64String(
@@ -115,7 +115,7 @@ namespace JBToolkit.XmlDoc.MailMerge
             int timeoutSeconds = 60)
         {
             string tempFile = Path.Combine(Path.GetTempPath(), DateTime.Now.Ticks + ".csv");
-            data.ToCSVFile(tempFile, ',', true, true);
+            data.ToCsvFile(tempFile, ',', true, true);
 
             var result = RunCommand(
                 inputPath,

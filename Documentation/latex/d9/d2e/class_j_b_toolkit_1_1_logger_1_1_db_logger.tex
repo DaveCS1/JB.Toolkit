@@ -1,0 +1,112 @@
+\hypertarget{class_j_b_toolkit_1_1_logger_1_1_db_logger}{}\doxysection{J\+B\+Toolkit.\+Logger.\+Db\+Logger Class Reference}
+\label{class_j_b_toolkit_1_1_logger_1_1_db_logger}\index{JBToolkit.Logger.DbLogger@{JBToolkit.Logger.DbLogger}}
+
+
+Adds log entries (error or information) to U\+S\+R\+\_\+\+A\+G\+\_\+\+Shared\+\_\+\+Log. Defaults to standing file logger (current working directory) on DB connection failure (fallback)  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Logger.\+Db\+Logger\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{df/d98/class_j_b_toolkit_1_1_logger_1_1_db_logger__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_logger_1_1_db_logger_a250acf56ed349e91c43fdeeb1b5c9ea7}{Db\+Logger}} (string db\+Name, string connection\+String, int user\+Id=0, string application\+Name=null)
+\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_logger_1_1_db_logger_a2a6cea9653813bc78bb2be2db4142e73}{Log\+To\+Db}} (\mbox{\hyperlink{class_exception}{Exception}} e, string additional=null)
+\begin{DoxyCompactList}\small\item\em Logs an exception to the database \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_logger_1_1_db_logger_a093d23c5dde1a5c786aca70de511daea}{Log\+To\+Db}} (bool is\+Error, string source, string message, string stack\+Trace)
+\begin{DoxyCompactList}\small\item\em Logs an error to the database \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_logger_1_1_db_logger_a9a654f867b6acdc1029d9e9b1429ae5e}{D\+B\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_j_b_toolkit_1_1_logger_1_1_db_logger_a79ddb273d919fd9454a98d902536b8e7}{User\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_logger_1_1_db_logger_ae3f806a288dce1ba48caf06011bf6081}{Connection\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_logger_1_1_db_logger_a75da23dbd3a491ceb34a410f333d0e4d}{Applicatio\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Adds log entries (error or information) to U\+S\+R\+\_\+\+A\+G\+\_\+\+Shared\+\_\+\+Log. Defaults to standing file logger (current working directory) on DB connection failure (fallback) 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_logger_1_1_db_logger_a250acf56ed349e91c43fdeeb1b5c9ea7}\label{class_j_b_toolkit_1_1_logger_1_1_db_logger_a250acf56ed349e91c43fdeeb1b5c9ea7}} 
+\index{JBToolkit.Logger.DbLogger@{JBToolkit.Logger.DbLogger}!DbLogger@{DbLogger}}
+\index{DbLogger@{DbLogger}!JBToolkit.Logger.DbLogger@{JBToolkit.Logger.DbLogger}}
+\doxysubsubsection{\texorpdfstring{DbLogger()}{DbLogger()}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Logger.\+Db\+Logger.\+Db\+Logger (\begin{DoxyParamCaption}\item[{string}]{db\+Name,  }\item[{string}]{connection\+String,  }\item[{int}]{user\+Id = {\ttfamily 0},  }\item[{string}]{application\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_logger_1_1_db_logger_a093d23c5dde1a5c786aca70de511daea}\label{class_j_b_toolkit_1_1_logger_1_1_db_logger_a093d23c5dde1a5c786aca70de511daea}} 
+\index{JBToolkit.Logger.DbLogger@{JBToolkit.Logger.DbLogger}!LogToDb@{LogToDb}}
+\index{LogToDb@{LogToDb}!JBToolkit.Logger.DbLogger@{JBToolkit.Logger.DbLogger}}
+\doxysubsubsection{\texorpdfstring{LogToDb()}{LogToDb()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Logger.\+Db\+Logger.\+Log\+To\+Db (\begin{DoxyParamCaption}\item[{bool}]{is\+Error,  }\item[{string}]{source,  }\item[{string}]{message,  }\item[{string}]{stack\+Trace }\end{DoxyParamCaption})}
+
+
+
+Logs an error to the database 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d2e/class_j_b_toolkit_1_1_logger_1_1_db_logger_a093d23c5dde1a5c786aca70de511daea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_logger_1_1_db_logger_a2a6cea9653813bc78bb2be2db4142e73}\label{class_j_b_toolkit_1_1_logger_1_1_db_logger_a2a6cea9653813bc78bb2be2db4142e73}} 
+\index{JBToolkit.Logger.DbLogger@{JBToolkit.Logger.DbLogger}!LogToDb@{LogToDb}}
+\index{LogToDb@{LogToDb}!JBToolkit.Logger.DbLogger@{JBToolkit.Logger.DbLogger}}
+\doxysubsubsection{\texorpdfstring{LogToDb()}{LogToDb()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Logger.\+Db\+Logger.\+Log\+To\+Db (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_exception}{Exception}}}]{e,  }\item[{string}]{additional = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Logs an exception to the database 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_logger_1_1_db_logger_a75da23dbd3a491ceb34a410f333d0e4d}\label{class_j_b_toolkit_1_1_logger_1_1_db_logger_a75da23dbd3a491ceb34a410f333d0e4d}} 
+\index{JBToolkit.Logger.DbLogger@{JBToolkit.Logger.DbLogger}!ApplicatioName@{ApplicatioName}}
+\index{ApplicatioName@{ApplicatioName}!JBToolkit.Logger.DbLogger@{JBToolkit.Logger.DbLogger}}
+\doxysubsubsection{\texorpdfstring{ApplicatioName}{ApplicatioName}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Logger.\+Db\+Logger.\+Applicatio\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_logger_1_1_db_logger_ae3f806a288dce1ba48caf06011bf6081}\label{class_j_b_toolkit_1_1_logger_1_1_db_logger_ae3f806a288dce1ba48caf06011bf6081}} 
+\index{JBToolkit.Logger.DbLogger@{JBToolkit.Logger.DbLogger}!ConnectionString@{ConnectionString}}
+\index{ConnectionString@{ConnectionString}!JBToolkit.Logger.DbLogger@{JBToolkit.Logger.DbLogger}}
+\doxysubsubsection{\texorpdfstring{ConnectionString}{ConnectionString}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Logger.\+Db\+Logger.\+Connection\+String\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_logger_1_1_db_logger_a9a654f867b6acdc1029d9e9b1429ae5e}\label{class_j_b_toolkit_1_1_logger_1_1_db_logger_a9a654f867b6acdc1029d9e9b1429ae5e}} 
+\index{JBToolkit.Logger.DbLogger@{JBToolkit.Logger.DbLogger}!DBName@{DBName}}
+\index{DBName@{DBName}!JBToolkit.Logger.DbLogger@{JBToolkit.Logger.DbLogger}}
+\doxysubsubsection{\texorpdfstring{DBName}{DBName}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Logger.\+Db\+Logger.\+D\+B\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_logger_1_1_db_logger_a79ddb273d919fd9454a98d902536b8e7}\label{class_j_b_toolkit_1_1_logger_1_1_db_logger_a79ddb273d919fd9454a98d902536b8e7}} 
+\index{JBToolkit.Logger.DbLogger@{JBToolkit.Logger.DbLogger}!UserId@{UserId}}
+\index{UserId@{UserId}!JBToolkit.Logger.DbLogger@{JBToolkit.Logger.DbLogger}}
+\doxysubsubsection{\texorpdfstring{UserId}{UserId}}
+{\footnotesize\ttfamily int J\+B\+Toolkit.\+Logger.\+Db\+Logger.\+User\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Logger/\mbox{\hyperlink{_db_logger_8cs}{Db\+Logger.\+cs}}\end{DoxyCompactItemize}

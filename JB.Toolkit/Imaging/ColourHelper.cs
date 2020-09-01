@@ -207,7 +207,7 @@ namespace JBToolkit.Images
         /// <summary>
         /// Change RGB color string to hex string
         /// </summary>
-        public static string RGBColorStringToHex(string colorString)
+        public static string RgbColorStringToHex(string colorString)
         {
             var color = Color.White;
 

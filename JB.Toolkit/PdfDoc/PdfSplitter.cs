@@ -349,7 +349,7 @@ namespace JBToolkit.PdfDoc
                 for (int i = 0; i < splitAllPages.Count; i++)
                 {
                     string content = string.Empty;
-                    content = PdfParser.GetPDFContentAsString(splitAllPages[i]);
+                    content = PdfParser.GetPdfContentAsString(splitAllPages[i]);
 
                     if (isStringRegularExpression)
                     {
@@ -505,7 +505,7 @@ namespace JBToolkit.PdfDoc
 
                 for (int i = 0; i < splitAllPages.Count; i++)
                 {
-                    string content = PdfParser.GetPDFContentAsString(splitAllPages[i]);
+                    string content = PdfParser.GetPdfContentAsString(splitAllPages[i]);
 
                     if (isStringRegularExpression)
                     {
@@ -636,7 +636,7 @@ namespace JBToolkit.PdfDoc
 
                 for (int i = 0; i < splitAllPages.Count; i++)
                 {
-                    string content = PdfParser.GetPDFContentAsString(splitAllPages[i]);
+                    string content = PdfParser.GetPdfContentAsString(splitAllPages[i]);
 
                     if (isStringRegularExpression)
                     {

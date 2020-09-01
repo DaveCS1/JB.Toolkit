@@ -1,8 +1,8 @@
-.TH "D:/OneDrive/Documents/Work/Repositories/JB.Toolkit/JBToolkit/Windows/ConsoleHelper/Options.cs" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.TH "D:/OneDrive/Documents/Work/Repositories/JB.Toolkit/JB.Toolkit/ConsoleHelper/Options.cs" 3 "Tue Sep 1 2020" "JB.Toolkit" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-D:/OneDrive/Documents/Work/Repositories/JB.Toolkit/JBToolkit/Windows/ConsoleHelper/Options.cs
+D:/OneDrive/Documents/Work/Repositories/JB.Toolkit/JB.Toolkit/ConsoleHelper/Options.cs
 .SH SYNOPSIS
 .br
 .PP
@@ -10,49 +10,50 @@ D:/OneDrive/Documents/Work/Repositories/JB.Toolkit/JBToolkit/Windows/ConsoleHelp
 
 .in +1c
 .ti -1c
-.RI "class \fBJBToolkit\&.Windows\&.ConsoleHelper\&.StringCoda\fP"
+.RI "class \fBJBToolkit\&.ConsoleHelper\&.Options\&.StringCoda\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.Windows\&.ConsoleHelper\&.OptionValueCollection\fP"
+.RI "class \fBJBToolkit\&.ConsoleHelper\&.Options\&.OptionValueCollection\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.Windows\&.ConsoleHelper\&.OptionContext\fP"
+.RI "class \fBJBToolkit\&.ConsoleHelper\&.Options\&.OptionContext\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.Windows\&.ConsoleHelper\&.Option\fP"
+.RI "class \fBJBToolkit\&.ConsoleHelper\&.Options\&.Option\fP"
+.br
+.RI "User Guide: http://docs.go-mono.com/index.aspx?link=T:Mono.Options.OptionSet "
+.ti -1c
+.RI "class \fBJBToolkit\&.ConsoleHelper\&.Options\&.ArgumentSource\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.Windows\&.ConsoleHelper\&.ArgumentSource\fP"
+.RI "class \fBJBToolkit\&.ConsoleHelper\&.Options\&.ResponseFileSource\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.Windows\&.ConsoleHelper\&.ResponseFileSource\fP"
+.RI "class \fBJBToolkit\&.ConsoleHelper\&.Options\&.OptionException\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.Windows\&.ConsoleHelper\&.OptionException\fP"
+.RI "class \fBJBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.Windows\&.ConsoleHelper\&.OptionSet\fP"
+.RI "class \fBJBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Category\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.Windows\&.ConsoleHelper\&.OptionSet\&.Category\fP"
+.RI "class \fBJBToolkit\&.ConsoleHelper\&.Options\&.Command\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.Windows\&.ConsoleHelper\&.Command\fP"
+.RI "class \fBJBToolkit\&.ConsoleHelper\&.Options\&.CommandOption\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.Windows\&.ConsoleHelper\&.CommandOption\fP"
+.RI "class \fBJBToolkit\&.ConsoleHelper\&.Options\&.HelpOption\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.Windows\&.ConsoleHelper\&.HelpOption\fP"
+.RI "class \fBJBToolkit\&.ConsoleHelper\&.Options\&.CommandOptionSet\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.Windows\&.ConsoleHelper\&.CommandOptionSet\fP"
+.RI "class \fBJBToolkit\&.ConsoleHelper\&.Options\&.CommandSet\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.Windows\&.ConsoleHelper\&.CommandSet\fP"
-.br
-.ti -1c
-.RI "class \fBJBToolkit\&.Windows\&.ConsoleHelper\&.HelpCommand\fP"
+.RI "class \fBJBToolkit\&.ConsoleHelper\&.Options\&.HelpCommand\fP"
 .br
 .in -1c
 .SS "Namespaces"
@@ -62,10 +63,10 @@ D:/OneDrive/Documents/Work/Repositories/JB.Toolkit/JBToolkit/Windows/ConsoleHelp
 .RI "namespace \fBJBToolkit\fP"
 .br
 .ti -1c
-.RI "namespace \fBJBToolkit\&.Windows\fP"
+.RI "namespace \fBJBToolkit\&.ConsoleHelper\fP"
 .br
 .ti -1c
-.RI "namespace \fBJBToolkit\&.Windows\&.ConsoleHelper\fP"
+.RI "namespace \fBJBToolkit\&.ConsoleHelper\&.Options\fP"
 .br
 .in -1c
 .SS "Typedefs"
@@ -79,14 +80,14 @@ D:/OneDrive/Documents/Work/Repositories/JB.Toolkit/JBToolkit/Windows/ConsoleHelp
 
 .in +1c
 .ti -1c
-.RI "enum \fBJBToolkit\&.Windows\&.ConsoleHelper\&.OptionValueType\fP { \fBJBToolkit\&.Windows\&.ConsoleHelper\&.OptionValueType\&.None\fP, \fBJBToolkit\&.Windows\&.ConsoleHelper\&.OptionValueType\&.Optional\fP, \fBJBToolkit\&.Windows\&.ConsoleHelper\&.OptionValueType\&.Required\fP }"
+.RI "enum \fBJBToolkit\&.ConsoleHelper\&.Options\&.OptionValueType\fP { \fBJBToolkit\&.ConsoleHelper\&.Options\&.OptionValueType\&.None\fP, \fBJBToolkit\&.ConsoleHelper\&.Options\&.OptionValueType\&.Optional\fP, \fBJBToolkit\&.ConsoleHelper\&.Options\&.OptionValueType\&.Required\fP }"
 .br
 .in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "delegate void \fBJBToolkit\&.Windows\&.ConsoleHelper\&.OptionAction< TKey, TValue >\fP (TKey key, TValue value)"
+.RI "delegate void \fBJBToolkit\&.ConsoleHelper\&.Options\&.OptionAction< TKey, TValue >\fP (TKey key, TValue value)"
 .br
 .in -1c
 .SH "Typedef Documentation"

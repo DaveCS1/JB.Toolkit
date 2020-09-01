@@ -18,13 +18,13 @@ namespace JBToolkit.GoogeApi
         /// <param name="timoutSeconds">Timeout in seconds before reporting failure</param>
         /// <param name="throwOnError">Fail (break) or error or just return empty string (useful when using this method in batch operations)</param>
         /// <returns>Text from PDF</returns>
-        public static string GetTextFromPDF(
+        public static string GetTextFromPdf(
             string path,
             GoogleApiImageToTextType imageToTextType = GoogleApiImageToTextType.Document,
             int timoutSeconds = 30,
             bool throwOnError = true)
         {
-            SetGoogleAPICredentialEnvironmentVariable();
+            SetGoogleApiCredentialEnvironmentVariable();
             var content = string.Empty;
 
             try
@@ -33,7 +33,7 @@ namespace JBToolkit.GoogeApi
 
                 string text = string.Empty;
 
-                foreach (byte[] imageBytes in PdfConverter.ConvertPDFToImageByteArrayArray(path, true, timoutSeconds))
+                foreach (byte[] imageBytes in PdfConverter.ConvertPdfToImage2DByteArray(path, true, timoutSeconds))
                 {
                     var image = Image.FromBytes(imageBytes);
 
@@ -77,14 +77,14 @@ namespace JBToolkit.GoogeApi
         /// <param name="timoutSeconds">Timeout in seconds before reporting failure</param>
         /// <param name="throwOnError">Fail (break) or error or just return empty string (useful when using this method in batch operations)</param>
         /// <returns>Text from PDF</returns>
-        public static string GetTextFromPDF(
+        public static string GetTextFromPdf(
             MemoryStream ms,
             GoogleApiImageToTextType imageToTextType =
             GoogleApiImageToTextType.Document,
             int timoutSeconds = 30,
             bool throwOnError = true)
         {
-            SetGoogleAPICredentialEnvironmentVariable();
+            SetGoogleApiCredentialEnvironmentVariable();
             var content = string.Empty;
 
             string path = Path.Combine(DirectoryHelper.GetTempPath(), DirectoryHelper.GetTempFile() + ".pdf");
@@ -96,7 +96,7 @@ namespace JBToolkit.GoogeApi
 
                 string text = string.Empty;
 
-                foreach (byte[] imageBytes in PdfConverter.ConvertPDFToImageByteArrayArray(path, true, timoutSeconds))
+                foreach (byte[] imageBytes in PdfConverter.ConvertPdfToImage2DByteArray(path, true, timoutSeconds))
                 {
                     var image = Image.FromBytes(imageBytes);
 
@@ -163,7 +163,7 @@ namespace JBToolkit.GoogeApi
             GoogleApiImageToTextType imageToTextType = GoogleApiImageToTextType.Document,
             bool throwOnError = true)
         {
-            SetGoogleAPICredentialEnvironmentVariable();
+            SetGoogleApiCredentialEnvironmentVariable();
             var content = string.Empty;
 
             try
@@ -214,7 +214,7 @@ namespace JBToolkit.GoogeApi
             GoogleApiImageToTextType imageToTextType = GoogleApiImageToTextType.Document,
             bool throwOnError = true)
         {
-            SetGoogleAPICredentialEnvironmentVariable();
+            SetGoogleApiCredentialEnvironmentVariable();
             var content = string.Empty;
 
             try
@@ -266,7 +266,7 @@ namespace JBToolkit.GoogeApi
             GoogleApiImageToTextType imageToTextType = GoogleApiImageToTextType.Document,
             bool throwOnError = true)
         {
-            SetGoogleAPICredentialEnvironmentVariable();
+            SetGoogleApiCredentialEnvironmentVariable();
             var content = string.Empty;
 
             try
@@ -305,17 +305,17 @@ namespace JBToolkit.GoogeApi
             }
         }
 
-        private static void SetGoogleAPICredentialEnvironmentVariable()
+        private static void SetGoogleApiCredentialEnvironmentVariable()
         {
-            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", GetGooglejsonLocation(), EnvironmentVariableTarget.User);
-            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", GetGooglejsonLocation(), EnvironmentVariableTarget.Process);
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", GetGoogleJsonLocation(), EnvironmentVariableTarget.User);
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", GetGoogleJsonLocation(), EnvironmentVariableTarget.Process);
         }
 
         /// <summary>
         /// Extract google vision security json file from dll embedded resource
         /// </summary>
         /// <returns></returns>
-        private static string GetGooglejsonLocation()
+        private static string GetGoogleJsonLocation()
         {
             return AssemblyHelper.EmbeddedResourceHelper.InternalGetEmbeddedResourcePathFromJBToolkit("googlevisionapikey.json", false);
         }

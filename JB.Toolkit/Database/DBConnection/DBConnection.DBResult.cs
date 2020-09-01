@@ -6,14 +6,14 @@ namespace JBToolkit.Database
     /// Results object from a DB command
     /// </summary>
     [Serializable]
-    public class DBResult
+    public class DbResult
     {
         public bool Success { get; set; }
         public string Message { get; set; }
         public object Result { get; set; } = string.Empty;
         public string ElapsedTime { get; set; } = null;
 
-        public class SuccessDBCommandResult : DBResult
+        public class SuccessDBCommandResult : DbResult
         {
             public SuccessDBCommandResult(object result, TimeSpan? timeTaken = null)
             {
@@ -24,7 +24,7 @@ namespace JBToolkit.Database
             }
         }
 
-        public class FailureDBCommandResult : DBResult
+        public class FailureDBCommandResult : DbResult
         {
             public FailureDBCommandResult(string exceptionMessage, TimeSpan? timeTaken = null)
             {

@@ -371,7 +371,7 @@ namespace JBToolkit.Windows
         /// </summary>
         public static string[] ReadAllLinesEvenLocked(string filePath)
         {
-            return SafeStream.SafeFileStream.ReadAllLines(filePath);
+            return Streams.SafeFileStream.ReadAllLines(filePath);
         }
 
         /// <summary>
@@ -379,7 +379,7 @@ namespace JBToolkit.Windows
         /// </summary>
         public static string ReadAllTextEvenLocked(string filePath)
         {
-            return SafeStream.SafeFileStream.ReadAllText(filePath);
+            return Streams.SafeFileStream.ReadAllText(filePath);
         }
 
         /// <summary>
@@ -387,7 +387,7 @@ namespace JBToolkit.Windows
         /// </summary>
         public static byte[] ReadAllBytesEvenLocked(string filePath)
         {
-            return SafeStream.SafeFileStream.GetBytes(filePath);
+            return Streams.SafeFileStream.GetBytes(filePath);
         }
 
         [DllImport("Shell32.dll")]

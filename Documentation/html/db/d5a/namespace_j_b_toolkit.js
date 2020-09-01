@@ -1,7 +1,8 @@
 var namespace_j_b_toolkit =
 [
     [ "AssemblyHelper", "d2/d5d/namespace_j_b_toolkit_1_1_assembly_helper.html", "d2/d5d/namespace_j_b_toolkit_1_1_assembly_helper" ],
-    [ "CSV", "d6/d76/namespace_j_b_toolkit_1_1_c_s_v.html", "d6/d76/namespace_j_b_toolkit_1_1_c_s_v" ],
+    [ "ConsoleHelper", "db/d27/namespace_j_b_toolkit_1_1_console_helper.html", "db/d27/namespace_j_b_toolkit_1_1_console_helper" ],
+    [ "Csv", "db/d14/namespace_j_b_toolkit_1_1_csv.html", "db/d14/namespace_j_b_toolkit_1_1_csv" ],
     [ "Database", "d5/d57/namespace_j_b_toolkit_1_1_database.html", "d5/d57/namespace_j_b_toolkit_1_1_database" ],
     [ "Domain", "db/dd6/namespace_j_b_toolkit_1_1_domain.html", "db/dd6/namespace_j_b_toolkit_1_1_domain" ],
     [ "Encryption", "d5/d54/namespace_j_b_toolkit_1_1_encryption.html", "d5/d54/namespace_j_b_toolkit_1_1_encryption" ],
@@ -12,7 +13,6 @@ var namespace_j_b_toolkit =
     [ "Logger", "da/d79/namespace_j_b_toolkit_1_1_logger.html", "da/d79/namespace_j_b_toolkit_1_1_logger" ],
     [ "PdfDoc", "d0/d07/namespace_j_b_toolkit_1_1_pdf_doc.html", "d0/d07/namespace_j_b_toolkit_1_1_pdf_doc" ],
     [ "RegularExpressions", "db/d8a/namespace_j_b_toolkit_1_1_regular_expressions.html", "db/d8a/namespace_j_b_toolkit_1_1_regular_expressions" ],
-    [ "SafeStream", "dd/d5b/namespace_j_b_toolkit_1_1_safe_stream.html", "dd/d5b/namespace_j_b_toolkit_1_1_safe_stream" ],
     [ "Streams", "d3/d08/namespace_j_b_toolkit_1_1_streams.html", "d3/d08/namespace_j_b_toolkit_1_1_streams" ],
     [ "Views", "db/dd5/namespace_j_b_toolkit_1_1_views.html", "db/dd5/namespace_j_b_toolkit_1_1_views" ],
     [ "Web", "d4/db1/namespace_j_b_toolkit_1_1_web.html", "d4/db1/namespace_j_b_toolkit_1_1_web" ],

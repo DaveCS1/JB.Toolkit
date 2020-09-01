@@ -26,10 +26,10 @@ var NAVTREE =
 [
   [ "JB.Toolkit", "index.html", [
     [ "JB Toolkit", "index.html", [
-      [ "Nuget Package", "index.html#autotoc_md0", null ],
-      [ "Tools Include, But Not Limited To", "index.html#autotoc_md1", null ]
+      [ "Nuget Package", "index.html#autotoc_md1", null ],
+      [ "Tools Include, But Not Limited To", "index.html#autotoc_md2", null ]
     ] ],
-    [ "LICENSE", "dd/ded/md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_toolkit__xml_doc__convertef6b03fdf1a971f83966b21909e6ceaf1.html", null ],
+    [ "LICENSE", "d3/ddf/md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_8_toolkit__xml_doc__conver8223f958c48797a0ecc6a78abb04de14.html", null ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ],
       [ "Package Functions", "namespacemembers.html", [
@@ -66,14 +66,14 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/d55/_culture_helper_8cs.html",
-"d3/df8/class_system_1_1_console_ex.html#a88bfb7e8c9e20a38229a1c27252f9fb3a7076096f96fd6e209b019248b671bbd0",
-"d5/d1d/_vision_8cs.html",
-"d6/d53/_pdf_converter___html_to_pdf_8cs.html#a48a52680555b855101e9fcd8ba29f944a7fc56270e7a70fa81a5935b72eacbe29",
-"d8/d9b/struct_j_b_toolkit_1_1_windows_1_1_window_helper_1_1_r_e_c_t.html#aefc00e7bfdef2246a695fa49f58227e9",
-"db/d9b/class_j_b_toolkit_1_1_windows_1_1_window_helper.html#a6189b6c365c5fda3084e9b59364e2c0a",
-"de/d05/class_j_b_toolkit_1_1_win_forms_1_1_round_button.html#a9641d1fb28ce445de27bf328b6752b1e",
-"functions_func_i.html"
+"d2/daf/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_convert_document.html#ad0d920764cdba6e5c93b08b064aec001",
+"d3/df8/class_system_1_1_console_ex.html#a88bfb7e8c9e20a38229a1c27252f9fb3a6a80d8e0d8050cc0a991c03cf0226262",
+"d5/d45/class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip.html#a615c85f3bff51ce402a57be9f8251fb4",
+"d6/dc8/_data_table_states_8cs.html",
+"d9/d2e/class_j_b_toolkit_1_1_logger_1_1_db_logger.html#ae3f806a288dce1ba48caf06011bf6081",
+"dc/d38/class_j_b_toolkit_1_1_console_helper_1_1_options_1_1_option_exception.html#a2529323fe7cd30763e5649db1357c580",
+"de/d10/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_convert_environment.html",
+"functions_func_j.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

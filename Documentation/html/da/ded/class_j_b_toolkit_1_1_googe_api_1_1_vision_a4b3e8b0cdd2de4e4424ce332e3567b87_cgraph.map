@@ -1,0 +1,6 @@
+<map id="JBToolkit.GoogeApi.Vision.GetTextFromPdf" name="JBToolkit.GoogeApi.Vision.GetTextFromPdf">
+<area shape="rect" id="node1" title="Extract text from an a PDF (converts to PNG first)" alt="" coords="5,5,185,47"/>
+<area shape="rect" id="node2" href="$d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter.html#a1a2afddd2f6549e318414e71a95834bc" title="Converts PDF to 3D byte array (array of byte arrays &#45; 1 byte array for each image for each page)" alt="" coords="233,5,440,47"/>
+<area shape="rect" id="node3" href="$d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter.html#aabe1e175297337e4b96fd0455fab1dc9" title="Converts PDF to memory stream array (array memory streams &#45; 1 memory stream for each image for each p..." alt="" coords="488,5,691,47"/>
+<area shape="rect" id="node4" href="$da/dbe/class_j_b_toolkit_1_1_windows_1_1_process_helper.html#afb518659a5ed37e209117d9fcf66de41" title="Executes a process and reads the output (std out and error out) &#45; Useful for working with command lin..." alt="" coords="739,5,992,47"/>
+</map>

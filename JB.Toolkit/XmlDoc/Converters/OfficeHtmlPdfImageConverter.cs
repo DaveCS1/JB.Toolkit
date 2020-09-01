@@ -17,10 +17,39 @@ namespace JBToolkit.XmlDoc.Converters
     /// It choses the correct conversion mechanism from the file extension. Exports to new file.
     ///    
     /// </summary>
-    public static class OfficeHtmlPdfImageConverter
+    public static partial class OfficeHtmlPdfImageConverter
     {
         private static string _error = string.Empty;
 
+        /// <summary>
+        /// Converts MS Office document (xlsx, doc, ppt etc) to memory stream (i.e. for use in Web Requests)
+        /// </summary>
+        /// <param name="docxInputPath">File path</param>
+        /// <returns>Memory stream</returns>
+        public static MemoryStream ConvertToPDF(string inputPath)
+        {
+            return PdfDoc.PdfConverter.ConvertToPdf(inputPath);
+        }
+
+        /// <summary>
+        /// Converts MS Office document (xlsx, doc, ppt etc) to memory stream (i.e. for use in Web Requests)
+        /// </summary>
+        /// <param name="docxInputPath">File path</param>
+        /// <returns>Memory stream</returns>
+        public static MemoryStream ConvertToPDF(MemoryStream ms, string fileExtension)
+        {
+            return PdfDoc.PdfConverter.ConvertToPdf(ms, fileExtension);
+        }
+
+        /// <summary>
+        /// Save a MS Office doc as a PDF
+        /// </summary>
+        /// <param name="inputPath">.docx path</param>
+        /// <param name="pdfOutputPath">Save PDF file path</param>
+        public static void SaveAsPdf(string inputPath, string pdfOutputPath)
+        {
+            PdfDoc.PdfConverter.SaveAsPdf(inputPath, pdfOutputPath);
+        }
 
         /// <summary>
         /// Uses a decent 3rd party command line tool to perform MS Office / PDF / Html conversions.

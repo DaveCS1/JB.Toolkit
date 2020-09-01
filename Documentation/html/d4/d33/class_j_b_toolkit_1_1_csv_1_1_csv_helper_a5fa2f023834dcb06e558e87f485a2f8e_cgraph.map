@@ -1,0 +1,4 @@
+<map id="JBToolkit.Csv.CsvHelper.CsvFileToEnumerableObject&lt; T &gt;" name="JBToolkit.Csv.CsvHelper.CsvFileToEnumerableObject&lt; T &gt;">
+<area shape="rect" id="node1" title="Reads CSV file and returns deserialised object T. Note, if the CSV file has no header,..." alt="" coords="5,5,221,47"/>
+<area shape="rect" id="node2" href="$d4/d33/class_j_b_toolkit_1_1_csv_1_1_csv_helper.html#ab25e53ebe8d48fd4f98bb1f02a26e48a" title="Tries to auto detect CSV delimiter (tends to do a very good job of it)." alt="" coords="269,5,436,47"/>
+</map>

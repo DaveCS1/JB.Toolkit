@@ -174,7 +174,7 @@ namespace JBToolkit.Web
         {
             CreateIfNoTableExists(dbName, connectionString);
 
-            DBGeneric dbCon = new DBGeneric(dbName, connectionString, applicationName);
+            DbGeneric dbCon = new DbGeneric(dbName, connectionString, applicationName);
             string guid = Guid.NewGuid().ToString();
             dbCon.ExecuteNonQuery(string.Format(
                 @"IF (SELECT COUNT(*) FROM {4} (NOLOCK) WHERE IPAddress = '{0}') > 0
@@ -191,7 +191,7 @@ namespace JBToolkit.Web
         /// </summary>
         public static bool IsAccessTokenValid(string ipAddress, string dbName, string connectionString, string token)
         {
-            DBGeneric dbCon = new DBGeneric(dbName, connectionString, "");
+            DbGeneric dbCon = new DbGeneric(dbName, connectionString, "");
             return dbCon.GetScalerResult(string.Format(@"SELECT ISNULL((SELECT COUNT(*) FROM {2} (NOLOCK) WHERE IPAddress = '{0}' AND Token = '{1}' AND ExpiryDT > GETDATE()), 0)",
                 ipAddress, token, TableName)).ToBool();
         }
@@ -201,7 +201,7 @@ namespace JBToolkit.Web
         /// </summary>
         public static DateTime? GetTokenExpiry(string ipAddress, string dbName, string connectionString)
         {
-            DBGeneric dbCon = new DBGeneric(dbName, connectionString, "");
+            DbGeneric dbCon = new DbGeneric(dbName, connectionString, "");
             string expiry = dbCon.GetScalerResult(string.Format(@"SELECT TOP 1 ExpiryDT FROM {1} (NOLOCK) WHERE IPAddress = '{0}'",
                 ipAddress, TableName));
 

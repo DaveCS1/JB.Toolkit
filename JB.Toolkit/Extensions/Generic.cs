@@ -533,7 +533,7 @@ namespace System
         /// </summary>
         /// <param name="text">String to check / convert</param>
         /// <returns>SQL accepted string</returns>
-        public static string GetSQLAcceptableString(this string text)
+        public static string GetSqlAcceptableString(this string text)
         {
             if (string.IsNullOrEmpty(text))
             {
@@ -698,7 +698,7 @@ namespace System
         /// <summary>
         /// Converts a string to an XML safe string, also converts to ASCII with ASCII substitution characters (i.e.  ” to ")
         /// </summary>
-        public static string EncodeXMLSafeString(this string inputString)
+        public static string EncodeXmlSafeString(this string inputString)
         {
             return System.Net.WebUtility.HtmlEncode(inputString.Asciify());
         }
@@ -765,9 +765,9 @@ namespace System
         /// </summary>
         /// <param name="dataTable">DataTable to convert</param>
         /// <returns>CSV string</returns>
-        public static string ToCSVString(this DataTable dataTable, char seperator = ',', bool includeHeaders = true, bool quoteAllFields = true)
+        public static string ToCsvString(this DataTable dataTable, char seperator = ',', bool includeHeaders = true, bool quoteAllFields = true)
         {
-            return JBToolkit.CSV.CSVHelper.ToCSVString(dataTable, seperator, includeHeaders, quoteAllFields);
+            return JBToolkit.Csv.CsvHelper.ToCsvString(dataTable, seperator, includeHeaders, quoteAllFields);
         }
 
         /// <summary>
@@ -775,9 +775,9 @@ namespace System
         /// </summary>
         /// <param name="dataTable">DataTable to convert</param>
         /// <returns>CSV string</returns>
-        public static void ToCSVFile(this DataTable dataTable, string path, char seperator = ',', bool includeHeaders = true, bool quoteAllFields = true)
+        public static void ToCsvFile(this DataTable dataTable, string path, char seperator = ',', bool includeHeaders = true, bool quoteAllFields = true)
         {
-            JBToolkit.CSV.CSVHelper.ToCSVFile(dataTable.AsEnumerable_Legacy(), path, seperator, includeHeaders, quoteAllFields);
+            JBToolkit.Csv.CsvHelper.ToCsvFile(dataTable.AsEnumerable_Legacy(), path, seperator, includeHeaders, quoteAllFields);
         }
 
         /// <summary>
@@ -795,9 +795,9 @@ namespace System
         /// </summary>
         /// <param name="table">DataTable to convert</param>
         /// <returns>CSV string</returns>
-        public static string ToCSVString<T>(this List<T> list, char seperator = ',', bool includeHeaders = true, bool quoteAllFields = true)
+        public static string ToCsvString<T>(this List<T> list, char seperator = ',', bool includeHeaders = true, bool quoteAllFields = true)
         {
-            return JBToolkit.CSV.CSVHelper.ToCSVString(list, seperator, includeHeaders, quoteAllFields);
+            return JBToolkit.Csv.CsvHelper.ToCSVString(list, seperator, includeHeaders, quoteAllFields);
         }
 
         /// <summary>

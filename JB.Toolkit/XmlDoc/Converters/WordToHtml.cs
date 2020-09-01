@@ -13,9 +13,9 @@ namespace JBToolkit.XmlDoc.Converters
     /// 
     /// 
     /// </summary>
-    public class WordToHtml
+    public partial class OfficeHtmlPdfImageConverter
     {
-        public static void SaveDocxToHtml(string docxPath, string outputPath)
+        public static void SaveDocxAsSinglePageHtmlWithEmbeddedImages(string docxPath, string outputPath)
         {
             if (!new FileInfo(docxPath).Extension.ToLower().Contains("docx"))
             {
@@ -27,7 +27,7 @@ namespace JBToolkit.XmlDoc.Converters
             string htmlText = string.Empty;
             try
             {
-                htmlText = ParseDOCX(fileInfo);
+                htmlText = ConvertDocxToHtmlWithEmbeddedImages(fileInfo);
             }
             catch (OpenXmlPackageException e)
             {
@@ -37,7 +37,7 @@ namespace JBToolkit.XmlDoc.Converters
                     {
                         UriFixer.FixInvalidUri(fs, brokenUri => FixUri(brokenUri));
                     }
-                    htmlText = ParseDOCX(fileInfo);
+                    htmlText = ConvertDocxToHtmlWithEmbeddedImages(fileInfo);
                 }
             }
 
@@ -46,7 +46,7 @@ namespace JBToolkit.XmlDoc.Converters
             writer.Dispose();
         }
 
-        public static MemoryStream ConvertDocxToHtml(string docxPath)
+        public static MemoryStream ConvertDocxToSinglePageHtmlWithEmbeddedImages(string docxPath)
         {
             if (!new FileInfo(docxPath).Extension.ToLower().Contains("docx"))
             {
@@ -59,7 +59,7 @@ namespace JBToolkit.XmlDoc.Converters
 
             try
             {
-                htmlText = ParseDOCX(fileInfo);
+                htmlText = ConvertDocxToHtmlWithEmbeddedImages(fileInfo);
             }
             catch (OpenXmlPackageException e)
             {
@@ -70,7 +70,7 @@ namespace JBToolkit.XmlDoc.Converters
                         UriFixer.FixInvalidUri(fs, brokenUri => FixUri(brokenUri));
                     }
 
-                    htmlText = ParseDOCX(fileInfo);
+                    htmlText = ConvertDocxToHtmlWithEmbeddedImages(fileInfo);
                 }
             }
 
@@ -99,7 +99,7 @@ namespace JBToolkit.XmlDoc.Converters
             return new Uri(newURI);
         }
 
-        public static string ParseDOCX(FileInfo fileInfo)
+        public static string ConvertDocxToHtmlWithEmbeddedImages(FileInfo fileInfo)
         {
             if (!fileInfo.Extension.ToLower().Contains("docx"))
             {

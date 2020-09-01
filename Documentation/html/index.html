@@ -87,13 +87,15 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="title">JB Toolkit </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="mainpage"></a>&#160; <a href="https://github.com/jamesbrindle/JB.Toolkit"><img src="https://portfolio.jb-net.co.uk/shared/Logo-Only-100px.png" alt="N|Solid" class="inline"/></a></p>
-<p>A collection of useful classes, extensions and tools written in C# to aid in a wide variety of development. With components for ASP Net MVC, Winform and Console applications. Integrations for Google, AD and SQL and pre-written implementations / helpers for a variety of tasks... Just Because (see below). &#160; &#160;</p>
-<h1><a class="anchor" id="autotoc_md0"></a>
-Nuget Package</h1>
-<div class="fragment"><div class="line">Install-Package JBToolkit</div>
-</div><!-- fragment --><p>&#160; &#160;</p>
+<div class="textblock"><p><a class="anchor" id="md_D"></a>:_OneDrive_Documents_Work_Repositories_JB.Toolkit_README</p>
+<p>&#160; <a href="https://github.com/jamesbrindle/JB.Toolkit"><img src="https://portfolio.jb-net.co.uk/shared/Logo-Only-100px.png" alt="N|Solid" class="inline"/></a></p>
+<p>A collection of useful classes, extensions and tools written in C# to aid in a wide variety of development. With components for ASP Net MVC, Winform and Console applications. Integrations for Google, AD and SQL and pre-written implementations / helpers for a variety of tasks... Just Because (see below).</p>
+<p>&#160; &#160;</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
+Nuget Package</h1>
+<p>&#160; </p><div class="fragment"><div class="line">Install-Package JB.Toolkit</div>
+</div><!-- fragment --><p>&#160; &#160;</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
 Tools Include, But Not Limited To</h1>
 <ul>
 <li><b>Assembly Helper</b><ul>
@@ -117,13 +119,14 @@ Tools Include, But Not Limited To</h1>
 <li><b>Console App Helper</b><ul>
 <li>Spinner</li>
 <li>Progress bar</li>
-<li>Any console foreground and background colour (ColourFul.Console)</li>
+<li>Mono.Options (Command line arguments: <a href="http://docs.go-mono.com/index.aspx?link=T:Mono.Options.OptionSet">http://docs.go-mono.com/index.aspx?link=T:Mono.Options.OptionSet</a>)</li>
+<li>Any console foreground and background colour (ColourFul.Console library)</li>
 <li>FIGLet fonts (ASCII art)</li>
 </ul>
 </li>
 <li><b>Database</b><ul>
 <li>Get data table, get scaler, execute non-Query, execute non-query with scoped identity</li>
-<li>Dapper</li>
+<li>Dapper implementations</li>
 <li>Tree view (i.e. jstree) cache storage</li>
 </ul>
 </li>
@@ -158,8 +161,14 @@ Tools Include, But Not Limited To</h1>
 <li><b>Imaging</b><ul>
 <li>Image type converter</li>
 <li>Image manipulation</li>
-<li>Icon helper</li>
-<li>Web image helper (mimetype helepr, base64 image, get image bytes from URL etc)</li>
+<li>Icon helper<ul>
+<li>Get icon from file type (many embedded images)</li>
+</ul>
+</li>
+<li>Web image helper (mime type helepr, base64 image, get image bytes from URL etc)<ul>
+<li>Mime type descriptor from image byte array using magic number detection</li>
+</ul>
+</li>
 <li>Colour helper</li>
 <li>OCR</li>
 </ul>
@@ -221,6 +230,7 @@ Tools Include, But Not Limited To</h1>
 <li><b>Regular Expressions</b><ul>
 <li>Common regular expression lists</li>
 <li>Try convert any string format of a date to DateTime</li>
+<li>Match all dates in a string</li>
 </ul>
 </li>
 <li><b>Stream Helper</b><ul>
@@ -245,15 +255,19 @@ Tools Include, But Not Limited To</h1>
 <li>Imaging tools</li>
 </ul>
 </li>
-<li><b>XML Doc (Word, Excel) Tools</b><ul>
+<li><b>XML Doc (Word, Excel, PowerPoint, PDF) Tools</b><ul>
 <li>Converter<ul>
-<li>DataTable to Xlsx</li>
-<li>Docx to HTML</li>
-<li>Docx to PDF</li>
+<li>MS Office to PDF</li>
+<li>PDF to MS Office</li>
+<li>MS Office / PDF to Html</li>
+<li>MS Office / PDF to Image</li>
+<li>Bulk convert MS Office to PDF</li>
+<li>MS Office / PDF / Image (OCR) to text file (.txt)</li>
 </ul>
 </li>
 <li>Mail merge</li>
 <li>Find and replace</li>
+<li>Image extractor</li>
 </ul>
 </li>
 <li><b>Zip</b><ul>

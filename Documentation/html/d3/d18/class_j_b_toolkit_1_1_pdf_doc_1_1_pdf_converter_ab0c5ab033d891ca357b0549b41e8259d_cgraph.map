@@ -1,0 +1,5 @@
+<map id="JBToolkit.PdfDoc.PdfConverter.SaveMsOfficeDocAsPdf" name="JBToolkit.PdfDoc.PdfConverter.SaveMsOfficeDocAsPdf">
+<area shape="rect" id="node1" title="Save Docx document to PDF to file Input .docx pathOutput .pdf path" alt="" coords="5,5,208,47"/>
+<area shape="rect" id="node2" href="$d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter.html#aa0ba34122dcf6d47eb0ce6d5f6b4c850" title="Save document file or image to PDF" alt="" coords="256,5,459,47"/>
+<area shape="rect" id="node3" href="$d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter.html#a837197e9a08771cb3678c30180385bbf" title="Convert and save pretty much any office file (.docx, .xlsx, .pptx, .vsdx, .pub, .msg etc),..." alt="" coords="507,5,709,47"/>
+</map>

@@ -10,6 +10,7 @@ var annotated_dup =
     [ "DataGridView", "d4/d98/class_data_grid_view.html", null ],
     [ "DataGridViewColumn", "d0/dc0/class_data_grid_view_column.html", null ],
     [ "DataGridViewTextBoxCell", "d1/d86/class_data_grid_view_text_box_cell.html", null ],
+    [ "DBConnection", "da/dca/class_d_b_connection.html", null ],
     [ "DynamicObject", "d4/ddd/class_dynamic_object.html", null ],
     [ "EventArgs", "d5/d6c/class_event_args.html", null ],
     [ "Exception", "df/d70/class_exception.html", null ],

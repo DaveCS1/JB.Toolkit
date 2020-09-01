@@ -1,4 +1,4 @@
-.TH "JBToolkit.PdfDoc.PdfConverter" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.TH "JBToolkit.PdfDoc.PdfConverter" 3 "Tue Sep 1 2020" "JB.Toolkit" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,7 +11,7 @@ JBToolkit.PdfDoc.PdfConverter \- Methods to convert Docx to PDF through M-Files\
 
 .in +1c
 .ti -1c
-.RI "static void \fBSaveMSOfficeDocAsPdf\fP (string docInputPath, string pdfOutputPath)"
+.RI "static void \fBSaveMsOfficeDocAsPdf\fP (string docInputPath, string pdfOutputPath)"
 .br
 .RI "Save Docx document to PDF to file 
 .PP
@@ -24,11 +24,11 @@ JBToolkit.PdfDoc.PdfConverter \- Methods to convert Docx to PDF through M-Files\
 .PP
 "
 .ti -1c
-.RI "static MemoryStream \fBConvertMSOfficeDocToPDF\fP (string docInputPath)"
+.RI "static MemoryStream \fBConvertMsOfficeDocToPdf\fP (string docInputPath)"
 .br
 .RI "Converts Docx document to PDF memory stream (i\&.e\&. for use in \fBWeb\fP Requests) "
 .ti -1c
-.RI "static MemoryStream \fBConvertMSOfficeDocToPDF\fP (MemoryStream ms, string fileExtension)"
+.RI "static MemoryStream \fBConvertMsOfficeDocToPdf\fP (MemoryStream ms, string fileExtension)"
 .br
 .RI "Converts Docx document to PDF memory stream (i\&.e\&. for use in \fBWeb\fP Requests) "
 .ti -1c
@@ -60,19 +60,19 @@ JBToolkit.PdfDoc.PdfConverter \- Methods to convert Docx to PDF through M-Files\
 .br
 .RI "Save HTML as a PDF file "
 .ti -1c
-.RI "static string \fBSavePDFToHtml\fP (string path, string documentName, string outputRootPath='', bool overwriteIfExists=false, int timeoutSeconds=30)"
+.RI "static string \fBSavePdfAsHtml\fP (string path, string documentName, string outputRootPath='', bool overwriteIfExists=false, int timeoutSeconds=30)"
 .br
 .RI "Saves a PDF file as HTML file(s) - 1 HTML file per PDF page\&. The output string is the root path where the files have been created "
 .ti -1c
-.RI "static byte[][] \fBConvertPDFToImageByteArrayArray\fP (string path, bool usingToExtractText=false, int timeoutSeconds=30)"
+.RI "static byte[][] \fBConvertPdfToImage2DByteArray\fP (string path, bool usingToExtractText=false, int timeoutSeconds=30)"
 .br
 .RI "Converts PDF to 3D byte array (array of byte arrays - 1 byte array for each image for each page) "
 .ti -1c
-.RI "static MemoryStream[] \fBConvertPDFToPng\fP (string path, bool usingToExtactText=false, int timeoutSeconds=30)"
+.RI "static MemoryStream[] \fBConvertPdfToPng\fP (string path, bool usingToExtactText=false, int timeoutSeconds=30)"
 .br
 .RI "Converts PDF to memory stream array (array memory streams - 1 memory stream for each image for each page) "
 .ti -1c
-.RI "static void \fBSavePDFAsPng\fP (string inputPath, string rootOutputPath, string imageTitle, int timeoutSeconds=30)"
+.RI "static void \fBSavePdfAsPng\fP (string inputPath, string rootOutputPath, string imageTitle, int timeoutSeconds=30)"
 .br
 .RI "Converts and saves a PDF file as 1 or more PNG images (1 image per PDF page) "
 .ti -1c
@@ -80,15 +80,15 @@ JBToolkit.PdfDoc.PdfConverter \- Methods to convert Docx to PDF through M-Files\
 .br
 .RI "Save document file or image to PDF "
 .ti -1c
-.RI "static void \fBConvertToPDF\fP (string docInputPath, string pdfOutputPath)"
+.RI "static void \fBConvertToPdf\fP (string docInputPath, string pdfOutputPath)"
 .br
-.RI "Save document file or image to PDF "
+.RI "Convert and save pretty much any office file (\&.docx, \&.xlsx, \&.pptx, \&.vsdx, \&.pub, \&.msg etc), image or text file to PDF "
 .ti -1c
-.RI "static MemoryStream \fBConvertToPDF\fP (MemoryStream ms, string fileExtension)"
+.RI "static MemoryStream \fBConvertToPdf\fP (MemoryStream ms, string fileExtension)"
 .br
 .RI "Converts document file or image to PDF memory stream (i\&.e\&. for use in \fBWeb\fP Requests) "
 .ti -1c
-.RI "static MemoryStream \fBConvertToPDF\fP (string docInputPut)"
+.RI "static MemoryStream \fBConvertToPdf\fP (string docInputPut)"
 .br
 .RI "Converts document file or image to PDF memory stream (i\&.e\&. for use in \fBWeb\fP Requests) "
 .in -1c
@@ -165,7 +165,7 @@ PDF File memory stream
 .RE
 .PP
 
-.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertMSOfficeDocToPDF (MemoryStream ms, string fileExtension)\fC [static]\fP"
+.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertMsOfficeDocToPdf (MemoryStream ms, string fileExtension)\fC [static]\fP"
 
 .PP
 Converts Docx document to PDF memory stream (i\&.e\&. for use in \fBWeb\fP Requests) 
@@ -181,7 +181,7 @@ Memory stream
 .RE
 .PP
 
-.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertMSOfficeDocToPDF (string docInputPath)\fC [static]\fP"
+.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertMsOfficeDocToPdf (string docInputPath)\fC [static]\fP"
 
 .PP
 Converts Docx document to PDF memory stream (i\&.e\&. for use in \fBWeb\fP Requests) 
@@ -197,7 +197,7 @@ Memory stream
 .RE
 .PP
 
-.SS "static byte [][] JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertPDFToImageByteArrayArray (string path, bool usingToExtractText = \fCfalse\fP, int timeoutSeconds = \fC30\fP)\fC [static]\fP"
+.SS "static byte [][] JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertPdfToImage2DByteArray (string path, bool usingToExtractText = \fCfalse\fP, int timeoutSeconds = \fC30\fP)\fC [static]\fP"
 
 .PP
 Converts PDF to 3D byte array (array of byte arrays - 1 byte array for each image for each page) 
@@ -217,7 +217,7 @@ Return 3D byte array (array of byte arrays - 1 byte array for each image for eac
 .RE
 .PP
 
-.SS "static MemoryStream [] JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertPDFToPng (string path, bool usingToExtactText = \fCfalse\fP, int timeoutSeconds = \fC30\fP)\fC [static]\fP"
+.SS "static MemoryStream [] JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertPdfToPng (string path, bool usingToExtactText = \fCfalse\fP, int timeoutSeconds = \fC30\fP)\fC [static]\fP"
 
 .PP
 Converts PDF to memory stream array (array memory streams - 1 memory stream for each image for each page) 
@@ -237,7 +237,7 @@ Memory stream array (array memory streams - 1 memory stream for each image for e
 .RE
 .PP
 
-.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertToPDF (MemoryStream ms, string fileExtension)\fC [static]\fP"
+.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertToPdf (MemoryStream ms, string fileExtension)\fC [static]\fP"
 
 .PP
 Converts document file or image to PDF memory stream (i\&.e\&. for use in \fBWeb\fP Requests) 
@@ -255,20 +255,20 @@ Memory stream
 .RE
 .PP
 
-.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertToPDF (string docInputPath, string pdfOutputPath)\fC [static]\fP"
+.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertToPdf (string docInputPath, string pdfOutputPath)\fC [static]\fP"
 
 .PP
-Save document file or image to PDF 
+Convert and save pretty much any office file (\&.docx, \&.xlsx, \&.pptx, \&.vsdx, \&.pub, \&.msg etc), image or text file to PDF 
 .PP
 \fBParameters\fP
 .RS 4
-\fIdocInputPath\fP Input document path
+\fIdocInputPath\fP Input document or image path path
 .br
 \fIpdfOutputPath\fP Output \&.pdf path
 .RE
 .PP
 
-.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertToPDF (string docInputPut)\fC [static]\fP"
+.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertToPdf (string docInputPut)\fC [static]\fP"
 
 .PP
 Converts document file or image to PDF memory stream (i\&.e\&. for use in \fBWeb\fP Requests) 
@@ -359,7 +359,7 @@ Save HTML as PDF file
 .RE
 .PP
 
-.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.SaveMSOfficeDocAsPdf (string docInputPath, string pdfOutputPath)\fC [static]\fP"
+.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.SaveMsOfficeDocAsPdf (string docInputPath, string pdfOutputPath)\fC [static]\fP"
 
 .PP
 Save Docx document to PDF to file 
@@ -372,26 +372,7 @@ Save Docx document to PDF to file
 .RE
 .PP
 
-.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.SavePDFAsPng (string inputPath, string rootOutputPath, string imageTitle, int timeoutSeconds = \fC30\fP)\fC [static]\fP"
-
-.PP
-Converts and saves a PDF file as 1 or more PNG images (1 image per PDF page) 
-.PP
-\fBParameters\fP
-.RS 4
-\fIinputPath\fP Input file path of PDF file
-.br
-\fIrootOutputPath\fP Root output folder where PNG images will be saved to
-.br
-\fIimageTitle\fP A given title for the prefix of the set of images
-.br
-\fItimeoutSeconds\fP Timeout in seconds before error is reported
-.br
-\fIthrowOnError\fP 
-.RE
-.PP
-
-.SS "static string JBToolkit\&.PdfDoc\&.PdfConverter\&.SavePDFToHtml (string path, string documentName, string outputRootPath = \fC''\fP, bool overwriteIfExists = \fCfalse\fP, int timeoutSeconds = \fC30\fP)\fC [static]\fP"
+.SS "static string JBToolkit\&.PdfDoc\&.PdfConverter\&.SavePdfAsHtml (string path, string documentName, string outputRootPath = \fC''\fP, bool overwriteIfExists = \fCfalse\fP, int timeoutSeconds = \fC30\fP)\fC [static]\fP"
 
 .PP
 Saves a PDF file as HTML file(s) - 1 HTML file per PDF page\&. The output string is the root path where the files have been created 
@@ -412,6 +393,25 @@ Saves a PDF file as HTML file(s) - 1 HTML file per PDF page\&. The output string
 \fBReturns\fP
 .RS 4
 RSoot path where the files have been created
+.RE
+.PP
+
+.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.SavePdfAsPng (string inputPath, string rootOutputPath, string imageTitle, int timeoutSeconds = \fC30\fP)\fC [static]\fP"
+
+.PP
+Converts and saves a PDF file as 1 or more PNG images (1 image per PDF page) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinputPath\fP Input file path of PDF file
+.br
+\fIrootOutputPath\fP Root output folder where PNG images will be saved to
+.br
+\fIimageTitle\fP A given title for the prefix of the set of images
+.br
+\fItimeoutSeconds\fP Timeout in seconds before error is reported
+.br
+\fIthrowOnError\fP 
 .RE
 .PP
 

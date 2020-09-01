@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading;
 
-namespace JBToolkit.SafeStream
+namespace JBToolkit.Streams
 {
 
     /// <summary>

@@ -1,8 +1,8 @@
-.TH "JBToolkit.CSV.CSVHelper" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.TH "JBToolkit.Csv.CsvHelper" 3 "Tue Sep 1 2020" "JB.Toolkit" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-JBToolkit.CSV.CSVHelper
+JBToolkit.Csv.CsvHelper
 .SH SYNOPSIS
 .br
 .PP
@@ -10,60 +10,60 @@ JBToolkit.CSV.CSVHelper
 
 .in +1c
 .ti -1c
-.RI "enum \fBCSVTrimOptions\fP { \fBCSVTrimOptions\&.None\fP, \fBCSVTrimOptions\&.TrimInsideQuotes\fP, \fBCSVTrimOptions\&.TrimFields\fP }"
+.RI "enum \fBCsvTrimOptions\fP { \fBCsvTrimOptions\&.None\fP, \fBCsvTrimOptions\&.TrimInsideQuotes\fP, \fBCsvTrimOptions\&.TrimFields\fP }"
 .br
 .in -1c
 .SS "Static Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "static \fBIEnumerable\fP< T > \fBCSVFileToEnumerableObject< T >\fP (string path, string delimiter='auto', bool hasHeaders=true, bool ignoreQuotes=false, \fBCSVTrimOptions\fP trimOptions=\fBCSVTrimOptions\&.TrimFields\fP)"
+.RI "static \fBIEnumerable\fP< T > \fBCsvFileToEnumerableObject< T >\fP (string path, string delimiter='auto', bool hasHeaders=true, bool ignoreQuotes=false, \fBCsvTrimOptions\fP trimOptions=\fBCsvTrimOptions\&.TrimFields\fP)"
 .br
-.RI "Reads \fBCSV\fP file and returns deserialised object T\&. Note, if the \fBCSV\fP file has no header, then be sure to include 'Index' attributes on your class properties\&. I\&.e: "
+.RI "Reads CSV file and returns deserialised object T\&. Note, if the CSV file has no header, then be sure to include 'Index' attributes on your class properties\&. I\&.e: "
 .ti -1c
-.RI "static dynamic \fBCSVFileToDynamicObject\fP (string path, string delimiter='auto', bool hasHeaders=true, bool ignoreQuotes=false, \fBCSVTrimOptions\fP trimOptions=\fBCSVTrimOptions\&.TrimFields\fP)"
+.RI "static dynamic \fBCsvFileToDynamicObject\fP (string path, string delimiter='auto', bool hasHeaders=true, bool ignoreQuotes=false, \fBCsvTrimOptions\fP trimOptions=\fBCsvTrimOptions\&.TrimFields\fP)"
 .br
-.RI "Reads \fBCSV\fP file and returns dynamic object Note, if the \fBCSV\fP file has no header, then be sure to include 'Index' attributes on your class properties\&. I\&.e: "
+.RI "Reads CSV file and returns dynamic object Note, if the CSV file has no header, then be sure to include 'Index' attributes on your class properties\&. I\&.e: "
 .ti -1c
-.RI "static \fBDataTable\fP \fBCSVFileToDataTable\fP (string path, string delimiter='auto', bool hasHeaders=true, bool ignoreQuotes=false, \fBCSVTrimOptions\fP trimOptions=\fBCSVTrimOptions\&.TrimFields\fP)"
+.RI "static \fBDataTable\fP \fBCsvFileToDataTable\fP (string path, string delimiter='auto', bool hasHeaders=true, bool ignoreQuotes=false, \fBCsvTrimOptions\fP trimOptions=\fBCsvTrimOptions\&.TrimFields\fP)"
 .br
-.RI "Read \fBCSV\fP File and convert to DataTable object Note, if the \fBCSV\fP file has no header, then be sure to include 'Index' attributes on your class properties\&. I\&.e: "
+.RI "Read CSV File and convert to DataTable object Note, if the CSV file has no header, then be sure to include 'Index' attributes on your class properties\&. I\&.e: "
 .ti -1c
-.RI "static void \fBToCSVFile< T >\fP (\fBIEnumerable\fP< T > obj, string path, char delimiter=',', bool hasHeaders=true, bool quoteAllFields=true, \fBCSVTrimOptions\fP trimOptions=\fBCSVTrimOptions\&.TrimFields\fP)"
+.RI "static void \fBToCsvFile< T >\fP (\fBIEnumerable\fP< T > obj, string path, char delimiter=',', bool hasHeaders=true, bool quoteAllFields=true, \fBCsvTrimOptions\fP trimOptions=\fBCsvTrimOptions\&.TrimFields\fP)"
 .br
-.RI "Write \fBIEnumerable\fP object to \fBCSV\fP file "
+.RI "Write \fBIEnumerable\fP object to CSV file "
 .ti -1c
-.RI "static string \fBToCSVString< T >\fP (\fBIEnumerable\fP< T > obj, char delimiter=',', bool hasHeaders=true, bool quoteAllFields=true, \fBCSVTrimOptions\fP trimOptions=\fBCSVTrimOptions\&.TrimFields\fP)"
+.RI "static string \fBToCsvString< T >\fP (\fBIEnumerable\fP< T > obj, char delimiter=',', bool hasHeaders=true, bool quoteAllFields=true, \fBCsvTrimOptions\fP trimOptions=\fBCsvTrimOptions\&.TrimFields\fP)"
 .br
-.RI "Write \fBIEnumerable\fP object to \fBCSV\fP file "
+.RI "Write \fBIEnumerable\fP object to CSV file "
 .ti -1c
-.RI "static void \fBToCSVFile< T >\fP (\fBList\fP< T > list, string path, char delimiter=',', bool hasHeaders=true, bool quoteAllFields=true, \fBCSVTrimOptions\fP trimOptions=\fBCSVTrimOptions\&.TrimFields\fP)"
+.RI "static void \fBToCsvFile< T >\fP (\fBList\fP< T > list, string path, char delimiter=',', bool hasHeaders=true, bool quoteAllFields=true, \fBCsvTrimOptions\fP trimOptions=\fBCsvTrimOptions\&.TrimFields\fP)"
 .br
-.RI "Write \fBList\fP to \fBCSV\fP file "
+.RI "Write \fBList\fP to CSV file "
 .ti -1c
-.RI "static string \fBToCSVString< T >\fP (\fBList\fP< T > list, char delimiter=',', bool hasHeaders=true, bool quoteAllFields=true, \fBCSVTrimOptions\fP trimOptions=\fBCSVTrimOptions\&.TrimFields\fP)"
+.RI "static string \fBToCSVString< T >\fP (\fBList\fP< T > list, char delimiter=',', bool hasHeaders=true, bool quoteAllFields=true, \fBCsvTrimOptions\fP trimOptions=\fBCsvTrimOptions\&.TrimFields\fP)"
 .br
-.RI "Write \fBList\fP to \fBCSV\fP file "
+.RI "Write \fBList\fP to CSV file "
 .ti -1c
-.RI "static void \fBToCSVFile\fP (\fBDataTable\fP dt, string path, char delimiter=',', bool hasHeaders=true, bool quoteAllFields=true, \fBCSVTrimOptions\fP trimOptions=\fBCSVTrimOptions\&.TrimFields\fP)"
+.RI "static void \fBToCsvFile\fP (\fBDataTable\fP dt, string path, char delimiter=',', bool hasHeaders=true, bool quoteAllFields=true, \fBCsvTrimOptions\fP trimOptions=\fBCsvTrimOptions\&.TrimFields\fP)"
 .br
-.RI "Converts DataTable to \fBCSV\fP and write to file "
+.RI "Converts DataTable to CSV and write to file "
 .ti -1c
-.RI "static string \fBToCSVString\fP (\fBDataTable\fP dt, char delimiter=',', bool hasHeaders=true, bool quoteAllFields=true, \fBCSVTrimOptions\fP trimOptions=\fBCSVTrimOptions\&.TrimFields\fP)"
+.RI "static string \fBToCsvString\fP (\fBDataTable\fP dt, char delimiter=',', bool hasHeaders=true, bool quoteAllFields=true, \fBCsvTrimOptions\fP trimOptions=\fBCsvTrimOptions\&.TrimFields\fP)"
 .br
-.RI "Converts DataTable object to \fBCSV\fP type string "
+.RI "Converts DataTable object to CSV type string "
 .ti -1c
-.RI "static \fBList\fP< string > \fBGetCSVHeaderNames\fP (string path, string delimiter='auto')"
+.RI "static \fBList\fP< string > \fBGetCsvHeaderNames\fP (string path, string delimiter='auto')"
 .br
-.RI "Returns a list of \fBCSV\fP headers "
+.RI "Returns a list of CSV headers "
 .ti -1c
 .RI "static char \fBTryDetectDelimiter\fP (string[] lines)"
 .br
-.RI "Tries to auto detect \fBCSV\fP delimiter (tends to do a very good job of it)\&. "
+.RI "Tries to auto detect CSV delimiter (tends to do a very good job of it)\&. "
 .in -1c
 .SH "Member Enumeration Documentation"
 .PP 
-.SS "enum \fBJBToolkit\&.CSV\&.CSVHelper\&.CSVTrimOptions\fP\fC [strong]\fP"
+.SS "enum \fBJBToolkit\&.Csv\&.CsvHelper\&.CsvTrimOptions\fP\fC [strong]\fP"
 
 .PP
 \fBEnumerator\fP
@@ -76,10 +76,10 @@ JBToolkit.CSV.CSVHelper
 \fB\fITrimFields \fP\fP
 .SH "Member Function Documentation"
 .PP 
-.SS "static \fBDataTable\fP JBToolkit\&.CSV\&.CSVHelper\&.CSVFileToDataTable (string path, string delimiter = \fC'auto'\fP, bool hasHeaders = \fCtrue\fP, bool ignoreQuotes = \fCfalse\fP, \fBCSVTrimOptions\fP trimOptions = \fC\fBCSVTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
+.SS "static \fBDataTable\fP JBToolkit\&.Csv\&.CsvHelper\&.CsvFileToDataTable (string path, string delimiter = \fC'auto'\fP, bool hasHeaders = \fCtrue\fP, bool ignoreQuotes = \fCfalse\fP, \fBCsvTrimOptions\fP trimOptions = \fC\fBCsvTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
 
 .PP
-Read \fBCSV\fP File and convert to DataTable object Note, if the \fBCSV\fP file has no header, then be sure to include 'Index' attributes on your class properties\&. I\&.e: 
+Read CSV File and convert to DataTable object Note, if the CSV file has no header, then be sure to include 'Index' attributes on your class properties\&. I\&.e: 
 .PP
 .nf
 public class Foo
@@ -124,11 +124,11 @@ More information available at: https://joshclose.github.io/CsvHelper/getting-sta
 .PP
 \fBParameters\fP
 .RS 4
-\fIpath\fP File path of \fBCSV\fP file
+\fIpath\fP File path of CSV file
 .br
 \fIdelimiter\fP (Optional) - Single character seperator, i\&.e: ';' ',' '\\t' (tab) or 'auto' to try and detect
 .br
-\fIhasHeaders\fP (Optional) - Does the \fBCSV\fP file have headers or not?
+\fIhasHeaders\fP (Optional) - Does the CSV file have headers or not?
 .br
 \fIignoreQuotes\fP (Optional) - If true, quotation marks are treated like any other character
 .br
@@ -141,10 +141,10 @@ DataTable result
 .RE
 .PP
 
-.SS "static dynamic JBToolkit\&.CSV\&.CSVHelper\&.CSVFileToDynamicObject (string path, string delimiter = \fC'auto'\fP, bool hasHeaders = \fCtrue\fP, bool ignoreQuotes = \fCfalse\fP, \fBCSVTrimOptions\fP trimOptions = \fC\fBCSVTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
+.SS "static dynamic JBToolkit\&.Csv\&.CsvHelper\&.CsvFileToDynamicObject (string path, string delimiter = \fC'auto'\fP, bool hasHeaders = \fCtrue\fP, bool ignoreQuotes = \fCfalse\fP, \fBCsvTrimOptions\fP trimOptions = \fC\fBCsvTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
 
 .PP
-Reads \fBCSV\fP file and returns dynamic object Note, if the \fBCSV\fP file has no header, then be sure to include 'Index' attributes on your class properties\&. I\&.e: 
+Reads CSV file and returns dynamic object Note, if the CSV file has no header, then be sure to include 'Index' attributes on your class properties\&. I\&.e: 
 .PP
 .nf
 public class Foo
@@ -194,11 +194,11 @@ More information available at: https://joshclose.github.io/CsvHelper/getting-sta
 .PP
 \fBParameters\fP
 .RS 4
-\fIpath\fP File path of \fBCSV\fP file
+\fIpath\fP File path of CSV file
 .br
 \fIdelimiter\fP (Optional) - Single character seperator, i\&.e: ';' ',' '\\t' (tab) or 'auto' to try and detect
 .br
-\fIhasHeaders\fP (Optional) - Does the \fBCSV\fP file have headers or not?
+\fIhasHeaders\fP (Optional) - Does the CSV file have headers or not?
 .br
 \fIignoreQuotes\fP (Optional) - If true, quotation marks are treated like any other character
 .br
@@ -211,10 +211,10 @@ Dynamic result
 .RE
 .PP
 
-.SS "static \fBIEnumerable\fP<T> JBToolkit\&.CSV\&.CSVHelper\&.CSVFileToEnumerableObject< T > (string path, string delimiter = \fC'auto'\fP, bool hasHeaders = \fCtrue\fP, bool ignoreQuotes = \fCfalse\fP, \fBCSVTrimOptions\fP trimOptions = \fC\fBCSVTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
+.SS "static \fBIEnumerable\fP<T> JBToolkit\&.Csv\&.CsvHelper\&.CsvFileToEnumerableObject< T > (string path, string delimiter = \fC'auto'\fP, bool hasHeaders = \fCtrue\fP, bool ignoreQuotes = \fCfalse\fP, \fBCsvTrimOptions\fP trimOptions = \fC\fBCsvTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
 
 .PP
-Reads \fBCSV\fP file and returns deserialised object T\&. Note, if the \fBCSV\fP file has no header, then be sure to include 'Index' attributes on your class properties\&. I\&.e: 
+Reads CSV file and returns deserialised object T\&. Note, if the CSV file has no header, then be sure to include 'Index' attributes on your class properties\&. I\&.e: 
 .PP
 .nf
 public class Foo
@@ -264,11 +264,11 @@ More information available at: https://joshclose.github.io/CsvHelper/getting-sta
 .PP
 \fBParameters\fP
 .RS 4
-\fIpath\fP File path of \fBCSV\fP file
+\fIpath\fP File path of CSV file
 .br
 \fIdelimiter\fP (Optional) - Single character seperator, i\&.e: ';' ',' '\\t' (tab) or 'auto' to try and detect
 .br
-\fIhasHeaders\fP (Optional) - Does the \fBCSV\fP file have headers or not?
+\fIhasHeaders\fP (Optional) - Does the CSV file have headers or not?
 .br
 \fIignoreQuotes\fP (Optional) - If true, quotation marks are treated like any other character
 .br
@@ -281,14 +281,14 @@ More information available at: https://joshclose.github.io/CsvHelper/getting-sta
 .RE
 .PP
 
-.SS "static \fBList\fP<string> JBToolkit\&.CSV\&.CSVHelper\&.GetCSVHeaderNames (string path, string delimiter = \fC'auto'\fP)\fC [static]\fP"
+.SS "static \fBList\fP<string> JBToolkit\&.Csv\&.CsvHelper\&.GetCsvHeaderNames (string path, string delimiter = \fC'auto'\fP)\fC [static]\fP"
 
 .PP
-Returns a list of \fBCSV\fP headers 
+Returns a list of CSV headers 
 .PP
 \fBParameters\fP
 .RS 4
-\fIpath\fP Path to \fBCSV\fP file
+\fIpath\fP Path to CSV file
 .br
 \fIdelimiter\fP (Optional) - Seperator, i\&.e: ; , \\t (tab)
 .RE
@@ -301,10 +301,10 @@ Headers list
 
 .br
  
-.SS "static void JBToolkit\&.CSV\&.CSVHelper\&.ToCSVFile (\fBDataTable\fP dt, string path, char delimiter = \fC','\fP, bool hasHeaders = \fCtrue\fP, bool quoteAllFields = \fCtrue\fP, \fBCSVTrimOptions\fP trimOptions = \fC\fBCSVTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
+.SS "static void JBToolkit\&.Csv\&.CsvHelper\&.ToCsvFile (\fBDataTable\fP dt, string path, char delimiter = \fC','\fP, bool hasHeaders = \fCtrue\fP, bool quoteAllFields = \fCtrue\fP, \fBCsvTrimOptions\fP trimOptions = \fC\fBCsvTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
 
 .PP
-Converts DataTable to \fBCSV\fP and write to file 
+Converts DataTable to CSV and write to file 
 .PP
 \fBParameters\fP
 .RS 4
@@ -320,10 +320,10 @@ Converts DataTable to \fBCSV\fP and write to file
 .RE
 .PP
 
-.SS "static void \fBJBToolkit\&.CSV\&.CSVHelper\&.ToCSVFile\fP< T > (\fBIEnumerable\fP< T > obj, string path, char delimiter = \fC','\fP, bool hasHeaders = \fCtrue\fP, bool quoteAllFields = \fCtrue\fP, \fBCSVTrimOptions\fP trimOptions = \fC\fBCSVTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
+.SS "static void \fBJBToolkit\&.Csv\&.CsvHelper\&.ToCsvFile\fP< T > (\fBIEnumerable\fP< T > obj, string path, char delimiter = \fC','\fP, bool hasHeaders = \fCtrue\fP, bool quoteAllFields = \fCtrue\fP, \fBCsvTrimOptions\fP trimOptions = \fC\fBCsvTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
 
 .PP
-Write \fBIEnumerable\fP object to \fBCSV\fP file More information available at: https://joshclose.github.io/CsvHelper/getting-started
+Write \fBIEnumerable\fP object to CSV file More information available at: https://joshclose.github.io/CsvHelper/getting-started
 .PP
 \fBTemplate Parameters\fP
 .RS 4
@@ -344,10 +344,10 @@ Write \fBIEnumerable\fP object to \fBCSV\fP file More information available at: 
 .RE
 .PP
 
-.SS "static void \fBJBToolkit\&.CSV\&.CSVHelper\&.ToCSVFile\fP< T > (\fBList\fP< T > list, string path, char delimiter = \fC','\fP, bool hasHeaders = \fCtrue\fP, bool quoteAllFields = \fCtrue\fP, \fBCSVTrimOptions\fP trimOptions = \fC\fBCSVTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
+.SS "static void \fBJBToolkit\&.Csv\&.CsvHelper\&.ToCsvFile\fP< T > (\fBList\fP< T > list, string path, char delimiter = \fC','\fP, bool hasHeaders = \fCtrue\fP, bool quoteAllFields = \fCtrue\fP, \fBCsvTrimOptions\fP trimOptions = \fC\fBCsvTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
 
 .PP
-Write \fBList\fP to \fBCSV\fP file 
+Write \fBList\fP to CSV file 
 .PP
 \fBTemplate Parameters\fP
 .RS 4
@@ -368,10 +368,10 @@ Write \fBList\fP to \fBCSV\fP file
 .RE
 .PP
 
-.SS "static string JBToolkit\&.CSV\&.CSVHelper\&.ToCSVString (\fBDataTable\fP dt, char delimiter = \fC','\fP, bool hasHeaders = \fCtrue\fP, bool quoteAllFields = \fCtrue\fP, \fBCSVTrimOptions\fP trimOptions = \fC\fBCSVTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
+.SS "static string JBToolkit\&.Csv\&.CsvHelper\&.ToCsvString (\fBDataTable\fP dt, char delimiter = \fC','\fP, bool hasHeaders = \fCtrue\fP, bool quoteAllFields = \fCtrue\fP, \fBCsvTrimOptions\fP trimOptions = \fC\fBCsvTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
 
 .PP
-Converts DataTable object to \fBCSV\fP type string 
+Converts DataTable object to CSV type string 
 .PP
 \fBParameters\fP
 .RS 4
@@ -386,14 +386,14 @@ Converts DataTable object to \fBCSV\fP type string
 .PP
 \fBReturns\fP
 .RS 4
-\fBCSV\fP string
+CSV string
 .RE
 .PP
 
-.SS "static string \fBJBToolkit\&.CSV\&.CSVHelper\&.ToCSVString\fP< T > (\fBIEnumerable\fP< T > obj, char delimiter = \fC','\fP, bool hasHeaders = \fCtrue\fP, bool quoteAllFields = \fCtrue\fP, \fBCSVTrimOptions\fP trimOptions = \fC\fBCSVTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
+.SS "static string \fBJBToolkit\&.Csv\&.CsvHelper\&.ToCsvString\fP< T > (\fBIEnumerable\fP< T > obj, char delimiter = \fC','\fP, bool hasHeaders = \fCtrue\fP, bool quoteAllFields = \fCtrue\fP, \fBCsvTrimOptions\fP trimOptions = \fC\fBCsvTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
 
 .PP
-Write \fBIEnumerable\fP object to \fBCSV\fP file More information available at: https://joshclose.github.io/CsvHelper/getting-started
+Write \fBIEnumerable\fP object to CSV file More information available at: https://joshclose.github.io/CsvHelper/getting-started
 .PP
 \fBTemplate Parameters\fP
 .RS 4
@@ -414,10 +414,10 @@ Write \fBIEnumerable\fP object to \fBCSV\fP file More information available at: 
 .RE
 .PP
 
-.SS "static string \fBJBToolkit\&.CSV\&.CSVHelper\&.ToCSVString\fP< T > (\fBList\fP< T > list, char delimiter = \fC','\fP, bool hasHeaders = \fCtrue\fP, bool quoteAllFields = \fCtrue\fP, \fBCSVTrimOptions\fP trimOptions = \fC\fBCSVTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
+.SS "static string JBToolkit\&.Csv\&.CsvHelper\&.ToCSVString< T > (\fBList\fP< T > list, char delimiter = \fC','\fP, bool hasHeaders = \fCtrue\fP, bool quoteAllFields = \fCtrue\fP, \fBCsvTrimOptions\fP trimOptions = \fC\fBCsvTrimOptions\&.TrimFields\fP\fP)\fC [static]\fP"
 
 .PP
-Write \fBList\fP to \fBCSV\fP file 
+Write \fBList\fP to CSV file 
 .PP
 \fBTemplate Parameters\fP
 .RS 4
@@ -438,10 +438,10 @@ Write \fBList\fP to \fBCSV\fP file
 .RE
 .PP
 
-.SS "static char JBToolkit\&.CSV\&.CSVHelper\&.TryDetectDelimiter (string[] lines)\fC [static]\fP"
+.SS "static char JBToolkit\&.Csv\&.CsvHelper\&.TryDetectDelimiter (string[] lines)\fC [static]\fP"
 
 .PP
-Tries to auto detect \fBCSV\fP delimiter (tends to do a very good job of it)\&. 
+Tries to auto detect CSV delimiter (tends to do a very good job of it)\&. 
 .PP
 \fBParameters\fP
 .RS 4

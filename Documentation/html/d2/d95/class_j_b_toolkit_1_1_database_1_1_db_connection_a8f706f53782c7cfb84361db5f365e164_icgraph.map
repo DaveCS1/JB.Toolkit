@@ -1,0 +1,6 @@
+<map id="JBToolkit.Database.DbConnection.GetScalerResult" name="JBToolkit.Database.DbConnection.GetScalerResult">
+<area shape="rect" id="node1" title="Gets a single string from the database given an SQL query (first column, first row) &#45; Typically used ..." alt="" coords="276,71,499,112"/>
+<area shape="rect" id="node2" href="$d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection.html#abb789da6f9b78249cbe3debf45f90237" title="Gets a single string from the database given an SQL query (first column, first row) &#45; Typically used ..." alt="" coords="5,5,228,47"/>
+<area shape="rect" id="node3" href="$dc/d10/class_j_b_toolkit_1_1_web_1_1_access_token.html#ac40366a0d109a039eb5769c32b7caf45" title="Get&#39;s a token expiry date and time for a given IP address if one exists" alt="" coords="20,71,213,112"/>
+<area shape="rect" id="node4" href="$dc/d10/class_j_b_toolkit_1_1_web_1_1_access_token.html#a831959ae569256c45726c571d82a98e5" title="Checks if token exists in the database and isn&#39;t expired" alt="" coords="20,136,213,177"/>
+</map>

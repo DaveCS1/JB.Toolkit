@@ -1,15 +1,19 @@
-\label{index_mainpage}%
-\Hypertarget{index_mainpage}%
+\label{index_md_D}%
+\Hypertarget{index_md_D}%
+\+:\+\_\+\+One\+Drive\+\_\+\+Documents\+\_\+\+Work\+\_\+\+Repositories\+\_\+\+J\+B.\+Toolkit\+\_\+\+R\+E\+A\+D\+ME
+
 ~ \href{https://github.com/jamesbrindle/JB.Toolkit}{\texttt{ }}
 
-A collection of useful classes, extensions and tools written in C\# to aid in a wide variety of development. With components for A\+SP Net M\+VC, Winform and Console applications. Integrations for Google, AD and S\+QL and pre-\/written implementations / helpers for a variety of tasks... Just Because (see below). ~ ~\hypertarget{index_autotoc_md0}{}\doxysection{Nuget Package}\label{index_autotoc_md0}
+A collection of useful classes, extensions and tools written in C\# to aid in a wide variety of development. With components for A\+SP Net M\+VC, Winform and Console applications. Integrations for Google, AD and S\+QL and pre-\/written implementations / helpers for a variety of tasks... Just Because (see below).
 
+~ ~\hypertarget{index_autotoc_md1}{}\doxysection{Nuget Package}\label{index_autotoc_md1}
+~ 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Install-\/Package JBToolkit}
+\DoxyCodeLine{Install-\/Package JB.Toolkit}
 \end{DoxyCode}
 
 
-~ ~\hypertarget{index_autotoc_md1}{}\doxysection{Tools Include, But Not Limited To}\label{index_autotoc_md1}
+~ ~\hypertarget{index_autotoc_md2}{}\doxysection{Tools Include, But Not Limited To}\label{index_autotoc_md2}
 
 \begin{DoxyItemize}
 \item {\bfseries{Assembly Helper}}
@@ -34,13 +38,14 @@ A collection of useful classes, extensions and tools written in C\# to aid in a 
 \begin{DoxyItemize}
 \item Spinner
 \item Progress bar
-\item Any console foreground and background colour (Colour\+Ful.\+Console)
+\item Mono.\+Options (Command line arguments\+: \href{http://docs.go-mono.com/index.aspx?link=T:Mono.Options.OptionSet}{\texttt{ http\+://docs.\+go-\/mono.\+com/index.\+aspx?link=\+T\+:\+Mono.\+Options.\+Option\+Set}})
+\item Any console foreground and background colour (Colour\+Ful.\+Console library)
 \item F\+I\+G\+Let fonts (A\+S\+C\+II art)
 \end{DoxyItemize}
 \item {\bfseries{Database}}
 \begin{DoxyItemize}
 \item Get data table, get scaler, execute non-\/\+Query, execute non-\/query with scoped identity
-\item Dapper
+\item Dapper implementations
 \item Tree view (i.\+e. jstree) cache storage
 \end{DoxyItemize}
 \item {\bfseries{Domain}}
@@ -76,7 +81,13 @@ A collection of useful classes, extensions and tools written in C\# to aid in a 
 \item Image type converter
 \item Image manipulation
 \item Icon helper
-\item Web image helper (mimetype helepr, base64 image, get image bytes from U\+RL etc)
+\begin{DoxyItemize}
+\item Get icon from file type (many embedded images)
+\end{DoxyItemize}
+\item Web image helper (mime type helepr, base64 image, get image bytes from U\+RL etc)
+\begin{DoxyItemize}
+\item Mime type descriptor from image byte array using magic number detection
+\end{DoxyItemize}
 \item Colour helper
 \item O\+CR
 \end{DoxyItemize}
@@ -138,6 +149,7 @@ A collection of useful classes, extensions and tools written in C\# to aid in a 
 \begin{DoxyItemize}
 \item Common regular expression lists
 \item Try convert any string format of a date to Date\+Time
+\item Match all dates in a string
 \end{DoxyItemize}
 \item {\bfseries{Stream Helper}}
 \begin{DoxyItemize}
@@ -161,16 +173,20 @@ A collection of useful classes, extensions and tools written in C\# to aid in a 
 \item Taskbar icon helper
 \item Imaging tools
 \end{DoxyItemize}
-\item {\bfseries{X\+ML Doc (Word, Excel) Tools}}
+\item {\bfseries{X\+ML Doc (Word, Excel, Power\+Point, P\+DF) Tools}}
 \begin{DoxyItemize}
 \item Converter
 \begin{DoxyItemize}
-\item Data\+Table to Xlsx
-\item Docx to H\+T\+ML
-\item Docx to P\+DF
+\item MS Office to P\+DF
+\item P\+DF to MS Office
+\item MS Office / P\+DF to Html
+\item MS Office / P\+DF to Image
+\item Bulk convert MS Office to P\+DF
+\item MS Office / P\+DF / Image (O\+CR) to text file (.txt)
 \end{DoxyItemize}
 \item Mail merge
 \item Find and replace
+\item Image extractor
 \end{DoxyItemize}
 \item {\bfseries{Zip}}
 \begin{DoxyItemize}

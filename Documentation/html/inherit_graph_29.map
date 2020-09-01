@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$da/df0/class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_impersonator_1_1_impersonator_credentials.html" title=" " alt="" coords="5,5,247,47"/>
+<area shape="rect" id="node1" href="$d8/d7e/class_j_b_toolkit_1_1_database_1_1_db_result.html" title="Results object from a DB command" alt="" coords="5,46,196,73"/>
+<area shape="rect" id="node2" href="$d0/d79/class_j_b_toolkit_1_1_database_1_1_db_result_1_1_failure_d_b_command_result.html" title=" " alt="" coords="244,5,439,47"/>
+<area shape="rect" id="node3" href="$d9/dee/class_j_b_toolkit_1_1_database_1_1_db_result_1_1_success_d_b_command_result.html" title=" " alt="" coords="244,71,439,112"/>
 </map>

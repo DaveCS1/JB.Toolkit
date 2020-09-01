@@ -27,7 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{4C8FF082
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JB.Toolkit", "JB.Toolkit\JB.Toolkit.csproj", "{43AA263C-1DB9-490D-99EA-5AF526DF56AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JB.Toolkit.Testing", "JB.Toolkit.Testing\JB.Toolkit.Testing.csproj", "{8984EAC4-5850-4456-8026-E0677A95480A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "JB.Toolkit.Testing\Testing.csproj", "{8984EAC4-5850-4456-8026-E0677A95480A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -113,7 +113,7 @@ namespace JBToolkit.XmlDoc.MailMerge
 
             if (saveAsPDF)
             {
-                return PdfDoc.PdfConverter.ConvertMSOfficeDocToPDF(ms, "docx");
+                return PdfDoc.PdfConverter.ConvertMsOfficeDocToPdf(ms, "docx");
             }
 
             return ms;
@@ -151,7 +151,7 @@ namespace JBToolkit.XmlDoc.MailMerge
                 File.Copy(templatePath, tempFilePath, true);
 
                 // Open copied document.
-                using (var safeStream = new SafeStream.SafeFileStream(tempFilePath, FileMode.Open, FileAccess.ReadWrite, FileShare.None))
+                using (var safeStream = new Streams.SafeFileStream(tempFilePath, FileMode.Open, FileAccess.ReadWrite, FileShare.None))
                 {
                     safeStream.Open();
 

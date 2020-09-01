@@ -1,0 +1,4 @@
+<map id="JBToolkit.Csv.CsvHelper.CsvFileToDataTable" name="JBToolkit.Csv.CsvHelper.CsvFileToDataTable">
+<area shape="rect" id="node1" title="Read CSV File and convert to DataTable object Note, if the CSV file has no header,..." alt="" coords="5,5,172,47"/>
+<area shape="rect" id="node2" href="$d4/d33/class_j_b_toolkit_1_1_csv_1_1_csv_helper.html#ab25e53ebe8d48fd4f98bb1f02a26e48a" title="Tries to auto detect CSV delimiter (tends to do a very good job of it)." alt="" coords="220,5,387,47"/>
+</map>

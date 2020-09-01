@@ -1,0 +1,488 @@
+\hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor}{}\doxysection{J\+B\+Toolkit.\+Domain.\+Ad\+Accessor Class Reference}
+\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor}\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+
+
+Accesses a given Active Directory server as specified in the web.\+config for retrieving additional user information  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Domain.\+Ad\+Accessor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{d9/d23/class_j_b_toolkit_1_1_domain_1_1_ad_accessor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab3bcf93684a023c8f6d3c21d36445974}{Identity\+Type}} \{ \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab3bcf93684a023c8f6d3c21d36445974af0d4ebfb0e54f2a1756bc02397f80499}{Identity\+Type.\+Logon\+Idenity}}, 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab3bcf93684a023c8f6d3c21d36445974a0ba29c6a1afacf586b03a26162c72274}{Identity\+Type.\+Environment}}, 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab3bcf93684a023c8f6d3c21d36445974ad1890085be68ac929b1b9f8debd02fbf}{Identity\+Type.\+Principle\+Identity}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_user}{Ad\+User}} \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a2dca81e5456a9d9d22117955f7164460}{Get\+Ad\+User}} (string username, bool calling\+From\+Within\+Domain, string ad\+Server\+Ip\+Address, string ad\+Server\+Host\+Name, string ad\+Admin\+Username, string ad\+Admin\+Password)
+\begin{DoxyCompactList}\small\item\em Gets Active Directory attributes of a given user specified by username \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_user}{Ad\+User}} \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a0576010af9f1b3c7eb9de41849c7fc35}{Get\+Ad\+User}} (string username, bool calling\+From\+Within\+Domain, string ad\+Server\+Ip\+Address, string ad\+Server\+Host\+Name, string ad\+Domain\+Name, string ad\+Admin\+Username, string ad\+Admin\+Password)
+\begin{DoxyCompactList}\small\item\em Gets Active Directory attributes of a given user specified by username \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_user}{Ad\+User}} \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab153d13d89fbabac1bb04e47b10c0136}{Get\+Ad\+User\+Manager}} (string username, bool calling\+From\+Within\+Domain, string ad\+Server\+Ip\+Address, string ad\+Server\+Host\+Name, string ad\+Admin\+Username, string ad\+Admin\+Password, bool recursively\+Get\+Hierarchy\+Above=false)
+\begin{DoxyCompactList}\small\item\em Returns the manager A\+D\+User object of the user \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_user}{Ad\+User}} \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ae7069631db8e9b06769cd0777e523e3f}{Get\+A\+D\+User\+Manager}} (string username, bool calling\+From\+Within\+Domain, string ad\+Server\+Ip\+Address, string ad\+Server\+Host\+Name, string ad\+Domain\+Name, string ad\+Admin\+Username, string ad\+Admin\+Password, bool recursively\+Get\+Hierarchy\+Above=false)
+\begin{DoxyCompactList}\small\item\em Returns the manager A\+D\+User object of the user \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a3fd50b95ff692d6f687be0be5022fc5d}{Get\+Username\+From\+Email\+Address}} (string email\+Address, bool calling\+From\+Within\+Domain, string ad\+Server\+Ip\+Address, string ad\+Server\+Host\+Name, string ad\+Admin\+Username, string ad\+Admin\+Password)
+\begin{DoxyCompactList}\small\item\em Returns the username from an AD search by email address \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a0a056892e52f4f2316b9171c34bc724c}{Get\+Name\+From\+Email\+Address}} (string email\+Address, bool calling\+From\+Within\+Domain, string ad\+Server\+Ip\+Address, string ad\+Server\+Host\+Name, string ad\+Admin\+Username, string ad\+Admin\+Password)
+\begin{DoxyCompactList}\small\item\em Returns the full name from an AD search by email address \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a115962bdc987d7ad937f782a26429e48}{Get\+Name\+From\+Username}} (string username, bool calling\+From\+Within\+Domain, string ad\+Server\+Ip\+Address, string ad\+Server\+Host\+Name, string ad\+Admin\+Username, string ad\+Admin\+Password)
+\begin{DoxyCompactList}\small\item\em Returns the full name from an AD search by username \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_afb18f1a6a12dad53d8234819b2ebdb39}{Get\+Email\+From\+Username}} (string username, bool calling\+From\+Within\+Domain, string ad\+Server\+Ip\+Address, string ad\+Server\+Host\+Name, string ad\+Admin\+Username, string ad\+Admin\+Password)
+\begin{DoxyCompactList}\small\item\em Returns the email from an AD search by username \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a0f9d8cc76501fb5da3a74dc62f538305}{Get\+Logged\+In\+User\+Email}} ()
+\begin{DoxyCompactList}\small\item\em Returns the logged in user email (don\textquotesingle{}t use this if deploying to I\+IS without \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} authentication) \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ad9771e7581497c15be85bbdb2f6e3763}{Get\+Ad\+Photo\+From\+Email}} (string email, bool calling\+From\+Within\+Domain, string ad\+Server\+Ip\+Address, string ad\+Server\+Host\+Name, string ad\+Admin\+Username, string ad\+Admin\+Password)
+\begin{DoxyCompactList}\small\item\em Gets the photo stored in AD user \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ac949324355e95adbc503d1628c31db37}{Get\+Ad\+Photo\+From\+Username}} (string username, bool calling\+From\+Within\+Domain, string ad\+Server\+Ip\+Address, string ad\+Server\+Host\+Name, string ad\+Admin\+Username, string ad\+Admin\+Password)
+\begin{DoxyCompactList}\small\item\em Gets the photo stored in AD user \end{DoxyCompactList}\item 
+static Search\+Result\+Collection \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a9f63048960498b90c0c9387aa2a08edf}{Get\+All\+Users}} (bool calling\+From\+Within\+Domain, string ad\+Server\+Ip\+Address, string ad\+Server\+Host\+Name, string ad\+Admin\+Username, string ad\+Admin\+Password)
+\begin{DoxyCompactList}\small\item\em Returns all users of the domain \end{DoxyCompactList}\item 
+static Search\+Result \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a226d0bc06afdbe289f4099fdec1f401a}{Get\+Ad\+Search\+Result}} (string search\+String, string search\+Filter, bool calling\+From\+Within\+Domain, string ad\+Server\+Ip\+Address, string ad\+Server\+Host\+Name, string ad\+Admin\+Username, string ad\+Admin\+Password)
+\begin{DoxyCompactList}\small\item\em Returns a Directory\+Services Search\+Result object \end{DoxyCompactList}\item 
+static Search\+Result\+Collection \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_af3d5ff39b2d3c123903262d5808e0d70}{Get\+Ad\+Search\+Results}} (string search\+String, string search\+Filter, bool calling\+From\+Within\+Domain, string ad\+Server\+Ip\+Address, string ad\+Server\+Host\+Name, string ad\+Admin\+Username, string ad\+Admin\+Password)
+\begin{DoxyCompactList}\small\item\em Returns a Directory\+Services Search\+Result object \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab08c29ad99babb05fcc37d9dde664d48}{Get\+Username}} (\mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab3bcf93684a023c8f6d3c21d36445974}{Identity\+Type}} identity\+Type)
+\begin{DoxyCompactList}\small\item\em Get username based on different types of \textquotesingle{}Identity\+Type\textquotesingle{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Accesses a given Active Directory server as specified in the web.\+config for retrieving additional user information 
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab3bcf93684a023c8f6d3c21d36445974}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab3bcf93684a023c8f6d3c21d36445974}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!IdentityType@{IdentityType}}
+\index{IdentityType@{IdentityType}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{IdentityType}{IdentityType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab3bcf93684a023c8f6d3c21d36445974}{J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Identity\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LogonIdenity@{LogonIdenity}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!LogonIdenity@{LogonIdenity}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab3bcf93684a023c8f6d3c21d36445974af0d4ebfb0e54f2a1756bc02397f80499}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab3bcf93684a023c8f6d3c21d36445974af0d4ebfb0e54f2a1756bc02397f80499}} 
+Logon\+Idenity&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Environment@{Environment}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!Environment@{Environment}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab3bcf93684a023c8f6d3c21d36445974a0ba29c6a1afacf586b03a26162c72274}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab3bcf93684a023c8f6d3c21d36445974a0ba29c6a1afacf586b03a26162c72274}} 
+Environment&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PrincipleIdentity@{PrincipleIdentity}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!PrincipleIdentity@{PrincipleIdentity}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab3bcf93684a023c8f6d3c21d36445974ad1890085be68ac929b1b9f8debd02fbf}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab3bcf93684a023c8f6d3c21d36445974ad1890085be68ac929b1b9f8debd02fbf}} 
+Principle\+Identity&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ad9771e7581497c15be85bbdb2f6e3763}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ad9771e7581497c15be85bbdb2f6e3763}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!GetAdPhotoFromEmail@{GetAdPhotoFromEmail}}
+\index{GetAdPhotoFromEmail@{GetAdPhotoFromEmail}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{GetAdPhotoFromEmail()}{GetAdPhotoFromEmail()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Get\+Ad\+Photo\+From\+Email (\begin{DoxyParamCaption}\item[{string}]{email,  }\item[{bool}]{calling\+From\+Within\+Domain,  }\item[{string}]{ad\+Server\+Ip\+Address,  }\item[{string}]{ad\+Server\+Host\+Name,  }\item[{string}]{ad\+Admin\+Username,  }\item[{string}]{ad\+Admin\+Password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the photo stored in AD user 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ad\+Server\+Ip\+Address} & IP Address of AD controller\\
+\hline
+{\em ad\+Server\+Host\+Name} & Host name of AD controller\\
+\hline
+{\em ad\+Admin\+Username} & A user username who\textquotesingle{}s able to read the AD DB\\
+\hline
+{\em ad\+Admin\+Password} & A user password who\textquotesingle{}s able to read the AD DB\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ad9771e7581497c15be85bbdb2f6e3763_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ac949324355e95adbc503d1628c31db37}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ac949324355e95adbc503d1628c31db37}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!GetAdPhotoFromUsername@{GetAdPhotoFromUsername}}
+\index{GetAdPhotoFromUsername@{GetAdPhotoFromUsername}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{GetAdPhotoFromUsername()}{GetAdPhotoFromUsername()}}
+{\footnotesize\ttfamily static byte \mbox{[}$\,$\mbox{]} J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Get\+Ad\+Photo\+From\+Username (\begin{DoxyParamCaption}\item[{string}]{username,  }\item[{bool}]{calling\+From\+Within\+Domain,  }\item[{string}]{ad\+Server\+Ip\+Address,  }\item[{string}]{ad\+Server\+Host\+Name,  }\item[{string}]{ad\+Admin\+Username,  }\item[{string}]{ad\+Admin\+Password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the photo stored in AD user 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ad\+Server\+Ip\+Address} & IP Address of AD controller\\
+\hline
+{\em ad\+Server\+Host\+Name} & Host name of AD controller\\
+\hline
+{\em ad\+Admin\+Username} & A user username who\textquotesingle{}s able to read the AD DB\\
+\hline
+{\em ad\+Admin\+Password} & A user password who\textquotesingle{}s able to read the AD DB\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ac949324355e95adbc503d1628c31db37_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a226d0bc06afdbe289f4099fdec1f401a}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a226d0bc06afdbe289f4099fdec1f401a}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!GetAdSearchResult@{GetAdSearchResult}}
+\index{GetAdSearchResult@{GetAdSearchResult}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{GetAdSearchResult()}{GetAdSearchResult()}}
+{\footnotesize\ttfamily static Search\+Result J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Get\+Ad\+Search\+Result (\begin{DoxyParamCaption}\item[{string}]{search\+String,  }\item[{string}]{search\+Filter,  }\item[{bool}]{calling\+From\+Within\+Domain,  }\item[{string}]{ad\+Server\+Ip\+Address,  }\item[{string}]{ad\+Server\+Host\+Name,  }\item[{string}]{ad\+Admin\+Username,  }\item[{string}]{ad\+Admin\+Password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a Directory\+Services Search\+Result object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ad\+Server\+Ip\+Address} & IP Address of AD controller\\
+\hline
+{\em ad\+Server\+Host\+Name} & Host name of AD controller\\
+\hline
+{\em ad\+Admin\+Username} & A user username who\textquotesingle{}s able to read the AD DB\\
+\hline
+{\em ad\+Admin\+Password} & A user password who\textquotesingle{}s able to read the AD DB\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a226d0bc06afdbe289f4099fdec1f401a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_af3d5ff39b2d3c123903262d5808e0d70}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_af3d5ff39b2d3c123903262d5808e0d70}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!GetAdSearchResults@{GetAdSearchResults}}
+\index{GetAdSearchResults@{GetAdSearchResults}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{GetAdSearchResults()}{GetAdSearchResults()}}
+{\footnotesize\ttfamily static Search\+Result\+Collection J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Get\+Ad\+Search\+Results (\begin{DoxyParamCaption}\item[{string}]{search\+String,  }\item[{string}]{search\+Filter,  }\item[{bool}]{calling\+From\+Within\+Domain,  }\item[{string}]{ad\+Server\+Ip\+Address,  }\item[{string}]{ad\+Server\+Host\+Name,  }\item[{string}]{ad\+Admin\+Username,  }\item[{string}]{ad\+Admin\+Password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a Directory\+Services Search\+Result object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ad\+Server\+Ip\+Address} & IP Address of AD controller\\
+\hline
+{\em ad\+Server\+Host\+Name} & Host name of AD controller\\
+\hline
+{\em ad\+Admin\+Username} & A user username who\textquotesingle{}s able to read the AD DB\\
+\hline
+{\em ad\+Admin\+Password} & A user password who\textquotesingle{}s able to read the AD DB\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor_af3d5ff39b2d3c123903262d5808e0d70_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a2dca81e5456a9d9d22117955f7164460}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a2dca81e5456a9d9d22117955f7164460}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!GetAdUser@{GetAdUser}}
+\index{GetAdUser@{GetAdUser}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{GetAdUser()}{GetAdUser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_user}{Ad\+User}} J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Get\+Ad\+User (\begin{DoxyParamCaption}\item[{string}]{username,  }\item[{bool}]{calling\+From\+Within\+Domain,  }\item[{string}]{ad\+Server\+Ip\+Address,  }\item[{string}]{ad\+Server\+Host\+Name,  }\item[{string}]{ad\+Admin\+Username,  }\item[{string}]{ad\+Admin\+Password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets Active Directory attributes of a given user specified by username 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The username to retrieve AD attribute for\\
+\hline
+{\em calling\+From\+Within\+Domain} & Are we call from within AD or from a D\+MZ\\
+\hline
+{\em ad\+Server\+Ip\+Address} & IP Address of AD controller\\
+\hline
+{\em ad\+Server\+Host\+Name} & Host name of AD controller\\
+\hline
+{\em ad\+Admin\+Username} & A user username who\textquotesingle{}s able to read the AD DB\\
+\hline
+{\em ad\+Admin\+Password} & A user password who\textquotesingle{}s able to read the AD DB\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A custom AD object with limited attributes
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a0576010af9f1b3c7eb9de41849c7fc35}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a0576010af9f1b3c7eb9de41849c7fc35}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!GetAdUser@{GetAdUser}}
+\index{GetAdUser@{GetAdUser}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{GetAdUser()}{GetAdUser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_user}{Ad\+User}} J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Get\+Ad\+User (\begin{DoxyParamCaption}\item[{string}]{username,  }\item[{bool}]{calling\+From\+Within\+Domain,  }\item[{string}]{ad\+Server\+Ip\+Address,  }\item[{string}]{ad\+Server\+Host\+Name,  }\item[{string}]{ad\+Domain\+Name,  }\item[{string}]{ad\+Admin\+Username,  }\item[{string}]{ad\+Admin\+Password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets Active Directory attributes of a given user specified by username 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The username to retrieve AD attribute for\\
+\hline
+{\em calling\+From\+Within\+Domain} & Are we call from within AD or from a D\+MZ\\
+\hline
+{\em ad\+Server\+Ip\+Address} & IP Address of AD controller\\
+\hline
+{\em ad\+Server\+Host\+Name} & Host name of AD controller\\
+\hline
+{\em ad\+Domain\+Name} & I.\+e. Likely be the company name\\
+\hline
+{\em ad\+Admin\+Username} & A user username who\textquotesingle{}s able to read the AD DB\\
+\hline
+{\em ad\+Admin\+Password} & A user password who\textquotesingle{}s able to read the AD DB\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A custom AD object with limited attributes
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a0576010af9f1b3c7eb9de41849c7fc35_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab153d13d89fbabac1bb04e47b10c0136}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab153d13d89fbabac1bb04e47b10c0136}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!GetAdUserManager@{GetAdUserManager}}
+\index{GetAdUserManager@{GetAdUserManager}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{GetAdUserManager()}{GetAdUserManager()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_user}{Ad\+User}} J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Get\+Ad\+User\+Manager (\begin{DoxyParamCaption}\item[{string}]{username,  }\item[{bool}]{calling\+From\+Within\+Domain,  }\item[{string}]{ad\+Server\+Ip\+Address,  }\item[{string}]{ad\+Server\+Host\+Name,  }\item[{string}]{ad\+Admin\+Username,  }\item[{string}]{ad\+Admin\+Password,  }\item[{bool}]{recursively\+Get\+Hierarchy\+Above = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the manager A\+D\+User object of the user 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ad\+Server\+Ip\+Address} & IP Address of AD controller\\
+\hline
+{\em ad\+Server\+Host\+Name} & Host name of AD controller\\
+\hline
+{\em ad\+Admin\+Username} & A user username who\textquotesingle{}s able to read the AD DB\\
+\hline
+{\em ad\+Admin\+Password} & A user password who\textquotesingle{}s able to read the AD DB\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab153d13d89fbabac1bb04e47b10c0136_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ae7069631db8e9b06769cd0777e523e3f}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ae7069631db8e9b06769cd0777e523e3f}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!GetADUserManager@{GetADUserManager}}
+\index{GetADUserManager@{GetADUserManager}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{GetADUserManager()}{GetADUserManager()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_user}{Ad\+User}} J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Get\+A\+D\+User\+Manager (\begin{DoxyParamCaption}\item[{string}]{username,  }\item[{bool}]{calling\+From\+Within\+Domain,  }\item[{string}]{ad\+Server\+Ip\+Address,  }\item[{string}]{ad\+Server\+Host\+Name,  }\item[{string}]{ad\+Domain\+Name,  }\item[{string}]{ad\+Admin\+Username,  }\item[{string}]{ad\+Admin\+Password,  }\item[{bool}]{recursively\+Get\+Hierarchy\+Above = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the manager A\+D\+User object of the user 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ad\+Server\+Ip\+Address} & IP Address of AD controller\\
+\hline
+{\em ad\+Server\+Host\+Name} & Host name of AD controller\\
+\hline
+{\em ad\+Domain\+Name} & I.\+e. Likely be the company name\\
+\hline
+{\em ad\+Admin\+Username} & A user username who\textquotesingle{}s able to read the AD DB\\
+\hline
+{\em ad\+Admin\+Password} & A user password who\textquotesingle{}s able to read the AD DB\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ae7069631db8e9b06769cd0777e523e3f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a9f63048960498b90c0c9387aa2a08edf}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a9f63048960498b90c0c9387aa2a08edf}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!GetAllUsers@{GetAllUsers}}
+\index{GetAllUsers@{GetAllUsers}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{GetAllUsers()}{GetAllUsers()}}
+{\footnotesize\ttfamily static Search\+Result\+Collection J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Get\+All\+Users (\begin{DoxyParamCaption}\item[{bool}]{calling\+From\+Within\+Domain,  }\item[{string}]{ad\+Server\+Ip\+Address,  }\item[{string}]{ad\+Server\+Host\+Name,  }\item[{string}]{ad\+Admin\+Username,  }\item[{string}]{ad\+Admin\+Password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns all users of the domain 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ad\+Server\+Ip\+Address} & IP Address of AD controller\\
+\hline
+{\em ad\+Server\+Host\+Name} & Host name of AD controller\\
+\hline
+{\em ad\+Admin\+Username} & A user username who\textquotesingle{}s able to read the AD DB\\
+\hline
+{\em ad\+Admin\+Password} & A user password who\textquotesingle{}s able to read the AD DB\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a9f63048960498b90c0c9387aa2a08edf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_afb18f1a6a12dad53d8234819b2ebdb39}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_afb18f1a6a12dad53d8234819b2ebdb39}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!GetEmailFromUsername@{GetEmailFromUsername}}
+\index{GetEmailFromUsername@{GetEmailFromUsername}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{GetEmailFromUsername()}{GetEmailFromUsername()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Get\+Email\+From\+Username (\begin{DoxyParamCaption}\item[{string}]{username,  }\item[{bool}]{calling\+From\+Within\+Domain,  }\item[{string}]{ad\+Server\+Ip\+Address,  }\item[{string}]{ad\+Server\+Host\+Name,  }\item[{string}]{ad\+Admin\+Username,  }\item[{string}]{ad\+Admin\+Password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the email from an AD search by username 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ad\+Server\+Ip\+Address} & IP Address of AD controller\\
+\hline
+{\em ad\+Server\+Host\+Name} & Host name of AD controller\\
+\hline
+{\em ad\+Admin\+Username} & A user username who\textquotesingle{}s able to read the AD DB\\
+\hline
+{\em ad\+Admin\+Password} & A user password who\textquotesingle{}s able to read the AD DB\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor_afb18f1a6a12dad53d8234819b2ebdb39_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a0f9d8cc76501fb5da3a74dc62f538305}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a0f9d8cc76501fb5da3a74dc62f538305}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!GetLoggedInUserEmail@{GetLoggedInUserEmail}}
+\index{GetLoggedInUserEmail@{GetLoggedInUserEmail}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{GetLoggedInUserEmail()}{GetLoggedInUserEmail()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Get\+Logged\+In\+User\+Email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the logged in user email (don\textquotesingle{}t use this if deploying to I\+IS without \mbox{\hyperlink{namespace_j_b_toolkit_1_1_windows}{Windows}} authentication) 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a0a056892e52f4f2316b9171c34bc724c}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a0a056892e52f4f2316b9171c34bc724c}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!GetNameFromEmailAddress@{GetNameFromEmailAddress}}
+\index{GetNameFromEmailAddress@{GetNameFromEmailAddress}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{GetNameFromEmailAddress()}{GetNameFromEmailAddress()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Get\+Name\+From\+Email\+Address (\begin{DoxyParamCaption}\item[{string}]{email\+Address,  }\item[{bool}]{calling\+From\+Within\+Domain,  }\item[{string}]{ad\+Server\+Ip\+Address,  }\item[{string}]{ad\+Server\+Host\+Name,  }\item[{string}]{ad\+Admin\+Username,  }\item[{string}]{ad\+Admin\+Password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the full name from an AD search by email address 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ad\+Server\+Ip\+Address} & IP Address of AD controller\\
+\hline
+{\em ad\+Server\+Host\+Name} & Host name of AD controller\\
+\hline
+{\em ad\+Admin\+Username} & A user username who\textquotesingle{}s able to read the AD DB\\
+\hline
+{\em ad\+Admin\+Password} & A user password who\textquotesingle{}s able to read the AD DB\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a0a056892e52f4f2316b9171c34bc724c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a115962bdc987d7ad937f782a26429e48}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a115962bdc987d7ad937f782a26429e48}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!GetNameFromUsername@{GetNameFromUsername}}
+\index{GetNameFromUsername@{GetNameFromUsername}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{GetNameFromUsername()}{GetNameFromUsername()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Get\+Name\+From\+Username (\begin{DoxyParamCaption}\item[{string}]{username,  }\item[{bool}]{calling\+From\+Within\+Domain,  }\item[{string}]{ad\+Server\+Ip\+Address,  }\item[{string}]{ad\+Server\+Host\+Name,  }\item[{string}]{ad\+Admin\+Username,  }\item[{string}]{ad\+Admin\+Password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the full name from an AD search by username 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ad\+Server\+Ip\+Address} & IP Address of AD controller\\
+\hline
+{\em ad\+Server\+Host\+Name} & Host name of AD controller\\
+\hline
+{\em ad\+Admin\+Username} & A user username who\textquotesingle{}s able to read the AD DB\\
+\hline
+{\em ad\+Admin\+Password} & A user password who\textquotesingle{}s able to read the AD DB\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a115962bdc987d7ad937f782a26429e48_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab08c29ad99babb05fcc37d9dde664d48}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab08c29ad99babb05fcc37d9dde664d48}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!GetUsername@{GetUsername}}
+\index{GetUsername@{GetUsername}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{GetUsername()}{GetUsername()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Get\+Username (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_ab3bcf93684a023c8f6d3c21d36445974}{Identity\+Type}}}]{identity\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get username based on different types of \textquotesingle{}Identity\+Type\textquotesingle{} 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a3fd50b95ff692d6f687be0be5022fc5d}\label{class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a3fd50b95ff692d6f687be0be5022fc5d}} 
+\index{JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}!GetUsernameFromEmailAddress@{GetUsernameFromEmailAddress}}
+\index{GetUsernameFromEmailAddress@{GetUsernameFromEmailAddress}!JBToolkit.Domain.AdAccessor@{JBToolkit.Domain.AdAccessor}}
+\doxysubsubsection{\texorpdfstring{GetUsernameFromEmailAddress()}{GetUsernameFromEmailAddress()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Domain.\+Ad\+Accessor.\+Get\+Username\+From\+Email\+Address (\begin{DoxyParamCaption}\item[{string}]{email\+Address,  }\item[{bool}]{calling\+From\+Within\+Domain,  }\item[{string}]{ad\+Server\+Ip\+Address,  }\item[{string}]{ad\+Server\+Host\+Name,  }\item[{string}]{ad\+Admin\+Username,  }\item[{string}]{ad\+Admin\+Password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the username from an AD search by email address 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ad\+Server\+Ip\+Address} & IP Address of AD controller\\
+\hline
+{\em ad\+Server\+Host\+Name} & Host name of AD controller\\
+\hline
+{\em ad\+Admin\+Username} & A user username who\textquotesingle{}s able to read the AD DB\\
+\hline
+{\em ad\+Admin\+Password} & A user password who\textquotesingle{}s able to read the AD DB\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor_a3fd50b95ff692d6f687be0be5022fc5d_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Domain/\mbox{\hyperlink{_ad_accessor_8cs}{Ad\+Accessor.\+cs}}\end{DoxyCompactItemize}

@@ -6,7 +6,7 @@ namespace JBToolkit.Logger
     /// <summary>
     /// Adds log entries (error or information) to USR_AG_Shared_Log. Defaults to standing file logger (current working directory) on DB connection failure (fallback)
     /// </summary>
-    public class DBLogger
+    public class DbLogger
     {
         private static string TableName { get; set; } = "[dbo].[USR_AG_Shared_Log]";
 
@@ -16,7 +16,7 @@ namespace JBToolkit.Logger
         public string ApplicatioName { get; set; }
         private bool TableExistanceChecked { get; set; } = false;
 
-        public DBLogger(
+        public DbLogger(
             string dbName,
             string connectionString,
             int userId = 0,
@@ -41,15 +41,15 @@ namespace JBToolkit.Logger
         /// <summary>
         /// Logs an exception to the database
         /// </summary>
-        public bool LogToDB(Exception e, string additional = null)
+        public bool LogToDb(Exception e, string additional = null)
         {
-            return LogToDB(true, e.Source, e.Message + (additional == null ? "" : " " + additional), e.StackTrace);
+            return LogToDb(true, e.Source, e.Message + (additional == null ? "" : " " + additional), e.StackTrace);
         }
 
         /// <summary>
         /// Logs an error to the database
         /// </summary>
-        public bool LogToDB(
+        public bool LogToDb(
             bool isError,
             string source,
             string message,
@@ -79,9 +79,9 @@ namespace JBToolkit.Logger
                         UserId,
                         Environment.UserName,
                         (string.IsNullOrEmpty(ApplicatioName) ? "NULL" : ApplicatioName),
-                        source.GetSQLAcceptableString(),
-                        message.GetSQLAcceptableString(),
-                        (string.IsNullOrEmpty(stackTrace) ? "NULL" : "'" + stackTrace.GetSQLAcceptableString() + "'"),
+                        source.GetSqlAcceptableString(),
+                        message.GetSqlAcceptableString(),
+                        (string.IsNullOrEmpty(stackTrace) ? "NULL" : "'" + stackTrace.GetSqlAcceptableString() + "'"),
                         TableName);
 
                     bool success = false;

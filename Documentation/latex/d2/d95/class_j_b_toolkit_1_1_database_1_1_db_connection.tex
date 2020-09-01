@@ -1,0 +1,670 @@
+\hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection}{}\doxysection{J\+B\+Toolkit.\+Database.\+Db\+Connection Class Reference}
+\label{class_j_b_toolkit_1_1_database_1_1_db_connection}\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+
+
+Abstract database provider class  
+
+
+
+
+Inheritance diagram for J\+B\+Toolkit.\+Database.\+Db\+Connection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{d0/d5f/class_j_b_toolkit_1_1_database_1_1_db_connection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Database.\+Db\+Connection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{da/d80/class_j_b_toolkit_1_1_database_1_1_db_connection__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43}{Command\+Type}} \{ \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43a5b39c8b553c821e7cddc6da64b5bd2ee}{Command\+Type.\+D\+E\+F\+A\+U\+LT}}, 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43a51dc66175e2828360d22e29a7d13b5d0}{Command\+Type.\+S\+T\+O\+R\+E\+D\+\_\+\+P\+R\+O\+C\+E\+D\+U\+RE}}
+ \}
+\begin{DoxyCompactList}\small\item\em What kind of S\+QL script -\/ a normal query or a stored procedure? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a5bcdd17a2b450996f6f169e0f047f264}{Get\+Data\+Table}} (string command, out string err\+Msg, \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43}{Command\+Type}} command\+Type=\mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43a5b39c8b553c821e7cddc6da64b5bd2ee}{Command\+Type.\+D\+E\+F\+A\+U\+LT}}, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Returns a datatable result from an S\+QL query string \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_result}{Db\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a6300eb579c7857748559428ab19523d7}{Get\+Data\+Table\+Ex}} (string command)
+\begin{DoxyCompactList}\small\item\em Returns a datatable result from an S\+QL query string \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a212a4db69ce0bbff3f840f71fc7ed52e}{Get\+Data\+Table}} (string command, \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43}{Command\+Type}} command\+Type=\mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43a5b39c8b553c821e7cddc6da64b5bd2ee}{Command\+Type.\+D\+E\+F\+A\+U\+LT}}, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Returns a datatable result from an S\+QL query string \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_result}{Db\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a5051d4da122e798970531c7059985b10}{Get\+Data\+Set\+Ex}} (string command)
+\begin{DoxyCompactList}\small\item\em Returns a datatable result from an S\+QL query string (data set can hold multiple Data\+Tables, for example when executing store procedures that return multiple result sets). \end{DoxyCompactList}\item 
+virtual Data\+Set \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_aab785bddf5df8e7e0793f630a7500c73}{Get\+Data\+Set}} (string command, out string err\+Msg, \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43}{Command\+Type}} command\+Type=\mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43a5b39c8b553c821e7cddc6da64b5bd2ee}{Command\+Type.\+D\+E\+F\+A\+U\+LT}}, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Returns a datatable result from an S\+QL query string (data set can hold multiple Data\+Tables, for example when executing store procedures that return multiple result sets). \end{DoxyCompactList}\item 
+virtual Data\+Set \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a40e1ddb48715257516e838518dd6b47c}{Get\+Data\+Set}} (string command, \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43}{Command\+Type}} command\+Type=\mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43a5b39c8b553c821e7cddc6da64b5bd2ee}{Command\+Type.\+D\+E\+F\+A\+U\+LT}}, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Returns a dataset result from an S\+QL query string (data set can hold multiple Data\+Tables, for example when executing store procedures that return multiple result sets). \end{DoxyCompactList}\item 
+virtual string \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8f706f53782c7cfb84361db5f365e164}{Get\+Scaler\+Result}} (string command, out string err\+Msg, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Gets a single string from the database given an S\+QL query (first column, first row) -\/ Typically used to retrieve H\+T\+ML processed at the database level \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_result}{Db\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_abb789da6f9b78249cbe3debf45f90237}{Get\+Scaler\+Result\+Ex}} (string command)
+\begin{DoxyCompactList}\small\item\em Gets a single string from the database given an S\+QL query (first column, first row) -\/ Typically used to retrieve H\+T\+ML processed at the database level \end{DoxyCompactList}\item 
+virtual string \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_ad9cbb0440ffc5f52403e2871361d94e1}{Get\+Scaler\+Result}} (string command, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Gets a single string from the database given an S\+QL query (first column, first row) -\/ Typically used to retrieve H\+T\+ML processed at the database level \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_result}{Db\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a1c488c10be7b9be96a3b60676da9e3b2}{Execute\+Non\+Query\+Ex}} (string command)
+\begin{DoxyCompactList}\small\item\em Executes S\+QL and doesn\textquotesingle{}t expect a result set \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a5b7b3d9b1b3d1fbc9abc7fd5af5ef0d5}{Execute\+Non\+Query}} (string command, out string err\+Msg, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Executes S\+QL and doesn\textquotesingle{}t expect a result set \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_result}{Db\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_abf1d6d813cd8c7a36494b754d09a8779}{Execute\+Non\+Query\+Scope\+Identity\+Ex}} (string command)
+\begin{DoxyCompactList}\small\item\em Executes S\+QL and will provide a scoped identity \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_aaa6d2825b6e9ee861844031f163ebe0d}{Execute\+Non\+Query\+Scope\+Identity}} (string command, out string err\+Msg, out string scoped\+Identity, bool throw\+On\+Error=true)
+\begin{DoxyCompactList}\small\item\em Executes S\+QL and will provide a scoped identity \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_ab7040f2b7a38738524388d8b4c97224e}{Db\+Connection}} (string db\+Name, string connection\+String, int user\+Id=0, bool enable\+Logging=true, string application\+Name=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a45adbfab5f4e8cd360071828c270adc7}{Apply\+Initial\+Catalog\+To\+Connection\+String}} (string database\+Name, string connection\+String)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task$<$ \mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}}$<$ T $>$ $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a4e68d9e355fbe0a0685418f78d213b7e}{Query\+Async$<$ T $>$}} (string sql, object sql\+Parameters=null)
+\begin{DoxyCompactList}\small\item\em Uses Dapper to query the database, returning an \mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}} of the object \end{DoxyCompactList}\item 
+async Task$<$ T $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a172f166c494ddd8d72d32d0f3cf7a462}{First\+Or\+Default\+Async$<$ T $>$}} (string sql, object sql\+Parameters)
+\begin{DoxyCompactList}\small\item\em Uses Dapper to query the database, returning an object of a given type -\/ returning object of a single row \end{DoxyCompactList}\item 
+async Task$<$ T $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a3266678a34189ac9842243fdfa87e614}{Single\+Or\+Default\+Async$<$ T $>$}} (string sql, object sql\+Parameters=null)
+\begin{DoxyCompactList}\small\item\em Uses Dapper to query the database, returning an object of a given type -\/ returning object of a single row \end{DoxyCompactList}\item 
+async Task$<$ int $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a07dc5cc1be6e6e891ab7f61be946cc8b}{Execute\+Async}} (string sql, object sql\+Parameters)
+\begin{DoxyCompactList}\small\item\em Uses Dapper to execute a command (i.\+e. insert or udpate statement) -\/ Returning an integer if a row update has been performed with a primary key or increment in the table \end{DoxyCompactList}\item 
+async Task$<$ T $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a254071104bab62625afe42ee50f3b3a3}{Execute\+Scalar\+Async$<$ T $>$}} (string sql, object sql\+Parameters)
+\begin{DoxyCompactList}\small\item\em Uses Dapper to query the database, returning an object of a given type -\/ returning object of a single row \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a190785583413fe16e480e1daa95cd60d}{Db\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a0ad0f8f54a17d6e83e51eb74c0e98835}{Connection\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_adb44514b1b63932a87d5752ef44a455e}{Enable\+Logging}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a37ec3e17b7165aca1866caa299d0ac41}{Use\+Session\+For\+Shared\+Objects}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_logger_1_1_db_logger}{Db\+Logger}} \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_aee1b0341926a48131413b8666cc54999}{Logger}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Include logger class for logging of errors \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract database provider class 
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!CommandType@{CommandType}}
+\index{CommandType@{CommandType}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{CommandType}{CommandType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43}{J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Command\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+What kind of S\+QL script -\/ a normal query or a stored procedure? 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFAULT@{DEFAULT}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!DEFAULT@{DEFAULT}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43a5b39c8b553c821e7cddc6da64b5bd2ee}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43a5b39c8b553c821e7cddc6da64b5bd2ee}} 
+D\+E\+F\+A\+U\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STORED\_PROCEDURE@{STORED\_PROCEDURE}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!STORED\_PROCEDURE@{STORED\_PROCEDURE}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43a51dc66175e2828360d22e29a7d13b5d0}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43a51dc66175e2828360d22e29a7d13b5d0}} 
+S\+T\+O\+R\+E\+D\+\_\+\+P\+R\+O\+C\+E\+D\+U\+RE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_ab7040f2b7a38738524388d8b4c97224e}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_ab7040f2b7a38738524388d8b4c97224e}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!DbConnection@{DbConnection}}
+\index{DbConnection@{DbConnection}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{DbConnection()}{DbConnection()}}
+{\footnotesize\ttfamily J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Db\+Connection (\begin{DoxyParamCaption}\item[{string}]{db\+Name,  }\item[{string}]{connection\+String,  }\item[{int}]{user\+Id = {\ttfamily 0},  }\item[{bool}]{enable\+Logging = {\ttfamily true},  }\item[{string}]{application\+Name = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a45adbfab5f4e8cd360071828c270adc7}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a45adbfab5f4e8cd360071828c270adc7}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!ApplyInitialCatalogToConnectionString@{ApplyInitialCatalogToConnectionString}}
+\index{ApplyInitialCatalogToConnectionString@{ApplyInitialCatalogToConnectionString}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{ApplyInitialCatalogToConnectionString()}{ApplyInitialCatalogToConnectionString()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Apply\+Initial\+Catalog\+To\+Connection\+String (\begin{DoxyParamCaption}\item[{string}]{database\+Name,  }\item[{string}]{connection\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_a45adbfab5f4e8cd360071828c270adc7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a07dc5cc1be6e6e891ab7f61be946cc8b}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a07dc5cc1be6e6e891ab7f61be946cc8b}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!ExecuteAsync@{ExecuteAsync}}
+\index{ExecuteAsync@{ExecuteAsync}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{ExecuteAsync()}{ExecuteAsync()}}
+{\footnotesize\ttfamily async Task$<$int$>$ J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Execute\+Async (\begin{DoxyParamCaption}\item[{string}]{sql,  }\item[{object}]{sql\+Parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Uses Dapper to execute a command (i.\+e. insert or udpate statement) -\/ Returning an integer if a row update has been performed with a primary key or increment in the table 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sql} & S\+QL command\\
+\hline
+{\em sql\+Parameters} & Parameters in the form @parameter\+Name = value\+Or\+Object -\/ @paremeter\+Name is Annoymous type (i.\+e. the @) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer of row update primary key or increment
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_a07dc5cc1be6e6e891ab7f61be946cc8b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a5b7b3d9b1b3d1fbc9abc7fd5af5ef0d5}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a5b7b3d9b1b3d1fbc9abc7fd5af5ef0d5}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!ExecuteNonQuery@{ExecuteNonQuery}}
+\index{ExecuteNonQuery@{ExecuteNonQuery}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{ExecuteNonQuery()}{ExecuteNonQuery()}}
+{\footnotesize\ttfamily virtual bool J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Execute\+Non\+Query (\begin{DoxyParamCaption}\item[{string}]{command,  }\item[{out string}]{err\+Msg,  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes S\+QL and doesn\textquotesingle{}t expect a result set 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & S\+QL command to execute\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True is the query executed successful, false otherwise
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_a5b7b3d9b1b3d1fbc9abc7fd5af5ef0d5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a1c488c10be7b9be96a3b60676da9e3b2}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a1c488c10be7b9be96a3b60676da9e3b2}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!ExecuteNonQueryEx@{ExecuteNonQueryEx}}
+\index{ExecuteNonQueryEx@{ExecuteNonQueryEx}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{ExecuteNonQueryEx()}{ExecuteNonQueryEx()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_result}{Db\+Result}} J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Execute\+Non\+Query\+Ex (\begin{DoxyParamCaption}\item[{string}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes S\+QL and doesn\textquotesingle{}t expect a result set 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+B\+Result Success or failure bool and any messages and results
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_a1c488c10be7b9be96a3b60676da9e3b2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_aaa6d2825b6e9ee861844031f163ebe0d}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_aaa6d2825b6e9ee861844031f163ebe0d}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!ExecuteNonQueryScopeIdentity@{ExecuteNonQueryScopeIdentity}}
+\index{ExecuteNonQueryScopeIdentity@{ExecuteNonQueryScopeIdentity}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{ExecuteNonQueryScopeIdentity()}{ExecuteNonQueryScopeIdentity()}}
+{\footnotesize\ttfamily virtual bool J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Execute\+Non\+Query\+Scope\+Identity (\begin{DoxyParamCaption}\item[{string}]{command,  }\item[{out string}]{err\+Msg,  }\item[{out string}]{scoped\+Identity,  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes S\+QL and will provide a scoped identity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & S\+QL command string to execute\\
+\hline
+{\em err\+Msg} & Any error messages\\
+\hline
+{\em scoped\+Identity} & The scoped identity after executing the command\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_aaa6d2825b6e9ee861844031f163ebe0d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_abf1d6d813cd8c7a36494b754d09a8779}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_abf1d6d813cd8c7a36494b754d09a8779}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!ExecuteNonQueryScopeIdentityEx@{ExecuteNonQueryScopeIdentityEx}}
+\index{ExecuteNonQueryScopeIdentityEx@{ExecuteNonQueryScopeIdentityEx}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{ExecuteNonQueryScopeIdentityEx()}{ExecuteNonQueryScopeIdentityEx()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_result}{Db\+Result}} J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Execute\+Non\+Query\+Scope\+Identity\+Ex (\begin{DoxyParamCaption}\item[{string}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes S\+QL and will provide a scoped identity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+B\+Result Success or failure bool and any messages and results
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_abf1d6d813cd8c7a36494b754d09a8779_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a254071104bab62625afe42ee50f3b3a3}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a254071104bab62625afe42ee50f3b3a3}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!ExecuteScalarAsync$<$ T $>$@{ExecuteScalarAsync$<$ T $>$}}
+\index{ExecuteScalarAsync$<$ T $>$@{ExecuteScalarAsync$<$ T $>$}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{ExecuteScalarAsync$<$ T $>$()}{ExecuteScalarAsync< T >()}}
+{\footnotesize\ttfamily async Task$<$T$>$ J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Execute\+Scalar\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{sql,  }\item[{object}]{sql\+Parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Uses Dapper to query the database, returning an object of a given type -\/ returning object of a single row 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of object\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em sql} & S\+QL command\\
+\hline
+{\em sql\+Parameters} & Parameters in the form @parameter\+Name = value\+Or\+Object -\/ @paremeter\+Name is Annoymous type (i.\+e. the @) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object of a given type
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_a254071104bab62625afe42ee50f3b3a3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a172f166c494ddd8d72d32d0f3cf7a462}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a172f166c494ddd8d72d32d0f3cf7a462}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!FirstOrDefaultAsync$<$ T $>$@{FirstOrDefaultAsync$<$ T $>$}}
+\index{FirstOrDefaultAsync$<$ T $>$@{FirstOrDefaultAsync$<$ T $>$}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{FirstOrDefaultAsync$<$ T $>$()}{FirstOrDefaultAsync< T >()}}
+{\footnotesize\ttfamily async Task$<$T$>$ J\+B\+Toolkit.\+Database.\+Db\+Connection.\+First\+Or\+Default\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{sql,  }\item[{object}]{sql\+Parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Uses Dapper to query the database, returning an object of a given type -\/ returning object of a single row 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of object\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em sql} & S\+QL command\\
+\hline
+{\em sql\+Parameters} & Parameters in the form @parameter\+Name = value\+Or\+Object -\/ @paremeter\+Name is Annoymous type (i.\+e. the @) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object of a given type
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_a172f166c494ddd8d72d32d0f3cf7a462_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a40e1ddb48715257516e838518dd6b47c}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a40e1ddb48715257516e838518dd6b47c}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!GetDataSet@{GetDataSet}}
+\index{GetDataSet@{GetDataSet}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{GetDataSet()}{GetDataSet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual Data\+Set J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Get\+Data\+Set (\begin{DoxyParamCaption}\item[{string}]{command,  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43}{Command\+Type}}}]{command\+Type = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43a5b39c8b553c821e7cddc6da64b5bd2ee}{Command\+Type.\+D\+E\+F\+A\+U\+LT}}},  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a dataset result from an S\+QL query string (data set can hold multiple Data\+Tables, for example when executing store procedures that return multiple result sets). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+Name} & Instance DB name to use\\
+\hline
+{\em command} & The S\+QL query string\\
+\hline
+{\em command\+Type} & Normal query or stored procedure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A datatable of values
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_aab785bddf5df8e7e0793f630a7500c73}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_aab785bddf5df8e7e0793f630a7500c73}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!GetDataSet@{GetDataSet}}
+\index{GetDataSet@{GetDataSet}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{GetDataSet()}{GetDataSet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual Data\+Set J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Get\+Data\+Set (\begin{DoxyParamCaption}\item[{string}]{command,  }\item[{out string}]{err\+Msg,  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43}{Command\+Type}}}]{command\+Type = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43a5b39c8b553c821e7cddc6da64b5bd2ee}{Command\+Type.\+D\+E\+F\+A\+U\+LT}}},  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a datatable result from an S\+QL query string (data set can hold multiple Data\+Tables, for example when executing store procedures that return multiple result sets). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+Name} & Instance DB name to use\\
+\hline
+{\em command} & The S\+QL query string\\
+\hline
+{\em command\+Type} & Normal query or stored procedure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A datatable of values
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_aab785bddf5df8e7e0793f630a7500c73_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a5051d4da122e798970531c7059985b10}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a5051d4da122e798970531c7059985b10}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!GetDataSetEx@{GetDataSetEx}}
+\index{GetDataSetEx@{GetDataSetEx}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{GetDataSetEx()}{GetDataSetEx()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_result}{Db\+Result}} J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Get\+Data\+Set\+Ex (\begin{DoxyParamCaption}\item[{string}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a datatable result from an S\+QL query string (data set can hold multiple Data\+Tables, for example when executing store procedures that return multiple result sets). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jqt} & The pre-\/created Jquery Data Table object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+B\+Result Success or failure bool and any messages and results
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_a5051d4da122e798970531c7059985b10_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a212a4db69ce0bbff3f840f71fc7ed52e}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a212a4db69ce0bbff3f840f71fc7ed52e}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!GetDataTable@{GetDataTable}}
+\index{GetDataTable@{GetDataTable}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{GetDataTable()}{GetDataTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Get\+Data\+Table (\begin{DoxyParamCaption}\item[{string}]{command,  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43}{Command\+Type}}}]{command\+Type = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43a5b39c8b553c821e7cddc6da64b5bd2ee}{Command\+Type.\+D\+E\+F\+A\+U\+LT}}},  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a datatable result from an S\+QL query string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+Name} & Instance DB name to use\\
+\hline
+{\em command} & The S\+QL query string\\
+\hline
+{\em command\+Type} & Normal query or stored procedure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A datatable of values
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a5bcdd17a2b450996f6f169e0f047f264}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a5bcdd17a2b450996f6f169e0f047f264}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!GetDataTable@{GetDataTable}}
+\index{GetDataTable@{GetDataTable}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{GetDataTable()}{GetDataTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Get\+Data\+Table (\begin{DoxyParamCaption}\item[{string}]{command,  }\item[{out string}]{err\+Msg,  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43}{Command\+Type}}}]{command\+Type = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_connection_a8d9104f71a1baed3abb65c48a15fcd43a5b39c8b553c821e7cddc6da64b5bd2ee}{Command\+Type.\+D\+E\+F\+A\+U\+LT}}},  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a datatable result from an S\+QL query string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+Name} & Instance DB name to use\\
+\hline
+{\em command} & The S\+QL query string\\
+\hline
+{\em command\+Type} & Normal query or stored procedure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A datatable of values
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_a5bcdd17a2b450996f6f169e0f047f264_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a6300eb579c7857748559428ab19523d7}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a6300eb579c7857748559428ab19523d7}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!GetDataTableEx@{GetDataTableEx}}
+\index{GetDataTableEx@{GetDataTableEx}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{GetDataTableEx()}{GetDataTableEx()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_result}{Db\+Result}} J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Get\+Data\+Table\+Ex (\begin{DoxyParamCaption}\item[{string}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a datatable result from an S\+QL query string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jqt} & The pre-\/created Jquery Data Table object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+B\+Result Success or failure bool and any messages and results
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_a6300eb579c7857748559428ab19523d7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_ad9cbb0440ffc5f52403e2871361d94e1}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_ad9cbb0440ffc5f52403e2871361d94e1}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!GetScalerResult@{GetScalerResult}}
+\index{GetScalerResult@{GetScalerResult}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{GetScalerResult()}{GetScalerResult()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual string J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Get\+Scaler\+Result (\begin{DoxyParamCaption}\item[{string}]{command,  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets a single string from the database given an S\+QL query (first column, first row) -\/ Typically used to retrieve H\+T\+ML processed at the database level 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The S\+QL query string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A sting string -\/ i.\+e. of H\+T\+ML
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a8f706f53782c7cfb84361db5f365e164}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a8f706f53782c7cfb84361db5f365e164}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!GetScalerResult@{GetScalerResult}}
+\index{GetScalerResult@{GetScalerResult}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{GetScalerResult()}{GetScalerResult()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual string J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Get\+Scaler\+Result (\begin{DoxyParamCaption}\item[{string}]{command,  }\item[{out string}]{err\+Msg,  }\item[{bool}]{throw\+On\+Error = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets a single string from the database given an S\+QL query (first column, first row) -\/ Typically used to retrieve H\+T\+ML processed at the database level 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The S\+QL query string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A sting string -\/ i.\+e. of H\+T\+ML
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_a8f706f53782c7cfb84361db5f365e164_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_abb789da6f9b78249cbe3debf45f90237}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_abb789da6f9b78249cbe3debf45f90237}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!GetScalerResultEx@{GetScalerResultEx}}
+\index{GetScalerResultEx@{GetScalerResultEx}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{GetScalerResultEx()}{GetScalerResultEx()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_j_b_toolkit_1_1_database_1_1_db_result}{Db\+Result}} J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Get\+Scaler\+Result\+Ex (\begin{DoxyParamCaption}\item[{string}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets a single string from the database given an S\+QL query (first column, first row) -\/ Typically used to retrieve H\+T\+ML processed at the database level 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & S\+QL Command string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+B\+Result Success or failure bool and any messages and results
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_abb789da6f9b78249cbe3debf45f90237_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a4e68d9e355fbe0a0685418f78d213b7e}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a4e68d9e355fbe0a0685418f78d213b7e}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!QueryAsync$<$ T $>$@{QueryAsync$<$ T $>$}}
+\index{QueryAsync$<$ T $>$@{QueryAsync$<$ T $>$}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{QueryAsync$<$ T $>$()}{QueryAsync< T >()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}}$<$T$>$ $>$ J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Query\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{sql,  }\item[{object}]{sql\+Parameters = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Uses Dapper to query the database, returning an \mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}} of the object 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of object\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em sql} & S\+QL command\\
+\hline
+{\em sql\+Parameters} & Parameters in the form @parameter\+Name = value\+Or\+Object -\/ @paremeter\+Name is Annoymous type (i.\+e. the @) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}} of type of oject
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_a4e68d9e355fbe0a0685418f78d213b7e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a3266678a34189ac9842243fdfa87e614}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a3266678a34189ac9842243fdfa87e614}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!SingleOrDefaultAsync$<$ T $>$@{SingleOrDefaultAsync$<$ T $>$}}
+\index{SingleOrDefaultAsync$<$ T $>$@{SingleOrDefaultAsync$<$ T $>$}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{SingleOrDefaultAsync$<$ T $>$()}{SingleOrDefaultAsync< T >()}}
+{\footnotesize\ttfamily async Task$<$T$>$ J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Single\+Or\+Default\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{sql,  }\item[{object}]{sql\+Parameters = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Uses Dapper to query the database, returning an object of a given type -\/ returning object of a single row 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of object\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em sql} & S\+QL command\\
+\hline
+{\em sql\+Parameters} & Parameters in the form @parameter\+Name = value\+Or\+Object -\/ @paremeter\+Name is Annoymous type (i.\+e. the @) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object of a given type
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection_a3266678a34189ac9842243fdfa87e614_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a0ad0f8f54a17d6e83e51eb74c0e98835}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a0ad0f8f54a17d6e83e51eb74c0e98835}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!ConnectionString@{ConnectionString}}
+\index{ConnectionString@{ConnectionString}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{ConnectionString}{ConnectionString}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Connection\+String\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a190785583413fe16e480e1daa95cd60d}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a190785583413fe16e480e1daa95cd60d}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!DbName@{DbName}}
+\index{DbName@{DbName}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{DbName}{DbName}}
+{\footnotesize\ttfamily string J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Db\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_adb44514b1b63932a87d5752ef44a455e}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_adb44514b1b63932a87d5752ef44a455e}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!EnableLogging@{EnableLogging}}
+\index{EnableLogging@{EnableLogging}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{EnableLogging}{EnableLogging}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Enable\+Logging\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_aee1b0341926a48131413b8666cc54999}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_aee1b0341926a48131413b8666cc54999}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!Logger@{Logger}}
+\index{Logger@{Logger}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{Logger}{Logger}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_logger_1_1_db_logger}{Db\+Logger}} J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Logger\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Include logger class for logging of errors 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_database_1_1_db_connection_a37ec3e17b7165aca1866caa299d0ac41}\label{class_j_b_toolkit_1_1_database_1_1_db_connection_a37ec3e17b7165aca1866caa299d0ac41}} 
+\index{JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}!UseSessionForSharedObjects@{UseSessionForSharedObjects}}
+\index{UseSessionForSharedObjects@{UseSessionForSharedObjects}!JBToolkit.Database.DbConnection@{JBToolkit.Database.DbConnection}}
+\doxysubsubsection{\texorpdfstring{UseSessionForSharedObjects}{UseSessionForSharedObjects}}
+{\footnotesize\ttfamily bool J\+B\+Toolkit.\+Database.\+Db\+Connection.\+Use\+Session\+For\+Shared\+Objects\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Database/\+D\+B\+Connection/\mbox{\hyperlink{_d_b_connection_8_dapper_8cs}{D\+B\+Connection.\+Dapper.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Database/\mbox{\hyperlink{_d_b_connection_8cs}{D\+B\+Connection.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Database/\+D\+B\+Connection/\mbox{\hyperlink{_d_b_connection_8_s_q_l_client_8cs}{D\+B\+Connection.\+S\+Q\+L\+Client.\+cs}}\end{DoxyCompactItemize}

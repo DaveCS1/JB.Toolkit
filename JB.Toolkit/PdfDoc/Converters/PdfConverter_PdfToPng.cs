@@ -19,9 +19,9 @@ namespace JBToolkit.PdfDoc
         /// <param name="usingToExtractText">Optimise for Google Vision API (OCR) use</param>
         /// <param name="timeoutSeconds">Timeout before reporting failing</param>
         /// <returns>Return 3D byte array (array of byte arrays - 1 byte array for each image for each page</returns>
-        public static byte[][] ConvertPDFToImageByteArrayArray(string path, bool usingToExtractText = false, int timeoutSeconds = 30)
+        public static byte[][] ConvertPdfToImage2DByteArray(string path, bool usingToExtractText = false, int timeoutSeconds = 30)
         {
-            MemoryStream[] msArray = ConvertPDFToPng(path, usingToExtractText, timeoutSeconds);
+            MemoryStream[] msArray = ConvertPdfToPng(path, usingToExtractText, timeoutSeconds);
 
             List<byte[]> baList = new List<byte[]>();
 
@@ -40,7 +40,7 @@ namespace JBToolkit.PdfDoc
         /// <param name="usingToExtractText">Optimise for Google Vision API (OCR) use</param>
         /// <param name="timeoutSeconds">Timeout before reporting failing</param>
         /// <returns>Memory stream array (array memory streams - 1 memory stream for each image for each page)</returns>
-        public static MemoryStream[] ConvertPDFToPng(string path, bool usingToExtactText = false, int timeoutSeconds = 30)
+        public static MemoryStream[] ConvertPdfToPng(string path, bool usingToExtactText = false, int timeoutSeconds = 30)
         {
             List<MemoryStream> msList = new List<MemoryStream>();
 
@@ -91,7 +91,7 @@ namespace JBToolkit.PdfDoc
         /// <param name="imageTitle">A given title for the prefix of the set of images</param>
         /// <param name="timeoutSeconds">Timeout in seconds before error is reported</param>
         /// <param name="throwOnError"></param>
-        public static void SavePDFAsPng(string inputPath, string rootOutputPath, string imageTitle, int timeoutSeconds = 30)
+        public static void SavePdfAsPng(string inputPath, string rootOutputPath, string imageTitle, int timeoutSeconds = 30)
         {
             if (!Directory.Exists(rootOutputPath))
             {

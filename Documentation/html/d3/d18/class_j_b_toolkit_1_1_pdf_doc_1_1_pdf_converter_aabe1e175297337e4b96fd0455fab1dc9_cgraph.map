@@ -1,0 +1,4 @@
+<map id="JBToolkit.PdfDoc.PdfConverter.ConvertPdfToPng" name="JBToolkit.PdfDoc.PdfConverter.ConvertPdfToPng">
+<area shape="rect" id="node1" title="Converts PDF to memory stream array (array memory streams &#45; 1 memory stream for each image for each p..." alt="" coords="5,5,208,47"/>
+<area shape="rect" id="node2" href="$da/dbe/class_j_b_toolkit_1_1_windows_1_1_process_helper.html#afb518659a5ed37e209117d9fcf66de41" title="Executes a process and reads the output (std out and error out) &#45; Useful for working with command lin..." alt="" coords="256,5,509,47"/>
+</map>

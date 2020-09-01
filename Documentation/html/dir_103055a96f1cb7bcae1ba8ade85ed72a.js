@@ -1,0 +1,28 @@
+var dir_103055a96f1cb7bcae1ba8ade85ed72a =
+[
+    [ "Assembly", "dir_9d60a7481d5b7635ca8a9c5bf1334fd4.html", "dir_9d60a7481d5b7635ca8a9c5bf1334fd4" ],
+    [ "ConsoleHelper", "dir_fe88c664fb981d84af6b7ddf1a47f976.html", "dir_fe88c664fb981d84af6b7ddf1a47f976" ],
+    [ "CSV", "dir_40292fed3ccd402f07d3f5203665da21.html", "dir_40292fed3ccd402f07d3f5203665da21" ],
+    [ "Database", "dir_b2f5e40bd56757bb91555500769214ac.html", "dir_b2f5e40bd56757bb91555500769214ac" ],
+    [ "Domain", "dir_5943bbf6dce40f7e72cbab30336eabe6.html", "dir_5943bbf6dce40f7e72cbab30336eabe6" ],
+    [ "Encryption", "dir_20168463e7e03b27408fce41250e5c48.html", "dir_20168463e7e03b27408fce41250e5c48" ],
+    [ "Extensions", "dir_710311e0aa48c0136f546433033db17f.html", "dir_710311e0aa48c0136f546433033db17f" ],
+    [ "FuzzyLogic", "dir_462df4da84ecebfc67dfe7247b97ea3a.html", "dir_462df4da84ecebfc67dfe7247b97ea3a" ],
+    [ "Google", "dir_39905f4520c1e8201ca021b2596d8ffa.html", "dir_39905f4520c1e8201ca021b2596d8ffa" ],
+    [ "Imaging", "dir_88c2c569c6adc86520e233a923dd6e0f.html", "dir_88c2c569c6adc86520e233a923dd6e0f" ],
+    [ "InterProcessComms", "dir_ce8560ccbb1fefea753788862ed06a98.html", "dir_ce8560ccbb1fefea753788862ed06a98" ],
+    [ "JQueryDataTableViewModels", "dir_61f865c659d6b2564efebae3041f06b0.html", "dir_61f865c659d6b2564efebae3041f06b0" ],
+    [ "licenses", "dir_c449b461c02561c48f202b94c44b04c8.html", null ],
+    [ "Logger", "dir_c370281f793943003fea5385690b6627.html", "dir_c370281f793943003fea5385690b6627" ],
+    [ "obj", "dir_28ab60b268c0cc3064e7d0a3e19c66cc.html", "dir_28ab60b268c0cc3064e7d0a3e19c66cc" ],
+    [ "PdfDoc", "dir_7f2bf0fc006b6b51621cd906771e0494.html", "dir_7f2bf0fc006b6b51621cd906771e0494" ],
+    [ "Properties", "dir_79b0d8e3cdbc3ae5fdca2c4cbb940a6b.html", "dir_79b0d8e3cdbc3ae5fdca2c4cbb940a6b" ],
+    [ "RegularExpressions", "dir_85cb138f4e5726dc94b71dd837bfae57.html", "dir_85cb138f4e5726dc94b71dd837bfae57" ],
+    [ "Streams", "dir_0e6ab23f82372ec289b889cb3f9f8f49.html", "dir_0e6ab23f82372ec289b889cb3f9f8f49" ],
+    [ "Web", "dir_784b22233a0be762018553ddb492d656.html", "dir_784b22233a0be762018553ddb492d656" ],
+    [ "Windows", "dir_6c40bd9be45b57ed580e423a96b31203.html", "dir_6c40bd9be45b57ed580e423a96b31203" ],
+    [ "WinForms", "dir_a125a9818cced04ff964d7141474ada4.html", "dir_a125a9818cced04ff964d7141474ada4" ],
+    [ "XmlDoc", "dir_892b5940b3a40468e1274cf0f5bdfa1c.html", "dir_892b5940b3a40468e1274cf0f5bdfa1c" ],
+    [ "Zip", "dir_22510e70eec81e8c86d8644c697b10ca.html", "dir_22510e70eec81e8c86d8644c697b10ca" ],
+    [ "GlobalSuppressions.cs", "d5/d0f/_global_suppressions_8cs.html", null ]
+];

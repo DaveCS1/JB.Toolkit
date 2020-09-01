@@ -1,0 +1,123 @@
+.TH "JBToolkit.ConsoleHelper.Options.Option" 3 "Tue Sep 1 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.ConsoleHelper.Options.Option \- User Guide: http://docs.go-mono.com/index.aspx?link=T:Mono.Options.OptionSet  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBJBToolkit\&.ConsoleHelper\&.Options\&.CommandOption\fP, \fBJBToolkit\&.ConsoleHelper\&.Options\&.HelpOption\fP, and JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Category\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "string[] \fBGetNames\fP ()"
+.br
+.ti -1c
+.RI "string[] \fBGetValueSeparators\fP ()"
+.br
+.ti -1c
+.RI "void \fBInvoke\fP (\fBOptionContext\fP c)"
+.br
+.ti -1c
+.RI "override string \fBToString\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOption\fP (string prototype, string description)"
+.br
+.RI "User Guide: http://docs.go-mono.com/index.aspx?link=T:Mono.Options.OptionSet "
+.ti -1c
+.RI "\fBOption\fP (string prototype, string description, int maxValueCount)"
+.br
+.RI "User Guide: http://docs.go-mono.com/index.aspx?link=T:Mono.Options.OptionSet "
+.ti -1c
+.RI "\fBOption\fP (string prototype, string description, int maxValueCount, bool hidden)"
+.br
+.RI "User Guide: http://docs.go-mono.com/index.aspx?link=T:Mono.Options.OptionSet "
+.ti -1c
+.RI "abstract void \fBOnParseComplete\fP (\fBOptionContext\fP c)"
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static T \fBParse< T >\fP (string value, \fBOptionContext\fP c)"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "string \fBPrototype\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "string \fBDescription\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "\fBOptionValueType\fP \fBOptionValueType\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "int \fBMaxValueCount\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "bool \fBHidden\fP\fC [get]\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+User Guide: http://docs.go-mono.com/index.aspx?link=T:Mono.Options.OptionSet 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.ConsoleHelper\&.Options\&.Option\&.Option (string prototype, string description)\fC [protected]\fP"
+
+.PP
+User Guide: http://docs.go-mono.com/index.aspx?link=T:Mono.Options.OptionSet 
+.SS "JBToolkit\&.ConsoleHelper\&.Options\&.Option\&.Option (string prototype, string description, int maxValueCount)\fC [protected]\fP"
+
+.PP
+User Guide: http://docs.go-mono.com/index.aspx?link=T:Mono.Options.OptionSet 
+.SS "JBToolkit\&.ConsoleHelper\&.Options\&.Option\&.Option (string prototype, string description, int maxValueCount, bool hidden)\fC [protected]\fP"
+
+.PP
+User Guide: http://docs.go-mono.com/index.aspx?link=T:Mono.Options.OptionSet 
+.SH "Member Function Documentation"
+.PP 
+.SS "string [] JBToolkit\&.ConsoleHelper\&.Options\&.Option\&.GetNames ()"
+
+.SS "string [] JBToolkit\&.ConsoleHelper\&.Options\&.Option\&.GetValueSeparators ()"
+
+.SS "void JBToolkit\&.ConsoleHelper\&.Options\&.Option\&.Invoke (\fBOptionContext\fP c)"
+
+.SS "abstract void JBToolkit\&.ConsoleHelper\&.Options\&.Option\&.OnParseComplete (\fBOptionContext\fP c)\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBJBToolkit\&.ConsoleHelper\&.Options\&.HelpOption\fP, and \fBJBToolkit\&.ConsoleHelper\&.Options\&.CommandOption\fP\&.
+.SS "static T JBToolkit\&.ConsoleHelper\&.Options\&.Option\&.Parse< T > (string value, \fBOptionContext\fP c)\fC [static]\fP, \fC [protected]\fP"
+
+.SS "override string JBToolkit\&.ConsoleHelper\&.Options\&.Option\&.ToString ()"
+
+.SH "Property Documentation"
+.PP 
+.SS "string JBToolkit\&.ConsoleHelper\&.Options\&.Option\&.Description\fC [get]\fP"
+
+.SS "bool JBToolkit\&.ConsoleHelper\&.Options\&.Option\&.Hidden\fC [get]\fP"
+
+.SS "int JBToolkit\&.ConsoleHelper\&.Options\&.Option\&.MaxValueCount\fC [get]\fP"
+
+.SS "\fBOptionValueType\fP JBToolkit\&.ConsoleHelper\&.Options\&.Option\&.OptionValueType\fC [get]\fP"
+
+.SS "string JBToolkit\&.ConsoleHelper\&.Options\&.Option\&.Prototype\fC [get]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

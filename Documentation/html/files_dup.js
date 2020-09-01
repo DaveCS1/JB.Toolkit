@@ -1,4 +1,4 @@
 var files_dup =
 [
-    [ "JBToolkit", "dir_30f91978450854fe6fca103c3edda59d.html", "dir_30f91978450854fe6fca103c3edda59d" ]
+    [ "JB.Toolkit", "dir_103055a96f1cb7bcae1ba8ade85ed72a.html", "dir_103055a96f1cb7bcae1ba8ade85ed72a" ]
 ];

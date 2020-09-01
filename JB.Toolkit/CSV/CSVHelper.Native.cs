@@ -5,14 +5,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace JBToolkit.CSV.Native
+namespace JBToolkit.Csv.Native
 {
     /// <summary>
     /// Convert CSV from and to a DataTable. This class doesn't require any third party packages to use which can sometimes be useful, 
     /// however it may not account for every single permutation of a CSV file, ony basic. This class does however support strings
     /// wrapped in "Speachmarks" quite nicely, whic quite a lot of CSV to DataTable implementations don't seem to get right.
     /// </summary>
-    public class CSVHelper
+    public class CsvHelper
     {
         /// <summary>
         /// Convert CSV from a DataTable. This class doesn't require any third party packages to use which can sometimes be useful, 
@@ -287,7 +287,7 @@ namespace JBToolkit.CSV.Native
         /// Convert CSV from and to a DataTable. It will wrapp all fields with speachmarks for simplicity, which is highly compatible, however
         /// If you have a different implementation of CSV reader that type casts you may struggle.
         /// </summary>
-        public static void ToCSVFile(DataTable dataTable, string path, char seperator = ',')
+        public static void ToCsvFile(DataTable dataTable, string path, char seperator = ',')
         {
             StringBuilder sb = new StringBuilder();
             IEnumerable<string> columnNames = dataTable.Columns.Cast<DataColumn>().

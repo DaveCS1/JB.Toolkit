@@ -1,0 +1,5 @@
+<map id="JBToolkit.PdfDoc.PdfConverter.ConvertPdfToImage2DByteArray" name="JBToolkit.PdfDoc.PdfConverter.ConvertPdfToImage2DByteArray">
+<area shape="rect" id="node1" title="Converts PDF to 3D byte array (array of byte arrays &#45; 1 byte array for each image for each page)" alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node2" href="$d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter.html#aabe1e175297337e4b96fd0455fab1dc9" title="Converts PDF to memory stream array (array memory streams &#45; 1 memory stream for each image for each p..." alt="" coords="260,5,463,47"/>
+<area shape="rect" id="node3" href="$da/dbe/class_j_b_toolkit_1_1_windows_1_1_process_helper.html#afb518659a5ed37e209117d9fcf66de41" title="Executes a process and reads the output (std out and error out) &#45; Useful for working with command lin..." alt="" coords="511,5,764,47"/>
+</map>

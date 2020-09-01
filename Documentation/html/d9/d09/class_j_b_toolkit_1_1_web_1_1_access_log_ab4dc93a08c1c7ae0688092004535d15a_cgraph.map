@@ -1,4 +1,4 @@
 <map id="JBToolkit.Web.AccessLog.LogAccess" name="JBToolkit.Web.AccessLog.LogAccess">
 <area shape="rect" id="node1" title="Insert an access log entry into the database" alt="" coords="5,5,184,47"/>
-<area shape="rect" id="node2" href="$d1/d29/class_j_b_toolkit_1_1_database_1_1_d_b_connection.html#a1bc6f0196c634f6b5f62460821b92c94" title="Executes SQL and doesn&#39;t expect a result set" alt="" coords="232,5,457,47"/>
+<area shape="rect" id="node2" href="$d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection.html#a5b7b3d9b1b3d1fbc9abc7fd5af5ef0d5" title="Executes SQL and doesn&#39;t expect a result set" alt="" coords="232,5,455,47"/>
 </map>

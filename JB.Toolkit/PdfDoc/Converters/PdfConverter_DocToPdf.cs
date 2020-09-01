@@ -14,7 +14,7 @@ namespace JBToolkit.PdfDoc
         /// Save Docx document to PDF to file
         /// <param name="docInputPath">Input .docx path</param>
         /// <param name="pdfOutputPath">Output .pdf path</param>
-        public static void SaveMSOfficeDocAsPdf(string docInputPath, string pdfOutputPath)
+        public static void SaveMsOfficeDocAsPdf(string docInputPath, string pdfOutputPath)
         {
             if (!new FileInfo(docInputPath).Extension.ToLower().Contains("docx"))
             {
@@ -29,7 +29,7 @@ namespace JBToolkit.PdfDoc
         /// </summary>
         /// <param name="docInputPath">File path</param>
         /// <returns>Memory stream</returns>
-        public static MemoryStream ConvertMSOfficeDocToPDF(string docInputPath)
+        public static MemoryStream ConvertMsOfficeDocToPdf(string docInputPath)
         {
             string extension = new FileInfo(docInputPath).Extension.ToLower();
 
@@ -41,7 +41,7 @@ namespace JBToolkit.PdfDoc
                 throw new ArgumentException("The input file type is not a Microsoft office file type of 'Excel, Word, PowerPoint or Visio'", new FileInfo(docInputPath).Extension);
             }
 
-            return ConvertToPDF(docInputPath);
+            return ConvertToPdf(docInputPath);
         }
 
         /// <summary>
@@ -49,9 +49,9 @@ namespace JBToolkit.PdfDoc
         /// </summary>
         /// <param name="docxInputPath">File path</param>
         /// <returns>Memory stream</returns>
-        public static MemoryStream ConvertMSOfficeDocToPDF(MemoryStream ms, string fileExtension)
+        public static MemoryStream ConvertMsOfficeDocToPdf(MemoryStream ms, string fileExtension)
         {
-            return ConvertToPDF(ms, fileExtension);
+            return ConvertToPdf(ms, fileExtension);
         }
     }
 }

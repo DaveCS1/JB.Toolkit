@@ -98,7 +98,7 @@ namespace JBToolkit.XmlDoc.MailMerge
             try
             {
                 string tempCSVFile = Path.Combine(Path.GetTempPath(), DateTime.Now.Ticks.ToString() + ".csv");
-                mailMergeData.ToCSVFile(tempCSVFile);
+                mailMergeData.ToCsvFile(tempCSVFile);
 
                 document = application.Documents.Add(Template: templatePath);
 

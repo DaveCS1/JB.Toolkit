@@ -244,7 +244,7 @@ namespace JBToolkit.Database
                                                             string.Format(
                                                                     "UPDATE {0}.{6} SET TreeData = N'{1}', LastModifiedDT = GETDATE(), IncludesSensitiveData = {2} WHERE LinkID = '{3}' AND LinkType = '{4}' AND UserID = {5}",
                                                                     DBName,
-                                                                    treeData.GetSQLAcceptableString(),
+                                                                    treeData.GetSqlAcceptableString(),
                                                                     Convert.ToInt32(includesSensitveData),
                                                                     linkId,
                                                                     linkType,
@@ -274,7 +274,7 @@ namespace JBToolkit.Database
                                                                     DBName,
                                                                     linkId,
                                                                     linkType,
-                                                                    treeData.GetSQLAcceptableString(),
+                                                                    treeData.GetSqlAcceptableString(),
                                                                     userId,
                                                                     Convert.ToInt32(includesSensitveData),
                                                                     TableName));

@@ -1,0 +1,70 @@
+.TH "JBToolkit.ConsoleHelper.Options.ArgumentSource" 3 "Tue Sep 1 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.ConsoleHelper.Options.ArgumentSource
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBJBToolkit\&.ConsoleHelper\&.Options\&.ResponseFileSource\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "abstract string[] \fBGetNames\fP ()"
+.br
+.ti -1c
+.RI "abstract bool \fBGetArguments\fP (string value, out \fBIEnumerable\fP< string > replacement)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBIEnumerable\fP< string > \fBGetArgumentsFromFile\fP (string file)"
+.br
+.ti -1c
+.RI "static \fBIEnumerable\fP< string > \fBGetArguments\fP (TextReader reader)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBArgumentSource\fP ()"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "abstract string \fBDescription\fP\fC [get]\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.ConsoleHelper\&.Options\&.ArgumentSource\&.ArgumentSource ()\fC [protected]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "abstract bool JBToolkit\&.ConsoleHelper\&.Options\&.ArgumentSource\&.GetArguments (string value, out \fBIEnumerable\fP< string > replacement)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBJBToolkit\&.ConsoleHelper\&.Options\&.ResponseFileSource\fP\&.
+.SS "static \fBIEnumerable\fP<string> JBToolkit\&.ConsoleHelper\&.Options\&.ArgumentSource\&.GetArguments (TextReader reader)\fC [static]\fP"
+
+.SS "static \fBIEnumerable\fP<string> JBToolkit\&.ConsoleHelper\&.Options\&.ArgumentSource\&.GetArgumentsFromFile (string file)\fC [static]\fP"
+
+.SS "abstract string [] JBToolkit\&.ConsoleHelper\&.Options\&.ArgumentSource\&.GetNames ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBJBToolkit\&.ConsoleHelper\&.Options\&.ResponseFileSource\fP\&.
+.SH "Property Documentation"
+.PP 
+.SS "abstract string JBToolkit\&.ConsoleHelper\&.Options\&.ArgumentSource\&.Description\fC [get]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

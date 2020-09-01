@@ -1,0 +1,4 @@
+<map id="JBToolkit.Database.DbConnection.GetScalerResultEx" name="JBToolkit.Database.DbConnection.GetScalerResultEx">
+<area shape="rect" id="node1" title="Gets a single string from the database given an SQL query (first column, first row) &#45; Typically used ..." alt="" coords="5,5,228,47"/>
+<area shape="rect" id="node2" href="$d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection.html#a8f706f53782c7cfb84361db5f365e164" title="Gets a single string from the database given an SQL query (first column, first row) &#45; Typically used ..." alt="" coords="276,5,499,47"/>
+</map>

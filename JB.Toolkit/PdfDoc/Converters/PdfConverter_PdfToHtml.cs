@@ -18,7 +18,7 @@ namespace JBToolkit.PdfDoc
         /// <param name="overwriteIfExists">Attempt to delete current target root directory if it already exists (overwrite)</param>
         /// <param name="timeoutSeconds">Timeout before reporting failing</param>
         /// <returns>RSoot path where the files have been created</returns>
-        public static string SavePDFToHtml(string path, string documentName, string outputRootPath = "", bool overwriteIfExists = false, int timeoutSeconds = 30)
+        public static string SavePdfAsHtml(string path, string documentName, string outputRootPath = "", bool overwriteIfExists = false, int timeoutSeconds = 30)
         {
             if (string.IsNullOrEmpty(documentName))
             {

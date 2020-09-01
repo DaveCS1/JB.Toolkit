@@ -1,13 +1,17 @@
 ﻿# JB Toolkit
+
 &nbsp;
 [![N|Solid](https://portfolio.jb-net.co.uk/shared/Logo-Only-100px.png)](https://github.com/jamesbrindle/JB.Toolkit)
 
 A collection of useful classes, extensions and tools written in C# to aid in a wide variety of development. With components for ASP Net MVC, Winform and Console applications. Integrations for Google, AD and SQL and pre-written implementations / helpers for a variety of tasks... Just Because (see below).
+
 &nbsp;
 &nbsp;
+
 
 ## Nuget Package
 
+&nbsp;
 ```
 Install-Package JB.Toolkit
 ```
@@ -31,11 +35,12 @@ Install-Package JB.Toolkit
 * **Console App Helper**
 	* Spinner
 	* Progress bar
-	* Any console foreground and background colour (ColourFul.Console)
+	* Mono.Options (Command line arguments: http://docs.go-mono.com/index.aspx?link=T:Mono.Options.OptionSet)
+	* Any console foreground and background colour (ColourFul.Console library)
 	* FIGLet fonts (ASCII art)
 * **Database**
 	* Get data table, get scaler, execute non-Query, execute non-query with scoped identity
-	* Dapper
+	* Dapper implementations
 	* Tree view (i.e. jstree) cache storage
 * **Domain**
     * AD DB lookup
@@ -59,7 +64,9 @@ Install-Package JB.Toolkit
 	* Image type converter
 	* Image manipulation
 	* Icon helper
-	* Web image helper (mimetype helepr, base64 image, get image bytes from URL etc)
+			* Get icon from file type (many embedded images)
+	* Web image helper (mime type helepr, base64 image, get image bytes from URL etc)
+			* Mime type descriptor from image byte array using magic number detection
 	* Colour helper
 	* OCR
 * **Interprocess Communication**
@@ -101,6 +108,7 @@ Install-Package JB.Toolkit
 * **Regular Expressions**
 	* Common regular expression lists
 	* Try convert any string format of a date to DateTime
+	* Match all dates in a string
 * **Stream Helper**
 	* Safe Stream
 	* Read file without loc
@@ -117,13 +125,15 @@ Install-Package JB.Toolkit
 	* Optimised Metro Form
 	* Taskbar icon helper
 	* Imaging tools
-* **XML Doc (Word, Excel) Tools**
+* **XML Doc (Word, Excel, PowerPoint, PDF) Tools**
 	* Converter
-		* DataTable to Xlsx
-		* Docx to HTML
-		* Docx to PDF
+		* HTML / MS Office / Image to PDF
+		* PDF to MS Office / HTML / Image
+		* Bulk convert MS Office to PDF
+		* MS Office / PDF / Image (OCR) to text file (.txt)
 	* Mail merge
 	* Find and replace
+	* Image extractor
 * **Zip**
 	* Compress / create archive
 	* Extract archive

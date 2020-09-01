@@ -22,7 +22,7 @@ namespace JBToolkit.PdfDoc
         /// <param name="throwOnError">Whether not to throw (break) on error just return an empty string</param>
         /// <param name="utilisePDFtoTextCommandLineUtility">Default to true - Flag to optionally use the embedded xPDF PdftoText command line utility (slow) as a fallback when iTextSharp doesn't work</param>
         /// <returns>Content as string</returns>
-        public static string GetPDFContentAsString(
+        public static string GetPdfContentAsString(
             string path,
             int timeoutSeconds = 30,
             bool throwOnError = true,
@@ -78,7 +78,7 @@ namespace JBToolkit.PdfDoc
                 {
                     if (utilisePDFtoTextCommandLineUtility)
                     {
-                        return GetPDFContentAsString_CmdLineTool(path, timeoutSeconds, throwOnError);
+                        return GetPdfContentAsString_CmdLineTool(path, timeoutSeconds, throwOnError);
                     }
                     else if (throwOnError)
                     {
@@ -92,7 +92,7 @@ namespace JBToolkit.PdfDoc
             {
                 if (utilisePDFtoTextCommandLineUtility)
                 {
-                    return GetPDFContentAsString_CmdLineTool(path, timeoutSeconds, throwOnError);
+                    return GetPdfContentAsString_CmdLineTool(path, timeoutSeconds, throwOnError);
                 }
                 else if (throwOnError)
                 {
@@ -113,7 +113,7 @@ namespace JBToolkit.PdfDoc
         /// <param name="throwOnError">Whether not to throw (break) on error just return an empty string</param>
         /// <param name="utilisePDFtoTextCommandLineUtility">Default to true - Flag to optionally use the embedded xPDF PdftoText command line utility (slow) as a fallback when iTextSharp doesn't work</param>
         /// <returns>Content as string</returns>
-        public static string GetPDFContentAsString(
+        public static string GetPdfContentAsString(
             MemoryStream ms,
             int timeoutSeconds = 30,
             bool throwOnError = true,
@@ -169,7 +169,7 @@ namespace JBToolkit.PdfDoc
                 {
                     if (utilisePDFtoTextCommandLineUtility)
                     {
-                        return GetPDFContentAsString_CmdLineTool(ms, timeoutSeconds, throwOnError);
+                        return GetPdfContentAsString_CmdLineTool(ms, timeoutSeconds, throwOnError);
                     }
                     else if (throwOnError)
                     {
@@ -183,7 +183,7 @@ namespace JBToolkit.PdfDoc
             {
                 if (utilisePDFtoTextCommandLineUtility)
                 {
-                    return GetPDFContentAsString_CmdLineTool(ms, timeoutSeconds, throwOnError);
+                    return GetPdfContentAsString_CmdLineTool(ms, timeoutSeconds, throwOnError);
                 }
                 else if (throwOnError)
                 {
@@ -202,7 +202,7 @@ namespace JBToolkit.PdfDoc
         /// <param name="timeoutSeconds">Timeout in seconds before reporting failure</param>
         /// <param name="throwOnError">Whether not to throw (break) on error just return an empty string</param>
         /// <returns>Content as string</returns>
-        public static string GetPDFContentAsString_CmdLineTool(
+        public static string GetPdfContentAsString_CmdLineTool(
             string path,
             int timeoutSeconds = 30,
             bool throwOnError = true)
@@ -249,7 +249,7 @@ namespace JBToolkit.PdfDoc
         /// <param name="timeoutSeconds">Timeout in seconds before reporting failure</param>
         /// <param name="throwOnError">Whether not to throw (break) on error just return an empty string</param>
         /// <returns>Content as string</returns>
-        public static string GetPDFContentAsString_CmdLineTool(
+        public static string GetPdfContentAsString_CmdLineTool(
             MemoryStream ms,
             int timeoutSeconds = 30,
             bool throwOnError = true)

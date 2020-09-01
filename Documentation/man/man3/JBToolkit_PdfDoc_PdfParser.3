@@ -1,4 +1,4 @@
-.TH "JBToolkit.PdfDoc.PdfParser" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.TH "JBToolkit.PdfDoc.PdfParser" 3 "Tue Sep 1 2020" "JB.Toolkit" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,21 +11,21 @@ JBToolkit.PdfDoc.PdfParser \- PDF Parsing methods
 
 .in +1c
 .ti -1c
-.RI "static string \fBGetPDFContentAsString\fP (string path, int timeoutSeconds=30, bool throwOnError=true, bool utilisePDFtoTextCommandLineUtility=true)"
+.RI "static string \fBGetPdfContentAsString\fP (string path, int timeoutSeconds=30, bool throwOnError=true, bool utilisePDFtoTextCommandLineUtility=true)"
 .br
 .RI "Converts PDF to pure text using iTextSharp (very quick) and optionally falls back to using xPDF PDFtoText command line utility (embedded) if iTextSharp text extract fails "
 .ti -1c
-.RI "static string \fBGetPDFContentAsString\fP (MemoryStream ms, int timeoutSeconds=30, bool throwOnError=true, bool utilisePDFtoTextCommandLineUtility=true)"
+.RI "static string \fBGetPdfContentAsString\fP (MemoryStream ms, int timeoutSeconds=30, bool throwOnError=true, bool utilisePDFtoTextCommandLineUtility=true)"
 .br
 .RI "Converts PDF to pure text using iTextSharp (very quick) and optionally falls back to using xPDF PDFtoText command line utility (embedded) if iTextSharp text extract fails\&. 
 .br
  "
 .ti -1c
-.RI "static string \fBGetPDFContentAsString_CmdLineTool\fP (string path, int timeoutSeconds=30, bool throwOnError=true)"
+.RI "static string \fBGetPdfContentAsString_CmdLineTool\fP (string path, int timeoutSeconds=30, bool throwOnError=true)"
 .br
 .RI "Converts PDF to pure text using xPDF PDFtoText command line utility (embedded) if iTextSharp text extract fails "
 .ti -1c
-.RI "static string \fBGetPDFContentAsString_CmdLineTool\fP (MemoryStream ms, int timeoutSeconds=30, bool throwOnError=true)"
+.RI "static string \fBGetPdfContentAsString_CmdLineTool\fP (MemoryStream ms, int timeoutSeconds=30, bool throwOnError=true)"
 .br
 .RI "Converts PDF to pure text using xPDF PDFtoText command line utility (embedded) if iTextSharp text extract fails "
 .in -1c
@@ -36,7 +36,7 @@ PDF Parsing methods
 
 .SH "Member Function Documentation"
 .PP 
-.SS "static string JBToolkit\&.PdfDoc\&.PdfParser\&.GetPDFContentAsString (MemoryStream ms, int timeoutSeconds = \fC30\fP, bool throwOnError = \fCtrue\fP, bool utilisePDFtoTextCommandLineUtility = \fCtrue\fP)\fC [static]\fP"
+.SS "static string JBToolkit\&.PdfDoc\&.PdfParser\&.GetPdfContentAsString (MemoryStream ms, int timeoutSeconds = \fC30\fP, bool throwOnError = \fCtrue\fP, bool utilisePDFtoTextCommandLineUtility = \fCtrue\fP)\fC [static]\fP"
 
 .PP
 Converts PDF to pure text using iTextSharp (very quick) and optionally falls back to using xPDF PDFtoText command line utility (embedded) if iTextSharp text extract fails\&. 
@@ -60,7 +60,7 @@ Content as string
 .RE
 .PP
 
-.SS "static string JBToolkit\&.PdfDoc\&.PdfParser\&.GetPDFContentAsString (string path, int timeoutSeconds = \fC30\fP, bool throwOnError = \fCtrue\fP, bool utilisePDFtoTextCommandLineUtility = \fCtrue\fP)\fC [static]\fP"
+.SS "static string JBToolkit\&.PdfDoc\&.PdfParser\&.GetPdfContentAsString (string path, int timeoutSeconds = \fC30\fP, bool throwOnError = \fCtrue\fP, bool utilisePDFtoTextCommandLineUtility = \fCtrue\fP)\fC [static]\fP"
 
 .PP
 Converts PDF to pure text using iTextSharp (very quick) and optionally falls back to using xPDF PDFtoText command line utility (embedded) if iTextSharp text extract fails 
@@ -82,7 +82,7 @@ Content as string
 .RE
 .PP
 
-.SS "static string JBToolkit\&.PdfDoc\&.PdfParser\&.GetPDFContentAsString_CmdLineTool (MemoryStream ms, int timeoutSeconds = \fC30\fP, bool throwOnError = \fCtrue\fP)\fC [static]\fP"
+.SS "static string JBToolkit\&.PdfDoc\&.PdfParser\&.GetPdfContentAsString_CmdLineTool (MemoryStream ms, int timeoutSeconds = \fC30\fP, bool throwOnError = \fCtrue\fP)\fC [static]\fP"
 
 .PP
 Converts PDF to pure text using xPDF PDFtoText command line utility (embedded) if iTextSharp text extract fails 
@@ -102,7 +102,7 @@ Content as string
 .RE
 .PP
 
-.SS "static string JBToolkit\&.PdfDoc\&.PdfParser\&.GetPDFContentAsString_CmdLineTool (string path, int timeoutSeconds = \fC30\fP, bool throwOnError = \fCtrue\fP)\fC [static]\fP"
+.SS "static string JBToolkit\&.PdfDoc\&.PdfParser\&.GetPdfContentAsString_CmdLineTool (string path, int timeoutSeconds = \fC30\fP, bool throwOnError = \fCtrue\fP)\fC [static]\fP"
 
 .PP
 Converts PDF to pure text using xPDF PDFtoText command line utility (embedded) if iTextSharp text extract fails 

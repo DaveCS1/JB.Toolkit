@@ -1,0 +1,5 @@
+<map id="JBToolkit.Database.DbConnection.ExecuteNonQuery" name="JBToolkit.Database.DbConnection.ExecuteNonQuery">
+<area shape="rect" id="node1" title="Executes SQL and doesn&#39;t expect a result set" alt="" coords="276,39,499,80"/>
+<area shape="rect" id="node2" href="$d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection.html#a1c488c10be7b9be96a3b60676da9e3b2" title="Executes SQL and doesn&#39;t expect a result set" alt="" coords="5,5,228,47"/>
+<area shape="rect" id="node3" href="$d9/d09/class_j_b_toolkit_1_1_web_1_1_access_log.html#ab4dc93a08c1c7ae0688092004535d15a" title="Insert an access log entry into the database" alt="" coords="27,71,206,112"/>
+</map>

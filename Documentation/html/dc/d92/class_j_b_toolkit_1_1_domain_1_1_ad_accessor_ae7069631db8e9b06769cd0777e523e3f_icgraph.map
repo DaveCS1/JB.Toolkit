@@ -1,0 +1,5 @@
+<map id="JBToolkit.Domain.AdAccessor.GetADUserManager" name="JBToolkit.Domain.AdAccessor.GetADUserManager">
+<area shape="rect" id="node1" title="Returns the manager ADUser object of the user" alt="" coords="256,39,459,80"/>
+<area shape="rect" id="node2" href="$dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor.html#a0576010af9f1b3c7eb9de41849c7fc35" title="Gets Active Directory attributes of a given user specified by username" alt="" coords="5,5,208,47"/>
+<area shape="rect" id="node3" href="$dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor.html#ab153d13d89fbabac1bb04e47b10c0136" title="Returns the manager ADUser object of the user" alt="" coords="5,71,208,112"/>
+</map>

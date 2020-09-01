@@ -37,7 +37,7 @@ namespace JBToolkit.Domain
         /// <summary>
         /// Can only be used while developing - for debugging purposes. Return the current NT logged in user
         /// </summary>
-        public static string UserNT
+        public static string UserNt
         {
             get
             {

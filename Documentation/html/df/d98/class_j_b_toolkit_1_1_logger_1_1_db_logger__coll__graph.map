@@ -1,0 +1,3 @@
+<map id="JBToolkit.Logger.DbLogger" name="JBToolkit.Logger.DbLogger">
+<area shape="rect" id="node1" title="Adds log entries (error or information) to USR_AG_Shared_Log. Defaults to standing file logger (curre..." alt="" coords="5,5,183,185"/>
+</map>

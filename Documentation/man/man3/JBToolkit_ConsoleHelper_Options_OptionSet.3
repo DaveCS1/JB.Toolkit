@@ -1,0 +1,179 @@
+.TH "JBToolkit.ConsoleHelper.Options.OptionSet" 3 "Tue Sep 1 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.ConsoleHelper.Options.OptionSet
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBKeyedCollection< string, Option >\fP\&.
+.PP
+Inherited by \fBJBToolkit\&.ConsoleHelper\&.Options\&.CommandOptionSet\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBCategory\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOptionSet\fP ()"
+.br
+.ti -1c
+.RI "\fBOptionSet\fP (\fBMessageLocalizerConverter\fP localizer)"
+.br
+.RI "User Guide: http://docs.go-mono.com/index.aspx?link=T:Mono.Options.OptionSet "
+.ti -1c
+.RI "\fBOptionSet\fP \fBAdd\fP (string header)"
+.br
+.ti -1c
+.RI "new \fBOptionSet\fP \fBAdd\fP (\fBOption\fP option)"
+.br
+.ti -1c
+.RI "\fBOptionSet\fP \fBAdd\fP (string prototype, Action< string > action)"
+.br
+.ti -1c
+.RI "\fBOptionSet\fP \fBAdd\fP (string prototype, string description, Action< string > action)"
+.br
+.ti -1c
+.RI "\fBOptionSet\fP \fBAdd\fP (string prototype, string description, Action< string > action, bool hidden)"
+.br
+.ti -1c
+.RI "\fBOptionSet\fP \fBAdd\fP (string prototype, OptionAction< string, string > action)"
+.br
+.ti -1c
+.RI "\fBOptionSet\fP \fBAdd\fP (string prototype, string description, OptionAction< string, string > action)"
+.br
+.ti -1c
+.RI "\fBOptionSet\fP \fBAdd\fP (string prototype, string description, OptionAction< string, string > action, bool hidden)"
+.br
+.ti -1c
+.RI "\fBOptionSet\fP \fBAdd< T >\fP (string prototype, Action< T > action)"
+.br
+.ti -1c
+.RI "\fBOptionSet\fP \fBAdd< T >\fP (string prototype, string description, Action< T > action)"
+.br
+.ti -1c
+.RI "\fBOptionSet\fP \fBAdd< TKey, TValue >\fP (string prototype, OptionAction< TKey, TValue > action)"
+.br
+.ti -1c
+.RI "\fBOptionSet\fP \fBAdd< TKey, TValue >\fP (string prototype, string description, OptionAction< TKey, TValue > action)"
+.br
+.ti -1c
+.RI "\fBOptionSet\fP \fBAdd\fP (\fBArgumentSource\fP source)"
+.br
+.ti -1c
+.RI "\fBList\fP< string > \fBParse\fP (\fBIEnumerable\fP< string > arguments)"
+.br
+.ti -1c
+.RI "void \fBWriteOptionDescriptions\fP (TextWriter o)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override string \fBGetKeyForItem\fP (\fBOption\fP item)"
+.br
+.ti -1c
+.RI "\fBOption\fP \fBGetOptionForName\fP (string option)"
+.br
+.ti -1c
+.RI "override void \fBInsertItem\fP (int index, \fBOption\fP item)"
+.br
+.ti -1c
+.RI "override void \fBRemoveItem\fP (int index)"
+.br
+.ti -1c
+.RI "override void \fBSetItem\fP (int index, \fBOption\fP item)"
+.br
+.ti -1c
+.RI "virtual \fBOptionContext\fP \fBCreateOptionContext\fP ()"
+.br
+.ti -1c
+.RI "bool \fBGetOptionParts\fP (string argument, out string flag, out string name, out string sep, out string value)"
+.br
+.ti -1c
+.RI "virtual bool \fBParse\fP (string argument, \fBOptionContext\fP c)"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "\fBMessageLocalizerConverter\fP \fBMessageLocalizer\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "ReadOnlyCollection< \fBArgumentSource\fP > \fBArgumentSources\fP\fC [get]\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.OptionSet ()"
+
+.SS "JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.OptionSet (\fBMessageLocalizerConverter\fP localizer)"
+
+.PP
+User Guide: http://docs.go-mono.com/index.aspx?link=T:Mono.Options.OptionSet 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBOptionSet\fP JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Add (\fBArgumentSource\fP source)"
+
+.SS "new \fBOptionSet\fP JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Add (\fBOption\fP option)"
+
+.SS "\fBOptionSet\fP JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Add (string header)"
+
+.SS "\fBOptionSet\fP JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Add (string prototype, Action< string > action)"
+
+.SS "\fBOptionSet\fP JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Add (string prototype, OptionAction< string, string > action)"
+
+.SS "\fBOptionSet\fP JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Add (string prototype, string description, Action< string > action)"
+
+.SS "\fBOptionSet\fP JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Add (string prototype, string description, Action< string > action, bool hidden)"
+
+.SS "\fBOptionSet\fP JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Add (string prototype, string description, OptionAction< string, string > action)"
+
+.SS "\fBOptionSet\fP JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Add (string prototype, string description, OptionAction< string, string > action, bool hidden)"
+
+.SS "\fBOptionSet\fP \fBJBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Add\fP< T > (string prototype, Action< T > action)"
+
+.SS "\fBOptionSet\fP \fBJBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Add\fP< T > (string prototype, string description, Action< T > action)"
+
+.SS "\fBOptionSet\fP \fBJBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Add\fP< TKey, TValue > (string prototype, OptionAction< TKey, TValue > action)"
+
+.SS "\fBOptionSet\fP \fBJBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Add\fP< TKey, TValue > (string prototype, string description, OptionAction< TKey, TValue > action)"
+
+.SS "virtual \fBOptionContext\fP JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.CreateOptionContext ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "override string JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.GetKeyForItem (\fBOption\fP item)\fC [protected]\fP"
+
+.SS "\fBOption\fP JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.GetOptionForName (string option)\fC [protected]\fP"
+
+.SS "bool JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.GetOptionParts (string argument, out string flag, out string name, out string sep, out string value)\fC [protected]\fP"
+
+.SS "override void JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.InsertItem (int index, \fBOption\fP item)\fC [protected]\fP"
+
+.SS "\fBList\fP<string> JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Parse (\fBIEnumerable\fP< string > arguments)"
+
+.SS "virtual bool JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.Parse (string argument, \fBOptionContext\fP c)\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "override void JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.RemoveItem (int index)\fC [protected]\fP"
+
+.SS "override void JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.SetItem (int index, \fBOption\fP item)\fC [protected]\fP"
+
+.SS "void JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.WriteOptionDescriptions (TextWriter o)"
+
+.SH "Property Documentation"
+.PP 
+.SS "ReadOnlyCollection<\fBArgumentSource\fP> JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.ArgumentSources\fC [get]\fP"
+
+.SS "\fBMessageLocalizerConverter\fP JBToolkit\&.ConsoleHelper\&.Options\&.OptionSet\&.MessageLocalizer\fC [get]\fP, \fC [set]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

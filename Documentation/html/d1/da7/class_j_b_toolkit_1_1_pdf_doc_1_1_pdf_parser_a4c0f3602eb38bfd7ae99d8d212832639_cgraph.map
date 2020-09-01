@@ -1,0 +1,4 @@
+<map id="JBToolkit.PdfDoc.PdfParser.GetPdfContentAsString_CmdLineTool" name="JBToolkit.PdfDoc.PdfParser.GetPdfContentAsString_CmdLineTool">
+<area shape="rect" id="node1" title="Converts PDF to pure text using xPDF PDFtoText command line utility (embedded) if iTextSharp text ext..." alt="" coords="5,5,244,47"/>
+<area shape="rect" id="node2" href="$da/dbe/class_j_b_toolkit_1_1_windows_1_1_process_helper.html#afb518659a5ed37e209117d9fcf66de41" title="Executes a process and reads the output (std out and error out) &#45; Useful for working with command lin..." alt="" coords="292,5,545,47"/>
+</map>

@@ -1,0 +1,507 @@
+\hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper}{}\doxysection{J\+B\+Toolkit.\+Csv.\+Csv\+Helper Class Reference}
+\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper}\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Csv.\+Csv\+Helper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{df/ddf/class_j_b_toolkit_1_1_csv_1_1_csv_helper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}} \{ \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a6adf97f83acf6453d4a6a4b1070f3754}{Csv\+Trim\+Options.\+None}}, 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a9e3cc9301ba7d8bd1f135cd84d477203}{Csv\+Trim\+Options.\+Trim\+Inside\+Quotes}}, 
+\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}}$<$ T $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5fa2f023834dcb06e558e87f485a2f8e}{Csv\+File\+To\+Enumerable\+Object$<$ T $>$}} (string path, string delimiter=\char`\"{}auto\char`\"{}, bool has\+Headers=true, bool ignore\+Quotes=false, \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}} trim\+Options=\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}})
+\begin{DoxyCompactList}\small\item\em Reads C\+SV file and returns deserialised object T. Note, if the C\+SV file has no header, then be sure to include \textquotesingle{}Index\textquotesingle{} attributes on your class properties. I.\+e\+: \end{DoxyCompactList}\item 
+static dynamic \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_ae3e7267a753bb2f56517f1c97e096d72}{Csv\+File\+To\+Dynamic\+Object}} (string path, string delimiter=\char`\"{}auto\char`\"{}, bool has\+Headers=true, bool ignore\+Quotes=false, \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}} trim\+Options=\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}})
+\begin{DoxyCompactList}\small\item\em Reads C\+SV file and returns dynamic object Note, if the C\+SV file has no header, then be sure to include \textquotesingle{}Index\textquotesingle{} attributes on your class properties. I.\+e\+: \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a00e19c0acdff63635a70e146dd8aa0dc}{Csv\+File\+To\+Data\+Table}} (string path, string delimiter=\char`\"{}auto\char`\"{}, bool has\+Headers=true, bool ignore\+Quotes=false, \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}} trim\+Options=\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}})
+\begin{DoxyCompactList}\small\item\em Read C\+SV File and convert to Data\+Table object Note, if the C\+SV file has no header, then be sure to include \textquotesingle{}Index\textquotesingle{} attributes on your class properties. I.\+e\+: \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a94a1f9081c517ce1474ad15309059882}{To\+Csv\+File$<$ T $>$}} (\mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}}$<$ T $>$ obj, string path, char delimiter=\textquotesingle{},\textquotesingle{}, bool has\+Headers=true, bool quote\+All\+Fields=true, \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}} trim\+Options=\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}})
+\begin{DoxyCompactList}\small\item\em Write \mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}} object to C\+SV file \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a58243af5eef440f1d4e1a6f2b10506fb}{To\+Csv\+String$<$ T $>$}} (\mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}}$<$ T $>$ obj, char delimiter=\textquotesingle{},\textquotesingle{}, bool has\+Headers=true, bool quote\+All\+Fields=true, \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}} trim\+Options=\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}})
+\begin{DoxyCompactList}\small\item\em Write \mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}} object to C\+SV file \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_ab1225ed0409a32f044dcb2c9d485484a}{To\+Csv\+File$<$ T $>$}} (\mbox{\hyperlink{class_list}{List}}$<$ T $>$ list, string path, char delimiter=\textquotesingle{},\textquotesingle{}, bool has\+Headers=true, bool quote\+All\+Fields=true, \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}} trim\+Options=\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}})
+\begin{DoxyCompactList}\small\item\em Write \mbox{\hyperlink{class_list}{List}} to C\+SV file \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a4d3592ed7aea95916b22009706f619ed}{To\+C\+S\+V\+String$<$ T $>$}} (\mbox{\hyperlink{class_list}{List}}$<$ T $>$ list, char delimiter=\textquotesingle{},\textquotesingle{}, bool has\+Headers=true, bool quote\+All\+Fields=true, \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}} trim\+Options=\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}})
+\begin{DoxyCompactList}\small\item\em Write \mbox{\hyperlink{class_list}{List}} to C\+SV file \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a70fdea0526285f35431332a3a44295c9}{To\+Csv\+File}} (\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} dt, string path, char delimiter=\textquotesingle{},\textquotesingle{}, bool has\+Headers=true, bool quote\+All\+Fields=true, \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}} trim\+Options=\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}})
+\begin{DoxyCompactList}\small\item\em Converts Data\+Table to C\+SV and write to file \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5d4f46893314c789694c9d6bb6858cdf}{To\+Csv\+String}} (\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} dt, char delimiter=\textquotesingle{},\textquotesingle{}, bool has\+Headers=true, bool quote\+All\+Fields=true, \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}} trim\+Options=\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}})
+\begin{DoxyCompactList}\small\item\em Converts Data\+Table object to C\+SV type string \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_list}{List}}$<$ string $>$ \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a050287bf9f42ebcc92f4c6807404c669}{Get\+Csv\+Header\+Names}} (string path, string delimiter=\char`\"{}auto\char`\"{})
+\begin{DoxyCompactList}\small\item\em Returns a list of C\+SV headers \end{DoxyCompactList}\item 
+static char \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_ab25e53ebe8d48fd4f98bb1f02a26e48a}{Try\+Detect\+Delimiter}} (string\mbox{[}$\,$\mbox{]} lines)
+\begin{DoxyCompactList}\small\item\em Tries to auto detect C\+SV delimiter (tends to do a very good job of it). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}} 
+\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}!CsvTrimOptions@{CsvTrimOptions}}
+\index{CsvTrimOptions@{CsvTrimOptions}!JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}
+\doxysubsubsection{\texorpdfstring{CsvTrimOptions}{CsvTrimOptions}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{J\+B\+Toolkit.\+Csv.\+Csv\+Helper.\+Csv\+Trim\+Options}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}!None@{None}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a6adf97f83acf6453d4a6a4b1070f3754}\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TrimInsideQuotes@{TrimInsideQuotes}!JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}!TrimInsideQuotes@{TrimInsideQuotes}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a9e3cc9301ba7d8bd1f135cd84d477203}\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a9e3cc9301ba7d8bd1f135cd84d477203}} 
+Trim\+Inside\+Quotes&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TrimFields@{TrimFields}!JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}!TrimFields@{TrimFields}}}\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}} 
+Trim\+Fields&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a00e19c0acdff63635a70e146dd8aa0dc}\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a00e19c0acdff63635a70e146dd8aa0dc}} 
+\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}!CsvFileToDataTable@{CsvFileToDataTable}}
+\index{CsvFileToDataTable@{CsvFileToDataTable}!JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}
+\doxysubsubsection{\texorpdfstring{CsvFileToDataTable()}{CsvFileToDataTable()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} J\+B\+Toolkit.\+Csv.\+Csv\+Helper.\+Csv\+File\+To\+Data\+Table (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{string}]{delimiter = {\ttfamily \char`\"{}auto\char`\"{}},  }\item[{bool}]{has\+Headers = {\ttfamily true},  }\item[{bool}]{ignore\+Quotes = {\ttfamily false},  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}}}]{trim\+Options = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Read C\+SV File and convert to Data\+Table object Note, if the C\+SV file has no header, then be sure to include \textquotesingle{}Index\textquotesingle{} attributes on your class properties. I.\+e\+: 
+
+\begin{DoxyVerb}public class Foo
+{
+    [Index(0)]
+    public int Id { get; set; }
+
+    [Index(1)]
+    public string Name { get; set; }
+}
+\end{DoxyVerb}
+
+
+You can also map by a different header name to your class properties by adding the \textquotesingle{}Name\textquotesingle{} attribute to your properties. I.\+e\+: \begin{DoxyVerb}public class Foo
+{
+    [Name("id")]
+     public int Id { get; set; }
+
+    [Name("name")]
+    public string Name { get; set; }
+}
+\end{DoxyVerb}
+
+
+Other attributes include\+: \begin{DoxyVerb}[BooleanTrueValues("yes")]
+[BooleanFalseValues("no")]
+[Optional]
+[Ignored]
+\end{DoxyVerb}
+
+
+More information available at\+: \href{https://joshclose.github.io/CsvHelper/getting-started}{\texttt{ https\+://joshclose.\+github.\+io/\+Csv\+Helper/getting-\/started}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & File path of C\+SV file\\
+\hline
+{\em delimiter} & (Optional) -\/ Single character seperator, i.\+e\+: \char`\"{};\char`\"{} \char`\"{},\char`\"{} \char`\"{}\textbackslash{}t\char`\"{} (tab) or \char`\"{}auto\char`\"{} to try and detect\\
+\hline
+{\em has\+Headers} & (Optional) -\/ Does the C\+SV file have headers or not?\\
+\hline
+{\em ignore\+Quotes} & (Optional) -\/ If true, quotation marks are treated like any other character\\
+\hline
+{\em trim\+Options} & (Optional) -\/ Trim inside quotes, trim fields, don\textquotesingle{}t trim\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Data\+Table result
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d33/class_j_b_toolkit_1_1_csv_1_1_csv_helper_a00e19c0acdff63635a70e146dd8aa0dc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper_ae3e7267a753bb2f56517f1c97e096d72}\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper_ae3e7267a753bb2f56517f1c97e096d72}} 
+\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}!CsvFileToDynamicObject@{CsvFileToDynamicObject}}
+\index{CsvFileToDynamicObject@{CsvFileToDynamicObject}!JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}
+\doxysubsubsection{\texorpdfstring{CsvFileToDynamicObject()}{CsvFileToDynamicObject()}}
+{\footnotesize\ttfamily static dynamic J\+B\+Toolkit.\+Csv.\+Csv\+Helper.\+Csv\+File\+To\+Dynamic\+Object (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{string}]{delimiter = {\ttfamily \char`\"{}auto\char`\"{}},  }\item[{bool}]{has\+Headers = {\ttfamily true},  }\item[{bool}]{ignore\+Quotes = {\ttfamily false},  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}}}]{trim\+Options = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reads C\+SV file and returns dynamic object Note, if the C\+SV file has no header, then be sure to include \textquotesingle{}Index\textquotesingle{} attributes on your class properties. I.\+e\+: 
+
+\begin{DoxyVerb}public class Foo
+{
+    [Index(0)]
+    public int Id { get; set; }
+
+    [Index(1)]
+    public string Name { get; set; }
+}
+\end{DoxyVerb}
+
+
+You can also map by a different header name to your class properties by adding the \textquotesingle{}Name\textquotesingle{} attribute to your properties. I.\+e\+: \begin{DoxyVerb}public class Foo
+{
+    [Name("id")]
+     public int Id { get; set; }
+
+    [Name("name")]
+    public string Name { get; set; }
+}
+\end{DoxyVerb}
+
+
+Other attributes include\+: \begin{DoxyVerb}[BooleanTrueValues("yes")]
+[BooleanFalseValues("no")]
+[Optional]
+[Ignored]
+\end{DoxyVerb}
+
+
+More information available at\+: \href{https://joshclose.github.io/CsvHelper/getting-started}{\texttt{ https\+://joshclose.\+github.\+io/\+Csv\+Helper/getting-\/started}}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of object to deserialise to\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & File path of C\+SV file\\
+\hline
+{\em delimiter} & (Optional) -\/ Single character seperator, i.\+e\+: \char`\"{};\char`\"{} \char`\"{},\char`\"{} \char`\"{}\textbackslash{}t\char`\"{} (tab) or \char`\"{}auto\char`\"{} to try and detect\\
+\hline
+{\em has\+Headers} & (Optional) -\/ Does the C\+SV file have headers or not?\\
+\hline
+{\em ignore\+Quotes} & (Optional) -\/ If true, quotation marks are treated like any other character\\
+\hline
+{\em trim\+Options} & (Optional) -\/ Trim inside quotes, trim fields, don\textquotesingle{}t trim\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dynamic result
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d33/class_j_b_toolkit_1_1_csv_1_1_csv_helper_ae3e7267a753bb2f56517f1c97e096d72_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5fa2f023834dcb06e558e87f485a2f8e}\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5fa2f023834dcb06e558e87f485a2f8e}} 
+\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}!CsvFileToEnumerableObject$<$ T $>$@{CsvFileToEnumerableObject$<$ T $>$}}
+\index{CsvFileToEnumerableObject$<$ T $>$@{CsvFileToEnumerableObject$<$ T $>$}!JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}
+\doxysubsubsection{\texorpdfstring{CsvFileToEnumerableObject$<$ T $>$()}{CsvFileToEnumerableObject< T >()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}}$<$T$>$ J\+B\+Toolkit.\+Csv.\+Csv\+Helper.\+Csv\+File\+To\+Enumerable\+Object$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{string}]{delimiter = {\ttfamily \char`\"{}auto\char`\"{}},  }\item[{bool}]{has\+Headers = {\ttfamily true},  }\item[{bool}]{ignore\+Quotes = {\ttfamily false},  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}}}]{trim\+Options = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reads C\+SV file and returns deserialised object T. Note, if the C\+SV file has no header, then be sure to include \textquotesingle{}Index\textquotesingle{} attributes on your class properties. I.\+e\+: 
+
+\begin{DoxyVerb}public class Foo
+{
+    [Index(0)]
+    public int Id { get; set; }
+
+    [Index(1)]
+    public string Name { get; set; }
+}
+\end{DoxyVerb}
+
+
+You can also map by a different header name to your class properties by adding the \textquotesingle{}Name\textquotesingle{} attribute to your properties. I.\+e\+: \begin{DoxyVerb}public class Foo
+{
+    [Name("id")]
+     public int Id { get; set; }
+
+    [Name("name")]
+    public string Name { get; set; }
+}
+\end{DoxyVerb}
+
+
+Other attributes include\+: \begin{DoxyVerb}[BooleanTrueValues("yes")]
+[BooleanFalseValues("no")]
+[Optional]
+[Ignored]
+\end{DoxyVerb}
+
+
+More information available at\+: \href{https://joshclose.github.io/CsvHelper/getting-started}{\texttt{ https\+://joshclose.\+github.\+io/\+Csv\+Helper/getting-\/started}}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of object to deserialise to\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & File path of C\+SV file\\
+\hline
+{\em delimiter} & (Optional) -\/ Single character seperator, i.\+e\+: \char`\"{};\char`\"{} \char`\"{},\char`\"{} \char`\"{}\textbackslash{}t\char`\"{} (tab) or \char`\"{}auto\char`\"{} to try and detect\\
+\hline
+{\em has\+Headers} & (Optional) -\/ Does the C\+SV file have headers or not?\\
+\hline
+{\em ignore\+Quotes} & (Optional) -\/ If true, quotation marks are treated like any other character\\
+\hline
+{\em trim\+Options} & (Optional) -\/ Trim inside quotes, trim fields, don\textquotesingle{}t trim\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}} result
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d33/class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5fa2f023834dcb06e558e87f485a2f8e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a050287bf9f42ebcc92f4c6807404c669}\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a050287bf9f42ebcc92f4c6807404c669}} 
+\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}!GetCsvHeaderNames@{GetCsvHeaderNames}}
+\index{GetCsvHeaderNames@{GetCsvHeaderNames}!JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}
+\doxysubsubsection{\texorpdfstring{GetCsvHeaderNames()}{GetCsvHeaderNames()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_list}{List}}$<$string$>$ J\+B\+Toolkit.\+Csv.\+Csv\+Helper.\+Get\+Csv\+Header\+Names (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{string}]{delimiter = {\ttfamily \char`\"{}auto\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a list of C\+SV headers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to C\+SV file\\
+\hline
+{\em delimiter} & (Optional) -\/ Seperator, i.\+e\+: ; , \textbackslash{}t (tab)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Headers list
+\end{DoxyReturn}
+~\newline
+ Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d33/class_j_b_toolkit_1_1_csv_1_1_csv_helper_a050287bf9f42ebcc92f4c6807404c669_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a70fdea0526285f35431332a3a44295c9}\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a70fdea0526285f35431332a3a44295c9}} 
+\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}!ToCsvFile@{ToCsvFile}}
+\index{ToCsvFile@{ToCsvFile}!JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}
+\doxysubsubsection{\texorpdfstring{ToCsvFile()}{ToCsvFile()}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Csv.\+Csv\+Helper.\+To\+Csv\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}}}]{dt,  }\item[{string}]{path,  }\item[{char}]{delimiter = {\ttfamily \textquotesingle{},\textquotesingle{}},  }\item[{bool}]{has\+Headers = {\ttfamily true},  }\item[{bool}]{quote\+All\+Fields = {\ttfamily true},  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}}}]{trim\+Options = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts Data\+Table to C\+SV and write to file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Input Data\+Table to convert\\
+\hline
+{\em path} & Filepath to write to\\
+\hline
+{\em delimiter} & (Optional) -\/ Seperator, i.\+e\+: ; , \textbackslash{}t (tab)\\
+\hline
+{\em has\+Headers} & (Optional) -\/ Include headers or not\\
+\hline
+{\em trim\+Options} & (Optional) -\/ Trim inside quotes, trim fields, don\textquotesingle{}t trim\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d33/class_j_b_toolkit_1_1_csv_1_1_csv_helper_a70fdea0526285f35431332a3a44295c9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a94a1f9081c517ce1474ad15309059882}\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a94a1f9081c517ce1474ad15309059882}} 
+\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}!ToCsvFile$<$ T $>$@{ToCsvFile$<$ T $>$}}
+\index{ToCsvFile$<$ T $>$@{ToCsvFile$<$ T $>$}!JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}
+\doxysubsubsection{\texorpdfstring{ToCsvFile$<$ T $>$()}{ToCsvFile< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a70fdea0526285f35431332a3a44295c9}{J\+B\+Toolkit.\+Csv.\+Csv\+Helper.\+To\+Csv\+File}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}}$<$ T $>$}]{obj,  }\item[{string}]{path,  }\item[{char}]{delimiter = {\ttfamily \textquotesingle{},\textquotesingle{}},  }\item[{bool}]{has\+Headers = {\ttfamily true},  }\item[{bool}]{quote\+All\+Fields = {\ttfamily true},  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}}}]{trim\+Options = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Write \mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}} object to C\+SV file 
+
+More information available at\+: \href{https://joshclose.github.io/CsvHelper/getting-started}{\texttt{ https\+://joshclose.\+github.\+io/\+Csv\+Helper/getting-\/started}}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+{\em path} & Output filepath\\
+\hline
+{\em delimiter} & (Optional) -\/ Seperator, i.\+e\+: ; , \textbackslash{}t (tab)\\
+\hline
+{\em has\+Headers} & (Optional) -\/Include headers or not\\
+\hline
+{\em trim\+Options} & (Optional) -\/ Trim inside quotes, trim fields, don\textquotesingle{}t trim\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper_ab1225ed0409a32f044dcb2c9d485484a}\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper_ab1225ed0409a32f044dcb2c9d485484a}} 
+\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}!ToCsvFile$<$ T $>$@{ToCsvFile$<$ T $>$}}
+\index{ToCsvFile$<$ T $>$@{ToCsvFile$<$ T $>$}!JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}
+\doxysubsubsection{\texorpdfstring{ToCsvFile$<$ T $>$()}{ToCsvFile< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a70fdea0526285f35431332a3a44295c9}{J\+B\+Toolkit.\+Csv.\+Csv\+Helper.\+To\+Csv\+File}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_list}{List}}$<$ T $>$}]{list,  }\item[{string}]{path,  }\item[{char}]{delimiter = {\ttfamily \textquotesingle{},\textquotesingle{}},  }\item[{bool}]{has\+Headers = {\ttfamily true},  }\item[{bool}]{quote\+All\+Fields = {\ttfamily true},  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}}}]{trim\+Options = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Write \mbox{\hyperlink{class_list}{List}} to C\+SV file 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+{\em path} & Output filepath\\
+\hline
+{\em delimiter} & (Optional) -\/ Seperator, i.\+e\+: ; , \textbackslash{}t (tab)\\
+\hline
+{\em has\+Headers} & (Optional) -\/Include headers or not\\
+\hline
+{\em trim\+Options} & (Optional) -\/ Trim inside quotes, trim fields, don\textquotesingle{}t trim\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d33/class_j_b_toolkit_1_1_csv_1_1_csv_helper_ab1225ed0409a32f044dcb2c9d485484a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5d4f46893314c789694c9d6bb6858cdf}\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5d4f46893314c789694c9d6bb6858cdf}} 
+\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}!ToCsvString@{ToCsvString}}
+\index{ToCsvString@{ToCsvString}!JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}
+\doxysubsubsection{\texorpdfstring{ToCsvString()}{ToCsvString()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Csv.\+Csv\+Helper.\+To\+Csv\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}}}]{dt,  }\item[{char}]{delimiter = {\ttfamily \textquotesingle{},\textquotesingle{}},  }\item[{bool}]{has\+Headers = {\ttfamily true},  }\item[{bool}]{quote\+All\+Fields = {\ttfamily true},  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}}}]{trim\+Options = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts Data\+Table object to C\+SV type string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Data\+Table object to convert\\
+\hline
+{\em delimiter} & (Optional) -\/ Seperator, i.\+e\+: ; , \textbackslash{}t (tab)\\
+\hline
+{\em has\+Headers} & (Optional) -\/ Include headers or not\\
+\hline
+{\em trim\+Options} & (Optional) -\/ Trim inside quotes, trim fields, don\textquotesingle{}t trim\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+C\+SV string
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a58243af5eef440f1d4e1a6f2b10506fb}\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a58243af5eef440f1d4e1a6f2b10506fb}} 
+\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}!ToCsvString$<$ T $>$@{ToCsvString$<$ T $>$}}
+\index{ToCsvString$<$ T $>$@{ToCsvString$<$ T $>$}!JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}
+\doxysubsubsection{\texorpdfstring{ToCsvString$<$ T $>$()}{ToCsvString< T >()}}
+{\footnotesize\ttfamily static string \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5d4f46893314c789694c9d6bb6858cdf}{J\+B\+Toolkit.\+Csv.\+Csv\+Helper.\+To\+Csv\+String}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}}$<$ T $>$}]{obj,  }\item[{char}]{delimiter = {\ttfamily \textquotesingle{},\textquotesingle{}},  }\item[{bool}]{has\+Headers = {\ttfamily true},  }\item[{bool}]{quote\+All\+Fields = {\ttfamily true},  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}}}]{trim\+Options = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Write \mbox{\hyperlink{class_i_enumerable}{I\+Enumerable}} object to C\+SV file 
+
+More information available at\+: \href{https://joshclose.github.io/CsvHelper/getting-started}{\texttt{ https\+://joshclose.\+github.\+io/\+Csv\+Helper/getting-\/started}}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+{\em path} & Output filepath\\
+\hline
+{\em delimiter} & (Optional) -\/ Seperator, i.\+e\+: ; , \textbackslash{}t (tab)\\
+\hline
+{\em has\+Headers} & (Optional) -\/Include headers or not\\
+\hline
+{\em trim\+Options} & (Optional) -\/ Trim inside quotes, trim fields, don\textquotesingle{}t trim\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a4d3592ed7aea95916b22009706f619ed}\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a4d3592ed7aea95916b22009706f619ed}} 
+\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}!ToCSVString$<$ T $>$@{ToCSVString$<$ T $>$}}
+\index{ToCSVString$<$ T $>$@{ToCSVString$<$ T $>$}!JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}
+\doxysubsubsection{\texorpdfstring{ToCSVString$<$ T $>$()}{ToCSVString< T >()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Csv.\+Csv\+Helper.\+To\+C\+S\+V\+String$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_list}{List}}$<$ T $>$}]{list,  }\item[{char}]{delimiter = {\ttfamily \textquotesingle{},\textquotesingle{}},  }\item[{bool}]{has\+Headers = {\ttfamily true},  }\item[{bool}]{quote\+All\+Fields = {\ttfamily true},  }\item[{\mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612}{Csv\+Trim\+Options}}}]{trim\+Options = {\ttfamily \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_csv_helper_a5ba24f61382bec9af46d5005c5aa8612a172d97550a30245f71fee28866571806}{Csv\+Trim\+Options.\+Trim\+Fields}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Write \mbox{\hyperlink{class_list}{List}} to C\+SV file 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+{\em path} & Output filepath\\
+\hline
+{\em delimiter} & (Optional) -\/ Seperator, i.\+e\+: ; , \textbackslash{}t (tab)\\
+\hline
+{\em has\+Headers} & (Optional) -\/Include headers or not\\
+\hline
+{\em trim\+Options} & (Optional) -\/ Trim inside quotes, trim fields, don\textquotesingle{}t trim\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_csv_helper_ab25e53ebe8d48fd4f98bb1f02a26e48a}\label{class_j_b_toolkit_1_1_csv_1_1_csv_helper_ab25e53ebe8d48fd4f98bb1f02a26e48a}} 
+\index{JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}!TryDetectDelimiter@{TryDetectDelimiter}}
+\index{TryDetectDelimiter@{TryDetectDelimiter}!JBToolkit.Csv.CsvHelper@{JBToolkit.Csv.CsvHelper}}
+\doxysubsubsection{\texorpdfstring{TryDetectDelimiter()}{TryDetectDelimiter()}}
+{\footnotesize\ttfamily static char J\+B\+Toolkit.\+Csv.\+Csv\+Helper.\+Try\+Detect\+Delimiter (\begin{DoxyParamCaption}\item[{string\mbox{[}$\,$\mbox{]}}]{lines }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Tries to auto detect C\+SV delimiter (tends to do a very good job of it). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lines} & Text lines array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Likely delimiter
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d33/class_j_b_toolkit_1_1_csv_1_1_csv_helper_ab25e53ebe8d48fd4f98bb1f02a26e48a_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+C\+S\+V/\mbox{\hyperlink{_csv_helper_8cs}{Csv\+Helper.\+cs}}\end{DoxyCompactItemize}

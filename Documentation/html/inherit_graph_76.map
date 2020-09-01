@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$dd/da8/class_j_b_toolkit_1_1_views_1_1_data_table_result_set.html" title="Data returned to DataTable" alt="" coords="5,5,181,47"/>
-<area shape="rect" id="node2" href="$dd/db9/class_j_b_toolkit_1_1_views_1_1_data_table_result_error.html" title=" " alt="" coords="229,5,405,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,69,39"/>
+<area shape="rect" id="node2" href="$d0/df5/class_j_b_toolkit_1_1_streams_1_1_throttled_stream.html" title="Throttle a stream &#45;&gt; Very useful for throttle HttpWebRequest uploads / downloads." alt="" coords="117,5,300,47"/>
 </map>

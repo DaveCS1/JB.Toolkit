@@ -11,9 +11,9 @@ namespace JBToolkit.XmlDoc.Converters
     /// Uses a decent 3rd party command line tool to perform a bulk 'Document to PDF Conversion' (quickly - multi-threaded)
     /// Will convert typical MS Office documents (docx, xlsx, msg, pptx, vsd, pub and more), images, html and text files it encounters to PDF.
     /// </summary>
-    public static class BulkDocumentToPdfConverter
+    public static partial class OfficeHtmlPdfImageConverter
     {
-        private static string _error = string.Empty;
+        private static string __error = string.Empty;
 
         /// <summary>
         /// Uses a decent 3rd party command line tool to perform a bulk 'Document to PDF Conversion' (quickly - multi-threaded)
@@ -22,12 +22,12 @@ namespace JBToolkit.XmlDoc.Converters
         /// With a given input directory is will scan files recursively (including subfolders) and output
         /// to a given output directory (it will also mimick the file structure of the root input directory given if subfolder are present).
         /// </summary>
-        public static void ConvertDocuments(string inputDirectory, string outputDirectory)
+        public static void BulkConvertDocumentsToPdf(string inputDirectory, string outputDirectory)
         {
             RunCommand(inputDirectory, outputDirectory);
         }
 
-        private static StringBuilder _outputStringBuilder = new StringBuilder();
+        private static StringBuilder __outputStringBuilder = new StringBuilder();
         private static void RunCommand(string inputDirectory, string outputDirectory)
         {
             int iterations = 0;
@@ -71,7 +71,7 @@ namespace JBToolkit.XmlDoc.Converters
 
         private static void RunCommandActual(string inputDirectory, string outputDirectory)
         {
-            _outputStringBuilder = new StringBuilder();
+            __outputStringBuilder = new StringBuilder();
             var process = new Process();
 
             if (!Directory.Exists(outputDirectory))
@@ -93,18 +93,18 @@ namespace JBToolkit.XmlDoc.Converters
                 process.StartInfo.CreateNoWindow = true;
                 process.StartInfo.UseShellExecute = false;
                 process.EnableRaisingEvents = false;
-                process.OutputDataReceived += Process_OutputDataReceived;
-                process.ErrorDataReceived += Process_ErrorDataReceived;
+                process.OutputDataReceived += Process__OutputDataReceived;
+                process.ErrorDataReceived += Process__ErrorDataReceived;
                 process.Start();
                 process.BeginOutputReadLine();
                 process.BeginErrorReadLine();
 
                 if (process.ExitCode != 0)
                 {
-                    var output = _outputStringBuilder.ToString();
+                    var output = __outputStringBuilder.ToString();
 
                     throw new Exception("ReAlPDFc process exited with non-zero exit code of: " + process.ExitCode + Environment.NewLine +
-                    "Output from process: " + _outputStringBuilder.ToString());
+                    "Output from process: " + __outputStringBuilder.ToString());
                 }
             }
             catch (Exception e)
@@ -120,23 +120,23 @@ namespace JBToolkit.XmlDoc.Converters
                 }
                 catch { }
 
-                if (!string.IsNullOrEmpty(_error))
+                if (!string.IsNullOrEmpty(__error))
                 {
-                    throw new ApplicationException(_error);
+                    throw new ApplicationException(__error);
                 }
             }
         }
 
-        private static void Process_OutputDataReceived(object sender, DataReceivedEventArgs e)
+        private static void Process__OutputDataReceived(object sender, DataReceivedEventArgs e)
         {
-            _outputStringBuilder.Append(e.Data);
+            __outputStringBuilder.Append(e.Data);
         }
 
-        private static void Process_ErrorDataReceived(object sender, DataReceivedEventArgs e)
+        private static void Process__ErrorDataReceived(object sender, DataReceivedEventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(e.Data))
             {
-                _error = "ReAlPDFc Error: " + e.Data;
+                __error = "ReAlPDFc Error: " + e.Data;
             }
         }
     }

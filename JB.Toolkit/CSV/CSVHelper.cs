@@ -6,11 +6,11 @@ using System.Data;
 using System.IO;
 using System.Linq;
 
-namespace JBToolkit.CSV
+namespace JBToolkit.Csv
 {
-    public class CSVHelper
+    public class CsvHelper
     {
-        public enum CSVTrimOptions
+        public enum CsvTrimOptions
         {
             None,
             TrimInsideQuotes,
@@ -58,12 +58,12 @@ namespace JBToolkit.CSV
         /// <param name="ignoreQuotes">(Optional) - If true, quotation marks are treated like any other character</param>
         /// <param name="trimOptions">(Optional) - Trim inside quotes, trim fields, don't trim</param>
         /// <returns>IEnumerable result</returns>
-        public static IEnumerable<T> CSVFileToEnumerableObject<T>(
+        public static IEnumerable<T> CsvFileToEnumerableObject<T>(
             string path,
             string delimiter = "auto",
             bool hasHeaders = true,
             bool ignoreQuotes = false,
-            CSVTrimOptions trimOptions = CSVTrimOptions.TrimFields)
+            CsvTrimOptions trimOptions = CsvTrimOptions.TrimFields)
         {
             char selectedDelimeter;
             try
@@ -106,13 +106,13 @@ namespace JBToolkit.CSV
 
                 switch (trimOptions)
                 {
-                    case CSVTrimOptions.None:
+                    case CsvTrimOptions.None:
                         csv.Configuration.TrimOptions = TrimOptions.None;
                         break;
-                    case CSVTrimOptions.TrimInsideQuotes:
+                    case CsvTrimOptions.TrimInsideQuotes:
                         csv.Configuration.TrimOptions = TrimOptions.InsideQuotes;
                         break;
-                    case CSVTrimOptions.TrimFields:
+                    case CsvTrimOptions.TrimFields:
                         csv.Configuration.TrimOptions = TrimOptions.Trim;
                         break;
                     default:
@@ -164,12 +164,12 @@ namespace JBToolkit.CSV
         /// <param name="ignoreQuotes">(Optional) - If true, quotation marks are treated like any other character</param>
         /// <param name="trimOptions">(Optional) - Trim inside quotes, trim fields, don't trim</param>
         /// <returns>Dynamic result</returns>
-        public static dynamic CSVFileToDynamicObject(
+        public static dynamic CsvFileToDynamicObject(
             string path,
             string delimiter = "auto",
             bool hasHeaders = true,
             bool ignoreQuotes = false,
-            CSVTrimOptions trimOptions = CSVTrimOptions.TrimFields)
+            CsvTrimOptions trimOptions = CsvTrimOptions.TrimFields)
         {
             char selectedDelimeter;
             try
@@ -212,13 +212,13 @@ namespace JBToolkit.CSV
 
                 switch (trimOptions)
                 {
-                    case CSVTrimOptions.None:
+                    case CsvTrimOptions.None:
                         csv.Configuration.TrimOptions = TrimOptions.None;
                         break;
-                    case CSVTrimOptions.TrimInsideQuotes:
+                    case CsvTrimOptions.TrimInsideQuotes:
                         csv.Configuration.TrimOptions = TrimOptions.InsideQuotes;
                         break;
-                    case CSVTrimOptions.TrimFields:
+                    case CsvTrimOptions.TrimFields:
                         csv.Configuration.TrimOptions = TrimOptions.Trim;
                         break;
                     default:
@@ -269,12 +269,12 @@ namespace JBToolkit.CSV
         /// <param name="ignoreQuotes">(Optional) - If true, quotation marks are treated like any other character</param>
         /// <param name="trimOptions">(Optional) - Trim inside quotes, trim fields, don't trim</param>
         /// <returns>DataTable result</returns>
-        public static DataTable CSVFileToDataTable(
+        public static DataTable CsvFileToDataTable(
             string path,
             string delimiter = "auto",
             bool hasHeaders = true,
             bool ignoreQuotes = false,
-            CSVTrimOptions trimOptions = CSVTrimOptions.TrimFields)
+            CsvTrimOptions trimOptions = CsvTrimOptions.TrimFields)
         {
             var dt = new DataTable();
 
@@ -319,13 +319,13 @@ namespace JBToolkit.CSV
 
                 switch (trimOptions)
                 {
-                    case CSVTrimOptions.None:
+                    case CsvTrimOptions.None:
                         csv.Configuration.TrimOptions = TrimOptions.None;
                         break;
-                    case CSVTrimOptions.TrimInsideQuotes:
+                    case CsvTrimOptions.TrimInsideQuotes:
                         csv.Configuration.TrimOptions = TrimOptions.InsideQuotes;
                         break;
-                    case CSVTrimOptions.TrimFields:
+                    case CsvTrimOptions.TrimFields:
                         csv.Configuration.TrimOptions = TrimOptions.Trim;
                         break;
                     default:
@@ -354,13 +354,13 @@ namespace JBToolkit.CSV
         /// <param name="delimiter">(Optional) - Seperator, i.e: ; , \t (tab)</param>
         /// <param name="hasHeaders">(Optional) -Include headers or not</param>
         /// <param name="trimOptions">(Optional) - Trim inside quotes, trim fields, don't trim</param>
-        public static void ToCSVFile<T>(
+        public static void ToCsvFile<T>(
             IEnumerable<T> obj,
             string path,
             char delimiter = ',',
             bool hasHeaders = true,
             bool quoteAllFields = true,
-            CSVTrimOptions trimOptions = CSVTrimOptions.TrimFields)
+            CsvTrimOptions trimOptions = CsvTrimOptions.TrimFields)
         {
             using (var writer = new StreamWriter(path))
             using (var csv = new CsvWriter(writer))
@@ -375,13 +375,13 @@ namespace JBToolkit.CSV
 
                 switch (trimOptions)
                 {
-                    case CSVTrimOptions.None:
+                    case CsvTrimOptions.None:
                         csv.Configuration.TrimOptions = TrimOptions.None;
                         break;
-                    case CSVTrimOptions.TrimInsideQuotes:
+                    case CsvTrimOptions.TrimInsideQuotes:
                         csv.Configuration.TrimOptions = TrimOptions.InsideQuotes;
                         break;
-                    case CSVTrimOptions.TrimFields:
+                    case CsvTrimOptions.TrimFields:
                         csv.Configuration.TrimOptions = TrimOptions.Trim;
                         break;
                     default:
@@ -404,12 +404,12 @@ namespace JBToolkit.CSV
         /// <param name="delimiter">(Optional) - Seperator, i.e: ; , \t (tab)</param>
         /// <param name="hasHeaders">(Optional) -Include headers or not</param>
         /// <param name="trimOptions">(Optional) - Trim inside quotes, trim fields, don't trim</param>
-        public static string ToCSVString<T>(
+        public static string ToCsvString<T>(
             IEnumerable<T> obj,
             char delimiter = ',',
             bool hasHeaders = true,
             bool quoteAllFields = true,
-            CSVTrimOptions trimOptions = CSVTrimOptions.TrimFields)
+            CsvTrimOptions trimOptions = CsvTrimOptions.TrimFields)
         {
             using (var stream = new MemoryStream())
             using (var reader = new StreamReader(stream))
@@ -426,13 +426,13 @@ namespace JBToolkit.CSV
 
                 switch (trimOptions)
                 {
-                    case CSVTrimOptions.None:
+                    case CsvTrimOptions.None:
                         csv.Configuration.TrimOptions = TrimOptions.None;
                         break;
-                    case CSVTrimOptions.TrimInsideQuotes:
+                    case CsvTrimOptions.TrimInsideQuotes:
                         csv.Configuration.TrimOptions = TrimOptions.InsideQuotes;
                         break;
-                    case CSVTrimOptions.TrimFields:
+                    case CsvTrimOptions.TrimFields:
                         csv.Configuration.TrimOptions = TrimOptions.Trim;
                         break;
                     default:
@@ -456,15 +456,15 @@ namespace JBToolkit.CSV
         /// <param name="delimiter">(Optional) - Seperator, i.e: ; , \t (tab)</param>
         /// <param name="hasHeaders">(Optional) -Include headers or not</param>
         /// <param name="trimOptions">(Optional) - Trim inside quotes, trim fields, don't trim</param>
-        public static void ToCSVFile<T>(
+        public static void ToCsvFile<T>(
             List<T> list,
             string path,
             char delimiter = ',',
             bool hasHeaders = true,
             bool quoteAllFields = true,
-            CSVTrimOptions trimOptions = CSVTrimOptions.TrimFields)
+            CsvTrimOptions trimOptions = CsvTrimOptions.TrimFields)
         {
-            ToCSVFile(list.AsEnumerable<T>(), path, delimiter, hasHeaders, quoteAllFields, trimOptions);
+            ToCsvFile(list.AsEnumerable<T>(), path, delimiter, hasHeaders, quoteAllFields, trimOptions);
         }
 
         /// <summary>
@@ -481,7 +481,7 @@ namespace JBToolkit.CSV
             char delimiter = ',',
             bool hasHeaders = true,
             bool quoteAllFields = true,
-            CSVTrimOptions trimOptions = CSVTrimOptions.TrimFields)
+            CsvTrimOptions trimOptions = CsvTrimOptions.TrimFields)
         {
             using (var stream = new MemoryStream())
             using (var reader = new StreamReader(stream))
@@ -498,13 +498,13 @@ namespace JBToolkit.CSV
 
                 switch (trimOptions)
                 {
-                    case CSVTrimOptions.None:
+                    case CsvTrimOptions.None:
                         csv.Configuration.TrimOptions = TrimOptions.None;
                         break;
-                    case CSVTrimOptions.TrimInsideQuotes:
+                    case CsvTrimOptions.TrimInsideQuotes:
                         csv.Configuration.TrimOptions = TrimOptions.InsideQuotes;
                         break;
-                    case CSVTrimOptions.TrimFields:
+                    case CsvTrimOptions.TrimFields:
                         csv.Configuration.TrimOptions = TrimOptions.Trim;
                         break;
                     default:
@@ -526,15 +526,15 @@ namespace JBToolkit.CSV
         /// <param name="delimiter">(Optional) - Seperator, i.e: ; , \t (tab)</param>
         /// <param name="hasHeaders">(Optional) - Include headers or not</param>
         /// <param name="trimOptions">(Optional) - Trim inside quotes, trim fields, don't trim</param>
-        public static void ToCSVFile(
+        public static void ToCsvFile(
             DataTable dt,
             string path,
             char delimiter = ',',
             bool hasHeaders = true,
             bool quoteAllFields = true,
-            CSVTrimOptions trimOptions = CSVTrimOptions.TrimFields)
+            CsvTrimOptions trimOptions = CsvTrimOptions.TrimFields)
         {
-            ToCSVFile(dt.AsEnumerable_Legacy(), path, delimiter, hasHeaders, quoteAllFields, trimOptions);
+            ToCsvFile(dt.AsEnumerable_Legacy(), path, delimiter, hasHeaders, quoteAllFields, trimOptions);
         }
 
         /// <summary>
@@ -545,12 +545,12 @@ namespace JBToolkit.CSV
         /// <param name="hasHeaders">(Optional) - Include headers or not</param>
         /// <param name="trimOptions">(Optional) - Trim inside quotes, trim fields, don't trim</param>
         /// <returns>CSV string</returns>
-        public static string ToCSVString(
+        public static string ToCsvString(
             DataTable dt,
             char delimiter = ',',
             bool hasHeaders = true,
             bool quoteAllFields = true,
-            CSVTrimOptions trimOptions = CSVTrimOptions.TrimFields)
+            CsvTrimOptions trimOptions = CsvTrimOptions.TrimFields)
         {
             using (var stream = new MemoryStream())
             using (var reader = new StreamReader(stream))
@@ -567,13 +567,13 @@ namespace JBToolkit.CSV
 
                 switch (trimOptions)
                 {
-                    case CSVTrimOptions.None:
+                    case CsvTrimOptions.None:
                         csv.Configuration.TrimOptions = TrimOptions.None;
                         break;
-                    case CSVTrimOptions.TrimInsideQuotes:
+                    case CsvTrimOptions.TrimInsideQuotes:
                         csv.Configuration.TrimOptions = TrimOptions.InsideQuotes;
                         break;
-                    case CSVTrimOptions.TrimFields:
+                    case CsvTrimOptions.TrimFields:
                         csv.Configuration.TrimOptions = TrimOptions.Trim;
                         break;
                     default:
@@ -593,7 +593,7 @@ namespace JBToolkit.CSV
         /// <param name="path">Path to CSV file</param>
         /// <param name="delimiter">(Optional) - Seperator, i.e: ; , \t (tab)</param>
         /// <returns>Headers list</returns> 
-        public static List<string> GetCSVHeaderNames(string path, string delimiter = "auto")
+        public static List<string> GetCsvHeaderNames(string path, string delimiter = "auto")
         {
             string singleLine = string.Empty;
 

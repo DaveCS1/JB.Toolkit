@@ -1,0 +1,9 @@
+<map id="JBToolkit.Domain.AdAccessor.GetAdSearchResult" name="JBToolkit.Domain.AdAccessor.GetAdSearchResult">
+<area shape="rect" id="node1" title="Returns a DirectoryServices SearchResult object" alt="" coords="267,169,469,211"/>
+<area shape="rect" id="node2" href="$dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor.html#ad9771e7581497c15be85bbdb2f6e3763" title="Gets the photo stored in AD user" alt="" coords="11,5,213,47"/>
+<area shape="rect" id="node3" href="$dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor.html#ac949324355e95adbc503d1628c31db37" title="Gets the photo stored in AD user" alt="" coords="11,71,213,112"/>
+<area shape="rect" id="node4" href="$dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor.html#afb18f1a6a12dad53d8234819b2ebdb39" title="Returns the email from an AD search by username" alt="" coords="11,136,213,177"/>
+<area shape="rect" id="node5" href="$dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor.html#a0a056892e52f4f2316b9171c34bc724c" title="Returns the full name from an AD search by email address" alt="" coords="11,201,213,243"/>
+<area shape="rect" id="node6" href="$dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor.html#a115962bdc987d7ad937f782a26429e48" title="Returns the full name from an AD search by username" alt="" coords="11,267,213,308"/>
+<area shape="rect" id="node7" href="$dc/d92/class_j_b_toolkit_1_1_domain_1_1_ad_accessor.html#a3fd50b95ff692d6f687be0be5022fc5d" title="Returns the username from an AD search by email address" alt="" coords="5,332,219,373"/>
+</map>

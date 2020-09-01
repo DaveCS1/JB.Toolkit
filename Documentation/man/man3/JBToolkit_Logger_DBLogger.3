@@ -1,8 +1,8 @@
-.TH "JBToolkit.Logger.DBLogger" 3 "Mon Aug 31 2020" "JB.Toolkit" \" -*- nroff -*-
+.TH "JBToolkit.Logger.DbLogger" 3 "Tue Sep 1 2020" "JB.Toolkit" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-JBToolkit.Logger.DBLogger \- Adds log entries (error or information) to USR_AG_Shared_Log\&. Defaults to standing file logger (current working directory) on DB connection failure (fallback)  
+JBToolkit.Logger.DbLogger \- Adds log entries (error or information) to USR_AG_Shared_Log\&. Defaults to standing file logger (current working directory) on DB connection failure (fallback)  
 
 .SH SYNOPSIS
 .br
@@ -11,14 +11,14 @@ JBToolkit.Logger.DBLogger \- Adds log entries (error or information) to USR_AG_S
 
 .in +1c
 .ti -1c
-.RI "\fBDBLogger\fP (string dbName, string connectionString, int userId=0, string applicationName=null)"
+.RI "\fBDbLogger\fP (string dbName, string connectionString, int userId=0, string applicationName=null)"
 .br
 .ti -1c
-.RI "bool \fBLogToDB\fP (\fBException\fP e, string additional=null)"
+.RI "bool \fBLogToDb\fP (\fBException\fP e, string additional=null)"
 .br
 .RI "Logs an exception to the database "
 .ti -1c
-.RI "bool \fBLogToDB\fP (bool isError, string source, string message, string stackTrace)"
+.RI "bool \fBLogToDb\fP (bool isError, string source, string message, string stackTrace)"
 .br
 .RI "Logs an error to the database "
 .in -1c
@@ -45,27 +45,27 @@ Adds log entries (error or information) to USR_AG_Shared_Log\&. Defaults to stan
 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "JBToolkit\&.Logger\&.DBLogger\&.DBLogger (string dbName, string connectionString, int userId = \fC0\fP, string applicationName = \fCnull\fP)"
+.SS "JBToolkit\&.Logger\&.DbLogger\&.DbLogger (string dbName, string connectionString, int userId = \fC0\fP, string applicationName = \fCnull\fP)"
 
 .SH "Member Function Documentation"
 .PP 
-.SS "bool JBToolkit\&.Logger\&.DBLogger\&.LogToDB (bool isError, string source, string message, string stackTrace)"
+.SS "bool JBToolkit\&.Logger\&.DbLogger\&.LogToDb (bool isError, string source, string message, string stackTrace)"
 
 .PP
 Logs an error to the database 
-.SS "bool JBToolkit\&.Logger\&.DBLogger\&.LogToDB (\fBException\fP e, string additional = \fCnull\fP)"
+.SS "bool JBToolkit\&.Logger\&.DbLogger\&.LogToDb (\fBException\fP e, string additional = \fCnull\fP)"
 
 .PP
 Logs an exception to the database 
 .SH "Property Documentation"
 .PP 
-.SS "string JBToolkit\&.Logger\&.DBLogger\&.ApplicatioName\fC [get]\fP, \fC [set]\fP"
+.SS "string JBToolkit\&.Logger\&.DbLogger\&.ApplicatioName\fC [get]\fP, \fC [set]\fP"
 
-.SS "string JBToolkit\&.Logger\&.DBLogger\&.ConnectionString\fC [get]\fP, \fC [set]\fP"
+.SS "string JBToolkit\&.Logger\&.DbLogger\&.ConnectionString\fC [get]\fP, \fC [set]\fP"
 
-.SS "string JBToolkit\&.Logger\&.DBLogger\&.DBName\fC [get]\fP, \fC [set]\fP"
+.SS "string JBToolkit\&.Logger\&.DbLogger\&.DBName\fC [get]\fP, \fC [set]\fP"
 
-.SS "int JBToolkit\&.Logger\&.DBLogger\&.UserId\fC [get]\fP, \fC [set]\fP"
+.SS "int JBToolkit\&.Logger\&.DbLogger\&.UserId\fC [get]\fP, \fC [set]\fP"
 
 
 .SH "Author"

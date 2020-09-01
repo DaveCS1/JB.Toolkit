@@ -1,0 +1,45 @@
+.TH "JBToolkit.ConsoleHelper.ProgressBar" 3 "Tue Sep 1 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.ConsoleHelper.ProgressBar \- An ASCII progress bar  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBIDisposable\fP, and \fBIProgress< double >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProgressBar\fP ()"
+.br
+.ti -1c
+.RI "void \fBReport\fP (double value)"
+.br
+.ti -1c
+.RI "void \fBDispose\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+An ASCII progress bar 
+
+Use like:
+.PP
+Console\&.Write('Performing some task\&.\&.\&. '); using (var progress = new \fBProgressBar()\fP) { for (int i = 0; i <= 100; i++) { progress\&.Report((double) i / 100); Thread\&.Sleep(500); } } Console\&.WriteLine('Done\&.');
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JBToolkit\&.ConsoleHelper\&.ProgressBar\&.ProgressBar ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void JBToolkit\&.ConsoleHelper\&.ProgressBar\&.Dispose ()"
+
+.SS "void JBToolkit\&.ConsoleHelper\&.ProgressBar\&.Report (double value)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

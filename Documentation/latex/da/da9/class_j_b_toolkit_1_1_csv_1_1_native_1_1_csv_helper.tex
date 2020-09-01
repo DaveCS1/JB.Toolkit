@@ -1,0 +1,56 @@
+\hypertarget{class_j_b_toolkit_1_1_csv_1_1_native_1_1_csv_helper}{}\doxysection{J\+B\+Toolkit.\+Csv.\+Native.\+Csv\+Helper Class Reference}
+\label{class_j_b_toolkit_1_1_csv_1_1_native_1_1_csv_helper}\index{JBToolkit.Csv.Native.CsvHelper@{JBToolkit.Csv.Native.CsvHelper}}
+
+
+Convert C\+SV from and to a Data\+Table. This class doesn\textquotesingle{}t require any third party packages to use which can sometimes be useful, however it may not account for every single permutation of a C\+SV file, ony basic. This class does however support strings wrapped in \char`\"{}\+Speachmarks\char`\"{} quite nicely, whic quite a lot of C\+SV to Data\+Table implementations don\textquotesingle{}t seem to get right.  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Csv.\+Native.\+Csv\+Helper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{dd/dd5/class_j_b_toolkit_1_1_csv_1_1_native_1_1_csv_helper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_native_1_1_csv_helper_a5aa6aa32b6063f6bef4a511f4a24a641}{Csv\+To\+Data\+Table}} (string csv\+Path, char delimeter=\textquotesingle{},\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Convert C\+SV from a Data\+Table. This class doesn\textquotesingle{}t require any third party packages to use which can sometimes be useful, however it may not account for every single permutation of a C\+SV file, ony basic. This class does however support strings wrapped in \char`\"{}\+Speachmarks\char`\"{} quite nicely, whic quite a lot of C\+SV to Data\+Table implementations don\textquotesingle{}t seem to get right. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_csv_1_1_native_1_1_csv_helper_aa8279daeeadeb31189f4bb1c1a96cc53}{To\+Csv\+File}} (\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} data\+Table, string path, char seperator=\textquotesingle{},\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Convert C\+SV from and to a Data\+Table. It will wrapp all fields with speachmarks for simplicity, which is highly compatible, however If you have a different implementation of C\+SV reader that type casts you may struggle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Convert C\+SV from and to a Data\+Table. This class doesn\textquotesingle{}t require any third party packages to use which can sometimes be useful, however it may not account for every single permutation of a C\+SV file, ony basic. This class does however support strings wrapped in \char`\"{}\+Speachmarks\char`\"{} quite nicely, whic quite a lot of C\+SV to Data\+Table implementations don\textquotesingle{}t seem to get right. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_native_1_1_csv_helper_a5aa6aa32b6063f6bef4a511f4a24a641}\label{class_j_b_toolkit_1_1_csv_1_1_native_1_1_csv_helper_a5aa6aa32b6063f6bef4a511f4a24a641}} 
+\index{JBToolkit.Csv.Native.CsvHelper@{JBToolkit.Csv.Native.CsvHelper}!CsvToDataTable@{CsvToDataTable}}
+\index{CsvToDataTable@{CsvToDataTable}!JBToolkit.Csv.Native.CsvHelper@{JBToolkit.Csv.Native.CsvHelper}}
+\doxysubsubsection{\texorpdfstring{CsvToDataTable()}{CsvToDataTable()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}} J\+B\+Toolkit.\+Csv.\+Native.\+Csv\+Helper.\+Csv\+To\+Data\+Table (\begin{DoxyParamCaption}\item[{string}]{csv\+Path,  }\item[{char}]{delimeter = {\ttfamily \textquotesingle{},\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert C\+SV from a Data\+Table. This class doesn\textquotesingle{}t require any third party packages to use which can sometimes be useful, however it may not account for every single permutation of a C\+SV file, ony basic. This class does however support strings wrapped in \char`\"{}\+Speachmarks\char`\"{} quite nicely, whic quite a lot of C\+SV to Data\+Table implementations don\textquotesingle{}t seem to get right. 
+
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_csv_1_1_native_1_1_csv_helper_aa8279daeeadeb31189f4bb1c1a96cc53}\label{class_j_b_toolkit_1_1_csv_1_1_native_1_1_csv_helper_aa8279daeeadeb31189f4bb1c1a96cc53}} 
+\index{JBToolkit.Csv.Native.CsvHelper@{JBToolkit.Csv.Native.CsvHelper}!ToCsvFile@{ToCsvFile}}
+\index{ToCsvFile@{ToCsvFile}!JBToolkit.Csv.Native.CsvHelper@{JBToolkit.Csv.Native.CsvHelper}}
+\doxysubsubsection{\texorpdfstring{ToCsvFile()}{ToCsvFile()}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Csv.\+Native.\+Csv\+Helper.\+To\+Csv\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_word_interop_mail_merge_8cs_a6542cfcff2f8e81f06ade15aa0bfe2b7}{Data\+Table}}}]{data\+Table,  }\item[{string}]{path,  }\item[{char}]{seperator = {\ttfamily \textquotesingle{},\textquotesingle{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert C\+SV from and to a Data\+Table. It will wrapp all fields with speachmarks for simplicity, which is highly compatible, however If you have a different implementation of C\+SV reader that type casts you may struggle. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+C\+S\+V/\mbox{\hyperlink{_c_s_v_helper_8_native_8cs}{C\+S\+V\+Helper.\+Native.\+cs}}\end{DoxyCompactItemize}

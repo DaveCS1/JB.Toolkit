@@ -9,7 +9,7 @@ namespace JBToolkit.Domain
     /// <summary>
     /// Accesses a given Active Directory server as specified in the web.config for retrieving additional user information
     /// </summary>
-    public class ADAccessor
+    public class AdAccessor
     {        /// <summary>
              /// Gets Active Directory attributes of a given user specified by username
              /// </summary>
@@ -20,7 +20,7 @@ namespace JBToolkit.Domain
              /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
              /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
              /// <returns>A custom AD object with limited attributes</returns>
-        public static ADUser GetADUser(
+        public static AdUser GetAdUser(
             string username,
             bool callingFromWithinDomain,
             string adServerIpAddress,
@@ -28,7 +28,7 @@ namespace JBToolkit.Domain
             string adAdminUsername,
             string adAdminPassword)
         {
-            return GetADUser(
+            return GetAdUser(
                     username,
                     callingFromWithinDomain,
                     adServerIpAddress,
@@ -49,7 +49,7 @@ namespace JBToolkit.Domain
         /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
         /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
         /// <returns>A custom AD object with limited attributes</returns>
-        public static ADUser GetADUser(
+        public static AdUser GetAdUser(
         string username,
         bool callingFromWithinDomain,
         string adServerIpAddress,
@@ -90,7 +90,7 @@ namespace JBToolkit.Domain
                     }
                 }
 
-                ADUser usr = new ADUser
+                AdUser usr = new AdUser
                 {
                     DisplayName = GetProperty(sResultSet, "displayname"),
                     Username = username,
@@ -141,7 +141,7 @@ namespace JBToolkit.Domain
 #if DEBUG
                 Console.Out.WriteLine("AD read error: " + e.Message);
 #endif
-                ADUser usr = new ADUser
+                AdUser usr = new AdUser
                 {
                     JobTitle = string.Empty,
                     Office = string.Empty,
@@ -165,7 +165,7 @@ namespace JBToolkit.Domain
         /// <param name="adServerHostName">Host name of AD controller</param>
         /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
         /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
-        public static ADUser GetADUserManager(
+        public static AdUser GetAdUserManager(
             string username,
             bool callingFromWithinDomain,
             string adServerIpAddress,
@@ -194,7 +194,7 @@ namespace JBToolkit.Domain
         /// <param name="adDomainName">I.e. Likely be the company name</param>
         /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
         /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
-        public static ADUser GetADUserManager(
+        public static AdUser GetADUserManager(
         string username,
         bool callingFromWithinDomain,
         string adServerIpAddress,
@@ -241,7 +241,7 @@ namespace JBToolkit.Domain
                     }
                 }
 
-                ADUser usr = new ADUser
+                AdUser usr = new AdUser
                 {
                     DisplayName = GetProperty(sResultSet, "displayname"),
                     Username = username,
@@ -277,7 +277,7 @@ namespace JBToolkit.Domain
 #if DEBUG
                 Console.Out.WriteLine("AD read error: " + e.Message);
 #endif
-                ADUser usr = new ADUser
+                AdUser usr = new AdUser
                 {
                     JobTitle = string.Empty,
                     Office = string.Empty,
@@ -318,7 +318,7 @@ namespace JBToolkit.Domain
         {
             try
             {
-                string username = GetADSearchResult(
+                string username = GetAdSearchResult(
                     emailAddress,
                     "mail",
                     callingFromWithinDomain,
@@ -351,7 +351,7 @@ namespace JBToolkit.Domain
         {
             try
             {
-                string fullName = GetADSearchResult(
+                string fullName = GetAdSearchResult(
                     emailAddress,
                     "mail",
                     callingFromWithinDomain,
@@ -385,7 +385,7 @@ namespace JBToolkit.Domain
         {
             try
             {
-                string fullName = GetADSearchResult(
+                string fullName = GetAdSearchResult(
                     username,
                     "samaccountname",
                     callingFromWithinDomain,
@@ -419,7 +419,7 @@ namespace JBToolkit.Domain
         {
             try
             {
-                string email = GetADSearchResult(
+                string email = GetAdSearchResult(
                     username,
                     "samaccountname",
                     callingFromWithinDomain,
@@ -451,7 +451,7 @@ namespace JBToolkit.Domain
         /// <param name="adServerHostName">Host name of AD controller</param>
         /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
         /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
-        public static byte[] GetADPhotoFromEmail(
+        public static byte[] GetAdPhotoFromEmail(
             string email,
             bool callingFromWithinDomain,
             string adServerIpAddress,
@@ -461,7 +461,7 @@ namespace JBToolkit.Domain
         {
             try
             {
-                byte[] bb = (byte[])GetADSearchResult(
+                byte[] bb = (byte[])GetAdSearchResult(
                     email,
                     "mail",
                     callingFromWithinDomain,
@@ -485,7 +485,7 @@ namespace JBToolkit.Domain
         /// <param name="adServerHostName">Host name of AD controller</param>
         /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
         /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
-        public static byte[] GetADPhotoFromUsername(
+        public static byte[] GetAdPhotoFromUsername(
             string username,
             bool callingFromWithinDomain,
             string adServerIpAddress,
@@ -495,7 +495,7 @@ namespace JBToolkit.Domain
         {
             try
             {
-                byte[] bb = (byte[])GetADSearchResult(
+                byte[] bb = (byte[])GetAdSearchResult(
                     username,
                     "samaccountname",
                     callingFromWithinDomain,
@@ -528,7 +528,7 @@ namespace JBToolkit.Domain
         {
             try
             {
-                SearchResultCollection au = GetADSearchResults(
+                SearchResultCollection au = GetAdSearchResults(
                                                 null,
                                                 null,
                                                 callingFromWithinDomain,
@@ -551,7 +551,7 @@ namespace JBToolkit.Domain
         /// <param name="adServerHostName">Host name of AD controller</param>
         /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
         /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
-        public static SearchResult GetADSearchResult(
+        public static SearchResult GetAdSearchResult(
             string searchString,
             string searchFilter,
             bool callingFromWithinDomain,
@@ -586,7 +586,7 @@ namespace JBToolkit.Domain
         /// <param name="adServerHostName">Host name of AD controller</param>
         /// <param name="adAdminUsername">A user username who's able to read the AD DB</param>
         /// <param name="adAdminPassword">A user password who's able to read the AD DB</param>
-        public static SearchResultCollection GetADSearchResults(
+        public static SearchResultCollection GetAdSearchResults(
             string searchString,
             string searchFilter,
             bool callingFromWithinDomain,
@@ -658,7 +658,7 @@ namespace JBToolkit.Domain
     /// Object to store user details, such as username, full name, email, job title etc and what roles and permissions they have. Also can get user profile image
     /// </summary>
     [Serializable]
-    public class ADUser
+    public class AdUser
     {
         public string DisplayName { get; set; }
         public string Username { get; set; }
@@ -672,7 +672,7 @@ namespace JBToolkit.Domain
         public string Fax { get; set; }
         public string IPPhone { get; set; }
         public string Email { get; set; }
-        public ADUser Manager { get; set; }
+        public AdUser Manager { get; set; }
         public List<string> Memberships { get; set; }
     }
 }

@@ -20,21 +20,21 @@ namespace JBToolkit.PdfDoc
         {
             using (FileStream fs = new FileStream(pdfOutputPath, FileMode.OpenOrCreate))
             {
-                ConvertToPDF(docInputPath).CopyTo(fs);
+                ConvertToPdf(docInputPath).CopyTo(fs);
                 fs.Flush();
             }
         }
 
         /// <summary>
-        /// Save document file or image to PDF
+        /// Convert and save pretty much any office file (.docx, .xlsx, .pptx, .vsdx, .pub, .msg etc), image or text file to PDF
         /// </summary>
-        /// <param name="docInputPath">Input document path</param>
+        /// <param name="docInputPath">Input document or image path path</param>
         /// <param name="pdfOutputPath">Output .pdf path</param>
-        public static void ConvertToPDF(string docInputPath, string pdfOutputPath)
+        public static void ConvertToPdf(string docInputPath, string pdfOutputPath)
         {
             using (FileStream fs = new FileStream(pdfOutputPath, FileMode.OpenOrCreate))
             {
-                ConvertToPDF(docInputPath).CopyTo(fs);
+                ConvertToPdf(docInputPath).CopyTo(fs);
                 fs.Flush();
             }
         }
@@ -45,12 +45,12 @@ namespace JBToolkit.PdfDoc
         /// <param name="docInputPut">File path</param>
         /// <param name="fileExtension">The PDF converter can't use a memory stream, as a workaround we save a temporary file, so we need a file extension to determine the file type</param>
         /// <returns>Memory stream</returns>
-        public static MemoryStream ConvertToPDF(MemoryStream ms, string fileExtension)
+        public static MemoryStream ConvertToPdf(MemoryStream ms, string fileExtension)
         {
             string tempFile = Windows.DirectoryHelper.GetTempFile() + "." + fileExtension.Replace(".", "");
             File.WriteAllBytes(tempFile, ms.ToArray());
 
-            using (MemoryStream nms = ConvertToPDF(tempFile))
+            using (MemoryStream nms = ConvertToPdf(tempFile))
             {
                 File.Delete(tempFile);
                 return nms;
@@ -62,7 +62,7 @@ namespace JBToolkit.PdfDoc
         /// </summary>
         /// <param name="docInputPut">File path</param>
         /// <returns>Memory stream</returns>
-        public static MemoryStream ConvertToPDF(string docInputPut)
+        public static MemoryStream ConvertToPdf(string docInputPut)
         {
             // Not the foggiest idea why, but somehow the below fixes any memory stream issues
 
