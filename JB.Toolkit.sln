@@ -27,8 +27,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{4C8FF082
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JB.Toolkit", "JB.Toolkit\JB.Toolkit.csproj", "{43AA263C-1DB9-490D-99EA-5AF526DF56AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "JB.Toolkit.Testing\Testing.csproj", "{8984EAC4-5850-4456-8026-E0677A95480A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,23 +40,17 @@ Global
 		{43AA263C-1DB9-490D-99EA-5AF526DF56AF}.Development|Any CPU.Build.0 = Development|Any CPU
 		{43AA263C-1DB9-490D-99EA-5AF526DF56AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43AA263C-1DB9-490D-99EA-5AF526DF56AF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8984EAC4-5850-4456-8026-E0677A95480A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8984EAC4-5850-4456-8026-E0677A95480A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8984EAC4-5850-4456-8026-E0677A95480A}.Development|Any CPU.ActiveCfg = Debug|Any CPU
-		{8984EAC4-5850-4456-8026-E0677A95480A}.Development|Any CPU.Build.0 = Debug|Any CPU
-		{8984EAC4-5850-4456-8026-E0677A95480A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8984EAC4-5850-4456-8026-E0677A95480A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		BuildVersion_BuildAction = Build
-		SolutionGuid = {AC6CF4C7-99A0-4D92-85C8-02A532886FF3}
-		BuildVersion_UpdateAssemblyVersion = False
-		BuildVersion_UpdateFileVersion = False
-		BuildVersion_StartDate = 2000/1/1
-		BuildVersion_BuildVersioningStyle = None.None.Increment.TimeStamp
 		BuildVersion_UseGlobalSettings = True
+		BuildVersion_BuildVersioningStyle = None.None.Increment.TimeStamp
+		BuildVersion_StartDate = 2000/1/1
+		BuildVersion_UpdateFileVersion = False
+		BuildVersion_UpdateAssemblyVersion = False
+		SolutionGuid = {AC6CF4C7-99A0-4D92-85C8-02A532886FF3}
+		BuildVersion_BuildAction = Build
 	EndGlobalSection
 EndGlobal
