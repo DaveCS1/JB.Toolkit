@@ -50,6 +50,11 @@ Install-Package JB.Toolkit
     * Send email
     * Easy send error report
     * Easy send results table (i.e. from List or DataTable) to email with a nicely formatted HTML table
+* **SharePoint API CSOM Implementation**
+    * Authenticate with app add-in client & secret key or user credentials
+    * Upload and download files from a document library
+    * Copy and move files and folders in a document library
+    * Retrive file and folder lists from document library
 * **Encryption**
 	* Typical string encryption
 	* Simple Connection string encryption
