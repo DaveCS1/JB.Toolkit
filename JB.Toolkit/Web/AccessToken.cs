@@ -99,40 +99,54 @@ namespace JBToolkit.Web
                 }
                 if (string.IsNullOrWhiteSpace(apiKey))
                 {
-                    response = request.CreateResponse(HttpStatusCode.BadRequest);
-                    response.Content = new StringContent("No API key in present header");
+                    response = new HttpResponseMessage(HttpStatusCode.BadRequest)
+                    {
+                        Content = new StringContent("No API key in present header")
+                    };
                 }
                 else if (string.IsNullOrWhiteSpace(endUserIP))
                 {
-                    response = request.CreateResponse(HttpStatusCode.BadRequest);
-                    response.Content = new StringContent("No IP address present");
+                    response = new HttpResponseMessage(HttpStatusCode.BadRequest)
+                    {
+                        Content = new StringContent("No IP address present")
+                    };
                 }
                 else if (!Regex.IsMatch(endUserIP, RegularExpressions.Common.Pattern_IPv4Address))
                 {
-                    response = request.CreateResponse(HttpStatusCode.BadRequest);
-                    response.Content = new StringContent("Invalid IP address format");
+                    response = new HttpResponseMessage(HttpStatusCode.BadRequest)
+                    {
+                        Content = new StringContent("Invalid IP address format")
+                    };
                 }
                 else if (apiKey != applicationApiKeyToCheckAgainst)
                 {
-                    response = request.CreateResponse(HttpStatusCode.Unauthorized);
-                    response.Content = new StringContent("Unauthorised");
+                    response = new HttpResponseMessage(HttpStatusCode.Unauthorized)
+                    {
+                        Content = new StringContent("Unauthorised")
+                    };
                 }
                 else if (whiteListIps != null && !whiteListIps.Contains(serviceCallperIP))
                 {
-                    response = request.CreateResponse(HttpStatusCode.Unauthorized);
-                    response.Content = new StringContent("Unauthorised");
+                    response = new HttpResponseMessage(HttpStatusCode.Unauthorized)
+                    {
+                        Content = new StringContent("Unauthorised")
+                    };
                 }
                 else
                 {
                     string token = GenerateAccessToken(endUserIP, dbNameWhereTheTokenIsStored, dbConnectionString, applicationName, expiryInSeconds);
-                    response = request.CreateResponse(HttpStatusCode.OK);
-                    response.Content = new StringContent(token);
+                    response = new HttpResponseMessage(HttpStatusCode.OK)
+                    {
+                        Content = new StringContent(token)
+                    };
                 }
             }
             catch (Exception e)
             {
-                response = request.CreateResponse(HttpStatusCode.InternalServerError);
-                response.Content = new StringContent(e.Message);
+                response = new HttpResponseMessage(HttpStatusCode.InternalServerError)
+                {
+                    Content = new StringContent(e.Message)
+                };
             }
 
             return response;

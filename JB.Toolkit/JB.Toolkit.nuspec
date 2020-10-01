@@ -30,8 +30,6 @@
       <frameworkAssembly assemblyName="System.DirectoryServices"  />
       <frameworkAssembly assemblyName="System.Drawing"  />
       <frameworkAssembly assemblyName="System.Management"  />
-      <frameworkAssembly assemblyName="System.Net.Http"  />
-      <frameworkAssembly assemblyName="System.Net.Http.Formatting"  />
       <frameworkAssembly assemblyName="System.Runtime.Serialization"  />
       <frameworkAssembly assemblyName="System.Security"  />
       <frameworkAssembly assemblyName="System.ServiceProcess"  />
@@ -47,6 +45,7 @@
         <reference file="JB.Toolkit.dll" />
         <reference file="Microsoft.Office.Interop.Word.dll" />
         <reference file="LaMarvin.Windows.Forms.ColorPicker.dll" />
+        <reference file="System.Net.Http.dll" />
       </group>
     </references>
   </metadata>
@@ -60,5 +59,6 @@
     <file src="lib\LaMarvin.Windows.Forms.ColorPicker.dll" target="lib\net452"/>
     <file src="lib\grpc_csharp_ext.x64.dll" target="lib\net452"/>
     <file src="lib\grpc_csharp_ext.x86.dll" target="lib\net452"/>
+    <file src="lib\System.Net.Http" target="lib\net452"/>
   </files>
 </package>
