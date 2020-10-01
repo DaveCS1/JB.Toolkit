@@ -59,6 +59,6 @@
     <file src="lib\LaMarvin.Windows.Forms.ColorPicker.dll" target="lib\net452"/>
     <file src="lib\grpc_csharp_ext.x64.dll" target="lib\net452"/>
     <file src="lib\grpc_csharp_ext.x86.dll" target="lib\net452"/>
-    <file src="lib\System.Net.Http" target="lib\net452"/>
+    <file src="lib\System.Net.Http.dll" target="lib\net452"/>
   </files>
 </package>
