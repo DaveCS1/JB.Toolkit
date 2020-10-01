@@ -1,4 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$db/dce/class_http_posted_file_base.html" title=" " alt="" coords="5,5,144,32"/>
-<area shape="rect" id="node2" href="$d1/db2/class_j_b_toolkit_1_1_web_1_1_memory_file.html" title="Inherits from &#39;HttpPostedFileBase&#39; &#45; Used to create email attachments, and takes a Stream or MemorySt..." alt="" coords="192,5,371,32"/>
+<area shape="rect" id="node1" href="$d7/d49/class_control.html" title=" " alt="" coords="26,5,89,32"/>
+<area shape="rect" id="node2" href="$de/d05/class_j_b_toolkit_1_1_win_forms_1_1_round_button.html" title="Nicer looking &#39;round&#39; edge button" alt="" coords="157,23,337,65"/>
+<area shape="rect" id="node3" href="$d0/d4a/class_i_button_control.html" title=" " alt="" coords="5,56,109,83"/>
 </map>

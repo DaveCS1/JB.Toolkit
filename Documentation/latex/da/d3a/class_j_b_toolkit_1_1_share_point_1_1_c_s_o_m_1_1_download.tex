@@ -1,0 +1,107 @@
+\hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_download}{}\doxysection{J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Download Class Reference}
+\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_download}\index{JBToolkit.SharePoint.CSOM.Download@{JBToolkit.SharePoint.CSOM.Download}}
+
+
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} file and folder download utilities using S\+C\+OM  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Download\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{da/dba/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_download__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_download_ac320ebeab3fce3a65b5beed27c50afa8}{Download\+File}} (Client\+Context client\+Context, string document\+Library\+Path, string file\+Name, string download\+Folder\+Path, bool overwrite=true, string rename\+Filename=null)
+\begin{DoxyCompactList}\small\item\em Downloads a single file from \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_download_a7fb6a4991342a6cb27afb5b1bf201d9e}{Download\+Files}} (Client\+Context client\+Context, string document\+Library\+Path, string download\+Folder\+Path)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_download}{Download}} all files in a folder from \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} (doesn\textquotesingle{}t include subdirectories) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} file and folder download utilities using S\+C\+OM 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_download_ac320ebeab3fce3a65b5beed27c50afa8}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_download_ac320ebeab3fce3a65b5beed27c50afa8}} 
+\index{JBToolkit.SharePoint.CSOM.Download@{JBToolkit.SharePoint.CSOM.Download}!DownloadFile@{DownloadFile}}
+\index{DownloadFile@{DownloadFile}!JBToolkit.SharePoint.CSOM.Download@{JBToolkit.SharePoint.CSOM.Download}}
+\doxysubsubsection{\texorpdfstring{DownloadFile()}{DownloadFile()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Download.\+Download\+File (\begin{DoxyParamCaption}\item[{Client\+Context}]{client\+Context,  }\item[{string}]{document\+Library\+Path,  }\item[{string}]{file\+Name,  }\item[{string}]{download\+Folder\+Path,  }\item[{bool}]{overwrite = {\ttfamily true},  }\item[{string}]{rename\+Filename = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Downloads a single file from \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} 
+
+Note\+: Use\+:-\/ J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+App\+Only\+Context or J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+User\+Context
+
+to retrive the Client Context for the site.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Context} & \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} client context\\
+\hline
+{\em document\+Library\+Path} & Document collection path (i.\+e. Share Documents/\+Subfolder)\\
+\hline
+{\em file\+Name} & Name of folder to download (i.\+e. filename.\+txt)\\
+\hline
+{\em download\+Folder\+Path} & Path to folder to download to\\
+\hline
+{\em overwrite} & Won\textquotesingle{}t overwrite the local file if set to false (default\+: true)\\
+\hline
+{\em rename\+Filename} & Save the file with a different, specified filename\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} result object
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3a/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_download_ac320ebeab3fce3a65b5beed27c50afa8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_download_a7fb6a4991342a6cb27afb5b1bf201d9e}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_download_a7fb6a4991342a6cb27afb5b1bf201d9e}} 
+\index{JBToolkit.SharePoint.CSOM.Download@{JBToolkit.SharePoint.CSOM.Download}!DownloadFiles@{DownloadFiles}}
+\index{DownloadFiles@{DownloadFiles}!JBToolkit.SharePoint.CSOM.Download@{JBToolkit.SharePoint.CSOM.Download}}
+\doxysubsubsection{\texorpdfstring{DownloadFiles()}{DownloadFiles()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Download.\+Download\+Files (\begin{DoxyParamCaption}\item[{Client\+Context}]{client\+Context,  }\item[{string}]{document\+Library\+Path,  }\item[{string}]{download\+Folder\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_download}{Download}} all files in a folder from \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} (doesn\textquotesingle{}t include subdirectories) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Context} & \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} client context\\
+\hline
+{\em document\+Library\+Path} & Document collection path (i.\+e. Share Documents/\+Subfolder)\\
+\hline
+{\em download\+Folder\+Path} & Path of folder to download to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} result object
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3a/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_download_a7fb6a4991342a6cb27afb5b1bf201d9e_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Share\+Point/\+C\+S\+O\+M/\mbox{\hyperlink{_download_8cs}{Download.\+cs}}\end{DoxyCompactItemize}

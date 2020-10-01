@@ -1,0 +1,96 @@
+.TH "JBToolkit.SharePoint.CSOM.Authentication" 3 "Thu Oct 1 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.SharePoint.CSOM.Authentication \- Authenticate with \fBSharePoint\fP using SCOM API  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static ClientContext \fBGetAppOnlyContext\fP (string siteUrl, string clientId, string clientSecret)"
+.br
+.RI "Retrieve the \fBSharePoint\fP client app only context via app client id and secret key in order to make requests using SCOM "
+.ti -1c
+.RI "static ClientContext \fBGetUserContext\fP (string siteUrl, string username, string password)"
+.br
+.RI "Retrieve the \fBSharePoint\fP client context user context via username and password in order to make requests using SCOM "
+.ti -1c
+.RI "static ClientContext \fBGetUserContext\fP (string siteUrl, string username, SecureString password)"
+.br
+.RI "Retrieve the \fBSharePoint\fP client context user context via username and password in order to make requests using SCOM "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Authenticate with \fBSharePoint\fP using SCOM API 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static ClientContext JBToolkit\&.SharePoint\&.CSOM\&.Authentication\&.GetAppOnlyContext (string siteUrl, string clientId, string clientSecret)\fC [static]\fP"
+
+.PP
+Retrieve the \fBSharePoint\fP client app only context via app client id and secret key in order to make requests using SCOM 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsiteUrl\fP \fBSharePoint\fP site URL
+.br
+\fIclientId\fP App client ID
+.br
+\fIclientSecret\fP App secret key
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePoint\fP client app only context
+.RE
+.PP
+
+.SS "static ClientContext JBToolkit\&.SharePoint\&.CSOM\&.Authentication\&.GetUserContext (string siteUrl, string username, SecureString password)\fC [static]\fP"
+
+.PP
+Retrieve the \fBSharePoint\fP client context user context via username and password in order to make requests using SCOM 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsiteUrl\fP \fBSharePoint\fP site URL
+.br
+\fIusername\fP Credentials username (email)
+.br
+\fIpassword\fP Credentials password
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePoint\fP client user context
+.RE
+.PP
+
+.SS "static ClientContext JBToolkit\&.SharePoint\&.CSOM\&.Authentication\&.GetUserContext (string siteUrl, string username, string password)\fC [static]\fP"
+
+.PP
+Retrieve the \fBSharePoint\fP client context user context via username and password in order to make requests using SCOM 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsiteUrl\fP \fBSharePoint\fP site URL
+.br
+\fIusername\fP Credentials username (email)
+.br
+\fIpassword\fP Credentials password
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePoint\fP client user context
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

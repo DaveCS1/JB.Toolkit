@@ -1,0 +1,5 @@
+<map id="JBToolkit.SharePoint.CSOM.Manage.GetFileAndFolderCollectionFromFolder" name="JBToolkit.SharePoint.CSOM.Manage.GetFileAndFolderCollectionFromFolder">
+<area shape="rect" id="node1" title="Get an object containing a list of folders and a list of files contained in a SharePoint folder (non&#45;..." alt="" coords="5,20,236,76"/>
+<area shape="rect" id="node2" href="$da/d8b/_l_i_c_e_n_s_e_8txt.html#a230902626bc74ad7e058274476c0ff96" title=" " alt="" coords="357,5,402,32"/>
+<area shape="rect" id="node3" href="$d0/de3/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils.html#a2dee4e47cd38f62d7ed0a411d24d2c0d" title="Often needed for &#39;Manage&#39; methods &#45; Gets the client context server relative url (i...." alt="" coords="284,57,475,98"/>
+</map>

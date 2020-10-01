@@ -1,7 +1,7 @@
 ﻿using Colorful;
 using JBToolkit.AssemblyHelper;
-using JBToolkit.Images;
 using JBToolkit.ConsoleHelper;
+using JBToolkit.Images;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;

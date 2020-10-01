@@ -13,6 +13,8 @@ var hierarchy =
       [ "System.Drawing.Html.CssPropertyAttribute", "d9/d06/class_system_1_1_drawing_1_1_html_1_1_css_property_attribute.html", null ],
       [ "System.Drawing.Html.CssPropertyInheritedAttribute", "d4/ddb/class_system_1_1_drawing_1_1_html_1_1_css_property_inherited_attribute.html", null ]
     ] ],
+    [ "JBToolkit.SharePoint.CSOM.Authentication", "d9/df7/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_authentication.html", null ],
+    [ "JBToolkit.SharePoint.REST.Authentication", "d0/df5/class_j_b_toolkit_1_1_share_point_1_1_r_e_s_t_1_1_authentication.html", null ],
     [ "JBToolkit.FuzzyLogic.Algorithms.BestFuzzyMatch", "d6/d3b/class_j_b_toolkit_1_1_fuzzy_logic_1_1_algorithms_1_1_best_fuzzy_match.html", [
       [ "JBToolkit.FuzzyLogic.Algorithms.BestDetailedFuzzyMatch", "d6/d87/class_j_b_toolkit_1_1_fuzzy_logic_1_1_algorithms_1_1_best_detailed_fuzzy_match.html", null ],
       [ "JBToolkit.FuzzyLogic.Algorithms.QuickFuzzyMatch", "dd/d8c/class_j_b_toolkit_1_1_fuzzy_logic_1_1_algorithms_1_1_quick_fuzzy_match.html", null ]
@@ -78,9 +80,6 @@ var hierarchy =
     [ "JBToolkit.Views.DataTableSearch", "d8/db1/class_j_b_toolkit_1_1_views_1_1_data_table_search.html", null ],
     [ "JBToolkit.Database.DataTableState", "d6/df8/class_j_b_toolkit_1_1_database_1_1_data_table_state.html", null ],
     [ "JBToolkit.Database.DataTableStates", "d1/d76/class_j_b_toolkit_1_1_database_1_1_data_table_states.html", null ],
-    [ "DBConnection", "da/dca/class_d_b_connection.html", [
-      [ "JBToolkit.Database.DBGeneric", "d1/d27/class_j_b_toolkit_1_1_database_1_1_d_b_generic.html", null ]
-    ] ],
     [ "JBToolkit.Database.DbConnection", "d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection.html", [
       [ "JBToolkit.Database.DbGeneric", "dd/dbe/class_j_b_toolkit_1_1_database_1_1_db_generic.html", null ]
     ] ],
@@ -90,6 +89,7 @@ var hierarchy =
       [ "JBToolkit.Database.DbResult.SuccessDBCommandResult", "d9/dee/class_j_b_toolkit_1_1_database_1_1_db_result_1_1_success_d_b_command_result.html", null ]
     ] ],
     [ "JBToolkit.Domain.DomainHelper", "d1/dbf/class_j_b_toolkit_1_1_domain_1_1_domain_helper.html", null ],
+    [ "JBToolkit.SharePoint.CSOM.Download", "da/d3a/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_download.html", null ],
     [ "DynamicObject", "d4/ddd/class_dynamic_object.html", null ],
     [ "JBToolkit.Web.Email", "df/d5f/class_j_b_toolkit_1_1_web_1_1_email.html", null ],
     [ "JBToolkit.Web.EmailResult", "d3/db5/class_j_b_toolkit_1_1_web_1_1_email_result.html", [
@@ -110,6 +110,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "JBToolkit.Windows.FileData", "d8/d9d/class_j_b_toolkit_1_1_windows_1_1_file_data.html", null ],
+    [ "JBToolkit.SharePoint.CSOM.Objects.FileFolderCollection", "de/daf/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_objects_1_1_file_folder_collection.html", null ],
     [ "JBToolkit.Logger.FileLogger", "d7/d00/class_j_b_toolkit_1_1_logger_1_1_file_logger.html", null ],
     [ "JBToolkit.Zip.FilePathAndBytes", "d5/de9/class_j_b_toolkit_1_1_zip_1_1_file_path_and_bytes.html", null ],
     [ "Form", "df/d08/class_form.html", [
@@ -211,6 +212,7 @@ var hierarchy =
       [ "JBToolkit.WinForms.ScrollingListBox", "dc/d04/class_j_b_toolkit_1_1_win_forms_1_1_scrolling_list_box.html", null ]
     ] ],
     [ "JBToolkit.GoogeApi.Geocoding.Location", "d8/d4b/class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_location.html", null ],
+    [ "JBToolkit.SharePoint.CSOM.Manage", "d2/dda/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage.html", null ],
     [ "MarshalByRefObject", "d7/d60/class_marshal_by_ref_object.html", [
       [ "JBToolkit.InterProcessComms.NetRemoting.RemoteObject", "d9/d08/class_j_b_toolkit_1_1_inter_process_comms_1_1_net_remoting_1_1_remote_object.html", null ]
     ] ],
@@ -252,6 +254,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "JBToolkit.Windows.ServiceHelper", "dc/d35/class_j_b_toolkit_1_1_windows_1_1_service_helper.html", null ],
+    [ "JBToolkit.SharePoint.SharePointRequestResult", "d8/d22/class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result.html", null ],
     [ "JBToolkit.GoogeApi.Geocoding.Southwest", "d7/d84/class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_southwest.html", null ],
     [ "JBToolkit.Encryption.StringEncrypt", "d0/d71/class_j_b_toolkit_1_1_encryption_1_1_string_encrypt.html", null ],
     [ "JBToolkit.Extensions.SourceCode.SourceCodeFormatter.LenientJsonFormatter.StringWalker", "d3/d0c/class_j_b_toolkit_1_1_extensions_1_1_source_code_1_1_source_code_formatter_1_1_lenient_json_formatter_1_1_string_walker.html", null ],
@@ -268,7 +271,9 @@ var hierarchy =
     [ "TypeDescriptionProvider", "d0/d67/class_type_description_provider.html", [
       [ "JBToolkit.WinForms.AbstractControlDescriptionProvider< TAbstract, TBase >", "db/d7d/class_j_b_toolkit_1_1_win_forms_1_1_abstract_control_description_provider.html", null ]
     ] ],
+    [ "JBToolkit.SharePoint.CSOM.Upload", "d1/dbd/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_upload.html", null ],
     [ "JBToolkit.Web.Url", "d5/d4b/class_j_b_toolkit_1_1_web_1_1_url.html", null ],
+    [ "JBToolkit.SharePoint.CSOM.Utils", "d0/de3/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils.html", null ],
     [ "ValidationAttribute", "d6/d5b/class_validation_attribute.html", [
       [ "System.Web.Mvc.AttachmentAttribute", "d0/de0/class_system_1_1_web_1_1_mvc_1_1_attachment_attribute.html", null ]
     ] ],

@@ -1,9 +1,4 @@
 ﻿using Microsoft.SharePoint.Client;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JBToolkit.SharePoint.CSOM
 {
@@ -24,7 +19,7 @@ namespace JBToolkit.SharePoint.CSOM
         /// <returns>Server relative path string</returns>
         public static string GetServerRelativeUrl(ClientContext clientContext)
         {
-            var web = clientContext.Web;          
+            var web = clientContext.Web;
             List lib = web.Lists.GetByTitle("Documents");
             clientContext.Load(lib, l => l.ParentWeb.ServerRelativeUrl);
             clientContext.ExecuteQuery();

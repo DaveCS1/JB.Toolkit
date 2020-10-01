@@ -18,6 +18,7 @@ var dir_103055a96f1cb7bcae1ba8ade85ed72a =
     [ "PdfDoc", "dir_7f2bf0fc006b6b51621cd906771e0494.html", "dir_7f2bf0fc006b6b51621cd906771e0494" ],
     [ "Properties", "dir_79b0d8e3cdbc3ae5fdca2c4cbb940a6b.html", "dir_79b0d8e3cdbc3ae5fdca2c4cbb940a6b" ],
     [ "RegularExpressions", "dir_85cb138f4e5726dc94b71dd837bfae57.html", "dir_85cb138f4e5726dc94b71dd837bfae57" ],
+    [ "SharePoint", "dir_d2cc1dd68057d1bcbce6f36bccce0a67.html", "dir_d2cc1dd68057d1bcbce6f36bccce0a67" ],
     [ "Streams", "dir_0e6ab23f82372ec289b889cb3f9f8f49.html", "dir_0e6ab23f82372ec289b889cb3f9f8f49" ],
     [ "Web", "dir_784b22233a0be762018553ddb492d656.html", "dir_784b22233a0be762018553ddb492d656" ],
     [ "Windows", "dir_6c40bd9be45b57ed580e423a96b31203.html", "dir_6c40bd9be45b57ed580e423a96b31203" ],

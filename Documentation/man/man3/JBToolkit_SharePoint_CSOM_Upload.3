@@ -1,0 +1,54 @@
+.TH "JBToolkit.SharePoint.CSOM.Upload" 3 "Thu Oct 1 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.SharePoint.CSOM.Upload \- \fBSharePoint\fP file \fBUpload\fP utilities using SCOM  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBSharePointRequestResult\fP \fBUploadFile\fP (ClientContext clientContext, string documentLibraryPath, string subFolderPath, string sourceFilePath, bool overwrite=true)"
+.br
+.RI "\fBUpload\fP a file to a \fBSharePoint\fP document library\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBSharePoint\fP file \fBUpload\fP utilities using SCOM 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBSharePointRequestResult\fP JBToolkit\&.SharePoint\&.CSOM\&.Upload\&.UploadFile (ClientContext clientContext, string documentLibraryPath, string subFolderPath, string sourceFilePath, bool overwrite = \fCtrue\fP)\fC [static]\fP"
+
+.PP
+\fBUpload\fP a file to a \fBSharePoint\fP document library\&. Note: Use:- JBToolkit\&.SharePoint\&.Authentication\&.GetAppOnlyContext or JBToolkit\&.SharePoint\&.Authentication\&.GetUserContext
+.PP
+to retrive the Client Context for the site\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIclientContext\fP \fBSharePoint\fP client context
+.br
+\fIdocumentLibraryPath\fP Document library root (i\&.e\&. 'Shared Documents')
+.br
+\fIsubFolderPath\fP Subfolder path after root (i\&.e\&. /Subfolder/Subfolder2) of where to upload to
+.br
+\fIsourceFilePath\fP Source path of local file to upload
+.br
+\fIoverwrite\fP Whether or not to overwrite if file already exist (defaults to true)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePointRequestResult\fP result object
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

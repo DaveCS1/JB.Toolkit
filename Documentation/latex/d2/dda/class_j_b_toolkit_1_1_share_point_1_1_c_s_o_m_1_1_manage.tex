@@ -1,0 +1,424 @@
+\hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage}{}\doxysection{J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Manage Class Reference}
+\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage}\index{JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}}
+
+
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} file and folder management utilities using \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point_1_1_c_s_o_m}{C\+S\+OM}}  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Manage\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{d5/dbb/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a13050d23f0da57ea71f56c5212b01728}{Copy\+File}} (Client\+Context client\+Context, string file\+Library\+Source\+Path, string file\+Library\+Destination\+Path)
+\begin{DoxyCompactList}\small\item\em Copy a file from one \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} location to another \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_aeb8b1b6c27ddc77a7b12b06eda2d1696}{Copy\+Folder}} (Client\+Context client\+Context, string file\+Library\+Source\+Path, string file\+Library\+Destination\+Path)
+\begin{DoxyCompactList}\small\item\em Copy a folder from one \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} location to another \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a962374286e09be033cce71874cf80e58}{Create\+Folder}} (Client\+Context client\+Context, string document\+Library\+Path, string folder\+Name)
+\begin{DoxyCompactList}\small\item\em Create a new folder in a document library on \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a000ca63fda26565ddcce65ab540f28a2}{Delete\+File}} (Client\+Context client\+Context, string document\+Library\+Path, string file\+Name)
+\begin{DoxyCompactList}\small\item\em Delete a single file from a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} document library \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_abb2ba5d84a6ecc1d73da74c8d9fc174e}{Delete\+Folder}} (Client\+Context client\+Context, string document\+Library\+Path)
+\begin{DoxyCompactList}\small\item\em Delete a folder and all files and folders within recursively from a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} document library \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a034801b1781077270029525874a876aa}{Does\+File\+Exist}} (Client\+Context client\+Context, string document\+Library\+Path, string file\+Name)
+\begin{DoxyCompactList}\small\item\em Get whether or not a given file exist in a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} document library \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_ad599def853ab487c37613565e8115f01}{Does\+Folder\+Exist}} (Client\+Context client\+Context, string document\+Library\+Path)
+\begin{DoxyCompactList}\small\item\em Get whether or not a given folder exist in a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} document library \end{DoxyCompactList}\item 
+static File\+Collection \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_aae672be187419ece5b9776053abe51fe}{Get\+File\+Collection\+From\+Folder}} (Client\+Context client\+Context, string document\+Library\+Path)
+\begin{DoxyCompactList}\small\item\em Get a list of files contained in a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} folder (non-\/recursive) \end{DoxyCompactList}\item 
+static Folder\+Collection \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_abf12b5cbf1dec2b145ca640db763a071}{Get\+Folder\+Collection\+From\+Folder}} (Client\+Context client\+Context, string document\+Library\+Path)
+\begin{DoxyCompactList}\small\item\em Get a list of folders contained in a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} folder (non-\/recursive) \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_objects_1_1_file_folder_collection}{File\+Folder\+Collection}} \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a6a47ab4202b83d737641de9a2f716ef0}{Get\+File\+And\+Folder\+Collection\+From\+Folder}} (Client\+Context client\+Context, string document\+Library\+Path)
+\begin{DoxyCompactList}\small\item\em Get an object containing a list of folders and a list of files contained in a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} folder (non-\/recursive) \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_ac9f24a22ed1717785cb8474265439575}{Move\+File}} (Client\+Context client\+Context, string file\+Library\+Source\+Path, string file\+Library\+Destination\+Path)
+\begin{DoxyCompactList}\small\item\em Move a file from one \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} location to another \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a687d47648713dc955ae8c72350904045}{Move\+Folder}} (Client\+Context client\+Context, string file\+Library\+Source\+Path, string file\+Library\+Destination\+Path)
+\begin{DoxyCompactList}\small\item\em Move a folder from one \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} location to another \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} file and folder management utilities using \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point_1_1_c_s_o_m}{C\+S\+OM}} 
+
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} file and folder management utilities using S\+C\+C\+S\+O\+M\+OM
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a13050d23f0da57ea71f56c5212b01728}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a13050d23f0da57ea71f56c5212b01728}} 
+\index{JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}!CopyFile@{CopyFile}}
+\index{CopyFile@{CopyFile}!JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}}
+\doxysubsubsection{\texorpdfstring{CopyFile()}{CopyFile()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Manage.\+Copy\+File (\begin{DoxyParamCaption}\item[{Client\+Context}]{client\+Context,  }\item[{string}]{file\+Library\+Source\+Path,  }\item[{string}]{file\+Library\+Destination\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Copy a file from one \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} location to another 
+
+Note\+: Use\+:-\/ J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+App\+Only\+Context or J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+User\+Context
+
+to retrive the Client Context for the site.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Context} & \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} client context\\
+\hline
+{\em file\+Library\+Source\+Path} & Source document path (i.\+e. \textquotesingle{}Shared Documents/\+Subfolder1\textquotesingle{})\\
+\hline
+{\em file\+Library\+Destination\+Path} & Destination document path (i.\+e. \textquotesingle{}Shared Documents/\+Subfolder2\textquotesingle{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} result object
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_aeb8b1b6c27ddc77a7b12b06eda2d1696}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_aeb8b1b6c27ddc77a7b12b06eda2d1696}} 
+\index{JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}!CopyFolder@{CopyFolder}}
+\index{CopyFolder@{CopyFolder}!JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}}
+\doxysubsubsection{\texorpdfstring{CopyFolder()}{CopyFolder()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Manage.\+Copy\+Folder (\begin{DoxyParamCaption}\item[{Client\+Context}]{client\+Context,  }\item[{string}]{file\+Library\+Source\+Path,  }\item[{string}]{file\+Library\+Destination\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Copy a folder from one \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} location to another 
+
+Note\+: Use\+:-\/ J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+App\+Only\+Context or J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+User\+Context
+
+to retrive the Client Context for the site.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Context} & \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} client context\\
+\hline
+{\em file\+Library\+Source\+Path} & Source document path (i.\+e. \textquotesingle{}Shared Documents/\+Subfolder1\textquotesingle{})\\
+\hline
+{\em file\+Library\+Destination\+Path} & Destination document path (i.\+e. \textquotesingle{}Shared Documents/\+Subfolder2\textquotesingle{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} result object
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a962374286e09be033cce71874cf80e58}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a962374286e09be033cce71874cf80e58}} 
+\index{JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}!CreateFolder@{CreateFolder}}
+\index{CreateFolder@{CreateFolder}!JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}}
+\doxysubsubsection{\texorpdfstring{CreateFolder()}{CreateFolder()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Manage.\+Create\+Folder (\begin{DoxyParamCaption}\item[{Client\+Context}]{client\+Context,  }\item[{string}]{document\+Library\+Path,  }\item[{string}]{folder\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a new folder in a document library on \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} 
+
+Note\+: Use\+:-\/ J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+App\+Only\+Context or J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+User\+Context
+
+to retrive the Client Context for the site.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Context} & \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} client context\\
+\hline
+{\em document\+Library\+Path} & Document collection path (i.\+e. Share Documents/\+Subfolder)\\
+\hline
+{\em folder\+Name} & Name of folder to create\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} result object
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a000ca63fda26565ddcce65ab540f28a2}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a000ca63fda26565ddcce65ab540f28a2}} 
+\index{JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}!DeleteFile@{DeleteFile}}
+\index{DeleteFile@{DeleteFile}!JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}}
+\doxysubsubsection{\texorpdfstring{DeleteFile()}{DeleteFile()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Manage.\+Delete\+File (\begin{DoxyParamCaption}\item[{Client\+Context}]{client\+Context,  }\item[{string}]{document\+Library\+Path,  }\item[{string}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Delete a single file from a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} document library 
+
+Note\+: Use\+:-\/ J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+App\+Only\+Context or J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+User\+Context
+
+to retrive the Client Context for the site.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Context} & \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} client context\\
+\hline
+{\em document\+Library\+Path} & Document collection path (i.\+e. Share Documents/\+Subfolder)\\
+\hline
+{\em file\+Name} & Filename to delete (i.\+e. filename.\+txt)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} result object
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{d2/dda/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a000ca63fda26565ddcce65ab540f28a2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_abb2ba5d84a6ecc1d73da74c8d9fc174e}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_abb2ba5d84a6ecc1d73da74c8d9fc174e}} 
+\index{JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}!DeleteFolder@{DeleteFolder}}
+\index{DeleteFolder@{DeleteFolder}!JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}}
+\doxysubsubsection{\texorpdfstring{DeleteFolder()}{DeleteFolder()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Manage.\+Delete\+Folder (\begin{DoxyParamCaption}\item[{Client\+Context}]{client\+Context,  }\item[{string}]{document\+Library\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Delete a folder and all files and folders within recursively from a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} document library 
+
+Note\+: Use\+:-\/ J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+App\+Only\+Context or J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+User\+Context
+
+to retrive the Client Context for the site.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\+Context} & \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} client context\\
+\hline
+{\em document\+Library\+Path} & Document collection path (i.\+e. Share Documents/\+Subfolder)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} result object
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{d2/dda/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_abb2ba5d84a6ecc1d73da74c8d9fc174e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a034801b1781077270029525874a876aa}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a034801b1781077270029525874a876aa}} 
+\index{JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}!DoesFileExist@{DoesFileExist}}
+\index{DoesFileExist@{DoesFileExist}!JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}}
+\doxysubsubsection{\texorpdfstring{DoesFileExist()}{DoesFileExist()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Manage.\+Does\+File\+Exist (\begin{DoxyParamCaption}\item[{Client\+Context}]{client\+Context,  }\item[{string}]{document\+Library\+Path,  }\item[{string}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get whether or not a given file exist in a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} document library 
+
+Note\+: Use\+:-\/ J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+App\+Only\+Context or J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+User\+Context
+
+to retrive the Client Context for the site.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Context} & \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} client context\\
+\hline
+{\em document\+Library\+Path} & Document collection path (i.\+e. Share Documents/\+Subfolder)\\
+\hline
+{\em file\+Name} & Name of file (i.\+e. filename.\+txt)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} result object
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dda/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a034801b1781077270029525874a876aa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_ad599def853ab487c37613565e8115f01}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_ad599def853ab487c37613565e8115f01}} 
+\index{JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}!DoesFolderExist@{DoesFolderExist}}
+\index{DoesFolderExist@{DoesFolderExist}!JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}}
+\doxysubsubsection{\texorpdfstring{DoesFolderExist()}{DoesFolderExist()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Manage.\+Does\+Folder\+Exist (\begin{DoxyParamCaption}\item[{Client\+Context}]{client\+Context,  }\item[{string}]{document\+Library\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get whether or not a given folder exist in a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} document library 
+
+Note\+: Use\+:-\/ J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+App\+Only\+Context or J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+User\+Context
+
+to retrive the Client Context for the site.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Context} & \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} client context\\
+\hline
+{\em document\+Library\+Path} & Document collection path (i.\+e. Share Documents/\+Subfolder)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} result object
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dda/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_ad599def853ab487c37613565e8115f01_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a6a47ab4202b83d737641de9a2f716ef0}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a6a47ab4202b83d737641de9a2f716ef0}} 
+\index{JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}!GetFileAndFolderCollectionFromFolder@{GetFileAndFolderCollectionFromFolder}}
+\index{GetFileAndFolderCollectionFromFolder@{GetFileAndFolderCollectionFromFolder}!JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}}
+\doxysubsubsection{\texorpdfstring{GetFileAndFolderCollectionFromFolder()}{GetFileAndFolderCollectionFromFolder()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_objects_1_1_file_folder_collection}{File\+Folder\+Collection}} J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Manage.\+Get\+File\+And\+Folder\+Collection\+From\+Folder (\begin{DoxyParamCaption}\item[{Client\+Context}]{client\+Context,  }\item[{string}]{document\+Library\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get an object containing a list of folders and a list of files contained in a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} folder (non-\/recursive) 
+
+Note\+: Use\+:-\/ J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+App\+Only\+Context or J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+User\+Context
+
+to retrive the Client Context for the site.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Context} & \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} client context\\
+\hline
+{\em document\+Library\+Path} & Document collection path (i.\+e. Share Documents/\+Subfolder)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} File\+Collection object
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dda/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a6a47ab4202b83d737641de9a2f716ef0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_aae672be187419ece5b9776053abe51fe}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_aae672be187419ece5b9776053abe51fe}} 
+\index{JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}!GetFileCollectionFromFolder@{GetFileCollectionFromFolder}}
+\index{GetFileCollectionFromFolder@{GetFileCollectionFromFolder}!JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}}
+\doxysubsubsection{\texorpdfstring{GetFileCollectionFromFolder()}{GetFileCollectionFromFolder()}}
+{\footnotesize\ttfamily static File\+Collection J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Manage.\+Get\+File\+Collection\+From\+Folder (\begin{DoxyParamCaption}\item[{Client\+Context}]{client\+Context,  }\item[{string}]{document\+Library\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get a list of files contained in a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} folder (non-\/recursive) 
+
+Note\+: Use\+:-\/ J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+App\+Only\+Context or J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+User\+Context
+
+to retrive the Client Context for the site.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Context} & \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} client context\\
+\hline
+{\em document\+Library\+Path} & Document collection path (i.\+e. Share Documents/\+Subfolder)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} File\+Collection object
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dda/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_aae672be187419ece5b9776053abe51fe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_abf12b5cbf1dec2b145ca640db763a071}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_abf12b5cbf1dec2b145ca640db763a071}} 
+\index{JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}!GetFolderCollectionFromFolder@{GetFolderCollectionFromFolder}}
+\index{GetFolderCollectionFromFolder@{GetFolderCollectionFromFolder}!JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}}
+\doxysubsubsection{\texorpdfstring{GetFolderCollectionFromFolder()}{GetFolderCollectionFromFolder()}}
+{\footnotesize\ttfamily static Folder\+Collection J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Manage.\+Get\+Folder\+Collection\+From\+Folder (\begin{DoxyParamCaption}\item[{Client\+Context}]{client\+Context,  }\item[{string}]{document\+Library\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get a list of folders contained in a \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} folder (non-\/recursive) 
+
+Note\+: Use\+:-\/ J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+App\+Only\+Context or J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+User\+Context
+
+to retrive the Client Context for the site.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Context} & \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} client context\\
+\hline
+{\em document\+Library\+Path} & Document collection path (i.\+e. Share Documents/\+Subfolder)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} File\+Collection object
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dda/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_abf12b5cbf1dec2b145ca640db763a071_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_ac9f24a22ed1717785cb8474265439575}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_ac9f24a22ed1717785cb8474265439575}} 
+\index{JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}!MoveFile@{MoveFile}}
+\index{MoveFile@{MoveFile}!JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}}
+\doxysubsubsection{\texorpdfstring{MoveFile()}{MoveFile()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Manage.\+Move\+File (\begin{DoxyParamCaption}\item[{Client\+Context}]{client\+Context,  }\item[{string}]{file\+Library\+Source\+Path,  }\item[{string}]{file\+Library\+Destination\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Move a file from one \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} location to another 
+
+Note\+: Use\+:-\/ J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+App\+Only\+Context or J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+User\+Context
+
+to retrive the Client Context for the site.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Context} & \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} client context\\
+\hline
+{\em file\+Library\+Source\+Path} & Source document path (i.\+e. \textquotesingle{}Shared Documents/\+Subfolder1\textquotesingle{})\\
+\hline
+{\em file\+Library\+Destination\+Path} & Destination document path (i.\+e. \textquotesingle{}Shared Documents/\+Subfolder2\textquotesingle{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} result object
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a687d47648713dc955ae8c72350904045}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage_a687d47648713dc955ae8c72350904045}} 
+\index{JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}!MoveFolder@{MoveFolder}}
+\index{MoveFolder@{MoveFolder}!JBToolkit.SharePoint.CSOM.Manage@{JBToolkit.SharePoint.CSOM.Manage}}
+\doxysubsubsection{\texorpdfstring{MoveFolder()}{MoveFolder()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Manage.\+Move\+Folder (\begin{DoxyParamCaption}\item[{Client\+Context}]{client\+Context,  }\item[{string}]{file\+Library\+Source\+Path,  }\item[{string}]{file\+Library\+Destination\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Move a folder from one \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} location to another 
+
+Note\+: Use\+:-\/ J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+App\+Only\+Context or J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+User\+Context
+
+to retrive the Client Context for the site.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Context} & \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} client context\\
+\hline
+{\em file\+Library\+Source\+Path} & Source document path (i.\+e. \textquotesingle{}Shared Documents/\+Subfolder1\textquotesingle{})\\
+\hline
+{\em file\+Library\+Destination\+Path} & Destination document path (i.\+e. \textquotesingle{}Shared Documents/\+Subfolder2\textquotesingle{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_share_point_request_result}{Share\+Point\+Request\+Result}} result object
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Share\+Point/\+C\+S\+O\+M/\+Manage/\mbox{\hyperlink{_copy_file_8cs}{Copy\+File.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Share\+Point/\+C\+S\+O\+M/\+Manage/\mbox{\hyperlink{_copy_folder_8cs}{Copy\+Folder.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Share\+Point/\+C\+S\+O\+M/\+Manage/\mbox{\hyperlink{_create_folder_8cs}{Create\+Folder.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Share\+Point/\+C\+S\+O\+M/\+Manage/\mbox{\hyperlink{_delete_file_8cs}{Delete\+File.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Share\+Point/\+C\+S\+O\+M/\+Manage/\mbox{\hyperlink{_delete_folder_8cs}{Delete\+Folder.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Share\+Point/\+C\+S\+O\+M/\+Manage/\mbox{\hyperlink{_does_file_exist_8cs}{Does\+File\+Exist.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Share\+Point/\+C\+S\+O\+M/\+Manage/\mbox{\hyperlink{_does_folder_exist_8cs}{Does\+Folder\+Exist.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Share\+Point/\+C\+S\+O\+M/\+Manage/\mbox{\hyperlink{_file_info_8cs}{File\+Info.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Share\+Point/\+C\+S\+O\+M/\+Manage/\mbox{\hyperlink{_move_file_8cs}{Move\+File.\+cs}}\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Share\+Point/\+C\+S\+O\+M/\+Manage/\mbox{\hyperlink{_move_folder_8cs}{Move\+Folder.\+cs}}\end{DoxyCompactItemize}

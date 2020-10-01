@@ -1,0 +1,326 @@
+.TH "JBToolkit.SharePoint.CSOM.Manage" 3 "Thu Oct 1 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.SharePoint.CSOM.Manage \- \fBSharePoint\fP file and folder management utilities using \fBCSOM\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBSharePointRequestResult\fP \fBCopyFile\fP (ClientContext clientContext, string fileLibrarySourcePath, string fileLibraryDestinationPath)"
+.br
+.RI "Copy a file from one \fBSharePoint\fP location to another "
+.ti -1c
+.RI "static \fBSharePointRequestResult\fP \fBCopyFolder\fP (ClientContext clientContext, string fileLibrarySourcePath, string fileLibraryDestinationPath)"
+.br
+.RI "Copy a folder from one \fBSharePoint\fP location to another "
+.ti -1c
+.RI "static \fBSharePointRequestResult\fP \fBCreateFolder\fP (ClientContext clientContext, string documentLibraryPath, string folderName)"
+.br
+.RI "Create a new folder in a document library on \fBSharePoint\fP "
+.ti -1c
+.RI "static \fBSharePointRequestResult\fP \fBDeleteFile\fP (ClientContext clientContext, string documentLibraryPath, string fileName)"
+.br
+.RI "Delete a single file from a \fBSharePoint\fP document library "
+.ti -1c
+.RI "static \fBSharePointRequestResult\fP \fBDeleteFolder\fP (ClientContext clientContext, string documentLibraryPath)"
+.br
+.RI "Delete a folder and all files and folders within recursively from a \fBSharePoint\fP document library "
+.ti -1c
+.RI "static \fBSharePointRequestResult\fP \fBDoesFileExist\fP (ClientContext clientContext, string documentLibraryPath, string fileName)"
+.br
+.RI "Get whether or not a given file exist in a \fBSharePoint\fP document library "
+.ti -1c
+.RI "static \fBSharePointRequestResult\fP \fBDoesFolderExist\fP (ClientContext clientContext, string documentLibraryPath)"
+.br
+.RI "Get whether or not a given folder exist in a \fBSharePoint\fP document library "
+.ti -1c
+.RI "static FileCollection \fBGetFileCollectionFromFolder\fP (ClientContext clientContext, string documentLibraryPath)"
+.br
+.RI "Get a list of files contained in a \fBSharePoint\fP folder (non-recursive) "
+.ti -1c
+.RI "static FolderCollection \fBGetFolderCollectionFromFolder\fP (ClientContext clientContext, string documentLibraryPath)"
+.br
+.RI "Get a list of folders contained in a \fBSharePoint\fP folder (non-recursive) "
+.ti -1c
+.RI "static \fBFileFolderCollection\fP \fBGetFileAndFolderCollectionFromFolder\fP (ClientContext clientContext, string documentLibraryPath)"
+.br
+.RI "Get an object containing a list of folders and a list of files contained in a \fBSharePoint\fP folder (non-recursive) "
+.ti -1c
+.RI "static \fBSharePointRequestResult\fP \fBMoveFile\fP (ClientContext clientContext, string fileLibrarySourcePath, string fileLibraryDestinationPath)"
+.br
+.RI "Move a file from one \fBSharePoint\fP location to another "
+.ti -1c
+.RI "static \fBSharePointRequestResult\fP \fBMoveFolder\fP (ClientContext clientContext, string fileLibrarySourcePath, string fileLibraryDestinationPath)"
+.br
+.RI "Move a folder from one \fBSharePoint\fP location to another "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBSharePoint\fP file and folder management utilities using \fBCSOM\fP 
+
+\fBSharePoint\fP file and folder management utilities using SCCSOMOM
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBSharePointRequestResult\fP JBToolkit\&.SharePoint\&.CSOM\&.Manage\&.CopyFile (ClientContext clientContext, string fileLibrarySourcePath, string fileLibraryDestinationPath)\fC [static]\fP"
+
+.PP
+Copy a file from one \fBSharePoint\fP location to another Note: Use:- JBToolkit\&.SharePoint\&.Authentication\&.GetAppOnlyContext or JBToolkit\&.SharePoint\&.Authentication\&.GetUserContext
+.PP
+to retrive the Client Context for the site\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIclientContext\fP \fBSharePoint\fP client context
+.br
+\fIfileLibrarySourcePath\fP Source document path (i\&.e\&. 'Shared Documents/Subfolder1')
+.br
+\fIfileLibraryDestinationPath\fP Destination document path (i\&.e\&. 'Shared Documents/Subfolder2'
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePointRequestResult\fP result object
+.RE
+.PP
+
+.SS "static \fBSharePointRequestResult\fP JBToolkit\&.SharePoint\&.CSOM\&.Manage\&.CopyFolder (ClientContext clientContext, string fileLibrarySourcePath, string fileLibraryDestinationPath)\fC [static]\fP"
+
+.PP
+Copy a folder from one \fBSharePoint\fP location to another Note: Use:- JBToolkit\&.SharePoint\&.Authentication\&.GetAppOnlyContext or JBToolkit\&.SharePoint\&.Authentication\&.GetUserContext
+.PP
+to retrive the Client Context for the site\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIclientContext\fP \fBSharePoint\fP client context
+.br
+\fIfileLibrarySourcePath\fP Source document path (i\&.e\&. 'Shared Documents/Subfolder1')
+.br
+\fIfileLibraryDestinationPath\fP Destination document path (i\&.e\&. 'Shared Documents/Subfolder2'
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePointRequestResult\fP result object
+.RE
+.PP
+
+.SS "static \fBSharePointRequestResult\fP JBToolkit\&.SharePoint\&.CSOM\&.Manage\&.CreateFolder (ClientContext clientContext, string documentLibraryPath, string folderName)\fC [static]\fP"
+
+.PP
+Create a new folder in a document library on \fBSharePoint\fP Note: Use:- JBToolkit\&.SharePoint\&.Authentication\&.GetAppOnlyContext or JBToolkit\&.SharePoint\&.Authentication\&.GetUserContext
+.PP
+to retrive the Client Context for the site\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIclientContext\fP \fBSharePoint\fP client context
+.br
+\fIdocumentLibraryPath\fP Document collection path (i\&.e\&. Share Documents/Subfolder)
+.br
+\fIfolderName\fP Name of folder to create
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePointRequestResult\fP result object
+.RE
+.PP
+
+.SS "static \fBSharePointRequestResult\fP JBToolkit\&.SharePoint\&.CSOM\&.Manage\&.DeleteFile (ClientContext clientContext, string documentLibraryPath, string fileName)\fC [static]\fP"
+
+.PP
+Delete a single file from a \fBSharePoint\fP document library Note: Use:- JBToolkit\&.SharePoint\&.Authentication\&.GetAppOnlyContext or JBToolkit\&.SharePoint\&.Authentication\&.GetUserContext
+.PP
+to retrive the Client Context for the site\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIclientContext\fP \fBSharePoint\fP client context
+.br
+\fIdocumentLibraryPath\fP Document collection path (i\&.e\&. Share Documents/Subfolder)
+.br
+\fIfileName\fP Filename to delete (i\&.e\&. filename\&.txt)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePointRequestResult\fP result object
+.RE
+.PP
+
+.SS "static \fBSharePointRequestResult\fP JBToolkit\&.SharePoint\&.CSOM\&.Manage\&.DeleteFolder (ClientContext clientContext, string documentLibraryPath)\fC [static]\fP"
+
+.PP
+Delete a folder and all files and folders within recursively from a \fBSharePoint\fP document library Note: Use:- JBToolkit\&.SharePoint\&.Authentication\&.GetAppOnlyContext or JBToolkit\&.SharePoint\&.Authentication\&.GetUserContext
+.PP
+to retrive the Client Context for the site\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIcContext\fP \fBSharePoint\fP client context
+.br
+\fIdocumentLibraryPath\fP Document collection path (i\&.e\&. Share Documents/Subfolder)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePointRequestResult\fP result object
+.RE
+.PP
+
+.SS "static \fBSharePointRequestResult\fP JBToolkit\&.SharePoint\&.CSOM\&.Manage\&.DoesFileExist (ClientContext clientContext, string documentLibraryPath, string fileName)\fC [static]\fP"
+
+.PP
+Get whether or not a given file exist in a \fBSharePoint\fP document library Note: Use:- JBToolkit\&.SharePoint\&.Authentication\&.GetAppOnlyContext or JBToolkit\&.SharePoint\&.Authentication\&.GetUserContext
+.PP
+to retrive the Client Context for the site\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIclientContext\fP \fBSharePoint\fP client context
+.br
+\fIdocumentLibraryPath\fP Document collection path (i\&.e\&. Share Documents/Subfolder)
+.br
+\fIfileName\fP Name of file (i\&.e\&. filename\&.txt)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePointRequestResult\fP result object
+.RE
+.PP
+
+.SS "static \fBSharePointRequestResult\fP JBToolkit\&.SharePoint\&.CSOM\&.Manage\&.DoesFolderExist (ClientContext clientContext, string documentLibraryPath)\fC [static]\fP"
+
+.PP
+Get whether or not a given folder exist in a \fBSharePoint\fP document library Note: Use:- JBToolkit\&.SharePoint\&.Authentication\&.GetAppOnlyContext or JBToolkit\&.SharePoint\&.Authentication\&.GetUserContext
+.PP
+to retrive the Client Context for the site\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIclientContext\fP \fBSharePoint\fP client context
+.br
+\fIdocumentLibraryPath\fP Document collection path (i\&.e\&. Share Documents/Subfolder)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePointRequestResult\fP result object
+.RE
+.PP
+
+.SS "static \fBFileFolderCollection\fP JBToolkit\&.SharePoint\&.CSOM\&.Manage\&.GetFileAndFolderCollectionFromFolder (ClientContext clientContext, string documentLibraryPath)\fC [static]\fP"
+
+.PP
+Get an object containing a list of folders and a list of files contained in a \fBSharePoint\fP folder (non-recursive) Note: Use:- JBToolkit\&.SharePoint\&.Authentication\&.GetAppOnlyContext or JBToolkit\&.SharePoint\&.Authentication\&.GetUserContext
+.PP
+to retrive the Client Context for the site\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIclientContext\fP \fBSharePoint\fP client context
+.br
+\fIdocumentLibraryPath\fP Document collection path (i\&.e\&. Share Documents/Subfolder)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePoint\fP FileCollection object
+.RE
+.PP
+
+.SS "static FileCollection JBToolkit\&.SharePoint\&.CSOM\&.Manage\&.GetFileCollectionFromFolder (ClientContext clientContext, string documentLibraryPath)\fC [static]\fP"
+
+.PP
+Get a list of files contained in a \fBSharePoint\fP folder (non-recursive) Note: Use:- JBToolkit\&.SharePoint\&.Authentication\&.GetAppOnlyContext or JBToolkit\&.SharePoint\&.Authentication\&.GetUserContext
+.PP
+to retrive the Client Context for the site\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIclientContext\fP \fBSharePoint\fP client context
+.br
+\fIdocumentLibraryPath\fP Document collection path (i\&.e\&. Share Documents/Subfolder)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePoint\fP FileCollection object
+.RE
+.PP
+
+.SS "static FolderCollection JBToolkit\&.SharePoint\&.CSOM\&.Manage\&.GetFolderCollectionFromFolder (ClientContext clientContext, string documentLibraryPath)\fC [static]\fP"
+
+.PP
+Get a list of folders contained in a \fBSharePoint\fP folder (non-recursive) Note: Use:- JBToolkit\&.SharePoint\&.Authentication\&.GetAppOnlyContext or JBToolkit\&.SharePoint\&.Authentication\&.GetUserContext
+.PP
+to retrive the Client Context for the site\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIclientContext\fP \fBSharePoint\fP client context
+.br
+\fIdocumentLibraryPath\fP Document collection path (i\&.e\&. Share Documents/Subfolder)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePoint\fP FileCollection object
+.RE
+.PP
+
+.SS "static \fBSharePointRequestResult\fP JBToolkit\&.SharePoint\&.CSOM\&.Manage\&.MoveFile (ClientContext clientContext, string fileLibrarySourcePath, string fileLibraryDestinationPath)\fC [static]\fP"
+
+.PP
+Move a file from one \fBSharePoint\fP location to another Note: Use:- JBToolkit\&.SharePoint\&.Authentication\&.GetAppOnlyContext or JBToolkit\&.SharePoint\&.Authentication\&.GetUserContext
+.PP
+to retrive the Client Context for the site\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIclientContext\fP \fBSharePoint\fP client context
+.br
+\fIfileLibrarySourcePath\fP Source document path (i\&.e\&. 'Shared Documents/Subfolder1')
+.br
+\fIfileLibraryDestinationPath\fP Destination document path (i\&.e\&. 'Shared Documents/Subfolder2'
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePointRequestResult\fP result object
+.RE
+.PP
+
+.SS "static \fBSharePointRequestResult\fP JBToolkit\&.SharePoint\&.CSOM\&.Manage\&.MoveFolder (ClientContext clientContext, string fileLibrarySourcePath, string fileLibraryDestinationPath)\fC [static]\fP"
+
+.PP
+Move a folder from one \fBSharePoint\fP location to another Note: Use:- JBToolkit\&.SharePoint\&.Authentication\&.GetAppOnlyContext or JBToolkit\&.SharePoint\&.Authentication\&.GetUserContext
+.PP
+to retrive the Client Context for the site\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIclientContext\fP \fBSharePoint\fP client context
+.br
+\fIfileLibrarySourcePath\fP Source document path (i\&.e\&. 'Shared Documents/Subfolder1')
+.br
+\fIfileLibraryDestinationPath\fP Destination document path (i\&.e\&. 'Shared Documents/Subfolder2'
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePointRequestResult\fP result object
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

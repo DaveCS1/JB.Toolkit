@@ -1,0 +1,80 @@
+.TH "JBToolkit.SharePoint.CSOM.Download" 3 "Thu Oct 1 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.SharePoint.CSOM.Download \- \fBSharePoint\fP file and folder download utilities using SCOM  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBSharePointRequestResult\fP \fBDownloadFile\fP (ClientContext clientContext, string documentLibraryPath, string fileName, string downloadFolderPath, bool overwrite=true, string renameFilename=null)"
+.br
+.RI "Downloads a single file from \fBSharePoint\fP "
+.ti -1c
+.RI "static \fBSharePointRequestResult\fP \fBDownloadFiles\fP (ClientContext clientContext, string documentLibraryPath, string downloadFolderPath)"
+.br
+.RI "\fBDownload\fP all files in a folder from \fBSharePoint\fP (doesn't include subdirectories) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBSharePoint\fP file and folder download utilities using SCOM 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBSharePointRequestResult\fP JBToolkit\&.SharePoint\&.CSOM\&.Download\&.DownloadFile (ClientContext clientContext, string documentLibraryPath, string fileName, string downloadFolderPath, bool overwrite = \fCtrue\fP, string renameFilename = \fCnull\fP)\fC [static]\fP"
+
+.PP
+Downloads a single file from \fBSharePoint\fP Note: Use:- JBToolkit\&.SharePoint\&.Authentication\&.GetAppOnlyContext or JBToolkit\&.SharePoint\&.Authentication\&.GetUserContext
+.PP
+to retrive the Client Context for the site\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIclientContext\fP \fBSharePoint\fP client context
+.br
+\fIdocumentLibraryPath\fP Document collection path (i\&.e\&. Share Documents/Subfolder)
+.br
+\fIfileName\fP Name of folder to download (i\&.e\&. filename\&.txt)
+.br
+\fIdownloadFolderPath\fP Path to folder to download to
+.br
+\fIoverwrite\fP Won't overwrite the local file if set to false (default: true)
+.br
+\fIrenameFilename\fP Save the file with a different, specified filename
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePointRequestResult\fP result object
+.RE
+.PP
+
+.SS "static \fBSharePointRequestResult\fP JBToolkit\&.SharePoint\&.CSOM\&.Download\&.DownloadFiles (ClientContext clientContext, string documentLibraryPath, string downloadFolderPath)\fC [static]\fP"
+
+.PP
+\fBDownload\fP all files in a folder from \fBSharePoint\fP (doesn't include subdirectories) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIclientContext\fP \fBSharePoint\fP client context
+.br
+\fIdocumentLibraryPath\fP Document collection path (i\&.e\&. Share Documents/Subfolder)
+.br
+\fIdownloadFolderPath\fP Path of folder to download to
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBSharePointRequestResult\fP result object
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

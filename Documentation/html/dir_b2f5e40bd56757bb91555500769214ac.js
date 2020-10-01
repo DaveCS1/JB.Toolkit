@@ -9,9 +9,6 @@ var dir_b2f5e40bd56757bb91555500769214ac =
       [ "DbConnection", "d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection.html", "d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection" ],
       [ "DbGeneric", "dd/dbe/class_j_b_toolkit_1_1_database_1_1_db_generic.html", "dd/dbe/class_j_b_toolkit_1_1_database_1_1_db_generic" ]
     ] ],
-    [ "DBGeneric.cs", "d0/d15/_d_b_generic_8cs.html", [
-      [ "DBGeneric", "d1/d27/class_j_b_toolkit_1_1_database_1_1_d_b_generic.html", "d1/d27/class_j_b_toolkit_1_1_database_1_1_d_b_generic" ]
-    ] ],
     [ "TreeViewCache.cs", "dd/dc8/_tree_view_cache_8cs.html", [
       [ "TreeViewCache", "d7/df0/class_j_b_toolkit_1_1_database_1_1_tree_view_cache.html", "d7/df0/class_j_b_toolkit_1_1_database_1_1_tree_view_cache" ]
     ] ]

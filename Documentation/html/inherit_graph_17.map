@@ -1,17 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d2/d55/class_i_disposable.html" title=" " alt="" coords="5,177,95,203"/>
-<area shape="rect" id="node2" href="$d7/dc7/class_j_b_toolkit_1_1_console_helper_1_1_progress_bar.html" title="An ASCII progress bar" alt="" coords="165,5,332,47"/>
-<area shape="rect" id="node3" href="$dc/d0b/class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_impersonator.html" title="Used to perform execution of code under an elivated permission context" alt="" coords="143,71,355,112"/>
-<area shape="rect" id="node4" href="$d1/d61/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon.html" title="Extension of the System.Drawing.Icon for getting header information and individsual icons from a mult..." alt="" coords="148,136,349,177"/>
-<area shape="rect" id="node5" href="$d3/d9a/interface_j_b_toolkit_1_1_inter_process_comms_1_1_i_ipc_server.html" title=" " alt="" coords="148,201,349,243"/>
-<area shape="rect" id="node13" href="$d9/d2a/class_j_b_toolkit_1_1_streams_1_1_safe_file_stream.html" title="This is a wrapper around a FileStream. While it is not a Stream itself, it can be cast to one (keep i..." alt="" coords="159,267,338,308"/>
-<area shape="rect" id="node14" href="$dd/dbf/class_j_b_toolkit_1_1_zip_1_1_native_1_1_zip_archive.html" title="Read, write and modify Zip files using the Zip implementation native to Windows. It doesn&#39;t require a..." alt="" coords="171,332,327,373"/>
-<area shape="rect" id="node6" href="$db/d92/class_j_b_toolkit_1_1_inter_process_comms_1_1_memory_mapped_files_1_1_shared_memory_server.html" title=" " alt="" coords="403,5,673,47"/>
-<area shape="rect" id="node7" href="$d2/d2c/class_j_b_toolkit_1_1_inter_process_comms_1_1_message_queues_1_1_message_queue_server.html" title=" " alt="" coords="413,71,663,112"/>
-<area shape="rect" id="node8" href="$dc/ded/class_j_b_toolkit_1_1_inter_process_comms_1_1_named_pipes_1_1_named_pipe_server.html" title=" " alt="" coords="437,136,639,177"/>
-<area shape="rect" id="node9" href="$d2/de8/class_j_b_toolkit_1_1_inter_process_comms_1_1_net_remoting_1_1_remoting_server.html" title=" " alt="" coords="437,201,639,243"/>
-<area shape="rect" id="node10" href="$dd/dc8/class_j_b_toolkit_1_1_inter_process_comms_1_1_sockets_1_1_socket_server.html" title=" " alt="" coords="437,267,639,308"/>
-<area shape="rect" id="node11" href="$dc/d74/class_j_b_toolkit_1_1_inter_process_comms_1_1_wcf_1_1_wcf_server.html" title="Client to host communication (1 direction) Named Pipe implementation." alt="" coords="437,332,639,373"/>
-<area shape="rect" id="node12" href="$da/d63/class_j_b_toolkit_1_1_inter_process_comms_1_1_w_m___c_o_p_y_d_a_t_a_1_1_copy_data_server.html" title=" " alt="" coords="427,397,649,439"/>
-<area shape="rect" id="node15" href="$d6/da7/class_i_progress.html" title=" " alt="" coords="11,13,89,39"/>
+<area shape="rect" id="node1" href="$df/d5f/class_j_b_toolkit_1_1_assembly_helper_1_1_culture_helper.html" title=" " alt="" coords="5,5,184,47"/>
 </map>

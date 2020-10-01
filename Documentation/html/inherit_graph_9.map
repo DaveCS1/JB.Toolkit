@@ -1,6 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$df/d70/class_exception.html" title=" " alt="" coords="5,46,85,73"/>
-<area shape="rect" id="node2" href="$dc/d38/class_j_b_toolkit_1_1_console_helper_1_1_options_1_1_option_exception.html" title=" " alt="" coords="143,5,310,47"/>
-<area shape="rect" id="node3" href="$d3/db3/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_convert_exception.html" title=" " alt="" coords="133,71,320,112"/>
-<area shape="rect" id="node4" href="$d5/dd3/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_convert_timeout_exception.html" title=" " alt="" coords="368,71,555,112"/>
+<area shape="rect" id="node1" href="$df/d08/class_form.html" title=" " alt="" coords="5,5,57,32"/>
+<area shape="rect" id="node2" href="$d2/df8/class_j_b_toolkit_1_1_win_forms_1_1_popup.html" title="Simple, nice general popup with a delay before dissappearing" alt="" coords="105,5,285,32"/>
 </map>

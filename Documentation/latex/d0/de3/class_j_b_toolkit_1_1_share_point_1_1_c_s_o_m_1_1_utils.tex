@@ -1,0 +1,81 @@
+\hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils}{}\doxysection{J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Utils Class Reference}
+\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils}\index{JBToolkit.SharePoint.CSOM.Utils@{JBToolkit.SharePoint.CSOM.Utils}}
+
+
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} S\+C\+OM utility methods  
+
+
+
+
+Collaboration diagram for J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Utils\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{d6/d29/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils_a2dee4e47cd38f62d7ed0a411d24d2c0d}{Get\+Server\+Relative\+Url}} (Client\+Context client\+Context)
+\begin{DoxyCompactList}\small\item\em Often needed for \textquotesingle{}\mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage}{Manage}}\textquotesingle{} methods -\/ Gets the client context server relative url (i.\+e. /sites/\+D365\+D\+EV) \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils_ae07f4041590a9210730c64a77bd12269}{Copy\+Stream}} (System.\+I\+O.\+Stream input, System.\+I\+O.\+Stream output)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} S\+C\+OM utility methods 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils_ae07f4041590a9210730c64a77bd12269}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils_ae07f4041590a9210730c64a77bd12269}} 
+\index{JBToolkit.SharePoint.CSOM.Utils@{JBToolkit.SharePoint.CSOM.Utils}!CopyStream@{CopyStream}}
+\index{CopyStream@{CopyStream}!JBToolkit.SharePoint.CSOM.Utils@{JBToolkit.SharePoint.CSOM.Utils}}
+\doxysubsubsection{\texorpdfstring{CopyStream()}{CopyStream()}}
+{\footnotesize\ttfamily static void J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Utils.\+Copy\+Stream (\begin{DoxyParamCaption}\item[{System.\+I\+O.\+Stream}]{input,  }\item[{System.\+I\+O.\+Stream}]{output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/de3/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils_ae07f4041590a9210730c64a77bd12269_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils_a2dee4e47cd38f62d7ed0a411d24d2c0d}\label{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils_a2dee4e47cd38f62d7ed0a411d24d2c0d}} 
+\index{JBToolkit.SharePoint.CSOM.Utils@{JBToolkit.SharePoint.CSOM.Utils}!GetServerRelativeUrl@{GetServerRelativeUrl}}
+\index{GetServerRelativeUrl@{GetServerRelativeUrl}!JBToolkit.SharePoint.CSOM.Utils@{JBToolkit.SharePoint.CSOM.Utils}}
+\doxysubsubsection{\texorpdfstring{GetServerRelativeUrl()}{GetServerRelativeUrl()}}
+{\footnotesize\ttfamily static string J\+B\+Toolkit.\+Share\+Point.\+C\+S\+O\+M.\+Utils.\+Get\+Server\+Relative\+Url (\begin{DoxyParamCaption}\item[{Client\+Context}]{client\+Context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Often needed for \textquotesingle{}\mbox{\hyperlink{class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_manage}{Manage}}\textquotesingle{} methods -\/ Gets the client context server relative url (i.\+e. /sites/\+D365\+D\+EV) 
+
+Note\+: Use\+:-\/ J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+App\+Only\+Context or J\+B\+Toolkit.\+Share\+Point.\+Authentication.\+Get\+User\+Context
+
+to retrive the Client Context for the site.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Context} & \mbox{\hyperlink{namespace_j_b_toolkit_1_1_share_point}{Share\+Point}} client context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server relative path string
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/de3/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils_a2dee4e47cd38f62d7ed0a411d24d2c0d_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Share\+Point/\+C\+S\+O\+M/\mbox{\hyperlink{_utils_8cs}{Utils.\+cs}}\end{DoxyCompactItemize}

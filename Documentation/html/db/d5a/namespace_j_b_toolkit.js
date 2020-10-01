@@ -13,6 +13,7 @@ var namespace_j_b_toolkit =
     [ "Logger", "da/d79/namespace_j_b_toolkit_1_1_logger.html", "da/d79/namespace_j_b_toolkit_1_1_logger" ],
     [ "PdfDoc", "d0/d07/namespace_j_b_toolkit_1_1_pdf_doc.html", "d0/d07/namespace_j_b_toolkit_1_1_pdf_doc" ],
     [ "RegularExpressions", "db/d8a/namespace_j_b_toolkit_1_1_regular_expressions.html", "db/d8a/namespace_j_b_toolkit_1_1_regular_expressions" ],
+    [ "SharePoint", "df/d30/namespace_j_b_toolkit_1_1_share_point.html", "df/d30/namespace_j_b_toolkit_1_1_share_point" ],
     [ "Streams", "d3/d08/namespace_j_b_toolkit_1_1_streams.html", "d3/d08/namespace_j_b_toolkit_1_1_streams" ],
     [ "Views", "db/dd5/namespace_j_b_toolkit_1_1_views.html", "db/dd5/namespace_j_b_toolkit_1_1_views" ],
     [ "Web", "d4/db1/namespace_j_b_toolkit_1_1_web.html", "d4/db1/namespace_j_b_toolkit_1_1_web" ],

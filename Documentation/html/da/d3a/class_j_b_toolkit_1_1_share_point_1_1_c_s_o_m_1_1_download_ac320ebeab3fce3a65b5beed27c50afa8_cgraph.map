@@ -1,0 +1,5 @@
+<map id="JBToolkit.SharePoint.CSOM.Download.DownloadFile" name="JBToolkit.SharePoint.CSOM.Download.DownloadFile">
+<area shape="rect" id="node1" title="Downloads a single file from SharePoint" alt="" coords="5,39,196,80"/>
+<area shape="rect" id="node2" href="$d0/de3/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils.html#ae07f4041590a9210730c64a77bd12269" title=" " alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node3" href="$d0/de3/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils.html#a2dee4e47cd38f62d7ed0a411d24d2c0d" title="Often needed for &#39;Manage&#39; methods &#45; Gets the client context server relative url (i...." alt="" coords="244,71,435,112"/>
+</map>

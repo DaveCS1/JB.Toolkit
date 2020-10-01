@@ -1,0 +1,51 @@
+.TH "JBToolkit.SharePoint.CSOM.Utils" 3 "Thu Oct 1 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.SharePoint.CSOM.Utils \- \fBSharePoint\fP SCOM utility methods  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static string \fBGetServerRelativeUrl\fP (ClientContext clientContext)"
+.br
+.RI "Often needed for '\fBManage\fP' methods - Gets the client context server relative url (i\&.e\&. /sites/D365DEV) "
+.ti -1c
+.RI "static void \fBCopyStream\fP (System\&.IO\&.Stream input, System\&.IO\&.Stream output)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBSharePoint\fP SCOM utility methods 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static void JBToolkit\&.SharePoint\&.CSOM\&.Utils\&.CopyStream (System\&.IO\&.Stream input, System\&.IO\&.Stream output)\fC [static]\fP"
+
+.SS "static string JBToolkit\&.SharePoint\&.CSOM\&.Utils\&.GetServerRelativeUrl (ClientContext clientContext)\fC [static]\fP"
+
+.PP
+Often needed for '\fBManage\fP' methods - Gets the client context server relative url (i\&.e\&. /sites/D365DEV) Note: Use:- JBToolkit\&.SharePoint\&.Authentication\&.GetAppOnlyContext or JBToolkit\&.SharePoint\&.Authentication\&.GetUserContext
+.PP
+to retrive the Client Context for the site\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIclientContext\fP \fBSharePoint\fP client context
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Server relative path string
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

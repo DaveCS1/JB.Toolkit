@@ -1,12 +1,6 @@
-﻿using Microsoft.Graph;
-using Microsoft.SharePoint.Client;
+﻿using Microsoft.SharePoint.Client;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Security;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JBToolkit.SharePoint.CSOM
 {
@@ -157,6 +151,6 @@ namespace JBToolkit.SharePoint.CSOM
             }
 
             return result;
-        }       
+        }
     }
 }

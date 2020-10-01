@@ -1,6 +1,6 @@
-﻿using System.Security;
-using Microsoft.SharePoint.Client;
+﻿using Microsoft.SharePoint.Client;
 using OfficeDevPnP.Core;
+using System.Security;
 
 namespace JBToolkit.SharePoint.CSOM
 {

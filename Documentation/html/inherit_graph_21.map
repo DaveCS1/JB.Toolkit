@@ -1,4 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$de/dc7/class_j_b_toolkit_1_1_console_helper_1_1_options_1_1_command.html" title=" " alt="" coords="5,5,172,47"/>
-<area shape="rect" id="node2" href="$d0/d04/class_j_b_toolkit_1_1_console_helper_1_1_options_1_1_help_command.html" title=" " alt="" coords="220,5,387,47"/>
+<area shape="rect" id="node1" href="$dc/d25/class_j_b_toolkit_1_1_console_helper_1_1_options_1_1_option.html" title="User Guide: http://docs.go&#45;mono.com/index.aspx?link=T:Mono.Options.OptionSet" alt="" coords="5,39,172,80"/>
+<area shape="rect" id="node2" href="$db/d4f/class_j_b_toolkit_1_1_console_helper_1_1_options_1_1_command_option.html" title=" " alt="" coords="220,5,388,47"/>
+<area shape="rect" id="node3" href="$dc/d22/class_j_b_toolkit_1_1_console_helper_1_1_options_1_1_help_option.html" title=" " alt="" coords="221,71,387,112"/>
 </map>
