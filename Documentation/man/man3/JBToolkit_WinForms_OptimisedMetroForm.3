@@ -1,4 +1,4 @@
-.TH "JBToolkit.WinForms.OptimisedMetroForm" 3 "Thu Oct 1 2020" "JB.Toolkit" \" -*- nroff -*-
+.TH "JBToolkit.WinForms.OptimisedMetroForm" 3 "Sat Oct 10 2020" "JB.Toolkit" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -32,6 +32,9 @@ Inherited by \fBJBToolkit\&.WinForms\&.CustomMessageBox\fP\&.
 .br
 .ti -1c
 .RI "void \fBSetTextBoxCueBanner\fP (TextBox textbox, string text)"
+.br
+.ti -1c
+.RI "void \fBSetTextBoxCueBanner\fP (\fBRoundTextBox\fP textbox, string text)"
 .br
 .ti -1c
 .RI "virtual void \fBAddToolTipsToControls\fP (\fBControl\fP parent)"
@@ -147,6 +150,8 @@ Iterates through all controls and ensure they're set to double buffered
 
 .PP
 Set the taskbar percentage state 
+.SS "void JBToolkit\&.WinForms\&.OptimisedMetroForm\&.SetTextBoxCueBanner (\fBRoundTextBox\fP textbox, string text)"
+
 .SS "void JBToolkit\&.WinForms\&.OptimisedMetroForm\&.SetTextBoxCueBanner (TextBox textbox, string text)"
 
 .SS "void JBToolkit\&.WinForms\&.OptimisedMetroForm\&.ShowMetroMessageBox (string title, string message, MessageBoxButtons buttons, MessageBoxIcon icon, int height)"

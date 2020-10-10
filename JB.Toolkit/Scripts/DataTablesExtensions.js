@@ -307,23 +307,27 @@ function initDataTable(item) {
                 initComplete: function (settings, json) {
                     let filterCols = settings.oInit.customInitObj.filterCols;
 
-                    for (let i = 0; i < filterCols.length; i++) {
-                        let filterCol = filterCols[i];
+                    if (filterCols != null && filterCols != undefined) {
+                        for (let i = 0; i < filterCols.length; i++) {
+                            let filterCol = filterCols[i];
 
-                        let column = this.api().column(filterCol.columnIndex);
-                        let dropdown = $('#' + filterCol.dropdownID);
+                            let column = this.api().column(filterCol.columnIndex);
+                            let dropdown = $('#' + filterCol.dropdownID);
 
-                        column.data().unique().sort().each(function (d, j) {
-                            dropdown.append('<li><a class="' + filterCol.anchorClassName + '" href="#" data="' + d + '"> ' + d + '</a></li>');
-                            $('.' + filterCol.anchorClassName).click(function () {
-                                $('.' + filterCol.selectedAnchorClassName).remove();
-                                $(this).prepend('<i class="fa fa-check ' + filterCol.selectedAnchorClassName + '" aria-hidden="true"></i>');
+                            column.data().unique().sort().each(function (d, j) {
+                                if (d != null && d != "") {
+                                    dropdown.append('<li><a class="' + filterCol.anchorClassName + '" href="#" data="' + d + '"> ' + d + '</a></li>');
+                                    $('.' + filterCol.anchorClassName).click(function () {
+                                        $('.' + filterCol.selectedAnchorClassName).remove();
+                                        $(this).prepend('<i class="fa fa-check ' + filterCol.selectedAnchorClassName + '" aria-hidden="true"></i>');
 
-                                var filter = $(this).attr('data');
-                                filterCol.current = filter;
-                                applyFilters();
-                            })
-                        });
+                                        var filter = $(this).attr('data');
+                                        filterCol.current = filter;
+                                        applyFilters();
+                                    })
+                                }
+                            });
+                        }
                     }
                 }
             });
@@ -463,23 +467,27 @@ function initDataTable(item) {
                     initComplete: function (settings, json) {
                         let filterCols = settings.oInit.customInitObj.filterCols;
 
-                        for (let i = 0; i < filterCols.length; i++) {
-                            let filterCol = filterCols[i];
+                        if (filterCols != null && filterCols != undefined) {
+                            for (let i = 0; i < filterCols.length; i++) {
+                                let filterCol = filterCols[i];
 
-                            let column = this.api().column(filterCol.columnIndex);
-                            let dropdown = $('#' + filterCol.dropdownID);
+                                let column = this.api().column(filterCol.columnIndex);
+                                let dropdown = $('#' + filterCol.dropdownID);
 
-                            column.data().unique().sort().each(function (d, j) {
-                                dropdown.append('<li><a class="' + filterCol.anchorClassName + '" href="#" data="' + d + '"> ' + d + '</a></li>');
-                                $('.' + filterCol.anchorClassName).click(function () {
-                                    $('.' + filterCol.selectedAnchorClassName).remove();
-                                    $(this).prepend('<i class="fa fa-check ' + filterCol.selectedAnchorClassName + '" aria-hidden="true"></i>');
+                                column.data().unique().sort().each(function (d, j) {
+                                    if (d != null && d != "") {
+                                        dropdown.append('<li><a class="' + filterCol.anchorClassName + '" href="#" data="' + d + '"> ' + d + '</a></li>');
+                                        $('.' + filterCol.anchorClassName).click(function () {
+                                            $('.' + filterCol.selectedAnchorClassName).remove();
+                                            $(this).prepend('<i class="fa fa-check ' + filterCol.selectedAnchorClassName + '" aria-hidden="true"></i>');
 
-                                    var filter = $(this).attr('data');
-                                    filterCol.current = filter;
-                                    applyFilters();
-                                })
-                            });
+                                            var filter = $(this).attr('data');
+                                            filterCol.current = filter;
+                                            applyFilters();
+                                        })
+                                    }
+                                });
+                            }
                         }
                     }
                 });
@@ -761,12 +769,29 @@ function initDataTable(item) {
                         initComplete: function (settings, json) {
                             $("#dtOverlay").hide();
 
-                            // Auto filters not implemented for server-side processing... Will require a little finesse.
-                            // Remember, if you're using server-side processing then your concerned about performance. 
-                            // For this to work properly, you'll have to either first lookup the distinct values of columns
-                            // Or you'll have to include a hidden row of distinct column values. 
+                            let filterCols = settings.oInit.customInitObj.filterCols;
+                            if (filterCols != null && filterCols != undefined) {
+                                for (let i = 0; i < filterCols.length; i++) {
+                                    let filterCol = filterCols[i];
 
-                            // A good use example of server-side processing SQL procedure is: USR_AG_SS_GetCoronaVirusReport_V2
+                                    let column = this.api().column(filterCol.columnIndex);
+                                    let dropdown = $('#' + filterCol.dropdownID);
+
+                                    column.data().unique().sort().each(function (d, j) {
+                                        if (d != null && d != "") {
+                                            dropdown.append('<li><a class="' + filterCol.anchorClassName + '" href="#" data="' + d + '"> ' + d + '</a></li>');
+                                            $('.' + filterCol.anchorClassName).click(function () {
+                                                $('.' + filterCol.selectedAnchorClassName).remove();
+                                                $(this).prepend('<i class="fa fa-check ' + filterCol.selectedAnchorClassName + '" aria-hidden="true"></i>');
+
+                                                var filter = $(this).attr('data');
+                                                filterCol.current = filter;
+                                                applyFilters();
+                                            })
+                                        }
+                                    });
+                                }
+                            }
 
                             item.dataTable.columns.adjust();
                         }
@@ -1068,23 +1093,27 @@ function initDataTable(item) {
 
                             let filterCols = settings.oInit.customInitObj.filterCols;
 
-                            for (let i = 0; i < filterCols.length; i++) {
-                                let filterCol = filterCols[i];
+                            if (filterCols != null && filterCols != undefined) {
+                                for (let i = 0; i < filterCols.length; i++) {
+                                    let filterCol = filterCols[i];
 
-                                let column = this.api().column(filterCol.columnIndex);
-                                let dropdown = $('#' + filterCol.dropdownID);
+                                    let column = this.api().column(filterCol.columnIndex);
+                                    let dropdown = $('#' + filterCol.dropdownID);
 
-                                column.data().unique().sort().each(function (d, j) {
-                                    dropdown.append('<li><a class="' + filterCol.anchorClassName + '" href="#" data="' + d + '"> ' + d + '</a></li>');
-                                    $('.' + filterCol.anchorClassName).click(function () {
-                                        $('.' + filterCol.selectedAnchorClassName).remove();
-                                        $(this).prepend('<i class="fa fa-check ' + filterCol.selectedAnchorClassName + '" aria-hidden="true"></i>');
+                                    column.data().unique().sort().each(function (d, j) {
+                                        if (d != null && d != "") {
+                                            dropdown.append('<li><a class="' + filterCol.anchorClassName + '" href="#" data="' + d + '"> ' + d + '</a></li>');
+                                            $('.' + filterCol.anchorClassName).click(function () {
+                                                $('.' + filterCol.selectedAnchorClassName).remove();
+                                                $(this).prepend('<i class="fa fa-check ' + filterCol.selectedAnchorClassName + '" aria-hidden="true"></i>');
 
-                                        var filter = $(this).attr('data');
-                                        filterCol.current = filter;
-                                        applyFilters();
-                                    })
-                                });
+                                                var filter = $(this).attr('data');
+                                                filterCol.current = filter;
+                                                applyFilters();
+                                            })
+                                        }
+                                    });
+                                }
                             }
 
                             item.dataTable.columns.adjust();

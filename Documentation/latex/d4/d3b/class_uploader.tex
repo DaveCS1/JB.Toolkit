@@ -1,0 +1,120 @@
+\hypertarget{class_uploader}{}\doxysection{Uploader Class Reference}
+\label{class_uploader}\index{Uploader@{Uploader}}
+
+
+Collaboration diagram for Uploader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{d2/dca/class_uploader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_uploader_a60c2d30006a87612fb93977b58d5ba89}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_uploader_adc26bbbdfe9ae8f30815c55e65a7d8a2}{upload}} (\$field, \$options=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_uploader_aa45c82226fe90daea5e7b1d034bd8d65}{\$error\+\_\+messages}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_uploader_ac14a1bfa3ca3c6cdd2bfaf2df71bab07}{\$options}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_uploader_a60c2d30006a87612fb93977b58d5ba89}\label{class_uploader_a60c2d30006a87612fb93977b58d5ba89}} 
+\index{Uploader@{Uploader}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Uploader@{Uploader}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily Uploader\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_uploader_adc26bbbdfe9ae8f30815c55e65a7d8a2}\label{class_uploader_adc26bbbdfe9ae8f30815c55e65a7d8a2}} 
+\index{Uploader@{Uploader}!upload@{upload}}
+\index{upload@{upload}!Uploader@{Uploader}}
+\doxysubsubsection{\texorpdfstring{upload()}{upload()}}
+{\footnotesize\ttfamily Uploader\+::upload (\begin{DoxyParamCaption}\item[{}]{\$field,  }\item[{}]{\$options = {\ttfamily null} }\end{DoxyParamCaption})}
+
+upload method
+
+Return the initialize method 
+\begin{DoxyParams}{Parameters}
+{\em \$field} & \{Array, String\} \\
+\hline
+{\em \$options} & \{Array, null\} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_uploader_aa45c82226fe90daea5e7b1d034bd8d65}\label{class_uploader_aa45c82226fe90daea5e7b1d034bd8d65}} 
+\index{Uploader@{Uploader}!\$error\_messages@{\$error\_messages}}
+\index{\$error\_messages@{\$error\_messages}!Uploader@{Uploader}}
+\doxysubsubsection{\texorpdfstring{\$error\_messages}{$error\_messages}}
+{\footnotesize\ttfamily Uploader\+::\$error\+\_\+messages}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        1 => \textcolor{stringliteral}{"The uploaded file exceeds the upload\_max\_filesize directive in php.ini."},}
+\DoxyCodeLine{        2 => \textcolor{stringliteral}{"The uploaded file exceeds the MAX\_FILE\_SIZE directive that was specified in the HTML form."},}
+\DoxyCodeLine{        3 => \textcolor{stringliteral}{"The uploaded file was only partially uploaded."},}
+\DoxyCodeLine{        4 => \textcolor{stringliteral}{"No file was uploaded."},}
+\DoxyCodeLine{        6 => \textcolor{stringliteral}{"Missing a temporary folder."},}
+\DoxyCodeLine{        7 => \textcolor{stringliteral}{"Failed to write file to disk."},}
+\DoxyCodeLine{        8 => \textcolor{stringliteral}{"A PHP extension stopped the file upload."},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'accept\_file\_types'} => \textcolor{stringliteral}{"Filetype not allowed"},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'file\_uploads'} => \textcolor{stringliteral}{"File uploading option in disabled in php.ini"},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'post\_max\_size'} => \textcolor{stringliteral}{"The uploaded file exceeds the post\_max\_size directive in php.ini"},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'max\_file\_size'} => \textcolor{stringliteral}{"File is too big"},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'max\_number\_of\_files'} => \textcolor{stringliteral}{"Maximum number of files exceeded"},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'required\_and\_no\_file'} => \textcolor{stringliteral}{"No file was choosed. Please select one."},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'no\_download\_content'} => \textcolor{stringliteral}{"File could't be download."}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_uploader_ac14a1bfa3ca3c6cdd2bfaf2df71bab07}\label{class_uploader_ac14a1bfa3ca3c6cdd2bfaf2df71bab07}} 
+\index{Uploader@{Uploader}!\$options@{\$options}}
+\index{\$options@{\$options}!Uploader@{Uploader}}
+\doxysubsubsection{\texorpdfstring{\$options}{$options}}
+{\footnotesize\ttfamily Uploader\+::\$options\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= array(}
+\DoxyCodeLine{        \textcolor{stringliteral}{'limit'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'maxSize'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'extensions'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'required'} => \textcolor{keyword}{false},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'uploadDir'} => \textcolor{stringliteral}{'uploads/'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'title'} => array(\textcolor{stringliteral}{'auto'}, 10),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'removeFiles'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'perms'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'replace'} => \textcolor{keyword}{true},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'onCheck'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'onError'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'onSuccess'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'onUpload'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'onComplete'} => \textcolor{keyword}{null},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'onRemove'} => \textcolor{keyword}{null}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+One\+Drive/\+Documents/\+Work/\+Repositories/\+J\+B.\+Toolkit/\+J\+B.\+Toolkit/\+Scripts/packages/jquery.\+filer/php/\mbox{\hyperlink{class_8uploader_8php}{class.\+uploader.\+php}}\end{DoxyCompactItemize}

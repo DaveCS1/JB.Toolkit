@@ -5,7 +5,7 @@ var dir_b2f5e40bd56757bb91555500769214ac =
       [ "DataTableState", "d6/df8/class_j_b_toolkit_1_1_database_1_1_data_table_state.html", "d6/df8/class_j_b_toolkit_1_1_database_1_1_data_table_state" ],
       [ "DataTableStates", "d1/d76/class_j_b_toolkit_1_1_database_1_1_data_table_states.html", "d1/d76/class_j_b_toolkit_1_1_database_1_1_data_table_states" ]
     ] ],
-    [ "DBConnection.cs", "da/d82/_d_b_connection_8cs.html", [
+    [ "DbConnection.cs", "d4/d62/_db_connection_8cs.html", [
       [ "DbConnection", "d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection.html", "d2/d95/class_j_b_toolkit_1_1_database_1_1_db_connection" ],
       [ "DbGeneric", "dd/dbe/class_j_b_toolkit_1_1_database_1_1_db_generic.html", "dd/dbe/class_j_b_toolkit_1_1_database_1_1_db_generic" ]
     ] ],

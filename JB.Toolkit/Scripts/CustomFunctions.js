@@ -4,11 +4,14 @@
     ************************************************************************
 */
 
+/** @description I.e. http://domina.com/
+ */
 function BaseUrl() {
     return window.location.protocol + "//" + window.location.host + "/"
 }
 
-// Create Url affix: UrlAction("<Action>","<Controler>","<data>");
+/** @description Create Url affix: UrlAction("<Action>","<Controler>","<data>");
+ */
 function UrlAction() {
     var base = window.location.protocol + "//" + window.location.host + "/" + arguments[1] + "/" + arguments[0];
     for (var i = 2; i < arguments.length; ++i)
@@ -17,7 +20,8 @@ function UrlAction() {
     return base;
 }
 
-// Create Url affix: UrlApiAction("<end-point>", "<action / data>");
+/** @description Create Url affix: UrlApiAction("<end-point>", "<action / data>");
+ */
 function UrlApiAction() {
     var base = window.location.protocol + "//" + window.location.host + "/" + arguments[0] + "/" + arguments[1];
     for (var i = 2; i < arguments.length; ++i)
@@ -26,6 +30,8 @@ function UrlApiAction() {
     return base;
 }
 
+/** @description Returns browser, i.e. Chrome, Opera, IE
+ */
 function GetBrowser() {
     if (navigator.userAgent.indexOf("Chrome") != -1) {
         return "Chrome";
@@ -44,6 +50,8 @@ function GetBrowser() {
     }
 }
 
+/** @description Disabled mouse right click on page
+ */
 function DisableRightClick() {
     $(function () {
         $(this).bind("contextmenu", function (e) {
@@ -52,6 +60,8 @@ function DisableRightClick() {
     });
 }
 
+/** @description Enabled mouse right click on page
+ */
 function EnableRightClick() {
     $(document).unbind("contextmenu");
     $(document).bind("contextmenu", function (e) {
@@ -59,8 +69,9 @@ function EnableRightClick() {
     });
 }
 
+/** @description Shows print with preview window (if available)
+ */
 function PrintWindow() {
-
     if (GetBrowser() == "IE") {
         try {
             // IE's 'Print preview' :
@@ -87,6 +98,8 @@ function PrintWindow() {
     }
 }
 
+/** @description Set the selected dropdown entry by text rather than key value
+ */
 function SetDropDownByText(dropDownId, textToFind) {
     var dd = document.getElementById(dropDownId);
     for (var i = 0; i < dd.options.length; i++) {
@@ -97,18 +110,54 @@ function SetDropDownByText(dropDownId, textToFind) {
     }
 }
 
-function WriteToFile(content, fileName) {
+/** @description Disables a HTML element, sets readonly and adds a 'disabled' class name
+ *  @param {string} id ID of element to disable
+ *  @param {boolean} includeParent In bootstrap, often elements are nested inside another, so include parent
+ */
+function DisableElement(id, includeParent) {
+    if (includeParent) {
+        $("#" + id).parent().addClass('disabled');
+        $("#" + id).parent().attr('disabled', 'disabled');
+        $("#" + id).parent().attr('readonly', 'readonly');
+    }
+
+    $("#" + id).addClass('disabled');
+    $("#" + id).attr('disabled', 'disabled');
+    $("#" + id).attr('readonly', 'readonly');
+}
+
+/** @description Enable a HTML element, sets readonly and adds a 'disabled' class name
+ *  @param {string} id ID of element to enable
+ *  @param {boolean} includeParent In bootstrap, often elements are nested inside another, so include parent
+ */
+function EnableElement(id, includeParent) {
+    if (includeParent) {
+        $("#" + id).parent().removeClass('disabled');
+        $("#" + id).parent().removeAttr('disabled');
+        $("#" + id).parent().removeAttr('readonly');
+    }
+
+    $("#" + id).removeClass('disabled');
+    $("#" + id).removeAttr('disabled');
+    $("#" + id).removeAttr('readonly');
+}
+
+/** @description Writes text to a file location
+ *  @param {string} content Text to write
+ *  @param {string} filePath File path where to save the file
+ */
+function WriteToFile(content, filePath) {
     var textToWrite = content;
     var textFileAsBlob = new Blob([textToWrite], { type: 'text/plain' });
 
-    if (!fileName)
-        fileName = "log-" + GetTimestamp() + ".txt";
+    if (!filePath)
+        filePath = "log-" + GetTimestamp() + ".txt";
 
     if ('msSaveOrOpenBlob' in navigator) {
-        navigator.msSaveOrOpenBlob(textFileAsBlob, fileName);
+        navigator.msSaveOrOpenBlob(textFileAsBlob, filePath);
     } else {
         var downloadLink = document.createElement('a');
-        downloadLink.download = fileName;
+        downloadLink.download = filePath;
         downloadLink.innerHTML = 'Download File';
 
         if ('webkitURL' in window) {
@@ -128,6 +177,10 @@ function WriteToFile(content, fileName) {
     }
 }
 
+/** @description Starts a file download session
+ *  @param {string} targetLinkId Some a href link to use as template (can be a hidden link)
+ *  @param {string} downloadUrl Source URl
+ */
 function DownloadFile(targetLinkId, downloadUrl) {
     var req = new XMLHttpRequest();
     req.open("GET", downloadUrl, true);
@@ -161,6 +214,8 @@ function DownloadFile(targetLinkId, downloadUrl) {
     req.send();
 }
 
+/** @description Shows a JQuery UI Dialogue, header classes can be: success, dangeer, warning, info, secondary, light, dark, white or default
+ */
 function JqueryUIDialog(containerId, title, message, headerClassName, timeoutInMs) {
     var tmpID = GenerateGUID();
     $("#" + containerId).append("<div id=" + tmpID + "></div>")
@@ -197,6 +252,35 @@ function JqueryUIDialog(containerId, title, message, headerClassName, timeoutInM
     }
 }
 
+/** @description Format time in AM / PM format
+ */
+function FormatAMPM(date) {
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    var strTime = hours + ':' + minutes + ' ' + ampm;
+    return strTime;
+}
+
+/** @description Format number to 2 decimal places
+ */
+function FormatCurrency(amount) {
+    if (!amount)
+        return "";
+
+    var neg = false;
+    if (amount < 0) {
+        neg = true;
+        total = Math.abs(amount);
+    }
+    return (neg ? "-" : '') + parseFloat(amount, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "1,").toString();
+}
+
+/** @description Simulate a mouse click on an element by ID
+ */
 function SimulateClickById(id) {
     var evt = document.createEvent("MouseEvents");
     evt.initMouseEvent("click", true, true, window,
@@ -205,6 +289,8 @@ function SimulateClickById(id) {
     a.dispatchEvent(evt);
 }
 
+/** @description Simulate a mouse click on an element by class name
+ */
 function SimulateClickByClass(className) {
     var evt = document.createEvent("MouseEvents");
     evt.initMouseEvent("click", true, true, window,
@@ -213,6 +299,8 @@ function SimulateClickByClass(className) {
     a.dispatchEvent(evt);
 }
 
+/** @description Simulate a mouse click on an element by query selector
+ */
 function SimulateClickByQuerySelector(query) {
     var evt = document.createEvent("MouseEvents");
     evt.initMouseEvent("click", true, true, window,
@@ -221,10 +309,14 @@ function SimulateClickByQuerySelector(query) {
     a.dispatchEvent(evt);
 }
 
+/** @description Show / Select a Boostrap tab
+ */
 function ShowTab(id) {
     $("#" + id).trigger('click');
 }
 
+/** @description Checks whether a string is valid json
+ */
 function IsJsonString(str) {
     try {
         JSON.parse(str);
@@ -234,6 +326,8 @@ function IsJsonString(str) {
     return true;
 }
 
+/** @description After copying text to clipboard, this function shows a tooltip indicating success
+ */
 function ShowCopiedTooltip(btn) {
 
     try {
@@ -255,8 +349,9 @@ function ShowCopiedTooltip(btn) {
     }
 }
 
-// Use $("#someElem").invisible(); instead of $("#someElem").hide() to keep element on page
-// Use $("#someElem").visible(); instead of $("#someElem").show() to keep element on page
+/** @description Use $("#someElem").invisible(); instead of $("#someElem").hide() to keep element on page
+ *               Use $("#someElem").visible(); instead of $("#someElem").show() to keep element on page
+ */
 (function ($) {
     $.fn.invisible = function () {
         return this.each(function () {
@@ -270,6 +365,9 @@ function ShowCopiedTooltip(btn) {
     };
 }(jQuery));
 
+/** @description Use $("#someElem").fadeInVisibility(); instead of $("#someElem").fadeIn() to keep element on page
+ *               Use $("#someElem").fadeOutVisibility(); instead of $("#someElem").fadeOut() to keep element on page
+ */
 (function ($) {
     $.fn.fadeInVisibility = function () {
         return this.each(function () {
@@ -290,8 +388,9 @@ function AddDays(theDate, days) {
     return new Date(theDate.getTime() + days * 24 * 60 * 60 * 1000);
 }
 
+/** @description Organises entries in a dropdown by text alphabetically
+ */
 function SortSelectPickerOptionsByText(elementId) {
-
     var my_options = $("#" + elementId + " option");
     my_options.sort(function (a, b) {
         if (a.text > b.text) return 1;
@@ -302,8 +401,10 @@ function SortSelectPickerOptionsByText(elementId) {
     $("#" + elementId).empty().append(my_options).selectpicker("refresh");
 }
 
+/** @description Parses text using regular expressions, and any links (i.e. https://something.com) found are converted
+ * to actual <a href= links
+ */
 function ConvertUrlInTextToLinks(text) {
-
     return (text || "").replace(
         /([^\S]|^)(((https?\:\/\/)|(www\.))(\S+))/gi,
         function (match, space, url) {
@@ -316,6 +417,8 @@ function ConvertUrlInTextToLinks(text) {
     );
 };
 
+/** @description Returns whether or not an email address is valid using regular expressions
+ */
 function ValidateEmailAddress(email) {
     var expression = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
     var allOK;
@@ -341,7 +444,9 @@ function ValidateEmailAddress(email) {
     return true;
 }
 
-// Text box validation - Input Masks - only allow certain characters
+/** @description Input mask of different types (i.e. if set to MONEY or NUMBER you can't enter text into the input filed).
+ * Checks types include: NUMBER, MONEY, NUMBER-SPACE-COMMA and DATE
+ */
 function ValidateDataType(obj, type) {
     // delete, backspace, shift, tab
     if (!(event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 16)) {
@@ -463,7 +568,10 @@ function ValidateDataType(obj, type) {
     }
 }
 
-// Works in conjunction with ValidateDataType - Updates text box - i.e. put the '/' in a date field after 2 digits
+/** @description Input make helper. I.e. if set to DATE, the after you enter say '22' a forward slash will
+ * then be automatically appended to the input field
+ * Checks types include: DATE
+ */
 function DataTypeHelper(obj, type) {
     // allows user not to have to enter slash '/'
     if (type == "DATE") {
@@ -474,28 +582,37 @@ function DataTypeHelper(obj, type) {
     }
 }
 
+/** @description Simply returns a random integer
+ */
 function GetRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+/** @description Get number sequence timestamp based on date and time (long)
+ */
 function GetTimestamp() {
     let current_datetime = new Date()
     let formatted_date = "" + current_datetime.getFullYear() + "" + (current_datetime.getMonth() + 1) + "" + current_datetime.getDate() + "-" + current_datetime.getHours() + "" + current_datetime.getMinutes() + "" + current_datetime.getSeconds();
     return formatted_date
 }
 
+/** @description Get number sequence timestamp based on date only (short)
+ */
 function GetDateOnlyTimestamp() {
     let current_datetime = new Date()
     let formatted_date = "" + current_datetime.getFullYear() + "" + (current_datetime.getMonth() + 1) + "" + current_datetime.getDate();
     return formatted_date
 }
 
-// custom copy to clipboard (in case native doesn't work)
-// Basically creates a hidden text area on focus pane, copies of a control to it, and does
-// a browser method for highlighting and copying the text
-function CustomCopyToClipboard(elem, placeholderClass) {
+/** @description custom copy to clipboard (in case native doesn't work)
+ * Basically creates a hidden text area on focus pane, copies of a control to it, and does
+ * a browser method for highlighting and copying the text
+ *  @param {any} elementObject The element id if a text area or input to copy to the clipboard
+ *  @param {string} placeholderClass Class name of any element on the page to use for the DOM
+ */
+function CustomCopyToClipboard(elementObject, placeholderClass) {
     try {
         var randomNumber = GetRandomInt(1, 999);
         var targetId = "_hiddenCopyText_" + randomNumber;
@@ -516,22 +633,22 @@ function CustomCopyToClipboard(elem, placeholderClass) {
         var brRegex = /<br\s*[\/]?>/gi;
 
         try {
-            target.textContent = elem.textContent.replace(brRegex, "\r\n").replace(/<\/?[a-zA-Z]+\/?>/g, '').trim();
+            target.textContent = elementObject.textContent.replace(brRegex, "\r\n").replace(/<\/?[a-zA-Z]+\/?>/g, '').trim();
         }
         catch (err1) {
             try {
-                target.textContent = elem.val().replace(brRegex, "\r\n").replace(/<\/?[a-zA-Z]+\/?>/g, '').trim();
+                target.textContent = elementObject.val().replace(brRegex, "\r\n").replace(/<\/?[a-zA-Z]+\/?>/g, '').trim();
 
                 if (target.textContent == "")
-                    target.textContent = elem.text().replace(brRegex, "\r\n").replace(/<\/?[a-zA-Z]+\/?>/g, '').trim();
+                    target.textContent = elementObject.text().replace(brRegex, "\r\n").replace(/<\/?[a-zA-Z]+\/?>/g, '').trim();
             }
             catch (err2) {
                 try {
-                    target.textContent = elem.text().replace(brRegex, "\r\n").replace(/<\/?[a-zA-Z]+\/?>/g, '').trim();
+                    target.textContent = elementObject.text().replace(brRegex, "\r\n").replace(/<\/?[a-zA-Z]+\/?>/g, '').trim();
                 }
                 catch (err2) {
                     try {
-                        target.textContent = elem.html().replace(brRegex, "\r\n").replace(/<\/?[a-zA-Z]+\/?>/g, '').trim();
+                        target.textContent = elementObject.html().replace(brRegex, "\r\n").replace(/<\/?[a-zA-Z]+\/?>/g, '').trim();
                     }
                     catch (err3) {
 
@@ -549,7 +666,9 @@ function CustomCopyToClipboard(elem, placeholderClass) {
     catch (err) { }
 }
 
-// Converts base64 string to byte array
+/** @description Convert base64 string to byte array
+ *  @param {string} base64 Base64 string
+ */
 function ConvertDataURIToBinary(base64) {
     var raw = window.atob(base64);
     var rawLength = raw.length;
@@ -561,6 +680,8 @@ function ConvertDataURIToBinary(base64) {
     return array;
 }
 
+/** @description Simply positions 1 element next to another element
+ */
 function PositionElementRelativeToAnother(source, target) {
     source.position({
         my: "left top",
@@ -570,6 +691,8 @@ function PositionElementRelativeToAnother(source, target) {
     });
 }
 
+/** @description Generate a unique GUID
+ */
 function GenerateGUID() { // Public Domain/MIT
     var d = new Date().getTime(); //Timestamp
     var d2 = (performance && performance.now && (performance.now() * 1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
@@ -584,4 +707,47 @@ function GenerateGUID() { // Public Domain/MIT
         }
         return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
+}
+
+/** @description Dropdown onChange will always fire even if selecting the same item
+ */
+$.fn.alwaysChange = function (callback) {
+    return this.filter('select').each(function () {
+        var elem = this;
+        var $this = $(this);
+
+        $this.change(function () {
+            callback($this.val());
+        }).focus(function () {
+            elem.selectedIndex = -1;
+            elem.blur();
+        });
+    });
+}
+
+/** @description Force redraw of an element
+ */
+function RedrawElement(id) {
+    $("#" + id).hide().show(0);
+}
+
+/** @description JQuery DataTables, particular server side, responsive database sometimes have trouble rendering
+ * (particularly, aligning the headers with the body in the table), this function seems to resolve it. Call after creation
+ */
+function RefreshDataTableColumnsWidths(tableId) {
+    let table = $('#' + tableId).DataTable();
+
+    table.columns.adjust();
+    table.responsive.recalc();
+    table.columns.adjust();
+
+    setTimeout(function () {
+        table.columns.adjust();
+        table.responsive.recalc();
+        table.columns.adjust();
+    }, 250);
+
+    $(window).resize();
+    $(window).trigger('resize');
+    window.dispatchEvent(new Event('resize'));
 }

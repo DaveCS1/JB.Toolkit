@@ -1,6 +1,6 @@
 <map id="JBToolkit.WinForms.CustomMessageBox" name="JBToolkit.WinForms.CustomMessageBox">
-<area shape="rect" id="node1" title="Simplified MsgBox style dialogue using MetroForms layout" alt="" coords="81,521,269,672"/>
-<area shape="rect" id="node2" href="$da/d7e/class_j_b_toolkit_1_1_win_forms_1_1_optimised_metro_form.html" title="Abstract form to inherit that uses the MetroForms styler, and optimises buffering,..." alt="" coords="69,145,281,472"/>
+<area shape="rect" id="node1" title="Simplified MsgBox style dialogue using MetroForms layout" alt="" coords="81,536,269,687"/>
+<area shape="rect" id="node2" href="$da/d7e/class_j_b_toolkit_1_1_win_forms_1_1_optimised_metro_form.html" title="Abstract form to inherit that uses the MetroForms styler, and optimises buffering,..." alt="" coords="69,145,281,487"/>
 <area shape="rect" id="node3" href="$df/d0a/class_metro_form.html" title=" " alt="" coords="5,5,91,83"/>
 <area shape="rect" id="node4" title=" " alt="" coords="115,5,234,83"/>
 <area shape="rect" id="node5" title=" " alt="" coords="277,5,315,83"/>

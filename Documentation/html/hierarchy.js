@@ -181,8 +181,8 @@ var hierarchy =
     [ "JBToolkit.WinForms.ColourHelper.IntensityGenerator", "d7/d72/class_j_b_toolkit_1_1_win_forms_1_1_colour_helper_1_1_intensity_generator.html", null ],
     [ "JBToolkit.Images.ColourHelper.IntensityValue", "d5/da2/class_j_b_toolkit_1_1_images_1_1_colour_helper_1_1_intensity_value.html", null ],
     [ "JBToolkit.WinForms.ColourHelper.IntensityValue", "df/d3c/class_j_b_toolkit_1_1_win_forms_1_1_colour_helper_1_1_intensity_value.html", null ],
-    [ "JBToolkit.Images.ColourHelper.IntensityValueWalker", "db/d16/class_j_b_toolkit_1_1_images_1_1_colour_helper_1_1_intensity_value_walker.html", null ],
     [ "JBToolkit.WinForms.ColourHelper.IntensityValueWalker", "d4/d17/class_j_b_toolkit_1_1_win_forms_1_1_colour_helper_1_1_intensity_value_walker.html", null ],
+    [ "JBToolkit.Images.ColourHelper.IntensityValueWalker", "db/d16/class_j_b_toolkit_1_1_images_1_1_colour_helper_1_1_intensity_value_walker.html", null ],
     [ "JBToolkit.Web.IPHelper", "d2/d3e/class_j_b_toolkit_1_1_web_1_1_i_p_helper.html", null ],
     [ "IProgress", "d6/da7/class_i_progress.html", [
       [ "JBToolkit.ConsoleHelper.ProgressBar", "d7/dc7/class_j_b_toolkit_1_1_console_helper_1_1_progress_bar.html", null ]
@@ -272,6 +272,7 @@ var hierarchy =
       [ "JBToolkit.WinForms.AbstractControlDescriptionProvider< TAbstract, TBase >", "db/d7d/class_j_b_toolkit_1_1_win_forms_1_1_abstract_control_description_provider.html", null ]
     ] ],
     [ "JBToolkit.SharePoint.CSOM.Upload", "d1/dbd/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_upload.html", null ],
+    [ "Uploader", "d4/d3b/class_uploader.html", null ],
     [ "JBToolkit.Web.Url", "d5/d4b/class_j_b_toolkit_1_1_web_1_1_url.html", null ],
     [ "JBToolkit.SharePoint.CSOM.Utils", "d0/de3/class_j_b_toolkit_1_1_share_point_1_1_c_s_o_m_1_1_utils.html", null ],
     [ "ValidationAttribute", "d6/d5b/class_validation_attribute.html", [

@@ -1,0 +1,54 @@
+Add capabilities to add, edit and delete rows in your datatables through the use of modals.
+
+Inline editing is not supported (so far).\hypertarget{md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_8_toolkit__scripts_package8968dd917b05679ae1fd4af33ec29a85_autotoc_md4}{}\doxysubsection{Basic usage}\label{md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_8_toolkit__scripts_package8968dd917b05679ae1fd4af33ec29a85_autotoc_md4}
+Include in the project the libraries j\+Query, jquery.\+data\+Tables, data\+Tables.\+buttons, data\+Tables.\+select.
+
+Define a Data\+Table as usual.
+
+Pass to the Data\+Table constructor at least the following arguments\+: {\ttfamily dom}, {\ttfamily select}, {\ttfamily buttons}, {\ttfamily alt\+Editor\+: true} (see the examples).\hypertarget{md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_8_toolkit__scripts_package8968dd917b05679ae1fd4af33ec29a85_autotoc_md5}{}\doxysubsection{Examples}\label{md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_8_toolkit__scripts_package8968dd917b05679ae1fd4af33ec29a85_autotoc_md5}
+There are some examples in the folder {\ttfamily example}, for different use cases\+:
+
+
+\begin{DoxyItemize}
+\item a Data\+Table populated and maintained via Javascript, (no A\+J\+AX, no databases), with data organized in rows;
+\item a Data\+Table populated and maintained via Javascript, (no A\+J\+AX, no databases), with data organized in objects;
+\item a Data\+Table populated via A\+J\+AX, to be used in connection with a databases, with data organized in objects.
+\end{DoxyItemize}
+
+Examples can be browsed at \href{https://luca-vercelli.github.io/DataTable-AltEditor}{\texttt{ https\+://luca-\/vercelli.\+github.\+io/\+Data\+Table-\/\+Alt\+Editor}} .\hypertarget{md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_8_toolkit__scripts_package8968dd917b05679ae1fd4af33ec29a85_autotoc_md6}{}\doxysubsection{A\+J\+A\+X setup}\label{md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_8_toolkit__scripts_package8968dd917b05679ae1fd4af33ec29a85_autotoc_md6}
+The datatable accepts the following callback functions as arguments\+: \begin{DoxyVerb}onAddRow(alteditor, rowdata, success, error)
+onEditRow(alteditor, rowdata, success, error)
+onDeleteRow(alteditor, rowdata, success, error)
+\end{DoxyVerb}
+
+
+In the most common case, these function should call {\ttfamily \$.ajax} as expected by the webservice. The two functions {\ttfamily success} and {\ttfamily error} should be passed as arguments to {\ttfamily \$.ajax}.
+
+Within the procedures {\ttfamily on\+Add\+Row}, {\ttfamily on\+Edit\+Row}, {\ttfamily on\+Delete\+Row}, you can access datatable object using {\ttfamily alteditor.\+s.\+dt}.
+
+Webservice {\bfseries{must}} return the modified row in J\+S\+ON format, because the {\ttfamily success()} function expects this. Otherwise you have to write your own {\ttfamily success()} callback (e.\+g. refreshing the whole table).\hypertarget{md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_8_toolkit__scripts_package8968dd917b05679ae1fd4af33ec29a85_autotoc_md7}{}\doxysubsection{Row key}\label{md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_8_toolkit__scripts_package8968dd917b05679ae1fd4af33ec29a85_autotoc_md7}
+There is no default key in the table. Inside your callback functions, probably you will need a row key to build U\+RL\textquotesingle{}s, in that case you can get them from the {\ttfamily rowdata} parameter.\hypertarget{md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_8_toolkit__scripts_package8968dd917b05679ae1fd4af33ec29a85_autotoc_md8}{}\doxysubsection{Column id}\label{md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_8_toolkit__scripts_package8968dd917b05679ae1fd4af33ec29a85_autotoc_md8}
+Please always keep in mind that Data\+Table framework allows two different kinds of \char`\"{}rows\char`\"{}\+: Arrays and Objects. In first case columns are indexed through integers; in second case columns are indexed by their attribute name. Usually J\+S\+ON\textquotesingle{}s use the Object approach, but we cannot be sure.\hypertarget{md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_8_toolkit__scripts_package8968dd917b05679ae1fd4af33ec29a85_autotoc_md9}{}\doxysubsection{Column modifiers, and validation}\label{md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_8_toolkit__scripts_package8968dd917b05679ae1fd4af33ec29a85_autotoc_md9}
+Following column options are supported.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Column option }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Accepted values }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description  }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Column option }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Accepted values }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description  }\\\cline{1-3}
+\endhead
+{\ttfamily type} &{\ttfamily \char`\"{}text\char`\"{} \textbackslash{}$\vert$ \char`\"{}select\char`\"{} \textbackslash{}$\vert$ \char`\"{}hidden\char`\"{} \textbackslash{}$\vert$ ...} &Type of H\+T\+ML input to be shown. The value {\ttfamily readonly} is accepted for backward compatibility, but deprecated.  \\\cline{1-3}
+{\ttfamily readonly} &{\ttfamily true \textbackslash{}$\vert$ false} &Add {\ttfamily readonly} H\+T\+ML attribute  \\\cline{1-3}
+{\ttfamily disabled} &{\ttfamily true \textbackslash{}$\vert$ false} &Add {\ttfamily disabled} H\+T\+ML attribute  \\\cline{1-3}
+{\ttfamily hover\+Msg} &{\ttfamily \char`\"{}some msg\char`\"{}} &The message will appear as a tooltip over the input field.  \\\cline{1-3}
+{\ttfamily unique} &{\ttfamily true \textbackslash{}$\vert$ false} &Ensure that no two rows have the same value. The check is performed client side, not server side. Set H\+T\+ML {\ttfamily \char`\"{}data-\/unique\char`\"{}} attribute. (Probably there\textquotesingle{}s some issue with this).  \\\cline{1-3}
+{\ttfamily unique\+Msg} &{\ttfamily \char`\"{}some msg\char`\"{}} &An error message that is displayed when the unique constraint is not respected. Set H\+T\+ML {\ttfamily \char`\"{}data-\/unique\+Msg\char`\"{}} attribute.  \\\cline{1-3}
+{\ttfamily special} &{\ttfamily \char`\"{}any string\char`\"{}} &Set H\+T\+ML {\ttfamily \char`\"{}data-\/special\char`\"{}} attribute (don\textquotesingle{}t know what\textquotesingle{}s that needed for).  \\\cline{1-3}
+{\ttfamily editor\+On\+Change} &function &Custom onchange function. It will take as arguments the jquery event and the alt\+Editor object.  \\\cline{1-3}
+\end{longtabu}
+$\vert$ $\vert$ $\vert$ $\vert$ {\bfseries{Options for columns with type {\ttfamily \char`\"{}text\char`\"{}}\+:}} $\vert$ $\vert$ $\vert$ $\vert$ {\ttfamily pattern} $\vert$ {\ttfamily r.\+e.} $\vert$ The typed text will be matched against given regular expression, before submit. $\vert$ $\vert$ {\ttfamily msg} $\vert$ {\ttfamily \char`\"{}some msg\char`\"{}} $\vert$ An error message that is displayed in case pattern is not matched. Set H\+T\+ML {\ttfamily \char`\"{}data-\/error\+Msg\char`\"{}} attribute. $\vert$ $\vert$ {\ttfamily max\+Length} $\vert$ {\ttfamily integer} $\vert$ Set H\+T\+ML {\ttfamily \char`\"{}maxlength\char`\"{}} attribute. $\vert$ $\vert$ {\ttfamily datepicker} $\vert$ {\ttfamily \{\}} $\vert$ Enable a datepicker component. j\+Query-\/\+UI plugin must be linked. More datepicker configuration options may be passed within the object. $\vert$ $\vert$ {\ttfamily datetimepicker} $\vert$ {\ttfamily \{\}} $\vert$ Enable a datetimepicker component. j\+Query datetimepicker plugin must be linked. More datetimepicker configuration options may be passed within the object. $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ {\bfseries{Options for columns with type {\ttfamily \char`\"{}select\char`\"{}}\+:}} $\vert$ $\vert$ $\vert$ $\vert$ {\ttfamily options} $\vert$ {\ttfamily \mbox{[}\char`\"{}a\char`\"{}, \char`\"{}b\char`\"{}, \char`\"{}c\char`\"{}\mbox{]}} or {\ttfamily \{\char`\"{}a\char`\"{}\+:\char`\"{}\+A\char`\"{}, \char`\"{}b\char`\"{}\+:\char`\"{}\+B\char`\"{}, \char`\"{}c\char`\"{}\+:\char`\"{}\+C\char`\"{}\}} $\vert$ The options that shall be presented. $\vert$ $\vert$ {\ttfamily select2} $\vert$ {\ttfamily \{\}} $\vert$ Enable a select2 component. Select2 j\+Query plugin must be linked. More select2 configuration options may be passed within the object. $\vert$ $\vert$ {\ttfamily multiple} $\vert$ {\ttfamily true \textbackslash{}$\vert$ false} $\vert$ Set H\+T\+ML {\ttfamily \char`\"{}multiple\char`\"{}} attribute. $\vert$\hypertarget{md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_8_toolkit__scripts_package8968dd917b05679ae1fd4af33ec29a85_autotoc_md10}{}\doxysubsection{Credits}\label{md__d_1__one_drive__documents__work__repositories__j_b_8_toolkit__j_b_8_toolkit__scripts_package8968dd917b05679ae1fd4af33ec29a85_autotoc_md10}
+See L\+I\+C\+E\+N\+SE and C\+H\+A\+N\+G\+E\+L\+OG for various credits. 

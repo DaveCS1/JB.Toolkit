@@ -1,0 +1,52 @@
+.TH "md__d_1__one_drive__documents__work__repositories__j_b._toolkit__j_b._toolkit__scripts_packages_data_tables_extensions__alt_editor__readme" 3 "Sat Oct 10 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md__d_1__one_drive__documents__work__repositories__j_b._toolkit__j_b._toolkit__scripts_packages_data_tables_extensions__alt_editor__readme \- JQuery Datatables Editor - Alternative to the official one 
+Add capabilities to add, edit and delete rows in your datatables through the use of modals\&.
+.PP
+Inline editing is not supported (so far)\&.
+.SS "Basic usage"
+Include in the project the libraries jQuery, jquery\&.dataTables, dataTables\&.buttons, dataTables\&.select\&.
+.PP
+Define a DataTable as usual\&.
+.PP
+Pass to the DataTable constructor at least the following arguments: \fCdom\fP, \fCselect\fP, \fCbuttons\fP, \fCaltEditor: true\fP (see the examples)\&.
+.SS "Examples"
+There are some examples in the folder \fCexample\fP, for different use cases:
+.PP
+.IP "\(bu" 2
+a DataTable populated and maintained via Javascript, (no AJAX, no databases), with data organized in rows;
+.IP "\(bu" 2
+a DataTable populated and maintained via Javascript, (no AJAX, no databases), with data organized in objects;
+.IP "\(bu" 2
+a DataTable populated via AJAX, to be used in connection with a databases, with data organized in objects\&.
+.PP
+.PP
+Examples can be browsed at https://luca-vercelli.github.io/DataTable-AltEditor \&.
+.SS "AJAX setup"
+The datatable accepts the following callback functions as arguments: 
+.PP
+.nf
+onAddRow(alteditor, rowdata, success, error)
+onEditRow(alteditor, rowdata, success, error)
+onDeleteRow(alteditor, rowdata, success, error)
+
+.fi
+.PP
+.PP
+In the most common case, these function should call \fC$\&.ajax\fP as expected by the webservice\&. The two functions \fCsuccess\fP and \fCerror\fP should be passed as arguments to \fC$\&.ajax\fP\&.
+.PP
+Within the procedures \fConAddRow\fP, \fConEditRow\fP, \fConDeleteRow\fP, you can access datatable object using \fCalteditor\&.s\&.dt\fP\&.
+.PP
+Webservice \fBmust\fP return the modified row in JSON format, because the \fCsuccess()\fP function expects this\&. Otherwise you have to write your own \fCsuccess()\fP callback (e\&.g\&. refreshing the whole table)\&.
+.SS "Row key"
+There is no default key in the table\&. Inside your callback functions, probably you will need a row key to build URL's, in that case you can get them from the \fCrowdata\fP parameter\&.
+.SS "Column id"
+Please always keep in mind that DataTable framework allows two different kinds of 'rows': Arrays and Objects\&. In first case columns are indexed through integers; in second case columns are indexed by their attribute name\&. Usually JSON's use the Object approach, but we cannot be sure\&.
+.SS "Column modifiers, and validation"
+Following column options are supported\&.
+.PP
+Column option Accepted values Description  \fCtype\fP \fC'text' \\| 'select' \\| 'hidden' \\| \&.\&.\&.\fP Type of HTML input to be shown\&. The value \fCreadonly\fP is accepted for backward compatibility, but deprecated\&.  \fCreadonly\fP \fCtrue \\| false\fP Add \fCreadonly\fP HTML attribute  \fCdisabled\fP \fCtrue \\| false\fP Add \fCdisabled\fP HTML attribute  \fChoverMsg\fP \fC'some msg'\fP The message will appear as a tooltip over the input field\&.  \fCunique\fP \fCtrue \\| false\fP Ensure that no two rows have the same value\&. The check is performed client side, not server side\&. Set HTML \fC'data-unique'\fP attribute\&. (Probably there's some issue with this)\&.  \fCuniqueMsg\fP \fC'some msg'\fP An error message that is displayed when the unique constraint is not respected\&. Set HTML \fC'data-uniqueMsg'\fP attribute\&.  \fCspecial\fP \fC'any string'\fP Set HTML \fC'data-special'\fP attribute (don't know what's that needed for)\&.  \fCeditorOnChange\fP function Custom onchange function\&. It will take as arguments the jquery event and the altEditor object\&.  | | | | \fBOptions for columns with type \fC'text'\fP:\fP | | | | \fCpattern\fP | \fCr\&.e\&.\fP | The typed text will be matched against given regular expression, before submit\&. | | \fCmsg\fP | \fC'some msg'\fP | An error message that is displayed in case pattern is not matched\&. Set HTML \fC'data-errorMsg'\fP attribute\&. | | \fCmaxLength\fP | \fCinteger\fP | Set HTML \fC'maxlength'\fP attribute\&. | | \fCdatepicker\fP | \fC{}\fP | Enable a datepicker component\&. jQuery-UI plugin must be linked\&. More datepicker configuration options may be passed within the object\&. | | \fCdatetimepicker\fP | \fC{}\fP | Enable a datetimepicker component\&. jQuery datetimepicker plugin must be linked\&. More datetimepicker configuration options may be passed within the object\&. | | | | | \fBOptions for columns with type \fC'select'\fP:\fP | | | | \fCoptions\fP | \fC['a', 'b', 'c']\fP or \fC{'a':'A', 'b':'B', 'c':'C'}\fP | The options that shall be presented\&. | | \fCselect2\fP | \fC{}\fP | Enable a select2 component\&. Select2 jQuery plugin must be linked\&. More select2 configuration options may be passed within the object\&. | | \fCmultiple\fP | \fCtrue \\| false\fP | Set HTML \fC'multiple'\fP attribute\&. |
+.SS "Credits"
+See LICENSE and CHANGELOG for various credits\&. 

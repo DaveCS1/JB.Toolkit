@@ -140,7 +140,7 @@ namespace System
         /// <summary>
         /// Convert to SQL acceptable DateTime string - yyyy-MM-dd HH:mm:ss.fff
         /// </summary>
-        public static string ToSQLDateTime(this DateTime dateTime)
+        public static string ToSqlDateTime(this DateTime dateTime)
         {
             return dateTime.ToString("yyyy-MM-dd HH:mm:ss.fff");
         }

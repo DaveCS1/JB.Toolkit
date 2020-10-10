@@ -120,11 +120,14 @@ namespace JBToolkit.WinForms
 
         private void Box_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Control && e.KeyCode == Keys.A)
-            {
-                box.SelectionStart = 0;
-                box.SelectionLength = Text.Length;
-            }
+            base.OnKeyDown(e);
+            box.Text = Text;
+        }
+
+        protected override void OnKeyDown(KeyEventArgs e)
+        {
+            base.OnKeyDown(e);
+            box.Text = Text;
         }
 
         protected override void OnTextChanged(EventArgs e)

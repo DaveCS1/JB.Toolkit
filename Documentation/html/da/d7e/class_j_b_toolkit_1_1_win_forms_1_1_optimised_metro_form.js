@@ -10,6 +10,7 @@ var class_j_b_toolkit_1_1_win_forms_1_1_optimised_metro_form =
     [ "SetAllControlsDoubleBuffered", "da/d7e/class_j_b_toolkit_1_1_win_forms_1_1_optimised_metro_form.html#a29e384ba71753e3014f1ea23591461d4", null ],
     [ "SetSystemParametersInfo", "da/d7e/class_j_b_toolkit_1_1_win_forms_1_1_optimised_metro_form.html#a4b1a40afef599f2a651b5cc7329c1fcc", null ],
     [ "SetTaskbarPercent", "da/d7e/class_j_b_toolkit_1_1_win_forms_1_1_optimised_metro_form.html#a0fb3a3ab2e251350f644ecc9e9d7b96f", null ],
+    [ "SetTextBoxCueBanner", "da/d7e/class_j_b_toolkit_1_1_win_forms_1_1_optimised_metro_form.html#abcbe01822879f7661c547063aea8c6d3", null ],
     [ "SetTextBoxCueBanner", "da/d7e/class_j_b_toolkit_1_1_win_forms_1_1_optimised_metro_form.html#a27c09716f8e37025305a17f63c0a5142", null ],
     [ "ShowMetroMessageBox", "da/d7e/class_j_b_toolkit_1_1_win_forms_1_1_optimised_metro_form.html#addd45df42a87bb0965aea5f182021668", null ],
     [ "WndProc", "da/d7e/class_j_b_toolkit_1_1_win_forms_1_1_optimised_metro_form.html#a28d3ae10b5058644572f6a68dfae7148", null ],

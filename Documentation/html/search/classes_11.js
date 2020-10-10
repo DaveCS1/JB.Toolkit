@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quickfuzzymatch_2267',['QuickFuzzyMatch',['../dd/d8c/class_j_b_toolkit_1_1_fuzzy_logic_1_1_algorithms_1_1_quick_fuzzy_match.html',1,'JBToolkit::FuzzyLogic::Algorithms']]]
+  ['quickfuzzymatch_2273',['QuickFuzzyMatch',['../dd/d8c/class_j_b_toolkit_1_1_fuzzy_logic_1_1_algorithms_1_1_quick_fuzzy_match.html',1,'JBToolkit::FuzzyLogic::Algorithms']]]
 ];

@@ -3,6 +3,7 @@ var class_j_b_toolkit_1_1_win_forms_1_1_round_text_box =
     [ "RoundTextBox", "d7/d02/class_j_b_toolkit_1_1_win_forms_1_1_round_text_box.html#a6b4899ab37ee02842613b98a204b9c42", null ],
     [ "OnFontChanged", "d7/d02/class_j_b_toolkit_1_1_win_forms_1_1_round_text_box.html#ae203a0c29cc8569a14084328f04770de", null ],
     [ "OnForeColorChanged", "d7/d02/class_j_b_toolkit_1_1_win_forms_1_1_round_text_box.html#a27d540e864bcf5ca356be0bf25c0ffd8", null ],
+    [ "OnKeyDown", "d7/d02/class_j_b_toolkit_1_1_win_forms_1_1_round_text_box.html#a87ac91bb4a4cd40f782f7d387694caf4", null ],
     [ "OnPaint", "d7/d02/class_j_b_toolkit_1_1_win_forms_1_1_round_text_box.html#ae35140720dc21734f4cf1d2551220541", null ],
     [ "OnTextChanged", "d7/d02/class_j_b_toolkit_1_1_win_forms_1_1_round_text_box.html#a0ca6c7fd6846dbf5056d6ae0119ee656", null ],
     [ "SelectAll", "d7/d02/class_j_b_toolkit_1_1_win_forms_1_1_round_text_box.html#afe77c1a04c7ca636323cabee51e5df0c", null ],

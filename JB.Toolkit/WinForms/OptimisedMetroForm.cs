@@ -258,6 +258,11 @@ namespace JBToolkit.WinForms
             SendMessage(textbox.Handle, EM_SETCUEBANNER, 1, text);
         }
 
+        public void SetTextBoxCueBanner(RoundTextBox textbox, string text)
+        {
+            SendMessage(textbox.box.Handle, EM_SETCUEBANNER, 1, text);
+        }
+
         public const int EM_SETCUEBANNER = 0x1501;
 
         #endregion

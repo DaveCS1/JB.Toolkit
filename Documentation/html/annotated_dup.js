@@ -32,5 +32,6 @@ var annotated_dup =
     [ "ScrollableControl", "dc/da7/class_scrollable_control.html", null ],
     [ "ToolTip", "db/d05/class_tool_tip.html", null ],
     [ "TypeDescriptionProvider", "d0/d67/class_type_description_provider.html", null ],
+    [ "Uploader", "d4/d3b/class_uploader.html", "d4/d3b/class_uploader" ],
     [ "ValidationAttribute", "d6/d5b/class_validation_attribute.html", null ]
 ];

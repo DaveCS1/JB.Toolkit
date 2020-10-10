@@ -1,19 +1,4 @@
 var searchData=
 [
-  ['readonly_5f_3338',['readonly_',['../dd/d25/class_system_1_1_drawing_1_1_html_1_1_html_constants.html#a74e2b15b72db6d3e52f00fff2af4544d',1,'System::Drawing::Html::HtmlConstants']]],
-  ['recordsfiltered_3339',['recordsFiltered',['../dd/da8/class_j_b_toolkit_1_1_views_1_1_data_table_result_set.html#a9e851e25d477bda14d8e8544500bfaf8',1,'JBToolkit::Views::DataTableResultSet']]],
-  ['recordstotal_3340',['recordsTotal',['../dd/da8/class_j_b_toolkit_1_1_views_1_1_data_table_result_set.html#a75c98fdf2b99fe960455407603741983',1,'JBToolkit::Views::DataTableResultSet']]],
-  ['rect_3341',['Rect',['../d0/de3/class_j_b_toolkit_1_1_win_forms_1_1_rounded_rectangle_f.html#a4f8c65bbca778e8b9d6806b571e4b069',1,'JBToolkit::WinForms::RoundedRectangleF']]],
-  ['red_3342',['Red',['../da/df5/class_system_1_1_drawing_1_1_html_1_1_css_constants.html#a751d5d98a290ef08a965876ec2537005',1,'System::Drawing::Html::CssConstants']]],
-  ['regex_3343',['regex',['../d8/db1/class_j_b_toolkit_1_1_views_1_1_data_table_search.html#a61647fb9d46cc5e042dc0438c6bf9ce9',1,'JBToolkit::Views::DataTableSearch']]],
-  ['rel_3344',['rel',['../dd/d25/class_system_1_1_drawing_1_1_html_1_1_html_constants.html#a5319a5026b5069b99873704da6a923f7',1,'System::Drawing::Html::HtmlConstants']]],
-  ['reserved_3345',['Reserved',['../de/d52/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon_1_1_icon_entry.html#a2189e8ecce1fdf5f6bd5088ff99d70ed',1,'JBToolkit::Images::ImageHelper::IconHelper::Icon::IconEntry']]],
-  ['restriction_3346',['restriction',['../da/d8b/_l_i_c_e_n_s_e_8txt.html#af6e42a41d4c1cf711ce91ba8a9536d5e',1,'LICENSE.txt']]],
-  ['rev_3347',['rev',['../dd/d25/class_system_1_1_drawing_1_1_html_1_1_html_constants.html#ad3e4446ac3ac5fcda520471810f76b5a',1,'System::Drawing::Html::HtmlConstants']]],
-  ['right_3348',['Right',['../da/df5/class_system_1_1_drawing_1_1_html_1_1_css_constants.html#afcbc58fbe9874dd77ab1d6a5a77b652b',1,'System.Drawing.Html.CssConstants.Right()'],['../d8/d9b/struct_j_b_toolkit_1_1_windows_1_1_window_helper_1_1_r_e_c_t.html#ad5644efba9b0eb7ec7c2445ea7105e6d',1,'JBToolkit.Windows.WindowHelper.RECT.right()'],['../dd/d25/class_system_1_1_drawing_1_1_html_1_1_html_constants.html#a399025ca24cab1014f05a5a312719709',1,'System.Drawing.Html.HtmlConstants.right()']]],
-  ['rows_3349',['rows',['../dd/d25/class_system_1_1_drawing_1_1_html_1_1_html_constants.html#aca4bd2cd640d57f0d8537a75f25afa96',1,'System.Drawing.Html.HtmlConstants.rows()'],['../d8/dd0/_r_e_a_d_m_e_8txt.html#ace91672ee8b6e4b45442c4fca0127a16',1,'rows():&#160;README.txt']]],
-  ['rowspan_3350',['rowspan',['../dd/d25/class_system_1_1_drawing_1_1_html_1_1_html_constants.html#acadb8d8071c9b081090ca25388fe38b1',1,'System::Drawing::Html::HtmlConstants']]],
-  ['rtf_3351',['rtf',['../d8/dd0/_r_e_a_d_m_e_8txt.html#ae92fa2b81b1f357b63d6cf35156a242c',1,'README.txt']]],
-  ['rtl_3352',['Rtl',['../da/df5/class_system_1_1_drawing_1_1_html_1_1_css_constants.html#a68d283a374bef211c64ad7c6914a1dc5',1,'System::Drawing::Html::CssConstants']]],
-  ['rules_3353',['rules',['../dd/d25/class_system_1_1_drawing_1_1_html_1_1_html_constants.html#ae5c8c05cfa388e33a3407a9514bf2570',1,'System::Drawing::Html::HtmlConstants']]]
+  ['q_3350',['Q',['../dd/d25/class_system_1_1_drawing_1_1_html_1_1_html_constants.html#a917d5d8ab692c3076e245e70ecf471ad',1,'System::Drawing::Html::HtmlConstants']]]
 ];

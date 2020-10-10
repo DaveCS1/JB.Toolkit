@@ -1,13 +1,13 @@
-﻿// Loads PDF into iframe (embeds) with a given PDF URL (file or internal URL)
+﻿/** @description Loads PDF into iframe (embeds) with a given PDF URL (file or internal URL)
+ */
 function LoadPdFromUrl(iFrameContainer, fileUrl) {
-
     var pdfjsUrl = 'Scripts/packages/pdfjs/web/viewer.html?file=';
     iFrameContainer.attr('src', pdfjsUrl + fileUrl);
 }
 
-// Loads PDF into iframe (embeds) with a give 'raw' base64 (without data type identifier) string
+/** @description Loads PDF into iframe (embeds) with a give 'raw' base64 (without data type identifier) string
+ */
 function LoadPdFromBase64String(iFrameContainer, base64) {
-
     var pdfAsDataUri = base64
     var pdfAsArray = ConvertDataURIToBinary(pdfAsDataUri);
     var url = 'Scripts/packages/pdfjs/web/viewer.html?file=';
@@ -19,9 +19,9 @@ function LoadPdFromBase64String(iFrameContainer, base64) {
     iFrameContainer.attr('src', url + encodeURIComponent(dataPdf));
 }
 
-// Loads PDF into iframe (embeds) with a give byte array
+/** @description Loads PDF into iframe (embeds) with a give byte array
+ */
 function LoadPdFromUint8Array(iFrameContainer, Uint8Array) {
-
     var url = '/Scripts/packages/pdfjs/web/viewer.html?file=';
 
     var binaryData = [];
@@ -31,17 +31,17 @@ function LoadPdFromUint8Array(iFrameContainer, Uint8Array) {
     iFrameContainer.attr('src', url + encodeURIComponent(dataPdf));
 }
 
-// Grabs a pdf as base64 string from m-files (hense file id and version required)
-// and embeds it in the given iframe container sourcing a blob as a byte array
-//
-// iFrame shoud look like this:
-//
-//  <div id="mfilesDocument" role="tabpanel" class="tab-pane active pdfobject-container" style="overflow: auto;">
-//     <div style="overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0;">
-//         <iframe id="mfileDocumentIFrame" style="border: none; width: 100%; height: 100%;" frameborder="0"></iframe>
-//     </div>
-//  </div>
-//
+/** @description Loads PDF into iframe (embeds) with a give byte array
+ * Grabs a pdf as base64 string from m-files (hense file id and version required)
+ * and embeds it in the given iframe container sourcing a blob as a byte array
+ * 
+ * iFrame shoud look like this:
+ * <div id="mfilesDocument" role="tabpanel" class="tab-pane active pdfobject-container" style="overflow: auto;">
+ *    <div style="overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0;">
+ *      <iframe id="mfileDocumentIFrame" style="border: none; width: 100%; height: 100%;" frameborder="0"></iframe>
+ *    </div>
+ * </div>
+ */
 function LoadPdfFromMFiles(iFrameContainer, fileId, fileVersion, fileName, parentContainerOptional,
     preloaderContainerOptional, errorContainerOptional, docThumbnailOptional, recordId, recordType) {
 
@@ -102,7 +102,7 @@ function LoadPdfFromMFiles(iFrameContainer, fileId, fileVersion, fileName, paren
         }
     };
 
-    xhttp.open("POST", "/api/MFilesPfd", true);
+    xhttp.open("POST", "/api/Attachments/MFilesPdf", true);
     xhttp.send(json);
 }
 
@@ -116,6 +116,16 @@ function LoadPdfFromMFiles(iFrameContainer, fileId, fileVersion, fileName, paren
 //     path,
 //     base64
 //
+
+/** @description Uses pdf.js's viewer to embed into its own page (redirect with post data)
+ * Allows viewing pdfs on all modern browser with optional input pdf as URL, file path
+ * or base64 string.
+ *
+ * inputType' options include: * 
+ *      url,
+ *      path,
+ *      base64 
+ */
 function LoadFullPageEmbeddedPDF(urlOrPathOrBase64String, inputType, viewOnly, fileName, linkId, linkType) {
 
     var form = document.createElement('form');

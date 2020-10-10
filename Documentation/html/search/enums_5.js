@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['googleapiimagetotexttype_3470',['GoogleApiImageToTextType',['../da/ded/class_j_b_toolkit_1_1_googe_api_1_1_vision.html#a40f0d1918e070974888fb70b0aaca200',1,'JBToolkit::GoogeApi::Vision']]]
+  ['googleapiimagetotexttype_3483',['GoogleApiImageToTextType',['../da/ded/class_j_b_toolkit_1_1_googe_api_1_1_vision.html#a40f0d1918e070974888fb70b0aaca200',1,'JBToolkit::GoogeApi::Vision']]]
 ];
