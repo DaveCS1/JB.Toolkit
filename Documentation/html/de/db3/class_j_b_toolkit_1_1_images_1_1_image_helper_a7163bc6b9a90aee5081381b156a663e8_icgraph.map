@@ -1,0 +1,4 @@
+<map id="JBToolkit.Images.ImageHelper.GetImageXxHash" name="JBToolkit.Images.ImageHelper.GetImageXxHash">
+<area shape="rect" id="node1" title="Get a 32bit xxHash of an image (very fast and useful for comparing)" alt="" coords="255,5,456,47"/>
+<area shape="rect" id="node2" href="$de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper.html#af8917a0454c900da6232797584d7d88d" title="Checks if 1 image is the same as another by comparing its SHA hash. Also performs a quick check on im..." alt="" coords="5,5,207,47"/>
+</map>

@@ -1,4 +1,4 @@
-.TH "JBToolkit.Images.ImageHelper" 3 "Sat Oct 10 2020" "JB.Toolkit" \" -*- nroff -*-
+.TH "JBToolkit.Images.ImageHelper" 3 "Sun Oct 18 2020" "JB.Toolkit" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,52 +11,34 @@ JBToolkit.Images.ImageHelper \- Image manipulation helper methods
 
 .in +1c
 .ti -1c
+.RI "class \fBConverter\fP"
+.br
+.ti -1c
 .RI "class \fBHtmlImageHelper\fP"
 .br
 .ti -1c
 .RI "class \fBIconHelper\fP"
 .br
 .RI "A Helper class for multi-resolution icon files "
+.ti -1c
+.RI "class \fBMimeHelper\fP"
+.br
 .in -1c
 .SS "Static Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "static string \fBGetMimeFromBytes\fP (byte[] data)"
+.RI "static byte[] \fBCompressImage\fP (byte[] imageBytes, int quality=50, int resizeMaxWidth=\-1, int resizeMaxHeight=\-1)"
 .br
-.RI "Gets the mime type from an image byte array IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool "
+.RI "Compresses the image, and also gives the option to resize (max height / width specific while maintaining aspect ration)\&. If set to -1 it means to use the current image's width / height; "
 .ti -1c
-.RI "static string \fBGetMimeFromRawBase64String\fP (string rawBase64String)"
+.RI "static Image \fBCompressImage\fP (Image inputImage, int quality=50, int resizeMaxWidth=\-1, int resizeMaxHeight=\-1)"
 .br
-.RI "Gets the mime type from a a raw Base64 string (without mime type descriptor) IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool "
+.RI "Compresses the image, and also gives the option to resize (max height / width specific while maintaining aspect ration)\&. If set to -1 it means to use the current image's width / height; "
 .ti -1c
-.RI "static string \fBGetMimeFromImage\fP (Image image)"
+.RI "static void \fBCompressImage\fP (string inputImagePath, string outputImagePath, int quality=50, int resizeMaxWidth=\-1, int resizeMaxHeight=\-1)"
 .br
-.RI "Returns the MIME type string from a System\&.Drawing\&.Image i\&.e\&. image/pdf "
-.ti -1c
-.RI "static string \fBGetBase64StringFromBytesWithMime\fP (byte[] imageBytes)"
-.br
-.RI "Returns a base64 string, with detected mime type (using magic numbers) from a image byte array IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool "
-.ti -1c
-.RI "static string \fBGetBase64StringWithMimeTypeFromBase64StringWitoutMimeType\fP (string rawBase64String)"
-.br
-.RI "Returns a base64 string, with detected mime type (using magic numbers) from a raw base64 image string (without mime descriptor) IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool "
-.ti -1c
-.RI "static byte[] \fBConvertImageFormat\fP (byte[] bytes, ImageFormat newFormat)"
-.br
-.RI "Convert image from one format to another Requires \fBSystem\&.Drawing\fP "
-.ti -1c
-.RI "static System\&.Drawing\&.Image \fBConvertImageFormat\fP (System\&.Drawing\&.Image image, ImageFormat newFormat)"
-.br
-.RI "Convert image from one format to another Requires \fBSystem\&.Drawing\fP "
-.ti -1c
-.RI "static void \fBConvertImageFormat\fP (string inputPath, string outputPath, ImageFormat newFormat)"
-.br
-.RI "Convert image from one format to another and save to file Requires \fBSystem\&.Drawing\fP "
-.ti -1c
-.RI "static void \fBSaveImageAsFormat\fP (string inputPath, string outputPath, ImageFormat newFormat)"
-.br
-.RI "Convert image from one format to another and save to file Requires \fBSystem\&.Drawing\fP "
+.RI "Compresses the image, and also gives the option to resize (max height / width specific while maintaining aspect ration)\&. If set to -1 it means to use the current image's width / height; "
 .ti -1c
 .RI "static byte[] \fBResizeImage\fP (byte[] image, int width, int height)"
 .br
@@ -66,21 +48,13 @@ JBToolkit.Images.ImageHelper \- Image manipulation helper methods
 .br
 .RI "Resize an image with specific width and height "
 .ti -1c
-.RI "static void \fBResizedImage\fP (string inputPath, string outputPath, int width, int height)"
-.br
-.RI "Resize an image with specific width and height and saved it to file "
-.ti -1c
-.RI "static void \fBSaveResizedImage\fP (string inputPath, string outputPath, int width, int height)"
+.RI "static void \fBResizeImage\fP (string inputPath, string outputPath, int width, int height)"
 .br
 .RI "Resize an image with specific width and height and saved it to file "
 .ti -1c
 .RI "static byte[] \fBResizeImage\fP (byte[] image, int percentage)"
 .br
 .RI "Resize an image based on percentage to increase (above 100%) or decrease (below 100%) "
-.ti -1c
-.RI "static void \fBSaveResizedImage\fP (string inputPath, string outputPath, int percentage)"
-.br
-.RI "Resize an image based on percentage to increase (above 100%) or decrease (below 100%) and saves it to file "
 .ti -1c
 .RI "static System\&.Drawing\&.Image \fBResizeImage\fP (System\&.Drawing\&.Image image, int percentage)"
 .br
@@ -91,10 +65,6 @@ JBToolkit.Images.ImageHelper \- Image manipulation helper methods
 .RI "Resizes an image based on specific width and height "
 .ti -1c
 .RI "static void \fBResizeImageMaintainAspectRatio\fP (string inputPath, string outputPath, int width, int height)"
-.br
-.RI "Resize an image with specific width and height and saved it to file "
-.ti -1c
-.RI "static void \fBSaveResizedImageMaintainAspectRatio\fP (string inputPath, string outputPath, int width, int height)"
 .br
 .RI "Resize an image with specific width and height and saved it to file "
 .ti -1c
@@ -110,76 +80,17 @@ JBToolkit.Images.ImageHelper \- Image manipulation helper methods
 .br
 .RI "Lightens an image "
 .ti -1c
-.RI "static byte[] \fBCompressJpgeg\fP (byte[] data, long quality=50L)"
+.RI "static System\&.Drawing\&.Image \fBNormalizeOrientation\fP (System\&.Drawing\&.Image image)"
 .br
-.RI "Compress Jpgeg image "
+.RI "This looks to see if there's an exif property on the image (meta property on image file that's usually applied when using the context menu in \fBWindows\fP to rotate an image)\&. If there is it properly rotates the image and removes the exif meta property\&. "
 .ti -1c
-.RI "static byte[] \fBImageXxHash\fP (Image image)"
+.RI "static byte[] \fBGetImageXxHash\fP (Image image)"
 .br
-.RI "Get a 32bit xxHash of an image (useful for comparing) "
+.RI "Get a 32bit xxHash of an image (very fast and useful for comparing) "
 .ti -1c
 .RI "static bool \fBIsSameImage\fP (Image imageA, Image imageB)"
 .br
 .RI "Checks if 1 image is the same as another by comparing its SHA hash\&. Also performs a quick check on image dimentions to avoid performs cost of unnecessarily generating a hash "
-.ti -1c
-.RI "static byte[] \fBConvertImageToByteArray\fP (System\&.Drawing\&.Image image)"
-.br
-.ti -1c
-.RI "static System\&.Drawing\&.Image \fBConvertByteArrayToImage\fP (byte[] bytes)"
-.br
-.ti -1c
-.RI "static MemoryStream \fBConvertImageToMemoryStream\fP (System\&.Drawing\&.Image image)"
-.br
-.ti -1c
-.RI "static byte[] \fBConvertMemoryStreamToByteArray\fP (MemoryStream ms)"
-.br
-.ti -1c
-.RI "static System\&.Drawing\&.Image \fBConvertMemoryStreamToImage\fP (MemoryStream ms)"
-.br
-.ti -1c
-.RI "static string \fBConvertImageToBase64String\fP (System\&.Drawing\&.Image image, bool includeMimeTypeDescriptor=false)"
-.br
-.ti -1c
-.RI "static string \fBConvertImageToBase64String\fP (byte[] bytes, ImageFormat format, bool includeMimeTypeDescriptor=false)"
-.br
-.ti -1c
-.RI "static string \fBConvertByteArrayToBase64String\fP (byte[] bytes, bool includeMimeTypeDescriptor=false)"
-.br
-.ti -1c
-.RI "static string \fBConvertByteArrayToBase64String\fP (byte[] bytes, ImageFormat format, bool includeMimeTypeDescriptor=false)"
-.br
-.ti -1c
-.RI "static string \fBConvertMemoryStreamToBase64String\fP (MemoryStream ms, bool includeMimeTypeDescriptor=false)"
-.br
-.ti -1c
-.RI "static string \fBConvertMemoryStreamToBase64String\fP (MemoryStream ms, ImageFormat format, bool includeMimeTypeDescriptor=false)"
-.br
-.ti -1c
-.RI "static byte[] \fBConvertBase64StringToByteArray\fP (string base64String)"
-.br
-.ti -1c
-.RI "static System\&.Drawing\&.Image \fBConvertBase64StringToImage\fP (string base64String)"
-.br
-.ti -1c
-.RI "static MemoryStream \fBConvertBase64StringToMemoryStream\fP (string base64String)"
-.br
-.ti -1c
-.RI "static DataImage \fBConvertBase64StringToDataImage\fP (string base64String)"
-.br
-.ti -1c
-.RI "static System\&.Drawing\&.Image \fBNormalizeOrientation\fP (System\&.Drawing\&.Image image)"
-.br
-.RI "This looks to see if there's an exif property on the image (meta property on image file that's usually applied when using the context menu in \fBWindows\fP to rotate an image)\&. If there is it properly rotates the image and removes the exif meta property\&. "
-.in -1c
-.SS "Static Public Attributes"
-
-.in +1c
-.ti -1c
-.RI "static int \fBMimeSampleSize\fP = 256"
-.br
-.ti -1c
-.RI "static string \fBDefaultMimeType\fP = 'application/octet\-stream'"
-.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -192,83 +103,71 @@ Image manipulation helper methods
 
 .PP
 Adjust the brightness of an image 
-.SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.CompressJpgeg (byte[] data, long quality = \fC50L\fP)\fC [static]\fP"
+.SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.CompressImage (byte[] imageBytes, int quality = \fC50\fP, int resizeMaxWidth = \fC\-1\fP, int resizeMaxHeight = \fC\-1\fP)\fC [static]\fP"
 
 .PP
-Compress Jpgeg image 
+Compresses the image, and also gives the option to resize (max height / width specific while maintaining aspect ration)\&. If set to -1 it means to use the current image's width / height; 
 .PP
 \fBParameters\fP
 .RS 4
-\fIquality\fP Percentage\&. I\&.e\&. 0 = zero quality level, 50 = 50% quality, 100 = no 
+\fIimageBytes\fP Byte array of image as input
+.br
+\fIquality\fP 0 - 100
+.br
+\fIresizeMaxWidth\fP If set to -1 it means to use the current image's width ;
+.br
+\fIresizeMaxHeight\fP If set to -1 it means to use the current image's height;
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Byte array of imagge
 .RE
 .PP
 
-.SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.ConvertBase64StringToByteArray (string base64String)\fC [static]\fP"
-
-.SS "static DataImage JBToolkit\&.Images\&.ImageHelper\&.ConvertBase64StringToDataImage (string base64String)\fC [static]\fP"
-
-.SS "static System\&.Drawing\&.Image JBToolkit\&.Images\&.ImageHelper\&.ConvertBase64StringToImage (string base64String)\fC [static]\fP"
-
-.SS "static MemoryStream JBToolkit\&.Images\&.ImageHelper\&.ConvertBase64StringToMemoryStream (string base64String)\fC [static]\fP"
-
-.SS "static string JBToolkit\&.Images\&.ImageHelper\&.ConvertByteArrayToBase64String (byte[] bytes, bool includeMimeTypeDescriptor = \fCfalse\fP)\fC [static]\fP"
-
-.SS "static string JBToolkit\&.Images\&.ImageHelper\&.ConvertByteArrayToBase64String (byte[] bytes, ImageFormat format, bool includeMimeTypeDescriptor = \fCfalse\fP)\fC [static]\fP"
-
-.SS "static System\&.Drawing\&.Image JBToolkit\&.Images\&.ImageHelper\&.ConvertByteArrayToImage (byte[] bytes)\fC [static]\fP"
-
-.SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.ConvertImageFormat (byte[] bytes, ImageFormat newFormat)\fC [static]\fP"
+.SS "static Image JBToolkit\&.Images\&.ImageHelper\&.CompressImage (Image inputImage, int quality = \fC50\fP, int resizeMaxWidth = \fC\-1\fP, int resizeMaxHeight = \fC\-1\fP)\fC [static]\fP"
 
 .PP
-Convert image from one format to another Requires \fBSystem\&.Drawing\fP 
-.SS "static void JBToolkit\&.Images\&.ImageHelper\&.ConvertImageFormat (string inputPath, string outputPath, ImageFormat newFormat)\fC [static]\fP"
+Compresses the image, and also gives the option to resize (max height / width specific while maintaining aspect ration)\&. If set to -1 it means to use the current image's width / height; 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinputImage\fP System\&.Drawing\&.Image as input
+.br
+\fIquality\fP 0 - 100
+.br
+\fIresizeMaxWidth\fP If set to -1 it means to use the current image's width ;
+.br
+\fIresizeMaxHeight\fP If set to -1 it means to use the current image's height;
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+System\&.Drawing\&.Image as output
+.RE
+.PP
+
+.SS "static void JBToolkit\&.Images\&.ImageHelper\&.CompressImage (string inputImagePath, string outputImagePath, int quality = \fC50\fP, int resizeMaxWidth = \fC\-1\fP, int resizeMaxHeight = \fC\-1\fP)\fC [static]\fP"
 
 .PP
-Convert image from one format to another and save to file Requires \fBSystem\&.Drawing\fP 
-.SS "static System\&.Drawing\&.Image JBToolkit\&.Images\&.ImageHelper\&.ConvertImageFormat (System\&.Drawing\&.Image image, ImageFormat newFormat)\fC [static]\fP"
+Compresses the image, and also gives the option to resize (max height / width specific while maintaining aspect ration)\&. If set to -1 it means to use the current image's width / height; 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinputImagePath\fP Input path to image
+.br
+\fIquality\fP 0 - 100
+.br
+\fIresizeMaxWidth\fP If set to -1 it means to use the current image's width ;
+.br
+\fIresizeMaxHeight\fP If set to -1 it means to use the current image's height;
+.RE
+.PP
+
+.SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.GetImageXxHash (Image image)\fC [static]\fP"
 
 .PP
-Convert image from one format to another Requires \fBSystem\&.Drawing\fP 
-.SS "static string JBToolkit\&.Images\&.ImageHelper\&.ConvertImageToBase64String (byte[] bytes, ImageFormat format, bool includeMimeTypeDescriptor = \fCfalse\fP)\fC [static]\fP"
-
-.SS "static string JBToolkit\&.Images\&.ImageHelper\&.ConvertImageToBase64String (System\&.Drawing\&.Image image, bool includeMimeTypeDescriptor = \fCfalse\fP)\fC [static]\fP"
-
-.SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.ConvertImageToByteArray (System\&.Drawing\&.Image image)\fC [static]\fP"
-
-.SS "static MemoryStream JBToolkit\&.Images\&.ImageHelper\&.ConvertImageToMemoryStream (System\&.Drawing\&.Image image)\fC [static]\fP"
-
-.SS "static string JBToolkit\&.Images\&.ImageHelper\&.ConvertMemoryStreamToBase64String (MemoryStream ms, bool includeMimeTypeDescriptor = \fCfalse\fP)\fC [static]\fP"
-
-.SS "static string JBToolkit\&.Images\&.ImageHelper\&.ConvertMemoryStreamToBase64String (MemoryStream ms, ImageFormat format, bool includeMimeTypeDescriptor = \fCfalse\fP)\fC [static]\fP"
-
-.SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.ConvertMemoryStreamToByteArray (MemoryStream ms)\fC [static]\fP"
-
-.SS "static System\&.Drawing\&.Image JBToolkit\&.Images\&.ImageHelper\&.ConvertMemoryStreamToImage (MemoryStream ms)\fC [static]\fP"
-
-.SS "static string JBToolkit\&.Images\&.ImageHelper\&.GetBase64StringFromBytesWithMime (byte[] imageBytes)\fC [static]\fP"
-
-.PP
-Returns a base64 string, with detected mime type (using magic numbers) from a image byte array IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool 
-.SS "static string JBToolkit\&.Images\&.ImageHelper\&.GetBase64StringWithMimeTypeFromBase64StringWitoutMimeType (string rawBase64String)\fC [static]\fP"
-
-.PP
-Returns a base64 string, with detected mime type (using magic numbers) from a raw base64 image string (without mime descriptor) IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool 
-.SS "static string JBToolkit\&.Images\&.ImageHelper\&.GetMimeFromBytes (byte[] data)\fC [static]\fP"
-
-.PP
-Gets the mime type from an image byte array IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool 
-.SS "static string JBToolkit\&.Images\&.ImageHelper\&.GetMimeFromImage (Image image)\fC [static]\fP"
-
-.PP
-Returns the MIME type string from a System\&.Drawing\&.Image i\&.e\&. image/pdf 
-.SS "static string JBToolkit\&.Images\&.ImageHelper\&.GetMimeFromRawBase64String (string rawBase64String)\fC [static]\fP"
-
-.PP
-Gets the mime type from a a raw Base64 string (without mime type descriptor) IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool 
-.SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.ImageXxHash (Image image)\fC [static]\fP"
-
-.PP
-Get a 32bit xxHash of an image (useful for comparing) 
+Get a 32bit xxHash of an image (very fast and useful for comparing) 
 .SS "static bool JBToolkit\&.Images\&.ImageHelper\&.IsSameImage (Image imageA, Image imageB)\fC [static]\fP"
 
 .PP
@@ -288,10 +187,6 @@ Lightens an image
 
 .PP
 This looks to see if there's an exif property on the image (meta property on image file that's usually applied when using the context menu in \fBWindows\fP to rotate an image)\&. If there is it properly rotates the image and removes the exif meta property\&. 
-.SS "static void JBToolkit\&.Images\&.ImageHelper\&.ResizedImage (string inputPath, string outputPath, int width, int height)\fC [static]\fP"
-
-.PP
-Resize an image with specific width and height and saved it to file 
 .SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.ResizeImage (byte[] image, int percentage)\fC [static]\fP"
 
 .PP
@@ -300,6 +195,10 @@ Resize an image based on percentage to increase (above 100%) or decrease (below 
 
 .PP
 Resizes an image based on specific width and height 
+.SS "static void JBToolkit\&.Images\&.ImageHelper\&.ResizeImage (string inputPath, string outputPath, int width, int height)\fC [static]\fP"
+
+.PP
+Resize an image with specific width and height and saved it to file 
 .SS "static System\&.Drawing\&.Image JBToolkit\&.Images\&.ImageHelper\&.ResizeImage (System\&.Drawing\&.Image image, int percentage)\fC [static]\fP"
 
 .PP
@@ -320,28 +219,6 @@ Resizes an image and keeps the aspect ratio
 
 .PP
 Resize an image with specific width and height and saved it to file 
-.SS "static void JBToolkit\&.Images\&.ImageHelper\&.SaveImageAsFormat (string inputPath, string outputPath, ImageFormat newFormat)\fC [static]\fP"
-
-.PP
-Convert image from one format to another and save to file Requires \fBSystem\&.Drawing\fP 
-.SS "static void JBToolkit\&.Images\&.ImageHelper\&.SaveResizedImage (string inputPath, string outputPath, int percentage)\fC [static]\fP"
-
-.PP
-Resize an image based on percentage to increase (above 100%) or decrease (below 100%) and saves it to file 
-.SS "static void JBToolkit\&.Images\&.ImageHelper\&.SaveResizedImage (string inputPath, string outputPath, int width, int height)\fC [static]\fP"
-
-.PP
-Resize an image with specific width and height and saved it to file 
-.SS "static void JBToolkit\&.Images\&.ImageHelper\&.SaveResizedImageMaintainAspectRatio (string inputPath, string outputPath, int width, int height)\fC [static]\fP"
-
-.PP
-Resize an image with specific width and height and saved it to file 
-.SH "Member Data Documentation"
-.PP 
-.SS "string JBToolkit\&.Images\&.ImageHelper\&.DefaultMimeType = 'application/octet\-stream'\fC [static]\fP"
-
-.SS "int JBToolkit\&.Images\&.ImageHelper\&.MimeSampleSize = 256\fC [static]\fP"
-
 
 .SH "Author"
 .PP 

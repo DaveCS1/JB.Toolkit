@@ -1,6 +1,4 @@
 <map id="JBToolkit.Images.ImageHelper.ResizeImage" name="JBToolkit.Images.ImageHelper.ResizeImage">
-<area shape="rect" id="node1" title="Resizes an image based on specific width and height" alt="" coords="255,71,456,112"/>
-<area shape="rect" id="node2" href="$de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper.html#a217ef7cf10721c64ac52a36e4ae5081e" title="Resize an image with specific width and height and saved it to file" alt="" coords="5,5,207,47"/>
-<area shape="rect" id="node3" href="$de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper.html#a8312bb5f4866f4fdf9d7c06822a6c762" title="Resize an image based on percentage to increase (above 100%) or decrease (below 100%)" alt="" coords="5,71,207,112"/>
-<area shape="rect" id="node4" href="$de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper.html#ac60e4dcfef2f76faa8e5b3829c057d5a" title="Resize an image with specific width and height and saved it to file" alt="" coords="5,136,207,177"/>
+<area shape="rect" id="node1" title="Resizes an image based on specific width and height" alt="" coords="255,5,456,47"/>
+<area shape="rect" id="node2" href="$de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper.html#a3f1f7379fe71edb28f718f241f930929" title="Resize an image with specific width and height and saved it to file" alt="" coords="5,5,207,47"/>
 </map>

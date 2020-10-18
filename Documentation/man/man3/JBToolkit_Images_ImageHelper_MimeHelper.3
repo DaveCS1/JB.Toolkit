@@ -1,0 +1,66 @@
+.TH "JBToolkit.Images.ImageHelper.MimeHelper" 3 "Sun Oct 18 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Images.ImageHelper.MimeHelper
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static string \fBGetMimeFromBytes\fP (byte[] data)"
+.br
+.RI "Gets the mime type from an image byte array IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool "
+.ti -1c
+.RI "static string \fBGetMimeFromMemoryStream\fP (MemoryStream ms)"
+.br
+.RI "Gets the mime type from a memory stream IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool "
+.ti -1c
+.RI "static string \fBGetMimeFromRawBase64String\fP (string rawBase64String)"
+.br
+.RI "Gets the mime type from a a raw Base64 string (without mime type descriptor) IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool "
+.ti -1c
+.RI "static string \fBGetMimeFromImage\fP (Image image)"
+.br
+.RI "Returns the MIME type string from a System\&.Drawing\&.Image i\&.e\&. image/pdf "
+.ti -1c
+.RI "static string \fBGetBase64StringFromBytesWithMime\fP (byte[] imageBytes)"
+.br
+.RI "Returns a base64 string, with detected mime type (using magic numbers) from a image byte array IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool "
+.ti -1c
+.RI "static string \fBGetBase64StringWithMimeTypeFromBase64StringWitoutMimeType\fP (string rawBase64String)"
+.br
+.RI "Returns a base64 string, with detected mime type (using magic numbers) from a raw base64 image string (without mime descriptor) IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "static string JBToolkit\&.Images\&.ImageHelper\&.MimeHelper\&.GetBase64StringFromBytesWithMime (byte[] imageBytes)\fC [static]\fP"
+
+.PP
+Returns a base64 string, with detected mime type (using magic numbers) from a image byte array IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool 
+.SS "static string JBToolkit\&.Images\&.ImageHelper\&.MimeHelper\&.GetBase64StringWithMimeTypeFromBase64StringWitoutMimeType (string rawBase64String)\fC [static]\fP"
+
+.PP
+Returns a base64 string, with detected mime type (using magic numbers) from a raw base64 image string (without mime descriptor) IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool 
+.SS "static string JBToolkit\&.Images\&.ImageHelper\&.MimeHelper\&.GetMimeFromBytes (byte[] data)\fC [static]\fP"
+
+.PP
+Gets the mime type from an image byte array IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool 
+.SS "static string JBToolkit\&.Images\&.ImageHelper\&.MimeHelper\&.GetMimeFromImage (Image image)\fC [static]\fP"
+
+.PP
+Returns the MIME type string from a System\&.Drawing\&.Image i\&.e\&. image/pdf 
+.SS "static string JBToolkit\&.Images\&.ImageHelper\&.MimeHelper\&.GetMimeFromMemoryStream (MemoryStream ms)\fC [static]\fP"
+
+.PP
+Gets the mime type from a memory stream IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool 
+.SS "static string JBToolkit\&.Images\&.ImageHelper\&.MimeHelper\&.GetMimeFromRawBase64String (string rawBase64String)\fC [static]\fP"
+
+.PP
+Gets the mime type from a a raw Base64 string (without mime type descriptor) IMPORTANT: Uses urlmon\&.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow 32-Bit applications in the AppPool 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

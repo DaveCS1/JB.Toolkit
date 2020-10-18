@@ -133,7 +133,7 @@ namespace JBToolkit.Images
                 Byte[] _byte = GetImageBytesFromUrl(url);
 
                 if (includeMimeTypeDescriptor)
-                    return Images.ImageHelper.GetBase64StringFromBytesWithMime(_byte);
+                    return Images.ImageHelper.MimeHelper.GetBase64StringFromBytesWithMime(_byte);
 
                 _sb.Append(Convert.ToBase64String(_byte, 0, _byte.Length));
 
@@ -171,16 +171,6 @@ namespace JBToolkit.Images
                 }
 
                 return (buf);
-            }
-
-            /// <summary>
-            /// Returns a base64 string, with detected mime type (using magic numbers) from a image byte array
-            /// IMPORTANT: Uses urlmon.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow
-            /// 32-Bit applications in the AppPool
-            /// </summary>
-            public static string GetBase64StringFromBytesWithMime(byte[] imageBytes)
-            {
-                return "data:" + GetMimeFromBytes(imageBytes) + ";base64," + Convert.ToBase64String(imageBytes);
             }
 
             /// <summary>

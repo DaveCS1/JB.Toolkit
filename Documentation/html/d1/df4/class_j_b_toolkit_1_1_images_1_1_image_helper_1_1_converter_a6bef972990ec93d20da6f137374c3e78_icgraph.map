@@ -1,0 +1,4 @@
+<map id="JBToolkit.Images.ImageHelper.Converter.MagickConvertImageFormat" name="JBToolkit.Images.ImageHelper.Converter.MagickConvertImageFormat">
+<area shape="rect" id="node1" title="Convert image from one format to another and output to byte array. This method uses ImageMagick,..." alt="" coords="295,5,536,47"/>
+<area shape="rect" id="node2" href="$d1/df4/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_converter.html#a27201b6b26281f31bf7938bd7ce8fdbb" title="Convert image from one format to another and output to file. This method uses ImageMagick,..." alt="" coords="5,5,247,47"/>
+</map>

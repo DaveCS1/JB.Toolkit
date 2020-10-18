@@ -1,0 +1,4 @@
+<map id="JBToolkit.Images.ImageHelper.MimeHelper.GetBase64StringFromBytesWithMime" name="JBToolkit.Images.ImageHelper.MimeHelper.GetBase64StringFromBytesWithMime">
+<area shape="rect" id="node1" title="Returns a base64 string, with detected mime type (using magic numbers) from a image byte array IMPORT..." alt="" coords="5,5,264,61"/>
+<area shape="rect" id="node2" href="$d0/dd7/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_mime_helper.html#a3c22d9f1ad35b93b6bb182f0c50195b4" title="Gets the mime type from an image byte array IMPORTANT: Uses urlmon.dll DLLIMPORT &#45;&gt; If you&#39;re deploym..." alt="" coords="312,13,524,54"/>
+</map>

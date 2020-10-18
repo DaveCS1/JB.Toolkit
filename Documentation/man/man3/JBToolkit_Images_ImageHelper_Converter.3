@@ -1,0 +1,184 @@
+.TH "JBToolkit.Images.ImageHelper.Converter" 3 "Sun Oct 18 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.Images.ImageHelper.Converter
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static byte[] \fBConvertImageFormat\fP (byte[] bytes, ImageFormat newFormat)"
+.br
+.RI "Convert image from one format to another Requires \fBSystem\&.Drawing\fP "
+.ti -1c
+.RI "static System\&.Drawing\&.Image \fBConvertImageFormat\fP (System\&.Drawing\&.Image image, ImageFormat newFormat)"
+.br
+.RI "Convert image from one format to another Requires \fBSystem\&.Drawing\fP "
+.ti -1c
+.RI "static void \fBConvertImageFormat\fP (string inputPath, string outputPath, ImageFormat newFormat)"
+.br
+.RI "Convert image from one format to another and save to file Requires \fBSystem\&.Drawing\fP "
+.ti -1c
+.RI "static byte[] \fBMagickConvertImageFormat\fP (byte[] imageBytes, string toExtension, bool removeWhite=false)"
+.br
+.RI "Convert image from one format to another and output to byte array\&. This method uses ImageMagick, and can basically convert any image file type to a more common file type, including SVG to png, or something like pjpeg to jpeg\&. "
+.ti -1c
+.RI "static void \fBMagickConvertImageFormat\fP (string inputPath, string outputPath, bool removeWhite=false)"
+.br
+.RI "Convert image from one format to another and output to file\&. This method uses ImageMagick, and can basically convert any image file type to a more common file type, including SVG to png, or something like pjpeg to jpeg\&. "
+.ti -1c
+.RI "static MemoryStream \fBMagickConvertImageFormat\fP (MemoryStream inputMs, string toExtension, bool removeWhite=false)"
+.br
+.RI "Convert image from one format to another and output to memory stream\&. This method uses ImageMagick, and can basically convert any image file type to a more common file type, including SVG to png, or something like pjpeg to jpeg\&. "
+.ti -1c
+.RI "static byte[] \fBConvertToByteArray\fP (System\&.Drawing\&.Image image)"
+.br
+.ti -1c
+.RI "static byte[] \fBConvertToByteArray\fP (MemoryStream ms)"
+.br
+.ti -1c
+.RI "static byte[] \fBConvertToByteArray\fP (string base64String)"
+.br
+.ti -1c
+.RI "static System\&.Drawing\&.Image \fBConvertToImage\fP (byte[] bytes)"
+.br
+.ti -1c
+.RI "static System\&.Drawing\&.Image \fBConvertToImage\fP (MemoryStream ms)"
+.br
+.ti -1c
+.RI "static System\&.Drawing\&.Image \fBConvertToImage\fP (string base64String)"
+.br
+.ti -1c
+.RI "static MemoryStream \fBConvertToMemoryStream\fP (System\&.Drawing\&.Image image)"
+.br
+.ti -1c
+.RI "static MemoryStream \fBConvertToMemoryStream\fP (byte[] imageBytes)"
+.br
+.ti -1c
+.RI "static MemoryStream \fBConvertToMemoryStream\fP (string base64String)"
+.br
+.ti -1c
+.RI "static string \fBConvertToBase64String\fP (System\&.Drawing\&.Image image, bool includeMimeTypeDescriptor=false)"
+.br
+.ti -1c
+.RI "static string \fBConvertToBase64String\fP (byte[] bytes, bool includeMimeTypeDescriptor=false)"
+.br
+.ti -1c
+.RI "static string \fBConvertToBase64String\fP (byte[] bytes, ImageFormat format, bool includeMimeTypeDescriptor=false)"
+.br
+.ti -1c
+.RI "static string \fBConvertToBase64String\fP (MemoryStream ms, bool includeMimeTypeDescriptor=false)"
+.br
+.ti -1c
+.RI "static string \fBConvertToBase64String\fP (MemoryStream ms, ImageFormat format, bool includeMimeTypeDescriptor=false)"
+.br
+.ti -1c
+.RI "static DataImage \fBConvertToDataImage\fP (string base64String)"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertImageFormat (byte[] bytes, ImageFormat newFormat)\fC [static]\fP"
+
+.PP
+Convert image from one format to another Requires \fBSystem\&.Drawing\fP 
+.SS "static void JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertImageFormat (string inputPath, string outputPath, ImageFormat newFormat)\fC [static]\fP"
+
+.PP
+Convert image from one format to another and save to file Requires \fBSystem\&.Drawing\fP 
+.SS "static System\&.Drawing\&.Image JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertImageFormat (System\&.Drawing\&.Image image, ImageFormat newFormat)\fC [static]\fP"
+
+.PP
+Convert image from one format to another Requires \fBSystem\&.Drawing\fP 
+.SS "static string JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertToBase64String (byte[] bytes, bool includeMimeTypeDescriptor = \fCfalse\fP)\fC [static]\fP"
+
+.SS "static string JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertToBase64String (byte[] bytes, ImageFormat format, bool includeMimeTypeDescriptor = \fCfalse\fP)\fC [static]\fP"
+
+.SS "static string JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertToBase64String (MemoryStream ms, bool includeMimeTypeDescriptor = \fCfalse\fP)\fC [static]\fP"
+
+.SS "static string JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertToBase64String (MemoryStream ms, ImageFormat format, bool includeMimeTypeDescriptor = \fCfalse\fP)\fC [static]\fP"
+
+.SS "static string JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertToBase64String (System\&.Drawing\&.Image image, bool includeMimeTypeDescriptor = \fCfalse\fP)\fC [static]\fP"
+
+.SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertToByteArray (MemoryStream ms)\fC [static]\fP"
+
+.SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertToByteArray (string base64String)\fC [static]\fP"
+
+.SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertToByteArray (System\&.Drawing\&.Image image)\fC [static]\fP"
+
+.SS "static DataImage JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertToDataImage (string base64String)\fC [static]\fP"
+
+.SS "static System\&.Drawing\&.Image JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertToImage (byte[] bytes)\fC [static]\fP"
+
+.SS "static System\&.Drawing\&.Image JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertToImage (MemoryStream ms)\fC [static]\fP"
+
+.SS "static System\&.Drawing\&.Image JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertToImage (string base64String)\fC [static]\fP"
+
+.SS "static MemoryStream JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertToMemoryStream (byte[] imageBytes)\fC [static]\fP"
+
+.SS "static MemoryStream JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertToMemoryStream (string base64String)\fC [static]\fP"
+
+.SS "static MemoryStream JBToolkit\&.Images\&.ImageHelper\&.Converter\&.ConvertToMemoryStream (System\&.Drawing\&.Image image)\fC [static]\fP"
+
+.SS "static byte [] JBToolkit\&.Images\&.ImageHelper\&.Converter\&.MagickConvertImageFormat (byte[] imageBytes, string toExtension, bool removeWhite = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Convert image from one format to another and output to byte array\&. This method uses ImageMagick, and can basically convert any image file type to a more common file type, including SVG to png, or something like pjpeg to jpeg\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIimageBytes\fP Input bytes of image
+.br
+\fItoExtension\fP Extension, in order to determine output file type
+.br
+\fIremoveWhite\fP Optionally remove white (to make transparent)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Byte array
+.RE
+.PP
+
+.SS "static MemoryStream JBToolkit\&.Images\&.ImageHelper\&.Converter\&.MagickConvertImageFormat (MemoryStream inputMs, string toExtension, bool removeWhite = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Convert image from one format to another and output to memory stream\&. This method uses ImageMagick, and can basically convert any image file type to a more common file type, including SVG to png, or something like pjpeg to jpeg\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinputMs\fP Input memory stream of image
+.br
+\fItoExtension\fP Extension, in order to determine output file type
+.br
+\fIremoveWhite\fP Optionally remove white (to make transparent)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Memory stream
+.RE
+.PP
+
+.SS "static void JBToolkit\&.Images\&.ImageHelper\&.Converter\&.MagickConvertImageFormat (string inputPath, string outputPath, bool removeWhite = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+Convert image from one format to another and output to file\&. This method uses ImageMagick, and can basically convert any image file type to a more common file type, including SVG to png, or something like pjpeg to jpeg\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinputPath\fP Input path of image
+.br
+\fIoutputPath\fP Output path of new image
+.br
+\fIremoveWhite\fP Optionally remove white (to make transparent)
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

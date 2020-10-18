@@ -113,6 +113,18 @@ namespace JBToolkit.Images
             /// Converts an image to a icon (ico)
             /// </summary>
             /// <param name="input">The input stream</param>
+            /// <param name="output">The output stream</param>
+            /// <returns>Wether or not the icon was succesfully generated</returns>
+            public static bool ConvertToIcon(Stream input, Stream output)
+            {
+                Bitmap inputBitmap = (Bitmap)Bitmap.FromStream(input);
+                return ConvertToIcon(inputBitmap, output);
+            }
+
+            /// <summary>
+            /// Converts an image to a icon (ico)
+            /// </summary>
+            /// <param name="input">The input stream</param>
             /// <returns>Wether or not the icon was succesfully generated</returns>
             public static MemoryStream ConvertToIcon(Stream input)
             {

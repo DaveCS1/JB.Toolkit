@@ -91,7 +91,7 @@ namespace JBToolkit.PdfDoc
         /// <param name="imageTitle">A given title for the prefix of the set of images</param>
         /// <param name="timeoutSeconds">Timeout in seconds before error is reported</param>
         /// <param name="throwOnError"></param>
-        public static void SavePdfAsPng(string inputPath, string rootOutputPath, string imageTitle, int timeoutSeconds = 30)
+        public static void ConvertPdfToPng(string inputPath, string rootOutputPath, string imageTitle, int timeoutSeconds = 30)
         {
             if (!Directory.Exists(rootOutputPath))
             {

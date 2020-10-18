@@ -98,7 +98,7 @@ Collaboration diagram for JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/dfa/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge__coll__graph.png" border="0" usemap="#_j_b_toolkit_8_xml_doc_8_mail_merge_8_word_interop_mail_merge_coll__map" alt="Collaboration graph"/></div>
 <map name="_j_b_toolkit_8_xml_doc_8_mail_merge_8_word_interop_mail_merge_coll__map" id="_j_b_toolkit_8_xml_doc_8_mail_merge_8_word_interop_mail_merge_coll__map">
-<area shape="rect" title="Uses OpenXML to perform a Word Mail Merge." alt="" coords="5,5,245,185"/>
+<area shape="rect" title="Uses OpenXML to perform a Word Mail Merge." alt="" coords="5,5,245,171"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -116,9 +116,6 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a059ef99d3e87774d3d401506a65d9648"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a059ef99d3e87774d3d401506a65d9648">MergeDocumentAndSave</a> (string templatePath, string outputPath, <a class="el" href="../../d1/d7e/_word_interop_mail_merge_8cs.html#a6542cfcff2f8e81f06ade15aa0bfe2b7">DataTable</a> mailMergeData, bool saveAsPDF, bool openAndRender=false)</td></tr>
 <tr class="memdesc:a059ef99d3e87774d3d401506a65d9648"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a mail merges given a dictionary of merge fields and their merge values and saves or opens word for user interaction  <a href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a059ef99d3e87774d3d401506a65d9648">More...</a><br /></td></tr>
 <tr class="separator:a059ef99d3e87774d3d401506a65d9648"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fe84d3a2525369af83ec4310873d132"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a5fe84d3a2525369af83ec4310873d132">IsAMergeField</a> (Field field)</td></tr>
-<tr class="memdesc:a5fe84d3a2525369af83ec4310873d132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is a particular field Word mail merge field  <a href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a5fe84d3a2525369af83ec4310873d132">More...</a><br /></td></tr>
-<tr class="separator:a5fe84d3a2525369af83ec4310873d132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0328f06ab9b398b0d5d3c30ca1d7fc12"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a0328f06ab9b398b0d5d3c30ca1d7fc12">RemovedUnmappedMergeFields</a> (Document document, <a class="el" href="../../d1/d7e/_word_interop_mail_merge_8cs.html#a6542cfcff2f8e81f06ade15aa0bfe2b7">DataTable</a> mergeData)</td></tr>
 <tr class="memdesc:a0328f06ab9b398b0d5d3c30ca1d7fc12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove any unmerged fields remaining in the document  <a href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a0328f06ab9b398b0d5d3c30ca1d7fc12">More...</a><br /></td></tr>
 <tr class="separator:a0328f06ab9b398b0d5d3c30ca1d7fc12"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,47 +130,6 @@ Static Public Member Functions</h2></td></tr>
 <p><a href="https://www.ryadel.com/en/office-interop-dcom-config-windows-server-iis-word-excel-access-asp-net-c-sharp/">https://www.ryadel.com/en/office-interop-dcom-config-windows-server-iis-word-excel-access-asp-net-c-sharp/</a> <a href="http://www.bloing.net/2011/01/how-to-make-iis7-play-nice-with-office-interop/">http://www.bloing.net/2011/01/how-to-make-iis7-play-nice-with-office-interop/</a></p>
 <p>Don't use if the class will get hammered. Either try the OpenXML implementation in this toolkit or speak to someone to invest in Aspose software.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5fe84d3a2525369af83ec4310873d132"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fe84d3a2525369af83ec4310873d132">&#9670;&nbsp;</a></span>IsAMergeField()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge.IsAMergeField </td>
-          <td>(</td>
-          <td class="paramtype">Field&#160;</td>
-          <td class="paramname"><em>field</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Is a particular field Word mail merge field </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a5fe84d3a2525369af83ec4310873d132_icgraph.png" border="0" usemap="#d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a5fe84d3a2525369af83ec4310873d132_icgraph" alt=""/></div>
-<map name="d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a5fe84d3a2525369af83ec4310873d132_icgraph" id="d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a5fe84d3a2525369af83ec4310873d132_icgraph">
-<area shape="rect" title="Is a particular field Word mail merge field" alt="" coords="1220,53,1459,94"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a0328f06ab9b398b0d5d3c30ca1d7fc12" title="Remove any unmerged fields remaining in the document" alt="" coords="901,45,1172,101"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a059ef99d3e87774d3d401506a65d9648" title="Performs a mail merges given a dictionary of merge fields and their merge values and saves or opens w..." alt="" coords="603,45,853,101"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#afcca1b60688c8d924b706da31d1e6701" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory..." alt="" coords="304,45,555,101"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a558cb96cda9edb12e4f49d761530b865" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a base64..." alt="" coords="5,5,256,61"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a3194d6f68821c2cf01b04c9913c3a478" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a byte a..." alt="" coords="5,85,256,141"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="a059ef99d3e87774d3d401506a65d9648"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a059ef99d3e87774d3d401506a65d9648">&#9670;&nbsp;</a></span>MergeDocumentAndSave()</h2>
 
@@ -240,10 +196,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a059ef99d3e87774d3d401506a65d9648_cgraph.png" border="0" usemap="#d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a059ef99d3e87774d3d401506a65d9648_cgraph" alt=""/></div>
 <map name="d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a059ef99d3e87774d3d401506a65d9648_cgraph" id="d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a059ef99d3e87774d3d401506a65d9648_cgraph">
-<area shape="rect" title="Performs a mail merges given a dictionary of merge fields and their merge values and saves or opens w..." alt="" coords="5,35,256,91"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a0328f06ab9b398b0d5d3c30ca1d7fc12" title="Remove any unmerged fields remaining in the document" alt="" coords="304,35,575,91"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a5fe84d3a2525369af83ec4310873d132" title="Is a particular field Word mail merge field" alt="" coords="623,5,861,47"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#acaa008fb8d43b87c3bd60ac2e18ede28" title="If a merge field is in the Word document format &#39;MERGEFIELD SomeMergeField&#39; then just return the fiel..." alt="" coords="633,71,851,127"/>
+<area shape="rect" title="Performs a mail merges given a dictionary of merge fields and their merge values and saves or opens w..." alt="" coords="5,5,256,61"/>
+<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a0328f06ab9b398b0d5d3c30ca1d7fc12" title="Remove any unmerged fields remaining in the document" alt="" coords="304,5,575,61"/>
+<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#acaa008fb8d43b87c3bd60ac2e18ede28" title="If a merge field is in the Word document format &#39;MERGEFIELD SomeMergeField&#39; then just return the fiel..." alt="" coords="623,5,841,61"/>
 </map>
 </div>
 <div class="dynheader">
@@ -314,12 +269,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a558cb96cda9edb12e4f49d761530b865_cgraph.png" border="0" usemap="#d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a558cb96cda9edb12e4f49d761530b865_cgraph" alt=""/></div>
 <map name="d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a558cb96cda9edb12e4f49d761530b865_cgraph" id="d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a558cb96cda9edb12e4f49d761530b865_cgraph">
-<area shape="rect" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a base64..." alt="" coords="5,35,256,91"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#afcca1b60688c8d924b706da31d1e6701" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory..." alt="" coords="304,35,555,91"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a059ef99d3e87774d3d401506a65d9648" title="Performs a mail merges given a dictionary of merge fields and their merge values and saves or opens w..." alt="" coords="603,35,853,91"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a0328f06ab9b398b0d5d3c30ca1d7fc12" title="Remove any unmerged fields remaining in the document" alt="" coords="901,35,1172,91"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a5fe84d3a2525369af83ec4310873d132" title="Is a particular field Word mail merge field" alt="" coords="1220,5,1459,47"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#acaa008fb8d43b87c3bd60ac2e18ede28" title="If a merge field is in the Word document format &#39;MERGEFIELD SomeMergeField&#39; then just return the fiel..." alt="" coords="1230,71,1449,127"/>
+<area shape="rect" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a base64..." alt="" coords="5,5,256,61"/>
+<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#afcca1b60688c8d924b706da31d1e6701" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory..." alt="" coords="304,5,555,61"/>
+<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a059ef99d3e87774d3d401506a65d9648" title="Performs a mail merges given a dictionary of merge fields and their merge values and saves or opens w..." alt="" coords="603,5,853,61"/>
+<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a0328f06ab9b398b0d5d3c30ca1d7fc12" title="Remove any unmerged fields remaining in the document" alt="" coords="901,5,1172,61"/>
+<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#acaa008fb8d43b87c3bd60ac2e18ede28" title="If a merge field is in the Word document format &#39;MERGEFIELD SomeMergeField&#39; then just return the fiel..." alt="" coords="1220,5,1439,61"/>
 </map>
 </div>
 
@@ -379,12 +333,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a3194d6f68821c2cf01b04c9913c3a478_cgraph.png" border="0" usemap="#d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a3194d6f68821c2cf01b04c9913c3a478_cgraph" alt=""/></div>
 <map name="d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a3194d6f68821c2cf01b04c9913c3a478_cgraph" id="d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a3194d6f68821c2cf01b04c9913c3a478_cgraph">
-<area shape="rect" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a byte a..." alt="" coords="5,35,256,91"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#afcca1b60688c8d924b706da31d1e6701" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory..." alt="" coords="304,35,555,91"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a059ef99d3e87774d3d401506a65d9648" title="Performs a mail merges given a dictionary of merge fields and their merge values and saves or opens w..." alt="" coords="603,35,853,91"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a0328f06ab9b398b0d5d3c30ca1d7fc12" title="Remove any unmerged fields remaining in the document" alt="" coords="901,35,1172,91"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a5fe84d3a2525369af83ec4310873d132" title="Is a particular field Word mail merge field" alt="" coords="1220,5,1459,47"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#acaa008fb8d43b87c3bd60ac2e18ede28" title="If a merge field is in the Word document format &#39;MERGEFIELD SomeMergeField&#39; then just return the fiel..." alt="" coords="1230,71,1449,127"/>
+<area shape="rect" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a byte a..." alt="" coords="5,5,256,61"/>
+<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#afcca1b60688c8d924b706da31d1e6701" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory..." alt="" coords="304,5,555,61"/>
+<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a059ef99d3e87774d3d401506a65d9648" title="Performs a mail merges given a dictionary of merge fields and their merge values and saves or opens w..." alt="" coords="603,5,853,61"/>
+<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a0328f06ab9b398b0d5d3c30ca1d7fc12" title="Remove any unmerged fields remaining in the document" alt="" coords="901,5,1172,61"/>
+<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#acaa008fb8d43b87c3bd60ac2e18ede28" title="If a merge field is in the Word document format &#39;MERGEFIELD SomeMergeField&#39; then just return the fiel..." alt="" coords="1220,5,1439,61"/>
 </map>
 </div>
 
@@ -444,11 +397,10 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_afcca1b60688c8d924b706da31d1e6701_cgraph.png" border="0" usemap="#d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_afcca1b60688c8d924b706da31d1e6701_cgraph" alt=""/></div>
 <map name="d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_afcca1b60688c8d924b706da31d1e6701_cgraph" id="d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_afcca1b60688c8d924b706da31d1e6701_cgraph">
-<area shape="rect" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory..." alt="" coords="5,35,256,91"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a059ef99d3e87774d3d401506a65d9648" title="Performs a mail merges given a dictionary of merge fields and their merge values and saves or opens w..." alt="" coords="304,35,555,91"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a0328f06ab9b398b0d5d3c30ca1d7fc12" title="Remove any unmerged fields remaining in the document" alt="" coords="603,35,873,91"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a5fe84d3a2525369af83ec4310873d132" title="Is a particular field Word mail merge field" alt="" coords="921,5,1160,47"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#acaa008fb8d43b87c3bd60ac2e18ede28" title="If a merge field is in the Word document format &#39;MERGEFIELD SomeMergeField&#39; then just return the fiel..." alt="" coords="931,71,1150,127"/>
+<area shape="rect" title="Performs a mail merges given a dictionary of merge fields and their merge values and returns a Memory..." alt="" coords="5,5,256,61"/>
+<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a059ef99d3e87774d3d401506a65d9648" title="Performs a mail merges given a dictionary of merge fields and their merge values and saves or opens w..." alt="" coords="304,5,555,61"/>
+<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a0328f06ab9b398b0d5d3c30ca1d7fc12" title="Remove any unmerged fields remaining in the document" alt="" coords="603,5,873,61"/>
+<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#acaa008fb8d43b87c3bd60ac2e18ede28" title="If a merge field is in the Word document format &#39;MERGEFIELD SomeMergeField&#39; then just return the fiel..." alt="" coords="921,5,1140,61"/>
 </map>
 </div>
 <div class="dynheader">
@@ -504,9 +456,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a0328f06ab9b398b0d5d3c30ca1d7fc12_cgraph.png" border="0" usemap="#d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a0328f06ab9b398b0d5d3c30ca1d7fc12_cgraph" alt=""/></div>
 <map name="d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a0328f06ab9b398b0d5d3c30ca1d7fc12_cgraph" id="d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge_a0328f06ab9b398b0d5d3c30ca1d7fc12_cgraph">
-<area shape="rect" title="Remove any unmerged fields remaining in the document" alt="" coords="5,35,276,91"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#a5fe84d3a2525369af83ec4310873d132" title="Is a particular field Word mail merge field" alt="" coords="324,5,563,47"/>
-<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#acaa008fb8d43b87c3bd60ac2e18ede28" title="If a merge field is in the Word document format &#39;MERGEFIELD SomeMergeField&#39; then just return the fiel..." alt="" coords="334,71,553,127"/>
+<area shape="rect" title="Remove any unmerged fields remaining in the document" alt="" coords="5,5,276,61"/>
+<area shape="rect" href="../../d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html#acaa008fb8d43b87c3bd60ac2e18ede28" title="If a merge field is in the Word document format &#39;MERGEFIELD SomeMergeField&#39; then just return the fiel..." alt="" coords="324,5,543,61"/>
 </map>
 </div>
 <div class="dynheader">

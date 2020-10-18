@@ -82,7 +82,7 @@ namespace JBToolkit.Web
             byte[] _byte = GetImageBytesFromUrl(url);
 
             if (includeMimeTypeDescriptor)
-                return Images.ImageHelper.GetBase64StringFromBytesWithMime(_byte);
+                return Images.ImageHelper.MimeHelper.GetBase64StringFromBytesWithMime(_byte);
 
             else
             {

@@ -14,14 +14,14 @@ namespace JBToolkit.PdfDoc
         /// Save Docx document to PDF to file
         /// <param name="docInputPath">Input .docx path</param>
         /// <param name="pdfOutputPath">Output .pdf path</param>
-        public static void SaveMsOfficeDocAsPdf(string docInputPath, string pdfOutputPath)
+        public static void ConvertMsOfficeDocToPdf(string docInputPath, string pdfOutputPath)
         {
             if (!new FileInfo(docInputPath).Extension.ToLower().Contains("docx"))
             {
                 throw new ArgumentException("The input file type is not .docx", new FileInfo(docInputPath).Extension);
             }
 
-            SaveAsPdf(docInputPath, pdfOutputPath);
+            ConvertToPdf(docInputPath, pdfOutputPath);
         }
 
         /// <summary>

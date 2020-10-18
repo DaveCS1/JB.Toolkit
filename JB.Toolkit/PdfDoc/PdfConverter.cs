@@ -12,20 +12,6 @@ namespace JBToolkit.PdfDoc
     public partial class PdfConverter
     {
         /// <summary>
-        /// Save document file or image to PDF
-        /// </summary>
-        /// <param name="docInputPath">Input document path</param>
-        /// <param name="pdfOutputPath">Output .pdf path</param>
-        public static void SaveAsPdf(string docInputPath, string pdfOutputPath)
-        {
-            using (FileStream fs = new FileStream(pdfOutputPath, FileMode.OpenOrCreate))
-            {
-                ConvertToPdf(docInputPath).CopyTo(fs);
-                fs.Flush();
-            }
-        }
-
-        /// <summary>
         /// Convert and save pretty much any office file (.docx, .xlsx, .pptx, .vsdx, .pub, .msg etc), image or text file to PDF
         /// </summary>
         /// <param name="docInputPath">Input document or image path path</param>
@@ -94,7 +80,7 @@ namespace JBToolkit.PdfDoc
         /// <param name="docInputPath">Path to file to convert</param>
         private static MemoryStream ConvertToPdfMemoryStream(string docInputPath)
         {
-            return XmlDoc.Converters.OfficeHtmlPdfImageConverter.ConvertDocumentAndReturnMemoryStream(docInputPath, ".pdf");
+            return XmlDoc.Converters.OfficeHtmlPdfImageConverter.ConvertDocumentOrImageAndReturnMemoryStream(docInputPath, ".pdf");
         }
     }
 }

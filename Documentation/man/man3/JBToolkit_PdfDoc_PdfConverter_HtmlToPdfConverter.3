@@ -1,0 +1,282 @@
+.TH "JBToolkit.PdfDoc.PdfConverter.HtmlToPdfConverter" 3 "Sun Oct 18 2020" "JB.Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JBToolkit.PdfDoc.PdfConverter.HtmlToPdfConverter
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBPdfConvertDocument\fP"
+.br
+.ti -1c
+.RI "class \fBPdfConvertException\fP"
+.br
+.ti -1c
+.RI "class \fBPdfConvertTimeoutException\fP"
+.br
+.ti -1c
+.RI "class \fBPdfOutput\fP"
+.br
+.ti -1c
+.RI "class \fBWkHEnvironment\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBPaperTypes\fP { \fBPaperTypes\&.A0\fP, \fBPaperTypes\&.A1\fP, \fBPaperTypes\&.A2\fP, \fBPaperTypes\&.A3\fP, \fBPaperTypes\&.A4\fP, \fBPaperTypes\&.A5\fP, \fBPaperTypes\&.A\fP, \fBPaperTypes\&.A7\fP, \fBPaperTypes\&.A8\fP, \fBPaperTypes\&.A9\fP, \fBPaperTypes\&.B0\fP, \fBPaperTypes\&.B1\fP, \fBPaperTypes\&.B10\fP, \fBPaperTypes\&.B2\fP, \fBPaperTypes\&.B3\fP, \fBPaperTypes\&.B4\fP, \fBPaperTypes\&.B5\fP, \fBPaperTypes\&.B6\fP, \fBPaperTypes\&.B7\fP, \fBPaperTypes\&.B8\fP, \fBPaperTypes\&.B9\fP, \fBPaperTypes\&.C5E\fP, \fBPaperTypes\&.Comm10E\fP, \fBPaperTypes\&.DLE\fP, \fBPaperTypes\&.Executive\fP, \fBPaperTypes\&.Folio\fP, \fBPaperTypes\&.Ledger\fP, \fBPaperTypes\&.Legal\fP, \fBPaperTypes\&.Letter\fP, \fBPaperTypes\&.Tabloid\fP }"
+.br
+.ti -1c
+.RI "enum \fBOrientation\fP { \fBOrientation\&.Landscape\fP, \fBOrientation\&.Portrait\fP }"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static MemoryStream \fBConvertHtmlToPdf\fP (string \fBhtml\fP)"
+.br
+.RI "Convert HTML text to PDF "
+.ti -1c
+.RI "static MemoryStream \fBConvertHtmlToPdf\fP (string \fBhtml\fP, \fBPaperTypes\fP paperType, \fBOrientation\fP orientation)"
+.br
+.RI "Converts HTML text to PDF "
+.ti -1c
+.RI "static MemoryStream \fBConvertHtmlToPdf\fP (\fBPdfConvertDocument\fP document)"
+.br
+.RI "Converts HTML To PDF "
+.ti -1c
+.RI "static void \fBConvertHtmlToPdf\fP (string \fBhtml\fP, string outputPath)"
+.br
+.RI "Saves HTML as PDF file "
+.ti -1c
+.RI "static void \fBConvertToPdf\fP (string \fBhtml\fP, string outputPath, \fBPaperTypes\fP paperType, \fBOrientation\fP orientation)"
+.br
+.RI "Save HTML as PDF file "
+.ti -1c
+.RI "static void \fBConvertToPdf\fP (\fBPdfConvertDocument\fP document, \fBPdfOutput\fP output)"
+.br
+.RI "Save HTML as a PDF file "
+.ti -1c
+.RI "static \fBPdfOutput\fP \fBConvertToPdf\fP (\fBPdfConvertDocument\fP document, \fBWkHEnvironment\fP environment, \fBPdfOutput\fP woutput)"
+.br
+.RI "Save HTML as a PDF file "
+.ti -1c
+.RI "static void \fBGetHtmlFromUrlAndSaveToPdf\fP (string url, string outputFilePath)"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "static \fBWkHEnvironment\fP \fBPdfConvertEnvironment\fP\fC [get]\fP"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBJBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.Orientation\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILandscape \fP\fP
+.TP
+\fB\fIPortrait \fP\fP
+.SS "enum \fBJBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.PaperTypes\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIA0 \fP\fP
+.TP
+\fB\fIA1 \fP\fP
+.TP
+\fB\fIA2 \fP\fP
+.TP
+\fB\fIA3 \fP\fP
+.TP
+\fB\fIA4 \fP\fP
+.TP
+\fB\fIA5 \fP\fP
+.TP
+\fB\fIA \fP\fP
+.TP
+\fB\fIA7 \fP\fP
+.TP
+\fB\fIA8 \fP\fP
+.TP
+\fB\fIA9 \fP\fP
+.TP
+\fB\fIB0 \fP\fP
+.TP
+\fB\fIB1 \fP\fP
+.TP
+\fB\fIB10 \fP\fP
+.TP
+\fB\fIB2 \fP\fP
+.TP
+\fB\fIB3 \fP\fP
+.TP
+\fB\fIB4 \fP\fP
+.TP
+\fB\fIB5 \fP\fP
+.TP
+\fB\fIB6 \fP\fP
+.TP
+\fB\fIB7 \fP\fP
+.TP
+\fB\fIB8 \fP\fP
+.TP
+\fB\fIB9 \fP\fP
+.TP
+\fB\fIC5E \fP\fP
+.TP
+\fB\fIComm10E \fP\fP
+.TP
+\fB\fIDLE \fP\fP
+.TP
+\fB\fIExecutive \fP\fP
+.TP
+\fB\fIFolio \fP\fP
+.TP
+\fB\fILedger \fP\fP
+.TP
+\fB\fILegal \fP\fP
+.TP
+\fB\fILetter \fP\fP
+.TP
+\fB\fITabloid \fP\fP
+.SH "Member Function Documentation"
+.PP 
+.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.ConvertHtmlToPdf (\fBPdfConvertDocument\fP document)\fC [static]\fP"
+
+.PP
+Converts HTML To PDF 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocument\fP PDF Object containing layout options
+.br
+\fIenvironment\fP Application environment options
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.ConvertHtmlToPdf (string html)\fC [static]\fP"
+
+.PP
+Convert HTML text to PDF 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhtml\fP Input HTML Text
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+PDF File memory stream
+.RE
+.PP
+
+.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.ConvertHtmlToPdf (string html, \fBPaperTypes\fP paperType, \fBOrientation\fP orientation)\fC [static]\fP"
+
+.PP
+Converts HTML text to PDF 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhtml\fP Input HTML text
+.br
+\fIpaperType\fP Paper type option
+.br
+\fIorientation\fP Orientation option
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+PDF File memory stream
+.RE
+.PP
+
+.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.ConvertHtmlToPdf (string html, string outputPath)\fC [static]\fP"
+
+.PP
+Saves HTML as PDF file 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhtml\fP Input HTML text
+.br
+\fIoutputPath\fP Output file path
+.RE
+.PP
+
+.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.ConvertToPdf (\fBPdfConvertDocument\fP document, \fBPdfOutput\fP output)\fC [static]\fP"
+
+.PP
+Save HTML as a PDF file 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocument\fP PDF Document object containing layout options
+.br
+\fIoutput\fP Output file path
+.RE
+.PP
+
+.SS "static \fBPdfOutput\fP JBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.ConvertToPdf (\fBPdfConvertDocument\fP document, \fBWkHEnvironment\fP environment, \fBPdfOutput\fP woutput)\fC [static]\fP"
+
+.PP
+Save HTML as a PDF file 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocument\fP A PDF document object containing PDF options
+.br
+\fIenvironment\fP Applciaton environment option object
+.br
+\fIwoutput\fP Output PDF object
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.ConvertToPdf (string html, string outputPath, \fBPaperTypes\fP paperType, \fBOrientation\fP orientation)\fC [static]\fP"
+
+.PP
+Save HTML as PDF file 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhtml\fP Input HTML text
+.br
+\fIoutputPath\fP OUtput file path
+.br
+\fIpaperType\fP Paper type option
+.br
+\fIorientation\fP Orientation option
+.RE
+.PP
+
+.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.GetHtmlFromUrlAndSaveToPdf (string url, string outputFilePath)\fC [static]\fP"
+
+.SH "Property Documentation"
+.PP 
+.SS "\fBWkHEnvironment\fP JBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.PdfConvertEnvironment\fC [static]\fP, \fC [get]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JB\&.Toolkit from the source code\&.

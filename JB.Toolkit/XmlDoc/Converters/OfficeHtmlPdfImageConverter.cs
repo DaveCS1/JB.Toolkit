@@ -26,7 +26,7 @@ namespace JBToolkit.XmlDoc.Converters
         /// </summary>
         /// <param name="docxInputPath">File path</param>
         /// <returns>Memory stream</returns>
-        public static MemoryStream ConvertToPDF(string inputPath)
+        public static MemoryStream ConvertToPdf(string inputPath)
         {
             return PdfDoc.PdfConverter.ConvertToPdf(inputPath);
         }
@@ -36,7 +36,7 @@ namespace JBToolkit.XmlDoc.Converters
         /// </summary>
         /// <param name="docxInputPath">File path</param>
         /// <returns>Memory stream</returns>
-        public static MemoryStream ConvertToPDF(MemoryStream ms, string fileExtension)
+        public static MemoryStream ConvertToPdf(MemoryStream ms, string fileExtension)
         {
             return PdfDoc.PdfConverter.ConvertToPdf(ms, fileExtension);
         }
@@ -46,9 +46,9 @@ namespace JBToolkit.XmlDoc.Converters
         /// </summary>
         /// <param name="inputPath">.docx path</param>
         /// <param name="pdfOutputPath">Save PDF file path</param>
-        public static void SaveAsPdf(string inputPath, string pdfOutputPath)
+        public static void ConvertToPdf(string inputPath, string pdfOutputPath)
         {
-            PdfDoc.PdfConverter.SaveAsPdf(inputPath, pdfOutputPath);
+            PdfDoc.PdfConverter.ConvertToPdf(inputPath, pdfOutputPath);
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace JBToolkit.XmlDoc.Converters
         /// <param name="pages">Pages string (optional). I.e. 1-3,5,7-9 or even sheet names [sheet1],[sheet3] for Excel</param>
         /// <param name="additionalOptions">ReAlPDFc Additional ar guments</param>
         /// <param name="timeoutSeconds">Amount of time before throwing an exception. Default is 60 seconds</param>
-        public static void ConvertDocument(
+        public static void ConvertDocumentOrImage(
             string inputPath,
             string outputPath,
             string pages = null,
@@ -100,7 +100,7 @@ namespace JBToolkit.XmlDoc.Converters
         /// <param name="outputDirectory">Path to directory where files will be outputted to</param>
         /// <param name="additionalOptions">ReAlPDFc Additional ar guments</param>
         /// <param name="overwriteExisting">Overwrite any existing files on name conflicts if already present in the output directory</param>
-        public static void ConvertDocuments(
+        public static void ConvertDocumentsOrImages(
             string[] inputPaths,
             string toExtension,
             string outputDirectory,
@@ -131,7 +131,7 @@ namespace JBToolkit.XmlDoc.Converters
         /// <param name="pages">Pages string (optional). I.e. 1-3,5,7-9 or even sheet names [sheet1],[sheet3] for Excel</param>
         /// <param name="additionalOptions">ReAlPDFc Additional ar guments</param>
         /// <param name="timeoutSeconds">Amount of time before throwing an exception. Default is 60 seconds</param>
-        public static byte[] ConvertDocumentAndReturnByteArray(
+        public static byte[] ConvertDocumentOrImageAndReturnByteArray(
             string inputPath,
             string extension,
             string pages = null,
@@ -164,7 +164,7 @@ namespace JBToolkit.XmlDoc.Converters
         /// <param name="pages">Pages string (optional). I.e. 1-3,5,7-9 or even sheet names [sheet1],[sheet3] for Excel</param>
         /// <param name="additionalOptions">ReAlPDFc Additional ar guments</param>
         /// <param name="timeoutSeconds">Amount of time before throwing an exception. Default is 60 seconds</param>
-        public static MemoryStream ConvertDocumentAndReturnMemoryStream(
+        public static MemoryStream ConvertDocumentOrImageAndReturnMemoryStream(
             string inputPath,
             string extension,
             string pages = null,
@@ -198,7 +198,7 @@ namespace JBToolkit.XmlDoc.Converters
         /// <param name="pages">Pages string (optional). I.e. 1-3,5,7-9 or even sheet names [sheet1],[sheet3] for Excel</param>
         /// <param name="additionalOptions">ReAlPDFc Additional ar guments</param>
         /// <param name="timeoutSeconds">Amount of time before throwing an exception. Default is 60 seconds</param>
-        public static string ConvertDocumentAndReturnBase64String(
+        public static string ConvertDocumentOrImageAndReturnBase64String(
             string inputPath,
             string extension,
             string pages = null,

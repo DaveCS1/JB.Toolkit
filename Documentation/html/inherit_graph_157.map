@@ -1,5 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$db/d05/class_tool_tip.html" title=" " alt="" coords="5,42,68,69"/>
-<area shape="rect" id="node2" href="$d5/d45/class_j_b_toolkit_1_1_win_forms_1_1_custom_tool_tip.html" title="Nicer Custom Tooltip for controls" alt="" coords="127,5,315,47"/>
-<area shape="rect" id="node3" href="$d6/dbd/class_j_b_toolkit_1_1_win_forms_1_1_html_tool_tip.html" title="Provides HTML rendering on the tooltips" alt="" coords="116,71,327,98"/>
+<area shape="rect" id="node1" href="$d3/da0/class_system_1_1_try_wrapper.html" title=" " alt="" coords="5,5,175,32"/>
+<area shape="rect" id="node2" href="$df/d56/class_system_1_1_catch_wrapper.html" title=" " alt="" coords="223,5,408,32"/>
 </map>

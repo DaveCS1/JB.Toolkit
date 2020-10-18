@@ -1,0 +1,7 @@
+<map id="JBToolkit.Images.ImageHelper.Converter.MagickConvertImageFormat" name="JBToolkit.Images.ImageHelper.Converter.MagickConvertImageFormat">
+<area shape="rect" id="node1" title="Convert image from one format to another and output to memory stream. This method uses ImageMagick,..." alt="" coords="5,71,247,112"/>
+<area shape="rect" id="node2" href="$d1/df4/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_converter.html#aba311e3016584b54afeb01ac89702d91" title=" " alt="" coords="295,5,496,47"/>
+<area shape="rect" id="node3" href="$d7/d87/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper.html#a4c87bef8e775c1722a9dfa9b88854dd7" title="Converts a Image to a icon (ico) with all the sizes windows likes" alt="" coords="295,71,496,112"/>
+<area shape="rect" id="node5" href="$d1/d61/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper_1_1_icon.html#a7d2bc4c7d0b1872a81ba8bc09dadd69b" title="Get the largest of small icon based on icon size" alt="" coords="295,136,496,177"/>
+<area shape="rect" id="node4" href="$de/db3/class_j_b_toolkit_1_1_images_1_1_image_helper.html#aed8fdf4194df575e4a3b46f8e6a0de78" title="Resizes an image based on specific width and height" alt="" coords="544,71,761,112"/>
+</map>

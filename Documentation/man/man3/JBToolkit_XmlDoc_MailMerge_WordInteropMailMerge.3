@@ -1,4 +1,4 @@
-.TH "JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge" 3 "Sat Oct 10 2020" "JB.Toolkit" \" -*- nroff -*-
+.TH "JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge" 3 "Sun Oct 18 2020" "JB.Toolkit" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -27,10 +27,6 @@ JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge \- Uses OpenXML to perform a Wor
 .br
 .RI "Performs a mail merges given a dictionary of merge fields and their merge values and saves or opens word for user interaction "
 .ti -1c
-.RI "static bool \fBIsAMergeField\fP (Field field)"
-.br
-.RI "Is a particular field Word mail merge field "
-.ti -1c
 .RI "static void \fBRemovedUnmappedMergeFields\fP (Document document, \fBDataTable\fP mergeData)"
 .br
 .RI "Remove any unmerged fields remaining in the document "
@@ -52,10 +48,6 @@ https://www.ryadel.com/en/office-interop-dcom-config-windows-server-iis-word-exc
 Don't use if the class will get hammered\&. Either try the OpenXML implementation in this toolkit or speak to someone to invest in Aspose software\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "static bool JBToolkit\&.XmlDoc\&.MailMerge\&.WordInteropMailMerge\&.IsAMergeField (Field field)\fC [static]\fP"
-
-.PP
-Is a particular field Word mail merge field 
 .SS "static void JBToolkit\&.XmlDoc\&.MailMerge\&.WordInteropMailMerge\&.MergeDocumentAndSave (string templatePath, string outputPath, \fBDataTable\fP mailMergeData, bool saveAsPDF, bool openAndRender = \fCfalse\fP)\fC [static]\fP"
 
 .PP

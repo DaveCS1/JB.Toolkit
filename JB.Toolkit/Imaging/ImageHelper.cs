@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImageMagick;
+using System;
 using System.Data.HashFunction.xxHash;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -15,169 +16,527 @@ namespace JBToolkit.Images
     /// </summary>
     public partial class ImageHelper
     {
-        #region MimeType
-
-        public static int MimeSampleSize = 256;
-
-        public static string DefaultMimeType = "application/octet-stream";
-
         private static xxHashConfig XxHashConfig = new xxHashConfig() { HashSizeInBits = 64 };
         private static IxxHash XxHashFactory = xxHashFactory.Instance.Create(XxHashConfig);
 
-        /// <summary>
-        /// If deployed in IIS, must enable 32-bit application
-        /// </summary>
-        [DllImport(@"urlmon.dll", CharSet = CharSet.Auto)]
-        private extern static uint FindMimeFromData(
-            uint pBC,
-            [MarshalAs(UnmanagedType.LPStr)] string pwzUrl,
-            [MarshalAs(UnmanagedType.LPArray)] byte[] pBuffer,
-            uint cbSize,
-            [MarshalAs(UnmanagedType.LPStr)] string pwzMimeProposed,
-            uint dwMimeFlags,
-            out uint ppwzMimeOut,
-            uint dwReserverd
-        );
-
-        /// <summary>
-        /// Gets the mime type from an image byte array
-        /// IMPORTANT: Uses urlmon.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow
-        /// 32-Bit applications in the AppPool
-        /// </summary>
-        public static string GetMimeFromBytes(byte[] data)
+        public class MimeHelper
         {
-            try
+            private static int MimeSampleSize = 256;
+            private static string DefaultMimeType = "application/octet-stream";
+
+            /// <summary>
+            /// If deployed in IIS, must enable 32-bit application
+            /// </summary>
+            [DllImport(@"urlmon.dll", CharSet = CharSet.Auto)]
+            private extern static uint FindMimeFromData(
+                uint pBC,
+                [MarshalAs(UnmanagedType.LPStr)] string pwzUrl,
+                [MarshalAs(UnmanagedType.LPArray)] byte[] pBuffer,
+                uint cbSize,
+                [MarshalAs(UnmanagedType.LPStr)] string pwzMimeProposed,
+                uint dwMimeFlags,
+                out uint ppwzMimeOut,
+                uint dwReserverd
+            );
+
+            /// <summary>
+            /// Gets the mime type from an image byte array
+            /// IMPORTANT: Uses urlmon.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow
+            /// 32-Bit applications in the AppPool
+            /// </summary>
+            public static string GetMimeFromBytes(byte[] data)
             {
-                FindMimeFromData(0, null, data, (uint)MimeSampleSize, null, 0, out uint mimeType, 0);
-
-                var mimePointer = new IntPtr(mimeType);
-                var mime = Marshal.PtrToStringUni(mimePointer);
-                Marshal.FreeCoTaskMem(mimePointer);
-
-                return mime ?? DefaultMimeType;
-            }
-            catch
-            {
-                return DefaultMimeType;
-            }
-        }
-
-        /// <summary>
-        /// Gets the mime type from a a raw Base64 string (without mime type descriptor)
-        /// IMPORTANT: Uses urlmon.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow
-        /// 32-Bit applications in the AppPool
-        /// </summary>
-        public static string GetMimeFromRawBase64String(string rawBase64String)
-        {
-            try
-            {
-                FindMimeFromData(0, null, Convert.FromBase64String(rawBase64String), (uint)MimeSampleSize, null, 0, out uint mimeType, 0);
-
-                var mimePointer = new IntPtr(mimeType);
-                var mime = Marshal.PtrToStringUni(mimePointer);
-                Marshal.FreeCoTaskMem(mimePointer);
-
-                return mime ?? DefaultMimeType;
-            }
-            catch
-            {
-                return DefaultMimeType;
-            }
-        }
-
-        /// <summary>
-        /// Returns the MIME type string from a System.Drawing.Image
-        /// i.e. image/pdf
-        /// </summary>
-        public static string GetMimeFromImage(Image image)
-        {
-            foreach (ImageCodecInfo codec in ImageCodecInfo.GetImageDecoders())
-            {
-                if (codec.FormatID == image.RawFormat.Guid)
-                    return codec.MimeType;
-            }
-
-            return "image/unknown";
-        }
-
-        /// <summary>
-        /// Returns a base64 string, with detected mime type (using magic numbers) from a image byte array
-        /// IMPORTANT: Uses urlmon.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow
-        /// 32-Bit applications in the AppPool
-        /// </summary>
-        public static string GetBase64StringFromBytesWithMime(byte[] imageBytes)
-        {
-            return "data:" + GetMimeFromBytes(imageBytes) + ";base64," + Convert.ToBase64String(imageBytes);
-        }
-
-        /// <summary>
-        /// Returns a base64 string, with detected mime type (using magic numbers) from a raw base64 image string (without mime descriptor)
-        /// IMPORTANT: Uses urlmon.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow
-        /// 32-Bit applications in the AppPool
-        /// </summary>
-        public static string GetBase64StringWithMimeTypeFromBase64StringWitoutMimeType(string rawBase64String)
-        {
-            return "data:" + GetMimeFromRawBase64String(rawBase64String) + ";base64," + rawBase64String;
-        }
-
-        #endregion
-
-        #region Image Manipulation
-
-        /// <summary>
-        /// Convert image from one format to another
-        /// Requires System.Drawing
-        /// </summary>
-        public static byte[] ConvertImageFormat(byte[] bytes, ImageFormat newFormat)
-        {
-            using (var inStream = new MemoryStream(bytes))
-            using (var outStream = new MemoryStream())
-            {
-                var imageStream = System.Drawing.Image.FromStream(inStream);
-                imageStream.Save(outStream, newFormat);
-                return outStream.ToArray();
-            }
-        }
-
-        /// <summary>
-        /// Convert image from one format to another
-        /// Requires System.Drawing
-        /// </summary>
-        public static System.Drawing.Image ConvertImageFormat(System.Drawing.Image image, ImageFormat newFormat)
-        {
-            using (var ms = new MemoryStream())
-            {
-                image.Save(ms, image.RawFormat);
-                byte[] inputBytes = ms.ToArray();
-                byte[] newBytes = ConvertImageFormat(inputBytes, newFormat);
-
-                using (var msO = new MemoryStream(newBytes))
+                try
                 {
-                    return System.Drawing.Image.FromStream(msO);
+                    FindMimeFromData(0, null, data, (uint)MimeSampleSize, null, 0, out uint mimeType, 0);
+
+                    var mimePointer = new IntPtr(mimeType);
+                    var mime = Marshal.PtrToStringUni(mimePointer);
+                    Marshal.FreeCoTaskMem(mimePointer);
+
+                    return mime ?? DefaultMimeType;
+                }
+                catch
+                {
+                    return DefaultMimeType;
                 }
             }
+
+
+            /// <summary>
+            /// Gets the mime type from a memory stream
+            /// IMPORTANT: Uses urlmon.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow
+            /// 32-Bit applications in the AppPool
+            /// </summary>
+            public static string GetMimeFromMemoryStream(MemoryStream ms)
+            {
+                return GetMimeFromBytes(ms.ToArray());
+            }
+
+            /// <summary>
+            /// Gets the mime type from a a raw Base64 string (without mime type descriptor)
+            /// IMPORTANT: Uses urlmon.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow
+            /// 32-Bit applications in the AppPool
+            /// </summary>
+            public static string GetMimeFromRawBase64String(string rawBase64String)
+            {
+                try
+                {
+                    FindMimeFromData(0, null, Convert.FromBase64String(rawBase64String), (uint)MimeSampleSize, null, 0, out uint mimeType, 0);
+
+                    var mimePointer = new IntPtr(mimeType);
+                    var mime = Marshal.PtrToStringUni(mimePointer);
+                    Marshal.FreeCoTaskMem(mimePointer);
+
+                    return mime ?? DefaultMimeType;
+                }
+                catch
+                {
+                    return DefaultMimeType;
+                }
+            }
+
+            /// <summary>
+            /// Returns the MIME type string from a System.Drawing.Image
+            /// i.e. image/pdf
+            /// </summary>
+            public static string GetMimeFromImage(Image image)
+            {
+                foreach (ImageCodecInfo codec in ImageCodecInfo.GetImageDecoders())
+                {
+                    if (codec.FormatID == image.RawFormat.Guid)
+                        return codec.MimeType;
+                }
+
+                return "image/unknown";
+            }
+
+            /// <summary>
+            /// Returns a base64 string, with detected mime type (using magic numbers) from a image byte array
+            /// IMPORTANT: Uses urlmon.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow
+            /// 32-Bit applications in the AppPool
+            /// </summary>
+            public static string GetBase64StringFromBytesWithMime(byte[] imageBytes)
+            {
+                return "data:" + GetMimeFromBytes(imageBytes) + ";base64," + Convert.ToBase64String(imageBytes);
+            }
+
+            /// <summary>
+            /// Returns a base64 string, with detected mime type (using magic numbers) from a raw base64 image string (without mime descriptor)
+            /// IMPORTANT: Uses urlmon.dll DLLIMPORT -> If you're deployment an app that uses this is IIS, you must enable allow
+            /// 32-Bit applications in the AppPool
+            /// </summary>
+            public static string GetBase64StringWithMimeTypeFromBase64StringWitoutMimeType(string rawBase64String)
+            {
+                return "data:" + GetMimeFromRawBase64String(rawBase64String) + ";base64," + rawBase64String;
+            }
+        }
+
+        public class Converter
+        {
+            /// <summary>
+            /// Convert image from one format to another
+            /// Requires System.Drawing
+            /// </summary>
+            public static byte[] ConvertImageFormat(byte[] bytes, ImageFormat newFormat)
+            {
+                using (var inStream = new MemoryStream(bytes))
+                using (var outStream = new MemoryStream())
+                {
+                    var imageStream = System.Drawing.Image.FromStream(inStream);
+                    imageStream.Save(outStream, newFormat);
+                    return outStream.ToArray();
+                }
+            }
+
+            /// <summary>
+            /// Convert image from one format to another
+            /// Requires System.Drawing
+            /// </summary>
+            public static System.Drawing.Image ConvertImageFormat(System.Drawing.Image image, ImageFormat newFormat)
+            {
+                using (var ms = new MemoryStream())
+                {
+                    image.Save(ms, image.RawFormat);
+                    byte[] inputBytes = ms.ToArray();
+                    byte[] newBytes = ConvertImageFormat(inputBytes, newFormat);
+
+                    using (var msO = new MemoryStream(newBytes))
+                    {
+                        return System.Drawing.Image.FromStream(msO);
+                    }
+                }
+            }
+
+            /// <summary>
+            /// Convert image from one format to another and save to file
+            /// Requires System.Drawing
+            /// </summary>
+            public static void ConvertImageFormat(string inputPath, string outputPath, ImageFormat newFormat)
+            {
+                byte[] inputBytes = File.ReadAllBytes(inputPath);
+                byte[] outputBytes = ConvertImageFormat(inputBytes, newFormat);
+                File.WriteAllBytes(outputPath, outputBytes);
+            }
+
+            /// <summary>
+            /// Convert image from one format to another and output to byte array. This method uses ImageMagick, and can basically convert 
+            /// any image file type to a more common file type, including SVG to png, or something like pjpeg to jpeg.
+            /// </summary>
+            /// <param name="imageBytes">Input bytes of image</param>
+            /// <param name="toExtension">Extension, in order to determine output file type</param>
+            /// <param name="removeWhite">Optionally remove white (to make transparent)</param>
+            /// <returns>Byte array</returns>
+            public static byte[] MagickConvertImageFormat(byte[] imageBytes, string toExtension, bool removeWhite = false)
+            {
+                return MagickConvertImageFormat(ConvertToMemoryStream(imageBytes), toExtension, removeWhite).ToArray();
+            }
+
+            /// <summary>
+            /// Convert image from one format to another and output to file. This method uses ImageMagick, and can basically convert 
+            /// any image file type to a more common file type, including SVG to png, or something like pjpeg to jpeg.
+            /// </summary>
+            /// <param name="inputPath">Input path of image</param>
+            /// <param name="outputPath">Output path of new image</param>
+            /// <param name="removeWhite">Optionally remove white (to make transparent)</param>
+            public static void MagickConvertImageFormat(string inputPath, string outputPath, bool removeWhite = false)
+            {
+                File.WriteAllBytes(outputPath,
+                                   MagickConvertImageFormat(
+                                       File.ReadAllBytes(inputPath),
+                                       Path.GetExtension(outputPath),
+                                       removeWhite)
+                                   .ToArray());
+            }
+
+            /// <summary>
+            /// Convert image from one format to another and output to memory stream. This method uses ImageMagick, and can basically convert 
+            /// any image file type to a more common file type, including SVG to png, or something like pjpeg to jpeg.
+            /// </summary>
+            /// <param name="inputMs">Input memory stream of image</param>
+            /// <param name="toExtension">Extension, in order to determine output file type</param>
+            /// <param name="removeWhite">Optionally remove white (to make transparent)</param>
+            /// <returns>Memory stream</returns>
+            public static MemoryStream MagickConvertImageFormat(MemoryStream inputMs, string toExtension, bool removeWhite = false)
+            {
+                var ms = new MemoryStream();
+
+                toExtension = toExtension.ToLower().Replace(".", "");
+                toExtension = toExtension.Substring(0, 1).ToUpper() + toExtension.Substring(1, toExtension.Length - 1).ToLower();
+
+                var readSettings = new MagickReadSettings
+                {
+                    Debug = false,
+                    Verbose = false
+                };
+
+                using (var tms = new MemoryStream())
+                {
+                    using (var image = new MagickImage(inputMs, readSettings))
+                    {
+                        MagickColor mc = new MagickColor(MagickColors.Transparent);
+                        image.BackgroundColor = mc;
+                        image.Settings.BackgroundColor = mc;
+                        image.Transparent(mc);
+
+                        image.Quality = 100;
+                        image.Settings.TextAntiAlias = true;
+                        image.Settings.StrokeAntiAlias = true;
+                        image.Interpolate = PixelInterpolateMethod.Bilinear;
+
+                        if (image.Format == MagickFormat.Ico)
+                        {
+                            var multiIcon = new IconHelper.Icon(inputMs);
+                            var largestIcon = multiIcon.FindIcon(IconHelper.Icon.DisplayType.Largest).ToBitmap();
+                            using (var icoImage = new MagickImage(ConvertToByteArray(largestIcon)))
+                            {
+                                if (toExtension.In("Jpg", "Jpeg"))
+                                {
+                                    mc = new MagickColor(MagickColors.White);
+                                    icoImage.BackgroundColor = mc;
+                                    icoImage.Settings.BackgroundColor = mc;
+                                    icoImage.Alpha(AlphaOption.Remove);
+                                }
+                                else
+                                {
+                                    icoImage.Format = (MagickFormat)Enum.Parse(typeof(MagickFormat), toExtension);
+                                    icoImage.BackgroundColor = mc;
+                                    icoImage.Settings.BackgroundColor = mc;
+                                    icoImage.Transparent(mc);
+                                }
+
+                                icoImage.Write(ms);
+                            }
+                        }
+                        else if (toExtension.In("Jpg", "Jpeg"))
+                        {
+                            mc = new MagickColor(MagickColors.White);
+                            image.BackgroundColor = mc;
+                            image.Settings.BackgroundColor = mc;
+                            image.Alpha(AlphaOption.Remove);
+                            image.Format = (MagickFormat)Enum.Parse(typeof(MagickFormat), toExtension);
+
+                            image.Write(ms);
+                        }
+                        else if (toExtension.In("Ico"))
+                        {
+                            image.Format = MagickFormat.Png;
+                            image.Write(tms);
+                        }
+                        else if (image.Format == MagickFormat.Svg || image.Format == MagickFormat.Eps || image.Format == MagickFormat.Ai)
+                        {
+                            mc = new MagickColor(MagickColors.White);
+                            image.BackgroundColor = mc;
+                            image.Settings.BackgroundColor = mc;
+                            image.Transparent(mc);
+
+                            image.Format = (MagickFormat)Enum.Parse(typeof(MagickFormat), toExtension);
+                            image.Write(ms);
+                        }
+                        else if (removeWhite)
+                        {
+                            mc = new MagickColor(MagickColors.White);
+                            image.BackgroundColor = mc;
+                            image.Settings.BackgroundColor = mc;
+                            image.Transparent(mc);
+
+                            image.Format = (MagickFormat)Enum.Parse(typeof(MagickFormat), toExtension);
+                            image.Write(ms);
+                        }
+                        else
+                        {
+                            image.Format = (MagickFormat)Enum.Parse(typeof(MagickFormat), toExtension);
+                            image.Write(ms);
+                        }
+                    }
+
+                    if (toExtension.In("Ico"))
+                        IconHelper.ConvertToIcon(tms, ms);
+                }
+
+                return ms;
+            }
+
+            public static byte[] ConvertToByteArray(System.Drawing.Image image)
+            {
+                using (var ms = new MemoryStream())
+                {
+                    image.Save(ms, image.RawFormat);
+                    return ms.ToArray();
+                }
+            }
+
+            public static byte[] ConvertToByteArray(MemoryStream ms)
+            {
+                return ms.ToArray();
+            }
+
+            public static byte[] ConvertToByteArray(string base64String)
+            {
+                return Convert.FromBase64String(base64String);
+            }
+
+            public static System.Drawing.Image ConvertToImage(byte[] bytes)
+            {
+                return System.Drawing.Image.FromStream(new MemoryStream(bytes));
+            }
+
+            public static System.Drawing.Image ConvertToImage(MemoryStream ms)
+            {
+                return ConvertToImage(ms.ToArray());
+            }
+
+            public static System.Drawing.Image ConvertToImage(string base64String)
+            {
+                return ConvertToImage(Convert.FromBase64String(base64String));
+            }
+
+            public static MemoryStream ConvertToMemoryStream(System.Drawing.Image image)
+            {
+                var ms = new MemoryStream();
+                image.Save(ms, image.RawFormat);
+                return ms;
+            }
+
+            public static MemoryStream ConvertToMemoryStream(byte[] imageBytes)
+            {
+                return new MemoryStream(imageBytes);
+            }
+
+            public static MemoryStream ConvertToMemoryStream(string base64String)
+            {
+                return ConvertToMemoryStream(ConvertToImage(Convert.FromBase64String(base64String)));
+            }
+
+            public static string ConvertToBase64String(System.Drawing.Image image, bool includeMimeTypeDescriptor = false)
+            {
+                using (MemoryStream m = new MemoryStream())
+                {
+                    image.Save(m, image.RawFormat);
+                    byte[] imageBytes = m.ToArray();
+                    string base64String = Convert.ToBase64String(imageBytes);
+
+                    if (includeMimeTypeDescriptor)
+                        return "data:" + ImageHelper.MimeHelper.GetMimeFromImage(image) + ";base64," + base64String;
+
+                    return base64String;
+                }
+            }
+
+            public static string ConvertToBase64String(byte[] bytes, bool includeMimeTypeDescriptor = false)
+            {
+                if (includeMimeTypeDescriptor)
+                    return ConvertToBase64String(ConvertToImage(bytes), true);
+
+                return ConvertToBase64String(ConvertToImage(bytes));
+            }
+
+            public static string ConvertToBase64String(byte[] bytes, ImageFormat format, bool includeMimeTypeDescriptor = false)
+            {
+                if (includeMimeTypeDescriptor)
+                    return "data:image/" + format.ToString().ToLower() + ";base64," + ConvertToBase64String(bytes);
+                else
+                    return ConvertToBase64String(bytes);
+            }
+
+            public static string ConvertToBase64String(MemoryStream ms, bool includeMimeTypeDescriptor = false)
+            {
+                if (includeMimeTypeDescriptor)
+                    return ConvertToBase64String(ConvertToByteArray(ms), true);
+
+                return ConvertToBase64String(ConvertToByteArray(ms));
+            }
+
+            public static string ConvertToBase64String(MemoryStream ms, ImageFormat format, bool includeMimeTypeDescriptor = false)
+            {
+                if (includeMimeTypeDescriptor)
+                    return "data:image/" + format.ToString().ToLower() + ";base64," + ConvertToBase64String(ConvertToByteArray(ms));
+                else
+                    return ConvertToBase64String(ConvertToByteArray(ms));
+            }
+
+            public static DataImage ConvertToDataImage(string base64String)
+            {
+                if (DataImage.TryParse(base64String, out DataImage dataImage))
+                    return dataImage;
+                else
+                    return null;
+            }
         }
 
         /// <summary>
-        /// Convert image from one format to another and save to file
-        /// Requires System.Drawing
+        /// Compresses the image, and also gives the option to resize (max height / width specific while maintaining aspect ration). 
+        /// If set to -1 it means to use the current image's width / height;
         /// </summary>
-        public static void ConvertImageFormat(string inputPath, string outputPath, ImageFormat newFormat)
+        /// <param name="imageBytes">Byte array of image as input</param>
+        /// <param name="quality">0 - 100</param>
+        /// <param name="resizeMaxWidth">If set to -1 it means to use the current image's width ;</param>
+        /// <param name="resizeMaxHeight">If set to -1 it means to use the current image's height;</param>
+        /// <returns>Byte array of imagge</returns>
+        public static byte[] CompressImage(
+            byte[] imageBytes,
+            int quality = 50,
+            int resizeMaxWidth = -1,
+            int resizeMaxHeight = -1)
         {
-            byte[] inputBytes = File.ReadAllBytes(inputPath);
-            byte[] outputBytes = ConvertImageFormat(inputBytes, newFormat);
-            File.WriteAllBytes(outputPath, outputBytes);
+            using (var image = new ImageMagick.MagickImage(imageBytes))
+            {
+                image.Quality = quality;
+                image.Strip();
+
+                if (resizeMaxWidth != -1 || resizeMaxHeight != -1)
+                {
+                    if (resizeMaxWidth == -1 && resizeMaxHeight > -1)
+                        resizeMaxWidth = image.Width;
+
+                    if (resizeMaxWidth > -1 && resizeMaxHeight == -1)
+                        resizeMaxHeight = image.Height;
+
+                    var resizedSize = GetResizingSize_MaintainAspectRatio(new Size(image.Width, image.Height), resizeMaxWidth, resizeMaxHeight);
+                    image.Resize(resizedSize.Width, resizedSize.Height);
+                }
+
+                return image.ToByteArray();
+            }
         }
 
         /// <summary>
-        /// Convert image from one format to another and save to file
-        /// Requires System.Drawing
+        /// Compresses the image, and also gives the option to resize (max height / width specific while maintaining aspect ration). 
+        /// If set to -1 it means to use the current image's width / height;
         /// </summary>
-        public static void SaveImageAsFormat(string inputPath, string outputPath, ImageFormat newFormat)
+        /// <param name="inputImage">System.Drawing.Image as input</param>
+        /// <param name="quality">0 - 100</param>
+        /// <param name="resizeMaxWidth">If set to -1 it means to use the current image's width ;</param>
+        /// <param name="resizeMaxHeight">If set to -1 it means to use the current image's height;</param>
+        /// <returns>System.Drawing.Image as output</returns>
+        public static Image CompressImage(
+            Image inputImage,
+            int quality = 50,
+            int resizeMaxWidth = -1,
+            int resizeMaxHeight = -1)
         {
-            byte[] inputBytes = File.ReadAllBytes(inputPath);
-            byte[] outputBytes = ConvertImageFormat(inputBytes, newFormat);
-            File.WriteAllBytes(outputPath, outputBytes);
+            return Converter.ConvertToImage(
+                       CompressImage(
+                           Converter.ConvertToByteArray(inputImage),
+                           quality,
+                           resizeMaxWidth,
+                           resizeMaxHeight));
+        }
+
+
+        /// <summary>
+        /// Compresses the image, and also gives the option to resize (max height / width specific while maintaining aspect ration). 
+        /// If set to -1 it means to use the current image's width / height;
+        /// </summary>
+        /// <param name="inputImagePath">Input path to image</param>
+        /// <param name="quality">0 - 100</param>
+        /// <param name="resizeMaxWidth">If set to -1 it means to use the current image's width ;</param>
+        /// <param name="resizeMaxHeight">If set to -1 it means to use the current image's height;</param>
+        public static void CompressImage(
+        string inputImagePath,
+        string outputImagePath,
+        int quality = 50,
+        int resizeMaxWidth = -1,
+        int resizeMaxHeight = -1)
+        {
+            using (var image = new ImageMagick.MagickImage(inputImagePath))
+            {
+                image.Quality = quality;
+                image.Strip();
+
+                if (Path.GetExtension(outputImagePath).ToLower().In("jpg", "jpeg"))
+                    image.SetCompression(ImageMagick.CompressionMethod.JPEG);
+
+                if (resizeMaxWidth != -1 || resizeMaxHeight != -1)
+                {
+                    if (resizeMaxWidth == -1 && resizeMaxHeight > -1)
+                        resizeMaxWidth = image.Width;
+
+                    if (resizeMaxWidth > -1 && resizeMaxHeight == -1)
+                        resizeMaxHeight = image.Height;
+
+                    var resizedSize = GetResizingSize_MaintainAspectRatio(new Size(image.Width, image.Height), resizeMaxWidth, resizeMaxHeight);
+                    image.Resize(resizedSize.Width, resizedSize.Height);
+                }
+
+                image.Write(outputImagePath);
+            }
+        }
+
+        private static Size GetResizingSize_MaintainAspectRatio(
+            Size originalSize,
+            int maxWidth = 1200,
+            int maxHeight = 1200,
+            bool enlarge = false)
+        {
+            if (originalSize.Height < maxHeight && originalSize.Width < maxWidth)
+                return originalSize;
+
+            maxWidth = enlarge ? maxWidth : Math.Min(maxWidth, originalSize.Width);
+            maxHeight = enlarge ? maxHeight : Math.Min(maxHeight, originalSize.Height);
+
+            decimal rnd = Math.Min(maxWidth / (decimal)originalSize.Width, maxHeight / (decimal)originalSize.Height);
+            return new Size((int)Math.Round(originalSize.Width * rnd), (int)Math.Round(originalSize.Height * rnd));
         }
 
         /// <summary>
@@ -228,17 +587,7 @@ namespace JBToolkit.Images
         /// <summary>
         /// Resize an image with specific width and height and saved it to file
         /// </summary>
-        public static void ResizedImage(string inputPath, string outputPath, int width, int height)
-        {
-            byte[] inputBytes = File.ReadAllBytes(inputPath);
-            byte[] outputBytes = ResizeImage(inputBytes, width, height);
-            File.WriteAllBytes(outputPath, outputBytes);
-        }
-
-        /// <summary>
-        /// Resize an image with specific width and height and saved it to file
-        /// </summary>
-        public static void SaveResizedImage(string inputPath, string outputPath, int width, int height)
+        public static void ResizeImage(string inputPath, string outputPath, int width, int height)
         {
             byte[] inputBytes = File.ReadAllBytes(inputPath);
             byte[] outputBytes = ResizeImage(inputBytes, width, height);
@@ -261,17 +610,6 @@ namespace JBToolkit.Images
                 }
             }
         }
-
-        /// <summary>
-        /// Resize an image based on percentage to increase (above 100%) or decrease (below 100%) and saves it to file
-        /// </summary>
-        public static void SaveResizedImage(string inputPath, string outputPath, int percentage)
-        {
-            byte[] inputBytes = File.ReadAllBytes(inputPath);
-            byte[] outputBytes = ResizeImage(inputBytes, percentage);
-            File.WriteAllBytes(outputPath, outputBytes);
-        }
-
 
         /// <summary>
         /// Resize an image based on percentage to increase (above 100%) or decrease (below 100%)
@@ -330,16 +668,6 @@ namespace JBToolkit.Images
         /// Resize an image with specific width and height and saved it to file
         /// </summary>
         public static void ResizeImageMaintainAspectRatio(string inputPath, string outputPath, int width, int height)
-        {
-            byte[] inputBytes = File.ReadAllBytes(inputPath);
-            byte[] outputBytes = ResizeImageMaintainAspectRatio(inputBytes, width, height);
-            File.WriteAllBytes(outputPath, outputBytes);
-        }
-
-        /// <summary>
-        /// Resize an image with specific width and height and saved it to file
-        /// </summary>
-        public static void SaveResizedImageMaintainAspectRatio(string inputPath, string outputPath, int width, int height)
         {
             byte[] inputBytes = File.ReadAllBytes(inputPath);
             byte[] outputBytes = ResizeImageMaintainAspectRatio(inputBytes, width, height);
@@ -457,208 +785,6 @@ namespace JBToolkit.Images
         }
 
         /// <summary>
-        /// Compress Jpgeg image
-        /// </summary>
-        /// <param name="quality">Percentage. I.e. 0 = zero quality level, 50 = 50% quality, 100 = no  </param>
-        public static byte[] CompressJpgeg(byte[] data, long quality = 50L)
-        {
-            var jpgEncoder = GetEncoder(ImageFormat.Jpeg);
-
-            using (var inStream = new MemoryStream(data))
-            using (var outStream = new MemoryStream())
-            {
-                var image = System.Drawing.Image.FromStream(inStream);
-
-                // if we aren't able to retrieve our encoder
-                // we should just save the current image and
-                // return to prevent any exceptions from happening
-                if (jpgEncoder == null)
-                {
-                    image.Save(outStream, ImageFormat.Jpeg);
-                }
-                else
-                {
-                    var qualityEncoder = Encoder.Quality;
-
-                    var encoderParameters = new EncoderParameters(1);
-                    encoderParameters.Param[0] = new EncoderParameter(qualityEncoder, quality);
-                    image.Save(outStream, jpgEncoder, encoderParameters);
-                }
-
-                return outStream.ToArray();
-            }
-        }
-
-        private static ImageCodecInfo GetEncoder(ImageFormat format)
-        {
-            var codecs = ImageCodecInfo.GetImageDecoders();
-            foreach (var codec in codecs)
-            {
-                if (codec.FormatID == format.Guid)
-                {
-                    return codec;
-                }
-            }
-
-            return null;
-        }
-
-        #endregion
-
-        #region Image Comparison
-
-        /// <summary>
-        /// Get a 32bit xxHash of an image (useful for comparing)
-        /// </summary>
-        public static byte[] ImageXxHash(Image image)
-        {
-            var bytes = new byte[1];
-            bytes = (byte[])(new ImageConverter()).ConvertTo(image, bytes.GetType());
-            return XxHashFactory.ComputeHash(bytes).Hash;
-        }
-
-        /// <summary>
-        /// Checks if 1 image is the same as another by comparing its SHA hash. Also performs
-        /// a quick check on image dimentions to avoid performs cost of unnecessarily generating
-        /// a hash
-        /// </summary>
-        /// <returns>True if the same, false otherwise</returns>
-        public static bool IsSameImage(Image imageA, Image imageB)
-        {
-            if (imageA.Width != imageB.Width) return false;
-            if (imageA.Height != imageB.Height) return false;
-
-            var hashA = ImageXxHash(imageA);
-            var hashB = ImageXxHash(imageB);
-
-            return !hashA
-                .Where((nextByte, index) => nextByte != hashB[index])
-                .Any();
-        }
-
-        #endregion
-
-        #region Image Data Type Conversion
-
-        public static byte[] ConvertImageToByteArray(System.Drawing.Image image)
-        {
-            using (var ms = new MemoryStream())
-            {
-                image.Save(ms, image.RawFormat);
-                return ms.ToArray();
-            }
-        }
-
-        public static System.Drawing.Image ConvertByteArrayToImage(byte[] bytes)
-        {
-            using (var ms = new MemoryStream(bytes))
-            {
-                return System.Drawing.Image.FromStream(ms);
-            }
-        }
-
-        public static MemoryStream ConvertImageToMemoryStream(System.Drawing.Image image)
-        {
-            using (MemoryStream m = new MemoryStream())
-            {
-                image.Save(m, image.RawFormat);
-                return m;
-            }
-        }
-
-        public static byte[] ConvertMemoryStreamToByteArray(MemoryStream ms)
-        {
-            return ms.ToArray();
-        }
-
-        public static System.Drawing.Image ConvertMemoryStreamToImage(MemoryStream ms)
-        {
-            return ConvertByteArrayToImage(ms.ToArray());
-        }
-
-        public static string ConvertImageToBase64String(System.Drawing.Image image, bool includeMimeTypeDescriptor = false)
-        {
-            using (MemoryStream m = new MemoryStream())
-            {
-                image.Save(m, image.RawFormat);
-                byte[] imageBytes = m.ToArray();
-                string base64String = Convert.ToBase64String(imageBytes);
-
-                if (includeMimeTypeDescriptor)
-                    return "data:" + GetMimeFromImage(image) + ";base64," + base64String;
-
-                return base64String;
-            }
-        }
-
-        public static string ConvertImageToBase64String(byte[] bytes, ImageFormat format, bool includeMimeTypeDescriptor = false)
-        {
-            if (includeMimeTypeDescriptor)
-                return "data:image/" + format.ToString().ToLower() + ";base64," + ConvertImageToBase64String(ConvertByteArrayToImage(bytes));
-            else
-                return ConvertImageToBase64String(ConvertByteArrayToImage(bytes));
-        }
-
-        public static string ConvertByteArrayToBase64String(byte[] bytes, bool includeMimeTypeDescriptor = false)
-        {
-            if (includeMimeTypeDescriptor)
-                return ConvertImageToBase64String(ConvertByteArrayToImage(bytes), true);
-
-            return ConvertImageToBase64String(ConvertByteArrayToImage(bytes));
-        }
-
-        public static string ConvertByteArrayToBase64String(byte[] bytes, ImageFormat format, bool includeMimeTypeDescriptor = false)
-        {
-            if (includeMimeTypeDescriptor)
-                return "data:image/" + format.ToString().ToLower() + ";base64," + ConvertByteArrayToBase64String(bytes);
-            else
-                return ConvertByteArrayToBase64String(bytes);
-        }
-
-        public static string ConvertMemoryStreamToBase64String(MemoryStream ms, bool includeMimeTypeDescriptor = false)
-        {
-            if (includeMimeTypeDescriptor)
-                return ConvertByteArrayToBase64String(ConvertMemoryStreamToByteArray(ms), true);
-
-            return ConvertByteArrayToBase64String(ConvertMemoryStreamToByteArray(ms));
-        }
-
-        public static string ConvertMemoryStreamToBase64String(MemoryStream ms, ImageFormat format, bool includeMimeTypeDescriptor = false)
-        {
-            if (includeMimeTypeDescriptor)
-                return "data:image/" + format.ToString().ToLower() + ";base64," + ConvertByteArrayToBase64String(ConvertMemoryStreamToByteArray(ms));
-            else
-                return ConvertByteArrayToBase64String(ConvertMemoryStreamToByteArray(ms));
-        }
-
-        public static byte[] ConvertBase64StringToByteArray(string base64String)
-        {
-            return Convert.FromBase64String(base64String);
-        }
-
-        public static System.Drawing.Image ConvertBase64StringToImage(string base64String)
-        {
-            return ConvertByteArrayToImage(Convert.FromBase64String(base64String));
-        }
-
-        public static MemoryStream ConvertBase64StringToMemoryStream(string base64String)
-        {
-            return ConvertImageToMemoryStream(ConvertByteArrayToImage(Convert.FromBase64String(base64String)));
-        }
-
-        public static DataImage ConvertBase64StringToDataImage(string base64String)
-        {
-            if (DataImage.TryParse(base64String, out DataImage dataImage))
-                return dataImage;
-            else
-                return null;
-        }
-
-        #endregion
-
-        #region Image Orientation
-
-        /// <summary>
         /// This looks to see if there's an exif property on the image (meta property on image file that's usually applied
         /// when using the context menu in Windows to rotate an image). If there is it properly rotates the image and removes
         /// the exif meta property.
@@ -707,6 +833,33 @@ namespace JBToolkit.Images
             return image;
         }
 
-        #endregion
+        /// <summary>
+        /// Get a 32bit xxHash of an image (very fast and useful for comparing)
+        /// </summary>
+        public static byte[] GetImageXxHash(Image image)
+        {
+            var bytes = new byte[1];
+            bytes = (byte[])(new ImageConverter()).ConvertTo(image, bytes.GetType());
+            return XxHashFactory.ComputeHash(bytes).Hash;
+        }
+
+        /// <summary>
+        /// Checks if 1 image is the same as another by comparing its SHA hash. Also performs
+        /// a quick check on image dimentions to avoid performs cost of unnecessarily generating
+        /// a hash
+        /// </summary>
+        /// <returns>True if the same, false otherwise</returns>
+        public static bool IsSameImage(Image imageA, Image imageB)
+        {
+            if (imageA.Width != imageB.Width) return false;
+            if (imageA.Height != imageB.Height) return false;
+
+            var hashA = GetImageXxHash(imageA);
+            var hashB = GetImageXxHash(imageB);
+
+            return !hashA
+                .Where((nextByte, index) => nextByte != hashB[index])
+                .Any();
+        }
     }
 }

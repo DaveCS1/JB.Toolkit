@@ -41,6 +41,7 @@ var hierarchy =
       [ "JBToolkit.WinForms.RoundButton", "de/d05/class_j_b_toolkit_1_1_win_forms_1_1_round_button.html", null ]
     ] ],
     [ "JBToolkit.WinForms.ControlDirtyTracker", "d7/d8e/class_j_b_toolkit_1_1_win_forms_1_1_control_dirty_tracker.html", null ],
+    [ "JBToolkit.Images.ImageHelper.Converter", "d1/df4/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_converter.html", null ],
     [ "JBToolkit.InterProcessComms.WM_COPYDATA.COPYDATASTRUCT", "d8/d87/struct_j_b_toolkit_1_1_inter_process_comms_1_1_w_m___c_o_p_y_d_a_t_a_1_1_c_o_p_y_d_a_t_a_s_t_r_u_c_t.html", null ],
     [ "JBToolkit.RegularExpressions.CountryPostCodes", "d4/de1/class_j_b_toolkit_1_1_regular_expressions_1_1_country_post_codes.html", null ],
     [ "System.Drawing.Html.CssBlock", "df/def/class_system_1_1_drawing_1_1_html_1_1_css_block.html", null ],
@@ -105,8 +106,8 @@ var hierarchy =
     [ "JBToolkit.XmlDoc.Converters.ExcelDataTable", "dd/d75/class_j_b_toolkit_1_1_xml_doc_1_1_converters_1_1_excel_data_table.html", null ],
     [ "Exception", "df/d70/class_exception.html", [
       [ "JBToolkit.ConsoleHelper.Options.OptionException", "dc/d38/class_j_b_toolkit_1_1_console_helper_1_1_options_1_1_option_exception.html", null ],
-      [ "JBToolkit.PdfDoc.PdfConvertException", "d3/db3/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_convert_exception.html", [
-        [ "JBToolkit.PdfDoc.PdfConvertTimeoutException", "d5/dd3/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_convert_timeout_exception.html", null ]
+      [ "JBToolkit.PdfDoc.PdfConverter.HtmlToPdfConverter.PdfConvertException", "d6/d80/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_1_1_html_to_pdf_converter_1_1_pdf_convert_exception.html", [
+        [ "JBToolkit.PdfDoc.PdfConverter.HtmlToPdfConverter.PdfConvertTimeoutException", "d7/dc0/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_1_1_html_to_pdf_converter_1_1_pdf_convert_timeout_exception.html", null ]
       ] ]
     ] ],
     [ "JBToolkit.Windows.FileData", "d8/d9d/class_j_b_toolkit_1_1_windows_1_1_file_data.html", null ],
@@ -124,6 +125,7 @@ var hierarchy =
     [ "JBToolkit.Images.ImageHelper.HtmlImageHelper", "d5/dc2/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper.html", null ],
     [ "JBToolkit.Images.ImageHelper.HtmlImageHelper.HtmlPath", "d0/d69/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_html_image_helper_1_1_html_path.html", null ],
     [ "System.Drawing.Html.HtmlTag", "d1/d18/class_system_1_1_drawing_1_1_html_1_1_html_tag.html", null ],
+    [ "JBToolkit.PdfDoc.PdfConverter.HtmlToPdfConverter", "dd/d01/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_1_1_html_to_pdf_converter.html", null ],
     [ "JBToolkit.Web.Http", "d7/d24/class_j_b_toolkit_1_1_web_1_1_http.html", null ],
     [ "HttpPostedFileBase", "db/dce/class_http_posted_file_base.html", [
       [ "JBToolkit.Web.MemoryFile", "d1/db2/class_j_b_toolkit_1_1_web_1_1_memory_file.html", null ]
@@ -179,10 +181,8 @@ var hierarchy =
     [ "JBToolkit.Domain.Impersonation.Impersonator.ImpersonatorCredentials", "da/df0/class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_impersonator_1_1_impersonator_credentials.html", null ],
     [ "JBToolkit.Extensions.SourceCode.SourceCodeFormatter.LenientJsonFormatter.IndentWriter", "db/d72/class_j_b_toolkit_1_1_extensions_1_1_source_code_1_1_source_code_formatter_1_1_lenient_json_formatter_1_1_indent_writer.html", null ],
     [ "JBToolkit.WinForms.ColourHelper.IntensityGenerator", "d7/d72/class_j_b_toolkit_1_1_win_forms_1_1_colour_helper_1_1_intensity_generator.html", null ],
-    [ "JBToolkit.Images.ColourHelper.IntensityValue", "d5/da2/class_j_b_toolkit_1_1_images_1_1_colour_helper_1_1_intensity_value.html", null ],
     [ "JBToolkit.WinForms.ColourHelper.IntensityValue", "df/d3c/class_j_b_toolkit_1_1_win_forms_1_1_colour_helper_1_1_intensity_value.html", null ],
     [ "JBToolkit.WinForms.ColourHelper.IntensityValueWalker", "d4/d17/class_j_b_toolkit_1_1_win_forms_1_1_colour_helper_1_1_intensity_value_walker.html", null ],
-    [ "JBToolkit.Images.ColourHelper.IntensityValueWalker", "db/d16/class_j_b_toolkit_1_1_images_1_1_colour_helper_1_1_intensity_value_walker.html", null ],
     [ "JBToolkit.Web.IPHelper", "d2/d3e/class_j_b_toolkit_1_1_web_1_1_i_p_helper.html", null ],
     [ "IProgress", "d6/da7/class_i_progress.html", [
       [ "JBToolkit.ConsoleHelper.ProgressBar", "d7/dc7/class_j_b_toolkit_1_1_console_helper_1_1_progress_bar.html", null ]
@@ -222,6 +222,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "JBToolkit.Windows.CommonFileTypeExtensions.MicrosoftOffice", "d5/d65/class_j_b_toolkit_1_1_windows_1_1_common_file_type_extensions_1_1_microsoft_office.html", null ],
+    [ "JBToolkit.Images.ImageHelper.MimeHelper", "d0/dd7/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_mime_helper.html", null ],
     [ "JBToolkit.GoogeApi.Geocoding.Northeast", "dd/dca/class_j_b_toolkit_1_1_googe_api_1_1_geocoding_1_1_northeast.html", null ],
     [ "JBToolkit.XmlDoc.MailMerge.OpenXmlMailMerge", "db/d77/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_open_xml_mail_merge.html", null ],
     [ "JBToolkit.ConsoleHelper.Options.Option", "dc/d25/class_j_b_toolkit_1_1_console_helper_1_1_options_1_1_option.html", [
@@ -232,11 +233,10 @@ var hierarchy =
     [ "JBToolkit.Views.Parameters", "df/d77/class_j_b_toolkit_1_1_views_1_1_parameters.html", null ],
     [ "JBToolkit.XmlDoc.Parser", "dd/d5e/class_j_b_toolkit_1_1_xml_doc_1_1_parser.html", null ],
     [ "JBToolkit.WinForms.ColourHelper.PatternGenerator", "dc/d16/class_j_b_toolkit_1_1_win_forms_1_1_colour_helper_1_1_pattern_generator.html", null ],
-    [ "JBToolkit.PdfDoc.PdfConvertDocument", "d2/daf/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_convert_document.html", null ],
-    [ "JBToolkit.PdfDoc.PdfConvertEnvironment", "de/d10/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_convert_environment.html", null ],
+    [ "JBToolkit.PdfDoc.PdfConverter.HtmlToPdfConverter.PdfConvertDocument", "d9/dc7/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_1_1_html_to_pdf_converter_1_1_pdf_convert_document.html", null ],
     [ "JBToolkit.PdfDoc.PdfConverter", "d3/d18/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter.html", null ],
     [ "JBToolkit.PdfDoc.PdfMerger", "db/d2c/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_merger.html", null ],
-    [ "JBToolkit.PdfDoc.PdfOutput", "d8/d91/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_output.html", null ],
+    [ "JBToolkit.PdfDoc.PdfConverter.HtmlToPdfConverter.PdfOutput", "df/d7f/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_1_1_html_to_pdf_converter_1_1_pdf_output.html", null ],
     [ "JBToolkit.PdfDoc.PdfParser", "d1/da7/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_parser.html", null ],
     [ "JBToolkit.PdfDoc.PdfSplitter", "d4/d5a/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_splitter.html", null ],
     [ "PictureBox", "d3/d5d/class_picture_box.html", [
@@ -283,6 +283,7 @@ var hierarchy =
     [ "JBToolkit.GoogeApi.Vision", "da/ded/class_j_b_toolkit_1_1_googe_api_1_1_vision.html", null ],
     [ "JBToolkit.Domain.Impersonation.Win32NativeMethods", "db/de6/class_j_b_toolkit_1_1_domain_1_1_impersonation_1_1_win32_native_methods.html", null ],
     [ "JBToolkit.Windows.WindowHelper", "db/d9b/class_j_b_toolkit_1_1_windows_1_1_window_helper.html", null ],
+    [ "JBToolkit.PdfDoc.PdfConverter.HtmlToPdfConverter.WkHEnvironment", "d1/d63/class_j_b_toolkit_1_1_pdf_doc_1_1_pdf_converter_1_1_html_to_pdf_converter_1_1_wk_h_environment.html", null ],
     [ "JBToolkit.XmlDoc.MailMerge.WordInteropMailMerge", "d7/d3c/class_j_b_toolkit_1_1_xml_doc_1_1_mail_merge_1_1_word_interop_mail_merge.html", null ],
     [ "JBToolkit.Zip.ZipCompression", "d5/d69/class_j_b_toolkit_1_1_zip_1_1_zip_compression.html", null ],
     [ "JBToolkit.Zip.ZipExtraction", "d9/d0e/class_j_b_toolkit_1_1_zip_1_1_zip_extraction.html", null ],

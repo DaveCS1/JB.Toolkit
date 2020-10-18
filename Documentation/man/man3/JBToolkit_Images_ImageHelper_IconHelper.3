@@ -1,4 +1,4 @@
-.TH "JBToolkit.Images.ImageHelper.IconHelper" 3 "Sat Oct 10 2020" "JB.Toolkit" \" -*- nroff -*-
+.TH "JBToolkit.Images.ImageHelper.IconHelper" 3 "Sun Oct 18 2020" "JB.Toolkit" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,6 +22,10 @@ JBToolkit.Images.ImageHelper.IconHelper \- A Helper class for multi-resolution i
 .RI "static bool \fBConvertToIcon\fP (Bitmap inputBitmap, Stream outputStream)"
 .br
 .RI "Converts a Image to a icon (ico) with all the sizes windows likes "
+.ti -1c
+.RI "static bool \fBConvertToIcon\fP (Stream input, Stream output)"
+.br
+.RI "Converts an image to a icon (ico) "
 .ti -1c
 .RI "static MemoryStream \fBConvertToIcon\fP (Stream input)"
 .br
@@ -116,6 +120,24 @@ Converts an image to a icon (ico)
 \fBParameters\fP
 .RS 4
 \fIinput\fP The input stream
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Wether or not the icon was succesfully generated
+.RE
+.PP
+
+.SS "static bool JBToolkit\&.Images\&.ImageHelper\&.IconHelper\&.ConvertToIcon (Stream input, Stream output)\fC [static]\fP"
+
+.PP
+Converts an image to a icon (ico) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinput\fP The input stream
+.br
+\fIoutput\fP The output stream
 .RE
 .PP
 \fBReturns\fP

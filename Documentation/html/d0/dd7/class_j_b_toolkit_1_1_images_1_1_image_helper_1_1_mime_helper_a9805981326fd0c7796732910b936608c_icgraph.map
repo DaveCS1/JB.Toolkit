@@ -1,0 +1,4 @@
+<map id="JBToolkit.Images.ImageHelper.MimeHelper.GetMimeFromRawBase64String" name="JBToolkit.Images.ImageHelper.MimeHelper.GetMimeFromRawBase64String">
+<area shape="rect" id="node1" title="Gets the mime type from a a raw Base64 string (without mime type descriptor) IMPORTANT: Uses urlmon...." alt="" coords="309,13,591,54"/>
+<area shape="rect" id="node2" href="$d0/dd7/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_mime_helper.html#a15c8b19524f3b8cb12fba7a5dc44c0c9" title="Returns a base64 string, with detected mime type (using magic numbers) from a raw base64 image string..." alt="" coords="5,5,261,61"/>
+</map>

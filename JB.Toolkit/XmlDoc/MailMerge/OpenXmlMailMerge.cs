@@ -37,7 +37,7 @@ namespace JBToolkit.XmlDoc.MailMerge
                     fieldAndValues,
                     Path.Combine(Windows.DirectoryHelper.GetTempFile(), Windows.DirectoryHelper.GetTempFile() + ".docx"));
 
-                PdfDoc.PdfConverter.SaveAsPdf(file, outputPath);
+                PdfDoc.PdfConverter.ConvertToPdf(file, outputPath);
 
                 try
                 {

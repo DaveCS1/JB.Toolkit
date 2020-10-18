@@ -1,0 +1,4 @@
+<map id="JBToolkit.Images.ImageHelper.MimeHelper.GetMimeFromMemoryStream" name="JBToolkit.Images.ImageHelper.MimeHelper.GetMimeFromMemoryStream">
+<area shape="rect" id="node1" title="Gets the mime type from a memory stream IMPORTANT: Uses urlmon.dll DLLIMPORT &#45;&gt; If you&#39;re deployment ..." alt="" coords="5,5,272,47"/>
+<area shape="rect" id="node2" href="$d0/dd7/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_mime_helper.html#a3c22d9f1ad35b93b6bb182f0c50195b4" title="Gets the mime type from an image byte array IMPORTANT: Uses urlmon.dll DLLIMPORT &#45;&gt; If you&#39;re deploym..." alt="" coords="320,5,532,47"/>
+</map>

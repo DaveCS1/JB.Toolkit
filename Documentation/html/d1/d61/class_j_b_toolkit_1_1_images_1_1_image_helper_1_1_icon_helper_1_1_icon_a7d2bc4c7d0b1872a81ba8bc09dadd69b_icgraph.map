@@ -1,5 +1,6 @@
 <map id="JBToolkit.Images.ImageHelper.IconHelper.Icon.FindIcon" name="JBToolkit.Images.ImageHelper.IconHelper.Icon.FindIcon">
-<area shape="rect" id="node1" title="Get the largest of small icon based on icon size" alt="" coords="301,39,503,80"/>
+<area shape="rect" id="node1" title="Get the largest of small icon based on icon size" alt="" coords="301,71,503,112"/>
 <area shape="rect" id="node2" href="$d7/d87/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper.html#ad03df70178dcf0887cb5a69c212226da" title=" " alt="" coords="9,5,249,47"/>
 <area shape="rect" id="node3" href="$d7/d87/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_icon_helper.html#a98d324704da72291f03acbceeb471d93" title=" " alt="" coords="5,71,253,112"/>
+<area shape="rect" id="node4" href="$d1/df4/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_converter.html#a44de0d76cb74523257f1d02e99e3ce73" title="Convert image from one format to another and output to memory stream. This method uses ImageMagick,..." alt="" coords="9,136,250,177"/>
 </map>

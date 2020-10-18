@@ -1,0 +1,4 @@
+<map id="JBToolkit.PdfDoc.PdfConverter.ConvertPdfToHtml" name="JBToolkit.PdfDoc.PdfConverter.ConvertPdfToHtml">
+<area shape="rect" id="node1" title="Saves a PDF file as HTML file(s) &#45; 1 HTML file per PDF page. The output string is the root path where..." alt="" coords="5,5,208,47"/>
+<area shape="rect" id="node2" href="$da/dbe/class_j_b_toolkit_1_1_windows_1_1_process_helper.html#afb518659a5ed37e209117d9fcf66de41" title="Executes a process and reads the output (std out and error out) &#45; Useful for working with command lin..." alt="" coords="256,5,509,47"/>
+</map>

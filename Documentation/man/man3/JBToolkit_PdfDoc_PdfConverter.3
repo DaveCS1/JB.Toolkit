@@ -1,4 +1,4 @@
-.TH "JBToolkit.PdfDoc.PdfConverter" 3 "Sat Oct 10 2020" "JB.Toolkit" \" -*- nroff -*-
+.TH "JBToolkit.PdfDoc.PdfConverter" 3 "Sun Oct 18 2020" "JB.Toolkit" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,11 +7,18 @@ JBToolkit.PdfDoc.PdfConverter \- Methods to convert Docx to PDF through M-Files\
 .SH SYNOPSIS
 .br
 .PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBHtmlToPdfConverter\fP"
+.br
+.in -1c
 .SS "Static Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "static void \fBSaveMsOfficeDocAsPdf\fP (string docInputPath, string pdfOutputPath)"
+.RI "static void \fBConvertMsOfficeDocToPdf\fP (string docInputPath, string pdfOutputPath)"
 .br
 .RI "Save Docx document to PDF to file 
 .PP
@@ -32,35 +39,7 @@ JBToolkit.PdfDoc.PdfConverter \- Methods to convert Docx to PDF through M-Files\
 .br
 .RI "Converts Docx document to PDF memory stream (i\&.e\&. for use in \fBWeb\fP Requests) "
 .ti -1c
-.RI "static MemoryStream \fBConvertHtmlToPdf\fP (string \fBhtml\fP)"
-.br
-.RI "Convert HTML text to PDF "
-.ti -1c
-.RI "static MemoryStream \fBConvertHtmlToPdf\fP (string \fBhtml\fP, \fBPaperTypes\fP paperType, \fBOrientation\fP orientation)"
-.br
-.RI "Converts HTML text to PDF "
-.ti -1c
-.RI "static MemoryStream \fBConvertHtmlToPdf\fP (\fBPdfConvertDocument\fP document)"
-.br
-.RI "Converts HTML To PDF "
-.ti -1c
-.RI "static void \fBSaveHtmlToPdf\fP (string \fBhtml\fP, string outputPath)"
-.br
-.RI "Saves HTML as PDF file "
-.ti -1c
-.RI "static void \fBSaveHtmlToPdf\fP (string \fBhtml\fP, string outputPath, \fBPaperTypes\fP paperType, \fBOrientation\fP orientation)"
-.br
-.RI "Save HTML as PDF file "
-.ti -1c
-.RI "static void \fBSaveHtmlToPdf\fP (\fBPdfConvertDocument\fP document, \fBPdfOutput\fP output)"
-.br
-.RI "Save HTML as a PDF file "
-.ti -1c
-.RI "static \fBPdfOutput\fP \fBSaveHtmlToPdf\fP (\fBPdfConvertDocument\fP document, \fBPdfConvertEnvironment\fP environment, \fBPdfOutput\fP woutput)"
-.br
-.RI "Save HTML as a PDF file "
-.ti -1c
-.RI "static string \fBSavePdfAsHtml\fP (string path, string documentName, string outputRootPath='', bool overwriteIfExists=false, int timeoutSeconds=30)"
+.RI "static string \fBConvertPdfToHtml\fP (string path, string documentName, string outputRootPath='', bool overwriteIfExists=false, int timeoutSeconds=30)"
 .br
 .RI "Saves a PDF file as HTML file(s) - 1 HTML file per PDF page\&. The output string is the root path where the files have been created "
 .ti -1c
@@ -72,13 +51,9 @@ JBToolkit.PdfDoc.PdfConverter \- Methods to convert Docx to PDF through M-Files\
 .br
 .RI "Converts PDF to memory stream array (array memory streams - 1 memory stream for each image for each page) "
 .ti -1c
-.RI "static void \fBSavePdfAsPng\fP (string inputPath, string rootOutputPath, string imageTitle, int timeoutSeconds=30)"
+.RI "static void \fBConvertPdfToPng\fP (string inputPath, string rootOutputPath, string imageTitle, int timeoutSeconds=30)"
 .br
 .RI "Converts and saves a PDF file as 1 or more PNG images (1 image per PDF page) "
-.ti -1c
-.RI "static void \fBSaveAsPdf\fP (string docInputPath, string pdfOutputPath)"
-.br
-.RI "Save document file or image to PDF "
 .ti -1c
 .RI "static void \fBConvertToPdf\fP (string docInputPath, string pdfOutputPath)"
 .br
@@ -91,13 +66,6 @@ JBToolkit.PdfDoc.PdfConverter \- Methods to convert Docx to PDF through M-Files\
 .RI "static MemoryStream \fBConvertToPdf\fP (string docInputPut)"
 .br
 .RI "Converts document file or image to PDF memory stream (i\&.e\&. for use in \fBWeb\fP Requests) "
-.in -1c
-.SS "Properties"
-
-.in +1c
-.ti -1c
-.RI "static \fBPdfConvertEnvironment\fP \fBPdfConvertEnvironment\fP\fC [get]\fP"
-.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -112,59 +80,6 @@ Methods to convert or save PDF file as HTML - Outputs the directory containing t
 Methods to convert HTML / \fBWeb\fP page / Word Docx to PDF - Output as file or memory stream\&. Uses wkhtmltopdf\&.exe as embedded resource for HTML or M-Files API for Word docx
 .SH "Member Function Documentation"
 .PP 
-.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertHtmlToPdf (\fBPdfConvertDocument\fP document)\fC [static]\fP"
-
-.PP
-Converts HTML To PDF 
-.PP
-\fBParameters\fP
-.RS 4
-\fIdocument\fP PDF Object containing layout options
-.br
-\fIenvironment\fP Application environment options
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-.RE
-.PP
-
-.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertHtmlToPdf (string html)\fC [static]\fP"
-
-.PP
-Convert HTML text to PDF 
-.PP
-\fBParameters\fP
-.RS 4
-\fIhtml\fP Input HTML Text
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-PDF File memory stream
-.RE
-.PP
-
-.SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertHtmlToPdf (string html, \fBPaperTypes\fP paperType, \fBOrientation\fP orientation)\fC [static]\fP"
-
-.PP
-Converts HTML text to PDF 
-.PP
-\fBParameters\fP
-.RS 4
-\fIhtml\fP Input HTML text
-.br
-\fIpaperType\fP Paper type option
-.br
-\fIorientation\fP Orientation option
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-PDF File memory stream
-.RE
-.PP
-
 .SS "static MemoryStream JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertMsOfficeDocToPdf (MemoryStream ms, string fileExtension)\fC [static]\fP"
 
 .PP
@@ -197,6 +112,43 @@ Memory stream
 .RE
 .PP
 
+.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertMsOfficeDocToPdf (string docInputPath, string pdfOutputPath)\fC [static]\fP"
+
+.PP
+Save Docx document to PDF to file 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocInputPath\fP Input \&.docx path
+.br
+\fIpdfOutputPath\fP Output \&.pdf path
+.RE
+.PP
+
+.SS "static string JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertPdfToHtml (string path, string documentName, string outputRootPath = \fC''\fP, bool overwriteIfExists = \fCfalse\fP, int timeoutSeconds = \fC30\fP)\fC [static]\fP"
+
+.PP
+Saves a PDF file as HTML file(s) - 1 HTML file per PDF page\&. The output string is the root path where the files have been created 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP PDF File path to convert
+.br
+\fIoutputRootPath\fP Optional - Root path to save to (will create directory if it doesn't exist)
+.br
+\fIdocumentName\fP Name used for document site / document name
+.br
+\fIoverwriteIfExists\fP Attempt to delete current target root directory if it already exists (overwrite)
+.br
+\fItimeoutSeconds\fP Timeout before reporting failing
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+RSoot path where the files have been created
+.RE
+.PP
+
 .SS "static byte [][] JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertPdfToImage2DByteArray (string path, bool usingToExtractText = \fCfalse\fP, int timeoutSeconds = \fC30\fP)\fC [static]\fP"
 
 .PP
@@ -214,6 +166,25 @@ Converts PDF to 3D byte array (array of byte arrays - 1 byte array for each imag
 \fBReturns\fP
 .RS 4
 Return 3D byte array (array of byte arrays - 1 byte array for each image for each page
+.RE
+.PP
+
+.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.ConvertPdfToPng (string inputPath, string rootOutputPath, string imageTitle, int timeoutSeconds = \fC30\fP)\fC [static]\fP"
+
+.PP
+Converts and saves a PDF file as 1 or more PNG images (1 image per PDF page) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinputPath\fP Input file path of PDF file
+.br
+\fIrootOutputPath\fP Root output folder where PNG images will be saved to
+.br
+\fIimageTitle\fP A given title for the prefix of the set of images
+.br
+\fItimeoutSeconds\fP Timeout in seconds before error is reported
+.br
+\fIthrowOnError\fP 
 .RE
 .PP
 
@@ -283,141 +254,6 @@ Converts document file or image to PDF memory stream (i\&.e\&. for use in \fBWeb
 Memory stream
 .RE
 .PP
-
-.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.SaveAsPdf (string docInputPath, string pdfOutputPath)\fC [static]\fP"
-
-.PP
-Save document file or image to PDF 
-.PP
-\fBParameters\fP
-.RS 4
-\fIdocInputPath\fP Input document path
-.br
-\fIpdfOutputPath\fP Output \&.pdf path
-.RE
-.PP
-
-.SS "static \fBPdfOutput\fP JBToolkit\&.PdfDoc\&.PdfConverter\&.SaveHtmlToPdf (\fBPdfConvertDocument\fP document, \fBPdfConvertEnvironment\fP environment, \fBPdfOutput\fP woutput)\fC [static]\fP"
-
-.PP
-Save HTML as a PDF file 
-.PP
-\fBParameters\fP
-.RS 4
-\fIdocument\fP A PDF document object containing PDF options
-.br
-\fIenvironment\fP Applciaton environment option object
-.br
-\fIwoutput\fP Output PDF object
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-.RE
-.PP
-
-.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.SaveHtmlToPdf (\fBPdfConvertDocument\fP document, \fBPdfOutput\fP output)\fC [static]\fP"
-
-.PP
-Save HTML as a PDF file 
-.PP
-\fBParameters\fP
-.RS 4
-\fIdocument\fP PDF Document object containing layout options
-.br
-\fIoutput\fP Output file path
-.RE
-.PP
-
-.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.SaveHtmlToPdf (string html, string outputPath)\fC [static]\fP"
-
-.PP
-Saves HTML as PDF file 
-.PP
-\fBParameters\fP
-.RS 4
-\fIhtml\fP Input HTML text
-.br
-\fIoutputPath\fP Output file path
-.RE
-.PP
-
-.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.SaveHtmlToPdf (string html, string outputPath, \fBPaperTypes\fP paperType, \fBOrientation\fP orientation)\fC [static]\fP"
-
-.PP
-Save HTML as PDF file 
-.PP
-\fBParameters\fP
-.RS 4
-\fIhtml\fP Input HTML text
-.br
-\fIoutputPath\fP OUtput file path
-.br
-\fIpaperType\fP Paper type option
-.br
-\fIorientation\fP Orientation option
-.RE
-.PP
-
-.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.SaveMsOfficeDocAsPdf (string docInputPath, string pdfOutputPath)\fC [static]\fP"
-
-.PP
-Save Docx document to PDF to file 
-.PP
-\fBParameters\fP
-.RS 4
-\fIdocInputPath\fP Input \&.docx path
-.br
-\fIpdfOutputPath\fP Output \&.pdf path
-.RE
-.PP
-
-.SS "static string JBToolkit\&.PdfDoc\&.PdfConverter\&.SavePdfAsHtml (string path, string documentName, string outputRootPath = \fC''\fP, bool overwriteIfExists = \fCfalse\fP, int timeoutSeconds = \fC30\fP)\fC [static]\fP"
-
-.PP
-Saves a PDF file as HTML file(s) - 1 HTML file per PDF page\&. The output string is the root path where the files have been created 
-.PP
-\fBParameters\fP
-.RS 4
-\fIpath\fP PDF File path to convert
-.br
-\fIoutputRootPath\fP Optional - Root path to save to (will create directory if it doesn't exist)
-.br
-\fIdocumentName\fP Name used for document site / document name
-.br
-\fIoverwriteIfExists\fP Attempt to delete current target root directory if it already exists (overwrite)
-.br
-\fItimeoutSeconds\fP Timeout before reporting failing
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-RSoot path where the files have been created
-.RE
-.PP
-
-.SS "static void JBToolkit\&.PdfDoc\&.PdfConverter\&.SavePdfAsPng (string inputPath, string rootOutputPath, string imageTitle, int timeoutSeconds = \fC30\fP)\fC [static]\fP"
-
-.PP
-Converts and saves a PDF file as 1 or more PNG images (1 image per PDF page) 
-.PP
-\fBParameters\fP
-.RS 4
-\fIinputPath\fP Input file path of PDF file
-.br
-\fIrootOutputPath\fP Root output folder where PNG images will be saved to
-.br
-\fIimageTitle\fP A given title for the prefix of the set of images
-.br
-\fItimeoutSeconds\fP Timeout in seconds before error is reported
-.br
-\fIthrowOnError\fP 
-.RE
-.PP
-
-.SH "Property Documentation"
-.PP 
-.SS "\fBPdfConvertEnvironment\fP JBToolkit\&.PdfDoc\&.PdfConverter\&.PdfConvertEnvironment\fC [static]\fP, \fC [get]\fP"
 
 
 .SH "Author"

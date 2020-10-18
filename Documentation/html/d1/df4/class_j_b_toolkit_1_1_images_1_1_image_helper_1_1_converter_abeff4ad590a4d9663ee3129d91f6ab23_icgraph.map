@@ -1,0 +1,6 @@
+<map id="JBToolkit.Images.ImageHelper.Converter.ConvertToMemoryStream" name="JBToolkit.Images.ImageHelper.Converter.ConvertToMemoryStream">
+<area shape="rect" id="node1" title=" " alt="" coords="584,39,811,80"/>
+<area shape="rect" id="node2" href="$d1/df4/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_converter.html#a6e8d6e0d32ac065cdc461717fa909e00" title=" " alt="" coords="302,5,529,47"/>
+<area shape="rect" id="node3" href="$d1/df4/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_converter.html#a6bef972990ec93d20da6f137374c3e78" title="Convert image from one format to another and output to byte array. This method uses ImageMagick,..." alt="" coords="295,71,536,112"/>
+<area shape="rect" id="node4" href="$d1/df4/class_j_b_toolkit_1_1_images_1_1_image_helper_1_1_converter.html#a27201b6b26281f31bf7938bd7ce8fdbb" title="Convert image from one format to another and output to file. This method uses ImageMagick,..." alt="" coords="5,71,247,112"/>
+</map>

@@ -155,7 +155,7 @@ namespace JBToolkit.XmlDoc.MailMerge
         /// <summary>
         /// Is a particular field Word mail merge field
         /// </summary>
-        public static bool IsAMergeField(Field field)
+        private static bool IsAMergeField(Field field)
         {
             string fullField = field.Code.Text.Trim();
             if (!fullField.StartsWith("MERGEFIELD"))

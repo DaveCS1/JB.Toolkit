@@ -1,4 +1,4 @@
-.TH "D:/OneDrive/Documents/Work/Repositories/JB.Toolkit/JB.Toolkit/PdfDoc/Converters/PdfConverter_HtmlToPdf.cs" 3 "Sat Oct 10 2020" "JB.Toolkit" \" -*- nroff -*-
+.TH "D:/OneDrive/Documents/Work/Repositories/JB.Toolkit/JB.Toolkit/PdfDoc/Converters/PdfConverter_HtmlToPdf.cs" 3 "Sun Oct 18 2020" "JB.Toolkit" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,19 +14,22 @@ D:/OneDrive/Documents/Work/Repositories/JB.Toolkit/JB.Toolkit/PdfDoc/Converters/
 .br
 .RI "Methods to convert Docx to PDF through M-Files\&. I've done it this way as it's costs a tonne for a docx to pdf converter license with the likes of Aspose, Spire, ABCpdf etc and M-Files is already using Aspose so just utilise that\&. The process involves uploading a file to M-Files, converting it to a PDF there, then downloading it as PDF and finally deleting (destroying) the file in the M-Files vault "
 .ti -1c
-.RI "class \fBJBToolkit\&.PdfDoc\&.PdfConvertException\fP"
+.RI "class \fBJBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.PdfDoc\&.PdfConvertTimeoutException\fP"
+.RI "class \fBJBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.PdfConvertException\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.PdfDoc\&.PdfOutput\fP"
+.RI "class \fBJBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.PdfConvertTimeoutException\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.PdfDoc\&.PdfConvertDocument\fP"
+.RI "class \fBJBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.PdfOutput\fP"
 .br
 .ti -1c
-.RI "class \fBJBToolkit\&.PdfDoc\&.PdfConvertEnvironment\fP"
+.RI "class \fBJBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.PdfConvertDocument\fP"
+.br
+.ti -1c
+.RI "class \fBJBToolkit\&.PdfDoc\&.PdfConverter\&.HtmlToPdfConverter\&.WkHEnvironment\fP"
 .br
 .in -1c
 .SS "Namespaces"
@@ -37,16 +40,6 @@ D:/OneDrive/Documents/Work/Repositories/JB.Toolkit/JB.Toolkit/PdfDoc/Converters/
 .br
 .ti -1c
 .RI "namespace \fBJBToolkit\&.PdfDoc\fP"
-.br
-.in -1c
-.SS "Enumerations"
-
-.in +1c
-.ti -1c
-.RI "enum \fBJBToolkit\&.PdfDoc\&.PaperTypes\fP { \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.A0\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.A1\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.A2\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.A3\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.A4\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.A5\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.A\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.A7\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.A8\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.A9\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.B0\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.B1\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.B10\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.B2\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.B3\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.B4\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.B5\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.B6\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.B7\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.B8\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.B9\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.C5E\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.Comm10E\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.DLE\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.Executive\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.Folio\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.Ledger\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.Legal\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.Letter\fP, \fBJBToolkit\&.PdfDoc\&.PaperTypes\&.Tabloid\fP }"
-.br
-.ti -1c
-.RI "enum \fBJBToolkit\&.PdfDoc\&.Orientation\fP { \fBJBToolkit\&.PdfDoc\&.Orientation\&.Landscape\fP, \fBJBToolkit\&.PdfDoc\&.Orientation\&.Portrait\fP }"
 .br
 .in -1c
 .SH "Author"

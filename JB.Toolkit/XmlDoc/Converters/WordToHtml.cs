@@ -15,7 +15,7 @@ namespace JBToolkit.XmlDoc.Converters
     /// </summary>
     public partial class OfficeHtmlPdfImageConverter
     {
-        public static void SaveDocxAsSinglePageHtmlWithEmbeddedImages(string docxPath, string outputPath)
+        public static void ConvertDocxAsSinglePageHtmlWithEmbeddedImages(string docxPath, string outputPath)
         {
             if (!new FileInfo(docxPath).Extension.ToLower().Contains("docx"))
             {
