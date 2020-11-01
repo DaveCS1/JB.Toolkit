@@ -635,6 +635,8 @@
     <Compile Include="XmlDoc\Converters\ExcelDataTable.cs" />
     <Compile Include="XmlDoc\ImageExtractor.cs" />
     <Compile Include="XmlDoc\MailMerge\OpenXmlMailMerge.cs" />
+    <Compile Include="XmlDoc\MailMerge\OpenXmlOperations\OpenXmlOperations.AlterFontSize.cs" />
+    <Compile Include="XmlDoc\MailMerge\OpenXmlOperations\OpenXmlOperations.RemoveUnmergedFields.cs" />
     <Compile Include="XmlDoc\MailMerge\ReAlMailMerge.cs" />
     <Compile Include="XmlDoc\MailMerge\WordInteropMailMerge.cs" />
     <Compile Include="XmlDoc\Parser.cs" />
@@ -2345,7 +2347,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_UseGlobalSettings="True" BuildVersion_BuildAction="Build" BuildVersion_StartDate="2000/1/1" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2000/1/1" BuildVersion_BuildAction="Build" BuildVersion_UseGlobalSettings="True" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

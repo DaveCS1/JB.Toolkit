@@ -640,22 +640,14 @@ namespace JBToolkit.Csv
                             if (quoted)
                             {
                                 if (cha != '"') // Value is quoted and 
-                                {
-                                    // current character is " and next character is not ".
                                     quoted = false;
-                                }
                                 else
-                                {
                                     continue;
-                                }
                             }
                             else
                             {
                                 if (firstChar)  // Set value as quoted only if this quote is the 
-                                {
-                                    // first char in the value.
                                     quoted = true;
-                                }
                             }
                             break;
                         case '\n':
@@ -680,14 +672,11 @@ namespace JBToolkit.Csv
                     }
 
                     if (firstChar)
-                    {
                         firstChar = false;
-                    }
                 }
             }
 
             int maxCount = separatorsCount.Max();
-
             return maxCount == 0 ? '\0' : separators[separatorsCount.IndexOf(maxCount)];
         }
     }

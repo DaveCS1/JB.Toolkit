@@ -189,15 +189,18 @@ namespace JBToolkit.XmlDoc.MailMerge
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                try
+                if (e.Message != "Safe handle has been closed")
                 {
-                    File.Delete(saveAsPath);
-                }
-                catch { }
+                    try
+                    {
+                        File.Delete(saveAsPath);
+                    }
+                    catch { }
 
-                throw;
+                    throw;
+                }
             }
 
             try

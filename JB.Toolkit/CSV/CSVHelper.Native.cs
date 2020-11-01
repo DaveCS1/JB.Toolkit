@@ -14,12 +14,7 @@ namespace JBToolkit.Csv.Native
     /// </summary>
     public class CsvHelper
     {
-        /// <summary>
-        /// Convert CSV from a DataTable. This class doesn't require any third party packages to use which can sometimes be useful, 
-        /// however it may not account for every single permutation of a CSV file, ony basic. This class does however support strings
-        /// wrapped in "Speachmarks" quite nicely, whic quite a lot of CSV to DataTable implementations don't seem to get right.
-        /// </summary>
-        public static DataTable CsvToDataTable(string csvPath, char delimeter = ',')
+        public static DataTable CsvToDataTable(string csvPath)
         {
             if (File.Exists(csvPath))
             {
@@ -27,10 +22,30 @@ namespace JBToolkit.Csv.Native
                 string csvFilePath = csvPath;
 
                 lines = File.ReadAllLines(csvFilePath);
-                while (lines[0].EndsWith(","))
-                {
+                char delimeter = TryDetectDelimiter(lines);
+                return CsvToDataTable(csvPath, delimeter);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Convert CSV from a DataTable. This class doesn't require any third party packages to use which can sometimes be useful, 
+        /// however it may not account for every single permutation of a CSV file, ony basic. This class does however support strings
+        /// wrapped in "Speachmarks" quite nicely, whic quite a lot of CSV to DataTable implementations don't seem to get right.
+        /// </summary>
+        public static DataTable CsvToDataTable(string csvPath, char delimeter)
+        {
+            if (File.Exists(csvPath))
+            {
+                string[] lines;
+                string csvFilePath = csvPath;
+
+                lines = File.ReadAllLines(csvFilePath);
+                while (lines[0].EndsWith(Convert.ToString(delimeter)))
                     lines[0] = lines[0].Remove(lines[0].Length - 1);
-                }
 
                 string[] fields;
                 fields = lines[0].Split(new char[] { delimeter });
@@ -40,29 +55,20 @@ namespace JBToolkit.Csv.Native
                 var ignoreRowIndexes = new List<int>();
 
                 // 1st row must be column names; force lower case to ensure matching later on.
-
                 for (int i = 0; i < cols; i++)
                 {
-
                     if (!dt.Columns.Contains(fields[i]))
-                    {
                         dt.Columns.Add(fields[i], typeof(string));
-                    }
                     else
-                    {
                         ignoreRowIndexes.Add(i);
-                    }
                 }
 
                 // Remove any duplicate column names
                 var tempFields = fields.ToList();
                 for (int i = ignoreRowIndexes.Count - 1; i >= 0; i--)
-                {
                     tempFields.RemoveAt(ignoreRowIndexes[i]);
-                }
 
                 fields = tempFields.ToArray();
-
                 cols = fields.Length;
 
                 DataRow Row;
@@ -82,12 +88,9 @@ namespace JBToolkit.Csv.Native
                             // Remove any duplicate column names
                             tempFields = fields.ToList();
                             for (int k = ignoreRowIndexes.Count - 1; k >= 0; k--)
-                            {
                                 tempFields.RemoveAt(ignoreRowIndexes[k]);
-                            }
 
                             fields = tempFields.ToArray();
-
                             string temp0 = string.Join("", fields).Replace("\"\"", "");
                             int quaotCount0 = temp0.Count(c => c == '"');
 
@@ -141,18 +144,12 @@ namespace JBToolkit.Csv.Native
                                         foreach (char c in fields[j]) // start with how many "
                                         {
                                             if (c == '"')
-                                            {
                                                 numberOfConsecutiveQuotes++;
-                                            }
                                             else
-                                            {
                                                 break;
-                                            }
                                         }
                                         if (numberOfConsecutiveQuotes % 2 == 1)// start with odd number of quotes indicate system quote
-                                        {
                                             leftOddquota = true;
-                                        }
                                     }
 
                                     if (fields[j].EndsWith("\""))
@@ -161,19 +158,13 @@ namespace JBToolkit.Csv.Native
                                         for (int jj = fields[j].Length - 1; jj >= 0; jj--)
                                         {
                                             if (fields[j].Substring(jj, 1) == "\"") // end with how many "
-                                            {
                                                 numberOfConsecutiveQuotes++;
-                                            }
                                             else
-                                            {
                                                 break;
-                                            }
                                         }
 
                                         if (numberOfConsecutiveQuotes % 2 == 1) // end with odd number of quotes indicate system quote
-                                        {
                                             rightOddquota = true;
-                                        }
                                     }
 
                                     if (leftOddquota && !rightOddquota)
@@ -189,13 +180,9 @@ namespace JBToolkit.Csv.Native
                                     else if (fields[j] == "\"") // only one quota in a field
                                     {
                                         if (lastSingleQuoteIsLeft)
-                                        {
                                             singleRightquota.Add(j);
-                                        }
                                         else
-                                        {
                                             singleLeftquota.Add(j);
-                                        }
                                     }
                                 }
 
@@ -203,9 +190,7 @@ namespace JBToolkit.Csv.Native
                                 {
                                     int insideCommas = 0;
                                     for (int indexN = 0; indexN < singleLeftquota.Count; indexN++)
-                                    {
                                         insideCommas += singleRightquota[indexN] - singleLeftquota[indexN];
-                                    }
 
                                     if (fields.GetLength(0) - cols >= insideCommas) // probabaly matched
                                     {
@@ -230,17 +215,13 @@ namespace JBToolkit.Csv.Native
                                             {
                                                 int offset = singleRightquota[storedIndex] - singleLeftquota[storedIndex];
                                                 for (int combineI = 0; combineI <= offset; combineI++)
-                                                {
-                                                    temp[iii] += fields[iii + totalOffSet + combineI] + ",";
-                                                }
+                                                    temp[iii] += fields[iii + totalOffSet + combineI] + delimeter;
 
                                                 temp[iii] = temp[iii].Remove(temp[iii].Length - 1, 1);
                                                 totalOffSet += offset;
                                             }
                                             else
-                                            {
                                                 temp[iii] = fields[iii + totalOffSet];
-                                            }
                                         }
                                         fields = temp;
                                     }
@@ -257,9 +238,7 @@ namespace JBToolkit.Csv.Native
                                     {
                                         fields[f] = fields[f].Remove(0, 1);
                                         if (fields[f].Length > 0)
-                                        {
                                             fields[f] = fields[f].Remove(fields[f].Length - 1, 1);
-                                        }
                                     }
                                 }
                                 Row[f] = fields[f];
@@ -303,6 +282,69 @@ namespace JBToolkit.Csv.Native
             }
 
             File.WriteAllText(path, sb.ToString());
+        }
+
+        /// <summary>
+        /// Tries to auto detect CSV delimiter (tends to do a very good job of it).
+        /// </summary>
+        /// <param name="lines">Text lines array</param>
+        /// <returns>Likely delimiter</returns>
+        public static char TryDetectDelimiter(string[] lines)
+        {
+            List<char> separators = new List<char> { ';', ',', '\t', '|' };
+            IList<int> separatorsCount = new int[separators.Count];
+
+            bool quoted = false;
+            bool firstChar = true;
+
+            for (int i = 0; i < lines.Count(); i++)
+            {
+                foreach (char cha in lines[i])
+                {
+                    switch (cha)
+                    {
+                        case '"':
+                            if (quoted)
+                            {
+                                if (cha != '"') // Value is quoted and 
+                                    quoted = false;
+                                else
+                                    continue;
+                            }
+                            else
+                            {
+                                if (firstChar)  // Set value as quoted only if this quote is the 
+                                    quoted = true;
+                            }
+                            break;
+                        case '\n':
+                            if (!quoted)
+                            {
+                                firstChar = true;
+                                continue;
+                            }
+                            break;
+                        default:
+                            if (!quoted)
+                            {
+                                int index = separators.IndexOf(cha);
+                                if (index != -1)
+                                {
+                                    ++separatorsCount[index];
+                                    firstChar = true;
+                                    continue;
+                                }
+                            }
+                            break;
+                    }
+
+                    if (firstChar)
+                        firstChar = false;
+                }
+            }
+
+            int maxCount = separatorsCount.Max();
+            return maxCount == 0 ? '\0' : separators[separatorsCount.IndexOf(maxCount)];
         }
     }
 }
